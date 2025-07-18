@@ -331,16 +331,16 @@ const Index = () => {
       </header>
 
       {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark text-white py-12 lg:py-20">
+      <section className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark text-white py-12 lg:py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
+          <div className="text-center animate-slide-up">
+            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-6 leading-tight">
               Power up your career with an MBA, BBA, BCA, MCA & B.Tech
             </h1>
-            <p className="text-xl lg:text-2xl mb-4 text-sunstone-orange-light">
+            <p className="text-lg sm:text-xl lg:text-2xl mb-4 text-sunstone-orange-light">
               at Hi-Tech Institute of Engineering & Technology
             </p>
-            <p className="text-lg mb-8 text-sunstone-orange-light">
+            <p className="text-base sm:text-lg mb-8 text-sunstone-orange-light">
               powered by{" "}
               <span className="font-semibold text-white">Sunstone</span>
             </p>
@@ -348,10 +348,10 @@ const Index = () => {
               href="https://sunstone.in/campuses/hi-tech-institute"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-white text-sunstone-orange font-semibold rounded-lg hover:bg-sunstone-gray-50 transition-colors"
+              className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-sunstone-orange font-semibold rounded-lg hover:bg-sunstone-gray-50 transition-all duration-300 hover-lift"
             >
               Know more
-              <ExternalLink className="ml-2 h-5 w-5" />
+              <ExternalLink className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </a>
           </div>
         </div>
