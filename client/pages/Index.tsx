@@ -555,29 +555,29 @@ const Index = () => {
                     <CardTitle className="text-2xl text-sunstone-gray-900 mb-4">
                       {programName} Program Highlights
                     </CardTitle>
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
-                      <div className="text-center p-4 bg-sunstone-gray-50 rounded-lg">
-                        <div className="font-semibold text-sunstone-orange">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 mb-6">
+                      <div className="text-center p-3 sm:p-4 bg-sunstone-gray-50 rounded-lg hover-lift">
+                        <div className="font-semibold text-sunstone-orange text-sm sm:text-base">
                           {programData.duration}
                         </div>
                       </div>
-                      <div className="text-center p-4 bg-sunstone-gray-50 rounded-lg">
-                        <div className="font-semibold text-sunstone-blue">
+                      <div className="text-center p-3 sm:p-4 bg-sunstone-gray-50 rounded-lg hover-lift">
+                        <div className="font-semibold text-sunstone-blue text-sm sm:text-base">
                           {programData.certifications}
                         </div>
                       </div>
-                      <div className="text-center p-4 bg-sunstone-gray-50 rounded-lg">
-                        <div className="font-semibold text-sunstone-orange">
+                      <div className="text-center p-3 sm:p-4 bg-sunstone-gray-50 rounded-lg hover-lift">
+                        <div className="font-semibold text-sunstone-orange text-sm sm:text-base">
                           {programData.internships}
                         </div>
                       </div>
-                      <div className="text-center p-4 bg-sunstone-gray-50 rounded-lg">
-                        <div className="font-semibold text-sunstone-blue">
+                      <div className="text-center p-3 sm:p-4 bg-sunstone-gray-50 rounded-lg hover-lift">
+                        <div className="font-semibold text-sunstone-blue text-sm sm:text-base">
                           {programData.projects}
                         </div>
                       </div>
-                      <div className="text-center p-4 bg-sunstone-gray-50 rounded-lg">
-                        <div className="font-semibold text-sunstone-orange">
+                      <div className="text-center p-3 sm:p-4 bg-sunstone-gray-50 rounded-lg hover-lift">
+                        <div className="font-semibold text-sunstone-orange text-sm sm:text-base">
                           {programData.specializations}
                         </div>
                       </div>
