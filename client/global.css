@@ -77,7 +77,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 18 95% 55%;
+    --primary: 174 100% 29%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -105,9 +105,9 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Dark mode Sunstone colors */
-    --sunstone-orange: 18 95% 60%;
-    --sunstone-orange-light: 18 95% 70%;
-    --sunstone-orange-dark: 18 95% 50%;
+    --sunstone-orange: 174 100% 35%;
+    --sunstone-orange-light: 174 100% 45%;
+    --sunstone-orange-dark: 174 100% 25%;
     --sunstone-blue: 210 100% 50%;
     --sunstone-blue-light: 210 100% 60%;
     --sunstone-blue-dark: 210 100% 40%;
