@@ -457,60 +457,78 @@ const Index = () => {
       {/* Key Features */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6 rounded-lg bg-sunstone-gray-50">
-              <div className="text-2xl font-bold text-sunstone-orange mb-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in">
+              <div className="text-xl sm:text-2xl font-bold text-sunstone-orange mb-2">
                 70+
               </div>
-              <p className="text-sm text-sunstone-gray-700">
+              <p className="text-xs sm:text-sm text-sunstone-gray-700">
                 sessions by industry experts and leading faculty
               </p>
             </div>
-            <div className="text-center p-6 rounded-lg bg-sunstone-gray-50">
-              <div className="text-2xl font-bold text-sunstone-blue mb-2">
+            <div
+              className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <div className="text-xl sm:text-2xl font-bold text-sunstone-blue mb-2">
                 Professional
               </div>
-              <p className="text-sm text-sunstone-gray-700">
+              <p className="text-xs sm:text-sm text-sunstone-gray-700">
                 portfolio to increase chances of getting hired
               </p>
             </div>
-            <div className="text-center p-6 rounded-lg bg-sunstone-gray-50">
-              <div className="text-2xl font-bold text-sunstone-orange mb-2">
+            <div
+              className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <div className="text-xl sm:text-2xl font-bold text-sunstone-orange mb-2">
                 Seed funding
               </div>
-              <p className="text-sm text-sunstone-gray-700">
+              <p className="text-xs sm:text-sm text-sunstone-gray-700">
                 support for budding entrepreneurs
               </p>
             </div>
-            <div className="text-center p-6 rounded-lg bg-sunstone-gray-50">
-              <div className="text-2xl font-bold text-sunstone-blue mb-2">
+            <div
+              className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <div className="text-xl sm:text-2xl font-bold text-sunstone-blue mb-2">
                 International
               </div>
-              <p className="text-sm text-sunstone-gray-700">
+              <p className="text-xs sm:text-sm text-sunstone-gray-700">
                 India trips for experiential learning
               </p>
             </div>
-            <div className="text-center p-6 rounded-lg bg-sunstone-gray-50">
-              <div className="text-2xl font-bold text-sunstone-orange mb-2">
+            <div
+              className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
+              style={{ animationDelay: "0.4s" }}
+            >
+              <div className="text-xl sm:text-2xl font-bold text-sunstone-orange mb-2">
                 Capstone
               </div>
-              <p className="text-sm text-sunstone-gray-700">
+              <p className="text-xs sm:text-sm text-sunstone-gray-700">
                 projects every semester
               </p>
             </div>
-            <div className="text-center p-6 rounded-lg bg-sunstone-gray-50">
-              <div className="text-2xl font-bold text-sunstone-blue mb-2">
+            <div
+              className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
+              style={{ animationDelay: "0.5s" }}
+            >
+              <div className="text-xl sm:text-2xl font-bold text-sunstone-blue mb-2">
                 10
               </div>
-              <p className="text-sm text-sunstone-gray-700">
+              <p className="text-xs sm:text-sm text-sunstone-gray-700">
                 in-demand advanced certifications to choose from
               </p>
             </div>
-            <div className="text-center p-6 rounded-lg bg-sunstone-gray-50">
-              <div className="text-2xl font-bold text-sunstone-orange mb-2">
+            <div
+              className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
+              style={{ animationDelay: "0.6s" }}
+            >
+              <div className="text-xl sm:text-2xl font-bold text-sunstone-orange mb-2">
                 120+
               </div>
-              <p className="text-sm text-sunstone-gray-700">
+              <p className="text-xs sm:text-sm text-sunstone-gray-700">
                 hours of Mock GD/PI training
               </p>
             </div>
