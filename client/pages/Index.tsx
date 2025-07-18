@@ -374,29 +374,29 @@ const Index = () => {
       {/* The Sunstone Philosophy */}
       <section className="py-16 bg-sunstone-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-sunstone-gray-900 mb-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-sunstone-gray-900 mb-4">
               The Sunstone philosophy
             </h2>
-            <p className="text-lg text-sunstone-gray-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-sunstone-gray-700 max-w-3xl mx-auto">
               Our philosophy is deeply rooted in helping you learn from the
               best, providing a hands-on experience so your education is not
               just limited to theory
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            <Card className="text-center border-sunstone-gray-200 hover:shadow-lg transition-shadow">
+          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
+            <Card className="text-center border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in">
               <CardHeader>
-                <div className="mx-auto mb-4 p-3 bg-sunstone-orange bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center">
+                <div className="mx-auto mb-4 p-3 bg-sunstone-orange bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center animate-bounce-subtle">
                   <Users className="h-8 w-8 text-sunstone-orange" />
                 </div>
-                <CardTitle className="text-xl text-sunstone-gray-900">
+                <CardTitle className="text-lg sm:text-xl text-sunstone-gray-900">
                   Learn from recruiters
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sunstone-gray-600">
+                <p className="text-sm sm:text-base text-sunstone-gray-600">
                   Learn from CEOs, CTOs, COOs, and other leaders from Fortune
                   500 companies and leading Indian start-ups with 10+ years of
                   recruitment experience
@@ -404,17 +404,23 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-sunstone-gray-200 hover:shadow-lg transition-shadow">
+            <Card
+              className="text-center border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in"
+              style={{ animationDelay: "0.2s" }}
+            >
               <CardHeader>
-                <div className="mx-auto mb-4 p-3 bg-sunstone-blue bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center">
+                <div
+                  className="mx-auto mb-4 p-3 bg-sunstone-blue bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center animate-bounce-subtle"
+                  style={{ animationDelay: "0.5s" }}
+                >
                   <Briefcase className="h-8 w-8 text-sunstone-blue" />
                 </div>
-                <CardTitle className="text-xl text-sunstone-gray-900">
+                <CardTitle className="text-lg sm:text-xl text-sunstone-gray-900">
                   Practise in the real world
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sunstone-gray-600">
+                <p className="text-sm sm:text-base text-sunstone-gray-600">
                   Put what you learn into practice and gain hands-on experience
                   with internships & real-life projects and be ready for your
                   job from Day 1
@@ -422,17 +428,23 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-sunstone-gray-200 hover:shadow-lg transition-shadow">
+            <Card
+              className="text-center border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in"
+              style={{ animationDelay: "0.4s" }}
+            >
               <CardHeader>
-                <div className="mx-auto mb-4 p-3 bg-sunstone-orange bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center">
+                <div
+                  className="mx-auto mb-4 p-3 bg-sunstone-orange bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center animate-bounce-subtle"
+                  style={{ animationDelay: "1s" }}
+                >
                   <Award className="h-8 w-8 text-sunstone-orange" />
                 </div>
-                <CardTitle className="text-xl text-sunstone-gray-900">
+                <CardTitle className="text-lg sm:text-xl text-sunstone-gray-900">
                   Create your own portfolio
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sunstone-gray-600">
+                <p className="text-sm sm:text-base text-sunstone-gray-600">
                   Increase your chances of getting hired by showcasing your
                   verified skills and experience with a professional portfolio
                 </p>
