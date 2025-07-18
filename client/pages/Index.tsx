@@ -599,20 +599,27 @@ const Index = () => {
           </div>
 
           <Tabs defaultValue="MBA" className="w-full animate-slide-up">
-            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 bg-white/80 backdrop-blur-sm border border-sunstone-gray-200 h-auto gap-1 p-1 shadow-lg">
-              {Object.keys(programs).map((program, index) => (
-                <TabsTrigger
-                  key={program}
-                  value={program}
-                  className={`data-[state=active]:bg-gradient-to-r data-[state=active]:from-sunstone-orange data-[state=active]:to-sunstone-orange-dark data-[state=active]:text-white text-xs sm:text-sm py-3 px-3 transition-all duration-500 hover:scale-105 animate-scale-in stagger-${index + 1} animate-pulse-glow`}
-                >
-                  <div className="flex flex-col items-center">
-                    <GraduationCap className="h-4 w-4 mb-1" />
-                    {program}
-                  </div>
-                </TabsTrigger>
-              ))}
-            </TabsList>
+            <div className="relative mb-8">
+              <div className="absolute inset-0 bg-gradient-to-r from-sunstone-orange/20 via-sunstone-blue/20 to-sunstone-orange/20 rounded-2xl blur-xl"></div>
+              <TabsList className="relative grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 bg-white/95 backdrop-blur-sm border-2 border-sunstone-gray-200 h-auto gap-2 p-2 shadow-2xl rounded-2xl">
+                {Object.keys(programs).map((program, index) => (
+                  <TabsTrigger
+                    key={program}
+                    value={program}
+                    className={`group data-[state=active]:bg-gradient-to-br data-[state=active]:from-sunstone-orange data-[state=active]:to-sunstone-orange-dark data-[state=active]:text-white data-[state=active]:shadow-lg text-xs sm:text-sm py-4 px-4 transition-all duration-500 hover:scale-105 hover:shadow-md rounded-xl border border-transparent data-[state=active]:border-sunstone-orange-dark animate-scale-in relative overflow-hidden`}
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                    <div className="flex flex-col items-center relative z-10">
+                      <div className="p-2 rounded-full bg-sunstone-gray-100 group-data-[state=active]:bg-white/20 mb-2 transition-colors duration-300">
+                        <GraduationCap className="h-5 w-5 text-sunstone-blue group-data-[state=active]:text-white transition-colors duration-300" />
+                      </div>
+                      <span className="font-semibold">{program}</span>
+                    </div>
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
 
             {Object.entries(programs).map(([programName, programData]) => (
               <TabsContent
