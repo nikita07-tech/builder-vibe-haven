@@ -541,7 +541,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-sunstone-gray-900 mb-4">
-              Programs Offered with B.E.S.T Innovation University
+              Programs Offered with Hi-Tech
             </h2>
             <p className="text-base sm:text-lg text-sunstone-gray-700 mb-6">
               Learn from experts and get hands-on experience to become job-ready
