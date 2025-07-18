@@ -343,13 +343,13 @@ const Index = () => {
                 at Hi-Tech Institute of Engineering & Technology
               </p>
               <div className="flex items-center justify-center lg:justify-start mb-6">
-                <span className="text-base sm:text-lg opacity-90 mr-3">
+                <span className="text-lg sm:text-xl text-white/90 mr-4 font-medium">
                   powered by
                 </span>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-6 sm:h-8 w-auto filter brightness-0 invert"
+                  className="h-8 sm:h-10 w-auto filter brightness-0 invert"
                 />
               </div>
               <a
