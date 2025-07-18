@@ -330,42 +330,49 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark text-white py-16 lg:py-24 relative">
+      {/* Hero Banner - Smaller and Better Aligned */}
+      <section className="bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark text-white py-12 lg:py-16 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-sunstone-blue/95 to-sunstone-blue-dark/95"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-2 text-center lg:text-left animate-slide-up">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+            <div className="flex-1 text-center lg:text-left animate-slide-up">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 leading-tight">
                 Power up your career with an MBA, BBA, BCA, MCA & B.Tech
               </h1>
-              <p className="text-xl sm:text-2xl lg:text-3xl mb-4 text-sunstone-orange font-semibold">
+              <p className="text-lg sm:text-xl lg:text-2xl mb-3 text-sunstone-orange font-semibold">
                 at Hi-Tech Institute of Engineering & Technology
               </p>
-              <p className="text-lg sm:text-xl mb-8 opacity-90">
-                powered by{" "}
-                <span className="font-bold text-sunstone-orange">Sunstone</span>
-              </p>
+              <div className="flex items-center justify-center lg:justify-start mb-6">
+                <span className="text-base sm:text-lg opacity-90 mr-3">
+                  powered by
+                </span>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
+                  alt="Sunstone"
+                  className="h-6 sm:h-8 w-auto filter brightness-0 invert"
+                />
+              </div>
               <a
                 href="https://sunstone.in/campuses/hi-tech-institute"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 bg-sunstone-orange hover:bg-sunstone-orange-dark text-white font-bold rounded-lg transition-all duration-300 hover-lift shadow-lg"
+                className="group inline-flex items-center px-8 py-4 bg-sunstone-orange hover:bg-sunstone-orange-dark text-white font-bold rounded-lg transition-all duration-500 hover-lift shadow-lg animate-pulse-glow relative overflow-hidden"
               >
-                Know more
-                <ExternalLink className="ml-2 h-5 w-5" />
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                <span className="relative">Know more</span>
+                <ExternalLink className="ml-2 h-5 w-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
               </a>
             </div>
-            <div className="relative animate-scale-in lg:col-span-1">
-              <div className="relative overflow-hidden rounded-xl shadow-xl max-w-sm mx-auto">
+            <div className="flex-shrink-0 w-full max-w-xs lg:max-w-sm animate-scale-in">
+              <div className="relative overflow-hidden rounded-xl shadow-xl">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=400"
                   alt="Hi-Tech Institute Campus"
-                  className="w-full h-auto object-cover aspect-[4/3]"
+                  className="w-full h-auto object-cover aspect-[4/3] transform hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-sunstone-blue/30 via-transparent to-transparent"></div>
                 <div className="absolute bottom-3 left-3 right-3">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3 animate-slide-up">
                     <p className="text-sunstone-blue font-bold text-sm">
                       🏛️ Hi-Tech Institute Campus
                     </p>
@@ -379,11 +386,13 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Professional Background Pattern */}
+        {/* Subtle Background Elements */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-white rounded-full"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 border border-sunstone-orange rounded-full"></div>
-          <div className="absolute top-1/2 right-1/3 w-32 h-32 border border-white rounded-full"></div>
+          <div className="absolute top-1/4 left-1/4 w-48 h-48 border border-white rounded-full animate-float"></div>
+          <div
+            className="absolute bottom-1/4 right-1/4 w-32 h-32 border border-sunstone-orange rounded-full animate-float"
+            style={{ animationDelay: "2s" }}
+          ></div>
         </div>
       </section>
 
