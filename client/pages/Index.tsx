@@ -329,29 +329,66 @@ const Index = () => {
       </header>
 
       {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark text-white py-12 lg:py-20 overflow-hidden animate-gradient-shift">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-slide-up">
-            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-              Power up your career with an MBA, BBA, BCA, MCA & B.Tech
-            </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl mb-4 text-sunstone-orange-light">
-              at Hi-Tech Institute of Engineering & Technology
-            </p>
-            <p className="text-base sm:text-lg mb-8 text-sunstone-orange-light">
-              powered by{" "}
-              <span className="font-semibold text-white">Sunstone</span>
-            </p>
-            <a
-              href="https://sunstone.in/campuses/hi-tech-institute"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-sunstone-orange font-semibold rounded-lg hover:bg-sunstone-gray-50 transition-all duration-300 hover-lift animate-pulse-glow"
-            >
-              Know more
-              <ExternalLink className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-            </a>
+      <section className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark text-white py-12 lg:py-20 overflow-hidden animate-gradient-shift relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-sunstone-orange/90 to-sunstone-orange-dark/90 z-10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="text-center lg:text-left animate-slide-up">
+              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-6 leading-tight">
+                Power up your career with an MBA, BBA, BCA, MCA & B.Tech
+              </h1>
+              <p className="text-lg sm:text-xl lg:text-2xl mb-4 text-sunstone-orange-light">
+                at Hi-Tech Institute of Engineering & Technology
+              </p>
+              <p className="text-base sm:text-lg mb-8 text-sunstone-orange-light">
+                powered by{" "}
+                <span className="font-semibold text-white">Sunstone</span>
+              </p>
+              <a
+                href="https://sunstone.in/campuses/hi-tech-institute"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-sunstone-orange font-semibold rounded-lg hover:bg-sunstone-gray-50 transition-all duration-300 hover-lift animate-pulse-glow"
+              >
+                Know more
+                <ExternalLink className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+              </a>
+            </div>
+            <div className="relative animate-scale-in">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl animate-float">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=800"
+                  alt="Hi-Tech Institute of Engineering & Technology Campus"
+                  className="w-full h-auto transform hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-sunstone-orange/20 via-transparent to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3 animate-slide-up">
+                    <p className="text-sunstone-gray-900 font-semibold text-sm sm:text-base">
+                      🏛️ Hi-Tech Institute Campus
+                    </p>
+                    <p className="text-sunstone-gray-600 text-xs sm:text-sm">
+                      State-of-the-art facilities with modern infrastructure
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-sunstone-orange rounded-full flex items-center justify-center animate-bounce-subtle">
+                <GraduationCap className="h-10 w-10 text-white" />
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-sunstone-blue rounded-full flex items-center justify-center animate-pulse-glow">
+                <Star className="h-8 w-8 text-white" />
+              </div>
+            </div>
           </div>
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 z-0">
+          <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full animate-float"></div>
+          <div
+            className="absolute bottom-20 right-20 w-24 h-24 bg-sunstone-blue rounded-full animate-float"
+            style={{ animationDelay: "2s" }}
+          ></div>
+          <div className="absolute top-1/2 left-10 w-16 h-16 bg-sunstone-orange-light rounded-full animate-bounce-subtle"></div>
         </div>
       </section>
 
