@@ -400,31 +400,31 @@ const Index = () => {
       </section>
 
       {/* The Sunstone Philosophy */}
-      <section className="py-16 bg-sunstone-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-sunstone-gray-900 mb-4">
-              The Sunstone philosophy
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-sunstone-blue mb-6">
+              The Sunstone Philosophy
             </h2>
-            <p className="text-base sm:text-lg text-sunstone-gray-700 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-sunstone-gray-700 max-w-4xl mx-auto leading-relaxed">
               Our philosophy is deeply rooted in helping you learn from the
               best, providing a hands-on experience so your education is not
               just limited to theory
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
-            <Card className="text-center border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in">
-              <CardHeader>
-                <div className="mx-auto mb-4 p-3 bg-sunstone-orange bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center animate-float">
-                  <Users className="h-8 w-8 text-sunstone-orange" />
+          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+            <Card className="text-center border-2 border-sunstone-gray-100 hover:border-sunstone-orange hover:shadow-xl transition-all duration-300 hover-lift">
+              <CardHeader className="pb-4">
+                <div className="mx-auto mb-6 p-4 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
+                  <Users className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle className="text-lg sm:text-xl text-sunstone-gray-900">
-                  Learn from recruiters
+                <CardTitle className="text-xl text-sunstone-blue font-bold">
+                  Learn from Industry Leaders
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm sm:text-base text-sunstone-gray-600">
+                <p className="text-sunstone-gray-600 leading-relaxed">
                   Learn from CEOs, CTOs, COOs, and other leaders from Fortune
                   500 companies and leading Indian start-ups with 10+ years of
                   recruitment experience
@@ -432,20 +432,17 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in stagger-2">
-              <CardHeader>
-                <div
-                  className="mx-auto mb-4 p-3 bg-sunstone-blue bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center animate-float"
-                  style={{ animationDelay: "1s" }}
-                >
-                  <Briefcase className="h-8 w-8 text-sunstone-blue" />
+            <Card className="text-center border-2 border-sunstone-gray-100 hover:border-sunstone-blue hover:shadow-xl transition-all duration-300 hover-lift">
+              <CardHeader className="pb-4">
+                <div className="mx-auto mb-6 p-4 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
+                  <Briefcase className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle className="text-lg sm:text-xl text-sunstone-gray-900">
-                  Practise in the real world
+                <CardTitle className="text-xl text-sunstone-blue font-bold">
+                  Real-World Experience
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm sm:text-base text-sunstone-gray-600">
+                <p className="text-sunstone-gray-600 leading-relaxed">
                   Put what you learn into practice and gain hands-on experience
                   with internships & real-life projects and be ready for your
                   job from Day 1
@@ -453,20 +450,17 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in stagger-4">
-              <CardHeader>
-                <div
-                  className="mx-auto mb-4 p-3 bg-sunstone-orange bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center animate-float"
-                  style={{ animationDelay: "2s" }}
-                >
-                  <Award className="h-8 w-8 text-sunstone-orange" />
+            <Card className="text-center border-2 border-sunstone-gray-100 hover:border-sunstone-orange hover:shadow-xl transition-all duration-300 hover-lift">
+              <CardHeader className="pb-4">
+                <div className="mx-auto mb-6 p-4 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
+                  <Award className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle className="text-lg sm:text-xl text-sunstone-gray-900">
-                  Create your own portfolio
+                <CardTitle className="text-xl text-sunstone-blue font-bold">
+                  Professional Portfolio
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm sm:text-base text-sunstone-gray-600">
+                <p className="text-sunstone-gray-600 leading-relaxed">
                   Increase your chances of getting hired by showcasing your
                   verified skills and experience with a professional portfolio
                 </p>
