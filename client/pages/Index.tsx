@@ -363,7 +363,7 @@ const Index = () => {
                 <ExternalLink className="ml-2 h-5 w-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
               </a>
             </div>
-            <div className="flex-shrink-0 w-full max-w-xs lg:max-w-sm animate-scale-in">
+            <div className="flex-shrink-0 w-full max-w-xs lg:max-w-sm animate-scale-in lg:self-start lg:mt-4">
               <div className="relative overflow-hidden rounded-xl shadow-xl">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=400"
