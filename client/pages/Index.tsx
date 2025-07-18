@@ -554,24 +554,48 @@ const Index = () => {
       </section>
 
       {/* Programs Section - Enhanced with Animations */}
-      <section className="py-16 bg-gradient-to-br from-sunstone-gray-50 to-sunstone-blue/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-sunstone-orange/5 to-sunstone-blue/5 animate-gradient-shift"></div>
+      <section className="py-20 bg-gradient-to-br from-white via-sunstone-blue/5 to-sunstone-orange/10 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-96 h-96 bg-sunstone-orange/10 rounded-full blur-3xl animate-float"></div>
+          <div
+            className="absolute bottom-10 right-10 w-80 h-80 bg-sunstone-blue/15 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
+          <div
+            className="absolute top-1/2 left-1/3 w-64 h-64 bg-sunstone-orange/5 rounded-full blur-2xl animate-float"
+            style={{ animationDelay: "1.5s" }}
+          ></div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 animate-fade-in">
-            <div className="flex items-center justify-center mb-4">
-              <Star className="h-8 w-8 text-sunstone-orange mr-2 animate-bounce-subtle" />
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-sunstone-gray-900">
-                Programs Offered with Hi-Tech
-              </h2>
-              <Star
-                className="h-8 w-8 text-sunstone-orange ml-2 animate-bounce-subtle"
-                style={{ animationDelay: "1s" }}
-              />
+          <div className="text-center mb-16 animate-fade-in">
+            <div className="flex items-center justify-center mb-6">
+              <div className="h-1 w-24 bg-gradient-to-r from-sunstone-orange to-sunstone-blue rounded-full mr-4"></div>
+              <div className="relative">
+                <GraduationCap className="h-16 w-16 text-sunstone-blue animate-bounce-subtle" />
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-orange rounded-full animate-ping"></div>
+              </div>
+              <div className="h-1 w-24 bg-gradient-to-r from-sunstone-blue to-sunstone-orange rounded-full ml-4"></div>
             </div>
-            <p className="text-base sm:text-lg text-sunstone-gray-700 mb-6">
-              Learn from experts and get hands-on experience to become job-ready
-              from Day1
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue via-sunstone-orange to-sunstone-blue bg-clip-text text-transparent mb-6">
+              Programs Offered with Hi-Tech
+            </h2>
+            <p className="text-lg sm:text-xl text-sunstone-gray-700 max-w-4xl mx-auto leading-relaxed">
+              Learn from industry experts and get hands-on experience to become
+              job-ready from Day 1 with our comprehensive programs
             </p>
+            <div className="mt-6 flex justify-center">
+              <div className="flex space-x-2">
+                <div className="w-3 h-3 bg-sunstone-orange rounded-full animate-bounce"></div>
+                <div
+                  className="w-3 h-3 bg-sunstone-blue rounded-full animate-bounce"
+                  style={{ animationDelay: "0.1s" }}
+                ></div>
+                <div
+                  className="w-3 h-3 bg-sunstone-orange rounded-full animate-bounce"
+                  style={{ animationDelay: "0.2s" }}
+                ></div>
+              </div>
+            </div>
           </div>
 
           <Tabs defaultValue="MBA" className="w-full animate-slide-up">
