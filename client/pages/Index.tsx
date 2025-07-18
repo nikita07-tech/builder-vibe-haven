@@ -334,8 +334,8 @@ const Index = () => {
       <section className="bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark text-white py-12 lg:py-16 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-sunstone-blue/95 to-sunstone-blue-dark/95"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            <div className="flex-1 text-center lg:text-left animate-slide-up">
+          <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
+            <div className="flex-1 text-center lg:text-left animate-slide-up lg:pr-8">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 leading-tight">
                 Power up your career with an MBA, BBA, BCA, MCA & B.Tech
               </h1>
