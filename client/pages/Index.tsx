@@ -944,75 +944,166 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Process Steps */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div className="text-center animate-scale-in group">
-              <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-2xl">1</span>
-                </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-blue rounded-full animate-ping"></div>
-              </div>
-              <h3 className="text-xl font-bold text-sunstone-blue mb-3">
-                Apply Online
-              </h3>
-              <p className="text-sunstone-gray-600">
-                Fill out our simple online application form with your details
-              </p>
-            </div>
+          {/* Process Steps with Connecting Lines */}
+          <div className="relative">
+            {/* Connecting lines for desktop */}
+            <div className="hidden lg:block absolute top-24 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-sunstone-orange via-sunstone-blue via-sunstone-orange to-sunstone-blue opacity-30"></div>
 
-            <div className="text-center animate-scale-in stagger-1 group">
-              <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-2xl">2</span>
-                </div>
-                <div
-                  className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-orange rounded-full animate-ping"
-                  style={{ animationDelay: "0.5s" }}
-                ></div>
-              </div>
-              <h3 className="text-xl font-bold text-sunstone-blue mb-3">
-                Document Review
-              </h3>
-              <p className="text-sunstone-gray-600">
-                Submit required documents for verification and eligibility check
-              </p>
-            </div>
+            {/* Animated progress line */}
+            <div
+              className="hidden lg:block absolute top-24 left-1/4 h-0.5 bg-gradient-to-r from-sunstone-orange to-sunstone-blue animate-pulse-glow"
+              style={{
+                width: "50%",
+                animation: "progressLine 4s ease-in-out infinite",
+              }}
+            ></div>
 
-            <div className="text-center animate-scale-in stagger-2 group">
-              <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-2xl">3</span>
-                </div>
-                <div
-                  className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-blue rounded-full animate-ping"
-                  style={{ animationDelay: "1s" }}
-                ></div>
-              </div>
-              <h3 className="text-xl font-bold text-sunstone-blue mb-3">
-                Interview & Assessment
-              </h3>
-              <p className="text-sunstone-gray-600">
-                Participate in counseling session and aptitude assessment
-              </p>
-            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 relative z-10">
+              <div className="text-center animate-scale-in group relative">
+                <div className="relative mb-6">
+                  {/* Outer glow ring */}
+                  <div className="absolute inset-0 w-24 h-24 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-500 mx-auto animate-pulse-glow"></div>
 
-            <div className="text-center animate-scale-in stagger-3 group">
-              <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white font-bold text-2xl">4</span>
+                  {/* Main circle */}
+                  <div className="relative w-20 h-20 bg-gradient-to-br from-sunstone-orange via-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border-4 border-white">
+                    <span className="text-white font-bold text-2xl animate-bounce-subtle">
+                      1
+                    </span>
+                  </div>
+
+                  {/* Animated particles */}
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-blue rounded-full animate-ping"></div>
+                  <div
+                    className="absolute -bottom-1 -left-1 w-3 h-3 bg-sunstone-orange rounded-full animate-bounce"
+                    style={{ animationDelay: "0.5s" }}
+                  ></div>
                 </div>
-                <div
-                  className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-orange rounded-full animate-ping"
-                  style={{ animationDelay: "1.5s" }}
-                ></div>
+
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg group-hover:shadow-xl transition-all duration-500 border border-sunstone-gray-100 group-hover:border-sunstone-orange/30">
+                  <h3 className="text-xl font-bold text-sunstone-blue mb-3 group-hover:text-sunstone-orange transition-colors duration-300">
+                    Apply Online
+                  </h3>
+                  <p className="text-sunstone-gray-600 leading-relaxed">
+                    Fill out our simple online application form with your
+                    details
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-sunstone-blue mb-3">
-                Confirmation
-              </h3>
-              <p className="text-sunstone-gray-600">
-                Receive admission confirmation and start your journey
-              </p>
+
+              <div className="text-center animate-scale-in stagger-1 group relative">
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 w-24 h-24 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-500 mx-auto animate-pulse-glow"></div>
+
+                  <div className="relative w-20 h-20 bg-gradient-to-br from-sunstone-blue via-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border-4 border-white">
+                    <span
+                      className="text-white font-bold text-2xl animate-bounce-subtle"
+                      style={{ animationDelay: "0.2s" }}
+                    >
+                      2
+                    </span>
+                  </div>
+
+                  <div
+                    className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-orange rounded-full animate-ping"
+                    style={{ animationDelay: "0.5s" }}
+                  ></div>
+                  <div
+                    className="absolute -bottom-1 -left-1 w-3 h-3 bg-sunstone-blue rounded-full animate-bounce"
+                    style={{ animationDelay: "0.7s" }}
+                  ></div>
+                </div>
+
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg group-hover:shadow-xl transition-all duration-500 border border-sunstone-gray-100 group-hover:border-sunstone-blue/30">
+                  <h3 className="text-xl font-bold text-sunstone-blue mb-3 group-hover:text-sunstone-orange transition-colors duration-300">
+                    Document Review
+                  </h3>
+                  <p className="text-sunstone-gray-600 leading-relaxed">
+                    Submit required documents for verification and eligibility
+                    check
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center animate-scale-in stagger-2 group relative">
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 w-24 h-24 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-500 mx-auto animate-pulse-glow"></div>
+
+                  <div className="relative w-20 h-20 bg-gradient-to-br from-sunstone-orange via-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border-4 border-white">
+                    <span
+                      className="text-white font-bold text-2xl animate-bounce-subtle"
+                      style={{ animationDelay: "0.4s" }}
+                    >
+                      3
+                    </span>
+                  </div>
+
+                  <div
+                    className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-blue rounded-full animate-ping"
+                    style={{ animationDelay: "1s" }}
+                  ></div>
+                  <div
+                    className="absolute -bottom-1 -left-1 w-3 h-3 bg-sunstone-orange rounded-full animate-bounce"
+                    style={{ animationDelay: "0.9s" }}
+                  ></div>
+                </div>
+
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg group-hover:shadow-xl transition-all duration-500 border border-sunstone-gray-100 group-hover:border-sunstone-orange/30">
+                  <h3 className="text-xl font-bold text-sunstone-blue mb-3 group-hover:text-sunstone-orange transition-colors duration-300">
+                    Interview & Assessment
+                  </h3>
+                  <p className="text-sunstone-gray-600 leading-relaxed">
+                    Participate in counseling session and aptitude assessment
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center animate-scale-in stagger-3 group relative">
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 w-24 h-24 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-500 mx-auto animate-pulse-glow"></div>
+
+                  <div className="relative w-20 h-20 bg-gradient-to-br from-sunstone-blue via-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border-4 border-white">
+                    <span
+                      className="text-white font-bold text-2xl animate-bounce-subtle"
+                      style={{ animationDelay: "0.6s" }}
+                    >
+                      4
+                    </span>
+                  </div>
+
+                  <div
+                    className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-orange rounded-full animate-ping"
+                    style={{ animationDelay: "1.5s" }}
+                  ></div>
+                  <div
+                    className="absolute -bottom-1 -left-1 w-3 h-3 bg-sunstone-blue rounded-full animate-bounce"
+                    style={{ animationDelay: "1.1s" }}
+                  ></div>
+
+                  {/* Success checkmark animation */}
+                  <div className="absolute top-0 right-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <svg
+                      className="w-4 h-4 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg group-hover:shadow-xl transition-all duration-500 border border-sunstone-gray-100 group-hover:border-sunstone-blue/30">
+                  <h3 className="text-xl font-bold text-sunstone-blue mb-3 group-hover:text-sunstone-orange transition-colors duration-300">
+                    Confirmation
+                  </h3>
+                  <p className="text-sunstone-gray-600 leading-relaxed">
+                    Receive admission confirmation and start your journey
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
