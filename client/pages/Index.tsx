@@ -294,34 +294,34 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-sunstone-gray-50 to-white">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b border-sunstone-gray-200 animate-fade-in">
+      <header className="bg-white shadow-lg border-b border-sunstone-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-4 sm:space-x-8">
-              <div className="flex items-center space-x-2 sm:space-x-4">
-                <div className="text-xs sm:text-sm font-medium text-sunstone-gray-600">
-                  Campus logo
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <div className="text-sm font-semibold text-sunstone-blue bg-sunstone-gray-100 px-3 py-1 rounded-md">
+                  Hi-Tech Institute
                 </div>
-                <div className="h-4 sm:h-6 w-px bg-sunstone-gray-300"></div>
-                <div className="text-lg sm:text-xl font-bold text-sunstone-orange">
+                <div className="h-6 w-px bg-sunstone-gray-300"></div>
+                <div className="text-2xl font-bold text-sunstone-orange">
                   Sunstone
                 </div>
               </div>
             </div>
-            <div className="flex items-center space-x-2 sm:space-x-6">
+            <div className="flex items-center space-x-3 sm:space-x-6">
               <a
                 href="mailto:connect@sunstone.in"
-                className="hidden sm:flex items-center space-x-2 text-sunstone-gray-600 hover:text-sunstone-orange transition-colors"
+                className="hidden sm:flex items-center space-x-2 text-sunstone-blue hover:text-sunstone-orange transition-colors font-medium"
               >
                 <Mail className="h-4 w-4" />
                 <span className="text-sm">connect@sunstone.in</span>
               </a>
               <a
                 href="tel:+917065303030"
-                className="flex items-center space-x-1 sm:space-x-2 text-sunstone-orange hover:text-sunstone-orange-dark transition-colors font-medium"
+                className="flex items-center space-x-2 bg-sunstone-orange hover:bg-sunstone-orange-dark text-white px-4 py-2 rounded-lg transition-colors font-semibold shadow-md"
               >
                 <Phone className="h-4 w-4" />
-                <span className="text-xs sm:text-sm">+91 7065-30-30-30</span>
+                <span className="text-sm">+91 7065-30-30-30</span>
               </a>
             </div>
           </div>
