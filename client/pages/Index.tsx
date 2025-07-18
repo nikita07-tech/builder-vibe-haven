@@ -363,24 +363,70 @@ const Index = () => {
                 <ExternalLink className="ml-2 h-5 w-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
               </a>
             </div>
-            <div className="flex-shrink-0 w-full max-w-xs lg:max-w-sm animate-scale-in lg:self-start lg:mt-4">
-              <div className="relative overflow-hidden rounded-xl shadow-xl">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=400"
-                  alt="Hi-Tech Institute Campus"
-                  className="w-full h-auto object-cover aspect-[4/3] transform hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-sunstone-blue/30 via-transparent to-transparent"></div>
-                <div className="absolute bottom-3 left-3 right-3">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3 animate-slide-up">
-                    <p className="text-sunstone-blue font-bold text-sm">
-                      🏛️ Hi-Tech Institute Campus
-                    </p>
-                    <p className="text-sunstone-gray-600 text-xs">
-                      Modern Infrastructure & Facilities
-                    </p>
+            <div className="flex-shrink-0 w-full max-w-xs lg:max-w-sm animate-scale-in lg:self-start lg:mt-6 relative">
+              <div className="relative group">
+                {/* Animated border ring */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-sunstone-orange via-sunstone-blue to-sunstone-orange rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition-opacity duration-500 animate-pulse-glow"></div>
+
+                {/* Main image container */}
+                <div className="relative overflow-hidden rounded-xl shadow-2xl bg-white p-2 group-hover:shadow-3xl transition-all duration-700">
+                  <div className="relative overflow-hidden rounded-lg">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=400"
+                      alt="Hi-Tech Institute Campus"
+                      className="w-full h-auto object-cover aspect-[4/3] transform group-hover:scale-110 transition-transform duration-1000 animate-float"
+                    />
+
+                    {/* Animated overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-sunstone-blue/40 via-transparent to-sunstone-orange/20 opacity-80 group-hover:opacity-60 transition-opacity duration-500"></div>
+
+                    {/* Floating elements */}
+                    <div className="absolute top-4 right-4">
+                      <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-lg animate-bounce-subtle">
+                        <GraduationCap className="h-6 w-6 text-sunstone-orange" />
+                      </div>
+                    </div>
+
+                    {/* Info card */}
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <div className="flex items-center space-x-2 mb-2">
+                          <div className="w-8 h-8 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">
+                              🏛️
+                            </span>
+                          </div>
+                          <p className="text-sunstone-blue font-bold text-sm">
+                            Hi-Tech Institute Campus
+                          </p>
+                        </div>
+                        <p className="text-sunstone-gray-600 text-xs leading-relaxed">
+                          Modern Infrastructure & World-Class Facilities
+                        </p>
+                        <div className="mt-2 flex justify-center">
+                          <div className="flex space-x-1">
+                            <div className="w-2 h-2 bg-sunstone-orange rounded-full animate-bounce"></div>
+                            <div
+                              className="w-2 h-2 bg-sunstone-blue rounded-full animate-bounce"
+                              style={{ animationDelay: "0.1s" }}
+                            ></div>
+                            <div
+                              className="w-2 h-2 bg-sunstone-orange rounded-full animate-bounce"
+                              style={{ animationDelay: "0.2s" }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+
+                {/* Corner decorations */}
+                <div className="absolute -top-2 -left-2 w-6 h-6 bg-sunstone-orange rounded-full animate-ping"></div>
+                <div
+                  className="absolute -bottom-2 -right-2 w-4 h-4 bg-sunstone-blue rounded-full animate-ping"
+                  style={{ animationDelay: "1s" }}
+                ></div>
               </div>
             </div>
           </div>
