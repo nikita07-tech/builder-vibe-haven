@@ -841,26 +841,133 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Admission Process */}
-      <section className="py-16 bg-gradient-to-r from-sunstone-gray-50 to-sunstone-blue/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
-            <h2 className="text-3xl lg:text-4xl font-bold text-sunstone-gray-900 mb-8">
+      {/* Admission Process Steps */}
+      <section className="py-20 bg-gradient-to-br from-sunstone-gray-50 via-white to-sunstone-blue/10 relative">
+        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16 animate-fade-in">
+            <div className="flex items-center justify-center mb-6">
+              <div className="h-1 w-16 bg-sunstone-orange rounded-full mr-3"></div>
+              <GraduationCap className="h-10 w-10 text-sunstone-blue animate-bounce-subtle" />
+              <div className="h-1 w-16 bg-sunstone-orange rounded-full ml-3"></div>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-sunstone-blue mb-6">
               Admission Process
             </h2>
-            <p className="text-lg text-sunstone-gray-700 mb-8">
-              Ready to start your journey? Contact us to learn more about our
-              admission process.
+            <p className="text-lg sm:text-xl text-sunstone-gray-700 max-w-3xl mx-auto">
+              Simple steps to begin your journey towards a successful career
             </p>
-            <Button
-              className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark hover:from-sunstone-orange-dark hover:to-sunstone-orange text-white px-8 py-3 text-lg animate-pulse-glow hover-lift"
-              asChild
-            >
-              <a href="tel:+917065303030">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now: +91 7065-30-30-30
-              </a>
-            </Button>
+          </div>
+
+          {/* Process Steps */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div className="text-center animate-scale-in group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-2xl">1</span>
+                </div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-blue rounded-full animate-ping"></div>
+              </div>
+              <h3 className="text-xl font-bold text-sunstone-blue mb-3">
+                Apply Online
+              </h3>
+              <p className="text-sunstone-gray-600">
+                Fill out our simple online application form with your details
+              </p>
+            </div>
+
+            <div className="text-center animate-scale-in stagger-1 group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-2xl">2</span>
+                </div>
+                <div
+                  className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-orange rounded-full animate-ping"
+                  style={{ animationDelay: "0.5s" }}
+                ></div>
+              </div>
+              <h3 className="text-xl font-bold text-sunstone-blue mb-3">
+                Document Review
+              </h3>
+              <p className="text-sunstone-gray-600">
+                Submit required documents for verification and eligibility check
+              </p>
+            </div>
+
+            <div className="text-center animate-scale-in stagger-2 group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-2xl">3</span>
+                </div>
+                <div
+                  className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-blue rounded-full animate-ping"
+                  style={{ animationDelay: "1s" }}
+                ></div>
+              </div>
+              <h3 className="text-xl font-bold text-sunstone-blue mb-3">
+                Interview & Assessment
+              </h3>
+              <p className="text-sunstone-gray-600">
+                Participate in counseling session and aptitude assessment
+              </p>
+            </div>
+
+            <div className="text-center animate-scale-in stagger-3 group">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-2xl">4</span>
+                </div>
+                <div
+                  className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-orange rounded-full animate-ping"
+                  style={{ animationDelay: "1.5s" }}
+                ></div>
+              </div>
+              <h3 className="text-xl font-bold text-sunstone-blue mb-3">
+                Confirmation
+              </h3>
+              <p className="text-sunstone-gray-600">
+                Receive admission confirmation and start your journey
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <div className="bg-white rounded-2xl shadow-xl p-8 border border-sunstone-gray-200 animate-fade-in">
+              <h3 className="text-2xl font-bold text-sunstone-blue mb-4">
+                Ready to start your journey?
+              </h3>
+              <p className="text-sunstone-gray-700 mb-6">
+                Contact us today to begin the admission process
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Button
+                  className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark hover:from-sunstone-orange-dark hover:to-sunstone-orange text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg group relative overflow-hidden"
+                  asChild
+                >
+                  <a href="tel:+917065303030" className="flex items-center">
+                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                    <Phone className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+                    <span className="relative">
+                      Call Now: +91 7065-30-30-30
+                    </span>
+                  </a>
+                </Button>
+                <Button
+                  className="bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark hover:from-sunstone-blue-dark hover:to-sunstone-blue text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg group relative overflow-hidden"
+                  asChild
+                >
+                  <a
+                    href="mailto:connect@sunstone.in"
+                    className="flex items-center"
+                  >
+                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                    <Mail className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+                    <span className="relative">Email Us</span>
+                  </a>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
