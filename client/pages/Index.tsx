@@ -306,7 +306,7 @@ const Index = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-12 w-auto"
+                  className="h-16 w-auto"
                 />
               </div>
             </div>
