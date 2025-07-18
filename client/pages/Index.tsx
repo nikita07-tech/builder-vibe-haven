@@ -521,23 +521,23 @@ const Index = () => {
       {/* Programs Section */}
       <section className="py-16 bg-sunstone-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-sunstone-gray-900 mb-4">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-sunstone-gray-900 mb-4">
               Programs Offered with B.E.S.T Innovation University
             </h2>
-            <p className="text-lg text-sunstone-gray-700 mb-6">
+            <p className="text-base sm:text-lg text-sunstone-gray-700 mb-6">
               Learn from experts and get hands-on experience to become job-ready
               from Day1
             </p>
           </div>
 
-          <Tabs defaultValue="MBA" className="w-full">
-            <TabsList className="grid w-full grid-cols-5 bg-white border border-sunstone-gray-200">
+          <Tabs defaultValue="MBA" className="w-full animate-slide-up">
+            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 bg-white border border-sunstone-gray-200 h-auto gap-1 p-1">
               {Object.keys(programs).map((program) => (
                 <TabsTrigger
                   key={program}
                   value={program}
-                  className="data-[state=active]:bg-sunstone-orange data-[state=active]:text-white"
+                  className="data-[state=active]:bg-sunstone-orange data-[state=active]:text-white text-xs sm:text-sm py-2 px-2 transition-all duration-300"
                 >
                   {program}
                 </TabsTrigger>
