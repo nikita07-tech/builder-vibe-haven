@@ -209,6 +209,18 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* Gradient conic for spinning border */
+  .bg-gradient-conic {
+    background: conic-gradient(
+      from 0deg,
+      hsl(var(--sunstone-orange)),
+      hsl(var(--sunstone-blue)),
+      hsl(var(--sunstone-orange)),
+      hsl(var(--sunstone-blue)),
+      hsl(var(--sunstone-orange))
+    );
+  }
 }
 
 @keyframes fadeIn {
