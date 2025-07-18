@@ -10,6 +10,9 @@ import {
   Briefcase,
   Award,
   ChevronRight,
+  Star,
+  Trophy,
+  Target,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -85,7 +88,6 @@ const Index = () => {
       ],
       eligibility:
         "50% marks in graduation from a recognised university (45% for reserved category).",
-      partners: ["TCS iON", "AU Small Finance Bank", "NSDC"],
     },
     BBA: {
       duration: "3-year program",
@@ -142,7 +144,6 @@ const Index = () => {
       ],
       eligibility:
         "50% marks in class 10 & 12 from a recognised board of education.",
-      partners: ["TCS iON", "AU Small Finance Bank", "KPMG", "NSDC"],
     },
     BCA: {
       duration: "3-year program",
@@ -191,7 +192,6 @@ const Index = () => {
       ],
       eligibility:
         "Passed Class 12th from a recognized board of education. Must have studied at least one of these subjects: Computer Science, Information Technology, Informatics Practices, Mathematics, Business Mathematics, or Statistics.",
-      partners: ["TCS iON", "AU Small Finance Bank", "KPMG", "NSDC"],
     },
     MCA: {
       duration: "2-year program",
@@ -240,7 +240,6 @@ const Index = () => {
       ],
       eligibility:
         "50% marks in graduation from a recognised university (45% for reserved category). Must have studied at least one of these subjects: Computer Science, Information Technology, Informatics Practices, Mathematics, Business Mathematics, or Statistics.",
-      partners: ["TCS iON", "AU Small Finance Bank", "KPMG", "NSDC"],
     },
     "B.Tech": {
       duration: "4-year program",
@@ -289,7 +288,6 @@ const Index = () => {
       ],
       eligibility:
         "Passed Class 10+2 with Physics, Mathematics, Chemistry, Computer Science, or Biology. For Agriculture Engineering, Agriculture stream students must have at least 45% marks (40% for reserved category) in these subjects combined.",
-      partners: ["TCS iON", "AU Small Finance Bank", "KPMG", "NSDC"],
     },
   };
 
@@ -331,7 +329,7 @@ const Index = () => {
       </header>
 
       {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark text-white py-12 lg:py-20 overflow-hidden">
+      <section className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark text-white py-12 lg:py-20 overflow-hidden animate-gradient-shift">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-slide-up">
             <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-6 leading-tight">
@@ -348,7 +346,7 @@ const Index = () => {
               href="https://sunstone.in/campuses/hi-tech-institute"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-sunstone-orange font-semibold rounded-lg hover:bg-sunstone-gray-50 transition-all duration-300 hover-lift"
+              className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-sunstone-orange font-semibold rounded-lg hover:bg-sunstone-gray-50 transition-all duration-300 hover-lift animate-pulse-glow"
             >
               Know more
               <ExternalLink className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
@@ -361,7 +359,7 @@ const Index = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-lg text-sunstone-gray-700 max-w-4xl mx-auto">
+            <p className="text-lg text-sunstone-gray-700 max-w-4xl mx-auto animate-fade-in">
               At Sunstone, we shape your future with an industry-aligned
               curriculum and expert faculty. Our focus on skill development and
               real-world learning ensures you're job-ready, paving the way for
@@ -388,7 +386,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
             <Card className="text-center border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in">
               <CardHeader>
-                <div className="mx-auto mb-4 p-3 bg-sunstone-orange bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center animate-bounce-subtle">
+                <div className="mx-auto mb-4 p-3 bg-sunstone-orange bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center animate-float">
                   <Users className="h-8 w-8 text-sunstone-orange" />
                 </div>
                 <CardTitle className="text-lg sm:text-xl text-sunstone-gray-900">
@@ -404,14 +402,11 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card
-              className="text-center border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in"
-              style={{ animationDelay: "0.2s" }}
-            >
+            <Card className="text-center border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in stagger-2">
               <CardHeader>
                 <div
-                  className="mx-auto mb-4 p-3 bg-sunstone-blue bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center animate-bounce-subtle"
-                  style={{ animationDelay: "0.5s" }}
+                  className="mx-auto mb-4 p-3 bg-sunstone-blue bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center animate-float"
+                  style={{ animationDelay: "1s" }}
                 >
                   <Briefcase className="h-8 w-8 text-sunstone-blue" />
                 </div>
@@ -428,14 +423,11 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card
-              className="text-center border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in"
-              style={{ animationDelay: "0.4s" }}
-            >
+            <Card className="text-center border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in stagger-4">
               <CardHeader>
                 <div
-                  className="mx-auto mb-4 p-3 bg-sunstone-orange bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center animate-bounce-subtle"
-                  style={{ animationDelay: "1s" }}
+                  className="mx-auto mb-4 p-3 bg-sunstone-orange bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center animate-float"
+                  style={{ animationDelay: "2s" }}
                 >
                   <Award className="h-8 w-8 text-sunstone-orange" />
                 </div>
@@ -458,7 +450,7 @@ const Index = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            <div className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in">
+            <div className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in animate-pulse-glow">
               <div className="text-xl sm:text-2xl font-bold text-sunstone-orange mb-2">
                 70+
               </div>
@@ -466,10 +458,7 @@ const Index = () => {
                 sessions by industry experts and leading faculty
               </p>
             </div>
-            <div
-              className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
-              style={{ animationDelay: "0.1s" }}
-            >
+            <div className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in stagger-1">
               <div className="text-xl sm:text-2xl font-bold text-sunstone-blue mb-2">
                 Professional
               </div>
@@ -477,10 +466,7 @@ const Index = () => {
                 portfolio to increase chances of getting hired
               </p>
             </div>
-            <div
-              className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
-              style={{ animationDelay: "0.2s" }}
-            >
+            <div className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in stagger-2">
               <div className="text-xl sm:text-2xl font-bold text-sunstone-orange mb-2">
                 Seed funding
               </div>
@@ -488,10 +474,7 @@ const Index = () => {
                 support for budding entrepreneurs
               </p>
             </div>
-            <div
-              className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
-              style={{ animationDelay: "0.3s" }}
-            >
+            <div className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in stagger-3">
               <div className="text-xl sm:text-2xl font-bold text-sunstone-blue mb-2">
                 International
               </div>
@@ -499,10 +482,7 @@ const Index = () => {
                 India trips for experiential learning
               </p>
             </div>
-            <div
-              className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
-              style={{ animationDelay: "0.4s" }}
-            >
+            <div className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in stagger-4">
               <div className="text-xl sm:text-2xl font-bold text-sunstone-orange mb-2">
                 Capstone
               </div>
@@ -510,10 +490,7 @@ const Index = () => {
                 projects every semester
               </p>
             </div>
-            <div
-              className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
-              style={{ animationDelay: "0.5s" }}
-            >
+            <div className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in stagger-5">
               <div className="text-xl sm:text-2xl font-bold text-sunstone-blue mb-2">
                 10
               </div>
@@ -521,10 +498,7 @@ const Index = () => {
                 in-demand advanced certifications to choose from
               </p>
             </div>
-            <div
-              className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
-              style={{ animationDelay: "0.6s" }}
-            >
+            <div className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in stagger-5">
               <div className="text-xl sm:text-2xl font-bold text-sunstone-orange mb-2">
                 120+
               </div>
@@ -536,13 +510,21 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Programs Section */}
-      <section className="py-16 bg-sunstone-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Programs Section - Enhanced with Animations */}
+      <section className="py-16 bg-gradient-to-br from-sunstone-gray-50 to-sunstone-blue/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-sunstone-orange/5 to-sunstone-blue/5 animate-gradient-shift"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-sunstone-gray-900 mb-4">
-              Programs Offered with Hi-Tech
-            </h2>
+            <div className="flex items-center justify-center mb-4">
+              <Star className="h-8 w-8 text-sunstone-orange mr-2 animate-bounce-subtle" />
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-sunstone-gray-900">
+                Programs Offered with Hi-Tech
+              </h2>
+              <Star
+                className="h-8 w-8 text-sunstone-orange ml-2 animate-bounce-subtle"
+                style={{ animationDelay: "1s" }}
+              />
+            </div>
             <p className="text-base sm:text-lg text-sunstone-gray-700 mb-6">
               Learn from experts and get hands-on experience to become job-ready
               from Day1
@@ -550,14 +532,17 @@ const Index = () => {
           </div>
 
           <Tabs defaultValue="MBA" className="w-full animate-slide-up">
-            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 bg-white border border-sunstone-gray-200 h-auto gap-1 p-1">
-              {Object.keys(programs).map((program) => (
+            <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 bg-white/80 backdrop-blur-sm border border-sunstone-gray-200 h-auto gap-1 p-1 shadow-lg">
+              {Object.keys(programs).map((program, index) => (
                 <TabsTrigger
                   key={program}
                   value={program}
-                  className="data-[state=active]:bg-sunstone-orange data-[state=active]:text-white text-xs sm:text-sm py-2 px-2 transition-all duration-300"
+                  className={`data-[state=active]:bg-gradient-to-r data-[state=active]:from-sunstone-orange data-[state=active]:to-sunstone-orange-dark data-[state=active]:text-white text-xs sm:text-sm py-3 px-3 transition-all duration-500 hover:scale-105 animate-scale-in stagger-${index + 1} animate-pulse-glow`}
                 >
-                  {program}
+                  <div className="flex flex-col items-center">
+                    <GraduationCap className="h-4 w-4 mb-1" />
+                    {program}
+                  </div>
                 </TabsTrigger>
               ))}
             </TabsList>
@@ -568,50 +553,63 @@ const Index = () => {
                 value={programName}
                 className="mt-8"
               >
-                <Card className="border-sunstone-gray-200">
-                  <CardHeader>
-                    <CardTitle className="text-2xl text-sunstone-gray-900 mb-4">
-                      {programName} Program Highlights
-                    </CardTitle>
+                <Card className="border-sunstone-gray-200 shadow-xl bg-white/90 backdrop-blur-sm animate-scale-in hover-lift">
+                  <CardHeader className="bg-gradient-to-r from-sunstone-orange/10 to-sunstone-blue/10 rounded-t-lg">
+                    <div className="flex items-center justify-center mb-4">
+                      <Trophy className="h-8 w-8 text-sunstone-orange mr-3 animate-float" />
+                      <CardTitle className="text-2xl text-sunstone-gray-900 gradient-text">
+                        {programName} Program Highlights
+                      </CardTitle>
+                      <Trophy
+                        className="h-8 w-8 text-sunstone-blue ml-3 animate-float"
+                        style={{ animationDelay: "1s" }}
+                      />
+                    </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 mb-6">
-                      <div className="text-center p-3 sm:p-4 bg-sunstone-gray-50 rounded-lg hover-lift">
+                      <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-sunstone-orange/20 to-sunstone-orange/10 rounded-lg hover-lift animate-pulse-glow">
+                        <Target className="h-6 w-6 mx-auto mb-2 text-sunstone-orange" />
                         <div className="font-semibold text-sunstone-orange text-sm sm:text-base">
                           {programData.duration}
                         </div>
                       </div>
-                      <div className="text-center p-3 sm:p-4 bg-sunstone-gray-50 rounded-lg hover-lift">
+                      <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-sunstone-blue/20 to-sunstone-blue/10 rounded-lg hover-lift animate-pulse-glow stagger-1">
+                        <Award className="h-6 w-6 mx-auto mb-2 text-sunstone-blue" />
                         <div className="font-semibold text-sunstone-blue text-sm sm:text-base">
                           {programData.certifications}
                         </div>
                       </div>
-                      <div className="text-center p-3 sm:p-4 bg-sunstone-gray-50 rounded-lg hover-lift">
+                      <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-sunstone-orange/20 to-sunstone-orange/10 rounded-lg hover-lift animate-pulse-glow stagger-2">
+                        <Briefcase className="h-6 w-6 mx-auto mb-2 text-sunstone-orange" />
                         <div className="font-semibold text-sunstone-orange text-sm sm:text-base">
                           {programData.internships}
                         </div>
                       </div>
-                      <div className="text-center p-3 sm:p-4 bg-sunstone-gray-50 rounded-lg hover-lift">
+                      <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-sunstone-blue/20 to-sunstone-blue/10 rounded-lg hover-lift animate-pulse-glow stagger-3">
+                        <Star className="h-6 w-6 mx-auto mb-2 text-sunstone-blue" />
                         <div className="font-semibold text-sunstone-blue text-sm sm:text-base">
                           {programData.projects}
                         </div>
                       </div>
-                      <div className="text-center p-3 sm:p-4 bg-sunstone-gray-50 rounded-lg hover-lift">
+                      <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-sunstone-orange/20 to-sunstone-orange/10 rounded-lg hover-lift animate-pulse-glow stagger-4">
+                        <Trophy className="h-6 w-6 mx-auto mb-2 text-sunstone-orange" />
                         <div className="font-semibold text-sunstone-orange text-sm sm:text-base">
                           {programData.specializations}
                         </div>
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-6">
                     <Collapsible>
-                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-sunstone-gray-50 rounded-lg hover:bg-sunstone-gray-100 transition-colors">
-                        <span className="font-semibold text-sunstone-gray-900">
+                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gradient-to-r from-sunstone-gray-50 to-sunstone-blue/5 rounded-lg hover:from-sunstone-orange/10 hover:to-sunstone-blue/10 transition-all duration-300 hover-lift">
+                        <span className="font-semibold text-sunstone-gray-900 flex items-center">
+                          <Star className="h-5 w-5 mr-2 text-sunstone-orange" />
                           Advanced Certifications & Career Prospects
                         </span>
                         <ChevronDown className="h-5 w-5 text-sunstone-gray-600" />
                       </CollapsibleTrigger>
                       <CollapsibleContent className="mt-4">
                         <div className="grid gap-4">
-                          <p className="text-sunstone-gray-700 font-medium mb-4">
+                          <p className="text-sunstone-gray-700 font-medium mb-4 animate-fade-in">
                             Become a specialist through in-demand advanced
                             certifications with our dynamic modules which make
                             use of the latest tools and techniques to help you
@@ -620,13 +618,15 @@ const Index = () => {
                           {programData.certificationsList.map((cert, index) => (
                             <div
                               key={index}
-                              className="p-4 border border-sunstone-gray-200 rounded-lg"
+                              className={`p-4 border border-sunstone-gray-200 rounded-lg hover:border-sunstone-orange/50 transition-all duration-300 hover-lift animate-scale-in stagger-${(index % 5) + 1}`}
+                              style={{ animationDelay: `${index * 0.1}s` }}
                             >
-                              <h4 className="font-semibold text-sunstone-gray-900 mb-2">
+                              <h4 className="font-semibold text-sunstone-gray-900 mb-2 flex items-center">
+                                <Target className="h-4 w-4 mr-2 text-sunstone-orange" />
                                 {cert.name}
                               </h4>
                               <p className="text-sm text-sunstone-gray-600">
-                                <span className="font-medium">
+                                <span className="font-medium text-sunstone-blue">
                                   Career Prospects:
                                 </span>{" "}
                                 {cert.careers}
@@ -638,79 +638,15 @@ const Index = () => {
                     </Collapsible>
 
                     <Collapsible className="mt-6">
-                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-sunstone-gray-50 rounded-lg hover:bg-sunstone-gray-100 transition-colors">
-                        <span className="font-semibold text-sunstone-gray-900">
-                          Academic & Training Partners
-                        </span>
-                        <ChevronDown className="h-5 w-5 text-sunstone-gray-600" />
-                      </CollapsibleTrigger>
-                      <CollapsibleContent className="mt-4">
-                        <div className="space-y-6">
-                          <div>
-                            <h4 className="font-semibold text-sunstone-gray-900 mb-3">
-                              Renowned Academic Knowledge Partners
-                            </h4>
-                            <div className="grid gap-3">
-                              {programData.partners.includes("TCS iON") && (
-                                <div className="p-4 border border-sunstone-gray-200 rounded-lg">
-                                  <p className="text-sm text-sunstone-gray-700">
-                                    Start your professional career in tech with
-                                    certification courses offered by{" "}
-                                    <span className="font-semibold">
-                                      TCS iON
-                                    </span>
-                                  </p>
-                                </div>
-                              )}
-                              {programData.partners.includes(
-                                "AU Small Finance Bank",
-                              ) && (
-                                <div className="p-4 border border-sunstone-gray-200 rounded-lg">
-                                  <p className="text-sm text-sunstone-gray-700">
-                                    Kickstart your career in finance with
-                                    certification courses from{" "}
-                                    <span className="font-semibold">
-                                      AU Small Finance Bank
-                                    </span>
-                                  </p>
-                                </div>
-                              )}
-                              {programData.partners.includes("KPMG") && (
-                                <div className="p-4 border border-sunstone-gray-200 rounded-lg">
-                                  <p className="text-sm text-sunstone-gray-700">
-                                    Gain industry-ready expertise with
-                                    certification programs from{" "}
-                                    <span className="font-semibold">KPMG</span>
-                                  </p>
-                                </div>
-                              )}
-                            </div>
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-sunstone-gray-900 mb-3">
-                              Acclaimed Entrepreneurial Training Partners
-                            </h4>
-                            <div className="p-4 border border-sunstone-gray-200 rounded-lg">
-                              <p className="text-sm text-sunstone-gray-700">
-                                Build your entrepreneurial journey with training
-                                programs from{" "}
-                                <span className="font-semibold">NSDC</span>
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </CollapsibleContent>
-                    </Collapsible>
-
-                    <Collapsible className="mt-6">
-                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-sunstone-gray-50 rounded-lg hover:bg-sunstone-gray-100 transition-colors">
-                        <span className="font-semibold text-sunstone-gray-900">
+                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gradient-to-r from-sunstone-gray-50 to-sunstone-orange/5 rounded-lg hover:from-sunstone-orange/10 hover:to-sunstone-blue/10 transition-all duration-300 hover-lift">
+                        <span className="font-semibold text-sunstone-gray-900 flex items-center">
+                          <Award className="h-5 w-5 mr-2 text-sunstone-blue" />
                           Eligibility Criteria
                         </span>
                         <ChevronDown className="h-5 w-5 text-sunstone-gray-600" />
                       </CollapsibleTrigger>
                       <CollapsibleContent className="mt-4">
-                        <div className="p-4 border border-sunstone-gray-200 rounded-lg">
+                        <div className="p-4 border border-sunstone-gray-200 rounded-lg bg-gradient-to-r from-sunstone-blue/5 to-sunstone-orange/5 animate-fade-in">
                           <p className="text-sunstone-gray-700">
                             {programData.eligibility}
                           </p>
@@ -725,10 +661,84 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Admission Process */}
+      {/* Academic & Training Partners - Separate Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-sunstone-gray-900 mb-4">
+              Excel in your career with customised training
+            </h2>
+            <p className="text-base sm:text-lg text-sunstone-gray-700">
+              from our leading learning and development industry partners
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+            <Card className="border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in">
+              <CardHeader>
+                <CardTitle className="text-xl text-sunstone-gray-900 flex items-center">
+                  <Trophy className="h-6 w-6 mr-3 text-sunstone-orange" />
+                  Renowned Academic Knowledge Partners
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="p-4 border border-sunstone-gray-200 rounded-lg hover:border-sunstone-orange/50 transition-all duration-300 hover-lift">
+                  <p className="text-sm text-sunstone-gray-700">
+                    Start your professional career in tech with certification
+                    courses offered by{" "}
+                    <span className="font-semibold text-sunstone-orange">
+                      TCS iON
+                    </span>
+                  </p>
+                </div>
+                <div className="p-4 border border-sunstone-gray-200 rounded-lg hover:border-sunstone-orange/50 transition-all duration-300 hover-lift">
+                  <p className="text-sm text-sunstone-gray-700">
+                    Kickstart your career in finance with certification courses
+                    from{" "}
+                    <span className="font-semibold text-sunstone-blue">
+                      AU Small Finance Bank
+                    </span>
+                  </p>
+                </div>
+                <div className="p-4 border border-sunstone-gray-200 rounded-lg hover:border-sunstone-orange/50 transition-all duration-300 hover-lift">
+                  <p className="text-sm text-sunstone-gray-700">
+                    Gain industry-ready expertise with certification programs
+                    from{" "}
+                    <span className="font-semibold text-sunstone-orange">
+                      KPMG
+                    </span>
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in stagger-2">
+              <CardHeader>
+                <CardTitle className="text-xl text-sunstone-gray-900 flex items-center">
+                  <Star className="h-6 w-6 mr-3 text-sunstone-blue" />
+                  Acclaimed Entrepreneurial Training Partners
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="p-4 border border-sunstone-gray-200 rounded-lg hover:border-sunstone-blue/50 transition-all duration-300 hover-lift">
+                  <p className="text-sm text-sunstone-gray-700">
+                    Build your entrepreneurial journey with training programs
+                    from{" "}
+                    <span className="font-semibold text-sunstone-blue">
+                      NSDC
+                    </span>
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Admission Process */}
+      <section className="py-16 bg-gradient-to-r from-sunstone-gray-50 to-sunstone-blue/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center animate-fade-in">
             <h2 className="text-3xl lg:text-4xl font-bold text-sunstone-gray-900 mb-8">
               Admission Process
             </h2>
@@ -737,7 +747,7 @@ const Index = () => {
               admission process.
             </p>
             <Button
-              className="bg-sunstone-orange hover:bg-sunstone-orange-dark text-white px-8 py-3 text-lg"
+              className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark hover:from-sunstone-orange-dark hover:to-sunstone-orange text-white px-8 py-3 text-lg animate-pulse-glow hover-lift"
               asChild
             >
               <a href="tel:+917065303030">
@@ -753,7 +763,7 @@ const Index = () => {
       <footer className="bg-sunstone-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="text-2xl font-bold text-sunstone-orange mb-4">
+            <div className="text-2xl font-bold text-sunstone-orange mb-4 animate-bounce-subtle">
               Sunstone
             </div>
             <p className="text-sunstone-gray-400 mb-4">
