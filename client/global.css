@@ -285,3 +285,18 @@
     background-position: 100% 50%;
   }
 }
+
+@keyframes progressLine {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  50% {
+    width: 75%;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0.8;
+  }
+}
