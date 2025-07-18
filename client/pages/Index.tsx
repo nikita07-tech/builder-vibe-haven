@@ -696,73 +696,144 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Academic & Training Partners - Separate Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-sunstone-gray-900 mb-4">
+      {/* Academic & Training Partners - More Attractive Section */}
+      <section className="py-20 bg-gradient-to-br from-sunstone-blue/5 via-white to-sunstone-orange/5 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-sunstone-orange/10 rounded-full blur-3xl animate-float"></div>
+          <div
+            className="absolute bottom-20 right-20 w-96 h-96 bg-sunstone-blue/10 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16 animate-fade-in">
+            <div className="flex items-center justify-center mb-6">
+              <div className="h-1 w-20 bg-sunstone-orange rounded-full mr-4"></div>
+              <Trophy className="h-12 w-12 text-sunstone-orange animate-bounce-subtle" />
+              <div className="h-1 w-20 bg-sunstone-blue rounded-full ml-4"></div>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue to-sunstone-orange bg-clip-text text-transparent mb-6">
               Excel in your career with customised training
             </h2>
-            <p className="text-base sm:text-lg text-sunstone-gray-700">
+            <p className="text-lg sm:text-xl text-sunstone-gray-700 max-w-3xl mx-auto">
               from our leading learning and development industry partners
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-            <Card className="border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in">
-              <CardHeader>
-                <CardTitle className="text-xl text-sunstone-gray-900 flex items-center">
-                  <Trophy className="h-6 w-6 mr-3 text-sunstone-orange" />
+            <Card className="border-2 border-sunstone-orange/20 bg-gradient-to-br from-white to-sunstone-orange/5 hover:shadow-2xl hover:border-sunstone-orange/50 transition-all duration-500 hover-lift animate-scale-in group">
+              <CardHeader className="relative">
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center animate-pulse-glow">
+                  <Trophy className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-sunstone-blue font-bold flex items-center group-hover:text-sunstone-orange transition-colors duration-300">
+                  <Star className="h-8 w-8 mr-3 text-sunstone-orange animate-bounce-subtle" />
                   Renowned Academic Knowledge Partners
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="p-4 border border-sunstone-gray-200 rounded-lg hover:border-sunstone-orange/50 transition-all duration-300 hover-lift">
+              <CardContent className="space-y-6">
+                <div className="p-6 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-4 border-sunstone-orange hover:shadow-lg transition-all duration-300 hover-lift">
+                  <div className="flex items-center mb-3">
+                    <div className="w-12 h-12 bg-sunstone-orange rounded-full flex items-center justify-center mr-4">
+                      <span className="text-white font-bold">T</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-sunstone-blue mb-1">
+                        TCS iON
+                      </h4>
+                      <p className="text-sm text-sunstone-gray-600">
+                        Tech Certification Courses
+                      </p>
+                    </div>
+                  </div>
                   <p className="text-sm text-sunstone-gray-700">
-                    Start your professional career in tech with certification
-                    courses offered by{" "}
-                    <span className="font-semibold text-sunstone-orange">
-                      TCS iON
-                    </span>
+                    Start your professional career in tech with cutting-edge
+                    certification courses
                   </p>
                 </div>
-                <div className="p-4 border border-sunstone-gray-200 rounded-lg hover:border-sunstone-orange/50 transition-all duration-300 hover-lift">
+                <div className="p-6 bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg border-l-4 border-sunstone-blue hover:shadow-lg transition-all duration-300 hover-lift">
+                  <div className="flex items-center mb-3">
+                    <div className="w-12 h-12 bg-sunstone-blue rounded-full flex items-center justify-center mr-4">
+                      <span className="text-white font-bold">AU</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-sunstone-blue mb-1">
+                        AU Small Finance Bank
+                      </h4>
+                      <p className="text-sm text-sunstone-gray-600">
+                        Finance Certification
+                      </p>
+                    </div>
+                  </div>
                   <p className="text-sm text-sunstone-gray-700">
-                    Kickstart your career in finance with certification courses
-                    from{" "}
-                    <span className="font-semibold text-sunstone-blue">
-                      AU Small Finance Bank
-                    </span>
+                    Kickstart your career in finance with industry-leading
+                    certification courses
                   </p>
                 </div>
-                <div className="p-4 border border-sunstone-gray-200 rounded-lg hover:border-sunstone-orange/50 transition-all duration-300 hover-lift">
+                <div className="p-6 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-4 border-sunstone-orange hover:shadow-lg transition-all duration-300 hover-lift">
+                  <div className="flex items-center mb-3">
+                    <div className="w-12 h-12 bg-sunstone-orange rounded-full flex items-center justify-center mr-4">
+                      <span className="text-white font-bold">K</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-sunstone-blue mb-1">
+                        KPMG
+                      </h4>
+                      <p className="text-sm text-sunstone-gray-600">
+                        Professional Expertise
+                      </p>
+                    </div>
+                  </div>
                   <p className="text-sm text-sunstone-gray-700">
                     Gain industry-ready expertise with certification programs
-                    from{" "}
-                    <span className="font-semibold text-sunstone-orange">
-                      KPMG
-                    </span>
+                    from global leaders
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-sunstone-gray-200 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in stagger-2">
-              <CardHeader>
-                <CardTitle className="text-xl text-sunstone-gray-900 flex items-center">
-                  <Star className="h-6 w-6 mr-3 text-sunstone-blue" />
+            <Card className="border-2 border-sunstone-blue/20 bg-gradient-to-br from-white to-sunstone-blue/5 hover:shadow-2xl hover:border-sunstone-blue/50 transition-all duration-500 hover-lift animate-scale-in stagger-2 group">
+              <CardHeader className="relative">
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center animate-pulse-glow">
+                  <Award className="h-8 w-8 text-white" />
+                </div>
+                <CardTitle className="text-2xl text-sunstone-blue font-bold flex items-center group-hover:text-sunstone-orange transition-colors duration-300">
+                  <Target
+                    className="h-8 w-8 mr-3 text-sunstone-blue animate-bounce-subtle"
+                    style={{ animationDelay: "1s" }}
+                  />
                   Acclaimed Entrepreneurial Training Partners
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="p-4 border border-sunstone-gray-200 rounded-lg hover:border-sunstone-blue/50 transition-all duration-300 hover-lift">
-                  <p className="text-sm text-sunstone-gray-700">
-                    Build your entrepreneurial journey with training programs
-                    from{" "}
-                    <span className="font-semibold text-sunstone-blue">
-                      NSDC
-                    </span>
+                <div className="p-8 bg-gradient-to-br from-sunstone-blue/10 to-sunstone-orange/5 rounded-lg border-2 border-dashed border-sunstone-blue/30 hover:border-sunstone-blue/60 hover:shadow-lg transition-all duration-300 hover-lift text-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
+                    <span className="text-white font-bold text-2xl">N</span>
+                  </div>
+                  <h4 className="font-bold text-sunstone-blue text-xl mb-3">
+                    NSDC
+                  </h4>
+                  <p className="text-sm text-sunstone-gray-600 mb-4">
+                    National Skill Development Corporation
                   </p>
+                  <p className="text-sunstone-gray-700 leading-relaxed">
+                    Build your entrepreneurial journey with comprehensive
+                    training programs designed to foster innovation and business
+                    leadership
+                  </p>
+                  <div className="mt-6 flex justify-center">
+                    <div className="flex space-x-2">
+                      <div className="w-3 h-3 bg-sunstone-blue rounded-full animate-bounce"></div>
+                      <div
+                        className="w-3 h-3 bg-sunstone-orange rounded-full animate-bounce"
+                        style={{ animationDelay: "0.1s" }}
+                      ></div>
+                      <div
+                        className="w-3 h-3 bg-sunstone-blue rounded-full animate-bounce"
+                        style={{ animationDelay: "0.2s" }}
+                      ></div>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
