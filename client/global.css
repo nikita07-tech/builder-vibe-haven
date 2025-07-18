@@ -18,8 +18,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 18 95% 55%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -40,20 +40,31 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Sunstone Brand Colors */
+    --sunstone-orange: 18 95% 55%;
+    --sunstone-orange-light: 18 95% 65%;
+    --sunstone-orange-dark: 18 95% 45%;
+    --sunstone-blue: 210 100% 45%;
+    --sunstone-blue-light: 210 100% 55%;
+    --sunstone-blue-dark: 210 100% 35%;
+    --sunstone-gray-50: 210 20% 98%;
+    --sunstone-gray-100: 210 20% 95%;
+    --sunstone-gray-200: 210 16% 90%;
+    --sunstone-gray-300: 210 14% 83%;
+    --sunstone-gray-400: 210 11% 71%;
+    --sunstone-gray-500: 210 10% 57%;
+    --sunstone-gray-600: 210 12% 47%;
+    --sunstone-gray-700: 210 15% 38%;
+    --sunstone-gray-800: 210 18% 30%;
+    --sunstone-gray-900: 210 22% 22%;
   }
 
   .dark {
