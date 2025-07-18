@@ -296,34 +296,34 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-sunstone-gray-50 to-white">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b border-sunstone-gray-200">
+      <header className="bg-white shadow-sm border-b border-sunstone-gray-200 animate-fade-in">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-8">
-              <div className="flex items-center space-x-4">
-                <div className="text-sm font-medium text-sunstone-gray-600">
+            <div className="flex items-center space-x-4 sm:space-x-8">
+              <div className="flex items-center space-x-2 sm:space-x-4">
+                <div className="text-xs sm:text-sm font-medium text-sunstone-gray-600">
                   Campus logo
                 </div>
-                <div className="h-6 w-px bg-sunstone-gray-300"></div>
-                <div className="text-xl font-bold text-sunstone-orange">
+                <div className="h-4 sm:h-6 w-px bg-sunstone-gray-300"></div>
+                <div className="text-lg sm:text-xl font-bold text-sunstone-orange">
                   Sunstone
                 </div>
               </div>
             </div>
-            <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2 sm:space-x-6">
               <a
                 href="mailto:connect@sunstone.in"
-                className="flex items-center space-x-2 text-sunstone-gray-600 hover:text-sunstone-orange transition-colors"
+                className="hidden sm:flex items-center space-x-2 text-sunstone-gray-600 hover:text-sunstone-orange transition-colors"
               >
                 <Mail className="h-4 w-4" />
                 <span className="text-sm">connect@sunstone.in</span>
               </a>
               <a
                 href="tel:+917065303030"
-                className="flex items-center space-x-2 text-sunstone-orange hover:text-sunstone-orange-dark transition-colors font-medium"
+                className="flex items-center space-x-1 sm:space-x-2 text-sunstone-orange hover:text-sunstone-orange-dark transition-colors font-medium"
               >
                 <Phone className="h-4 w-4" />
-                <span className="text-sm">+91 7065-30-30-30</span>
+                <span className="text-xs sm:text-sm">+91 7065-30-30-30</span>
               </a>
             </div>
           </div>
