@@ -481,9 +481,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Key Features */}
-      <section className="py-16 bg-white">
+      {/* Key Offerings */}
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-sunstone-blue mb-4">
+              Key Offerings
+            </h2>
+            <p className="text-base sm:text-lg text-sunstone-gray-600 max-w-2xl mx-auto">
+              Discover what makes our programs exceptional and job-ready
+            </p>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <div className="text-center p-4 sm:p-6 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in animate-pulse-glow">
               <div className="text-xl sm:text-2xl font-bold text-sunstone-orange mb-2">
