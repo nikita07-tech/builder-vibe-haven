@@ -157,6 +157,35 @@
     animation: bounceSubtle 2s ease-in-out infinite;
   }
 
+  .animate-pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-gradient-shift {
+    animation: gradientShift 8s ease-in-out infinite;
+    background-size: 200% 200%;
+  }
+
+  .stagger-1 {
+    animation-delay: 0.1s;
+  }
+  .stagger-2 {
+    animation-delay: 0.2s;
+  }
+  .stagger-3 {
+    animation-delay: 0.3s;
+  }
+  .stagger-4 {
+    animation-delay: 0.4s;
+  }
+  .stagger-5 {
+    animation-delay: 0.5s;
+  }
+
   /* Hover effects */
   .hover-lift {
     transition:
