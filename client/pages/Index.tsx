@@ -910,17 +910,24 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Process Steps - Simple and Clean */}
+          {/* Process Steps - Animated */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div className="text-center group">
+            <div className="text-center group animate-scale-in">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 animate-pulse-glow">
                   <span className="text-white font-bold text-2xl">1</span>
                 </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-sunstone-blue rounded-full"></div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-sunstone-blue rounded-full animate-bounce"></div>
+                {/* Arrow to next step */}
+                <div
+                  className="hidden lg:block absolute top-10 -right-8 text-sunstone-orange animate-bounce"
+                  style={{ animationDelay: "0.5s" }}
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </div>
               </div>
-              <div className="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-lg transition-shadow duration-300">
-                <h3 className="text-xl font-bold text-sunstone-blue mb-3">
+              <div className="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-xl group-hover:border-sunstone-orange/50 transition-all duration-300 transform group-hover:-translate-y-1">
+                <h3 className="text-xl font-bold text-sunstone-blue mb-3 group-hover:text-sunstone-orange transition-colors duration-300">
                   Apply Online
                 </h3>
                 <p className="text-sunstone-gray-600">
@@ -929,15 +936,27 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="text-center group">
+            <div className="text-center group animate-scale-in stagger-1">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <div
+                  className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 animate-pulse-glow"
+                  style={{ animationDelay: "0.3s" }}
+                >
                   <span className="text-white font-bold text-2xl">2</span>
                 </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-sunstone-orange rounded-full"></div>
+                <div
+                  className="absolute -top-1 -right-1 w-4 h-4 bg-sunstone-orange rounded-full animate-bounce"
+                  style={{ animationDelay: "0.2s" }}
+                ></div>
+                <div
+                  className="hidden lg:block absolute top-10 -right-8 text-sunstone-blue animate-bounce"
+                  style={{ animationDelay: "0.7s" }}
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </div>
               </div>
-              <div className="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-lg transition-shadow duration-300">
-                <h3 className="text-xl font-bold text-sunstone-blue mb-3">
+              <div className="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-xl group-hover:border-sunstone-blue/50 transition-all duration-300 transform group-hover:-translate-y-1">
+                <h3 className="text-xl font-bold text-sunstone-blue mb-3 group-hover:text-sunstone-orange transition-colors duration-300">
                   Document Review
                 </h3>
                 <p className="text-sunstone-gray-600">
@@ -947,15 +966,27 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="text-center group">
+            <div className="text-center group animate-scale-in stagger-2">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <div
+                  className="w-20 h-20 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 animate-pulse-glow"
+                  style={{ animationDelay: "0.6s" }}
+                >
                   <span className="text-white font-bold text-2xl">3</span>
                 </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-sunstone-blue rounded-full"></div>
+                <div
+                  className="absolute -top-1 -right-1 w-4 h-4 bg-sunstone-blue rounded-full animate-bounce"
+                  style={{ animationDelay: "0.4s" }}
+                ></div>
+                <div
+                  className="hidden lg:block absolute top-10 -right-8 text-sunstone-orange animate-bounce"
+                  style={{ animationDelay: "0.9s" }}
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </div>
               </div>
-              <div className="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-lg transition-shadow duration-300">
-                <h3 className="text-xl font-bold text-sunstone-blue mb-3">
+              <div className="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-xl group-hover:border-sunstone-orange/50 transition-all duration-300 transform group-hover:-translate-y-1">
+                <h3 className="text-xl font-bold text-sunstone-blue mb-3 group-hover:text-sunstone-orange transition-colors duration-300">
                   Interview & Assessment
                 </h3>
                 <p className="text-sunstone-gray-600">
@@ -964,12 +995,18 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="text-center group">
+            <div className="text-center group animate-scale-in stagger-3">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <div
+                  className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 animate-pulse-glow"
+                  style={{ animationDelay: "0.9s" }}
+                >
                   <span className="text-white font-bold text-2xl">4</span>
                 </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full">
+                <div
+                  className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full animate-bounce"
+                  style={{ animationDelay: "0.6s" }}
+                >
                   <svg
                     className="w-4 h-4 text-white"
                     fill="currentColor"
@@ -982,9 +1019,16 @@ const Index = () => {
                     />
                   </svg>
                 </div>
+                {/* Success celebration */}
+                <div
+                  className="absolute -top-2 -left-2 w-6 h-6 text-yellow-500 animate-bounce"
+                  style={{ animationDelay: "1.2s" }}
+                >
+                  ⭐
+                </div>
               </div>
-              <div className="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-lg transition-shadow duration-300">
-                <h3 className="text-xl font-bold text-sunstone-blue mb-3">
+              <div className="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-xl group-hover:border-green-500/50 transition-all duration-300 transform group-hover:-translate-y-1">
+                <h3 className="text-xl font-bold text-sunstone-blue mb-3 group-hover:text-green-600 transition-colors duration-300">
                   Confirmation
                 </h3>
                 <p className="text-sunstone-gray-600">
