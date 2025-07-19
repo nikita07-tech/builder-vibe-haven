@@ -890,19 +890,23 @@ const Index = () => {
             style={{ animationDelay: "3s" }}
           ></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16 animate-fade-in">
-            <div className="flex items-center justify-center mb-6">
-              <div className="h-1 w-20 bg-sunstone-orange rounded-full mr-4"></div>
-              <Trophy className="h-12 w-12 text-sunstone-orange animate-bounce-subtle" />
-              <div className="h-1 w-20 bg-sunstone-blue rounded-full ml-4"></div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-8 animate-fade-in">
+            <div className="flex items-center justify-center mb-4">
+              <div className="h-0.5 w-16 bg-sunstone-orange rounded-full mr-3"></div>
+              <div className="w-10 h-10 bg-gradient-to-r from-sunstone-orange to-sunstone-blue rounded-full flex items-center justify-center">
+                <Trophy className="h-5 w-5 text-white" />
+              </div>
+              <div className="h-0.5 w-16 bg-sunstone-blue rounded-full ml-3"></div>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue to-sunstone-orange bg-clip-text text-transparent mb-6">
-              <span className="text-xl sm:text-2xl lg:text-3xl">Excel</span> in
-              your career with customised training
+            <h2 className="text-2xl sm:text-3xl font-bold text-sunstone-blue mb-2">
+              <span className="text-xl sm:text-2xl text-sunstone-orange">
+                Excel
+              </span>{" "}
+              in your career
             </h2>
-            <p className="text-lg sm:text-xl text-sunstone-gray-700 max-w-3xl mx-auto">
-              from our leading learning and development industry partners
+            <p className="text-sm text-sunstone-gray-600 max-w-2xl mx-auto">
+              with customised training from industry-leading partners
             </p>
           </div>
 
