@@ -332,8 +332,8 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Banner - Enhanced Mobile Responsive */}
-      <section className="bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark text-white py-8 sm:py-12 lg:py-16 relative overflow-hidden">
+      {/* Hero Banner - Compact */}
+      <section className="bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark text-white py-6 sm:py-8 lg:py-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-sunstone-blue/95 to-sunstone-blue-dark/95"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
