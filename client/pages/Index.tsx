@@ -1104,20 +1104,10 @@ const Index = () => {
 
             <div className="text-center group animate-scale-in stagger-1">
               <div className="relative mb-6">
-                <div
-                  className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 animate-pulse-glow"
-                  style={{ animationDelay: "0.3s" }}
-                >
+                <div className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-105 transition-all duration-300">
                   <span className="text-white font-bold text-2xl">2</span>
                 </div>
-                <div
-                  className="absolute -top-1 -right-1 w-4 h-4 bg-sunstone-orange rounded-full animate-bounce"
-                  style={{ animationDelay: "0.2s" }}
-                ></div>
-                <div
-                  className="hidden lg:block absolute top-10 -right-8 text-sunstone-blue animate-bounce"
-                  style={{ animationDelay: "0.7s" }}
-                >
+                <div className="hidden lg:block absolute top-10 -right-8 text-sunstone-gray-400">
                   <ChevronRight className="h-6 w-6" />
                 </div>
               </div>
