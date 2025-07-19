@@ -412,22 +412,18 @@ const Index = () => {
         </div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden animate-scale-in">
-            <div className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark text-white px-6 py-4">
+          <div className="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl overflow-hidden animate-scale-in">
+            <div className="bg-gradient-to-r from-sunstone-orange to-sunstone-blue text-white px-4 py-3">
               <div className="flex items-center justify-between">
                 <div className="animate-slide-in-left">
-                  <h3 className="text-xl sm:text-2xl font-bold">
-                    Placement Highlights
-                  </h3>
-                  <p className="text-sm opacity-90">
-                    MBA | MCA | BBA | BCA | B.Tech
+                  <h3 className="text-lg font-bold">Placement Highlights</h3>
+                  <p className="text-xs opacity-90">
+                    📚 MBA | MCA | BBA | BCA | B.Tech
                   </p>
                 </div>
-                <div className="animate-slide-in-right">
-                  <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
-                    📞 Talk To Our Counsellor
-                  </button>
-                </div>
+                <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-3 py-1.5 rounded-md text-sm font-semibold transition-all duration-300 hover:scale-105 animate-slide-in-right">
+                  📞 Enquire Now
+                </button>
               </div>
             </div>
 
