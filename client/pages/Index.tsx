@@ -892,7 +892,7 @@ const Index = () => {
               <div className="h-1 w-20 bg-sunstone-blue rounded-full ml-4"></div>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue to-sunstone-orange bg-clip-text text-transparent mb-6">
-              <span className="text-2xl sm:text-3xl lg:text-4xl">Excel</span> in
+              <span className="text-xl sm:text-2xl lg:text-3xl">Excel</span> in
               your career with customised training
             </h2>
             <p className="text-lg sm:text-xl text-sunstone-gray-700 max-w-3xl mx-auto">
