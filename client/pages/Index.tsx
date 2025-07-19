@@ -1143,34 +1143,8 @@ const Index = () => {
 
             <div className="text-center group animate-scale-in stagger-3">
               <div className="relative mb-6">
-                <div
-                  className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 animate-pulse-glow"
-                  style={{ animationDelay: "0.9s" }}
-                >
+                <div className="w-20 h-20 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-105 transition-all duration-300">
                   <span className="text-white font-bold text-2xl">4</span>
-                </div>
-                <div
-                  className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full animate-bounce"
-                  style={{ animationDelay: "0.6s" }}
-                >
-                  <svg
-                    className="w-4 h-4 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                {/* Success celebration */}
-                <div
-                  className="absolute -top-2 -left-2 w-6 h-6 text-yellow-500 animate-bounce"
-                  style={{ animationDelay: "1.2s" }}
-                >
-                  ⭐
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-xl group-hover:border-green-500/50 transition-all duration-300 transform group-hover:-translate-y-1">
