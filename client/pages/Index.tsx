@@ -427,29 +427,29 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="p-6 sm:p-8">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-6">
-                <div className="text-center animate-count-up stagger-1">
-                  <div className="text-3xl sm:text-4xl font-bold text-sunstone-blue mb-2">
+            <div className="p-4">
+              <div className="grid grid-cols-3 gap-4 mb-4">
+                <div className="text-center animate-count-up">
+                  <div className="text-2xl font-bold text-sunstone-blue mb-1">
                     26 LPA
                   </div>
-                  <p className="text-sm text-sunstone-gray-600">
+                  <p className="text-xs text-sunstone-gray-600">
                     Highest Package
                   </p>
                 </div>
-                <div className="text-center animate-count-up stagger-2">
-                  <div className="text-3xl sm:text-4xl font-bold text-sunstone-blue mb-2">
+                <div className="text-center animate-count-up stagger-1">
+                  <div className="text-2xl font-bold text-sunstone-blue mb-1">
                     1200+
                   </div>
-                  <p className="text-sm text-sunstone-gray-600">
+                  <p className="text-xs text-sunstone-gray-600">
                     Students Placed
                   </p>
                 </div>
-                <div className="text-center animate-count-up stagger-3">
-                  <div className="text-3xl sm:text-4xl font-bold text-sunstone-blue mb-2">
+                <div className="text-center animate-count-up stagger-2">
+                  <div className="text-2xl font-bold text-sunstone-blue mb-1">
                     5000+
                   </div>
-                  <p className="text-sm text-sunstone-gray-600">
+                  <p className="text-xs text-sunstone-gray-600">
                     Job Opportunities
                   </p>
                 </div>
