@@ -401,8 +401,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Placement Highlights */}
-      <section className="py-16 bg-gradient-to-br from-sunstone-blue via-sunstone-blue-dark to-sunstone-blue relative overflow-hidden">
+      {/* Placement Highlights - Compact & Creative */}
+      <section className="py-8 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-sunstone-blue/95 to-sunstone-blue-dark/95"></div>
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-96 h-96 bg-sunstone-orange/20 rounded-full blur-3xl animate-float"></div>
