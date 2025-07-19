@@ -308,7 +308,7 @@ const Index = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-16 w-auto"
+                  className="h-20 w-auto"
                 />
               </div>
             </div>
@@ -344,21 +344,9 @@ const Index = () => {
                 Power up your career with an MBA, BBA, BCA, MCA & B.Tech at
                 Hi-Tech Institute of Engineering & Technology
               </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-3 text-sunstone-orange font-semibold">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 text-sunstone-orange font-semibold">
                 Powered by Sunstone
               </p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 mb-6 mx-auto lg:mx-0 w-fit">
-                <div className="flex items-center justify-center lg:justify-start flex-wrap gap-2">
-                  <span className="text-base sm:text-lg lg:text-xl text-white font-semibold">
-                    Powered by
-                  </span>
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
-                    alt="Sunstone"
-                    className="h-6 sm:h-8 lg:h-10 w-auto filter brightness-0 invert"
-                  />
-                </div>
-              </div>
               <a
                 href="https://sunstone.in/campuses/hi-tech-institute"
                 target="_blank"
