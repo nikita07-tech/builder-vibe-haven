@@ -344,15 +344,17 @@ const Index = () => {
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-3 text-sunstone-orange font-semibold">
                 at Hi-Tech Institute of Engineering & Technology
               </p>
-              <div className="flex items-center justify-center lg:justify-start mb-6 flex-wrap gap-2">
-                <span className="text-base sm:text-lg lg:text-xl text-white/90 font-medium">
-                  powered by
-                </span>
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
-                  alt="Sunstone"
-                  className="h-6 sm:h-8 lg:h-10 w-auto filter brightness-0 invert"
-                />
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 mb-6 mx-auto lg:mx-0 w-fit">
+                <div className="flex items-center justify-center lg:justify-start flex-wrap gap-2">
+                  <span className="text-base sm:text-lg lg:text-xl text-white font-semibold">
+                    Powered by
+                  </span>
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
+                    alt="Sunstone"
+                    className="h-6 sm:h-8 lg:h-10 w-auto filter brightness-0 invert"
+                  />
+                </div>
               </div>
               <a
                 href="https://sunstone.in/campuses/hi-tech-institute"
@@ -370,12 +372,12 @@ const Index = () => {
             <div className="lg:col-span-2 order-1 lg:order-2 relative">
               <div className="relative max-w-sm mx-auto">
                 {/* Simple shadow */}
-                <div className="relative overflow-hidden rounded-xl shadow-lg bg-white p-2">
+                <div className="relative overflow-hidden rounded-xl shadow-lg bg-white p-2 animate-float">
                   <div className="relative overflow-hidden rounded-lg">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600"
                       alt="Hi-Tech Institute Campus"
-                      className="w-full h-auto object-cover aspect-[4/3]"
+                      className="w-full h-auto object-cover aspect-[4/3] transition-transform duration-300 hover:scale-105"
                       loading="eager"
                     />
 
@@ -792,7 +794,8 @@ const Index = () => {
               <div className="h-1 w-20 bg-sunstone-blue rounded-full ml-4"></div>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue to-sunstone-orange bg-clip-text text-transparent mb-6">
-              Excel in your career with customised training
+              <span className="text-2xl sm:text-3xl lg:text-4xl">Excel</span> in
+              your career with customised training
             </h2>
             <p className="text-lg sm:text-xl text-sunstone-gray-700 max-w-3xl mx-auto">
               from our leading learning and development industry partners
@@ -813,8 +816,14 @@ const Index = () => {
               <CardContent className="space-y-6">
                 <div className="p-6 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-4 border-sunstone-orange hover:shadow-lg transition-all duration-300 hover-lift">
                   <div className="flex items-center mb-3">
-                    <div className="w-12 h-12 bg-sunstone-orange rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">T</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mr-4 shadow-md">
+                      <svg
+                        className="w-7 h-7 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z" />
+                      </svg>
                     </div>
                     <div>
                       <h4 className="font-bold text-sunstone-blue mb-1">
@@ -832,8 +841,14 @@ const Index = () => {
                 </div>
                 <div className="p-6 bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg border-l-4 border-sunstone-blue hover:shadow-lg transition-all duration-300 hover-lift">
                   <div className="flex items-center mb-3">
-                    <div className="w-12 h-12 bg-sunstone-blue rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">AU</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mr-4 shadow-md">
+                      <svg
+                        className="w-7 h-7 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                      </svg>
                     </div>
                     <div>
                       <h4 className="font-bold text-sunstone-blue mb-1">
@@ -851,8 +866,14 @@ const Index = () => {
                 </div>
                 <div className="p-6 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-4 border-sunstone-orange hover:shadow-lg transition-all duration-300 hover-lift">
                   <div className="flex items-center mb-3">
-                    <div className="w-12 h-12 bg-sunstone-orange rounded-full flex items-center justify-center mr-4">
-                      <span className="text-white font-bold">K</span>
+                    <div className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center mr-4 shadow-md">
+                      <svg
+                        className="w-7 h-7 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
                     </div>
                     <div>
                       <h4 className="font-bold text-sunstone-blue mb-1">
@@ -886,8 +907,14 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <div className="p-8 bg-gradient-to-br from-sunstone-blue/10 to-sunstone-orange/5 rounded-lg border-2 border-dashed border-sunstone-blue/30 hover:border-sunstone-blue/60 hover:shadow-lg transition-all duration-300 hover-lift text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
-                    <span className="text-white font-bold text-2xl">N</span>
+                  <div className="w-20 h-20 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mx-auto mb-4 animate-float shadow-lg">
+                    <svg
+                      className="w-10 h-10 text-white"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
+                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                    </svg>
                   </div>
                   <h4 className="font-bold text-sunstone-blue text-xl mb-3">
                     NSDC
