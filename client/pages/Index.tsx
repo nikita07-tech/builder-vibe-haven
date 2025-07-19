@@ -299,9 +299,11 @@ const Index = () => {
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-4 sm:space-x-8">
               <div className="flex items-center space-x-3 sm:space-x-4">
-                <div className="text-sm font-semibold text-sunstone-blue bg-sunstone-gray-100 px-3 py-1 rounded-md">
-                  Hi-Tech Institute
-                </div>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
+                  alt="Hi-Tech Institute"
+                  className="h-12 w-auto"
+                />
                 <div className="h-6 w-px bg-sunstone-gray-300"></div>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
@@ -339,10 +341,11 @@ const Index = () => {
             {/* Content Section - Takes 3 columns on large screens */}
             <div className="lg:col-span-3 text-center lg:text-left animate-slide-up order-2 lg:order-1">
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 leading-tight">
-                Power up your career with an MBA, BBA, BCA, MCA & B.Tech
+                Power up your career with an MBA, BBA, BCA, MCA & B.Tech at
+                Hi-Tech Institute of Engineering & Technology
               </h1>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-3 text-sunstone-orange font-semibold">
-                at Hi-Tech Institute of Engineering & Technology
+                Powered by Sunstone
               </p>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 mb-6 mx-auto lg:mx-0 w-fit">
                 <div className="flex items-center justify-center lg:justify-start flex-wrap gap-2">
