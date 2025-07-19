@@ -1192,6 +1192,232 @@ const Index = () => {
         </div>
       </section>
 
+      {/* What Students Say */}
+      <section className="py-16 bg-gradient-to-br from-sunstone-gray-50 via-white to-sunstone-orange/5 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-48 h-48 bg-sunstone-blue/10 rounded-full blur-2xl animate-float"></div>
+          <div
+            className="absolute bottom-10 right-10 w-56 h-56 bg-sunstone-orange/10 rounded-full blur-2xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 animate-fade-in">
+            <div className="flex items-center justify-center mb-6">
+              <div className="h-1 w-20 bg-sunstone-orange rounded-full mr-4"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-sunstone-blue to-sunstone-orange rounded-full flex items-center justify-center animate-pulse-glow">
+                <span className="text-white text-2xl">💬</span>
+              </div>
+              <div className="h-1 w-20 bg-sunstone-blue rounded-full ml-4"></div>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue to-sunstone-orange bg-clip-text text-transparent mb-6">
+              What Students Say
+            </h2>
+            <p className="text-lg text-sunstone-gray-700 max-w-3xl mx-auto">
+              Hear from our successful graduates who transformed their careers
+              with Hi-Tech & Sunstone
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="bg-white/80 backdrop-blur-sm border-2 border-sunstone-gray-200 hover:border-sunstone-orange/50 hover:shadow-xl transition-all duration-300 hover-lift animate-scale-in">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">RK</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sunstone-blue">
+                      Rahul Kumar
+                    </h4>
+                    <p className="text-sm text-sunstone-gray-600">
+                      MBA Graduate - TCS
+                    </p>
+                  </div>
+                </div>
+                <div className="flex mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <p className="text-sunstone-gray-700 text-sm italic">
+                  "Hi-Tech with Sunstone gave me industry exposure I needed. The
+                  placement support was exceptional, and I landed my dream job
+                  at TCS with a great package!"
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/80 backdrop-blur-sm border-2 border-sunstone-gray-200 hover:border-sunstone-blue/50 hover:shadow-xl transition-all duration-300 hover-lift animate-scale-in stagger-1">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">PS</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sunstone-blue">
+                      Priya Sharma
+                    </h4>
+                    <p className="text-sm text-sunstone-gray-600">
+                      BCA Graduate - Infosys
+                    </p>
+                  </div>
+                </div>
+                <div className="flex mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <p className="text-sunstone-gray-700 text-sm italic">
+                  "The practical approach and industry connections at
+                  Hi-Tech-Sunstone helped me develop real skills. Now I'm
+                  working as a software developer at Infosys!"
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/80 backdrop-blur-sm border-2 border-sunstone-gray-200 hover:border-sunstone-orange/50 hover:shadow-xl transition-all duration-300 hover-lift animate-scale-in stagger-2">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">AJ</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sunstone-blue">Amit Joshi</h4>
+                    <p className="text-sm text-sunstone-gray-600">
+                      B.Tech Graduate - Wipro
+                    </p>
+                  </div>
+                </div>
+                <div className="flex mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <p className="text-sunstone-gray-700 text-sm italic">
+                  "The advanced certifications and project-based learning
+                  prepared me perfectly for the industry. Grateful for the
+                  excellent placement support!"
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Explore YouTube */}
+      <section className="py-16 bg-gradient-to-br from-sunstone-blue/5 via-white to-sunstone-orange/5 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-64 h-64 bg-sunstone-orange/10 rounded-full blur-2xl animate-float"></div>
+          <div
+            className="absolute bottom-20 right-20 w-72 h-72 bg-sunstone-blue/10 rounded-full blur-2xl animate-float"
+            style={{ animationDelay: "2s" }}
+          ></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 animate-fade-in">
+            <div className="flex items-center justify-center mb-6">
+              <div className="h-1 w-20 bg-sunstone-orange rounded-full mr-4"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center animate-pulse-glow">
+                <span className="text-white text-2xl">📺</span>
+              </div>
+              <div className="h-1 w-20 bg-sunstone-blue rounded-full ml-4"></div>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue to-sunstone-orange bg-clip-text text-transparent mb-6">
+              Explore Our YouTube Channel
+            </h2>
+            <p className="text-lg text-sunstone-gray-700 max-w-3xl mx-auto mb-8">
+              Watch student success stories, campus life, and expert insights
+              from Sunstone
+            </p>
+            <Button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-8 py-3 rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
+              <span className="mr-2">🔗</span>
+              Visit Sunstone YouTube Channel
+            </Button>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in">
+              <div className="relative">
+                <div className="aspect-video bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-2xl">▶️</span>
+                    </div>
+                    <p className="font-semibold">Student Success Stories</p>
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-all duration-300 cursor-pointer"></div>
+              </div>
+              <div className="p-4">
+                <h4 className="font-bold text-sunstone-blue mb-2">
+                  How Students Excel at Sunstone
+                </h4>
+                <p className="text-sm text-sunstone-gray-600">
+                  Watch inspiring stories of our graduates who landed their
+                  dream jobs
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in stagger-1">
+              <div className="relative">
+                <div className="aspect-video bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-2xl">▶️</span>
+                    </div>
+                    <p className="font-semibold">Campus Life</p>
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-all duration-300 cursor-pointer"></div>
+              </div>
+              <div className="p-4">
+                <h4 className="font-bold text-sunstone-blue mb-2">
+                  Life at Hi-Tech Institute
+                </h4>
+                <p className="text-sm text-sunstone-gray-600">
+                  Explore our modern campus, facilities, and student activities
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in stagger-2">
+              <div className="relative">
+                <div className="aspect-video bg-gradient-to-br from-sunstone-blue to-sunstone-orange flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-2xl">▶️</span>
+                    </div>
+                    <p className="font-semibold">Industry Insights</p>
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-all duration-300 cursor-pointer"></div>
+              </div>
+              <div className="p-4">
+                <h4 className="font-bold text-sunstone-blue mb-2">
+                  Expert Sessions & Webinars
+                </h4>
+                <p className="text-sm text-sunstone-gray-600">
+                  Learn from industry experts and thought leaders
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-sunstone-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
