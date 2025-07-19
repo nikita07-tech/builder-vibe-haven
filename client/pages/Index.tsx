@@ -401,6 +401,113 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Placement Highlights */}
+      <section className="py-16 bg-gradient-to-br from-sunstone-blue via-sunstone-blue-dark to-sunstone-blue relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-sunstone-blue/95 to-sunstone-blue-dark/95"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-96 h-96 bg-sunstone-orange/20 rounded-full blur-3xl animate-float"></div>
+          <div
+            className="absolute bottom-10 right-10 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden animate-scale-in">
+            <div className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark text-white px-6 py-4">
+              <div className="flex items-center justify-between">
+                <div className="animate-slide-in-left">
+                  <h3 className="text-xl sm:text-2xl font-bold">
+                    Placement Highlights
+                  </h3>
+                  <p className="text-sm opacity-90">
+                    MBA | MCA | BBA | BCA | B.Tech
+                  </p>
+                </div>
+                <div className="animate-slide-in-right">
+                  <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-4 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+                    📞 Talk To Our Counsellor
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 sm:p-8">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-6">
+                <div className="text-center animate-count-up stagger-1">
+                  <div className="text-3xl sm:text-4xl font-bold text-sunstone-blue mb-2">
+                    26 LPA
+                  </div>
+                  <p className="text-sm text-sunstone-gray-600">
+                    Highest Package
+                  </p>
+                </div>
+                <div className="text-center animate-count-up stagger-2">
+                  <div className="text-3xl sm:text-4xl font-bold text-sunstone-blue mb-2">
+                    1200+
+                  </div>
+                  <p className="text-sm text-sunstone-gray-600">
+                    Students Placed
+                  </p>
+                </div>
+                <div className="text-center animate-count-up stagger-3">
+                  <div className="text-3xl sm:text-4xl font-bold text-sunstone-blue mb-2">
+                    5000+
+                  </div>
+                  <p className="text-sm text-sunstone-gray-600">
+                    Job Opportunities
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                <div className="bg-gradient-to-r from-sunstone-orange/10 to-sunstone-orange/5 rounded-lg p-4 animate-slide-in-left">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-sunstone-orange rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">63%</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sunstone-blue">
+                        Higher ROI
+                      </p>
+                      <p className="text-xs text-sunstone-gray-600">
+                        than private colleges
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-r from-sunstone-blue/10 to-sunstone-blue/5 rounded-lg p-4 animate-slide-in-right">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-sunstone-blue rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">7X</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-sunstone-blue">
+                        More Companies
+                      </p>
+                      <p className="text-xs text-sunstone-gray-600">
+                        compared to management institutes
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-sunstone-gray-50 to-white rounded-lg p-4 animate-fade-in">
+                <p className="text-center text-sm text-sunstone-gray-700">
+                  <span className="font-semibold text-sunstone-orange">
+                    Verified and Audited by
+                  </span>{" "}
+                  <span className="font-semibold">
+                    Official Auditor for JM Ahmedabad
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Sunstone Value Proposition */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
