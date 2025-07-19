@@ -1,0 +1,1430 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Hi-Tech Institute of Engineering & Technology - Powered by Sunstone
+    </title>
+    <meta
+      name="description"
+      content="Power up your career with MBA, BBA, BCA, MCA & B.Tech at Hi-Tech Institute powered by Sunstone. Industry-aligned curriculum, expert faculty, and 2000+ placement opportunities."
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "sunstone-orange": "#c38935",
+              "sunstone-orange-light": "#d49a50",
+              "sunstone-orange-dark": "#a67729",
+              "sunstone-blue": "#22336a",
+              "sunstone-blue-light": "#2d4085",
+              "sunstone-blue-dark": "#1a2754",
+              "sunstone-gray-50": "#f8fafc",
+              "sunstone-gray-100": "#f1f5f9",
+              "sunstone-gray-200": "#e2e8f0",
+              "sunstone-gray-300": "#cbd5e1",
+              "sunstone-gray-400": "#94a3b8",
+              "sunstone-gray-500": "#64748b",
+              "sunstone-gray-600": "#475569",
+              "sunstone-gray-700": "#334155",
+              "sunstone-gray-800": "#1e293b",
+              "sunstone-gray-900": "#0f172a",
+            },
+            fontFamily: {
+              sans: ["Public Sans", "sans-serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.6s ease-out",
+              "slide-up": "slideUp 0.8s ease-out",
+              "scale-in": "scaleIn 0.5s ease-out",
+              "bounce-subtle": "bounceSubtle 2s ease-in-out infinite",
+              "pulse-glow": "pulseGlow 3s ease-in-out infinite",
+              float: "float 6s ease-in-out infinite",
+              "slide-in-left": "slideInLeft 0.8s ease-out",
+              "slide-in-right": "slideInRight 0.8s ease-out",
+              "count-up": "countUp 1s ease-out",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Public Sans", sans-serif;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes bounceSubtle {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes pulseGlow {
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(195, 137, 53, 0.3);
+          transform: scale(1);
+        }
+        50% {
+          box-shadow: 0 0 30px rgba(195, 137, 53, 0.6);
+          transform: scale(1.02);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes countUp {
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .hover-lift {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .stagger-1 {
+        animation-delay: 0.1s;
+      }
+      .stagger-2 {
+        animation-delay: 0.2s;
+      }
+      .stagger-3 {
+        animation-delay: 0.3s;
+      }
+      .stagger-4 {
+        animation-delay: 0.4s;
+      }
+      .stagger-5 {
+        animation-delay: 0.5s;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg border-b border-sunstone-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center space-x-4 sm:space-x-8">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
+                alt="Hi-Tech Institute"
+                class="h-12 w-auto"
+              />
+              <div class="h-6 w-px bg-sunstone-gray-300"></div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
+                alt="Sunstone"
+                class="h-20 w-auto"
+              />
+            </div>
+          </div>
+          <div class="flex items-center space-x-3 sm:space-x-6">
+            <a
+              href="mailto:connect@sunstone.in"
+              class="hidden sm:flex items-center space-x-2 text-sunstone-blue hover:text-sunstone-orange transition-colors font-medium"
+            >
+              <i data-lucide="mail" class="h-4 w-4"></i>
+              <span class="text-sm">connect@sunstone.in</span>
+            </a>
+            <a
+              href="tel:+917065303030"
+              class="flex items-center space-x-2 bg-sunstone-orange hover:bg-sunstone-orange-dark text-white px-4 py-2 rounded-lg transition-colors font-semibold shadow-md"
+            >
+              <i data-lucide="phone" class="h-4 w-4"></i>
+              <span class="text-sm">+91 7065-30-30-30</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Banner - Compact -->
+    <section
+      class="bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark text-white py-6 sm:py-8 lg:py-10 relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-sunstone-blue/95 to-sunstone-blue-dark/95"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-center"
+        >
+          <!-- Content Section -->
+          <div
+            class="lg:col-span-3 text-center lg:text-left animate-slide-up order-2 lg:order-1"
+          >
+            <h1
+              class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 leading-tight"
+            >
+              Power up your career with an MBA, BBA, BCA, MCA & B.Tech at
+              Hi-Tech Institute of Engineering & Technology
+            </h1>
+            <p
+              class="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 text-sunstone-orange font-semibold"
+            >
+              Powered by Sunstone
+            </p>
+            <a
+              href="https://sunstone.in/campuses/hi-tech-institute"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-sunstone-orange hover:bg-sunstone-orange-dark text-white font-bold rounded-lg transition-all duration-500 hover-lift shadow-lg animate-pulse-glow relative overflow-hidden text-sm sm:text-base"
+            >
+              <span
+                class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
+              ></span>
+              <span class="relative">Know more</span>
+              <i
+                data-lucide="external-link"
+                class="ml-2 h-4 w-4 sm:h-5 sm:w-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
+              ></i>
+            </a>
+          </div>
+
+          <!-- Image Section -->
+          <div class="lg:col-span-2 order-1 lg:order-2 relative">
+            <div class="relative max-w-sm mx-auto">
+              <div
+                class="relative overflow-hidden rounded-xl shadow-lg bg-white p-2 animate-float"
+              >
+                <div class="relative overflow-hidden rounded-lg">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600"
+                    alt="Hi-Tech Institute Campus"
+                    class="w-full h-auto object-cover aspect-[4/3] transition-transform duration-300 hover:scale-105"
+                    loading="eager"
+                  />
+
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-sunstone-blue/20 via-transparent to-transparent"
+                  ></div>
+
+                  <!-- Campus info card -->
+                  <div class="absolute bottom-3 left-3 right-3">
+                    <div
+                      class="bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg"
+                    >
+                      <div class="flex items-center space-x-2 mb-1">
+                        <div
+                          class="w-6 h-6 bg-sunstone-orange rounded-full flex items-center justify-center"
+                        >
+                          <span class="text-white text-xs font-bold">🏛️</span>
+                        </div>
+                        <p class="text-sunstone-blue font-bold text-sm">
+                          Hi-Tech Institute Campus
+                        </p>
+                      </div>
+                      <p class="text-sunstone-gray-600 text-xs">
+                        Modern Infrastructure & Facilities
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Placement Highlights - Compact & Creative -->
+    <section
+      class="py-8 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark relative overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-5 left-5 w-32 h-32 bg-sunstone-orange/30 rounded-full blur-2xl animate-float"
+        ></div>
+        <div
+          class="absolute bottom-5 right-5 w-40 h-40 bg-white/20 rounded-full blur-2xl animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div
+          class="bg-white/95 backdrop-blur-sm rounded-xl shadow-xl overflow-hidden animate-scale-in"
+        >
+          <div
+            class="bg-gradient-to-r from-sunstone-orange to-sunstone-blue text-white px-4 py-3"
+          >
+            <div class="flex items-center justify-between">
+              <div class="animate-slide-in-left">
+                <h3 class="text-lg font-bold">Placement Highlights</h3>
+                <p class="text-xs opacity-90">
+                  📚 MBA | MCA | BBA | BCA | B.Tech
+                </p>
+              </div>
+              <button
+                class="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-3 py-1.5 rounded-md text-sm font-semibold transition-all duration-300 hover:scale-105 animate-slide-in-right"
+              >
+                📞 Enquire Now
+              </button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div class="grid grid-cols-3 gap-4 mb-4">
+              <div class="text-center animate-count-up">
+                <div class="text-2xl font-bold text-sunstone-blue mb-1">
+                  26 LPA
+                </div>
+                <p class="text-xs text-sunstone-gray-600">Highest Package</p>
+              </div>
+              <div class="text-center animate-count-up stagger-1">
+                <div class="text-2xl font-bold text-sunstone-blue mb-1">
+                  1200+
+                </div>
+                <p class="text-xs text-sunstone-gray-600">Students Placed</p>
+              </div>
+              <div class="text-center animate-count-up stagger-2">
+                <div class="text-2xl font-bold text-sunstone-blue mb-1">
+                  5000+
+                </div>
+                <p class="text-xs text-sunstone-gray-600">Job Opportunities</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 mb-3">
+              <div
+                class="bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg p-3 flex items-center space-x-2 animate-slide-in-left"
+              >
+                <div
+                  class="w-8 h-8 bg-sunstone-orange rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-white font-bold text-xs">63%</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-sunstone-blue text-sm">
+                    Higher ROI
+                  </p>
+                  <p class="text-xs text-sunstone-gray-600">
+                    vs private colleges
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg p-3 flex items-center space-x-2 animate-slide-in-right"
+              >
+                <div
+                  class="w-8 h-8 bg-sunstone-blue rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-white font-bold text-xs">7X</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-sunstone-blue text-sm">
+                    More Companies
+                  </p>
+                  <p class="text-xs text-sunstone-gray-600">vs institutes</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-gradient-to-r from-sunstone-gray-50 to-white rounded-lg p-2 text-center animate-fade-in"
+            >
+              <p class="text-xs text-sunstone-gray-700">
+                <span class="font-semibold text-sunstone-orange"
+                  >✅ Verified & Audited</span
+                >
+                by Official Auditor for JM Ahmedabad
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sunstone Value Proposition -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <p
+            class="text-lg text-sunstone-gray-700 max-w-4xl mx-auto animate-fade-in"
+          >
+            At Sunstone, we shape your future with an industry-aligned
+            curriculum and expert faculty. Our focus on skill development and
+            real-world learning ensures you're job-ready, paving the way for
+            opportunities with 2,000+ top recruiters.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Sunstone Philosophy -->
+    <section
+      class="py-20 bg-gradient-to-br from-white via-sunstone-blue/5 to-sunstone-orange/5 relative overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-20 left-20 w-64 h-64 bg-sunstone-orange/10 rounded-full blur-2xl animate-float"
+        ></div>
+        <div
+          class="absolute bottom-20 right-20 w-80 h-80 bg-sunstone-blue/10 rounded-full blur-2xl animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 animate-fade-in">
+          <div class="flex items-center justify-center mb-6">
+            <div
+              class="h-1 w-24 bg-gradient-to-r from-sunstone-orange to-sunstone-blue rounded-full mr-4"
+            ></div>
+            <div class="relative">
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-sunstone-orange to-sunstone-blue rounded-full flex items-center justify-center animate-pulse-glow"
+              >
+                <span class="text-white text-2xl font-bold">💡</span>
+              </div>
+              <div
+                class="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-orange rounded-full animate-bounce"
+              ></div>
+            </div>
+            <div
+              class="h-1 w-24 bg-gradient-to-r from-sunstone-blue to-sunstone-orange rounded-full ml-4"
+            ></div>
+          </div>
+          <h2
+            class="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue via-sunstone-orange to-sunstone-blue bg-clip-text text-transparent mb-6"
+          >
+            The Sunstone Philosophy
+          </h2>
+          <p
+            class="text-lg sm:text-xl text-sunstone-gray-700 max-w-4xl mx-auto leading-relaxed"
+          >
+            Our philosophy is deeply rooted in helping you learn from the best,
+            providing a hands-on experience so your education is not just
+            limited to theory
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+          <div
+            class="text-center border-2 border-sunstone-gray-100 hover:border-sunstone-orange hover:shadow-xl transition-all duration-300 hover-lift bg-white rounded-lg p-6"
+          >
+            <div
+              class="mx-auto mb-6 p-4 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full w-20 h-20 flex items-center justify-center shadow-lg"
+            >
+              <i data-lucide="users" class="h-10 w-10 text-white"></i>
+            </div>
+            <h3 class="text-xl text-sunstone-blue font-bold mb-4">
+              Learn from Industry Leaders
+            </h3>
+            <p class="text-sunstone-gray-600 leading-relaxed">
+              Learn from CEOs, CTOs, COOs, and other leaders from Fortune 500
+              companies and leading Indian start-ups with 10+ years of
+              recruitment experience
+            </p>
+          </div>
+
+          <div
+            class="text-center border-2 border-sunstone-gray-100 hover:border-sunstone-blue hover:shadow-xl transition-all duration-300 hover-lift bg-white rounded-lg p-6"
+          >
+            <div
+              class="mx-auto mb-6 p-4 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full w-20 h-20 flex items-center justify-center shadow-lg"
+            >
+              <i data-lucide="briefcase" class="h-10 w-10 text-white"></i>
+            </div>
+            <h3 class="text-xl text-sunstone-blue font-bold mb-4">
+              Real-World Experience
+            </h3>
+            <p class="text-sunstone-gray-600 leading-relaxed">
+              Put what you learn into practice and gain hands-on experience with
+              internships & real-life projects and be ready for your job from
+              Day 1
+            </p>
+          </div>
+
+          <div
+            class="text-center border-2 border-sunstone-gray-100 hover:border-sunstone-orange hover:shadow-xl transition-all duration-300 hover-lift bg-white rounded-lg p-6"
+          >
+            <div
+              class="mx-auto mb-6 p-4 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full w-20 h-20 flex items-center justify-center shadow-lg"
+            >
+              <i data-lucide="award" class="h-10 w-10 text-white"></i>
+            </div>
+            <h3 class="text-xl text-sunstone-blue font-bold mb-4">
+              Professional Portfolio
+            </h3>
+            <p class="text-sunstone-gray-600 leading-relaxed">
+              Increase your chances of getting hired by showcasing your verified
+              skills and experience with a professional portfolio
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Offerings -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2
+            class="text-2xl sm:text-3xl lg:text-4xl font-bold text-sunstone-blue mb-4"
+          >
+            Key Offerings
+          </h2>
+          <p
+            class="text-base sm:text-lg text-sunstone-gray-600 max-w-2xl mx-auto"
+          >
+            Discover what makes our programs exceptional and job-ready
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
+        >
+          <div
+            class="text-center p-3 sm:p-4 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in"
+          >
+            <div class="text-lg sm:text-xl font-bold text-sunstone-orange mb-1">
+              70+
+            </div>
+            <p class="text-xs text-sunstone-gray-700">
+              sessions by industry experts and leading faculty
+            </p>
+          </div>
+          <div
+            class="text-center p-3 sm:p-4 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in stagger-1"
+          >
+            <div class="text-lg sm:text-xl font-bold text-sunstone-blue mb-1">
+              Professional
+            </div>
+            <p class="text-xs text-sunstone-gray-700">
+              portfolio to increase chances of getting hired
+            </p>
+          </div>
+          <div
+            class="text-center p-3 sm:p-4 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in stagger-2"
+          >
+            <div class="text-lg sm:text-xl font-bold text-sunstone-orange mb-1">
+              Seed funding
+            </div>
+            <p class="text-xs text-sunstone-gray-700">
+              support for budding entrepreneurs
+            </p>
+          </div>
+          <div
+            class="text-center p-3 sm:p-4 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in stagger-3"
+          >
+            <div class="text-lg sm:text-xl font-bold text-sunstone-blue mb-1">
+              International
+            </div>
+            <p class="text-xs text-sunstone-gray-700">
+              India trips for experiential learning
+            </p>
+          </div>
+          <div
+            class="text-center p-3 sm:p-4 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in stagger-4"
+          >
+            <div class="text-lg sm:text-xl font-bold text-sunstone-orange mb-1">
+              Capstone
+            </div>
+            <p class="text-xs text-sunstone-gray-700">
+              projects every semester
+            </p>
+          </div>
+          <div
+            class="text-center p-3 sm:p-4 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in stagger-5"
+          >
+            <div class="text-lg sm:text-xl font-bold text-sunstone-blue mb-1">
+              10
+            </div>
+            <p class="text-xs text-sunstone-gray-700">
+              in-demand advanced certifications to choose from
+            </p>
+          </div>
+          <div
+            class="text-center p-3 sm:p-4 rounded-lg bg-sunstone-gray-50 hover-lift animate-scale-in stagger-5"
+          >
+            <div class="text-lg sm:text-xl font-bold text-sunstone-orange mb-1">
+              120+
+            </div>
+            <p class="text-xs text-sunstone-gray-700">
+              hours of Mock GD/PI training
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Excellence - Compact & Creative -->
+    <section
+      class="py-12 bg-gradient-to-br from-sunstone-blue/5 via-white to-sunstone-orange/5 relative overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-10 left-10 w-48 h-48 bg-sunstone-orange/10 rounded-full blur-2xl animate-float"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-56 h-56 bg-sunstone-blue/10 rounded-full blur-2xl animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-8 animate-fade-in">
+          <div class="flex items-center justify-center mb-4">
+            <div class="h-0.5 w-16 bg-sunstone-orange rounded-full mr-3"></div>
+            <div
+              class="w-10 h-10 bg-gradient-to-r from-sunstone-orange to-sunstone-blue rounded-full flex items-center justify-center"
+            >
+              <i data-lucide="trophy" class="h-5 w-5 text-white"></i>
+            </div>
+            <div class="h-0.5 w-16 bg-sunstone-blue rounded-full ml-3"></div>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-sunstone-blue mb-2">
+            <span class="text-xl sm:text-2xl text-sunstone-orange">Excel</span>
+            in your career
+          </h2>
+          <p class="text-sm text-sunstone-gray-600 max-w-2xl mx-auto">
+            with customised training from industry-leading partners
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <!-- Academic Partners Card -->
+          <div
+            class="border-2 border-sunstone-orange/20 bg-gradient-to-br from-white to-sunstone-orange/5 hover:shadow-2xl hover:border-sunstone-orange/50 transition-all duration-500 hover-lift animate-scale-in group rounded-lg overflow-hidden"
+          >
+            <div class="relative p-6">
+              <div
+                class="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center animate-pulse-glow"
+              >
+                <i data-lucide="trophy" class="h-8 w-8 text-white"></i>
+              </div>
+              <h3
+                class="text-2xl text-sunstone-blue font-bold flex items-center group-hover:text-sunstone-orange transition-colors duration-300 mb-6"
+              >
+                <i
+                  data-lucide="star"
+                  class="h-8 w-8 mr-3 text-sunstone-orange animate-bounce-subtle"
+                ></i>
+                Renowned Academic Knowledge Partners
+              </h3>
+
+              <div class="space-y-6">
+                <div
+                  class="p-6 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-4 border-sunstone-orange hover:shadow-lg transition-all duration-300 hover-lift"
+                >
+                  <div class="flex items-center mb-3">
+                    <div
+                      class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mr-4 shadow-md"
+                    >
+                      <svg
+                        class="w-7 h-7 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-sunstone-blue mb-1">TCS iON</h4>
+                      <p class="text-sm text-sunstone-gray-600">
+                        Tech Certification Courses
+                      </p>
+                    </div>
+                  </div>
+                  <p class="text-sm text-sunstone-gray-700">
+                    Start your professional career in tech with cutting-edge
+                    certification courses
+                  </p>
+                </div>
+
+                <div
+                  class="p-6 bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg border-l-4 border-sunstone-blue hover:shadow-lg transition-all duration-300 hover-lift"
+                >
+                  <div class="flex items-center mb-3">
+                    <div
+                      class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mr-4 shadow-md"
+                    >
+                      <svg
+                        class="w-7 h-7 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-sunstone-blue mb-1">
+                        AU Small Finance Bank
+                      </h4>
+                      <p class="text-sm text-sunstone-gray-600">
+                        Finance Certification
+                      </p>
+                    </div>
+                  </div>
+                  <p class="text-sm text-sunstone-gray-700">
+                    Kickstart your career in finance with industry-leading
+                    certification courses
+                  </p>
+                </div>
+
+                <div
+                  class="p-6 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-4 border-sunstone-orange hover:shadow-lg transition-all duration-300 hover-lift"
+                >
+                  <div class="flex items-center mb-3">
+                    <div
+                      class="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center mr-4 shadow-md"
+                    >
+                      <svg
+                        class="w-7 h-7 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-sunstone-blue mb-1">KPMG</h4>
+                      <p class="text-sm text-sunstone-gray-600">
+                        Professional Expertise
+                      </p>
+                    </div>
+                  </div>
+                  <p class="text-sm text-sunstone-gray-700">
+                    Gain industry-ready expertise with certification programs
+                    from global leaders
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entrepreneurial Training Partners Card -->
+          <div
+            class="border-2 border-sunstone-blue/20 bg-gradient-to-br from-white to-sunstone-blue/5 hover:shadow-2xl hover:border-sunstone-blue/50 transition-all duration-500 hover-lift animate-scale-in stagger-2 group rounded-lg overflow-hidden"
+          >
+            <div class="relative p-6">
+              <div
+                class="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center animate-pulse-glow"
+              >
+                <i data-lucide="award" class="h-8 w-8 text-white"></i>
+              </div>
+              <h3
+                class="text-2xl text-sunstone-blue font-bold flex items-center group-hover:text-sunstone-orange transition-colors duration-300 mb-6"
+              >
+                <i
+                  data-lucide="target"
+                  class="h-8 w-8 mr-3 text-sunstone-blue animate-bounce-subtle"
+                  style="animation-delay: 1s"
+                ></i>
+                Acclaimed Entrepreneurial Training Partners
+              </h3>
+
+              <div
+                class="p-8 bg-gradient-to-br from-sunstone-blue/10 to-sunstone-orange/5 rounded-lg border-2 border-dashed border-sunstone-blue/30 hover:border-sunstone-blue/60 hover:shadow-lg transition-all duration-300 hover-lift text-center"
+              >
+                <div
+                  class="w-20 h-20 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mx-auto mb-4 animate-float shadow-lg"
+                >
+                  <svg
+                    class="w-10 h-10 text-white"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="font-bold text-sunstone-blue text-xl mb-3">NSDC</h4>
+                <p class="text-sm text-sunstone-gray-600 mb-4">
+                  National Skill Development Corporation
+                </p>
+                <p class="text-sunstone-gray-700 leading-relaxed">
+                  Build your entrepreneurial journey with comprehensive training
+                  programs designed to foster innovation and business leadership
+                </p>
+                <div class="mt-6 flex justify-center">
+                  <div class="flex space-x-2">
+                    <div
+                      class="w-3 h-3 bg-sunstone-blue rounded-full animate-bounce"
+                    ></div>
+                    <div
+                      class="w-3 h-3 bg-sunstone-orange rounded-full animate-bounce"
+                      style="animation-delay: 0.1s"
+                    ></div>
+                    <div
+                      class="w-3 h-3 bg-sunstone-blue rounded-full animate-bounce"
+                      style="animation-delay: 0.2s"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admission Process Steps -->
+    <section
+      class="py-20 bg-gradient-to-br from-sunstone-gray-50 via-white to-sunstone-blue/10 relative"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-16 animate-fade-in">
+          <div class="flex items-center justify-center mb-6">
+            <div class="h-1 w-16 bg-sunstone-orange rounded-full mr-3"></div>
+            <i
+              data-lucide="graduation-cap"
+              class="h-10 w-10 text-sunstone-blue animate-bounce-subtle"
+            ></i>
+            <div class="h-1 w-16 bg-sunstone-orange rounded-full ml-3"></div>
+          </div>
+          <h2
+            class="text-3xl sm:text-4xl lg:text-5xl font-bold text-sunstone-blue mb-6"
+          >
+            Admission Process
+          </h2>
+          <p
+            class="text-lg sm:text-xl text-sunstone-gray-700 max-w-3xl mx-auto"
+          >
+            Simple steps to begin your journey towards a successful career
+          </p>
+        </div>
+
+        <!-- Process Steps - Professional -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div class="text-center group animate-scale-in">
+            <div class="relative mb-6">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-105 transition-all duration-300"
+              >
+                <span class="text-white font-bold text-2xl">1</span>
+              </div>
+              <div
+                class="hidden lg:block absolute top-10 -right-8 text-sunstone-gray-400"
+              >
+                <i data-lucide="chevron-right" class="h-6 w-6"></i>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-xl group-hover:border-sunstone-orange/50 transition-all duration-300 transform group-hover:-translate-y-1"
+            >
+              <h3
+                class="text-xl font-bold text-sunstone-blue mb-3 group-hover:text-sunstone-orange transition-colors duration-300"
+              >
+                Apply Online
+              </h3>
+              <p class="text-sunstone-gray-600">
+                Fill out our simple online application form with your details
+              </p>
+            </div>
+          </div>
+
+          <div class="text-center group animate-scale-in stagger-1">
+            <div class="relative mb-6">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-105 transition-all duration-300"
+              >
+                <span class="text-white font-bold text-2xl">2</span>
+              </div>
+              <div
+                class="hidden lg:block absolute top-10 -right-8 text-sunstone-gray-400"
+              >
+                <i data-lucide="chevron-right" class="h-6 w-6"></i>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-xl group-hover:border-sunstone-blue/50 transition-all duration-300 transform group-hover:-translate-y-1"
+            >
+              <h3
+                class="text-xl font-bold text-sunstone-blue mb-3 group-hover:text-sunstone-orange transition-colors duration-300"
+              >
+                Document Review
+              </h3>
+              <p class="text-sunstone-gray-600">
+                Submit required documents for verification and eligibility check
+              </p>
+            </div>
+          </div>
+
+          <div class="text-center group animate-scale-in stagger-2">
+            <div class="relative mb-6">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-105 transition-all duration-300"
+              >
+                <span class="text-white font-bold text-2xl">3</span>
+              </div>
+              <div
+                class="hidden lg:block absolute top-10 -right-8 text-sunstone-gray-400"
+              >
+                <i data-lucide="chevron-right" class="h-6 w-6"></i>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-xl group-hover:border-sunstone-orange/50 transition-all duration-300 transform group-hover:-translate-y-1"
+            >
+              <h3
+                class="text-xl font-bold text-sunstone-blue mb-3 group-hover:text-sunstone-orange transition-colors duration-300"
+              >
+                Interview & Assessment
+              </h3>
+              <p class="text-sunstone-gray-600">
+                Participate in counseling session and aptitude assessment
+              </p>
+            </div>
+          </div>
+
+          <div class="text-center group animate-scale-in stagger-3">
+            <div class="relative mb-6">
+              <div
+                class="w-20 h-20 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-105 transition-all duration-300"
+              >
+                <span class="text-white font-bold text-2xl">4</span>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg p-6 shadow-md border border-sunstone-gray-200 group-hover:shadow-xl group-hover:border-green-500/50 transition-all duration-300 transform group-hover:-translate-y-1"
+            >
+              <h3
+                class="text-xl font-bold text-sunstone-blue mb-3 group-hover:text-green-600 transition-colors duration-300"
+              >
+                Confirmation
+              </h3>
+              <p class="text-sunstone-gray-600">
+                Receive admission confirmation and start your journey
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center">
+          <div
+            class="bg-white rounded-2xl shadow-xl p-8 border border-sunstone-gray-200 animate-fade-in"
+          >
+            <h3 class="text-2xl font-bold text-sunstone-blue mb-4">
+              Ready to start your journey?
+            </h3>
+            <p class="text-sunstone-gray-700 mb-6">
+              Contact us today to begin the admission process
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <a
+                href="tel:+917065303030"
+                class="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark hover:from-sunstone-orange-dark hover:to-sunstone-orange text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg group relative overflow-hidden flex items-center"
+              >
+                <span
+                  class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
+                ></span>
+                <i
+                  data-lucide="phone"
+                  class="mr-2 h-5 w-5 group-hover:animate-bounce"
+                ></i>
+                <span class="relative">Call Now: +91 7065-30-30-30</span>
+              </a>
+              <a
+                href="mailto:connect@sunstone.in"
+                class="bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark hover:from-sunstone-blue-dark hover:to-sunstone-blue text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg group relative overflow-hidden flex items-center"
+              >
+                <span
+                  class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
+                ></span>
+                <i
+                  data-lucide="mail"
+                  class="mr-2 h-5 w-5 group-hover:animate-bounce"
+                ></i>
+                <span class="relative">Email Us</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Students Say -->
+    <section
+      class="py-16 bg-gradient-to-br from-sunstone-gray-50 via-white to-sunstone-orange/5 relative overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-10 left-10 w-48 h-48 bg-sunstone-blue/10 rounded-full blur-2xl animate-float"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-56 h-56 bg-sunstone-orange/10 rounded-full blur-2xl animate-float"
+          style="animation-delay: 3s"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-12 animate-fade-in">
+          <div class="flex items-center justify-center mb-6">
+            <div class="h-1 w-20 bg-sunstone-orange rounded-full mr-4"></div>
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-sunstone-blue to-sunstone-orange rounded-full flex items-center justify-center animate-pulse-glow"
+            >
+              <span class="text-white text-2xl">💬</span>
+            </div>
+            <div class="h-1 w-20 bg-sunstone-blue rounded-full ml-4"></div>
+          </div>
+          <h2
+            class="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue to-sunstone-orange bg-clip-text text-transparent mb-6"
+          >
+            What Students Say
+          </h2>
+          <p class="text-lg text-sunstone-gray-700 max-w-3xl mx-auto">
+            Hear from our successful graduates who transformed their careers
+            with Hi-Tech & Sunstone
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white/80 backdrop-blur-sm border-2 border-sunstone-gray-200 hover:border-sunstone-orange/50 hover:shadow-xl transition-all duration-300 hover-lift animate-scale-in rounded-lg overflow-hidden"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mr-4"
+                >
+                  <span class="text-white font-bold">RK</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sunstone-blue">Rahul Kumar</h4>
+                  <p class="text-sm text-sunstone-gray-600">
+                    MBA Graduate - TCS
+                  </p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+              </div>
+              <p class="text-sunstone-gray-700 text-sm italic">
+                "Hi-Tech with Sunstone gave me industry exposure I needed. The
+                placement support was exceptional, and I landed my dream job at
+                TCS with a great package!"
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white/80 backdrop-blur-sm border-2 border-sunstone-gray-200 hover:border-sunstone-blue/50 hover:shadow-xl transition-all duration-300 hover-lift animate-scale-in stagger-1 rounded-lg overflow-hidden"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center mr-4"
+                >
+                  <span class="text-white font-bold">PS</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sunstone-blue">Priya Sharma</h4>
+                  <p class="text-sm text-sunstone-gray-600">
+                    BCA Graduate - Infosys
+                  </p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+              </div>
+              <p class="text-sunstone-gray-700 text-sm italic">
+                "The practical approach and industry connections at
+                Hi-Tech-Sunstone helped me develop real skills. Now I'm working
+                as a software developer at Infosys!"
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white/80 backdrop-blur-sm border-2 border-sunstone-gray-200 hover:border-sunstone-orange/50 hover:shadow-xl transition-all duration-300 hover-lift animate-scale-in stagger-2 rounded-lg overflow-hidden"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center mr-4"
+                >
+                  <span class="text-white font-bold">AJ</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-sunstone-blue">Amit Joshi</h4>
+                  <p class="text-sm text-sunstone-gray-600">
+                    B.Tech Graduate - Wipro
+                  </p>
+                </div>
+              </div>
+              <div class="flex mb-3">
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+                <i
+                  data-lucide="star"
+                  class="h-5 w-5 text-yellow-400 fill-current"
+                ></i>
+              </div>
+              <p class="text-sunstone-gray-700 text-sm italic">
+                "The advanced certifications and project-based learning prepared
+                me perfectly for the industry. Grateful for the excellent
+                placement support!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore YouTube -->
+    <section
+      class="py-16 bg-gradient-to-br from-sunstone-blue/5 via-white to-sunstone-orange/5 relative overflow-hidden"
+    >
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-20 left-20 w-64 h-64 bg-sunstone-orange/10 rounded-full blur-2xl animate-float"
+        ></div>
+        <div
+          class="absolute bottom-20 right-20 w-72 h-72 bg-sunstone-blue/10 rounded-full blur-2xl animate-float"
+          style="animation-delay: 2s"
+        ></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-12 animate-fade-in">
+          <div class="flex items-center justify-center mb-6">
+            <div class="h-1 w-20 bg-sunstone-orange rounded-full mr-4"></div>
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center animate-pulse-glow"
+            >
+              <span class="text-white text-2xl">📺</span>
+            </div>
+            <div class="h-1 w-20 bg-sunstone-blue rounded-full ml-4"></div>
+          </div>
+          <h2
+            class="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue to-sunstone-orange bg-clip-text text-transparent mb-6"
+          >
+            Explore Our YouTube Channel
+          </h2>
+          <p class="text-lg text-sunstone-gray-700 max-w-3xl mx-auto mb-8">
+            Watch student success stories, campus life, and expert insights from
+            Sunstone
+          </p>
+          <a
+            href="https://www.youtube.com/@SunstoneEducation"
+            target="_blank"
+            class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-8 py-3 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 inline-flex items-center"
+          >
+            <span class="mr-2">🔗</span>
+            Visit Sunstone YouTube Channel
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in"
+          >
+            <div class="relative">
+              <div
+                class="aspect-video bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark flex items-center justify-center"
+              >
+                <div class="text-white text-center">
+                  <div
+                    class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3"
+                  >
+                    <span class="text-2xl">▶️</span>
+                  </div>
+                  <p class="font-semibold">Student Success Stories</p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black/0 hover:bg-black/10 transition-all duration-300 cursor-pointer"
+              ></div>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-sunstone-blue mb-2">
+                How Students Excel at Sunstone
+              </h4>
+              <p class="text-sm text-sunstone-gray-600">
+                Watch inspiring stories of our graduates who landed their dream
+                jobs
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in stagger-1"
+          >
+            <div class="relative">
+              <div
+                class="aspect-video bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark flex items-center justify-center"
+              >
+                <div class="text-white text-center">
+                  <div
+                    class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3"
+                  >
+                    <span class="text-2xl">▶️</span>
+                  </div>
+                  <p class="font-semibold">Campus Life</p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black/0 hover:bg-black/10 transition-all duration-300 cursor-pointer"
+              ></div>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-sunstone-blue mb-2">
+                Life at Hi-Tech Institute
+              </h4>
+              <p class="text-sm text-sunstone-gray-600">
+                Explore our modern campus, facilities, and student activities
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in stagger-2"
+          >
+            <div class="relative">
+              <div
+                class="aspect-video bg-gradient-to-br from-sunstone-blue to-sunstone-orange flex items-center justify-center"
+              >
+                <div class="text-white text-center">
+                  <div
+                    class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3"
+                  >
+                    <span class="text-2xl">▶️</span>
+                  </div>
+                  <p class="font-semibold">Industry Insights</p>
+                </div>
+              </div>
+              <div
+                class="absolute inset-0 bg-black/0 hover:bg-black/10 transition-all duration-300 cursor-pointer"
+              ></div>
+            </div>
+            <div class="p-4">
+              <h4 class="font-bold text-sunstone-blue mb-2">
+                Expert Sessions & Webinars
+              </h4>
+              <p class="text-sm text-sunstone-gray-600">
+                Learn from industry experts and thought leaders
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sunstone-gray-900 text-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <div
+            class="text-2xl font-bold text-sunstone-orange mb-4 animate-bounce-subtle"
+          >
+            Sunstone
+          </div>
+          <p class="text-sunstone-gray-400 mb-4">
+            Hi-Tech Institute of Engineering & Technology, powered by Sunstone
+          </p>
+          <div class="flex items-center justify-center space-x-6 mb-4">
+            <a
+              href="mailto:connect@sunstone.in"
+              class="text-sunstone-gray-400 hover:text-sunstone-orange transition-colors"
+            >
+              connect@sunstone.in
+            </a>
+            <a
+              href="tel:+917065303030"
+              class="text-sunstone-gray-400 hover:text-sunstone-orange transition-colors"
+            >
+              +91 7065-30-30-30
+            </a>
+          </div>
+          <p class="text-sunstone-gray-500 text-sm">
+            All rights reserved sunstone.in 2025
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+
+      // Add smooth scrolling and animations
+      document.addEventListener("DOMContentLoaded", function () {
+        // Animate on scroll
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document
+          .querySelectorAll(
+            ".animate-fade-in, .animate-scale-in, .animate-slide-up",
+          )
+          .forEach((el) => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+            observer.observe(el);
+          });
+      });
+    </script>
+  </body>
+</html>
