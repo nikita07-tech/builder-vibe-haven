@@ -455,47 +455,41 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                <div className="bg-gradient-to-r from-sunstone-orange/10 to-sunstone-orange/5 rounded-lg p-4 animate-slide-in-left">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-sunstone-orange rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">63%</span>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-sunstone-blue">
-                        Higher ROI
-                      </p>
-                      <p className="text-xs text-sunstone-gray-600">
-                        than private colleges
-                      </p>
-                    </div>
+              <div className="grid grid-cols-2 gap-3 mb-3">
+                <div className="bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg p-3 flex items-center space-x-2 animate-slide-in-left">
+                  <div className="w-8 h-8 bg-sunstone-orange rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-xs">63%</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sunstone-blue text-sm">
+                      Higher ROI
+                    </p>
+                    <p className="text-xs text-sunstone-gray-600">
+                      vs private colleges
+                    </p>
                   </div>
                 </div>
-                <div className="bg-gradient-to-r from-sunstone-blue/10 to-sunstone-blue/5 rounded-lg p-4 animate-slide-in-right">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-sunstone-blue rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">7X</span>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-sunstone-blue">
-                        More Companies
-                      </p>
-                      <p className="text-xs text-sunstone-gray-600">
-                        compared to management institutes
-                      </p>
-                    </div>
+                <div className="bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg p-3 flex items-center space-x-2 animate-slide-in-right">
+                  <div className="w-8 h-8 bg-sunstone-blue rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-bold text-xs">7X</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-sunstone-blue text-sm">
+                      More Companies
+                    </p>
+                    <p className="text-xs text-sunstone-gray-600">
+                      vs institutes
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-sunstone-gray-50 to-white rounded-lg p-4 animate-fade-in">
-                <p className="text-center text-sm text-sunstone-gray-700">
+              <div className="bg-gradient-to-r from-sunstone-gray-50 to-white rounded-lg p-2 text-center animate-fade-in">
+                <p className="text-xs text-sunstone-gray-700">
                   <span className="font-semibold text-sunstone-orange">
-                    Verified and Audited by
+                    ✅ Verified & Audited
                   </span>{" "}
-                  <span className="font-semibold">
-                    Official Auditor for JM Ahmedabad
-                  </span>
+                  by Official Auditor for JM Ahmedabad
                 </p>
               </div>
             </div>
