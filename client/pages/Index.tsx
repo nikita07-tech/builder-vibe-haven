@@ -403,16 +403,15 @@ const Index = () => {
 
       {/* Placement Highlights - Compact & Creative */}
       <section className="py-8 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-sunstone-blue/95 to-sunstone-blue-dark/95"></div>
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-96 h-96 bg-sunstone-orange/20 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-5 left-5 w-32 h-32 bg-sunstone-orange/30 rounded-full blur-2xl animate-float"></div>
           <div
-            className="absolute bottom-10 right-10 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "3s" }}
+            className="absolute bottom-5 right-5 w-40 h-40 bg-white/20 rounded-full blur-2xl animate-float"
+            style={{ animationDelay: "2s" }}
           ></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden animate-scale-in">
             <div className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark text-white px-6 py-4">
               <div className="flex items-center justify-between">
