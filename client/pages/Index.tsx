@@ -381,106 +381,40 @@ const Index = () => {
 
             {/* Image Section - Takes 2 columns on large screens */}
             <div className="lg:col-span-2 order-1 lg:order-2 relative">
-              <div className="relative group max-w-sm mx-auto">
-                {/* Outer animated ring */}
-                <div
-                  className="absolute -inset-2 sm:-inset-4 bg-gradient-conic from-sunstone-orange via-sunstone-blue via-sunstone-orange to-sunstone-blue rounded-2xl blur-lg opacity-60 group-hover:opacity-80 transition-opacity duration-500 animate-spin"
-                  style={{ animationDuration: "8s" }}
-                ></div>
-
-                {/* Secondary glow */}
-                <div className="absolute -inset-1 sm:-inset-2 bg-gradient-to-r from-sunstone-orange/50 via-transparent to-sunstone-blue/50 rounded-xl blur-md animate-pulse-glow"></div>
-
-                {/* Main image container */}
-                <div className="relative overflow-hidden rounded-xl shadow-2xl bg-white/95 p-1 sm:p-2 group-hover:shadow-3xl transition-all duration-700 backdrop-blur-sm">
+              <div className="relative max-w-sm mx-auto">
+                {/* Simple shadow */}
+                <div className="relative overflow-hidden rounded-xl shadow-lg bg-white p-2">
                   <div className="relative overflow-hidden rounded-lg">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600"
                       alt="Hi-Tech Institute Campus"
-                      className="w-full h-auto object-cover aspect-[4/3] transform group-hover:scale-105 transition-transform duration-1000 animate-float"
+                      className="w-full h-auto object-cover aspect-[4/3]"
                       loading="eager"
                     />
 
-                    {/* Dynamic overlay with breathing effect */}
-                    <div
-                      className="absolute inset-0 bg-gradient-to-t from-sunstone-blue/30 via-transparent to-sunstone-orange/15 opacity-70 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"
-                      style={{ animationDuration: "3s" }}
-                    ></div>
+                    {/* Simple overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-sunstone-blue/20 via-transparent to-transparent"></div>
 
-                    {/* Floating badge */}
-                    <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
-                      <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white/95 rounded-full flex items-center justify-center shadow-lg animate-bounce-subtle border-2 border-sunstone-orange/20">
-                        <GraduationCap className="h-4 w-4 sm:h-6 sm:w-6 text-sunstone-orange" />
-                      </div>
-                    </div>
-
-                    {/* Success indicator */}
-                    <div className="absolute top-2 sm:top-4 left-2 sm:left-4">
-                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg animate-bounce-subtle opacity-90">
-                        <svg
-                          className="w-3 h-3 sm:w-4 sm:h-4 text-white"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-
-                    {/* Enhanced info card */}
-                    <div className="absolute bottom-2 sm:bottom-3 left-2 sm:left-3 right-2 sm:right-3">
-                      <div className="bg-white/95 backdrop-blur-sm rounded-lg p-2 sm:p-4 shadow-xl transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500 border border-white/20">
-                        <div className="flex items-center space-x-2 mb-1 sm:mb-2">
-                          <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center animate-pulse-glow">
+                    {/* Campus info card */}
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg">
+                        <div className="flex items-center space-x-2 mb-1">
+                          <div className="w-6 h-6 bg-sunstone-orange rounded-full flex items-center justify-center">
                             <span className="text-white text-xs font-bold">
                               🏛️
                             </span>
                           </div>
-                          <p className="text-sunstone-blue font-bold text-xs sm:text-sm">
+                          <p className="text-sunstone-blue font-bold text-sm">
                             Hi-Tech Institute Campus
                           </p>
                         </div>
-                        <p className="text-sunstone-gray-600 text-xs leading-relaxed">
-                          Modern Infrastructure & World-Class Facilities
+                        <p className="text-sunstone-gray-600 text-xs">
+                          Modern Infrastructure & Facilities
                         </p>
-                        <div className="mt-2 flex justify-center">
-                          <div className="flex space-x-1">
-                            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-sunstone-orange rounded-full animate-bounce"></div>
-                            <div
-                              className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-sunstone-blue rounded-full animate-bounce"
-                              style={{ animationDelay: "0.1s" }}
-                            ></div>
-                            <div
-                              className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-sunstone-orange rounded-full animate-bounce"
-                              style={{ animationDelay: "0.2s" }}
-                            ></div>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                {/* Corner decorative elements */}
-                <div className="absolute -top-1 sm:-top-2 -left-1 sm:-left-2 w-4 h-4 sm:w-6 sm:h-6 bg-sunstone-orange rounded-full animate-ping"></div>
-                <div
-                  className="absolute -bottom-1 sm:-bottom-2 -right-1 sm:-right-2 w-3 h-3 sm:w-4 sm:h-4 bg-sunstone-blue rounded-full animate-ping"
-                  style={{ animationDelay: "1s" }}
-                ></div>
-
-                {/* Floating particles */}
-                <div
-                  className="absolute top-1/4 -left-2 w-2 h-2 bg-white rounded-full animate-float opacity-60"
-                  style={{ animationDelay: "0.5s" }}
-                ></div>
-                <div
-                  className="absolute bottom-1/3 -right-3 w-1.5 h-1.5 bg-sunstone-orange rounded-full animate-float opacity-70"
-                  style={{ animationDelay: "1.5s" }}
-                ></div>
               </div>
             </div>
           </div>
