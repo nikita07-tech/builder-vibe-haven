@@ -701,24 +701,52 @@ const Index = () => {
                             use of the latest tools and techniques to help you
                             acquire industry-ready skills:
                           </p>
-                          {programData.certificationsList.map((cert, index) => (
-                            <div
-                              key={index}
-                              className={`p-4 border border-sunstone-gray-200 rounded-lg hover:border-sunstone-orange/50 transition-all duration-300 hover-lift animate-scale-in stagger-${(index % 5) + 1}`}
-                              style={{ animationDelay: `${index * 0.1}s` }}
-                            >
-                              <h4 className="font-semibold text-sunstone-gray-900 mb-2 flex items-center">
-                                <Target className="h-4 w-4 mr-2 text-sunstone-orange" />
-                                {cert.name}
-                              </h4>
-                              <p className="text-sm text-sunstone-gray-600">
-                                <span className="font-medium text-sunstone-blue">
-                                  Career Prospects:
-                                </span>{" "}
-                                {cert.careers}
-                              </p>
-                            </div>
-                          ))}
+                          <div className="grid md:grid-cols-2 gap-4">
+                            {programData.certificationsList.map(
+                              (cert, index) => (
+                                <div
+                                  key={index}
+                                  className={`group p-6 bg-gradient-to-br from-white to-sunstone-gray-50 border-2 border-sunstone-gray-200 rounded-xl hover:border-sunstone-orange/50 hover:shadow-lg transition-all duration-300 hover-lift animate-scale-in transform hover:-translate-y-1`}
+                                  style={{ animationDelay: `${index * 0.1}s` }}
+                                >
+                                  <div className="flex items-start space-x-3 mb-3">
+                                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                      <Target className="h-5 w-5 text-white" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <h4 className="font-bold text-sunstone-gray-900 mb-2 group-hover:text-sunstone-orange transition-colors duration-300 text-base">
+                                        {cert.name}
+                                      </h4>
+                                    </div>
+                                  </div>
+                                  <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 border border-sunstone-gray-100">
+                                    <div className="flex items-center mb-2">
+                                      <Briefcase className="h-4 w-4 text-sunstone-blue mr-2" />
+                                      <span className="font-semibold text-sunstone-blue text-sm">
+                                        Career Prospects:
+                                      </span>
+                                    </div>
+                                    <p className="text-sm text-sunstone-gray-700 leading-relaxed">
+                                      {cert.careers}
+                                    </p>
+                                  </div>
+                                  <div className="mt-4 flex justify-end">
+                                    <div className="flex space-x-1">
+                                      <div className="w-2 h-2 bg-sunstone-orange rounded-full animate-bounce"></div>
+                                      <div
+                                        className="w-2 h-2 bg-sunstone-blue rounded-full animate-bounce"
+                                        style={{ animationDelay: "0.1s" }}
+                                      ></div>
+                                      <div
+                                        className="w-2 h-2 bg-sunstone-orange rounded-full animate-bounce"
+                                        style={{ animationDelay: "0.2s" }}
+                                      ></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              ),
+                            )}
+                          </div>
                         </div>
                       </CollapsibleContent>
                     </Collapsible>
