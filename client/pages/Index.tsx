@@ -523,10 +523,27 @@ const Index = () => {
       </section>
 
       {/* The Sunstone Philosophy */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-sunstone-blue mb-6">
+      <section className="py-20 bg-gradient-to-br from-white via-sunstone-blue/5 to-sunstone-orange/5 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-64 h-64 bg-sunstone-orange/10 rounded-full blur-2xl animate-float"></div>
+          <div
+            className="absolute bottom-20 right-20 w-80 h-80 bg-sunstone-blue/10 rounded-full blur-2xl animate-float"
+            style={{ animationDelay: "2s" }}
+          ></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16 animate-fade-in">
+            <div className="flex items-center justify-center mb-6">
+              <div className="h-1 w-24 bg-gradient-to-r from-sunstone-orange to-sunstone-blue rounded-full mr-4"></div>
+              <div className="relative">
+                <div className="w-16 h-16 bg-gradient-to-br from-sunstone-orange to-sunstone-blue rounded-full flex items-center justify-center animate-pulse-glow">
+                  <span className="text-white text-2xl font-bold">💡</span>
+                </div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-orange rounded-full animate-bounce"></div>
+              </div>
+              <div className="h-1 w-24 bg-gradient-to-r from-sunstone-blue to-sunstone-orange rounded-full ml-4"></div>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue via-sunstone-orange to-sunstone-blue bg-clip-text text-transparent mb-6">
               The Sunstone Philosophy
             </h2>
             <p className="text-lg sm:text-xl text-sunstone-gray-700 max-w-4xl mx-auto leading-relaxed">
