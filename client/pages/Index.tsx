@@ -303,11 +303,13 @@ const Index = () => {
                   Hi-Tech Institute
                 </div>
                 <div className="h-6 w-px bg-sunstone-gray-300"></div>
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
-                  alt="Sunstone"
-                  className="h-16 w-auto"
-                />
+                <div className="bg-white p-2 rounded-lg shadow-md border border-sunstone-gray-200">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
+                    alt="Sunstone"
+                    className="h-12 w-auto"
+                  />
+                </div>
               </div>
             </div>
             <div className="flex items-center space-x-3 sm:space-x-6">
