@@ -1350,15 +1350,40 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in">
               <div className="relative">
-                <div className="aspect-video bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-2xl">▶️</span>
-                    </div>
-                    <p className="font-semibold">Student Success Stories</p>
-                  </div>
+                <div className="aspect-video bg-black">
+                  <script
+                    src="https://fast.wistia.com/player.js"
+                    async
+                  ></script>
+                  <script
+                    src="https://fast.wistia.com/embed/fn93dowpt4.js"
+                    async
+                    type="module"
+                  ></script>
+                  <style
+                    dangerouslySetInnerHTML={{
+                      __html: `
+                      wistia-player[media-id='fn93dowpt4']:not(:defined) {
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/fn93dowpt4/swatch');
+                        display: block;
+                        filter: blur(5px);
+                        padding-top:56.25%;
+                      }
+                      wistia-player {
+                        width: 100%;
+                        height: 100%;
+                      }
+                    `,
+                    }}
+                  />
+                  <wistia-player
+                    media-id="fn93dowpt4"
+                    aspect="1.7777777777777777"
+                    autoplay="true"
+                    muted="true"
+                    className="w-full h-full"
+                  ></wistia-player>
                 </div>
-                <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-all duration-300 cursor-pointer"></div>
               </div>
               <div className="p-4">
                 <h4 className="font-bold text-sunstone-blue mb-2">
@@ -1366,7 +1391,7 @@ const Index = () => {
                 </h4>
                 <p className="text-sm text-sunstone-gray-600">
                   Watch inspiring stories of our graduates who landed their
-                  dream jobs
+                  dream jobs with Sunstone's industry-aligned curriculum
                 </p>
               </div>
             </div>
