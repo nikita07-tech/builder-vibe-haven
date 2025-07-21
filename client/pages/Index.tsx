@@ -908,140 +908,86 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Training Partners - Compact */}
-      <section className="py-8 sm:py-12 bg-gradient-to-br from-sunstone-blue/5 via-white to-sunstone-orange/5 relative overflow-hidden">
+      {/* Top Recruiters Section */}
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-white via-sunstone-blue/3 to-sunstone-orange/3 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-sunstone-orange/10 rounded-full blur-2xl animate-float"></div>
+          <div className="absolute top-10 left-10 w-40 h-40 bg-sunstone-orange/10 rounded-full blur-2xl animate-float"></div>
           <div
-            className="absolute bottom-10 right-10 w-40 h-40 bg-sunstone-blue/10 rounded-full blur-2xl animate-float"
+            className="absolute bottom-10 right-10 w-48 h-48 bg-sunstone-blue/10 rounded-full blur-2xl animate-float"
             style={{ animationDelay: "2s" }}
           ></div>
         </div>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-6 animate-fade-in">
-            <div className="flex items-center justify-center mb-3">
-              <div className="h-0.5 w-12 bg-sunstone-orange rounded-full mr-2"></div>
-              <div className="w-8 h-8 bg-gradient-to-r from-sunstone-orange to-sunstone-blue rounded-full flex items-center justify-center">
-                <Trophy className="h-4 w-4 text-white" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 animate-fade-in">
+            <div className="flex items-center justify-center mb-6">
+              <div className="h-1 w-20 bg-gradient-to-r from-sunstone-orange to-sunstone-blue rounded-full mr-4"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-sunstone-blue to-sunstone-orange rounded-full flex items-center justify-center animate-pulse-glow">
+                <Briefcase className="h-8 w-8 text-white" />
               </div>
-              <div className="h-0.5 w-12 bg-sunstone-blue rounded-full ml-2"></div>
+              <div className="h-1 w-20 bg-gradient-to-r from-sunstone-blue to-sunstone-orange rounded-full ml-4"></div>
             </div>
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-sunstone-blue mb-2">
-              <span className="text-base sm:text-lg lg:text-xl text-sunstone-orange">
-                Excel
-              </span>{" "}
-              in your career
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue via-sunstone-orange to-sunstone-blue bg-clip-text text-transparent mb-6">
+              Top Recruiters
             </h2>
-            <p className="text-xs sm:text-sm text-sunstone-gray-600 max-w-xl mx-auto">
-              with training from industry partners
+            <p className="text-lg sm:text-xl text-sunstone-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Join a network of 1,200+ leading companies that actively recruit our graduates
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
-            <Card className="border border-sunstone-orange/20 bg-white hover:shadow-lg hover:border-sunstone-orange/50 transition-all duration-300 hover-lift animate-scale-in group">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-base sm:text-lg text-sunstone-blue font-bold flex items-center group-hover:text-sunstone-orange transition-colors duration-300">
-                  <Star className="h-5 w-5 mr-2 text-sunstone-orange" />
-                  Academic Partners
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="p-3 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-2 border-sunstone-orange hover:shadow-md transition-all duration-300">
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-sunstone-blue text-sm">
-                        TCS iON
-                      </h4>
-                      <p className="text-xs text-sunstone-gray-600">
-                        Tech Certifications
-                      </p>
-                    </div>
-                  </div>
+          {/* Recruiter Logos Grid */}
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-6 lg:gap-8 mb-12">
+            {[
+              { name: "TCS", logo: "🏢", color: "from-blue-600 to-blue-800" },
+              { name: "Infosys", logo: "💼", color: "from-green-600 to-green-800" },
+              { name: "Wipro", logo: "⚡", color: "from-orange-600 to-orange-800" },
+              { name: "Cognizant", logo: "🔥", color: "from-red-600 to-red-800" },
+              { name: "HCL", logo: "🚀", color: "from-purple-600 to-purple-800" },
+              { name: "Accenture", logo: "💎", color: "from-indigo-600 to-indigo-800" },
+              { name: "IBM", logo: "🌟", color: "from-blue-700 to-blue-900" },
+              { name: "Capgemini", logo: "✨", color: "from-teal-600 to-teal-800" },
+              { name: "Tech Mahindra", logo: "🎯", color: "from-orange-500 to-red-600" },
+              { name: "L&T", logo: "⭐", color: "from-gray-600 to-gray-800" },
+              { name: "Microsoft", logo: "🔵", color: "from-blue-500 to-blue-700" },
+              { name: "Amazon", logo: "📦", color: "from-yellow-600 to-orange-600" },
+            ].map((company, index) => (
+              <div
+                key={company.name}
+                className="group bg-white/80 backdrop-blur-sm rounded-xl p-4 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-sunstone-gray-200 hover:border-sunstone-orange/50 animate-scale-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className={`w-12 h-12 bg-gradient-to-br ${company.color} rounded-full flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-300`}>
+                  <span className="text-white text-lg">{company.logo}</span>
                 </div>
-                <div className="p-3 bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg border-l-2 border-sunstone-blue hover:shadow-md transition-all duration-300">
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-sunstone-blue text-sm">
-                        AU Small Finance Bank
-                      </h4>
-                      <p className="text-xs text-sunstone-gray-600">
-                        Finance Certifications
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-3 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-2 border-sunstone-orange hover:shadow-md transition-all duration-300">
-                  <div className="flex items-center">
-                    <div className="w-8 h-8 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-sunstone-blue text-sm">
-                        KPMG
-                      </h4>
-                      <p className="text-xs text-sunstone-gray-600">
-                        Professional Training
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                <h4 className="text-xs font-semibold text-sunstone-blue group-hover:text-sunstone-orange transition-colors duration-300 text-center">
+                  {company.name}
+                </h4>
+              </div>
+            ))}
+          </div>
 
-            <Card className="border border-sunstone-blue/20 bg-white hover:shadow-lg hover:border-sunstone-blue/50 transition-all duration-300 hover-lift animate-scale-in group">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-base sm:text-lg text-sunstone-blue font-bold flex items-center group-hover:text-sunstone-orange transition-colors duration-300">
-                  <Target className="h-5 w-5 mr-2 text-sunstone-blue" />
-                  Training Partners
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="p-3 bg-gradient-to-br from-sunstone-blue/10 to-sunstone-orange/5 rounded-lg border border-sunstone-blue/30 hover:shadow-md transition-all duration-300 text-center">
-                  <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <svg
-                      className="w-5 h-5 text-white"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
-                    </svg>
-                  </div>
-                  <h4 className="font-bold text-sunstone-blue text-sm mb-1">
-                    NSDC
-                  </h4>
-                  <p className="text-xs text-sunstone-gray-600 mb-2">
-                    National Skill Development
-                  </p>
-                  <p className="text-xs text-sunstone-gray-700">
-                    Comprehensive training programs for innovation
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
+            <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover-lift animate-scale-in border border-sunstone-orange/20">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center">
+                <Users className="h-8 w-8 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-sunstone-blue mb-2">1200+</div>
+              <p className="text-sunstone-gray-600">Top Recruiting Companies</p>
+            </div>
+            <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover-lift animate-scale-in stagger-1 border border-sunstone-blue/20">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center">
+                <Trophy className="h-8 w-8 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-sunstone-blue mb-2">26 LPA</div>
+              <p className="text-sunstone-gray-600">Highest Package Offered</p>
+            </div>
+            <div className="text-center p-6 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover-lift animate-scale-in stagger-2 border border-sunstone-orange/20">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center">
+                <Target className="h-8 w-8 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-sunstone-blue mb-2">95%</div>
+              <p className="text-sunstone-gray-600">Placement Success Rate</p>
+            </div>
           </div>
         </div>
       </section>
