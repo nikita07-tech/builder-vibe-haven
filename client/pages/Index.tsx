@@ -473,13 +473,13 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-3 mb-3">
-                <div className="bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg p-3 flex items-center space-x-2 animate-slide-in-left">
-                  <div className="w-8 h-8 bg-sunstone-orange rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xs">63%</span>
+                            <div className="grid grid-cols-2 gap-3 mb-3">
+                <div className="bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg p-3 flex items-center space-x-2 animate-slide-in-left hover:shadow-lg transition-all duration-300 group hover:scale-105">
+                  <div className="w-8 h-8 bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform duration-300">
+                    <span className="text-white font-bold text-xs">📈 63%</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-sunstone-blue text-sm">
+                    <p className="font-semibold text-sunstone-blue text-sm group-hover:text-sunstone-orange transition-colors duration-300">
                       Higher ROI
                     </p>
                     <p className="text-xs text-sunstone-gray-600">
@@ -487,12 +487,12 @@ const Index = () => {
                     </p>
                   </div>
                 </div>
-                <div className="bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg p-3 flex items-center space-x-2 animate-slide-in-right">
-                  <div className="w-8 h-8 bg-sunstone-blue rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xs">7X</span>
+                <div className="bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg p-3 flex items-center space-x-2 animate-slide-in-right hover:shadow-lg transition-all duration-300 group hover:scale-105">
+                  <div className="w-8 h-8 bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform duration-300">
+                    <span className="text-white font-bold text-xs">🏢 7X</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-sunstone-blue text-sm">
+                    <p className="font-semibold text-sunstone-blue text-sm group-hover:text-sunstone-orange transition-colors duration-300">
                       More Companies
                     </p>
                     <p className="text-xs text-sunstone-gray-600">
