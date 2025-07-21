@@ -934,30 +934,18 @@ const Index = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <div className="p-6 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-4 border-sunstone-orange hover:shadow-lg transition-all duration-300 hover-lift">
-                  <div className="flex items-center mb-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mr-4 shadow-md">
-                      <svg
-                        className="w-7 h-7 text-white"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
+                                <div className="p-3 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-2 border-sunstone-orange hover:shadow-md transition-all duration-300">
+                  <div className="flex items-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z" />
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-bold text-sunstone-blue mb-1">
-                        TCS iON
-                      </h4>
-                      <p className="text-sm text-sunstone-gray-600">
-                        Tech Certification Courses
-                      </p>
+                      <h4 className="font-bold text-sunstone-blue text-sm">TCS iON</h4>
+                      <p className="text-xs text-sunstone-gray-600">Tech Certifications</p>
                     </div>
                   </div>
-                  <p className="text-sm text-sunstone-gray-700">
-                    Start your professional career in tech with cutting-edge
-                    certification courses
-                  </p>
                 </div>
                 <div className="p-6 bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg border-l-4 border-sunstone-blue hover:shadow-lg transition-all duration-300 hover-lift">
                   <div className="flex items-center mb-3">
