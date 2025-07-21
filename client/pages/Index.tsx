@@ -445,7 +445,7 @@ const Index = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-[#22336a] text-sm">
-                      Higher ROI
+                      <p>63% Higher ROI</p>
                     </p>
                     <p className="text-xs text-gray-600">vs private colleges</p>
                   </div>
@@ -456,7 +456,7 @@ const Index = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-[#22336a] text-sm">
-                      More Companies
+                      <p>7* More Companies</p>
                     </p>
                     <p className="text-xs text-gray-600">vs institutes</p>
                   </div>
