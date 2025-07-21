@@ -504,8 +504,8 @@ const Index = () => {
             <p className="text-lg text-sunstone-gray-700 max-w-4xl mx-auto animate-fade-in">
               At Sunstone, we shape your future with an industry-aligned
               curriculum and expert faculty. Our focus on skill development and
-              real-world learning ensures you're job-ready, paving the way for
-              opportunities with 2,000+ top recruiters.
+                            real-world learning ensures you're job-ready, paving the way for
+              opportunities with 1,200+ top recruiters.
             </p>
           </div>
         </div>
