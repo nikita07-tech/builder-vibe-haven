@@ -976,54 +976,23 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-sunstone-blue/20 bg-gradient-to-br from-white to-sunstone-blue/5 hover:shadow-2xl hover:border-sunstone-blue/50 transition-all duration-500 hover-lift animate-scale-in stagger-2 group">
-              <CardHeader className="relative">
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark rounded-full flex items-center justify-center animate-pulse-glow">
-                  <Award className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle className="text-2xl text-sunstone-blue font-bold flex items-center group-hover:text-sunstone-orange transition-colors duration-300">
-                  <Target
-                    className="h-8 w-8 mr-3 text-sunstone-blue animate-bounce-subtle"
-                    style={{ animationDelay: "1s" }}
-                  />
-                  Acclaimed Entrepreneurial Training Partners
+                        <Card className="border border-sunstone-blue/20 bg-white hover:shadow-lg hover:border-sunstone-blue/50 transition-all duration-300 hover-lift animate-scale-in group">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-base sm:text-lg text-sunstone-blue font-bold flex items-center group-hover:text-sunstone-orange transition-colors duration-300">
+                  <Target className="h-5 w-5 mr-2 text-sunstone-blue" />
+                  Training Partners
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="p-8 bg-gradient-to-br from-sunstone-blue/10 to-sunstone-orange/5 rounded-lg border-2 border-dashed border-sunstone-blue/30 hover:border-sunstone-blue/60 hover:shadow-lg transition-all duration-300 hover-lift text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mx-auto mb-4 animate-float shadow-lg">
-                    <svg
-                      className="w-10 h-10 text-white"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
+                <div className="p-3 bg-gradient-to-br from-sunstone-blue/10 to-sunstone-orange/5 rounded-lg border border-sunstone-blue/30 hover:shadow-md transition-all duration-300 text-center">
+                  <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mx-auto mb-2">
+                    <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
                     </svg>
                   </div>
-                  <h4 className="font-bold text-sunstone-blue text-xl mb-3">
-                    NSDC
-                  </h4>
-                  <p className="text-sm text-sunstone-gray-600 mb-4">
-                    National Skill Development Corporation
-                  </p>
-                  <p className="text-sunstone-gray-700 leading-relaxed">
-                    Build your entrepreneurial journey with comprehensive
-                    training programs designed to foster innovation and business
-                    leadership
-                  </p>
-                  <div className="mt-6 flex justify-center">
-                    <div className="flex space-x-2">
-                      <div className="w-3 h-3 bg-sunstone-blue rounded-full animate-bounce"></div>
-                      <div
-                        className="w-3 h-3 bg-sunstone-orange rounded-full animate-bounce"
-                        style={{ animationDelay: "0.1s" }}
-                      ></div>
-                      <div
-                        className="w-3 h-3 bg-sunstone-blue rounded-full animate-bounce"
-                        style={{ animationDelay: "0.2s" }}
-                      ></div>
-                    </div>
-                  </div>
+                  <h4 className="font-bold text-sunstone-blue text-sm mb-1">NSDC</h4>
+                  <p className="text-xs text-sunstone-gray-600 mb-2">National Skill Development</p>
+                  <p className="text-xs text-sunstone-gray-700">Comprehensive training programs for innovation</p>
                 </div>
               </CardContent>
             </Card>
