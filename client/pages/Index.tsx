@@ -1355,14 +1355,10 @@ const Index = () => {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue to-sunstone-orange bg-clip-text text-transparent mb-6">
               Explore Our YouTube Channel
             </h2>
-            <p className="text-lg text-sunstone-gray-700 max-w-3xl mx-auto mb-8">
+                        <p className="text-lg text-sunstone-gray-700 max-w-3xl mx-auto mb-8">
               Watch student success stories, campus life, and expert insights
               from Sunstone
             </p>
-            <Button className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-8 py-3 rounded-lg shadow-lg transition-all duration-300 hover:scale-105">
-              <span className="mr-2">🔗</span>
-              Visit Sunstone YouTube Channel
-            </Button>
                     </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
