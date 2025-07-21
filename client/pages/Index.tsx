@@ -427,31 +427,49 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="p-4">
+                        <div className="p-4">
               <div className="grid grid-cols-3 gap-4 mb-4">
-                <div className="text-center animate-count-up">
-                  <div className="text-2xl font-bold text-sunstone-blue mb-1">
-                    26 LPA
+                <div className="text-center animate-count-up group">
+                  <div className="relative">
+                    <div className="text-2xl font-bold text-sunstone-blue mb-1 group-hover:scale-110 transition-transform duration-300">
+                      💰 26 LPA
+                    </div>
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
                   </div>
                   <p className="text-xs text-sunstone-gray-600">
                     Highest Package
                   </p>
+                  <div className="w-full bg-sunstone-gray-200 rounded-full h-1.5 mt-2">
+                    <div className="bg-gradient-to-r from-green-500 to-green-600 h-1.5 rounded-full animate-pulse" style={{width: '95%'}}></div>
+                  </div>
                 </div>
-                <div className="text-center animate-count-up stagger-1">
-                  <div className="text-2xl font-bold text-sunstone-blue mb-1">
-                    1200+
+                <div className="text-center animate-count-up stagger-1 group">
+                  <div className="relative">
+                    <div className="text-2xl font-bold text-sunstone-blue mb-1 group-hover:scale-110 transition-transform duration-300">
+                      🎯 1200+
+                    </div>
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-sunstone-orange rounded-full animate-bounce"></div>
                   </div>
                   <p className="text-xs text-sunstone-gray-600">
                     Students Placed
                   </p>
+                  <div className="w-full bg-sunstone-gray-200 rounded-full h-1.5 mt-2">
+                    <div className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark h-1.5 rounded-full animate-pulse" style={{width: '85%'}}></div>
+                  </div>
                 </div>
-                <div className="text-center animate-count-up stagger-2">
-                  <div className="text-2xl font-bold text-sunstone-blue mb-1">
-                    5000+
+                <div className="text-center animate-count-up stagger-2 group">
+                  <div className="relative">
+                    <div className="text-2xl font-bold text-sunstone-blue mb-1 group-hover:scale-110 transition-transform duration-300">
+                      🚀 5000+
+                    </div>
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-sunstone-blue rounded-full animate-pulse"></div>
                   </div>
                   <p className="text-xs text-sunstone-gray-600">
                     Job Opportunities
                   </p>
+                  <div className="w-full bg-sunstone-gray-200 rounded-full h-1.5 mt-2">
+                    <div className="bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark h-1.5 rounded-full animate-pulse" style={{width: '90%'}}></div>
+                  </div>
                 </div>
               </div>
 
