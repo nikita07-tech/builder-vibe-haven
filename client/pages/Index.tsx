@@ -340,7 +340,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-center">
             {/* Content Section - Takes 3 columns on large screens */}
             <div className="lg:col-span-3 text-center lg:text-left animate-slide-up order-2 lg:order-1">
-                            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 leading-tight">
+              <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 leading-tight">
                 Power up your career with an MBA, BBA, BCA, MCA & B.Tech at
                 Hi-Tech Institute of Engineering & Technology
               </h1>
@@ -427,7 +427,7 @@ const Index = () => {
               </div>
             </div>
 
-                        <div className="p-4">
+            <div className="p-4">
               <div className="grid grid-cols-3 gap-4 mb-4">
                 <div className="text-center animate-count-up group">
                   <div className="relative">
@@ -440,7 +440,10 @@ const Index = () => {
                     Highest Package
                   </p>
                   <div className="w-full bg-sunstone-gray-200 rounded-full h-1.5 mt-2">
-                    <div className="bg-gradient-to-r from-green-500 to-green-600 h-1.5 rounded-full animate-pulse" style={{width: '95%'}}></div>
+                    <div
+                      className="bg-gradient-to-r from-green-500 to-green-600 h-1.5 rounded-full animate-pulse"
+                      style={{ width: "95%" }}
+                    ></div>
                   </div>
                 </div>
                 <div className="text-center animate-count-up stagger-1 group">
@@ -454,7 +457,10 @@ const Index = () => {
                     Students Placed
                   </p>
                   <div className="w-full bg-sunstone-gray-200 rounded-full h-1.5 mt-2">
-                    <div className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark h-1.5 rounded-full animate-pulse" style={{width: '85%'}}></div>
+                    <div
+                      className="bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark h-1.5 rounded-full animate-pulse"
+                      style={{ width: "85%" }}
+                    ></div>
                   </div>
                 </div>
                 <div className="text-center animate-count-up stagger-2 group">
@@ -468,12 +474,15 @@ const Index = () => {
                     Job Opportunities
                   </p>
                   <div className="w-full bg-sunstone-gray-200 rounded-full h-1.5 mt-2">
-                    <div className="bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark h-1.5 rounded-full animate-pulse" style={{width: '90%'}}></div>
+                    <div
+                      className="bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark h-1.5 rounded-full animate-pulse"
+                      style={{ width: "90%" }}
+                    ></div>
                   </div>
                 </div>
               </div>
 
-                            <div className="grid grid-cols-2 gap-3 mb-3">
+              <div className="grid grid-cols-2 gap-3 mb-3">
                 <div className="bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg p-3 flex items-center space-x-2 animate-slide-in-left hover:shadow-lg transition-all duration-300 group hover:scale-105">
                   <div className="w-8 h-8 bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center flex-shrink-0 group-hover:rotate-12 transition-transform duration-300">
                     <span className="text-white font-bold text-xs">📈 63%</span>
@@ -522,7 +531,7 @@ const Index = () => {
             <p className="text-lg text-sunstone-gray-700 max-w-4xl mx-auto animate-fade-in">
               At Sunstone, we shape your future with an industry-aligned
               curriculum and expert faculty. Our focus on skill development and
-                            real-world learning ensures you're job-ready, paving the way for
+              real-world learning ensures you're job-ready, paving the way for
               opportunities with 1,200+ top recruiters.
             </p>
           </div>
@@ -899,7 +908,7 @@ const Index = () => {
         </div>
       </section>
 
-            {/* Training Partners - Compact */}
+      {/* Training Partners - Compact */}
       <section className="py-8 sm:py-12 bg-gradient-to-br from-sunstone-blue/5 via-white to-sunstone-orange/5 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-32 h-32 bg-sunstone-orange/10 rounded-full blur-2xl animate-float"></div>
@@ -918,14 +927,17 @@ const Index = () => {
               <div className="h-0.5 w-12 bg-sunstone-blue rounded-full ml-2"></div>
             </div>
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-sunstone-blue mb-2">
-              <span className="text-base sm:text-lg lg:text-xl text-sunstone-orange">Excel</span> in your career
+              <span className="text-base sm:text-lg lg:text-xl text-sunstone-orange">
+                Excel
+              </span>{" "}
+              in your career
             </h2>
             <p className="text-xs sm:text-sm text-sunstone-gray-600 max-w-xl mx-auto">
               with training from industry partners
             </p>
           </div>
 
-                    <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
             <Card className="border border-sunstone-orange/20 bg-white hover:shadow-lg hover:border-sunstone-orange/50 transition-all duration-300 hover-lift animate-scale-in group">
               <CardHeader className="pb-2">
                 <CardTitle className="text-base sm:text-lg text-sunstone-blue font-bold flex items-center group-hover:text-sunstone-orange transition-colors duration-300">
@@ -934,49 +946,73 @@ const Index = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                                <div className="p-3 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-2 border-sunstone-orange hover:shadow-md transition-all duration-300">
+                <div className="p-3 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-2 border-sunstone-orange hover:shadow-md transition-all duration-300">
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+                      <svg
+                        className="w-4 h-4 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
                         <path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2z" />
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-bold text-sunstone-blue text-sm">TCS iON</h4>
-                      <p className="text-xs text-sunstone-gray-600">Tech Certifications</p>
+                      <h4 className="font-bold text-sunstone-blue text-sm">
+                        TCS iON
+                      </h4>
+                      <p className="text-xs text-sunstone-gray-600">
+                        Tech Certifications
+                      </p>
                     </div>
                   </div>
                 </div>
-                                <div className="p-3 bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg border-l-2 border-sunstone-blue hover:shadow-md transition-all duration-300">
+                <div className="p-3 bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg border-l-2 border-sunstone-blue hover:shadow-md transition-all duration-300">
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+                      <svg
+                        className="w-4 h-4 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-bold text-sunstone-blue text-sm">AU Small Finance Bank</h4>
-                      <p className="text-xs text-sunstone-gray-600">Finance Certifications</p>
+                      <h4 className="font-bold text-sunstone-blue text-sm">
+                        AU Small Finance Bank
+                      </h4>
+                      <p className="text-xs text-sunstone-gray-600">
+                        Finance Certifications
+                      </p>
                     </div>
                   </div>
                 </div>
-                                <div className="p-3 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-2 border-sunstone-orange hover:shadow-md transition-all duration-300">
+                <div className="p-3 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-2 border-sunstone-orange hover:shadow-md transition-all duration-300">
                   <div className="flex items-center">
                     <div className="w-8 h-8 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+                      <svg
+                        className="w-4 h-4 text-white"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-bold text-sunstone-blue text-sm">KPMG</h4>
-                      <p className="text-xs text-sunstone-gray-600">Professional Training</p>
+                      <h4 className="font-bold text-sunstone-blue text-sm">
+                        KPMG
+                      </h4>
+                      <p className="text-xs text-sunstone-gray-600">
+                        Professional Training
+                      </p>
                     </div>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-                        <Card className="border border-sunstone-blue/20 bg-white hover:shadow-lg hover:border-sunstone-blue/50 transition-all duration-300 hover-lift animate-scale-in group">
+            <Card className="border border-sunstone-blue/20 bg-white hover:shadow-lg hover:border-sunstone-blue/50 transition-all duration-300 hover-lift animate-scale-in group">
               <CardHeader className="pb-2">
                 <CardTitle className="text-base sm:text-lg text-sunstone-blue font-bold flex items-center group-hover:text-sunstone-orange transition-colors duration-300">
                   <Target className="h-5 w-5 mr-2 text-sunstone-blue" />
@@ -986,13 +1022,23 @@ const Index = () => {
               <CardContent>
                 <div className="p-3 bg-gradient-to-br from-sunstone-blue/10 to-sunstone-orange/5 rounded-lg border border-sunstone-blue/30 hover:shadow-md transition-all duration-300 text-center">
                   <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <svg
+                      className="w-5 h-5 text-white"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                    >
                       <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
                     </svg>
                   </div>
-                  <h4 className="font-bold text-sunstone-blue text-sm mb-1">NSDC</h4>
-                  <p className="text-xs text-sunstone-gray-600 mb-2">National Skill Development</p>
-                  <p className="text-xs text-sunstone-gray-700">Comprehensive training programs for innovation</p>
+                  <h4 className="font-bold text-sunstone-blue text-sm mb-1">
+                    NSDC
+                  </h4>
+                  <p className="text-xs text-sunstone-gray-600 mb-2">
+                    National Skill Development
+                  </p>
+                  <p className="text-xs text-sunstone-gray-700">
+                    Comprehensive training programs for innovation
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -1282,11 +1328,11 @@ const Index = () => {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue to-sunstone-orange bg-clip-text text-transparent mb-6">
               Explore Our YouTube Channel
             </h2>
-                        <p className="text-lg text-sunstone-gray-700 max-w-3xl mx-auto mb-8">
+            <p className="text-lg text-sunstone-gray-700 max-w-3xl mx-auto mb-8">
               Watch student success stories, campus life, and expert insights
               from Sunstone
             </p>
-                    </div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in">
@@ -1317,7 +1363,7 @@ const Index = () => {
                     `,
                     }}
                   />
-                                    <wistia-player
+                  <wistia-player
                     media-id="jumncwe6ta"
                     aspect="1.7777777777777777"
                     autoplay
@@ -1333,7 +1379,8 @@ const Index = () => {
                   Sunstone Student Success Journey
                 </h4>
                 <p className="text-sm text-sunstone-gray-600">
-                  Discover how Sunstone transforms careers through industry-focused education and placement support
+                  Discover how Sunstone transforms careers through
+                  industry-focused education and placement support
                 </p>
               </div>
             </div>
@@ -1366,7 +1413,7 @@ const Index = () => {
                     `,
                     }}
                   />
-                                    <wistia-player
+                  <wistia-player
                     media-id="xjyegnd0xq"
                     aspect="1.7777777777777777"
                     autoplay
@@ -1382,7 +1429,8 @@ const Index = () => {
                   Life at Hi-Tech Institute
                 </h4>
                 <p className="text-sm text-sunstone-gray-600">
-                  Experience campus life, modern facilities, and vibrant student community at Hi-Tech
+                  Experience campus life, modern facilities, and vibrant student
+                  community at Hi-Tech
                 </p>
               </div>
             </div>
