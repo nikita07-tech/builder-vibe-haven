@@ -947,30 +947,18 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <div className="p-6 bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg border-l-4 border-sunstone-blue hover:shadow-lg transition-all duration-300 hover-lift">
-                  <div className="flex items-center mb-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mr-4 shadow-md">
-                      <svg
-                        className="w-7 h-7 text-white"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
+                                <div className="p-3 bg-gradient-to-r from-sunstone-blue/10 to-transparent rounded-lg border-l-2 border-sunstone-blue hover:shadow-md transition-all duration-300">
+                  <div className="flex items-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-bold text-sunstone-blue mb-1">
-                        AU Small Finance Bank
-                      </h4>
-                      <p className="text-sm text-sunstone-gray-600">
-                        Finance Certification
-                      </p>
+                      <h4 className="font-bold text-sunstone-blue text-sm">AU Small Finance Bank</h4>
+                      <p className="text-xs text-sunstone-gray-600">Finance Certifications</p>
                     </div>
                   </div>
-                  <p className="text-sm text-sunstone-gray-700">
-                    Kickstart your career in finance with industry-leading
-                    certification courses
-                  </p>
                 </div>
                 <div className="p-6 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-4 border-sunstone-orange hover:shadow-lg transition-all duration-300 hover-lift">
                   <div className="flex items-center mb-3">
