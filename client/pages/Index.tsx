@@ -960,30 +960,18 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <div className="p-6 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-4 border-sunstone-orange hover:shadow-lg transition-all duration-300 hover-lift">
-                  <div className="flex items-center mb-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center mr-4 shadow-md">
-                      <svg
-                        className="w-7 h-7 text-white"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                      >
+                                <div className="p-3 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-2 border-sunstone-orange hover:shadow-md transition-all duration-300">
+                  <div className="flex items-center">
+                    <div className="w-8 h-8 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-bold text-sunstone-blue mb-1">
-                        KPMG
-                      </h4>
-                      <p className="text-sm text-sunstone-gray-600">
-                        Professional Expertise
-                      </p>
+                      <h4 className="font-bold text-sunstone-blue text-sm">KPMG</h4>
+                      <p className="text-xs text-sunstone-gray-600">Professional Training</p>
                     </div>
                   </div>
-                  <p className="text-sm text-sunstone-gray-700">
-                    Gain industry-ready expertise with certification programs
-                    from global leaders
-                  </p>
                 </div>
               </CardContent>
             </Card>
