@@ -899,32 +899,29 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Academic & Training Partners - More Attractive Section */}
-      <section className="py-20 bg-gradient-to-br from-sunstone-blue/5 via-white to-sunstone-orange/5 relative overflow-hidden">
+            {/* Training Partners - Compact */}
+      <section className="py-8 sm:py-12 bg-gradient-to-br from-sunstone-blue/5 via-white to-sunstone-orange/5 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-sunstone-orange/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-10 left-10 w-32 h-32 bg-sunstone-orange/10 rounded-full blur-2xl animate-float"></div>
           <div
-            className="absolute bottom-20 right-20 w-96 h-96 bg-sunstone-blue/10 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "3s" }}
+            className="absolute bottom-10 right-10 w-40 h-40 bg-sunstone-blue/10 rounded-full blur-2xl animate-float"
+            style={{ animationDelay: "2s" }}
           ></div>
         </div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-8 animate-fade-in">
-            <div className="flex items-center justify-center mb-4">
-              <div className="h-0.5 w-16 bg-sunstone-orange rounded-full mr-3"></div>
-              <div className="w-10 h-10 bg-gradient-to-r from-sunstone-orange to-sunstone-blue rounded-full flex items-center justify-center">
-                <Trophy className="h-5 w-5 text-white" />
+          <div className="text-center mb-6 animate-fade-in">
+            <div className="flex items-center justify-center mb-3">
+              <div className="h-0.5 w-12 bg-sunstone-orange rounded-full mr-2"></div>
+              <div className="w-8 h-8 bg-gradient-to-r from-sunstone-orange to-sunstone-blue rounded-full flex items-center justify-center">
+                <Trophy className="h-4 w-4 text-white" />
               </div>
-              <div className="h-0.5 w-16 bg-sunstone-blue rounded-full ml-3"></div>
+              <div className="h-0.5 w-12 bg-sunstone-blue rounded-full ml-2"></div>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-sunstone-blue mb-2">
-              <span className="text-xl sm:text-2xl text-sunstone-orange">
-                Excel
-              </span>{" "}
-              in your career
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-sunstone-blue mb-2">
+              <span className="text-base sm:text-lg lg:text-xl text-sunstone-orange">Excel</span> in your career
             </h2>
-            <p className="text-sm text-sunstone-gray-600 max-w-2xl mx-auto">
-              with customised training from industry-leading partners
+            <p className="text-xs sm:text-sm text-sunstone-gray-600 max-w-xl mx-auto">
+              with training from industry partners
             </p>
           </div>
 
