@@ -514,7 +514,7 @@ const Index = () => {
               <div className="bg-gradient-to-r from-sunstone-gray-50 to-white rounded-lg p-2 text-center animate-fade-in">
                 <p className="text-xs text-sunstone-gray-700">
                   <span className="font-semibold text-sunstone-orange">
-                    ��� Verified & Audited
+                    ✅ Verified & Audited
                   </span>{" "}
                   by Official Auditor for JM Ahmedabad
                 </p>
@@ -698,66 +698,94 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Programs Section - Enhanced with Animations */}
-      <section className="py-20 bg-gradient-to-br from-white via-sunstone-blue/5 to-sunstone-orange/10 relative overflow-hidden">
+      {/* Programs Section - Professional & Engaging */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-orange-50/30 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-96 h-96 bg-sunstone-orange/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-float"></div>
           <div
-            className="absolute bottom-10 right-10 w-80 h-80 bg-sunstone-blue/15 rounded-full blur-3xl animate-float"
+            className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-orange-400/20 to-pink-400/20 rounded-full blur-3xl animate-float"
             style={{ animationDelay: "3s" }}
           ></div>
           <div
-            className="absolute top-1/2 left-1/3 w-64 h-64 bg-sunstone-orange/5 rounded-full blur-2xl animate-float"
+            className="absolute top-1/3 left-1/4 w-48 h-48 bg-gradient-to-r from-teal-400/15 to-blue-400/15 rounded-full blur-2xl animate-float"
             style={{ animationDelay: "1.5s" }}
           ></div>
         </div>
+        
+        {/* Animated Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-full h-full">
+            {[...Array(20)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 bg-sunstone-blue rounded-full animate-pulse"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  animationDuration: `${2 + Math.random() * 2}s`
+                }}
+              ></div>
+            ))}
+          </div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
-            <div className="flex items-center justify-center mb-6">
-              <div className="h-1 w-24 bg-gradient-to-r from-sunstone-orange to-sunstone-blue rounded-full mr-4"></div>
+            <div className="flex items-center justify-center mb-8">
+              <div className="h-1 w-24 bg-gradient-to-r from-blue-500 via-purple-500 to-orange-500 rounded-full mr-4 animate-pulse"></div>
               <div className="relative">
-                <GraduationCap className="h-16 w-16 text-sunstone-blue animate-bounce-subtle" />
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-sunstone-orange rounded-full animate-ping"></div>
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-600 via-purple-600 to-orange-600 rounded-full flex items-center justify-center animate-pulse-glow shadow-2xl">
+                  <GraduationCap className="h-10 w-10 text-white animate-bounce-subtle" />
+                </div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-ping"></div>
+                <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-r from-blue-400 to-teal-500 rounded-full animate-bounce"></div>
               </div>
-              <div className="h-1 w-24 bg-gradient-to-r from-sunstone-blue to-sunstone-orange rounded-full ml-4"></div>
+              <div className="h-1 w-24 bg-gradient-to-r from-orange-500 via-purple-500 to-blue-500 rounded-full ml-4 animate-pulse"></div>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue via-sunstone-orange to-sunstone-blue bg-clip-text text-transparent mb-6">
-              Programs Offered with Hi-Tech
-            </h2>
-            <p className="text-lg sm:text-xl text-sunstone-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Learn from industry experts and get hands-on experience to become
-              job-ready from Day 1 with our comprehensive programs
+            
+            <div className="relative inline-block mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-orange-600 bg-clip-text text-transparent">
+                Programs Offered with Hi-Tech
+              </h2>
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full animate-pulse"></div>
+            </div>
+            
+            <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
+              Transform your career with our industry-aligned programs designed by experts and delivered with cutting-edge technology
             </p>
-            <div className="mt-6 flex justify-center">
+            
+            <div className="flex justify-center items-center space-x-4">
               <div className="flex space-x-2">
-                <div className="w-3 h-3 bg-sunstone-orange rounded-full animate-bounce"></div>
+                <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-bounce"></div>
                 <div
-                  className="w-3 h-3 bg-sunstone-blue rounded-full animate-bounce"
-                  style={{ animationDelay: "0.1s" }}
-                ></div>
-                <div
-                  className="w-3 h-3 bg-sunstone-orange rounded-full animate-bounce"
+                  className="w-3 h-3 bg-gradient-to-r from-purple-500 to-orange-500 rounded-full animate-bounce"
                   style={{ animationDelay: "0.2s" }}
                 ></div>
+                <div
+                  className="w-3 h-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-full animate-bounce"
+                  style={{ animationDelay: "0.4s" }}
+                ></div>
               </div>
+              <span className="text-sm text-gray-500 font-medium">5 Programs Available</span>
             </div>
           </div>
 
           <Tabs defaultValue="MBA" className="w-full animate-slide-up">
             <div className="relative mb-8">
-              <div className="absolute inset-0 bg-gradient-to-r from-sunstone-orange/20 via-sunstone-blue/20 to-sunstone-orange/20 rounded-2xl blur-xl"></div>
-              <TabsList className="relative grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 bg-white/95 backdrop-blur-sm border-2 border-sunstone-gray-200 h-auto gap-2 p-2 shadow-2xl rounded-2xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-orange-400/20 rounded-2xl blur-xl"></div>
+              <TabsList className="relative grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 bg-white/95 backdrop-blur-sm border-2 border-gray-200/50 h-auto gap-2 p-2 shadow-2xl rounded-2xl">
                 {Object.keys(programs).map((program, index) => (
                   <TabsTrigger
                     key={program}
                     value={program}
-                    className={`group data-[state=active]:bg-gradient-to-br data-[state=active]:from-sunstone-orange data-[state=active]:to-sunstone-orange-dark data-[state=active]:text-white data-[state=active]:shadow-lg text-xs sm:text-sm py-4 px-4 transition-all duration-500 hover:scale-105 hover:shadow-md rounded-xl border border-transparent data-[state=active]:border-sunstone-orange-dark animate-scale-in relative overflow-hidden`}
+                    className={`group data-[state=active]:bg-gradient-to-br data-[state=active]:from-blue-600 data-[state=active]:to-purple-600 data-[state=active]:text-white data-[state=active]:shadow-lg text-xs sm:text-sm py-4 px-4 transition-all duration-500 hover:scale-105 hover:shadow-md rounded-xl border border-transparent data-[state=active]:border-purple-600 animate-scale-in relative overflow-hidden`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                     <div className="flex flex-col items-center relative z-10">
-                      <div className="p-2 rounded-full bg-sunstone-gray-100 group-data-[state=active]:bg-white/20 mb-2 transition-colors duration-300">
-                        <GraduationCap className="h-5 w-5 text-sunstone-blue group-data-[state=active]:text-white transition-colors duration-300" />
+                      <div className="p-2 rounded-full bg-gray-100 group-data-[state=active]:bg-white/20 mb-2 transition-colors duration-300">
+                        <GraduationCap className="h-5 w-5 text-blue-600 group-data-[state=active]:text-white transition-colors duration-300" />
                       </div>
                       <span className="font-semibold">{program}</span>
                     </div>
@@ -772,48 +800,65 @@ const Index = () => {
                 value={programName}
                 className="mt-8"
               >
-                <Card className="border-sunstone-gray-200 shadow-xl bg-white/90 backdrop-blur-sm animate-scale-in hover-lift">
-                  <CardHeader className="bg-gradient-to-r from-sunstone-orange/10 to-sunstone-blue/10 rounded-t-lg">
-                    <div className="flex items-center justify-center mb-4">
-                      <Trophy className="h-8 w-8 text-sunstone-orange mr-3 animate-float" />
-                      <CardTitle className="text-2xl text-sunstone-gray-900 gradient-text">
-                        {programName} Program Highlights
+                <Card className="border-2 border-gray-200/50 shadow-2xl bg-white/95 backdrop-blur-sm animate-scale-in hover-lift hover:shadow-3xl transition-all duration-500">
+                  <CardHeader className="bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-orange-600/10 rounded-t-lg border-b border-gray-200/30">
+                    <div className="flex items-center justify-center mb-6">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4 animate-pulse-glow">
+                        <Trophy className="h-6 w-6 text-white" />
+                      </div>
+                      <CardTitle className="text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-orange-600 bg-clip-text text-transparent">
+                        {programName} Program Excellence
                       </CardTitle>
-                      <Trophy
-                        className="h-8 w-8 text-sunstone-blue ml-3 animate-float"
-                        style={{ animationDelay: "1s" }}
-                      />
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-orange-500 rounded-full flex items-center justify-center ml-4 animate-pulse-glow" style={{ animationDelay: "1s" }}>
+                        <Star className="h-6 w-6 text-white" />
+                      </div>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 mb-6">
-                      <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-sunstone-orange/20 to-sunstone-orange/10 rounded-lg hover-lift animate-pulse-glow">
-                        <Target className="h-6 w-6 mx-auto mb-2 text-sunstone-orange" />
-                        <div className="font-semibold text-sunstone-orange text-sm sm:text-base">
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+                      <div className="text-center p-4 bg-gradient-to-br from-blue-500/15 via-blue-400/10 to-blue-300/5 rounded-xl hover-lift animate-pulse-glow border border-blue-200/30 hover:border-blue-400/50 transition-all duration-300">
+                        <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <Target className="h-5 w-5 text-white" />
+                        </div>
+                        <div className="font-bold text-blue-600 text-sm">
                           {programData.duration}
                         </div>
+                        <div className="text-xs text-gray-500 mt-1">Duration</div>
                       </div>
-                      <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-sunstone-blue/20 to-sunstone-blue/10 rounded-lg hover-lift animate-pulse-glow stagger-1">
-                        <Award className="h-6 w-6 mx-auto mb-2 text-sunstone-blue" />
-                        <div className="font-semibold text-sunstone-blue text-sm sm:text-base">
+                      <div className="text-center p-4 bg-gradient-to-br from-purple-500/15 via-purple-400/10 to-purple-300/5 rounded-xl hover-lift animate-pulse-glow stagger-1 border border-purple-200/30 hover:border-purple-400/50 transition-all duration-300">
+                        <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <Award className="h-5 w-5 text-white" />
+                        </div>
+                        <div className="font-bold text-purple-600 text-sm">
                           {programData.certifications}
                         </div>
+                        <div className="text-xs text-gray-500 mt-1">Certifications</div>
                       </div>
-                      <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-sunstone-orange/20 to-sunstone-orange/10 rounded-lg hover-lift animate-pulse-glow stagger-2">
-                        <Briefcase className="h-6 w-6 mx-auto mb-2 text-sunstone-orange" />
-                        <div className="font-semibold text-sunstone-orange text-sm sm:text-base">
+                      <div className="text-center p-4 bg-gradient-to-br from-orange-500/15 via-orange-400/10 to-orange-300/5 rounded-xl hover-lift animate-pulse-glow stagger-2 border border-orange-200/30 hover:border-orange-400/50 transition-all duration-300">
+                        <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <Briefcase className="h-5 w-5 text-white" />
+                        </div>
+                        <div className="font-bold text-orange-600 text-sm">
                           {programData.internships}
                         </div>
+                        <div className="text-xs text-gray-500 mt-1">Experience</div>
                       </div>
-                      <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-sunstone-blue/20 to-sunstone-blue/10 rounded-lg hover-lift animate-pulse-glow stagger-3">
-                        <Star className="h-6 w-6 mx-auto mb-2 text-sunstone-blue" />
-                        <div className="font-semibold text-sunstone-blue text-sm sm:text-base">
+                      <div className="text-center p-4 bg-gradient-to-br from-teal-500/15 via-teal-400/10 to-teal-300/5 rounded-xl hover-lift animate-pulse-glow stagger-3 border border-teal-200/30 hover:border-teal-400/50 transition-all duration-300">
+                        <div className="w-10 h-10 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <Star className="h-5 w-5 text-white" />
+                        </div>
+                        <div className="font-bold text-teal-600 text-sm">
                           {programData.projects}
                         </div>
+                        <div className="text-xs text-gray-500 mt-1">Projects</div>
                       </div>
-                      <div className="text-center p-3 sm:p-4 bg-gradient-to-br from-sunstone-orange/20 to-sunstone-orange/10 rounded-lg hover-lift animate-pulse-glow stagger-4">
-                        <Trophy className="h-6 w-6 mx-auto mb-2 text-sunstone-orange" />
-                        <div className="font-semibold text-sunstone-orange text-sm sm:text-base">
+                      <div className="text-center p-4 bg-gradient-to-br from-pink-500/15 via-pink-400/10 to-pink-300/5 rounded-xl hover-lift animate-pulse-glow stagger-4 border border-pink-200/30 hover:border-pink-400/50 transition-all duration-300">
+                        <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                          <Trophy className="h-5 w-5 text-white" />
+                        </div>
+                        <div className="font-bold text-pink-600 text-sm">
                           {programData.specializations}
                         </div>
+                        <div className="text-xs text-gray-500 mt-1">Specializations</div>
                       </div>
                     </div>
                   </CardHeader>
@@ -1115,12 +1160,14 @@ const Index = () => {
                   asChild
                 >
                   <a
-                    href="mailto:connect@sunstone.in"
+                    href="https://sunstone.in/apply"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center"
                   >
                     <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
-                    <Mail className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                    <span className="relative">Email Us</span>
+                    <ExternalLink className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+                    <span className="relative">Apply Now</span>
                   </a>
                 </Button>
               </div>
@@ -1252,7 +1299,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Explore YouTube */}
+      {/* FAQs Section */}
       <section className="py-16 bg-gradient-to-br from-sunstone-blue/5 via-white to-sunstone-orange/5 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-64 h-64 bg-sunstone-orange/10 rounded-full blur-2xl animate-float"></div>
@@ -1265,119 +1312,119 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 animate-fade-in">
             <div className="flex items-center justify-center mb-6">
-              <div className="h-1 w-20 bg-sunstone-orange rounded-full mr-4"></div>
-              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center animate-pulse-glow">
-                <span className="text-white text-2xl">📺</span>
+              <div className="h-1 w-20 bg-sunstone-orange rounded-full mr-4 animate-pulse"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-sunstone-blue to-sunstone-orange rounded-full flex items-center justify-center animate-pulse-glow">
+                <span className="text-white text-2xl">❓</span>
               </div>
-              <div className="h-1 w-20 bg-sunstone-blue rounded-full ml-4"></div>
+              <div className="h-1 w-20 bg-sunstone-blue rounded-full ml-4 animate-pulse"></div>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-sunstone-blue to-sunstone-orange bg-clip-text text-transparent mb-6">
-              Explore Our YouTube Channel
+              Frequently Asked Questions
             </h2>
             <p className="text-lg text-sunstone-gray-700 max-w-3xl mx-auto mb-8">
-              Watch student success stories, campus life, and expert insights
-              from Sunstone
+              Get answers to common questions about Hi-Tech Institute and Sunstone programs
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in">
-              <div className="relative">
-                <div className="aspect-video bg-black">
-                  <script
-                    src="https://fast.wistia.com/player.js"
-                    async
-                  ></script>
-                  <script
-                    src="https://fast.wistia.com/embed/jumncwe6ta.js"
-                    async
-                    type="module"
-                  ></script>
-                  <style
-                    dangerouslySetInnerHTML={{
-                      __html: `
-                      wistia-player[media-id='jumncwe6ta']:not(:defined) {
-                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/jumncwe6ta/swatch');
-                        display: block;
-                        filter: blur(5px);
-                        padding-top:56.25%;
-                      }
-                      wistia-player {
-                        width: 100%;
-                        height: 100%;
-                      }
-                    `,
-                    }}
-                  />
-                  <wistia-player
-                    media-id="jumncwe6ta"
-                    aspect="1.7777777777777777"
-                    autoplay
-                    muted
-                    playsinline
-                    controls
-                    className="w-full h-full"
-                  ></wistia-player>
-                </div>
-              </div>
-              <div className="p-4">
-                <h4 className="font-bold text-sunstone-blue mb-2">
-                  Sunstone Student Success Journey
-                </h4>
-                <p className="text-sm text-sunstone-gray-600">
-                  Discover how Sunstone transforms careers through
-                  industry-focused education and placement support
-                </p>
-              </div>
-            </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                question: "What makes Sunstone different from other educational providers?",
+                answer: "Sunstone offers industry-aligned curriculum, expert faculty from Fortune 500 companies, hands-on projects, and guaranteed placement support with 1,200+ recruiting partners.",
+                category: "sunstone",
+                icon: "🌟"
+              },
+              {
+                question: "What is the admission process for Hi-Tech Institute?",
+                answer: "The admission process includes online application, document verification, counseling session, aptitude assessment, and final confirmation. Our team guides you through each step.",
+                category: "hitech",
+                icon: "🎓"
+              },
+              {
+                question: "What placement support does Sunstone provide?",
+                answer: "We offer comprehensive placement assistance including resume building, interview preparation, mock interviews, and direct access to 1,200+ recruiting companies with packages up to 26 LPA.",
+                category: "sunstone",
+                icon: "💼"
+              },
+              {
+                question: "What facilities are available at Hi-Tech Institute?",
+                answer: "Hi-Tech Institute features modern infrastructure, state-of-the-art labs, digital classrooms, library, sports facilities, hostels, and industry-standard equipment for hands-on learning.",
+                category: "hitech",
+                icon: "🏢"
+              },
+              {
+                question: "How does Sunstone ensure industry readiness?",
+                answer: "Through 10+ advanced certifications, real-world projects, internships with top companies, mentorship from industry leaders, and practical skill development programs.",
+                category: "sunstone",
+                icon: "🚀"
+              },
+              {
+                question: "What scholarships are available at Hi-Tech Institute?",
+                answer: "Hi-Tech Institute offers merit-based scholarships, need-based financial aid, and special scholarships for outstanding academic performance and extracurricular achievements.",
+                category: "hitech",
+                icon: "💰"
+              }
+            ].map((faq, index) => (
+              <Collapsible key={index} className={`animate-scale-in`} style={{ animationDelay: `${index * 0.1}s` }}>
+                <CollapsibleTrigger className={`w-full text-left p-6 rounded-xl border-2 transition-all duration-300 hover:shadow-lg ${
+                  faq.category === 'sunstone' 
+                    ? 'bg-gradient-to-r from-sunstone-orange/10 to-sunstone-blue/10 border-sunstone-orange/30 hover:border-sunstone-orange/60' 
+                    : 'bg-gradient-to-r from-sunstone-blue/10 to-sunstone-gray-100 border-sunstone-blue/30 hover:border-sunstone-blue/60'
+                } hover-lift group`}>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
+                        faq.category === 'sunstone' 
+                          ? 'bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark' 
+                          : 'bg-gradient-to-br from-sunstone-blue to-sunstone-blue-dark'
+                      } group-hover:scale-110 transition-transform duration-300`}>
+                        <span className="text-white text-lg">{faq.icon}</span>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-bold text-sunstone-blue group-hover:text-sunstone-orange transition-colors duration-300 text-left">
+                          {faq.question}
+                        </h3>
+                        <div className={`text-xs font-medium mt-1 ${
+                          faq.category === 'sunstone' ? 'text-sunstone-orange' : 'text-sunstone-blue'
+                        }`}>
+                          {faq.category === 'sunstone' ? 'Sunstone' : 'Hi-Tech Institute'}
+                        </div>
+                      </div>
+                    </div>
+                    <ChevronDown className="h-5 w-5 text-sunstone-gray-600 group-hover:text-sunstone-orange transition-all duration-300 group-data-[state=open]:rotate-180" />
+                  </div>
+                </CollapsibleTrigger>
+                <CollapsibleContent className="px-6 pb-6">
+                  <div className="pt-4 border-t border-sunstone-gray-200 mt-4">
+                    <p className="text-sunstone-gray-700 leading-relaxed animate-fade-in">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
+            ))}
+          </div>
 
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in stagger-1">
-              <div className="relative">
-                <div className="aspect-video bg-black">
-                  <script
-                    src="https://fast.wistia.com/player.js"
-                    async
-                  ></script>
-                  <script
-                    src="https://fast.wistia.com/embed/xjyegnd0xq.js"
-                    async
-                    type="module"
-                  ></script>
-                  <style
-                    dangerouslySetInnerHTML={{
-                      __html: `
-                      wistia-player[media-id='xjyegnd0xq']:not(:defined) {
-                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/xjyegnd0xq/swatch');
-                        display: block;
-                        filter: blur(5px);
-                        padding-top:56.25%;
-                      }
-                      wistia-player {
-                        width: 100%;
-                        height: 100%;
-                      }
-                    `,
-                    }}
-                  />
-                  <wistia-player
-                    media-id="xjyegnd0xq"
-                    aspect="1.7777777777777777"
-                    autoplay
-                    muted
-                    playsinline
-                    controls
-                    className="w-full h-full"
-                  ></wistia-player>
-                </div>
-              </div>
-              <div className="p-4">
-                <h4 className="font-bold text-sunstone-blue mb-2">
-                  Life at Hi-Tech Institute
-                </h4>
-                <p className="text-sm text-sunstone-gray-600">
-                  Experience campus life, modern facilities, and vibrant student
-                  community at Hi-Tech
-                </p>
+          {/* CTA for more questions */}
+          <div className="text-center mt-12">
+            <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-sunstone-gray-200 animate-fade-in">
+              <h3 className="text-xl font-bold text-sunstone-blue mb-2">Still have questions?</h3>
+              <p className="text-sunstone-gray-600 mb-4">Our counselors are here to help you make the right choice</p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <a
+                  href="tel:+917065303030"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-sunstone-orange to-sunstone-orange-dark text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover-lift"
+                >
+                  <Phone className="h-4 w-4 mr-2" />
+                  Call Us Now
+                </a>
+                <a
+                  href="mailto:connect@sunstone.in"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-sunstone-blue to-sunstone-blue-dark text-white font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover-lift"
+                >
+                  <Mail className="h-4 w-4 mr-2" />
+                  Email Us
+                </a>
               </div>
             </div>
           </div>
@@ -1385,32 +1432,73 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-sunstone-gray-900 text-white py-8">
+      <footer className="bg-sunstone-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="text-2xl font-bold text-sunstone-orange mb-4 animate-bounce-subtle">
+            <div className="text-3xl font-bold text-sunstone-orange mb-6 animate-bounce-subtle">
               Sunstone
             </div>
-            <p className="text-sunstone-gray-400 mb-4">
+            <p className="text-sunstone-gray-400 mb-8 text-lg">
               Hi-Tech Institute of Engineering & Technology, powered by Sunstone
             </p>
-            <div className="flex items-center justify-center space-x-6 mb-4">
+            
+            {/* Contact Info */}
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
               <a
                 href="mailto:connect@sunstone.in"
-                className="text-sunstone-gray-400 hover:text-sunstone-orange transition-colors"
+                className="flex items-center text-sunstone-gray-400 hover:text-sunstone-orange transition-colors"
               >
+                <Mail className="h-4 w-4 mr-2" />
                 connect@sunstone.in
               </a>
               <a
                 href="tel:+917065303030"
-                className="text-sunstone-gray-400 hover:text-sunstone-orange transition-colors"
+                className="flex items-center text-sunstone-gray-400 hover:text-sunstone-orange transition-colors"
               >
+                <Phone className="h-4 w-4 mr-2" />
                 +91 7065-30-30-30
               </a>
             </div>
-            <p className="text-sunstone-gray-500 text-sm">
-              All rights reserved sunstone.in 2025
-            </p>
+
+            {/* Social Media Links */}
+            <div className="flex items-center justify-center space-x-6 mb-8">
+              <a
+                href="https://youtube.com/@SunstoneEducation"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group"
+              >
+                <svg className="w-6 h-6 text-white group-hover:animate-bounce" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.498 6.186a2.998 2.998 0 0 0-2.108-2.085C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.39.555A2.998 2.998 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.998 2.998 0 0 0 2.108 2.085c1.885.555 9.39.555 9.39.555s7.505 0 9.39-.555a2.998 2.998 0 0 0 2.108-2.085C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+              <a
+                href="https://linkedin.com/company/sunstone-business-school"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group"
+              >
+                <svg className="w-6 h-6 text-white group-hover:animate-bounce" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a
+                href="https://instagram.com/sunstone.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 group"
+              >
+                <svg className="w-6 h-6 text-white group-hover:animate-bounce" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+            </div>
+
+            <div className="border-t border-sunstone-gray-700 pt-6">
+              <p className="text-sunstone-gray-500 text-sm">
+                © 2025 Sunstone. All rights reserved | sunstone.in
+              </p>
+            </div>
           </div>
         </div>
       </footer>
