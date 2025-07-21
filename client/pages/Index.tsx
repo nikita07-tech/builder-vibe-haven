@@ -925,18 +925,15 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-            <Card className="border-2 border-sunstone-orange/20 bg-gradient-to-br from-white to-sunstone-orange/5 hover:shadow-2xl hover:border-sunstone-orange/50 transition-all duration-500 hover-lift animate-scale-in group">
-              <CardHeader className="relative">
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark rounded-full flex items-center justify-center animate-pulse-glow">
-                  <Trophy className="h-8 w-8 text-white" />
-                </div>
-                <CardTitle className="text-2xl text-sunstone-blue font-bold flex items-center group-hover:text-sunstone-orange transition-colors duration-300">
-                  <Star className="h-8 w-8 mr-3 text-sunstone-orange animate-bounce-subtle" />
-                  Renowned Academic Knowledge Partners
+                    <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+            <Card className="border border-sunstone-orange/20 bg-white hover:shadow-lg hover:border-sunstone-orange/50 transition-all duration-300 hover-lift animate-scale-in group">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-base sm:text-lg text-sunstone-blue font-bold flex items-center group-hover:text-sunstone-orange transition-colors duration-300">
+                  <Star className="h-5 w-5 mr-2 text-sunstone-orange" />
+                  Academic Partners
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-3">
                 <div className="p-6 bg-gradient-to-r from-sunstone-orange/10 to-transparent rounded-lg border-l-4 border-sunstone-orange hover:shadow-lg transition-all duration-300 hover-lift">
                   <div className="flex items-center mb-3">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mr-4 shadow-md">
