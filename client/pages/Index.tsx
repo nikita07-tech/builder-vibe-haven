@@ -48,7 +48,6 @@ const Index = () => {
       projects: "4 capstone projects",
       specializations: "6 new-age specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
-      icon: "💼",
       certificationsList: [
         {
           name: "Data Analytics & Business Intelligence",
@@ -105,8 +104,7 @@ const Index = () => {
       internships: "8+ months of internships/projects",
       projects: "6 capstone projects",
       specializations: "6 new-age specializations",
-      color: "from-[#c38935] to-[#d4a853]",
-      icon: "🎓",
+      color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
           name: "Data Analytics & Business Intelligence",
@@ -163,8 +161,7 @@ const Index = () => {
       internships: "8+ months of internships/projects",
       projects: "6 capstone projects",
       specializations: "6 new-age specializations",
-      color: "from-[#22336a] to-[#2d4a75]",
-      icon: "💻",
+      color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
           name: "Programming Foundation",
@@ -213,8 +210,7 @@ const Index = () => {
       internships: "6+ months of internships/projects",
       projects: "6 capstone projects",
       specializations: "6 new-age specializations",
-      color: "from-[#c38935] to-[#b8792e]",
-      icon: "⚡",
+      color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
           name: "Programming Foundation",
@@ -263,8 +259,7 @@ const Index = () => {
       internships: "10+ months of Internships",
       projects: "8 capstone projects",
       specializations: "6 new-age specializations",
-      color: "from-[#22336a] to-[#1a2750]",
-      icon: "🔧",
+      color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
           name: "Programming Foundation",
@@ -566,7 +561,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Key Offerings - Redesigned with 4 items and Placement Popup */}
+      {/* Key Offerings - Updated with 4 items and enhanced popup */}
       <section className="py-16 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -586,7 +581,7 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <BookOpen className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">70+ Expert Sessions</h3>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">Expert Sessions</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Sessions by industry experts and leading faculty from Fortune 500 companies
                 </p>
@@ -608,7 +603,7 @@ const Index = () => {
               </div>
             </div>
 
-            {/* 3. Placement Opportunities (with popup) */}
+            {/* 3. Placement Opportunities (with enhanced popup) */}
             <div 
               className="group relative cursor-pointer"
               onClick={() => setShowPlacementPopup(true)}
@@ -637,7 +632,7 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">10 Certifications</h3>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">Certifications</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   In-demand advanced certifications to choose from various domains
                 </p>
@@ -647,42 +642,42 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Placement Popup Modal */}
+        {/* Enhanced Placement Popup Modal */}
         {showPlacementPopup && (
-          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn">
-            <div className="bg-white rounded-3xl max-w-2xl w-full mx-4 relative animate-scaleIn">
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-fadeIn">
+            <div className="bg-white rounded-3xl max-w-3xl w-full mx-4 relative animate-scaleIn transform perspective-1000 animate-bounce-in shadow-2xl">
               <button
                 onClick={() => setShowPlacementPopup(false)}
-                className="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors z-10"
+                className="absolute top-6 right-6 w-12 h-12 bg-gray-100 hover:bg-red-100 rounded-full flex items-center justify-center transition-all duration-300 z-10 hover:scale-110 group"
               >
-                <X className="h-5 w-5 text-gray-600" />
+                <X className="h-6 w-6 text-gray-600 group-hover:text-red-500 transition-colors" />
               </button>
               
-              <div className="p-8">
-                <div className="text-center mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
-                    <TrendingUp className="h-10 w-10 text-white" />
+              <div className="p-10">
+                <div className="text-center mb-10">
+                  <div className="w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-6 animate-spin-slow shadow-xl">
+                    <TrendingUp className="h-12 w-12 text-white animate-bounce" />
                   </div>
-                  <h3 className="text-3xl font-bold text-[#22336a] mb-4">Placement Opportunities</h3>
-                  <p className="text-gray-600 text-lg">Unlock your potential with industry-leading placement support</p>
+                  <h3 className="text-4xl font-bold text-[#22336a] mb-4 animate-slide-up">Placement Opportunities</h3>
+                  <p className="text-gray-600 text-xl animate-fade-in-delay">Unlock your potential with industry-leading placement support</p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-6 mb-8">
-                  <div className="text-center p-6 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl">
-                    <div className="text-3xl font-bold text-[#22336a] mb-2">5000+</div>
-                    <p className="text-gray-600 font-medium">Job Opportunities</p>
+                <div className="grid grid-cols-2 gap-8 mb-10">
+                  <div className="text-center p-8 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-left">
+                    <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">5000+</div>
+                    <p className="text-gray-600 font-medium text-lg">Job Opportunities</p>
                   </div>
-                  <div className="text-center p-6 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-2xl">
-                    <div className="text-3xl font-bold text-[#c38935] mb-2">1200+</div>
-                    <p className="text-gray-600 font-medium">Top Companies</p>
+                  <div className="text-center p-8 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-right">
+                    <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">1200+</div>
+                    <p className="text-gray-600 font-medium text-lg">Top Companies</p>
                   </div>
-                  <div className="text-center p-6 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl">
-                    <div className="text-3xl font-bold text-[#22336a] mb-2">26 LPA</div>
-                    <p className="text-gray-600 font-medium">Highest Package</p>
+                  <div className="text-center p-8 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
+                    <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">26 LPA</div>
+                    <p className="text-gray-600 font-medium text-lg">Highest Package</p>
                   </div>
-                  <div className="text-center p-6 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-2xl">
-                    <div className="text-3xl font-bold text-[#c38935] mb-2">95%</div>
-                    <p className="text-gray-600 font-medium">Success Rate</p>
+                  <div className="text-center p-8 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
+                    <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">95%</div>
+                    <p className="text-gray-600 font-medium text-lg">Success Rate</p>
                   </div>
                 </div>
 
@@ -691,10 +686,10 @@ const Index = () => {
                     href="https://sunstone.in/apply"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#22336a] to-[#3b4d7a] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-[#22336a] to-[#3b4d7a] text-white font-bold rounded-2xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 animate-pulse-glow text-lg"
                   >
                     <span>Explore Opportunities</span>
-                    <ExternalLink className="ml-2 h-5 w-5" />
+                    <ExternalLink className="ml-3 h-6 w-6 animate-bounce" />
                   </a>
                 </div>
               </div>
@@ -703,11 +698,11 @@ const Index = () => {
         )}
       </section>
 
-      {/* Programs Section - Innovative Design */}
+      {/* Programs Section - All Blue Colors */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#22336a]/5 rounded-full blur-3xl"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -720,7 +715,7 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Innovative Program Selector */}
+          {/* Program Selector - All Blue */}
           <div className="flex flex-wrap justify-center gap-4 mb-16">
             {Object.entries(programs).map(([programName, programData], index) => (
               <button
@@ -734,7 +729,7 @@ const Index = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-center space-x-3">
-                  <span className="text-2xl">{programData.icon}</span>
+                  <GraduationCap className="h-6 w-6" />
                   <span>{programName}</span>
                 </div>
                 {activeTab === programName && (
@@ -744,7 +739,7 @@ const Index = () => {
             ))}
           </div>
 
-          {/* Program Content with Smooth Transitions */}
+          {/* Program Content */}
           <div className="relative">
             {Object.entries(programs).map(([programName, programData]) => (
               <div
@@ -756,14 +751,16 @@ const Index = () => {
                 }`}
               >
                 <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-                  {/* Header with Gradient */}
+                  {/* Header with Blue Gradient */}
                   <div className={`bg-gradient-to-r ${programData.color} p-8 text-white relative overflow-hidden`}>
                     <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20"></div>
                     <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-16 -translate-x-16"></div>
                     
                     <div className="relative z-10">
                       <div className="flex items-center justify-center mb-6">
-                        <div className="text-6xl mr-4">{programData.icon}</div>
+                        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                          <GraduationCap className="h-10 w-10 text-white" />
+                        </div>
                         <div>
                           <h3 className="text-3xl font-bold">{programName} Program</h3>
                           <p className="text-xl opacity-90">Excellence in Education</p>
@@ -938,88 +935,97 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Admission Process Steps */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Admission Process Steps - Animated */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/30 to-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-64 h-64 bg-[#22336a]/5 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#22336a]/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 animate-fade-in">
               Admission Process
             </h2>
-            <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto animate-fade-in-delay">
               Simple steps to begin your journey towards a successful career
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div className="text-center">
+            <div className="text-center group animate-slide-up" style={{ animationDelay: '0.1s' }}>
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-[#c38935] rounded-xl flex items-center justify-center mx-auto shadow-lg">
-                  <span className="text-white font-bold text-2xl">1</span>
+                <div className="w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-all duration-500 animate-bounce-in">
+                  <span className="text-white font-bold text-3xl">1</span>
                 </div>
-                <div className="hidden lg:block absolute top-10 -right-8 text-gray-400">
-                  <ChevronRight className="h-6 w-6" />
+                <div className="hidden lg:block absolute top-12 -right-8 text-[#22336a] animate-pulse">
+                  <ChevronRight className="h-8 w-8" />
                 </div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#22336a]/20 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               </div>
-              <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                  Apply Online
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/30 transition-all duration-500 transform group-hover:-translate-y-2">
+                <h3 className="text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#22336a] transition-colors duration-300">
+                  Apply Now
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-lg leading-relaxed">
                   Fill out our simple online application form with your details
                 </p>
               </div>
             </div>
 
-            <div className="text-center">
+            <div className="text-center group animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-[#22336a] rounded-xl flex items-center justify-center mx-auto shadow-lg">
-                  <span className="text-white font-bold text-2xl">2</span>
+                <div className="w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-all duration-500 animate-bounce-in">
+                  <span className="text-white font-bold text-3xl">2</span>
                 </div>
-                <div className="hidden lg:block absolute top-10 -right-8 text-gray-400">
-                  <ChevronRight className="h-6 w-6" />
+                <div className="hidden lg:block absolute top-12 -right-8 text-[#22336a] animate-pulse">
+                  <ChevronRight className="h-8 w-8" />
                 </div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#22336a]/20 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               </div>
-              <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                  Document Review
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/30 transition-all duration-500 transform group-hover:-translate-y-2">
+                <h3 className="text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#22336a] transition-colors duration-300">
+                  Interview & Test
                 </h3>
-                <p className="text-gray-600">
-                  Submit required documents for verification and eligibility check
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center">
-              <div className="relative mb-6">
-                <div className="w-20 h-20 bg-[#c38935] rounded-xl flex items-center justify-center mx-auto shadow-lg">
-                  <span className="text-white font-bold text-2xl">3</span>
-                </div>
-                <div className="hidden lg:block absolute top-10 -right-8 text-gray-400">
-                  <ChevronRight className="h-6 w-6" />
-                </div>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                  Interview & Assessment
-                </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-lg leading-relaxed">
                   Participate in counseling session and aptitude assessment
                 </p>
               </div>
             </div>
 
-            <div className="text-center">
+            <div className="text-center group animate-slide-up" style={{ animationDelay: '0.3s' }}>
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-[#22336a] rounded-xl flex items-center justify-center mx-auto shadow-lg">
-                  <span className="text-white font-bold text-2xl">4</span>
+                <div className="w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-all duration-500 animate-bounce-in">
+                  <span className="text-white font-bold text-3xl">3</span>
                 </div>
+                <div className="hidden lg:block absolute top-12 -right-8 text-[#22336a] animate-pulse">
+                  <ChevronRight className="h-8 w-8" />
+                </div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#22336a]/20 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               </div>
-              <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                  Confirmation
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/30 transition-all duration-500 transform group-hover:-translate-y-2">
+                <h3 className="text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#22336a] transition-colors duration-300">
+                  Doc Review
                 </h3>
-                <p className="text-gray-600">
-                  Receive admission confirmation and start your journey
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Submit required documents for verification and eligibility check
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center group animate-slide-up" style={{ animationDelay: '0.4s' }}>
+              <div className="relative mb-6">
+                <div className="w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-all duration-500 animate-bounce-in">
+                  <span className="text-white font-bold text-3xl">4</span>
+                </div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#22336a]/20 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              </div>
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/30 transition-all duration-500 transform group-hover:-translate-y-2">
+                <h3 className="text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#22336a] transition-colors duration-300">
+                  Seat Book & Confirmation
+                </h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Secure your seat and receive admission confirmation to start your journey
                 </p>
               </div>
             </div>
@@ -1161,102 +1167,82 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section - Innovative Design */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+      {/* FAQ Section - Professional Design */}
+      <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-[#22336a]/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#c38935]/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-10 left-10 w-64 h-64 bg-[#22336a]/3 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#22336a]/3 rounded-full blur-3xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6">
-              Got Questions?
+              Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Find answers to commonly asked questions about our programs
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
+          <div className="max-w-5xl mx-auto">
+            <div className="space-y-4">
               {[
                 {
                   question: "What makes Sunstone different from other educational providers?",
                   answer: "Sunstone offers industry-aligned curriculum, expert faculty from Fortune 500 companies, hands-on projects, and guaranteed placement support with 1,200+ recruiting partners.",
-                  category: "sunstone",
-                  icon: "🌟"
+                  category: "sunstone"
                 },
                 {
                   question: "What is the admission process for Hi-Tech Institute?",
                   answer: "The admission process includes online application, document verification, counseling session, aptitude assessment, and final confirmation. Our team guides you through each step.",
-                  category: "hitech",
-                  icon: "🎓"
+                  category: "hitech"
                 },
                 {
                   question: "What placement support does Sunstone provide?",
                   answer: "We offer comprehensive placement assistance including resume building, interview preparation, mock interviews, and direct access to 1,200+ recruiting companies with packages up to 26 LPA.",
-                  category: "sunstone",
-                  icon: "💼"
+                  category: "sunstone"
                 },
                 {
                   question: "What facilities are available at Hi-Tech Institute?",
                   answer: "Hi-Tech Institute features modern infrastructure, state-of-the-art labs, digital classrooms, library, sports facilities, hostels, and industry-standard equipment for hands-on learning.",
-                  category: "hitech",
-                  icon: "🏢"
+                  category: "hitech"
                 },
                 {
                   question: "How does Sunstone ensure industry readiness?",
-                  answer: "Through 10+ advanced certifications, real-world projects, internships with top companies, mentorship from industry leaders, and practical skill development programs.",
-                  category: "sunstone",
-                  icon: "🚀"
+                  answer: "Through advanced certifications, real-world projects, internships with top companies, mentorship from industry leaders, and practical skill development programs.",
+                  category: "sunstone"
                 },
                 {
                   question: "What scholarships are available at Hi-Tech Institute?",
                   answer: "Hi-Tech Institute offers merit-based scholarships, need-based financial aid, and special scholarships for outstanding academic performance and extracurricular achievements.",
-                  category: "hitech",
-                  icon: "💰"
+                  category: "hitech"
                 }
               ].map((faq, index) => (
-                <div
-                  key={index}
-                  className="group"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
+                <div key={index} className="group">
                   <Collapsible>
                     <CollapsibleTrigger className="w-full">
-                      <div className={`p-6 rounded-2xl transition-all duration-500 cursor-pointer transform hover:scale-[1.02] ${
-                        faq.category === 'sunstone' 
-                          ? 'bg-gradient-to-r from-[#c38935]/10 via-white to-[#c38935]/5 border-2 border-[#c38935]/20 hover:border-[#c38935]/40 hover:shadow-xl' 
-                          : 'bg-gradient-to-r from-[#22336a]/10 via-white to-[#22336a]/5 border-2 border-[#22336a]/20 hover:border-[#22336a]/40 hover:shadow-xl'
-                      }`}>
+                      <div className="p-6 rounded-xl transition-all duration-300 cursor-pointer bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#22336a]/30 hover:shadow-lg">
                         <div className="flex items-center justify-between text-left">
                           <div className="flex items-center space-x-4 flex-1">
-                            <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transform group-hover:scale-110 transition-transform duration-300 ${
-                              faq.category === 'sunstone' 
-                                ? 'bg-gradient-to-br from-[#c38935] to-[#d4a853]' 
-                                : 'bg-gradient-to-br from-[#22336a] to-[#3b4d7a]'
-                            }`}>
-                              <span className="text-white">{faq.icon}</span>
+                            <div className="w-12 h-12 bg-[#22336a] rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                              <span className="text-white font-bold">{index + 1}</span>
                             </div>
                             <div className="flex-1">
-                              <h3 className="text-lg font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                              <h3 className="text-lg font-bold text-[#22336a] group-hover:text-[#22336a] transition-colors duration-300">
                                 {faq.question}
                               </h3>
-                              <div className={`text-sm font-medium mt-1 ${
-                                faq.category === 'sunstone' ? 'text-[#c38935]' : 'text-[#22336a]'
-                              }`}>
+                              <div className="text-sm font-medium mt-1 text-[#22336a]/70">
                                 {faq.category === 'sunstone' ? 'Sunstone' : 'Hi-Tech Institute'}
                               </div>
                             </div>
                           </div>
-                          <ChevronDown className="h-6 w-6 text-gray-600 group-hover:text-[#c38935] transform group-hover:rotate-180 transition-all duration-300" />
+                          <ChevronDown className="h-6 w-6 text-gray-600 group-hover:text-[#22336a] transform group-hover:rotate-180 transition-all duration-300" />
                         </div>
                       </div>
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <div className="px-6 pb-6 -mt-2">
-                        <div className="pt-6 border-t border-gray-200 bg-white/50 backdrop-blur-sm rounded-xl p-6 ml-18">
+                        <div className="pt-6 border-t border-gray-200 bg-white rounded-xl p-6 ml-16 shadow-sm">
                           <p className="text-gray-700 leading-relaxed text-lg">
                             {faq.answer}
                           </p>
@@ -1270,24 +1256,24 @@ const Index = () => {
 
             {/* CTA Section */}
             <div className="text-center mt-16">
-              <div className="bg-white rounded-3xl p-10 shadow-2xl border border-gray-100 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#c38935]/10 rounded-full -translate-y-16 translate-x-16"></div>
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#22336a]/10 rounded-full translate-y-12 -translate-x-12"></div>
+              <div className="bg-[#22336a] rounded-3xl p-10 shadow-2xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
                 
                 <div className="relative z-10">
-                  <h3 className="text-3xl font-bold text-[#22336a] mb-4">Still Have Questions?</h3>
-                  <p className="text-gray-600 mb-8 text-lg">Our expert counselors are here to guide you through your educational journey</p>
+                  <h3 className="text-3xl font-bold text-white mb-4">Still Have Questions?</h3>
+                  <p className="text-gray-300 mb-8 text-lg">Our expert counselors are here to guide you through your educational journey</p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a
                       href="tel:+917065303030"
-                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#c38935] to-[#d4a853] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                      className="inline-flex items-center px-8 py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     >
                       <Phone className="h-5 w-5 mr-2" />
                       Call Us Now
                     </a>
                     <a
                       href="mailto:connect@sunstone.in"
-                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#22336a] to-[#3b4d7a] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                      className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-xl hover:bg-white/20 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20"
                     >
                       <Mail className="h-5 w-5 mr-2" />
                       Email Us
@@ -1401,6 +1387,101 @@ const Index = () => {
           }
         }
         
+        @keyframes bounce-in {
+          0% {
+            opacity: 0;
+            transform: scale(0.3);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1.1);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        
+        @keyframes slide-up {
+          0% {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes slide-in-left {
+          0% {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes slide-in-right {
+          0% {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes fade-in-delay {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        
+        @keyframes spin-slow {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        
+        @keyframes float {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+        
+        @keyframes count-up {
+          0% {
+            opacity: 0;
+            transform: scale(0.5);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        
+        @keyframes pulse-glow {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(34, 51, 106, 0.3);
+          }
+          50% {
+            box-shadow: 0 0 40px rgba(34, 51, 106, 0.6);
+          }
+        }
+        
         .animate-scroll {
           animation: scroll 30s linear infinite;
         }
@@ -1415,6 +1496,46 @@ const Index = () => {
         
         .animate-scaleIn {
           animation: scaleIn 0.3s ease-out;
+        }
+        
+        .animate-bounce-in {
+          animation: bounce-in 0.6s ease-out;
+        }
+        
+        .animate-slide-up {
+          animation: slide-up 0.6s ease-out;
+        }
+        
+        .animate-slide-in-left {
+          animation: slide-in-left 0.6s ease-out;
+        }
+        
+        .animate-slide-in-right {
+          animation: slide-in-right 0.6s ease-out;
+        }
+        
+        .animate-fade-in {
+          animation: fadeIn 0.8s ease-out;
+        }
+        
+        .animate-fade-in-delay {
+          animation: fade-in-delay 1s ease-out 0.3s both;
+        }
+        
+        .animate-spin-slow {
+          animation: spin-slow 3s linear infinite;
+        }
+        
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-count-up {
+          animation: count-up 0.8s ease-out 0.5s both;
+        }
+        
+        .animate-pulse-glow {
+          animation: pulse-glow 2s ease-in-out infinite;
         }
       `}</style>
     </div>
