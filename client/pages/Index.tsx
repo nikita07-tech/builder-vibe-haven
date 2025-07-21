@@ -13,6 +13,11 @@ import {
   Star,
   Trophy,
   Target,
+  X,
+  TrendingUp,
+  Clock,
+  BookOpen,
+  Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,6 +36,9 @@ import {
 
 const Index = () => {
   const [expandedProgram, setExpandedProgram] = useState<string | null>(null);
+  const [activeProgram, setActiveProgram] = useState("MBA");
+  const [showPlacementPopup, setShowPlacementPopup] = useState(false);
+  const [activeTab, setActiveTab] = useState("MBA");
 
   const programs = {
     MBA: {
@@ -39,6 +47,8 @@ const Index = () => {
       internships: "6+ months of internships/projects",
       projects: "4 capstone projects",
       specializations: "6 new-age specializations",
+      color: "from-[#22336a] to-[#3b4d7a]",
+      icon: "💼",
       certificationsList: [
         {
           name: "Data Analytics & Business Intelligence",
@@ -95,6 +105,8 @@ const Index = () => {
       internships: "8+ months of internships/projects",
       projects: "6 capstone projects",
       specializations: "6 new-age specializations",
+      color: "from-[#c38935] to-[#d4a853]",
+      icon: "🎓",
       certificationsList: [
         {
           name: "Data Analytics & Business Intelligence",
@@ -151,6 +163,8 @@ const Index = () => {
       internships: "8+ months of internships/projects",
       projects: "6 capstone projects",
       specializations: "6 new-age specializations",
+      color: "from-[#22336a] to-[#2d4a75]",
+      icon: "💻",
       certificationsList: [
         {
           name: "Programming Foundation",
@@ -199,6 +213,8 @@ const Index = () => {
       internships: "6+ months of internships/projects",
       projects: "6 capstone projects",
       specializations: "6 new-age specializations",
+      color: "from-[#c38935] to-[#b8792e]",
+      icon: "⚡",
       certificationsList: [
         {
           name: "Programming Foundation",
@@ -247,6 +263,8 @@ const Index = () => {
       internships: "10+ months of Internships",
       projects: "8 capstone projects",
       specializations: "6 new-age specializations",
+      color: "from-[#22336a] to-[#1a2750]",
+      icon: "🔧",
       certificationsList: [
         {
           name: "Programming Foundation",
@@ -548,236 +566,304 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Key Offerings */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#22336a] mb-4">
+      {/* Key Offerings - Redesigned with 4 items and Placement Popup */}
+      <section className="py-16 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
               Key Offerings
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Discover what makes our programs exceptional and job-ready
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-              <div className="text-xl font-bold text-[#c38935] mb-2">70+</div>
-              <p className="text-sm text-gray-700">
-                sessions by industry experts and leading faculty
-              </p>
-            </div>
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-              <div className="text-xl font-bold text-[#22336a] mb-2">
-                Professional
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* 1. Industry Expert Sessions */}
+            <div className="group relative">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <BookOpen className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">70+ Expert Sessions</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Sessions by industry experts and leading faculty from Fortune 500 companies
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <p className="text-sm text-gray-700">
-                portfolio to increase chances of getting hired
-              </p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-              <div className="text-xl font-bold text-[#c38935] mb-2">
-                Seed funding
+
+            {/* 2. Professional Portfolio */}
+            <div className="group relative">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Award className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">Professional Portfolio</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Showcase verified skills and experience to increase hiring chances
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <p className="text-sm text-gray-700">
-                support for budding entrepreneurs
-              </p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-              <div className="text-xl font-bold text-[#22336a] mb-2">
-                International
+
+            {/* 3. Placement Opportunities (with popup) */}
+            <div 
+              className="group relative cursor-pointer"
+              onClick={() => setShowPlacementPopup(true)}
+            >
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative">
+                  <TrendingUp className="h-8 w-8 text-white" />
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
+                    <span className="text-white text-xs font-bold">!</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">Placement Opportunities</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  5000+ job opportunities with 1200+ top recruiting companies
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 right-4 text-[#c38935] group-hover:animate-bounce">
+                  <ExternalLink className="h-5 w-5" />
+                </div>
               </div>
-              <p className="text-sm text-gray-700">
-                India trips for experiential learning
-              </p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-              <div className="text-xl font-bold text-[#c38935] mb-2">
-                Capstone
+
+            {/* 4. Advanced Certifications */}
+            <div className="group relative">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">10 Certifications</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  In-demand advanced certifications to choose from various domains
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <p className="text-sm text-gray-700">projects every semester</p>
-            </div>
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-              <div className="text-xl font-bold text-[#22336a] mb-2">10</div>
-              <p className="text-sm text-gray-700">
-                in-demand advanced certifications to choose from
-              </p>
-            </div>
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-              <div className="text-xl font-bold text-[#c38935] mb-2">120+</div>
-              <p className="text-sm text-gray-700">
-                hours of Mock GD/PI training
-              </p>
             </div>
           </div>
         </div>
+
+        {/* Placement Popup Modal */}
+        {showPlacementPopup && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeIn">
+            <div className="bg-white rounded-3xl max-w-2xl w-full mx-4 relative animate-scaleIn">
+              <button
+                onClick={() => setShowPlacementPopup(false)}
+                className="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors z-10"
+              >
+                <X className="h-5 w-5 text-gray-600" />
+              </button>
+              
+              <div className="p-8">
+                <div className="text-center mb-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
+                    <TrendingUp className="h-10 w-10 text-white" />
+                  </div>
+                  <h3 className="text-3xl font-bold text-[#22336a] mb-4">Placement Opportunities</h3>
+                  <p className="text-gray-600 text-lg">Unlock your potential with industry-leading placement support</p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-6 mb-8">
+                  <div className="text-center p-6 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl">
+                    <div className="text-3xl font-bold text-[#22336a] mb-2">5000+</div>
+                    <p className="text-gray-600 font-medium">Job Opportunities</p>
+                  </div>
+                  <div className="text-center p-6 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-2xl">
+                    <div className="text-3xl font-bold text-[#c38935] mb-2">1200+</div>
+                    <p className="text-gray-600 font-medium">Top Companies</p>
+                  </div>
+                  <div className="text-center p-6 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl">
+                    <div className="text-3xl font-bold text-[#22336a] mb-2">26 LPA</div>
+                    <p className="text-gray-600 font-medium">Highest Package</p>
+                  </div>
+                  <div className="text-center p-6 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-2xl">
+                    <div className="text-3xl font-bold text-[#c38935] mb-2">95%</div>
+                    <p className="text-gray-600 font-medium">Success Rate</p>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <a
+                    href="https://sunstone.in/apply"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#22336a] to-[#3b4d7a] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  >
+                    <span>Explore Opportunities</span>
+                    <ExternalLink className="ml-2 h-5 w-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </section>
 
-      {/* Programs Section - Professional */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Programs Section - Innovative Design */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
-              Programs Offered with Hi-Tech
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6">
+              Programs Offered
             </h2>
-            <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
-              Transform your career with our industry-aligned programs designed by experts and delivered with cutting-edge technology
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              Transform your career with industry-aligned programs designed by experts
             </p>
           </div>
 
-          <Tabs defaultValue="MBA" className="w-full">
-            <div className="mb-8">
-              <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 bg-white border border-gray-200 h-auto gap-2 p-2 shadow-lg rounded-xl">
-                {Object.keys(programs).map((program) => (
-                  <TabsTrigger
-                    key={program}
-                    value={program}
-                    className="data-[state=active]:bg-[#22336a] data-[state=active]:text-white text-sm py-4 px-4 transition-all duration-300 hover:bg-gray-50 rounded-lg border border-transparent data-[state=active]:border-[#22336a]"
-                  >
-                    <div className="flex flex-col items-center">
-                      <div className="p-2 rounded-full bg-gray-100 data-[state=active]:bg-white/20 mb-2 transition-colors duration-300">
-                        <GraduationCap className="h-5 w-5 text-[#22336a] data-[state=active]:text-white transition-colors duration-300" />
-                      </div>
-                      <span className="font-semibold">{program}</span>
-                    </div>
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </div>
+          {/* Innovative Program Selector */}
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            {Object.entries(programs).map(([programName, programData], index) => (
+              <button
+                key={programName}
+                onClick={() => setActiveTab(programName)}
+                className={`group relative px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-105 ${
+                  activeTab === programName
+                    ? `bg-gradient-to-r ${programData.color} text-white shadow-2xl`
+                    : 'bg-white text-[#22336a] hover:bg-gray-50 shadow-lg border border-gray-200'
+                }`}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="flex items-center space-x-3">
+                  <span className="text-2xl">{programData.icon}</span>
+                  <span>{programName}</span>
+                </div>
+                {activeTab === programName && (
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-white rounded-full"></div>
+                )}
+              </button>
+            ))}
+          </div>
 
+          {/* Program Content with Smooth Transitions */}
+          <div className="relative">
             {Object.entries(programs).map(([programName, programData]) => (
-              <TabsContent key={programName} value={programName} className="mt-8">
-                <Card className="border border-gray-200 shadow-lg bg-white">
-                  <CardHeader className="bg-gray-50 rounded-t-lg border-b border-gray-200">
-                    <div className="flex items-center justify-center mb-6">
-                      <div className="w-12 h-12 bg-[#22336a] rounded-full flex items-center justify-center mr-4">
-                        <Trophy className="h-6 w-6 text-white" />
+              <div
+                key={programName}
+                className={`transition-all duration-700 ${
+                  activeTab === programName 
+                    ? 'opacity-100 transform translate-y-0' 
+                    : 'opacity-0 absolute inset-0 transform translate-y-8 pointer-events-none'
+                }`}
+              >
+                <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                  {/* Header with Gradient */}
+                  <div className={`bg-gradient-to-r ${programData.color} p-8 text-white relative overflow-hidden`}>
+                    <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20"></div>
+                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-16 -translate-x-16"></div>
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-center justify-center mb-6">
+                        <div className="text-6xl mr-4">{programData.icon}</div>
+                        <div>
+                          <h3 className="text-3xl font-bold">{programName} Program</h3>
+                          <p className="text-xl opacity-90">Excellence in Education</p>
+                        </div>
                       </div>
-                      <CardTitle className="text-2xl font-bold text-[#22336a]">
-                        {programName} Program Excellence
-                      </CardTitle>
-                      <div className="w-12 h-12 bg-[#c38935] rounded-full flex items-center justify-center ml-4">
-                        <Star className="h-6 w-6 text-white" />
-                      </div>
-                    </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
-                      <div className="text-center p-4 bg-gray-50 rounded-xl border border-gray-200">
-                        <div className="w-10 h-10 bg-[#22336a] rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Target className="h-5 w-5 text-white" />
+                      {/* Program Stats */}
+                      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-8">
+                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
+                          <Clock className="h-6 w-6 mx-auto mb-2" />
+                          <div className="font-bold text-sm">{programData.duration}</div>
+                          <div className="text-xs opacity-80">Duration</div>
                         </div>
-                        <div className="font-bold text-[#22336a] text-sm">
-                          {programData.duration}
+                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
+                          <Award className="h-6 w-6 mx-auto mb-2" />
+                          <div className="font-bold text-sm">{programData.certifications}</div>
+                          <div className="text-xs opacity-80">Certifications</div>
                         </div>
-                        <div className="text-xs text-gray-500 mt-1">Duration</div>
-                      </div>
-                      <div className="text-center p-4 bg-gray-50 rounded-xl border border-gray-200">
-                        <div className="w-10 h-10 bg-[#c38935] rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Award className="h-5 w-5 text-white" />
+                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
+                          <Briefcase className="h-6 w-6 mx-auto mb-2" />
+                          <div className="font-bold text-sm">{programData.internships}</div>
+                          <div className="text-xs opacity-80">Experience</div>
                         </div>
-                        <div className="font-bold text-[#c38935] text-sm">
-                          {programData.certifications}
+                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
+                          <Target className="h-6 w-6 mx-auto mb-2" />
+                          <div className="font-bold text-sm">{programData.projects}</div>
+                          <div className="text-xs opacity-80">Projects</div>
                         </div>
-                        <div className="text-xs text-gray-500 mt-1">Certifications</div>
-                      </div>
-                      <div className="text-center p-4 bg-gray-50 rounded-xl border border-gray-200">
-                        <div className="w-10 h-10 bg-[#22336a] rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Briefcase className="h-5 w-5 text-white" />
+                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
+                          <Star className="h-6 w-6 mx-auto mb-2" />
+                          <div className="font-bold text-sm">{programData.specializations}</div>
+                          <div className="text-xs opacity-80">Specializations</div>
                         </div>
-                        <div className="font-bold text-[#22336a] text-sm">
-                          {programData.internships}
-                        </div>
-                        <div className="text-xs text-gray-500 mt-1">Experience</div>
-                      </div>
-                      <div className="text-center p-4 bg-gray-50 rounded-xl border border-gray-200">
-                        <div className="w-10 h-10 bg-[#c38935] rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Star className="h-5 w-5 text-white" />
-                        </div>
-                        <div className="font-bold text-[#c38935] text-sm">
-                          {programData.projects}
-                        </div>
-                        <div className="text-xs text-gray-500 mt-1">Projects</div>
-                      </div>
-                      <div className="text-center p-4 bg-gray-50 rounded-xl border border-gray-200">
-                        <div className="w-10 h-10 bg-[#22336a] rounded-full flex items-center justify-center mx-auto mb-3">
-                          <Trophy className="h-5 w-5 text-white" />
-                        </div>
-                        <div className="font-bold text-[#22336a] text-sm">
-                          {programData.specializations}
-                        </div>
-                        <div className="text-xs text-gray-500 mt-1">Specializations</div>
                       </div>
                     </div>
-                  </CardHeader>
-                  <CardContent className="p-6">
-                    <Collapsible>
-                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-300">
-                        <span className="font-semibold text-gray-900 flex items-center">
-                          <Star className="h-5 w-5 mr-2 text-[#c38935]" />
-                          Advanced Certifications & Career Prospects
-                        </span>
-                        <ChevronDown className="h-5 w-5 text-gray-600" />
-                      </CollapsibleTrigger>
-                      <CollapsibleContent className="mt-4">
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-8">
+                    <div className="grid md:grid-cols-3 gap-8">
+                      {/* Certifications */}
+                      <div className="md:col-span-2">
+                        <h4 className="text-2xl font-bold text-[#22336a] mb-6 flex items-center">
+                          <Star className="h-6 w-6 mr-2 text-[#c38935]" />
+                          Advanced Certifications
+                        </h4>
                         <div className="grid gap-4">
-                          <p className="text-gray-700 font-medium mb-4">
-                            Become a specialist through in-demand advanced
-                            certifications with our dynamic modules which make
-                            use of the latest tools and techniques to help you
-                            acquire industry-ready skills:
-                          </p>
-                          <div className="grid md:grid-cols-2 gap-4">
-                            {programData.certificationsList.map((cert, index) => (
-                              <div
-                                key={index}
-                                className="p-6 bg-white border border-gray-200 rounded-xl hover:border-[#c38935] hover:shadow-lg transition-all duration-300"
-                              >
-                                <div className="flex items-start space-x-3 mb-3">
-                                  <div className="flex-shrink-0 w-10 h-10 bg-[#c38935] rounded-full flex items-center justify-center">
-                                    <Target className="h-5 w-5 text-white" />
-                                  </div>
-                                  <div className="flex-1">
-                                    <h4 className="font-bold text-gray-900 mb-2 text-base">
-                                      {cert.name}
-                                    </h4>
-                                  </div>
+                          {programData.certificationsList.slice(0, 6).map((cert, index) => (
+                            <div
+                              key={index}
+                              className="group p-4 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 cursor-pointer border border-transparent hover:border-[#c38935]/20"
+                            >
+                              <div className="flex items-start space-x-3">
+                                <div className="w-8 h-8 bg-[#c38935] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                  <Target className="h-4 w-4 text-white" />
                                 </div>
-                                <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
-                                  <div className="flex items-center mb-2">
-                                    <Briefcase className="h-4 w-4 text-[#22336a] mr-2" />
-                                    <span className="font-semibold text-[#22336a] text-sm">
-                                      Career Prospects:
-                                    </span>
-                                  </div>
-                                  <p className="text-sm text-gray-700 leading-relaxed">
+                                <div className="flex-1">
+                                  <h5 className="font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                                    {cert.name}
+                                  </h5>
+                                  <p className="text-sm text-gray-600 mt-1">
                                     {cert.careers}
                                   </p>
                                 </div>
                               </div>
-                            ))}
-                          </div>
+                            </div>
+                          ))}
                         </div>
-                      </CollapsibleContent>
-                    </Collapsible>
+                      </div>
 
-                    <Collapsible className="mt-6">
-                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-300">
-                        <span className="font-semibold text-gray-900 flex items-center">
-                          <Award className="h-5 w-5 mr-2 text-[#22336a]" />
-                          Eligibility Criteria
-                        </span>
-                        <ChevronDown className="h-5 w-5 text-gray-600" />
-                      </CollapsibleTrigger>
-                      <CollapsibleContent className="mt-4">
-                        <div className="p-4 border border-gray-200 rounded-lg bg-gray-50">
-                          <p className="text-gray-700">{programData.eligibility}</p>
+                      {/* Eligibility */}
+                      <div>
+                        <h4 className="text-2xl font-bold text-[#22336a] mb-6 flex items-center">
+                          <Award className="h-6 w-6 mr-2 text-[#c38935]" />
+                          Eligibility
+                        </h4>
+                        <div className="p-6 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 rounded-xl border border-gray-100">
+                          <p className="text-gray-700 leading-relaxed">
+                            {programData.eligibility}
+                          </p>
                         </div>
-                      </CollapsibleContent>
-                    </Collapsible>
-                  </CardContent>
-                </Card>
-              </TabsContent>
+
+                        <div className="mt-6">
+                          <a
+                            href="https://sunstone.in/apply"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`w-full inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r ${programData.color} text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
+                          >
+                            <span>Apply Now</span>
+                            <ExternalLink className="ml-2 h-5 w-5" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             ))}
-          </Tabs>
+          </div>
         </div>
       </section>
 
@@ -1075,108 +1161,139 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQs Section - Simple & Professional */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
-              Frequently Asked Questions
+      {/* FAQ Section - Innovative Design */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-[#22336a]/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#c38935]/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6">
+              Got Questions?
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
-              Get answers to common questions about Hi-Tech Institute and Sunstone programs
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Find answers to commonly asked questions about our programs
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            {[
-              {
-                question: "What makes Sunstone different from other educational providers?",
-                answer: "Sunstone offers industry-aligned curriculum, expert faculty from Fortune 500 companies, hands-on projects, and guaranteed placement support with 1,200+ recruiting partners.",
-                category: "sunstone",
-              },
-              {
-                question: "What is the admission process for Hi-Tech Institute?",
-                answer: "The admission process includes online application, document verification, counseling session, aptitude assessment, and final confirmation. Our team guides you through each step.",
-                category: "hitech",
-              },
-              {
-                question: "What placement support does Sunstone provide?",
-                answer: "We offer comprehensive placement assistance including resume building, interview preparation, mock interviews, and direct access to 1,200+ recruiting companies with packages up to 26 LPA.",
-                category: "sunstone",
-              },
-              {
-                question: "What facilities are available at Hi-Tech Institute?",
-                answer: "Hi-Tech Institute features modern infrastructure, state-of-the-art labs, digital classrooms, library, sports facilities, hostels, and industry-standard equipment for hands-on learning.",
-                category: "hitech",
-              },
-              {
-                question: "How does Sunstone ensure industry readiness?",
-                answer: "Through 10+ advanced certifications, real-world projects, internships with top companies, mentorship from industry leaders, and practical skill development programs.",
-                category: "sunstone",
-              },
-              {
-                question: "What scholarships are available at Hi-Tech Institute?",
-                answer: "Hi-Tech Institute offers merit-based scholarships, need-based financial aid, and special scholarships for outstanding academic performance and extracurricular achievements.",
-                category: "hitech",
-              }
-            ].map((faq, index) => (
-              <Collapsible key={index}>
-                <CollapsibleTrigger className="w-full text-left p-6 rounded-xl border border-gray-200 bg-gray-50 hover:bg-gray-100 transition-all duration-300 hover:shadow-lg">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-4">
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6">
+              {[
+                {
+                  question: "What makes Sunstone different from other educational providers?",
+                  answer: "Sunstone offers industry-aligned curriculum, expert faculty from Fortune 500 companies, hands-on projects, and guaranteed placement support with 1,200+ recruiting partners.",
+                  category: "sunstone",
+                  icon: "🌟"
+                },
+                {
+                  question: "What is the admission process for Hi-Tech Institute?",
+                  answer: "The admission process includes online application, document verification, counseling session, aptitude assessment, and final confirmation. Our team guides you through each step.",
+                  category: "hitech",
+                  icon: "🎓"
+                },
+                {
+                  question: "What placement support does Sunstone provide?",
+                  answer: "We offer comprehensive placement assistance including resume building, interview preparation, mock interviews, and direct access to 1,200+ recruiting companies with packages up to 26 LPA.",
+                  category: "sunstone",
+                  icon: "💼"
+                },
+                {
+                  question: "What facilities are available at Hi-Tech Institute?",
+                  answer: "Hi-Tech Institute features modern infrastructure, state-of-the-art labs, digital classrooms, library, sports facilities, hostels, and industry-standard equipment for hands-on learning.",
+                  category: "hitech",
+                  icon: "🏢"
+                },
+                {
+                  question: "How does Sunstone ensure industry readiness?",
+                  answer: "Through 10+ advanced certifications, real-world projects, internships with top companies, mentorship from industry leaders, and practical skill development programs.",
+                  category: "sunstone",
+                  icon: "🚀"
+                },
+                {
+                  question: "What scholarships are available at Hi-Tech Institute?",
+                  answer: "Hi-Tech Institute offers merit-based scholarships, need-based financial aid, and special scholarships for outstanding academic performance and extracurricular achievements.",
+                  category: "hitech",
+                  icon: "💰"
+                }
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="group"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <Collapsible>
+                    <CollapsibleTrigger className="w-full">
+                      <div className={`p-6 rounded-2xl transition-all duration-500 cursor-pointer transform hover:scale-[1.02] ${
                         faq.category === 'sunstone' 
-                          ? 'bg-[#c38935]' 
-                          : 'bg-[#22336a]'
+                          ? 'bg-gradient-to-r from-[#c38935]/10 via-white to-[#c38935]/5 border-2 border-[#c38935]/20 hover:border-[#c38935]/40 hover:shadow-xl' 
+                          : 'bg-gradient-to-r from-[#22336a]/10 via-white to-[#22336a]/5 border-2 border-[#22336a]/20 hover:border-[#22336a]/40 hover:shadow-xl'
                       }`}>
-                        <span className="text-white text-lg">
-                          {faq.category === 'sunstone' ? '🌟' : '🏢'}
-                        </span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-bold text-[#22336a] text-left">
-                          {faq.question}
-                        </h3>
-                        <div className={`text-xs font-medium mt-1 ${
-                          faq.category === 'sunstone' ? 'text-[#c38935]' : 'text-[#22336a]'
-                        }`}>
-                          {faq.category === 'sunstone' ? 'Sunstone' : 'Hi-Tech Institute'}
+                        <div className="flex items-center justify-between text-left">
+                          <div className="flex items-center space-x-4 flex-1">
+                            <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transform group-hover:scale-110 transition-transform duration-300 ${
+                              faq.category === 'sunstone' 
+                                ? 'bg-gradient-to-br from-[#c38935] to-[#d4a853]' 
+                                : 'bg-gradient-to-br from-[#22336a] to-[#3b4d7a]'
+                            }`}>
+                              <span className="text-white">{faq.icon}</span>
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="text-lg font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                                {faq.question}
+                              </h3>
+                              <div className={`text-sm font-medium mt-1 ${
+                                faq.category === 'sunstone' ? 'text-[#c38935]' : 'text-[#22336a]'
+                              }`}>
+                                {faq.category === 'sunstone' ? 'Sunstone' : 'Hi-Tech Institute'}
+                              </div>
+                            </div>
+                          </div>
+                          <ChevronDown className="h-6 w-6 text-gray-600 group-hover:text-[#c38935] transform group-hover:rotate-180 transition-all duration-300" />
                         </div>
                       </div>
-                    </div>
-                    <ChevronDown className="h-5 w-5 text-gray-600" />
-                  </div>
-                </CollapsibleTrigger>
-                <CollapsibleContent className="px-6 pb-6">
-                  <div className="pt-4 border-t border-gray-200 mt-4">
-                    <p className="text-gray-700 leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                </CollapsibleContent>
-              </Collapsible>
-            ))}
-          </div>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <div className="px-6 pb-6 -mt-2">
+                        <div className="pt-6 border-t border-gray-200 bg-white/50 backdrop-blur-sm rounded-xl p-6 ml-18">
+                          <p className="text-gray-700 leading-relaxed text-lg">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </div>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </div>
+              ))}
+            </div>
 
-          <div className="text-center mt-12">
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-[#22336a] mb-2">Still have questions?</h3>
-              <p className="text-gray-600 mb-4">Our counselors are here to help you make the right choice</p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <a
-                  href="tel:+917065303030"
-                  className="inline-flex items-center px-6 py-3 bg-[#c38935] text-white font-bold rounded-lg hover:bg-[#c38935]/80 transition-all duration-300"
-                >
-                  <Phone className="h-4 w-4 mr-2" />
-                  Call Us Now
-                </a>
-                <a
-                  href="mailto:connect@sunstone.in"
-                  className="inline-flex items-center px-6 py-3 bg-[#22336a] text-white font-bold rounded-lg hover:bg-[#22336a]/80 transition-all duration-300"
-                >
-                  <Mail className="h-4 w-4 mr-2" />
-                  Email Us
-                </a>
+            {/* CTA Section */}
+            <div className="text-center mt-16">
+              <div className="bg-white rounded-3xl p-10 shadow-2xl border border-gray-100 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#c38935]/10 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#22336a]/10 rounded-full translate-y-12 -translate-x-12"></div>
+                
+                <div className="relative z-10">
+                  <h3 className="text-3xl font-bold text-[#22336a] mb-4">Still Have Questions?</h3>
+                  <p className="text-gray-600 mb-8 text-lg">Our expert counselors are here to guide you through your educational journey</p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a
+                      href="tel:+917065303030"
+                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#c38935] to-[#d4a853] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    >
+                      <Phone className="h-5 w-5 mr-2" />
+                      Call Us Now
+                    </a>
+                    <a
+                      href="mailto:connect@sunstone.in"
+                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#22336a] to-[#3b4d7a] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    >
+                      <Mail className="h-5 w-5 mr-2" />
+                      Email Us
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1253,7 +1370,7 @@ const Index = () => {
         </div>
       </footer>
 
-      {/* CSS for horizontal scrolling animation */}
+      {/* CSS for animations */}
       <style jsx>{`
         @keyframes scroll {
           0% {
@@ -1264,12 +1381,40 @@ const Index = () => {
           }
         }
         
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+        
+        @keyframes scaleIn {
+          0% {
+            opacity: 0;
+            transform: scale(0.9);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+        
         .animate-scroll {
           animation: scroll 30s linear infinite;
         }
         
         .animate-scroll:hover {
           animation-play-state: paused;
+        }
+        
+        .animate-fadeIn {
+          animation: fadeIn 0.3s ease-out;
+        }
+        
+        .animate-scaleIn {
+          animation: scaleIn 0.3s ease-out;
         }
       `}</style>
     </div>
