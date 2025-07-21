@@ -340,11 +340,11 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-center">
             {/* Content Section - Takes 3 columns on large screens */}
             <div className="lg:col-span-3 text-center lg:text-left animate-slide-up order-2 lg:order-1">
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 leading-tight">
+                            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 leading-tight">
                 Power up your career with an MBA, BBA, BCA, MCA & B.Tech at
                 Hi-Tech Institute of Engineering & Technology
               </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 text-sunstone-orange font-semibold">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 text-sunstone-orange font-semibold">
                 Powered by Sunstone
               </p>
               <a
