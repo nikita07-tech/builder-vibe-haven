@@ -1345,9 +1345,9 @@ const Index = () => {
               <span className="mr-2">🔗</span>
               Visit Sunstone YouTube Channel
             </Button>
-          </div>
+                    </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in">
               <div className="relative">
                 <div className="aspect-video bg-black">
