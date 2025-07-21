@@ -1387,11 +1387,10 @@ const Index = () => {
               </div>
               <div className="p-4">
                 <h4 className="font-bold text-sunstone-blue mb-2">
-                  How Students Excel at Sunstone
+                  Sunstone Student Success Journey
                 </h4>
                 <p className="text-sm text-sunstone-gray-600">
-                  Watch inspiring stories of our graduates who landed their
-                  dream jobs with Sunstone's industry-aligned curriculum
+                  Discover how Sunstone transforms careers through industry-focused education and placement support
                 </p>
               </div>
             </div>
