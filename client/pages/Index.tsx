@@ -1439,11 +1439,13 @@ const Index = () => {
                     `,
                     }}
                   />
-                  <wistia-player
+                                    <wistia-player
                     media-id="xjyegnd0xq"
                     aspect="1.7777777777777777"
-                    autoplay="true"
-                    muted="true"
+                    autoplay
+                    muted
+                    playsinline
+                    controls
                     className="w-full h-full"
                   ></wistia-player>
                 </div>
