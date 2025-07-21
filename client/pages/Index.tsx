@@ -1356,15 +1356,15 @@ const Index = () => {
                     async
                   ></script>
                   <script
-                    src="https://fast.wistia.com/embed/fn93dowpt4.js"
+                    src="https://fast.wistia.com/embed/jumncwe6ta.js"
                     async
                     type="module"
                   ></script>
                   <style
                     dangerouslySetInnerHTML={{
                       __html: `
-                      wistia-player[media-id='fn93dowpt4']:not(:defined) {
-                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/fn93dowpt4/swatch');
+                      wistia-player[media-id='jumncwe6ta']:not(:defined) {
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/jumncwe6ta/swatch');
                         display: block;
                         filter: blur(5px);
                         padding-top:56.25%;
@@ -1377,7 +1377,7 @@ const Index = () => {
                     }}
                   />
                   <wistia-player
-                    media-id="fn93dowpt4"
+                    media-id="jumncwe6ta"
                     aspect="1.7777777777777777"
                     autoplay="true"
                     muted="true"
