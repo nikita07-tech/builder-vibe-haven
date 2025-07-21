@@ -487,7 +487,7 @@ const Index = () => {
               <div className="bg-gradient-to-r from-sunstone-gray-50 to-white rounded-lg p-2 text-center animate-fade-in">
                 <p className="text-xs text-sunstone-gray-700">
                   <span className="font-semibold text-sunstone-orange">
-                    ✅ Verified & Audited
+                    ��� Verified & Audited
                   </span>{" "}
                   by Official Auditor for JM Ahmedabad
                 </p>
@@ -1397,44 +1397,47 @@ const Index = () => {
 
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in stagger-1">
               <div className="relative">
-                <div className="aspect-video bg-gradient-to-br from-sunstone-orange to-sunstone-orange-dark flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-2xl">▶️</span>
-                    </div>
-                    <p className="font-semibold">Campus Life</p>
-                  </div>
+                <div className="aspect-video bg-black">
+                  <script
+                    src="https://fast.wistia.com/player.js"
+                    async
+                  ></script>
+                  <script
+                    src="https://fast.wistia.com/embed/xjyegnd0xq.js"
+                    async
+                    type="module"
+                  ></script>
+                  <style
+                    dangerouslySetInnerHTML={{
+                      __html: `
+                      wistia-player[media-id='xjyegnd0xq']:not(:defined) {
+                        background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/xjyegnd0xq/swatch');
+                        display: block;
+                        filter: blur(5px);
+                        padding-top:56.25%;
+                      }
+                      wistia-player {
+                        width: 100%;
+                        height: 100%;
+                      }
+                    `,
+                    }}
+                  />
+                  <wistia-player
+                    media-id="xjyegnd0xq"
+                    aspect="1.7777777777777777"
+                    autoplay="true"
+                    muted="true"
+                    className="w-full h-full"
+                  ></wistia-player>
                 </div>
-                <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-all duration-300 cursor-pointer"></div>
               </div>
               <div className="p-4">
                 <h4 className="font-bold text-sunstone-blue mb-2">
                   Life at Hi-Tech Institute
                 </h4>
                 <p className="text-sm text-sunstone-gray-600">
-                  Explore our modern campus, facilities, and student activities
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover-lift animate-scale-in stagger-2">
-              <div className="relative">
-                <div className="aspect-video bg-gradient-to-br from-sunstone-blue to-sunstone-orange flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-2xl">▶️</span>
-                    </div>
-                    <p className="font-semibold">Industry Insights</p>
-                  </div>
-                </div>
-                <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-all duration-300 cursor-pointer"></div>
-              </div>
-              <div className="p-4">
-                <h4 className="font-bold text-sunstone-blue mb-2">
-                  Expert Sessions & Webinars
-                </h4>
-                <p className="text-sm text-sunstone-gray-600">
-                  Learn from industry experts and thought leaders
+                  Experience campus life, modern facilities, and vibrant student community at Hi-Tech
                 </p>
               </div>
             </div>
