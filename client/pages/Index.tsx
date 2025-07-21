@@ -315,14 +315,14 @@ const Index = () => {
             <div className="flex items-center space-x-3 sm:space-x-6">
               <a
                 href="mailto:connect@sunstone.in"
-                className="hidden sm:flex items-center space-x-2 text-blue-700 hover:text-orange-600 transition-colors font-medium"
+                className="hidden sm:flex items-center space-x-2 text-[#22336a] hover:text-[#c38935] transition-colors font-medium"
               >
                 <Mail className="h-4 w-4" />
                 <span className="text-sm">connect@sunstone.in</span>
               </a>
               <a
                 href="tel:+917065303030"
-                className="flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg transition-colors font-semibold shadow-sm"
+                className="flex items-center space-x-2 bg-[#c38935] hover:bg-[#c38935]/80 text-white px-4 py-2 rounded-lg transition-colors font-semibold shadow-sm"
               >
                 <Phone className="h-4 w-4" />
                 <span className="text-sm">+91 7065-30-30-30</span>
@@ -333,7 +333,7 @@ const Index = () => {
       </header>
 
       {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-blue-700 to-blue-800 text-white py-16 relative">
+      <section className="bg-[#22336a] text-white py-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-3 text-center lg:text-left">
@@ -341,14 +341,14 @@ const Index = () => {
                 Power up your career with an MBA, BBA, BCA, MCA & B.Tech at
                 Hi-Tech Institute of Engineering & Technology
               </h1>
-              <p className="text-lg lg:text-xl mb-8 text-orange-300 font-semibold">
+              <p className="text-lg lg:text-xl mb-8 text-[#c38935] font-semibold">
                 Powered by Sunstone
               </p>
               <a
                 href="https://sunstone.in/campuses/hi-tech-institute"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg transition-all duration-300 shadow-lg"
+                className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#c38935]/80 text-white font-bold rounded-lg transition-all duration-300 shadow-lg"
               >
                 <span>Know more</span>
                 <ExternalLink className="ml-2 h-5 w-5" />
@@ -366,10 +366,10 @@ const Index = () => {
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                       <div className="flex items-center space-x-2 mb-2">
-                        <div className="w-6 h-6 bg-orange-600 rounded-full flex items-center justify-center">
+                        <div className="w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
                           <span className="text-white text-xs font-bold">🏛️</span>
                         </div>
-                        <p className="text-blue-700 font-bold text-sm">
+                        <p className="text-[#22336a] font-bold text-sm">
                           Hi-Tech Institute Campus
                         </p>
                       </div>
@@ -386,10 +386,10 @@ const Index = () => {
       </section>
 
       {/* Placement Highlights */}
-      <section className="py-12 bg-gradient-to-br from-blue-700 to-blue-800">
+      <section className="py-12 bg-[#22336a]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-xl shadow-xl overflow-hidden">
-            <div className="bg-gradient-to-r from-orange-600 to-blue-700 text-white px-6 py-4">
+            <div className="bg-[#c38935] text-white px-6 py-4">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-xl font-bold">Placement Highlights</h3>
@@ -406,19 +406,19 @@ const Index = () => {
             <div className="p-6">
               <div className="grid grid-cols-3 gap-6 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-700 mb-2">
+                  <div className="text-3xl font-bold text-[#22336a] mb-2">
                     💰 26 LPA
                   </div>
                   <p className="text-sm text-gray-600">Highest Package</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-700 mb-2">
+                  <div className="text-3xl font-bold text-[#22336a] mb-2">
                     🎯 1200+
                   </div>
                   <p className="text-sm text-gray-600">Students Placed</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-700 mb-2">
+                  <div className="text-3xl font-bold text-[#22336a] mb-2">
                     🚀 5000+
                   </div>
                   <p className="text-sm text-gray-600">Job Opportunities</p>
@@ -426,23 +426,23 @@ const Index = () => {
               </div>
 
               <div className="grid grid-cols-2 gap-4 mb-4">
-                <div className="bg-orange-50 rounded-lg p-4 flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center">
+                <div className="bg-gray-50 rounded-lg p-4 flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-[#c38935] rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-sm">63%</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-blue-700 text-sm">
+                    <p className="font-semibold text-[#22336a] text-sm">
                       Higher ROI
                     </p>
                     <p className="text-xs text-gray-600">vs private colleges</p>
                   </div>
                 </div>
-                <div className="bg-blue-50 rounded-lg p-4 flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center">
+                <div className="bg-gray-50 rounded-lg p-4 flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-[#22336a] rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-sm">7X</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-blue-700 text-sm">
+                    <p className="font-semibold text-[#22336a] text-sm">
                       More Companies
                     </p>
                     <p className="text-xs text-gray-600">vs institutes</p>
@@ -452,7 +452,7 @@ const Index = () => {
 
               <div className="bg-gray-50 rounded-lg p-3 text-center">
                 <p className="text-sm text-gray-700">
-                  <span className="font-semibold text-orange-600">
+                  <span className="font-semibold text-[#c38935]">
                     ✅ Verified & Audited
                   </span>{" "}
                   by Official Auditor for JM Ahmedabad
@@ -481,7 +481,7 @@ const Index = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-700 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
               The Sunstone Philosophy
             </h2>
             <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
@@ -492,12 +492,12 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            <Card className="text-center border border-gray-200 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
+            <Card className="text-center border border-gray-200 hover:border-[#c38935] hover:shadow-lg transition-all duration-300">
               <CardHeader className="pb-4">
-                <div className="mx-auto mb-6 p-4 bg-orange-600 rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
+                <div className="mx-auto mb-6 p-4 bg-[#c38935] rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
                   <Users className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle className="text-xl text-blue-700 font-bold">
+                <CardTitle className="text-xl text-[#22336a] font-bold">
                   Learn from Industry Leaders
                 </CardTitle>
               </CardHeader>
@@ -510,12 +510,12 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300">
+            <Card className="text-center border border-gray-200 hover:border-[#22336a] hover:shadow-lg transition-all duration-300">
               <CardHeader className="pb-4">
-                <div className="mx-auto mb-6 p-4 bg-blue-700 rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
+                <div className="mx-auto mb-6 p-4 bg-[#22336a] rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
                   <Briefcase className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle className="text-xl text-blue-700 font-bold">
+                <CardTitle className="text-xl text-[#22336a] font-bold">
                   Real-World Experience
                 </CardTitle>
               </CardHeader>
@@ -528,12 +528,12 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="text-center border border-gray-200 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
+            <Card className="text-center border border-gray-200 hover:border-[#c38935] hover:shadow-lg transition-all duration-300">
               <CardHeader className="pb-4">
-                <div className="mx-auto mb-6 p-4 bg-orange-600 rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
+                <div className="mx-auto mb-6 p-4 bg-[#c38935] rounded-full w-20 h-20 flex items-center justify-center shadow-lg">
                   <Award className="h-10 w-10 text-white" />
                 </div>
-                <CardTitle className="text-xl text-blue-700 font-bold">
+                <CardTitle className="text-xl text-[#22336a] font-bold">
                   Professional Portfolio
                 </CardTitle>
               </CardHeader>
@@ -552,7 +552,7 @@ const Index = () => {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-700 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#22336a] mb-4">
               Key Offerings
             </h2>
             <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
@@ -560,50 +560,50 @@ const Index = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300">
-              <div className="text-xl font-bold text-orange-600 mb-2">70+</div>
+            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+              <div className="text-xl font-bold text-[#c38935] mb-2">70+</div>
               <p className="text-sm text-gray-700">
                 sessions by industry experts and leading faculty
               </p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-blue-50 transition-colors duration-300">
-              <div className="text-xl font-bold text-blue-700 mb-2">
+            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+              <div className="text-xl font-bold text-[#22336a] mb-2">
                 Professional
               </div>
               <p className="text-sm text-gray-700">
                 portfolio to increase chances of getting hired
               </p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300">
-              <div className="text-xl font-bold text-orange-600 mb-2">
+            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+              <div className="text-xl font-bold text-[#c38935] mb-2">
                 Seed funding
               </div>
               <p className="text-sm text-gray-700">
                 support for budding entrepreneurs
               </p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-blue-50 transition-colors duration-300">
-              <div className="text-xl font-bold text-blue-700 mb-2">
+            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+              <div className="text-xl font-bold text-[#22336a] mb-2">
                 International
               </div>
               <p className="text-sm text-gray-700">
                 India trips for experiential learning
               </p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300">
-              <div className="text-xl font-bold text-orange-600 mb-2">
+            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+              <div className="text-xl font-bold text-[#c38935] mb-2">
                 Capstone
               </div>
               <p className="text-sm text-gray-700">projects every semester</p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-blue-50 transition-colors duration-300">
-              <div className="text-xl font-bold text-blue-700 mb-2">10</div>
+            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+              <div className="text-xl font-bold text-[#22336a] mb-2">10</div>
               <p className="text-sm text-gray-700">
                 in-demand advanced certifications to choose from
               </p>
             </div>
-            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-orange-50 transition-colors duration-300">
-              <div className="text-xl font-bold text-orange-600 mb-2">120+</div>
+            <div className="text-center p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+              <div className="text-xl font-bold text-[#c38935] mb-2">120+</div>
               <p className="text-sm text-gray-700">
                 hours of Mock GD/PI training
               </p>
@@ -613,10 +613,10 @@ const Index = () => {
       </section>
 
       {/* Programs Section - Professional */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-700 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
               Programs Offered with Hi-Tech
             </h2>
             <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -631,11 +631,11 @@ const Index = () => {
                   <TabsTrigger
                     key={program}
                     value={program}
-                    className="data-[state=active]:bg-blue-700 data-[state=active]:text-white text-sm py-4 px-4 transition-all duration-300 hover:bg-blue-50 rounded-lg border border-transparent data-[state=active]:border-blue-700"
+                    className="data-[state=active]:bg-[#22336a] data-[state=active]:text-white text-sm py-4 px-4 transition-all duration-300 hover:bg-gray-50 rounded-lg border border-transparent data-[state=active]:border-[#22336a]"
                   >
                     <div className="flex flex-col items-center">
                       <div className="p-2 rounded-full bg-gray-100 data-[state=active]:bg-white/20 mb-2 transition-colors duration-300">
-                        <GraduationCap className="h-5 w-5 text-blue-700 data-[state=active]:text-white transition-colors duration-300" />
+                        <GraduationCap className="h-5 w-5 text-[#22336a] data-[state=active]:text-white transition-colors duration-300" />
                       </div>
                       <span className="font-semibold">{program}</span>
                     </div>
@@ -647,61 +647,61 @@ const Index = () => {
             {Object.entries(programs).map(([programName, programData]) => (
               <TabsContent key={programName} value={programName} className="mt-8">
                 <Card className="border border-gray-200 shadow-lg bg-white">
-                  <CardHeader className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-t-lg border-b border-gray-200">
+                  <CardHeader className="bg-gray-50 rounded-t-lg border-b border-gray-200">
                     <div className="flex items-center justify-center mb-6">
-                      <div className="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center mr-4">
+                      <div className="w-12 h-12 bg-[#22336a] rounded-full flex items-center justify-center mr-4">
                         <Trophy className="h-6 w-6 text-white" />
                       </div>
-                      <CardTitle className="text-2xl font-bold text-blue-700">
+                      <CardTitle className="text-2xl font-bold text-[#22336a]">
                         {programName} Program Excellence
                       </CardTitle>
-                      <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center ml-4">
+                      <div className="w-12 h-12 bg-[#c38935] rounded-full flex items-center justify-center ml-4">
                         <Star className="h-6 w-6 text-white" />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
-                      <div className="text-center p-4 bg-blue-50 rounded-xl border border-blue-200">
-                        <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div className="text-center p-4 bg-gray-50 rounded-xl border border-gray-200">
+                        <div className="w-10 h-10 bg-[#22336a] rounded-full flex items-center justify-center mx-auto mb-3">
                           <Target className="h-5 w-5 text-white" />
                         </div>
-                        <div className="font-bold text-blue-700 text-sm">
+                        <div className="font-bold text-[#22336a] text-sm">
                           {programData.duration}
                         </div>
                         <div className="text-xs text-gray-500 mt-1">Duration</div>
                       </div>
-                      <div className="text-center p-4 bg-orange-50 rounded-xl border border-orange-200">
-                        <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div className="text-center p-4 bg-gray-50 rounded-xl border border-gray-200">
+                        <div className="w-10 h-10 bg-[#c38935] rounded-full flex items-center justify-center mx-auto mb-3">
                           <Award className="h-5 w-5 text-white" />
                         </div>
-                        <div className="font-bold text-orange-600 text-sm">
+                        <div className="font-bold text-[#c38935] text-sm">
                           {programData.certifications}
                         </div>
                         <div className="text-xs text-gray-500 mt-1">Certifications</div>
                       </div>
-                      <div className="text-center p-4 bg-blue-50 rounded-xl border border-blue-200">
-                        <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div className="text-center p-4 bg-gray-50 rounded-xl border border-gray-200">
+                        <div className="w-10 h-10 bg-[#22336a] rounded-full flex items-center justify-center mx-auto mb-3">
                           <Briefcase className="h-5 w-5 text-white" />
                         </div>
-                        <div className="font-bold text-blue-700 text-sm">
+                        <div className="font-bold text-[#22336a] text-sm">
                           {programData.internships}
                         </div>
                         <div className="text-xs text-gray-500 mt-1">Experience</div>
                       </div>
-                      <div className="text-center p-4 bg-orange-50 rounded-xl border border-orange-200">
-                        <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div className="text-center p-4 bg-gray-50 rounded-xl border border-gray-200">
+                        <div className="w-10 h-10 bg-[#c38935] rounded-full flex items-center justify-center mx-auto mb-3">
                           <Star className="h-5 w-5 text-white" />
                         </div>
-                        <div className="font-bold text-orange-600 text-sm">
+                        <div className="font-bold text-[#c38935] text-sm">
                           {programData.projects}
                         </div>
                         <div className="text-xs text-gray-500 mt-1">Projects</div>
                       </div>
-                      <div className="text-center p-4 bg-blue-50 rounded-xl border border-blue-200">
-                        <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div className="text-center p-4 bg-gray-50 rounded-xl border border-gray-200">
+                        <div className="w-10 h-10 bg-[#22336a] rounded-full flex items-center justify-center mx-auto mb-3">
                           <Trophy className="h-5 w-5 text-white" />
                         </div>
-                        <div className="font-bold text-blue-700 text-sm">
+                        <div className="font-bold text-[#22336a] text-sm">
                           {programData.specializations}
                         </div>
                         <div className="text-xs text-gray-500 mt-1">Specializations</div>
@@ -710,9 +710,9 @@ const Index = () => {
                   </CardHeader>
                   <CardContent className="p-6">
                     <Collapsible>
-                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-all duration-300">
+                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-300">
                         <span className="font-semibold text-gray-900 flex items-center">
-                          <Star className="h-5 w-5 mr-2 text-orange-600" />
+                          <Star className="h-5 w-5 mr-2 text-[#c38935]" />
                           Advanced Certifications & Career Prospects
                         </span>
                         <ChevronDown className="h-5 w-5 text-gray-600" />
@@ -729,10 +729,10 @@ const Index = () => {
                             {programData.certificationsList.map((cert, index) => (
                               <div
                                 key={index}
-                                className="p-6 bg-white border border-gray-200 rounded-xl hover:border-orange-500 hover:shadow-lg transition-all duration-300"
+                                className="p-6 bg-white border border-gray-200 rounded-xl hover:border-[#c38935] hover:shadow-lg transition-all duration-300"
                               >
                                 <div className="flex items-start space-x-3 mb-3">
-                                  <div className="flex-shrink-0 w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center">
+                                  <div className="flex-shrink-0 w-10 h-10 bg-[#c38935] rounded-full flex items-center justify-center">
                                     <Target className="h-5 w-5 text-white" />
                                   </div>
                                   <div className="flex-1">
@@ -743,8 +743,8 @@ const Index = () => {
                                 </div>
                                 <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
                                   <div className="flex items-center mb-2">
-                                    <Briefcase className="h-4 w-4 text-blue-700 mr-2" />
-                                    <span className="font-semibold text-blue-700 text-sm">
+                                    <Briefcase className="h-4 w-4 text-[#22336a] mr-2" />
+                                    <span className="font-semibold text-[#22336a] text-sm">
                                       Career Prospects:
                                     </span>
                                   </div>
@@ -760,15 +760,15 @@ const Index = () => {
                     </Collapsible>
 
                     <Collapsible className="mt-6">
-                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-orange-50 transition-all duration-300">
+                      <CollapsibleTrigger className="flex items-center justify-between w-full p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-all duration-300">
                         <span className="font-semibold text-gray-900 flex items-center">
-                          <Award className="h-5 w-5 mr-2 text-blue-700" />
+                          <Award className="h-5 w-5 mr-2 text-[#22336a]" />
                           Eligibility Criteria
                         </span>
                         <ChevronDown className="h-5 w-5 text-gray-600" />
                       </CollapsibleTrigger>
                       <CollapsibleContent className="mt-4">
-                        <div className="p-4 border border-gray-200 rounded-lg bg-blue-50">
+                        <div className="p-4 border border-gray-200 rounded-lg bg-gray-50">
                           <p className="text-gray-700">{programData.eligibility}</p>
                         </div>
                       </CollapsibleContent>
@@ -785,7 +785,7 @@ const Index = () => {
       <section className="py-16 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-700 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
               Top Recruiters
             </h2>
             <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
@@ -796,52 +796,56 @@ const Index = () => {
           {/* Horizontal Scrolling Logos */}
           <div className="relative overflow-hidden bg-gray-50 rounded-xl py-8 mb-12">
             <div className="flex space-x-8 animate-scroll">
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F2431c7586b4b4949a45211a6e85d6c12?format=webp&width=800" alt="Zepto" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F5177f171e26b44da92e61201925a2d39?format=webp&width=800" alt="Amazon" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fc94a23c3765842f2b222fd2d59a98d39?format=webp&width=800" alt="IndusInd Bank" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8f4b19e78e3e4270b84721ec8abc6f44?format=webp&width=800" alt="DHL" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F937931ba47914129845a18104690b1c0?format=webp&width=800" alt="PhonePe" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fab9c15538ba4411fbd6fbadf394beaf9?format=webp&width=800" alt="Dhanguard" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F0091fed2d1ee468cb09f619c71bd4c09?format=webp&width=800" alt="SBI General" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fad57ae91738d441eb913ce04b82a9e9e?format=webp&width=800" alt="Finserv" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F2943c34218e54331ae18f1688410275e?format=webp&width=800" alt="Niva Health Insurance" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F310b061b3b9a43a1b388f07b6ba654fe?format=webp&width=800" alt="Berger" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800" alt="Bosch" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800" alt="HCL" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800" alt="TCS" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800" alt="Paytm" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800" alt="Microsoft" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800" alt="Genpact" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800" alt="Bajaj Finserv" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800" alt="Airtel" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800" alt="IBM" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800" alt="Infosys" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800" alt="Hero" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800" alt="Axis Bank" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
               
               {/* Duplicate for seamless loop */}
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F2431c7586b4b4949a45211a6e85d6c12?format=webp&width=800" alt="Zepto" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F5177f171e26b44da92e61201925a2d39?format=webp&width=800" alt="Amazon" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fc94a23c3765842f2b222fd2d59a98d39?format=webp&width=800" alt="IndusInd Bank" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8f4b19e78e3e4270b84721ec8abc6f44?format=webp&width=800" alt="DHL" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F937931ba47914129845a18104690b1c0?format=webp&width=800" alt="PhonePe" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fab9c15538ba4411fbd6fbadf394beaf9?format=webp&width=800" alt="Dhanguard" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F0091fed2d1ee468cb09f619c71bd4c09?format=webp&width=800" alt="SBI General" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fad57ae91738d441eb913ce04b82a9e9e?format=webp&width=800" alt="Finserv" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F2943c34218e54331ae18f1688410275e?format=webp&width=800" alt="Niva Health Insurance" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F310b061b3b9a43a1b388f07b6ba654fe?format=webp&width=800" alt="Berger" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800" alt="Bosch" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800" alt="HCL" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800" alt="TCS" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800" alt="Paytm" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800" alt="Microsoft" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800" alt="Genpact" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800" alt="Bajaj Finserv" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800" alt="Airtel" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800" alt="IBM" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800" alt="Infosys" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800" alt="Hero" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800" alt="Axis Bank" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
             </div>
           </div>
 
           {/* Stats Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-orange-200">
-              <div className="w-16 h-16 mx-auto mb-4 bg-orange-600 rounded-full flex items-center justify-center">
+            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+              <div className="w-16 h-16 mx-auto mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
                 <Users className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-blue-700 mb-2">1200+</div>
+              <div className="text-3xl font-bold text-[#22336a] mb-2">1200+</div>
               <p className="text-gray-600">Top Recruiting Companies</p>
             </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-blue-200">
-              <div className="w-16 h-16 mx-auto mb-4 bg-blue-700 rounded-full flex items-center justify-center">
+            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+              <div className="w-16 h-16 mx-auto mb-4 bg-[#22336a] rounded-full flex items-center justify-center">
                 <Trophy className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-blue-700 mb-2">26 LPA</div>
+              <div className="text-3xl font-bold text-[#22336a] mb-2">26 LPA</div>
               <p className="text-gray-600">Highest Package Offered</p>
             </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-orange-200">
-              <div className="w-16 h-16 mx-auto mb-4 bg-orange-600 rounded-full flex items-center justify-center">
+            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+              <div className="w-16 h-16 mx-auto mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
                 <Target className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-blue-700 mb-2">95%</div>
+              <div className="text-3xl font-bold text-[#22336a] mb-2">95%</div>
               <p className="text-gray-600">Placement Success Rate</p>
             </div>
           </div>
@@ -852,7 +856,7 @@ const Index = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-700 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
               Admission Process
             </h2>
             <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
@@ -863,7 +867,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div className="text-center">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-orange-600 rounded-xl flex items-center justify-center mx-auto shadow-lg">
+                <div className="w-20 h-20 bg-[#c38935] rounded-xl flex items-center justify-center mx-auto shadow-lg">
                   <span className="text-white font-bold text-2xl">1</span>
                 </div>
                 <div className="hidden lg:block absolute top-10 -right-8 text-gray-400">
@@ -871,7 +875,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                <h3 className="text-xl font-bold text-blue-700 mb-3">
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
                   Apply Online
                 </h3>
                 <p className="text-gray-600">
@@ -882,7 +886,7 @@ const Index = () => {
 
             <div className="text-center">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-blue-700 rounded-xl flex items-center justify-center mx-auto shadow-lg">
+                <div className="w-20 h-20 bg-[#22336a] rounded-xl flex items-center justify-center mx-auto shadow-lg">
                   <span className="text-white font-bold text-2xl">2</span>
                 </div>
                 <div className="hidden lg:block absolute top-10 -right-8 text-gray-400">
@@ -890,7 +894,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                <h3 className="text-xl font-bold text-blue-700 mb-3">
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
                   Document Review
                 </h3>
                 <p className="text-gray-600">
@@ -901,7 +905,7 @@ const Index = () => {
 
             <div className="text-center">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-orange-600 rounded-xl flex items-center justify-center mx-auto shadow-lg">
+                <div className="w-20 h-20 bg-[#c38935] rounded-xl flex items-center justify-center mx-auto shadow-lg">
                   <span className="text-white font-bold text-2xl">3</span>
                 </div>
                 <div className="hidden lg:block absolute top-10 -right-8 text-gray-400">
@@ -909,7 +913,7 @@ const Index = () => {
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                <h3 className="text-xl font-bold text-blue-700 mb-3">
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
                   Interview & Assessment
                 </h3>
                 <p className="text-gray-600">
@@ -920,12 +924,12 @@ const Index = () => {
 
             <div className="text-center">
               <div className="relative mb-6">
-                <div className="w-20 h-20 bg-green-600 rounded-xl flex items-center justify-center mx-auto shadow-lg">
+                <div className="w-20 h-20 bg-[#22336a] rounded-xl flex items-center justify-center mx-auto shadow-lg">
                   <span className="text-white font-bold text-2xl">4</span>
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
-                <h3 className="text-xl font-bold text-blue-700 mb-3">
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
                   Confirmation
                 </h3>
                 <p className="text-gray-600">
@@ -937,7 +941,7 @@ const Index = () => {
 
           <div className="text-center">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-blue-700 mb-4">
+              <h3 className="text-2xl font-bold text-[#22336a] mb-4">
                 Ready to start your journey?
               </h3>
               <p className="text-gray-700 mb-6">
@@ -945,7 +949,7 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Button
-                  className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg"
+                  className="bg-[#c38935] hover:bg-[#c38935]/80 text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg"
                   asChild
                 >
                   <a href="tel:+917065303030" className="flex items-center">
@@ -954,7 +958,7 @@ const Index = () => {
                   </a>
                 </Button>
                 <Button
-                  className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg"
+                  className="bg-[#22336a] hover:bg-[#22336a]/80 text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg"
                   asChild
                 >
                   <a
@@ -977,7 +981,7 @@ const Index = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-700 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
               What Students Say
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
@@ -987,14 +991,14 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-white border border-gray-200 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
+            <Card className="bg-white border border-gray-200 hover:border-[#c38935] hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-[#c38935] rounded-full flex items-center justify-center mr-4">
                     <span className="text-white font-bold">RK</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-blue-700">Rahul Kumar</h4>
+                    <h4 className="font-bold text-[#22336a]">Rahul Kumar</h4>
                     <p className="text-sm text-gray-600">MBA Graduate - TCS</p>
                   </div>
                 </div>
@@ -1014,14 +1018,14 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300">
+            <Card className="bg-white border border-gray-200 hover:border-[#22336a] hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-[#22336a] rounded-full flex items-center justify-center mr-4">
                     <span className="text-white font-bold">PS</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-blue-700">Priya Sharma</h4>
+                    <h4 className="font-bold text-[#22336a]">Priya Sharma</h4>
                     <p className="text-sm text-gray-600">BCA Graduate - Infosys</p>
                   </div>
                 </div>
@@ -1041,14 +1045,14 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-gray-200 hover:border-orange-500 hover:shadow-lg transition-all duration-300">
+            <Card className="bg-white border border-gray-200 hover:border-[#c38935] hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-[#c38935] rounded-full flex items-center justify-center mr-4">
                     <span className="text-white font-bold">AJ</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-blue-700">Amit Joshi</h4>
+                    <h4 className="font-bold text-[#22336a]">Amit Joshi</h4>
                     <p className="text-sm text-gray-600">B.Tech Graduate - Wipro</p>
                   </div>
                 </div>
@@ -1071,11 +1075,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQs Section - Professional */}
+      {/* FAQs Section - Simple & Professional */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue-700 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
@@ -1117,28 +1121,24 @@ const Index = () => {
               }
             ].map((faq, index) => (
               <Collapsible key={index}>
-                <CollapsibleTrigger className={`w-full text-left p-6 rounded-xl border transition-all duration-300 hover:shadow-lg ${
-                  faq.category === 'sunstone' 
-                    ? 'bg-orange-50 border-orange-200 hover:border-orange-400' 
-                    : 'bg-blue-50 border-blue-200 hover:border-blue-400'
-                }`}>
+                <CollapsibleTrigger className="w-full text-left p-6 rounded-xl border border-gray-200 bg-gray-50 hover:bg-gray-100 transition-all duration-300 hover:shadow-lg">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
                         faq.category === 'sunstone' 
-                          ? 'bg-orange-600' 
-                          : 'bg-blue-700'
+                          ? 'bg-[#c38935]' 
+                          : 'bg-[#22336a]'
                       }`}>
                         <span className="text-white text-lg">
                           {faq.category === 'sunstone' ? '🌟' : '🏢'}
                         </span>
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-bold text-blue-700 text-left">
+                        <h3 className="font-bold text-[#22336a] text-left">
                           {faq.question}
                         </h3>
                         <div className={`text-xs font-medium mt-1 ${
-                          faq.category === 'sunstone' ? 'text-orange-600' : 'text-blue-700'
+                          faq.category === 'sunstone' ? 'text-[#c38935]' : 'text-[#22336a]'
                         }`}>
                           {faq.category === 'sunstone' ? 'Sunstone' : 'Hi-Tech Institute'}
                         </div>
@@ -1160,19 +1160,19 @@ const Index = () => {
 
           <div className="text-center mt-12">
             <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-blue-700 mb-2">Still have questions?</h3>
+              <h3 className="text-xl font-bold text-[#22336a] mb-2">Still have questions?</h3>
               <p className="text-gray-600 mb-4">Our counselors are here to help you make the right choice</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a
                   href="tel:+917065303030"
-                  className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 bg-[#c38935] text-white font-bold rounded-lg hover:bg-[#c38935]/80 transition-all duration-300"
                 >
                   <Phone className="h-4 w-4 mr-2" />
                   Call Us Now
                 </a>
                 <a
                   href="mailto:connect@sunstone.in"
-                  className="inline-flex items-center px-6 py-3 bg-blue-700 text-white font-bold rounded-lg hover:bg-blue-800 transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 bg-[#22336a] text-white font-bold rounded-lg hover:bg-[#22336a]/80 transition-all duration-300"
                 >
                   <Mail className="h-4 w-4 mr-2" />
                   Email Us
@@ -1184,10 +1184,10 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-[#000000] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-orange-600 mb-6">
+            <div className="text-3xl font-bold text-[#c38935] mb-6">
               Sunstone
             </div>
             <p className="text-gray-400 mb-8 text-lg">
@@ -1197,14 +1197,14 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
               <a
                 href="mailto:connect@sunstone.in"
-                className="flex items-center text-gray-400 hover:text-orange-600 transition-colors"
+                className="flex items-center text-gray-400 hover:text-[#c38935] transition-colors"
               >
                 <Mail className="h-4 w-4 mr-2" />
                 connect@sunstone.in
               </a>
               <a
                 href="tel:+917065303030"
-                className="flex items-center text-gray-400 hover:text-orange-600 transition-colors"
+                className="flex items-center text-gray-400 hover:text-[#c38935] transition-colors"
               >
                 <Phone className="h-4 w-4 mr-2" />
                 +91 7065-30-30-30
