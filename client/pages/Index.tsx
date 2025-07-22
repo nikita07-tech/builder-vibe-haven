@@ -675,48 +675,59 @@ const Index = () => {
         </div>
       )}
 
-      {/* Placement Opportunity Program in Sunstone - Simplified */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Sunstone Advantage */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#22336a] mb-4">
-              Placement Opportunity Program
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#22336a] mb-6">
+              The Sunstone Advantage
             </h2>
-            <p className="text-lg text-gray-700">
-              200+ assured placement opportunities or get your 1st year fee back*
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              Experience education that goes beyond traditional learning with industry-focused curriculum and career support
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <div className="text-center bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-xl p-6">
-              <div className="text-3xl font-bold text-[#22336a] mb-1">200+</div>
-              <p className="text-gray-600 text-sm">Assured Opportunities</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Industry-Aligned Learning */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6">
+                <BookOpen className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-4">Industry-Aligned Learning</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Curriculum designed with industry experts featuring real-world projects, case studies, and hands-on experience to make you job-ready from day one.
+              </p>
             </div>
-            <div className="text-center bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-xl p-6">
-              <div className="text-3xl font-bold text-[#22336a] mb-1">1200+</div>
-              <p className="text-gray-600 text-sm">Recruiting Companies</p>
+
+            {/* Career Support */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6">
+                <Users className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-4">Comprehensive Career Support</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Dedicated placement team, interview preparation, resume building, and continuous career guidance to ensure your professional success.
+              </p>
             </div>
-            <div className="text-center bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-xl p-6">
-              <div className="text-3xl font-bold text-[#22336a] mb-1">26 LPA</div>
-              <p className="text-gray-600 text-sm">Highest Package</p>
-            </div>
-            <div className="text-center bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-xl p-6">
-              <div className="text-3xl font-bold text-[#22336a] mb-1">63%</div>
-              <p className="text-gray-600 text-sm">Higher ROI</p>
+
+            {/* Expert Network */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6">
+                <Award className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-4">Expert Network</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Learn from accomplished faculty with IIM/IIT backgrounds and industry professionals who bring real-world insights to the classroom.
+              </p>
             </div>
           </div>
 
-          <div className="text-center">
-            <div className="bg-gray-50 rounded-xl p-4 mb-6">
-              <p className="text-sm text-gray-600">
-                *Terms and conditions apply. Full refund on 1st year tuition fee if placement criteria not met.
-              </p>
-            </div>
+          <div className="text-center mt-12">
             <button
               onClick={() => setShowPlacementPopup(true)}
-              className="bg-gradient-to-r from-[#22336a] to-[#3b4d7a] hover:from-[#3b4d7a] hover:to-[#22336a] text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              View Complete Program Details
+              Explore Placement Opportunities
             </button>
           </div>
         </div>
