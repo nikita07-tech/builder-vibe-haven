@@ -1096,28 +1096,28 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Stats Section */}
+          {/* Career Focus Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
             <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-200">
               <div className="w-16 h-16 mx-auto mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
                 <Users className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-[#22336a] mb-2">1200+</div>
-              <p className="text-gray-600">Top Recruiting Companies</p>
+              <h3 className="text-xl font-bold text-[#22336a] mb-2">Industry Connections</h3>
+              <p className="text-gray-600">Strong network of leading companies across sectors</p>
             </div>
             <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-200">
               <div className="w-16 h-16 mx-auto mb-4 bg-[#22336a] rounded-full flex items-center justify-center">
                 <Trophy className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-[#22336a] mb-2">26 LPA</div>
-              <p className="text-gray-600">Highest Package Offered</p>
+              <h3 className="text-xl font-bold text-[#22336a] mb-2">Career Growth</h3>
+              <p className="text-gray-600">Excellent packages and growth opportunities</p>
             </div>
             <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-200">
               <div className="w-16 h-16 mx-auto mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
                 <Target className="h-8 w-8 text-white" />
               </div>
-              <div className="text-3xl font-bold text-[#22336a] mb-2">95%</div>
-              <p className="text-gray-600">Placement Success Rate</p>
+              <h3 className="text-xl font-bold text-[#22336a] mb-2">Success Stories</h3>
+              <p className="text-gray-600">Proven track record of student achievements</p>
             </div>
           </div>
         </div>
