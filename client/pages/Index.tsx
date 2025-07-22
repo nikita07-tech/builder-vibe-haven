@@ -830,7 +830,7 @@ const Index = () => {
                   5000+ job opportunities with 1200+ top recruiting companies
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 right-4 text-[#c38935] group-hover:animate-bounce">
+                <div className="absolute bottom-4 right-4 text-[#c38935]">
                   <ExternalLink className="h-5 w-5" />
                 </div>
               </div>
