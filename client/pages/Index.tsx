@@ -542,58 +542,37 @@ const Index = () => {
             </div>
 
             <div className="p-6">
-              <div className="grid grid-cols-3 gap-6 mb-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
-                    26 LPA
-                  </div>
-                  <p className="text-sm text-gray-600">Highest Package</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
-                    1200+
-                  </div>
-                  <p className="text-sm text-gray-600">Top Recruiters</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
-                    5000+
-                  </div>
-                  <p className="text-sm text-gray-600">Job Opportunities</p>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 mb-4">
+              <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-gray-50 rounded-lg p-4 flex items-center space-x-3">
                   <div className="w-10 h-10 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">63%</span>
+                    <TrendingUp className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <p className="font-semibold text-[#22336a] text-sm">
-                      <p>63% Higher ROI</p>
+                      Higher ROI
                     </p>
                     <p className="text-xs text-gray-600">vs private colleges</p>
                   </div>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-4 flex items-center space-x-3">
                   <div className="w-10 h-10 bg-[#22336a] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">7X</span>
+                    <Users className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <p className="font-semibold text-[#22336a] text-sm">
-                      <p>7* More Companies</p>
+                      Industry Network
                     </p>
-                    <p className="text-xs text-gray-600">vs institutes</p>
+                    <p className="text-xs text-gray-600">Leading companies</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-lg p-3 text-center">
+              <div className="bg-gray-50 rounded-lg p-4 text-center">
                 <p className="text-sm text-gray-700">
                   <span className="font-semibold text-[#c38935]">
-                    Verified & Audited
+                    Verified Placement Support
                   </span>{" "}
-                  by Official Auditor for B2K Analytics
+                  with comprehensive career guidance
                 </p>
               </div>
             </div>
