@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ChevronDown,
@@ -18,6 +18,7 @@ import {
   Clock,
   BookOpen,
   Zap,
+  ChevronLeft,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -39,6 +40,45 @@ const Index = () => {
   const [activeProgram, setActiveProgram] = useState("MBA");
   const [showPlacementPopup, setShowPlacementPopup] = useState(false);
   const [activeTab, setActiveTab] = useState("MBA");
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Carousel images
+  const carouselImages = [
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600",
+      alt: "Hi-Tech Institute Campus",
+      title: "Hi-Tech Institute Campus",
+      subtitle: "Modern Infrastructure & Facilities"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F5fffe55221b049ecb1b5366792405a42?format=webp&width=800",
+      alt: "Campus Facilities",
+      title: "State-of-the-Art Facilities",
+      subtitle: "Advanced Learning Environment"
+    },
+    {
+      src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=800",
+      alt: "Campus View",
+      title: "Campus Infrastructure",
+      subtitle: "World-Class Education Hub"
+    }
+  ];
+
+  // Auto-advance carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
 
   const programs = {
     MBA: {
@@ -345,7 +385,7 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Banner */}
+      {/* Hero Banner with Carousel */}
       <section className="bg-[#22336a] text-white py-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
@@ -370,12 +410,55 @@ const Index = () => {
             <div className="lg:col-span-2">
               <div className="relative max-w-sm mx-auto">
                 <div className="relative overflow-hidden rounded-xl shadow-lg bg-white p-2">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600"
-                    alt="Hi-Tech Institute Campus"
-                    className="w-full h-auto object-cover aspect-[4/3] rounded-lg"
-                    loading="eager"
-                  />
+                  {/* Carousel Container */}
+                  <div className="relative">
+                    <div className="overflow-hidden rounded-lg">
+                      <div 
+                        className="flex transition-transform duration-500 ease-in-out"
+                        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                      >
+                        {carouselImages.map((image, index) => (
+                          <div key={index} className="w-full flex-shrink-0">
+                            <img
+                              src={image.src}
+                              alt={image.alt}
+                              className="w-full h-auto object-cover aspect-[4/3]"
+                              loading="eager"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Navigation Arrows */}
+                    <button
+                      onClick={prevSlide}
+                      className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-all duration-200"
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                    </button>
+                    <button
+                      onClick={nextSlide}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-all duration-200"
+                    >
+                      <ChevronRight className="h-4 w-4" />
+                    </button>
+
+                    {/* Dots Indicator */}
+                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2">
+                      {carouselImages.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => setCurrentSlide(index)}
+                          className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                            index === currentSlide ? 'bg-white' : 'bg-white/50'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Caption */}
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                       <div className="flex items-center space-x-2 mb-2">
@@ -383,11 +466,11 @@ const Index = () => {
                           <span className="text-white text-xs font-bold">🏛️</span>
                         </div>
                         <p className="text-[#22336a] font-bold text-sm">
-                          Hi-Tech Institute Campus
+                          {carouselImages[currentSlide].title}
                         </p>
                       </div>
                       <p className="text-gray-600 text-xs">
-                        Modern Infrastructure & Facilities
+                        {carouselImages[currentSlide].subtitle}
                       </p>
                     </div>
                   </div>
@@ -398,7 +481,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Placement Highlights */}
+      {/* Placement Highlights - Updated without emojis */}
       <section className="py-12 bg-[#22336a]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-xl shadow-xl overflow-hidden">
@@ -407,11 +490,14 @@ const Index = () => {
                 <div>
                   <h3 className="text-xl font-bold">Placement Highlights</h3>
                   <p className="text-sm opacity-90">
-                    📚 MBA | MCA | BBA | BCA | B.Tech
+                    MBA | MCA | BBA | BCA | B.Tech
                   </p>
                 </div>
-                <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-4 py-2 rounded-md text-sm font-semibold transition-all duration-300">
-                  📞 Enquire Now
+                <button 
+                  onClick={() => setShowPlacementPopup(true)}
+                  className="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-6 py-3 rounded-md text-sm font-semibold transition-all duration-300 pulse-glow"
+                >
+                  View Placement Opportunity Program
                 </button>
               </div>
             </div>
@@ -420,19 +506,19 @@ const Index = () => {
               <div className="grid grid-cols-3 gap-6 mb-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-[#22336a] mb-2">
-                    💰 26 LPA
+                    26 LPA
                   </div>
                   <p className="text-sm text-gray-600">Highest Package</p>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-[#22336a] mb-2">
-                    🎯 1200+
+                    1200+
                   </div>
-                  <p className="text-sm text-gray-600">Students Placed</p>
+                  <p className="text-sm text-gray-600">Top Recruiters</p>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-[#22336a] mb-2">
-                    🚀 5000+
+                    5000+
                   </div>
                   <p className="text-sm text-gray-600">Job Opportunities</p>
                 </div>
@@ -466,9 +552,9 @@ const Index = () => {
               <div className="bg-gray-50 rounded-lg p-3 text-center">
                 <p className="text-sm text-gray-700">
                   <span className="font-semibold text-[#c38935]">
-                    ✅ Verified & Audited
+                    Verified & Audited
                   </span>{" "}
-                  by Official Auditor for JM Ahmedabad
+                  by Official Auditor for B2K Analytics
                 </p>
               </div>
             </div>
@@ -476,16 +562,140 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Sunstone Value Proposition */}
+      {/* Enhanced Placement Opportunity Program Popup */}
+      {showPlacementPopup && (
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-fadeIn">
+          <div className="bg-white rounded-3xl max-w-4xl w-full mx-4 relative animate-scaleIn transform perspective-1000 animate-bounce-in shadow-2xl max-h-[90vh] overflow-y-auto">
+            <button
+              onClick={() => setShowPlacementPopup(false)}
+              className="absolute top-6 right-6 w-12 h-12 bg-gray-100 hover:bg-red-100 rounded-full flex items-center justify-center transition-all duration-300 z-10 hover:scale-110 group"
+            >
+              <X className="h-6 w-6 text-gray-600 group-hover:text-red-500 transition-colors" />
+            </button>
+            
+            <div className="p-10">
+              <div className="text-center mb-10">
+                <div className="w-24 h-24 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto mb-6 animate-spin-slow shadow-xl">
+                  <TrendingUp className="h-12 w-12 text-white animate-bounce" />
+                </div>
+                <h3 className="text-4xl font-bold text-[#22336a] mb-4 animate-slide-up">
+                  PLACEMENT OPPORTUNITY PROGRAM OF SUNSTONE
+                </h3>
+                <p className="text-gray-600 text-xl animate-fade-in-delay">
+                  200+ assured placement opportunities or get your 1st year fee back*
+                </p>
+              </div>
+
+              <div className="mb-8">
+                <img 
+                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F5fffe55221b049ecb1b5366792405a42?format=webp&width=800"
+                  alt="Placement Opportunity Program"
+                  className="w-full rounded-2xl shadow-lg"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-8 mb-10">
+                <div className="text-center p-8 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-left">
+                  <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">200+</div>
+                  <p className="text-gray-600 font-medium text-lg">Assured Placement Opportunities</p>
+                </div>
+                <div className="text-center p-8 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-right">
+                  <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">100%</div>
+                  <p className="text-gray-600 font-medium text-lg">Fee Back Guarantee*</p>
+                </div>
+                <div className="text-center p-8 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
+                  <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">1200+</div>
+                  <p className="text-gray-600 font-medium text-lg">Top Recruiting Companies</p>
+                </div>
+                <div className="text-center p-8 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
+                  <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">26 LPA</div>
+                  <p className="text-gray-600 font-medium text-lg">Highest Package</p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-[#22336a]/5 to-[#c38935]/5 rounded-2xl p-6 mb-8">
+                <p className="text-sm text-gray-600 text-center">
+                  *Terms and conditions apply. Get a full refund on your 1st year tuition fee. 
+                  Option benefits indicate the number of job openings for each student.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <a
+                  href="https://sunstone.in/apply"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-[#22336a] to-[#3b4d7a] text-white font-bold rounded-2xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 animate-pulse-glow text-lg"
+                >
+                  <span>Apply Now for Placement Opportunity Program</span>
+                  <ExternalLink className="ml-3 h-6 w-6 animate-bounce" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Updated Sunstone Value Proposition */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
+              Why Choose Sunstone?
+            </h2>
             <p className="text-lg text-gray-700 max-w-4xl mx-auto">
-              At Sunstone, we shape your future with an industry-aligned
-              curriculum and expert faculty. Our focus on skill development and
-              real-world learning ensures you're job-ready, paving the way for
-              opportunities with 1,200+ top recruiters.
+              Transform your career with industry-aligned education and guaranteed placement support
             </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 bg-[#c38935] rounded-lg flex items-center justify-center mb-4">
+                <Users className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-3">Expert Training Sessions</h3>
+              <p className="text-gray-600">70+ training and development sessions by recruiters and industry experts</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 bg-[#22336a] rounded-lg flex items-center justify-center mb-4">
+                <Target className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-3">Capstone Projects</h3>
+              <p className="text-gray-600">Hands-on capstone projects every semester for real-world experience</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 bg-[#c38935] rounded-lg flex items-center justify-center mb-4">
+                <Award className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-3">Professional Portfolio</h3>
+              <p className="text-gray-600">Professional portfolio to get noticed by top recruiters</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 bg-[#22336a] rounded-lg flex items-center justify-center mb-4">
+                <GraduationCap className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-3">Expert Faculty</h3>
+              <p className="text-gray-600">Learn from expert faculty passed out from IIM and IIT</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 bg-[#c38935] rounded-lg flex items-center justify-center mb-4">
+                <TrendingUp className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-3">High Salary Packages</h3>
+              <p className="text-gray-600">25 LPA highest salary with 150+ job profiles to choose from</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+              <div className="w-12 h-12 bg-[#22336a] rounded-lg flex items-center justify-center mb-4">
+                <Briefcase className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-3">Guaranteed Interviews</h3>
+              <p className="text-gray-600">50+ guaranteed job interviews with Placement Protection Plan</p>
+            </div>
           </div>
         </div>
       </section>
@@ -641,61 +851,6 @@ const Index = () => {
             </div>
           </div>
         </div>
-
-        {/* Enhanced Placement Popup Modal */}
-        {showPlacementPopup && (
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-fadeIn">
-            <div className="bg-white rounded-3xl max-w-3xl w-full mx-4 relative animate-scaleIn transform perspective-1000 animate-bounce-in shadow-2xl">
-              <button
-                onClick={() => setShowPlacementPopup(false)}
-                className="absolute top-6 right-6 w-12 h-12 bg-gray-100 hover:bg-red-100 rounded-full flex items-center justify-center transition-all duration-300 z-10 hover:scale-110 group"
-              >
-                <X className="h-6 w-6 text-gray-600 group-hover:text-red-500 transition-colors" />
-              </button>
-              
-              <div className="p-10">
-                <div className="text-center mb-10">
-                  <div className="w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-6 animate-spin-slow shadow-xl">
-                    <TrendingUp className="h-12 w-12 text-white animate-bounce" />
-                  </div>
-                  <h3 className="text-4xl font-bold text-[#22336a] mb-4 animate-slide-up">Placement Opportunities</h3>
-                  <p className="text-gray-600 text-xl animate-fade-in-delay">Unlock your potential with industry-leading placement support</p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-8 mb-10">
-                  <div className="text-center p-8 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-left">
-                    <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">5000+</div>
-                    <p className="text-gray-600 font-medium text-lg">Job Opportunities</p>
-                  </div>
-                  <div className="text-center p-8 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-right">
-                    <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">1200+</div>
-                    <p className="text-gray-600 font-medium text-lg">Top Companies</p>
-                  </div>
-                  <div className="text-center p-8 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
-                    <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">26 LPA</div>
-                    <p className="text-gray-600 font-medium text-lg">Highest Package</p>
-                  </div>
-                  <div className="text-center p-8 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
-                    <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">95%</div>
-                    <p className="text-gray-600 font-medium text-lg">Success Rate</p>
-                  </div>
-                </div>
-
-                <div className="text-center">
-                  <a
-                    href="https://sunstone.in/apply"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-[#22336a] to-[#3b4d7a] text-white font-bold rounded-2xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 animate-pulse-glow text-lg"
-                  >
-                    <span>Explore Opportunities</span>
-                    <ExternalLink className="ml-3 h-6 w-6 animate-bounce" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </section>
 
       {/* Programs Section - All Blue Colors */}
@@ -935,7 +1090,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Admission Process Steps - Animated */}
+      {/* Updated Admission Process Steps - Enhanced Layout and Animations */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/30 to-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-64 h-64 bg-[#22336a]/5 rounded-full blur-3xl animate-float"></div>
@@ -1005,7 +1160,7 @@ const Index = () => {
               </div>
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/30 transition-all duration-500 transform group-hover:-translate-y-2">
                 <h3 className="text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#22336a] transition-colors duration-300">
-                  Doc Review
+                  Document Review
                 </h3>
                 <p className="text-gray-600 text-lg leading-relaxed">
                   Submit required documents for verification and eligibility check
@@ -1167,7 +1322,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section - Professional Design */}
+      {/* FAQ Section - Updated with new questions */}
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-64 h-64 bg-[#22336a]/3 rounded-full blur-3xl"></div>
@@ -1188,34 +1343,34 @@ const Index = () => {
             <div className="space-y-4">
               {[
                 {
-                  question: "What makes Sunstone different from other educational providers?",
-                  answer: "Sunstone offers industry-aligned curriculum, expert faculty from Fortune 500 companies, hands-on projects, and guaranteed placement support with 1,200+ recruiting partners.",
+                  question: "Why should I choose Sunstone?",
+                  answer: "You get 70+ training and development sessions by recruiters and industry experts, capstone projects every semester, professional portfolio to get noticed by recruiters, learn from expert faculty passed out from IIM and IIT, 25 LPA highest salary with 150+ job profiles to choose from, 50+ guaranteed job interviews with Placement Protection Plan, 70% job opportunities in the top metros with 250+ job opportunities in MNCs, lifetime access to a pan-India student community, and seed funding support through incubation cell.",
                   category: "sunstone"
                 },
                 {
-                  question: "What is the admission process for Hi-Tech Institute?",
-                  answer: "The admission process includes online application, document verification, counseling session, aptitude assessment, and final confirmation. Our team guides you through each step.",
-                  category: "hitech"
-                },
-                {
-                  question: "What placement support does Sunstone provide?",
-                  answer: "We offer comprehensive placement assistance including resume building, interview preparation, mock interviews, and direct access to 1,200+ recruiting companies with packages up to 26 LPA.",
+                  question: "Does Sunstone provide an online or distance learning program?",
+                  answer: "Sunstone offers both online and offline learning programs. Our hybrid approach ensures flexibility while maintaining quality education standards. You can choose from various learning modes based on your preferences and requirements.",
                   category: "sunstone"
                 },
                 {
-                  question: "What facilities are available at Hi-Tech Institute?",
-                  answer: "Hi-Tech Institute features modern infrastructure, state-of-the-art labs, digital classrooms, library, sports facilities, hostels, and industry-standard equipment for hands-on learning.",
-                  category: "hitech"
+                  question: "What are the criteria to get admission into Sunstone-powered colleges?",
+                  answer: "Sunstone follows the eligibility criteria of colleges along with a personal interview for Undergraduate programs, and a screening test with an interview for the Postgraduate programs.",
+                  category: "admission"
                 },
                 {
-                  question: "How does Sunstone ensure industry readiness?",
-                  answer: "Through advanced certifications, real-world projects, internships with top companies, mentorship from industry leaders, and practical skill development programs.",
-                  category: "sunstone"
+                  question: "Are any EMI options available if I pursue a full-time course from Sunstone?",
+                  answer: "Yes, Sunstone offers flexible EMI options and financing solutions to make quality education accessible. We have partnered with leading financial institutions to provide easy payment plans that suit your financial situation.",
+                  category: "fees"
                 },
                 {
-                  question: "What scholarships are available at Hi-Tech Institute?",
-                  answer: "Hi-Tech Institute offers merit-based scholarships, need-based financial aid, and special scholarships for outstanding academic performance and extracurricular achievements.",
-                  category: "hitech"
+                  question: "Do I need to give any entrance exam to get admission to Sunstone-powered colleges?",
+                  answer: "The entrance exam requirements vary by program and college. Some programs may require entrance exams while others may have direct admission based on academic performance and interviews. Our counselors will guide you through the specific requirements for your chosen program.",
+                  category: "admission"
+                },
+                {
+                  question: "Can I get professional help for my studies if I choose Sunstone?",
+                  answer: "Yes, if you choose Sunstone you get help from counselor to choose the right career path, 70+ training and development sessions by industry experts and top recruiters, and learn from expert faculties passed out from IIM and IIT.",
+                  category: "support"
                 }
               ].map((faq, index) => (
                 <div key={index} className="group">
@@ -1232,7 +1387,9 @@ const Index = () => {
                                 {faq.question}
                               </h3>
                               <div className="text-sm font-medium mt-1 text-[#22336a]/70">
-                                {faq.category === 'sunstone' ? 'Sunstone' : 'Hi-Tech Institute'}
+                                {faq.category === 'sunstone' ? 'Sunstone' : 
+                                 faq.category === 'admission' ? 'Admission' :
+                                 faq.category === 'fees' ? 'Fees' : 'Support'}
                               </div>
                             </div>
                           </div>
@@ -1286,7 +1443,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer with Facebook Icon */}
       <footer className="bg-[#000000] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -1315,6 +1472,16 @@ const Index = () => {
             </div>
 
             <div className="flex items-center justify-center space-x-6 mb-8">
+              <a
+                href="https://facebook.com/sunstone.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300"
+              >
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
               <a
                 href="https://youtube.com/@SunstoneEducation"
                 target="_blank"
@@ -1535,6 +1702,10 @@ const Index = () => {
         }
         
         .animate-pulse-glow {
+          animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .pulse-glow {
           animation: pulse-glow 2s ease-in-out infinite;
         }
       `}</style>
