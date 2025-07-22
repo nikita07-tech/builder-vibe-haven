@@ -653,114 +653,48 @@ const Index = () => {
         </div>
       )}
 
-      {/* Placement Opportunity Program in Sunstone */}
+      {/* Placement Opportunity Program in Sunstone - Simplified */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
-              Placement Opportunity Program in Sunstone
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#22336a] mb-4">
+              Placement Opportunity Program
             </h2>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto">
+            <p className="text-lg text-gray-700">
               200+ assured placement opportunities or get your 1st year fee back*
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center shadow-lg">
-                <TrendingUp className="h-10 w-10 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-[#22336a] mb-2">200+</div>
-              <p className="text-gray-600 font-medium">Assured Placement Opportunities</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div className="text-center bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-xl p-6">
+              <div className="text-3xl font-bold text-[#22336a] mb-1">200+</div>
+              <p className="text-gray-600 text-sm">Assured Opportunities</p>
             </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center shadow-lg">
-                <Users className="h-10 w-10 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-[#22336a] mb-2">1200+</div>
-              <p className="text-gray-600 font-medium">Top Recruiting Companies</p>
+            <div className="text-center bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-xl p-6">
+              <div className="text-3xl font-bold text-[#22336a] mb-1">1200+</div>
+              <p className="text-gray-600 text-sm">Recruiting Companies</p>
             </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center shadow-lg">
-                <Trophy className="h-10 w-10 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-[#22336a] mb-2">26 LPA</div>
-              <p className="text-gray-600 font-medium">Highest Package</p>
+            <div className="text-center bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-xl p-6">
+              <div className="text-3xl font-bold text-[#22336a] mb-1">26 LPA</div>
+              <p className="text-gray-600 text-sm">Highest Package</p>
             </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center shadow-lg">
-                <Award className="h-10 w-10 text-white" />
-              </div>
-              <div className="text-4xl font-bold text-[#22336a] mb-2">100%</div>
-              <p className="text-gray-600 font-medium">Fee Back Guarantee*</p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 bg-[#c38935] rounded-lg flex items-center justify-center mb-4">
-                <Target className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-[#22336a] mb-3">Guaranteed Job Interviews</h3>
-              <p className="text-gray-600">50+ guaranteed job interviews with Placement Protection Plan</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 bg-[#22336a] rounded-lg flex items-center justify-center mb-4">
-                <Briefcase className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-[#22336a] mb-3">Career Coaching</h3>
-              <p className="text-gray-600">70+ training and development sessions by recruiters and industry experts</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 bg-[#c38935] rounded-lg flex items-center justify-center mb-4">
-                <TrendingUp className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-[#22336a] mb-3">High ROI</h3>
-              <p className="text-gray-600">63% higher ROI vs private colleges with 7x more companies</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 bg-[#22336a] rounded-lg flex items-center justify-center mb-4">
-                <Award className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-[#22336a] mb-3">Professional Portfolio</h3>
-              <p className="text-gray-600">Professional portfolio to get noticed by top recruiters</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 bg-[#c38935] rounded-lg flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-[#22336a] mb-3">Industry Connections</h3>
-              <p className="text-gray-600">Direct access to 5000+ job opportunities in top metros</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
-              <div className="w-12 h-12 bg-[#22336a] rounded-lg flex items-center justify-center mb-4">
-                <GraduationCap className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-[#22336a] mb-3">Expert Faculty</h3>
-              <p className="text-gray-600">Learn from expert faculty passed out from IIM and IIT</p>
+            <div className="text-center bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-xl p-6">
+              <div className="text-3xl font-bold text-[#22336a] mb-1">63%</div>
+              <p className="text-gray-600 text-sm">Higher ROI</p>
             </div>
           </div>
 
           <div className="text-center">
-            <div className="bg-gradient-to-r from-[#22336a]/5 to-[#c38935]/5 rounded-2xl p-6 mb-8">
+            <div className="bg-gray-50 rounded-xl p-4 mb-6">
               <p className="text-sm text-gray-600">
-                *Terms and conditions apply. Get a full refund on your 1st year tuition fee.
-                Option benefits indicate the number of job openings for each student.
+                *Terms and conditions apply. Full refund on 1st year tuition fee if placement criteria not met.
               </p>
             </div>
             <button
               onClick={() => setShowPlacementPopup(true)}
-              className="bg-gradient-to-r from-[#22336a] to-[#3b4d7a] hover:from-[#3b4d7a] hover:to-[#22336a] text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-gradient-to-r from-[#22336a] to-[#3b4d7a] hover:from-[#3b4d7a] hover:to-[#22336a] text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
-              Learn More About Placement Program
+              View Complete Program Details
             </button>
           </div>
         </div>
