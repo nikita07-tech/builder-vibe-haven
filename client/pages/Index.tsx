@@ -1102,134 +1102,178 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Admission Process Steps */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/30 to-white relative overflow-hidden">
+      {/* Enhanced Admission Process */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-orange-50 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-64 h-64 bg-[#22336a]/5 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#22336a]/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-[#22336a]/10 to-[#c38935]/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-[#c38935]/10 to-[#22336a]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 animate-fade-in">
-              Admission Process
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center px-6 py-2 bg-[#22336a]/10 rounded-full mb-6">
+              <Clock className="h-5 w-5 text-[#22336a] mr-2" />
+              <span className="text-[#22336a] font-semibold">Quick & Easy Process</span>
+            </div>
+            <h2 className="text-5xl sm:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
+              Your Journey to
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#d4a853]"> Success</span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto animate-fade-in-delay">
-              Simple steps to begin your journey towards a successful career
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Four streamlined steps to unlock your potential and transform your career
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div className="text-center group animate-slide-up" style={{ animationDelay: '0.1s' }}>
-              <div className="relative mb-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-all duration-500 animate-bounce-in">
-                  <span className="text-white font-bold text-3xl">1</span>
-                </div>
-                <div className="hidden lg:block absolute top-12 -right-8 text-[#22336a]">
-                  <ChevronRight className="h-8 w-8" />
-                </div>
-                <div className="absolute -inset-4 bg-gradient-to-r from-[#22336a]/20 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              </div>
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/30 transition-all duration-500 transform group-hover:-translate-y-2">
-                <h3 className="text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#22336a] transition-colors duration-300">
-                  Apply Now
-                </h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  Fill out our simple online application form with your details
-                </p>
-              </div>
-            </div>
+          {/* Process Steps with Enhanced Design */}
+          <div className="relative">
+            {/* Connecting Line */}
+            <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] opacity-30"></div>
 
-            <div className="text-center group animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <div className="relative mb-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-all duration-500 animate-bounce-in">
-                  <span className="text-white font-bold text-3xl">2</span>
+            <div className="grid lg:grid-cols-4 gap-8 mb-16">
+              {/* Step 1 */}
+              <div className="group relative">
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
+                      <span className="text-white font-bold text-2xl">1</span>
+                    </div>
+                    <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
+                    {/* Icon Background */}
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">Apply Online</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Submit your application through our user-friendly online portal with guided steps
+                    </p>
+                    <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
+                      <Clock className="h-4 w-4 mr-1" />
+                      5 minutes
+                    </div>
+                  </div>
                 </div>
-                <div className="hidden lg:block absolute top-12 -right-8 text-[#22336a]">
-                  <ChevronRight className="h-8 w-8" />
-                </div>
-                <div className="absolute -inset-4 bg-gradient-to-r from-[#22336a]/20 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               </div>
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/30 transition-all duration-500 transform group-hover:-translate-y-2">
-                <h3 className="text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#22336a] transition-colors duration-300">
-                  Interview & Test
-                </h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  Participate in counseling session and aptitude assessment
-                </p>
-              </div>
-            </div>
 
-            <div className="text-center group animate-slide-up" style={{ animationDelay: '0.3s' }}>
-              <div className="relative mb-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-all duration-500 animate-bounce-in">
-                  <span className="text-white font-bold text-3xl">3</span>
+              {/* Step 2 */}
+              <div className="group relative">
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
+                      <span className="text-white font-bold text-2xl">2</span>
+                    </div>
+                    <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
+                    {/* Icon Background */}
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">Assessment & Counseling</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Personalized evaluation and expert guidance to find your perfect program match
+                    </p>
+                    <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
+                      <Users className="h-4 w-4 mr-1" />
+                      Expert Guidance
+                    </div>
+                  </div>
                 </div>
-                <div className="hidden lg:block absolute top-12 -right-8 text-[#22336a]">
-                  <ChevronRight className="h-8 w-8" />
-                </div>
-                <div className="absolute -inset-4 bg-gradient-to-r from-[#22336a]/20 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               </div>
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/30 transition-all duration-500 transform group-hover:-translate-y-2">
-                <h3 className="text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#22336a] transition-colors duration-300">
-                  Document Review
-                </h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  Submit required documents for verification and eligibility check
-                </p>
-              </div>
-            </div>
 
-            <div className="text-center group animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <div className="relative mb-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-all duration-500 animate-bounce-in">
-                  <span className="text-white font-bold text-3xl">4</span>
+              {/* Step 3 */}
+              <div className="group relative">
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
+                      <span className="text-white font-bold text-2xl">3</span>
+                    </div>
+                    <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
+                    {/* Icon Background */}
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">Document Verification</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Quick verification of your academic credentials and eligibility confirmation
+                    </p>
+                    <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
+                      <Award className="h-4 w-4 mr-1" />
+                      Secure Process
+                    </div>
+                  </div>
                 </div>
-                <div className="absolute -inset-4 bg-gradient-to-r from-[#22336a]/20 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               </div>
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/30 transition-all duration-500 transform group-hover:-translate-y-2">
-                <h3 className="text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#22336a] transition-colors duration-300">
-                  Seat Book & Confirmation
-                </h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  Secure your seat and receive admission confirmation to start your journey
-                </p>
+
+              {/* Step 4 */}
+              <div className="group relative">
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
+                      <span className="text-white font-bold text-2xl">4</span>
+                    </div>
+                    <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
+                    {/* Icon Background */}
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">Welcome Aboard!</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Secure your seat and begin your transformational educational journey with us
+                    </p>
+                    <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
+                      <Trophy className="h-4 w-4 mr-1" />
+                      Success Begins
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
+          {/* Enhanced CTA Section */}
           <div className="text-center">
-            <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-[#22336a] mb-4">
-                Ready to start your journey?
-              </h3>
-              <p className="text-gray-700 mb-6">
-                Contact us today to begin the admission process
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button
-                  className="bg-[#c38935] hover:bg-[#c38935]/80 text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg"
-                  asChild
-                >
-                  <a href="tel:+917065303030" className="flex items-center">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Call Now: +91 7065-30-30-30
+            <div className="bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-3xl p-12 text-white relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16"></div>
+              <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+
+              <div className="relative z-10">
+                <h3 className="text-4xl font-bold mb-4">Ready to Transform Your Future?</h3>
+                <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                  Join thousands of successful graduates who chose excellence. Your journey starts here.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                  <a
+                    href="tel:+917065303030"
+                    className="group inline-flex items-center px-8 py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50"
+                  >
+                    <Phone className="h-5 w-5 mr-3 group-hover:animate-pulse" />
+                    <span>Call: +91 7065-30-30-30</span>
                   </a>
-                </Button>
-                <Button
-                  className="bg-[#22336a] hover:bg-[#22336a]/80 text-white px-8 py-4 text-lg font-bold rounded-lg shadow-lg"
-                  asChild
-                >
                   <a
                     href="https://sunstone.in/apply"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center"
+                    className="group inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
-                    <ExternalLink className="mr-2 h-5 w-5" />
-                    Apply Now
+                    <ExternalLink className="h-5 w-5 mr-3 group-hover:animate-bounce" />
+                    <span>Start Your Application</span>
                   </a>
-                </Button>
+                </div>
               </div>
             </div>
           </div>
