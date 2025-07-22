@@ -51,12 +51,6 @@ const Index = () => {
       subtitle: "Modern Infrastructure & Facilities"
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F5fffe55221b049ecb1b5366792405a42?format=webp&width=800",
-      alt: "Campus Facilities",
-      title: "State-of-the-Art Facilities",
-      subtitle: "Advanced Learning Environment"
-    },
-    {
       src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=800",
       alt: "Campus View",
       title: "Campus Infrastructure",
