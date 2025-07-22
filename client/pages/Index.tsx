@@ -1432,9 +1432,26 @@ const Index = () => {
                     <CollapsibleContent>
                       <div className="px-6 pb-6 -mt-2">
                         <div className="pt-6 border-t border-gray-200 bg-white rounded-xl p-6 ml-16 shadow-sm">
-                          <p className="text-gray-700 leading-relaxed text-lg">
-                            {faq.answer}
-                          </p>
+                          <div className="text-gray-700 leading-relaxed text-lg">
+                            {faq.answer.includes('•') ? (
+                              <div className="space-y-2">
+                                {faq.answer.split('\n').map((point, pointIndex) => (
+                                  <div key={pointIndex} className="flex items-start space-x-2">
+                                    {point.startsWith('•') ? (
+                                      <>
+                                        <span className="text-[#c38935] font-bold text-xl mt-0.5">•</span>
+                                        <span>{point.substring(1).trim()}</span>
+                                      </>
+                                    ) : (
+                                      <span>{point}</span>
+                                    )}
+                                  </div>
+                                ))}
+                              </div>
+                            ) : (
+                              <p>{faq.answer}</p>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </CollapsibleContent>
