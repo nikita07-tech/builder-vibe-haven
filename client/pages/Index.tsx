@@ -1132,11 +1132,11 @@ const Index = () => {
                 </div>
                 <div className="absolute -inset-4 bg-gradient-to-r from-[#22336a]/20 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               </div>
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/30 transition-all duration-500 transform group-hover:-translate-y-2">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/30 transition-all duration-500 transform group-hover:-translate-y-2 h-48 flex flex-col">
                 <h3 className="text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#22336a] transition-colors duration-300">
                   Interview & Test
                 </h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-lg leading-relaxed flex-1 flex items-center">
                   Participate in counseling session and aptitude assessment
                 </p>
               </div>
