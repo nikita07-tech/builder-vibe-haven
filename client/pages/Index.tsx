@@ -340,57 +340,47 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Enhanced Fixed Apply Now Button */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 group">
-        <div className="relative">
-          {/* Pulsing Ring Animation */}
-          <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full animate-ping opacity-30"></div>
-          <div className="absolute inset-2 w-16 h-16 bg-[#c38935] rounded-full animate-ping opacity-50 animation-delay-200"></div>
+      {/* Floating Apply Now Button */}
+      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50">
+        <div className="relative group">
+          {/* Animated Background Rings */}
+          <div className="absolute inset-0 w-16 h-16 bg-[#c38935] rounded-full animate-pulse opacity-20"></div>
+          <div className="absolute inset-1 w-14 h-14 bg-[#c38935] rounded-full animate-pulse opacity-30" style={{ animationDelay: '0.5s' }}></div>
 
           {/* Main Button */}
           <a
             href="https://sunstone.in/apply"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex flex-col items-center justify-center w-20 h-20 bg-gradient-to-br from-[#c38935] via-[#d49640] to-[#c38935] hover:from-[#d49640] hover:via-[#e6a855] hover:to-[#d49640] text-white rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-110 group-hover:rotate-12"
+            className="relative block w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#b8782e] hover:from-[#d49640] hover:to-[#c38935] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-float"
           >
-            {/* Glowing Border */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#c38935] to-[#d49640] opacity-75 blur-sm group-hover:opacity-100 transition-opacity duration-300"></div>
-
-            {/* Content */}
-            <div className="relative flex flex-col items-center justify-center space-y-1">
-              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mb-1 group-hover:bg-white/30 transition-colors duration-300">
-                <svg className="w-4 h-4 text-white animate-pulse" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            {/* Button Content */}
+            <div className="flex flex-col items-center justify-center h-full text-white">
+              <div className="mb-1">
+                <svg className="w-6 h-6 animate-bounce" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
                 </svg>
               </div>
-              <span className="text-xs font-bold tracking-wider">APPLY</span>
+              <span className="text-xs font-bold">APPLY</span>
             </div>
 
-            {/* Shine Effect */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            {/* Ripple Effect */}
+            <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:animate-ping group-hover:opacity-30"></div>
           </a>
 
           {/* Enhanced Tooltip */}
-          <div className="absolute -left-6 top-1/2 -translate-y-1/2 -translate-x-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-105">
-            <div className="bg-gradient-to-r from-[#22336a] to-[#3b4d7a] text-white text-sm px-4 py-3 rounded-xl whitespace-nowrap shadow-xl relative">
-              <div className="flex items-center space-x-2">
-                <svg className="w-4 h-4 animate-pulse" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                <span className="font-semibold">Apply Now</span>
-              </div>
-              <div className="text-xs opacity-80 mt-1">Start Your Journey</div>
-              {/* Arrow */}
-              <div className="absolute left-full top-1/2 -translate-y-1/2 border-8 border-transparent border-l-[#22336a]"></div>
+          <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
+            <div className="bg-[#22336a] text-white px-4 py-2 rounded-lg shadow-xl whitespace-nowrap relative">
+              <div className="font-semibold text-sm">Apply Now!</div>
+              <div className="text-xs opacity-80">Secure Your Future</div>
+              {/* Arrow pointing to button */}
+              <div className="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-[#22336a]"></div>
             </div>
           </div>
 
-          {/* Success Indicator */}
-          <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-bounce">
-            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-            </svg>
+          {/* Notification Badge */}
+          <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse">
+            <span className="text-white text-xs font-bold">!</span>
           </div>
         </div>
       </div>
