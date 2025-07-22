@@ -340,6 +340,29 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Fixed Apply Now Button */}
+      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 group">
+        <a
+          href="https://sunstone.in/apply"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col items-center justify-center w-16 h-24 bg-gradient-to-b from-[#c38935] to-[#b8782e] hover:from-[#d49640] hover:to-[#c38935] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 animate-pulse-glow group-hover:animate-none"
+        >
+          <div className="flex flex-col items-center space-y-1">
+            <svg className="w-6 h-6 animate-bounce" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <span className="text-xs font-bold transform -rotate-90 whitespace-nowrap">APPLY</span>
+          </div>
+        </a>
+        <div className="absolute -left-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="bg-black text-white text-sm px-3 py-2 rounded-lg whitespace-nowrap">
+            Apply Now
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full border-4 border-transparent border-l-black"></div>
+          </div>
+        </div>
+      </div>
+
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
