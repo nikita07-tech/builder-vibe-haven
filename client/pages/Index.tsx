@@ -341,7 +341,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Floating Apply Now Button */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50">
+      <div className="fixed right-6 bottom-6 z-50">
         <div className="relative group">
           {/* Animated Background Rings */}
           <div className="absolute inset-0 w-16 h-16 bg-[#c38935] rounded-full animate-pulse opacity-20"></div>
