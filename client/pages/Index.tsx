@@ -1371,7 +1371,7 @@ const Index = () => {
               {[
                 {
                   question: "Why should I choose Sunstone?",
-                  answer: "• 70+ training and development sessions by recruiters and industry experts\n• Capstone projects every semester for real-world experience\n• Professional portfolio to get noticed by top recruiters\n• Expert faculty from IIM and IIT backgrounds\n• 25 LPA highest salary with 150+ job profiles\n• 50+ guaranteed job interviews with Placement Protection Plan\n• 70% job opportunities in top metros\n• 250+ job opportunities in MNCs\n• Lifetime access to pan-India student community\n• Seed funding support through incubation cell",
+                  answer: "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
                   category: "sunstone"
                 },
                 {
