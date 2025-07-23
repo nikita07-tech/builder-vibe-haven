@@ -1058,11 +1058,25 @@ const Index = () => {
 
       {/* Ultra-Enhanced Educational Approach Section */}
       <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50/40 to-orange-50/30 relative overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Sophisticated Animated Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-[#22336a]/10 to-[#c38935]/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-[#c38935]/10 to-[#22336a]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "3s" }}></div>
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2"></div>
+          {/* Main floating orbs */}
+          <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-[#22336a]/15 via-[#c38935]/10 to-transparent rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-[#c38935]/15 via-[#22336a]/10 to-transparent rounded-full blur-3xl animate-float" style={{ animationDelay: "3s" }}></div>
+
+          {/* Additional decorative elements */}
+          <div className="absolute top-1/3 right-1/4 w-40 h-40 bg-gradient-to-br from-[#f4d03f]/20 to-transparent rounded-full blur-2xl animate-float" style={{ animationDelay: "1s" }}></div>
+          <div className="absolute bottom-1/3 left-1/4 w-32 h-32 bg-gradient-to-br from-[#3b4d7a]/20 to-transparent rounded-full blur-2xl animate-float" style={{ animationDelay: "2s" }}></div>
+
+          {/* Geometric patterns */}
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-1/4 left-1/2 w-2 h-2 bg-[#c38935]/30 rounded-full animate-ping"></div>
+            <div className="absolute top-3/4 left-1/3 w-1 h-1 bg-[#22336a]/40 rounded-full animate-ping" style={{ animationDelay: "1s" }}></div>
+            <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-[#f4d03f]/50 rounded-full animate-ping" style={{ animationDelay: "2s" }}></div>
+          </div>
+
+          {/* Central glow */}
+          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-r from-white/30 via-blue-100/20 to-orange-100/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
