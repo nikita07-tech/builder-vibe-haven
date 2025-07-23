@@ -388,11 +388,11 @@ const Index = () => {
       </div>
 
       {/* Professional Header */}
-      <header className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200 sticky top-0 z-50 transition-all duration-300">
+      <header className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 animate-slide-down">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-4 sm:space-x-8">
-              <div className="flex items-center space-x-3 sm:space-x-4 group">
+              <div className="flex items-center space-x-3 sm:space-x-4 group animate-fade-in">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
                   alt="Hi-Tech Institute"
@@ -436,7 +436,7 @@ const Index = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-3 text-center lg:text-left">
+            <div className="lg:col-span-3 text-center lg:text-left animate-slide-in-left">
               <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6 border border-white/30">
                 <span className="text-white font-semibold text-sm">PROFESSIONAL EXCELLENCE</span>
               </div>
@@ -474,7 +474,7 @@ const Index = () => {
                 </a>
               </div>
             </div>
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 animate-slide-in-right">
               <div className="relative max-w-xl mx-auto">
                 <div className="relative overflow-hidden rounded-xl shadow-lg bg-white p-2">
                   {/* Carousel Container */}
