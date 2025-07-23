@@ -472,7 +472,7 @@ const Index = () => {
                     />
                   </div>
                   <span className="text-white font-bold text-lg">
-                    Excellence in Education
+                    Powered By Sunstone
                   </span>
                 </div>
               </div>
