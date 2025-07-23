@@ -2106,9 +2106,9 @@ const Index = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-[#c38935]/10 rounded-full mb-6 animate-fade-in">
-              <Trophy className="h-5 w-5 text-[#c38935] mr-2 animate-pulse" />
+          <div className="text-center mb-16 animate-slide-up">
+            <div className="inline-flex items-center px-6 py-3 bg-[#c38935]/10 rounded-full mb-6 animate-fade-in hover:scale-110 transition-transform duration-300">
+              <Trophy className="h-5 w-5 text-[#c38935] mr-2 animate-bounce" />
               <span className="text-[#c38935] font-semibold">
                 AWARDS & RECOGNITION
               </span>
