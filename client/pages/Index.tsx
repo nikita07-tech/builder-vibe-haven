@@ -2555,137 +2555,225 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Professional Footer */}
-      <footer className="bg-[#22336a] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#22336a] via-[#1e2b5f] to-[#22336a]"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl -translate-y-48 translate-x-48"></div>
+      {/* Interactive Footer */}
+      <footer className="bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white relative overflow-hidden">
+        {/* Dynamic Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(195,137,53,0.03)_1px,transparent_1px),linear-gradient(rgba(195,137,53,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-[#c38935]/10 via-blue-500/5 to-transparent rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-blue-500/8 via-[#22336a]/5 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: "2s"}}></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
-          <div className="grid md:grid-cols-3 gap-8 items-start">
-            {/* Brand Section */}
-            <div className="md:col-span-1">
-              <div className="flex items-center space-x-3 mb-4">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
-                  alt="Hi-Tech Institute"
-                  className="h-8 w-auto"
-                />
-                <div className="h-6 w-px bg-gray-400"></div>
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
-                  alt="Sunstone"
-                  className="h-8 w-auto"
-                />
-              </div>
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                Hi-Tech Institute of Engineering & Technology, powered by Sunstone - Transforming careers through quality education and industry partnerships.
-              </p>
-              <div className="flex space-x-4">
+          {/* Floating Particles */}
+          <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-[#c38935] rounded-full animate-ping opacity-40"></div>
+          <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping opacity-30" style={{animationDelay: "1s"}}></div>
+          <div className="absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping opacity-25" style={{animationDelay: "3s"}}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <div className="relative inline-block mb-8">
+              <h2 className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-yellow-400 to-[#c38935] animate-gradient-shift" style={{backgroundSize: "200% 200%"}}>
+                Sunstone Education
+              </h2>
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#c38935]/20 via-transparent to-[#c38935]/20 rounded-lg blur-xl animate-pulse"></div>
+            </div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Hi-Tech Institute of Engineering & Technology, powered by Sunstone
+            </p>
+            <p className="text-lg text-gray-400 max-w-4xl mx-auto mt-4">
+              Transforming careers through quality education, industry partnerships, and innovative learning experiences
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-4 gap-8 mb-12">
+            {/* Connect With Us */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+                <div className="w-6 h-6 bg-[#c38935] rounded-lg mr-3 flex items-center justify-center">
+                  <Users className="h-4 w-4 text-white" />
+                </div>
+                Connect With Us
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
                 <a
-                  href="https://www.facebook.com/sunstoneeducation"
+                  href="https://www.facebook.com/sunstoneedu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-[#c38935] rounded-lg flex items-center justify-center transition-all duration-300 group"
+                  className="group relative w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-blue-500/25"
                 >
-                  <svg className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                   </svg>
+                  <div className="absolute inset-0 bg-white/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
                 <a
                   href="https://www.linkedin.com/company/sunstone-business-school"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-[#c38935] rounded-lg flex items-center justify-center transition-all duration-300 group"
+                  className="group relative w-12 h-12 bg-gradient-to-br from-blue-700 to-blue-800 hover:from-blue-600 hover:to-blue-700 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-blue-700/25"
                 >
-                  <svg className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
+                  <div className="absolute inset-0 bg-white/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
                 <a
-                  href="https://www.youtube.com/@SunstoneEducation"
+                  href="https://www.youtube.com/@SunstoneIND"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-[#c38935] rounded-lg flex items-center justify-center transition-all duration-300 group"
+                  className="group relative w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-red-500/25"
                 >
-                  <svg className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a2.998 2.998 0 0 0-2.108-2.085C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.39.555A2.998 2.998 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.998 2.998 0 0 0 2.108 2.085c1.885.555 9.39.555 9.39.555s7.505 0 9.39-.555a2.998 2.998 0 0 0 2.108-2.085C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                   </svg>
+                  <div className="absolute inset-0 bg-white/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
                 <a
-                  href="https://www.instagram.com/sunstone_education"
+                  href="https://www.instagram.com/sunstone.in/?hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-[#c38935] rounded-lg flex items-center justify-center transition-all duration-300 group"
+                  className="group relative w-12 h-12 bg-gradient-to-br from-pink-500 via-purple-500 to-orange-500 hover:from-pink-400 hover:via-purple-400 hover:to-orange-400 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-pink-500/25"
                 >
-                  <svg className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
+                  <div className="absolute inset-0 bg-white/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </a>
               </div>
             </div>
 
-            {/* Quick Links */}
-            <div className="md:col-span-1">
-              <h3 className="text-lg font-bold text-white mb-4">Programs</h3>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#" className="text-gray-300 hover:text-[#c38935] transition-colors duration-300">MBA Program</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-[#c38935] transition-colors duration-300">BBA Program</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-[#c38935] transition-colors duration-300">BCA Program</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-[#c38935] transition-colors duration-300">MCA Program</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-[#c38935] transition-colors duration-300">B.Tech Program</a></li>
+            {/* Programs */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+                <div className="w-6 h-6 bg-[#c38935] rounded-lg mr-3 flex items-center justify-center">
+                  <GraduationCap className="h-4 w-4 text-white" />
+                </div>
+                Programs
+              </h3>
+              <ul className="space-y-3">
+                <li><a href="#" className="group flex items-center text-gray-300 hover:text-[#c38935] transition-all duration-300 transform hover:translate-x-2">
+                  <ChevronRight className="h-4 w-4 mr-2 group-hover:text-[#c38935] transition-colors duration-300" />
+                  MBA Program
+                </a></li>
+                <li><a href="#" className="group flex items-center text-gray-300 hover:text-[#c38935] transition-all duration-300 transform hover:translate-x-2">
+                  <ChevronRight className="h-4 w-4 mr-2 group-hover:text-[#c38935] transition-colors duration-300" />
+                  BBA Program
+                </a></li>
+                <li><a href="#" className="group flex items-center text-gray-300 hover:text-[#c38935] transition-all duration-300 transform hover:translate-x-2">
+                  <ChevronRight className="h-4 w-4 mr-2 group-hover:text-[#c38935] transition-colors duration-300" />
+                  BCA Program
+                </a></li>
+                <li><a href="#" className="group flex items-center text-gray-300 hover:text-[#c38935] transition-all duration-300 transform hover:translate-x-2">
+                  <ChevronRight className="h-4 w-4 mr-2 group-hover:text-[#c38935] transition-colors duration-300" />
+                  MCA Program
+                </a></li>
+                <li><a href="#" className="group flex items-center text-gray-300 hover:text-[#c38935] transition-all duration-300 transform hover:translate-x-2">
+                  <ChevronRight className="h-4 w-4 mr-2 group-hover:text-[#c38935] transition-colors duration-300" />
+                  B.Tech Program
+                </a></li>
               </ul>
             </div>
 
-            {/* Contact Info */}
-            <div className="md:col-span-1">
-              <h3 className="text-lg font-bold text-white mb-4">Get in Touch</h3>
+            {/* Quick Actions */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+                <div className="w-6 h-6 bg-[#c38935] rounded-lg mr-3 flex items-center justify-center">
+                  <Zap className="h-4 w-4 text-white" />
+                </div>
+                Quick Actions
+              </h3>
               <div className="space-y-3">
-                <a
-                  href="mailto:connect@sunstone.in"
-                  className="flex items-center text-gray-300 hover:text-[#c38935] transition-colors duration-300 group"
-                >
-                  <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-[#c38935]/20 transition-colors duration-300">
-                    <Mail className="h-4 w-4" />
-                  </div>
-                  <span className="text-sm">connect@sunstone.in</span>
-                </a>
-                <a
-                  href="tel:+917065303030"
-                  className="flex items-center text-gray-300 hover:text-[#c38935] transition-colors duration-300 group"
-                >
-                  <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center mr-3 group-hover:bg-[#c38935]/20 transition-colors duration-300">
-                    <Phone className="h-4 w-4" />
-                  </div>
-                  <span className="text-sm">+91 7065-30-30-30</span>
-                </a>
-              </div>
-
-              <div className="mt-6">
                 <a
                   href="https://sunstone.in/apply"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-[#c38935] hover:bg-[#d4a853] text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+                  className="group flex items-center justify-between p-3 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white rounded-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
                 >
-                  <span>Apply Now</span>
-                  <ExternalLink className="ml-2 h-4 w-4" />
+                  <span className="font-semibold">Apply Now</span>
+                  <ExternalLink className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
+                </a>
+                <a
+                  href="tel:+917065303030"
+                  className="group flex items-center justify-between p-3 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-[#c38935]/50 text-white rounded-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  <span className="font-semibold">Call Now</span>
+                  <Phone className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
+                </a>
+              </div>
+            </div>
+
+            {/* Contact Info */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6 flex items-center">
+                <div className="w-6 h-6 bg-[#c38935] rounded-lg mr-3 flex items-center justify-center">
+                  <Mail className="h-4 w-4 text-white" />
+                </div>
+                Get in Touch
+              </h3>
+              <div className="space-y-4">
+                <a
+                  href="mailto:connect@sunstone.in"
+                  className="group flex items-center p-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#c38935]/30 rounded-xl transition-all duration-300"
+                >
+                  <div className="w-10 h-10 bg-[#c38935]/20 rounded-lg flex items-center justify-center mr-3 group-hover:bg-[#c38935]/30 transition-colors duration-300">
+                    <Mail className="h-5 w-5 text-[#c38935]" />
+                  </div>
+                  <div>
+                    <p className="text-white font-medium text-sm">Email</p>
+                    <p className="text-gray-400 text-xs">connect@sunstone.in</p>
+                  </div>
+                </a>
+                <a
+                  href="tel:+917065303030"
+                  className="group flex items-center p-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#c38935]/30 rounded-xl transition-all duration-300"
+                >
+                  <div className="w-10 h-10 bg-[#c38935]/20 rounded-lg flex items-center justify-center mr-3 group-hover:bg-[#c38935]/30 transition-colors duration-300">
+                    <Phone className="h-5 w-5 text-[#c38935]" />
+                  </div>
+                  <div>
+                    <p className="text-white font-medium text-sm">Phone</p>
+                    <p className="text-gray-400 text-xs">+91 7065-30-30-30</p>
+                  </div>
                 </a>
               </div>
             </div>
           </div>
 
+          {/* Success Stats */}
+          <div className="bg-gradient-to-r from-white/5 via-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-white/20">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              <div className="group">
+                <div className="text-3xl font-bold text-[#c38935] mb-1 group-hover:animate-bounce">1200+</div>
+                <div className="text-gray-300 text-sm">Top Recruiters</div>
+              </div>
+              <div className="group">
+                <div className="text-3xl font-bold text-[#c38935] mb-1 group-hover:animate-bounce">5000+</div>
+                <div className="text-gray-300 text-sm">Students Placed</div>
+              </div>
+              <div className="group">
+                <div className="text-3xl font-bold text-[#c38935] mb-1 group-hover:animate-bounce">26 LPA</div>
+                <div className="text-gray-300 text-sm">Highest Package</div>
+              </div>
+              <div className="group">
+                <div className="text-3xl font-bold text-[#c38935] mb-1 group-hover:animate-bounce">95%</div>
+                <div className="text-gray-300 text-sm">Placement Rate</div>
+              </div>
+            </div>
+          </div>
+
           {/* Bottom Bar */}
-          <div className="border-t border-white/20 mt-8 pt-6">
-            <div className="flex flex-col sm:flex-row justify-between items-center">
-              <p className="text-gray-400 text-sm">
-                © 2025 Sunstone Education. All rights reserved.
-              </p>
-              <div className="flex items-center space-x-4 mt-4 sm:mt-0">
-                <a href="#" className="text-gray-400 hover:text-[#c38935] text-xs transition-colors duration-300">Privacy Policy</a>
-                <span className="text-gray-600">•</span>
-                <a href="#" className="text-gray-400 hover:text-[#c38935] text-xs transition-colors duration-300">Terms of Service</a>
-                <span className="text-gray-600">•</span>
-                <a href="https://sunstone.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#c38935] text-xs transition-colors duration-300">sunstone.in</a>
+          <div className="border-t border-white/20 pt-8">
+            <div className="flex flex-col lg:flex-row justify-between items-center">
+              <div className="mb-4 lg:mb-0">
+                <p className="text-gray-400 text-sm">
+                  © 2025 Sunstone Education. All rights reserved.
+                </p>
+              </div>
+              <div className="flex items-center space-x-6">
+                <a href="#" className="text-gray-400 hover:text-[#c38935] text-sm transition-colors duration-300 hover:underline">Privacy Policy</a>
+                <a href="#" className="text-gray-400 hover:text-[#c38935] text-sm transition-colors duration-300 hover:underline">Terms of Service</a>
+                <a href="https://sunstone.in" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#c38935] text-sm transition-colors duration-300 hover:underline">sunstone.in</a>
               </div>
             </div>
           </div>
