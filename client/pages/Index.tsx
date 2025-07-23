@@ -2288,104 +2288,222 @@ const Index = () => {
         </div>
       </section>
 
-      {/* What Students Say */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
-              What Students Say
+      {/* Enhanced Student Testimonials */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "3s" }}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Enhanced Header */}
+          <div className="text-center mb-16 animate-slide-up">
+            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6 animate-fade-in">
+              <Star className="h-5 w-5 text-[#22336a] mr-2 animate-pulse" />
+              <span className="text-[#22336a] font-semibold">
+                STUDENT SUCCESS STORIES
+              </span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
+              Success
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
+                {" "}
+                Stories
+              </span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
+                That Inspire
+              </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Hear from our successful graduates who transformed their careers
-              with Hi-Tech & Sunstone
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              Discover how our programs have transformed careers and opened new opportunities
+              for students across diverse industries
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-white border border-gray-200 hover:border-[#c38935] hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-[#c38935] rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">RK</span>
+          {/* Enhanced Testimonials Grid */}
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+            {/* Testimonial 1 */}
+            <div className="group relative animate-slide-up" style={{ animationDelay: "0.1s" }}>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105">
+                <CardContent className="p-8">
+                  {/* Avatar and Info */}
+                  <div className="flex items-center mb-6">
+                    <div className="relative">
+                      <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-white font-bold text-lg">RK</span>
+                      </div>
+                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                        <span className="text-white text-xs">✓</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#c38935] transition-colors duration-300">Rahul Kumar</h4>
+                      <p className="text-sm text-gray-600">MBA Graduate • Software Engineer</p>
+                      <p className="text-xs text-[#c38935] font-semibold">TCS</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">Rahul Kumar</h4>
-                    <p className="text-sm text-gray-600">MBA Graduate - TCS</p>
-                  </div>
-                </div>
-                <div className="flex mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-700 text-sm italic">
-                  "Hi-Tech with Sunstone gave me industry exposure I needed. The
-                  placement support was exceptional, and I landed my dream job
-                  at TCS with a great package!"
-                </p>
-              </CardContent>
-            </Card>
 
-            <Card className="bg-white border border-gray-200 hover:border-[#22336a] hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-[#22336a] rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">PS</span>
+                  {/* Animated Rating */}
+                  <div className="flex mb-4 space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`h-5 w-5 text-yellow-400 fill-current transform transition-all duration-300 hover:scale-125`}
+                        style={{ animationDelay: `${i * 0.1}s` }}
+                      />
+                    ))}
                   </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">Priya Sharma</h4>
-                    <p className="text-sm text-gray-600">
-                      BCA Graduate - Infosys
+
+                  {/* Quote */}
+                  <div className="relative">
+                    <span className="text-4xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">"</span>
+                    <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
+                      The industry exposure and practical learning approach gave me exactly what I needed
+                      to excel in my career. The placement support was exceptional, and I landed my dream job
+                      with a fantastic package!
                     </p>
                   </div>
-                </div>
-                <div className="flex mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-700 text-sm italic">
-                  "The practical approach and industry connections at
-                  Hi-Tech-Sunstone helped me develop real skills. Now I'm
-                  working as a software developer at Infosys!"
-                </p>
-              </CardContent>
-            </Card>
 
-            <Card className="bg-white border border-gray-200 hover:border-[#c38935] hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-[#c38935] rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">AJ</span>
+                  {/* Floating Particles */}
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+                  <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping" style={{ animationDelay: "0.3s" }}></div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="group relative animate-slide-up" style={{ animationDelay: "0.2s" }}>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#22336a] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="relative">
+                      <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-white font-bold text-lg">PS</span>
+                      </div>
+                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                        <span className="text-white text-xs">✓</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#22336a] transition-colors duration-300">Priya Sharma</h4>
+                      <p className="text-sm text-gray-600">BCA Graduate • Full Stack Developer</p>
+                      <p className="text-xs text-[#c38935] font-semibold">Infosys</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">Amit Joshi</h4>
-                    <p className="text-sm text-gray-600">
-                      B.Tech Graduate - Wipro
+
+                  <div className="flex mb-4 space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`h-5 w-5 text-yellow-400 fill-current transform transition-all duration-300 hover:scale-125`}
+                        style={{ animationDelay: `${i * 0.1}s` }}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="relative">
+                    <span className="text-4xl text-[#22336a]/20 font-serif absolute -top-2 -left-2">"</span>
+                    <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
+                      The practical approach and industry connections helped me develop real skills that
+                      matter in today's tech landscape. The comprehensive curriculum and expert guidance
+                      prepared me perfectly for professional challenges.
                     </p>
                   </div>
-                </div>
-                <div className="flex mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-700 text-sm italic">
-                  "The advanced certifications and project-based learning
-                  prepared me perfectly for the industry. Grateful for the
-                  excellent placement support!"
+
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+                  <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping" style={{ animationDelay: "0.3s" }}></div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="group relative animate-slide-up md:col-span-2 xl:col-span-1" style={{ animationDelay: "0.3s" }}>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="relative">
+                      <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-white font-bold text-lg">AJ</span>
+                      </div>
+                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                        <span className="text-white text-xs">✓</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#c38935] transition-colors duration-300">Amit Joshi</h4>
+                      <p className="text-sm text-gray-600">B.Tech Graduate • Senior Developer</p>
+                      <p className="text-xs text-[#c38935] font-semibold">Wipro</p>
+                    </div>
+                  </div>
+
+                  <div className="flex mb-4 space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`h-5 w-5 text-yellow-400 fill-current transform transition-all duration-300 hover:scale-125`}
+                        style={{ animationDelay: `${i * 0.1}s` }}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="relative">
+                    <span className="text-4xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">"</span>
+                    <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
+                      The advanced certifications and project-based learning methodology prepared me
+                      perfectly for the industry demands. The quality of education and career support
+                      exceeded my expectations in every way.
+                    </p>
+                  </div>
+
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+                  <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping" style={{ animationDelay: "0.3s" }}></div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Success Metrics */}
+          <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-3xl p-10 text-white relative overflow-hidden animate-slide-up" style={{ animationDelay: "0.4s" }}>
+            <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16"></div>
+
+            <div className="relative z-10">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold mb-4">Student Success Metrics</h3>
+                <p className="text-xl opacity-90 max-w-3xl mx-auto">
+                  Real numbers that reflect our commitment to student success and career transformation
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in">
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">98%</div>
+                  <p className="text-lg opacity-90">Satisfaction Rate</p>
+                  <p className="text-sm opacity-70 mt-1">Student Feedback</p>
+                </div>
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">95%</div>
+                  <p className="text-lg opacity-90">Career Growth</p>
+                  <p className="text-sm opacity-70 mt-1">Within 2 Years</p>
+                </div>
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">15K+</div>
+                  <p className="text-lg opacity-90">Success Stories</p>
+                  <p className="text-sm opacity-70 mt-1">And Counting</p>
+                </div>
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">4.9★</div>
+                  <p className="text-lg opacity-90">Average Rating</p>
+                  <p className="text-sm opacity-70 mt-1">Student Reviews</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
