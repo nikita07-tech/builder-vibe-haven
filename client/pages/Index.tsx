@@ -603,74 +603,140 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Placement Opportunity Program Popup */}
+      {/* Professional Placement Opportunity Program Popup */}
       {showPlacementPopup && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-fadeIn">
-          <div className="bg-white rounded-3xl max-w-4xl w-full mx-4 relative animate-scaleIn transform perspective-1000 animate-bounce-in shadow-2xl max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-5xl w-full mx-4 relative shadow-2xl max-h-[90vh] overflow-y-auto animate-scaleIn">
             <button
               onClick={() => setShowPlacementPopup(false)}
-              className="absolute top-6 right-6 w-12 h-12 bg-gray-100 hover:bg-red-100 rounded-full flex items-center justify-center transition-all duration-300 z-10 hover:scale-110 group"
+              className="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-300 z-10 group"
             >
-              <X className="h-6 w-6 text-gray-600 group-hover:text-red-500 transition-colors" />
+              <X className="h-5 w-5 text-gray-600 group-hover:text-gray-800 transition-colors" />
             </button>
-            
-            <div className="p-10">
-              <div className="text-center mb-10">
-                <div className="w-24 h-24 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto mb-6 animate-spin-slow shadow-xl">
-                  <TrendingUp className="h-12 w-12 text-white animate-bounce" />
+
+            <div className="p-8">
+              {/* Professional Header */}
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center px-4 py-2 bg-[#22336a]/10 rounded-full mb-4">
+                  <Award className="h-4 w-4 text-[#22336a] mr-2" />
+                  <span className="text-[#22336a] font-semibold text-sm">PLACEMENT ASSURANCE PROGRAM</span>
                 </div>
-                <h3 className="text-4xl font-bold text-[#22336a] mb-4 animate-slide-up">
-                  PLACEMENT OPPORTUNITY PROGRAM OF SUNSTONE
+                <h3 className="text-3xl font-bold text-[#22336a] mb-4">
+                  Comprehensive Career Success Program
                 </h3>
-                <p className="text-gray-600 text-xl animate-fade-in-delay">
-                  200+ assured placement opportunities or get your 1st year fee back*
+                <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                  Industry-leading placement program with guaranteed opportunities and comprehensive support system
                 </p>
               </div>
 
-              <div className="mb-8">
-                <img 
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F5fffe55221b049ecb1b5366792405a42?format=webp&width=800"
-                  alt="Placement Opportunity Program"
-                  className="w-full rounded-2xl shadow-lg"
-                />
-              </div>
-
-              <div className="grid grid-cols-2 gap-8 mb-10">
-                <div className="text-center p-8 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-left">
-                  <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">200+</div>
-                  <p className="text-gray-600 font-medium text-lg">Assured Placement Opportunities</p>
+              {/* Key Metrics Grid */}
+              <div className="grid md:grid-cols-4 gap-6 mb-8">
+                <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
+                  <div className="text-3xl font-bold text-[#22336a] mb-2">200+</div>
+                  <p className="text-gray-600 font-medium">Guaranteed Opportunities</p>
                 </div>
-                <div className="text-center p-8 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-right">
-                  <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">100%</div>
-                  <p className="text-gray-600 font-medium text-lg">Fee Back Guarantee*</p>
+                <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
+                  <div className="text-3xl font-bold text-[#22336a] mb-2">100%</div>
+                  <p className="text-gray-600 font-medium">Fee Back Guarantee</p>
                 </div>
-                <div className="text-center p-8 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
-                  <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">1200+</div>
-                  <p className="text-gray-600 font-medium text-lg">Top Recruiting Companies</p>
+                <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
+                  <div className="text-3xl font-bold text-[#22336a] mb-2">1200+</div>
+                  <p className="text-gray-600 font-medium">Partner Companies</p>
                 </div>
-                <div className="text-center p-8 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-2xl transform hover:scale-105 transition-all duration-300 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
-                  <div className="text-4xl font-bold text-[#22336a] mb-3 animate-count-up">26 LPA</div>
-                  <p className="text-gray-600 font-medium text-lg">Highest Package</p>
+                <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
+                  <div className="text-3xl font-bold text-[#22336a] mb-2">26 LPA</div>
+                  <p className="text-gray-600 font-medium">Highest Package</p>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-[#22336a]/5 to-[#c38935]/5 rounded-2xl p-6 mb-8">
-                <p className="text-sm text-gray-600 text-center">
-                  *Terms and conditions apply. Get a full refund on your 1st year tuition fee. 
-                  Option benefits indicate the number of job openings for each student.
+              {/* Program Features */}
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h4 className="text-xl font-bold text-[#22336a] mb-4">Program Highlights</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
+                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                      </div>
+                      <p className="text-gray-700">Dedicated placement officer for each student</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
+                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                      </div>
+                      <p className="text-gray-700">Minimum 50+ guaranteed interview opportunities</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
+                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                      </div>
+                      <p className="text-gray-700">Comprehensive skill development workshops</p>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
+                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                      </div>
+                      <p className="text-gray-700">Professional portfolio development</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-bold text-[#22336a] mb-4">Success Metrics</h4>
+                  <div className="space-y-4">
+                    <div className="p-4 bg-[#22336a]/5 rounded-lg">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-gray-700 font-medium">Placement Rate</span>
+                        <span className="text-[#22336a] font-bold">95%</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div className="bg-[#22336a] h-2 rounded-full" style={{ width: '95%' }}></div>
+                      </div>
+                    </div>
+                    <div className="p-4 bg-[#c38935]/5 rounded-lg">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-gray-700 font-medium">Student Satisfaction</span>
+                        <span className="text-[#22336a] font-bold">98%</span>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div className="bg-[#c38935] h-2 rounded-full" style={{ width: '98%' }}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Terms and CTA */}
+              <div className="border-t border-gray-200 pt-6">
+                <p className="text-sm text-gray-500 text-center mb-6 max-w-3xl mx-auto">
+                  Terms and conditions apply. Placement guarantee subject to program completion, maintaining minimum academic standards, and active participation in placement activities. Full terms available upon enrollment.
                 </p>
-              </div>
-
-              <div className="text-center">
-                <a
-                  href="https://sunstone.in/apply"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-[#22336a] to-[#3b4d7a] text-white font-bold rounded-2xl hover:shadow-2xl transition-all duration-500 transform hover:scale-110 animate-pulse-glow text-lg"
-                >
-                  <span>Apply Now for Placement Opportunity Program</span>
-                  <ExternalLink className="ml-3 h-6 w-6 animate-bounce" />
-                </a>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="https://sunstone.in/apply"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-8 py-3 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                  >
+                    <span>Apply Now</span>
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                  <a
+                    href="tel:+917065303030"
+                    className="inline-flex items-center justify-center px-8 py-3 bg-white border-2 border-[#22336a] text-[#22336a] font-bold rounded-lg hover:bg-[#22336a] hover:text-white transition-all duration-300"
+                  >
+                    <Phone className="mr-2 h-4 w-4" />
+                    <span>Call for Details</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1510,7 +1576,7 @@ const Index = () => {
               {[
                 {
                   question: "Why should I choose Sunstone?",
-                  answer: "��� Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
+                  answer: "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
                   category: "sunstone"
                 },
                 {
