@@ -677,162 +677,154 @@ const Index = () => {
         </div>
       )}
 
-      {/* Creative Placement Guarantee Program */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      {/* Professional Placement Guarantee Program */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full opacity-5">
-            <svg className="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#22336a" strokeWidth="0.5"/>
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg>
-          </div>
-          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-[#22336a]/10 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-10 right-10 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Creative Header with Split Design */}
-          <div className="text-center mb-20">
-            <div className="relative inline-block">
-              <h2 className="text-6xl sm:text-7xl font-bold mb-8 relative">
-                <span className="text-[#22336a]">PLACEMENT</span>
-                <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">GUARANTEE</span>
-                {/* Decorative Elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#c38935] rounded-full animate-bounce"></div>
-                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-[#22336a] rounded-full animate-bounce" style={{ animationDelay: '0.5s' }}></div>
-              </h2>
+          {/* Professional Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6">
+              <Award className="h-5 w-5 text-[#22336a] mr-2" />
+              <span className="text-[#22336a] font-semibold">PLACEMENT ASSURANCE</span>
             </div>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              200+ opportunities or 100% money back - Your success is our guarantee
+            <h2 className="text-4xl sm:text-5xl font-bold text-[#22336a] mb-6 leading-tight">
+              Career Success
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]"> Guaranteed</span>
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Industry-leading placement program with 200+ assured opportunities and comprehensive career support
             </p>
           </div>
 
-          {/* Creative Hexagon Layout */}
-          <div className="relative mb-20">
-            <div className="flex justify-center">
-              <div className="relative w-full max-w-4xl">
-                {/* Central Hexagon - Main Promise */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-                  <div className="relative w-64 h-64 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] transform rotate-45 rounded-3xl shadow-2xl hover:scale-110 transition-all duration-500 group cursor-pointer">
-                    <div className="absolute inset-4 bg-white transform -rotate-45 rounded-2xl flex flex-col items-center justify-center text-center p-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mb-4 transform group-hover:rotate-180 transition-transform duration-500">
-                        <Trophy className="h-8 w-8 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-[#22336a] mb-2">200+</h3>
-                      <p className="text-sm text-gray-600">Guaranteed Opportunities</p>
-                    </div>
+          {/* Professional Grid Layout */}
+          <div className="grid lg:grid-cols-2 gap-16 mb-20">
+            {/* Left Side - Key Guarantees */}
+            <div className="space-y-8">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 group">
+                <div className="flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Trophy className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">200+ Placement Opportunities</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Guaranteed access to over 200 placement opportunities across leading companies and emerging startups in your field.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 group">
+                <div className="flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <TrendingUp className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">100% Fee Back Guarantee</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      If you don't receive the promised placement opportunities, we'll refund your entire first-year tuition fee.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 group">
+                <div className="flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">Dedicated Career Support</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Personal mentorship, interview preparation, and continuous guidance from industry professionals throughout your journey.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Program Benefits */}
+            <div className="bg-white rounded-2xl p-10 shadow-xl border border-gray-200">
+              <h3 className="text-3xl font-bold text-[#22336a] mb-8 text-center">Program Benefits</h3>
+
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+                  <div className="w-10 h-10 bg-[#22336a] rounded-lg flex items-center justify-center">
+                    <Target className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#22336a]">50+ Guaranteed Interviews</h4>
+                    <p className="text-gray-600 text-sm">Minimum interview opportunities with top companies</p>
                   </div>
                 </div>
 
-                {/* Surrounding Elements */}
-                <div className="grid grid-cols-3 gap-8 pt-32 pb-32">
-                  {/* Top Row */}
-                  <div className="flex justify-center">
-                    <div className="w-40 h-40 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-2xl border-2 border-[#c38935]/30 flex flex-col items-center justify-center text-center p-4 hover:scale-105 transition-all duration-300 hover:bg-[#c38935]/10">
-                      <Users className="h-8 w-8 text-[#c38935] mb-2" />
-                      <p className="text-sm font-semibold text-[#22336a]">Expert Mentorship</p>
-                    </div>
+                <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+                  <div className="w-10 h-10 bg-[#c38935] rounded-lg flex items-center justify-center">
+                    <BookOpen className="h-5 w-5 text-white" />
                   </div>
-                  <div className="flex justify-center">
-                    <div className="w-40 h-40 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-2xl border-2 border-[#22336a]/30 flex flex-col items-center justify-center text-center p-4 hover:scale-105 transition-all duration-300 hover:bg-[#22336a]/10">
-                      <Target className="h-8 w-8 text-[#22336a] mb-2" />
-                      <p className="text-sm font-semibold text-[#22336a]">50+ Interviews</p>
-                    </div>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="w-40 h-40 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-2xl border-2 border-[#c38935]/30 flex flex-col items-center justify-center text-center p-4 hover:scale-105 transition-all duration-300 hover:bg-[#c38935]/10">
-                      <Award className="h-8 w-8 text-[#c38935] mb-2" />
-                      <p className="text-sm font-semibold text-[#22336a]">Skills Training</p>
-                    </div>
-                  </div>
-
-                  {/* Bottom Row */}
-                  <div className="flex justify-center">
-                    <div className="w-40 h-40 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-2xl border-2 border-[#22336a]/30 flex flex-col items-center justify-center text-center p-4 hover:scale-105 transition-all duration-300 hover:bg-[#22336a]/10">
-                      <Briefcase className="h-8 w-8 text-[#22336a] mb-2" />
-                      <p className="text-sm font-semibold text-[#22336a]">Career Support</p>
-                    </div>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="w-40 h-40 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-2xl border-2 border-[#c38935]/30 flex flex-col items-center justify-center text-center p-4 hover:scale-105 transition-all duration-300 hover:bg-[#c38935]/10">
-                      <TrendingUp className="h-8 w-8 text-[#c38935] mb-2" />
-                      <p className="text-sm font-semibold text-[#22336a]">Money Back</p>
-                    </div>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="w-40 h-40 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-2xl border-2 border-[#22336a]/30 flex flex-col items-center justify-center text-center p-4 hover:scale-105 transition-all duration-300 hover:bg-[#22336a]/10">
-                      <BookOpen className="h-8 w-8 text-[#22336a] mb-2" />
-                      <p className="text-sm font-semibold text-[#22336a]">Industry Ready</p>
-                    </div>
+                  <div>
+                    <h4 className="font-bold text-[#22336a]">Skills Development</h4>
+                    <p className="text-gray-600 text-sm">70+ training sessions by industry experts</p>
                   </div>
                 </div>
+
+                <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+                  <div className="w-10 h-10 bg-[#22336a] rounded-lg flex items-center justify-center">
+                    <Award className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#22336a]">Professional Portfolio</h4>
+                    <p className="text-gray-600 text-sm">Build impressive portfolio with real projects</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+                  <div className="w-10 h-10 bg-[#c38935] rounded-lg flex items-center justify-center">
+                    <Briefcase className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#22336a]">Industry Network</h4>
+                    <p className="text-gray-600 text-sm">Access to extensive professional network</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 p-4 bg-[#22336a]/5 rounded-xl">
+                <p className="text-sm text-gray-600 text-center font-medium">
+                  Verified by independent auditors and trusted by 10,000+ students
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Creative Stats Section */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#22336a] to-[#3b4d7a] rounded-3xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
-              <div className="relative bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100">
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-[#22336a] mb-2">100%</div>
-                  <p className="text-gray-600 font-semibold">Fee Back Guarantee</p>
-                  <p className="text-sm text-gray-500 mt-2">If placement criteria not met</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-3xl transform -rotate-1 group-hover:-rotate-2 transition-transform duration-300"></div>
-              <div className="relative bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100">
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-[#22336a] mb-2">200+</div>
-                  <p className="text-gray-600 font-semibold">Opportunities</p>
-                  <p className="text-sm text-gray-500 mt-2">Assured placement chances</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#22336a] to-[#3b4d7a] rounded-3xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"></div>
-              <div className="relative bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100">
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-[#22336a] mb-2">1:1</div>
-                  <p className="text-gray-600 font-semibold">Personal Mentoring</p>
-                  <p className="text-sm text-gray-500 mt-2">Dedicated career guidance</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Interactive CTA */}
+          {/* Professional CTA */}
           <div className="text-center">
-            <div className="relative inline-block group">
-              <div className="absolute inset-0 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-              <button
-                onClick={() => setShowPlacementPopup(true)}
-                className="relative px-12 py-6 bg-gradient-to-r from-[#22336a] to-[#3b4d7a] text-white font-bold text-xl rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl"
-              >
-                <span className="flex items-center">
-                  Explore Guarantee Program
-                  <div className="ml-3 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                    <ChevronRight className="h-5 w-5" />
-                  </div>
-                </span>
-              </button>
+            <div className="max-w-2xl mx-auto">
+              <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-2xl p-8 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold mb-4">Ready to Secure Your Future?</h3>
+                  <p className="text-lg opacity-90 mb-6">Join our placement guarantee program and take the first step towards career success</p>
+                  <button
+                    onClick={() => setShowPlacementPopup(true)}
+                    className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  >
+                    Learn More About Program
+                    <ChevronRight className="ml-2 h-5 w-5" />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Terms */}
           <div className="text-center mt-8">
-            <p className="text-sm text-gray-500 max-w-2xl mx-auto">
-              *Terms and conditions apply. Placement guarantee subject to program completion, maintaining minimum academic standards, and active participation in placement activities.
+            <p className="text-sm text-gray-500 max-w-3xl mx-auto leading-relaxed">
+              Terms and conditions apply. Placement guarantee is subject to program completion, maintaining minimum academic standards, and active participation in placement activities. Full terms available upon request.
             </p>
           </div>
         </div>
@@ -1518,7 +1510,7 @@ const Index = () => {
               {[
                 {
                   question: "Why should I choose Sunstone?",
-                  answer: "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
+                  answer: "��� Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
                   category: "sunstone"
                 },
                 {
