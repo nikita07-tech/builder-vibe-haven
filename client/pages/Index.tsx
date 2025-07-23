@@ -1056,8 +1056,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Educational Approach Section */}
-      <section className="py-20 bg-gradient-to-br from-white via-blue-50/30 to-orange-50/20 relative overflow-hidden">
+      {/* Ultra-Enhanced Educational Approach Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50/40 to-orange-50/30 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-[#22336a]/10 to-[#c38935]/10 rounded-full blur-3xl animate-float"></div>
