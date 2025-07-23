@@ -475,7 +475,7 @@ const Index = () => {
               </div>
             </div>
             <div className="lg:col-span-2">
-              <div className="relative max-w-sm mx-auto">
+              <div className="relative max-w-lg mx-auto">
                 <div className="relative overflow-hidden rounded-xl shadow-lg bg-white p-2">
                   {/* Carousel Container */}
                   <div className="relative">
