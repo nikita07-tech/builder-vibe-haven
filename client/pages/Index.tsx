@@ -2169,20 +2169,20 @@ const Index = () => {
               className="group relative animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-6 hover:scale-105 hover:rotate-1 group-hover:animate-pulse-glow">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-300">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800"
                       alt="IndiGlobal Education Award"
-                      className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500 group-hover:animate-float"
+                      className="w-full h-full object-contain p-4"
                     />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center animate-spin-slow">
-                    <Star className="h-4 w-4 text-white animate-pulse" />
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
+                    <Star className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#22336a] transition-all duration-500 transform group-hover:scale-110 group-hover:animate-bounce">
+                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#22336a] transition-colors duration-300">
                   IndiGlobal Education
                 </h3>
                 <p className="text-gray-600 text-sm text-center leading-relaxed">
