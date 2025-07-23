@@ -340,47 +340,37 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Floating Apply Now Button */}
+      {/* Professional Fixed Apply Button */}
       <div className="fixed right-6 bottom-6 z-50">
         <div className="relative group">
-          {/* Animated Background Rings */}
-          <div className="absolute inset-0 w-16 h-16 bg-[#c38935] rounded-full animate-pulse opacity-20"></div>
-          <div className="absolute inset-1 w-14 h-14 bg-[#c38935] rounded-full animate-pulse opacity-30" style={{ animationDelay: '0.5s' }}></div>
-
-          {/* Main Button */}
+          {/* Professional Main Button */}
           <a
             href="https://sunstone.in/apply"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative block w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#b8782e] hover:from-[#d49640] hover:to-[#c38935] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-float"
+            className="relative flex items-center justify-center w-auto px-6 py-3 bg-gradient-to-r from-[#22336a] to-[#2d4a7b] hover:from-[#2d4a7b] hover:to-[#22336a] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20"
           >
             {/* Button Content */}
-            <div className="flex flex-col items-center justify-center h-full text-white">
-              <div className="mb-1">
-                <svg className="w-6 h-6 animate-bounce" fill="currentColor" viewBox="0 0 24 24">
+            <div className="flex items-center space-x-2">
+              <div className="w-6 h-6 bg-white/20 rounded-lg flex items-center justify-center">
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
                 </svg>
               </div>
-              <span className="text-xs font-bold">APPLY</span>
+              <span className="text-sm font-bold">Apply Now</span>
             </div>
 
-            {/* Ripple Effect */}
-            <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:animate-ping group-hover:opacity-30"></div>
+            {/* Subtle Glow Effect */}
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#22336a] to-[#2d4a7b] opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
           </a>
 
-          {/* Enhanced Tooltip */}
-          <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
-            <div className="bg-[#22336a] text-white px-4 py-2 rounded-lg shadow-xl whitespace-nowrap relative">
-              <div className="font-semibold text-sm">Apply Now!</div>
-              <div className="text-xs opacity-80">Secure Your Future</div>
+          {/* Professional Tooltip */}
+          <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
+            <div className="bg-gray-900 text-white px-3 py-2 rounded-lg shadow-xl whitespace-nowrap relative">
+              <div className="text-sm font-medium">Start Your Application</div>
               {/* Arrow pointing to button */}
-              <div className="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-[#22336a]"></div>
+              <div className="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-gray-900"></div>
             </div>
-          </div>
-
-          {/* Notification Badge */}
-          <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse">
-            <span className="text-white text-xs font-bold">!</span>
           </div>
         </div>
       </div>
