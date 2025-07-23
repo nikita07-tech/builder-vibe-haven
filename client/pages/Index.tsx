@@ -2246,6 +2246,28 @@ Assured placement opportunities with 1200+ top recruiting companies
           }
         }
 
+        @keyframes slide-down {
+          0% {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes fade-in-up {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
         @keyframes gradient-shift {
           0%, 100% {
             background-position: 0% 50%;
@@ -2329,6 +2351,14 @@ Assured placement opportunities with 1200+ top recruiting companies
         
         .animate-slide-up {
           animation: slide-up 0.6s ease-out;
+        }
+
+        .animate-slide-down {
+          animation: slide-down 0.6s ease-out;
+        }
+
+        .animate-fade-in-up {
+          animation: fade-in-up 0.6s ease-out;
         }
         
         .animate-slide-in-left {
