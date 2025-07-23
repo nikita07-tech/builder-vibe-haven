@@ -2280,13 +2280,13 @@ const Index = () => {
           </div>
 
           {/* Recognition Statistics */}
-          <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-3xl p-12 text-white relative overflow-hidden shadow-2xl">
+          <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-3xl p-12 text-white relative overflow-hidden shadow-2xl animate-slide-up hover:shadow-3xl transition-all duration-500 hover:scale-105">
             <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20"></div>
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16"></div>
             <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
 
             <div className="relative z-10">
-              <div className="text-center mb-8 animate-pulse-glow">
+              <div className="text-center mb-8 animate-pulse-glow hover:animate-bounce">
                 <h3 className="text-3xl font-bold mb-4 animate-gradient-text">
                   Industry Recognition
                 </h3>
@@ -2297,8 +2297,8 @@ const Index = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-500 hover:scale-110 hover:-translate-y-2 hover:rotate-2 animate-fade-in">
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce group-hover:scale-125 transition-transform duration-300">
                     5+
                   </div>
                   <p className="text-lg opacity-90">Major Awards</p>
@@ -2306,15 +2306,15 @@ const Index = () => {
                     Industry Recognition
                   </p>
                 </div>
-                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-500 hover:scale-110 hover:-translate-y-2 hover:rotate-1 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce group-hover:scale-125 transition-transform duration-300">
                     10,000+
                   </div>
                   <p className="text-lg opacity-90">Students Impacted</p>
                   <p className="text-sm opacity-70 mt-1">Lives Transformed</p>
                 </div>
-                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-500 hover:scale-110 hover:-translate-y-2 hover:rotate-2 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce group-hover:scale-125 transition-transform duration-300">
                     100+
                   </div>
                   <p className="text-lg opacity-90">Industry Partners</p>
