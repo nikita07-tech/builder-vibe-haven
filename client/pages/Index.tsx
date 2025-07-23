@@ -663,7 +663,7 @@ const Index = () => {
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
                   <div className="text-3xl font-bold text-[#22336a] mb-2">100%</div>
-                  <p className="text-gray-600 font-medium">Fee Back Guarantee</p>
+                  <p className="text-gray-600 font-medium">First Year Tuition Fee Back</p>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
                   <div className="text-3xl font-bold text-[#22336a] mb-2">1200+</div>
