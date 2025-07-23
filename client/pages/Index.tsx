@@ -551,7 +551,7 @@ const Index = () => {
       {/* Placement Highlights - Updated without emojis */}
       <section className="py-12 bg-[#22336a]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-xl shadow-xl overflow-hidden">
+          <div className="bg-white rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-shadow duration-500">
             <div className="bg-[#c38935] text-white px-6 py-4">
               <div className="flex items-center justify-between">
                 <div>
@@ -1058,7 +1058,7 @@ Comprehensive placement support with assured career guidance and guaranteed succ
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* 1. Industry Expert Sessions */}
-            <div className="group relative">
+            <div className="group relative animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <BookOpen className="h-8 w-8 text-white" />
@@ -1072,7 +1072,7 @@ Comprehensive placement support with assured career guidance and guaranteed succ
             </div>
 
             {/* 2. Professional Portfolio */}
-            <div className="group relative">
+            <div className="group relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Award className="h-8 w-8 text-white" />
@@ -1086,8 +1086,8 @@ Comprehensive placement support with assured career guidance and guaranteed succ
             </div>
 
             {/* 3. Placement Opportunities (with enhanced popup) */}
-            <div 
-              className="group relative cursor-pointer"
+            <div
+              className="group relative cursor-pointer animate-fade-in-up" style={{ animationDelay: '0.3s' }}
               onClick={() => setShowPlacementPopup(true)}
             >
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
@@ -1107,7 +1107,7 @@ Assured placement opportunities with 1200+ top recruiting companies
             </div>
 
             {/* 4. Advanced Certifications */}
-            <div className="group relative">
+            <div className="group relative animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="h-8 w-8 text-white" />
