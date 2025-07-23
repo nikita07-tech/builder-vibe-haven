@@ -2196,20 +2196,20 @@ const Index = () => {
               className="group relative animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-6 hover:scale-105 hover:rotate-3 group-hover:animate-pulse">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fc50132f6b1ef47a481e34f16b5b1f8fa?format=webp&width=800"
                       alt="HolonIQ South Asia EdTech 100"
-                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500 group-hover:animate-bounce"
                     />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
-                    <Award className="h-4 w-4 text-white" />
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center animate-bounce">
+                    <Award className="h-4 w-4 text-white animate-spin" />
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
+                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-all duration-500 transform group-hover:scale-110 group-hover:animate-pulse">
                   HolonIQ EdTech 100
                 </h3>
                 <p className="text-gray-600 text-sm text-center leading-relaxed">
