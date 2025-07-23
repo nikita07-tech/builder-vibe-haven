@@ -410,7 +410,7 @@ const Index = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-16 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
+                  className="h-12 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
                 />
               </div>
             </div>
