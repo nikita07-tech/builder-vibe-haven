@@ -923,8 +923,7 @@ const Index = () => {
                     onClick={() => setShowPlacementPopup(true)}
                     className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
-                    Learn More About Program
-                    <ChevronRight className="ml-2 h-5 w-5" />
+                    <ChevronRight className="h-5 w-5" />
                   </button>
                 </div>
               </div>
