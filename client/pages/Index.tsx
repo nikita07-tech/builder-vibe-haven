@@ -1551,11 +1551,11 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-[#c38935] rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">MBA</span>
+                    <span className="text-white font-bold">RK</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#22336a]">MBA Graduate</h4>
-                    <p className="text-sm text-gray-600">Business Management Program</p>
+                    <h4 className="font-bold text-[#22336a]">Rahul Kumar</h4>
+                    <p className="text-sm text-gray-600">MBA Graduate - TCS</p>
                   </div>
                 </div>
                 <div className="flex mb-3">
@@ -1567,7 +1567,7 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-gray-700 text-sm italic">
-                  "The program provided excellent industry exposure and practical learning. The placement support helped me secure a leadership role in a top company."
+                  "Hi-Tech with Sunstone gave me industry exposure I needed. The placement support was exceptional, and I landed my dream job at TCS with a great package!"
                 </p>
               </CardContent>
             </Card>
@@ -1576,11 +1576,11 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-[#22336a] rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">BCA</span>
+                    <span className="text-white font-bold">PS</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#22336a]">BCA Graduate</h4>
-                    <p className="text-sm text-gray-600">Computer Applications Program</p>
+                    <h4 className="font-bold text-[#22336a]">Priya Sharma</h4>
+                    <p className="text-sm text-gray-600">BCA Graduate - Infosys</p>
                   </div>
                 </div>
                 <div className="flex mb-3">
@@ -1592,7 +1592,7 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-gray-700 text-sm italic">
-                  "The hands-on approach and modern curriculum helped me develop in-demand technical skills. Great foundation for my technology career."
+                  "The practical approach and industry connections at Hi-Tech-Sunstone helped me develop real skills. Now I'm working as a software developer at Infosys!"
                 </p>
               </CardContent>
             </Card>
@@ -1601,11 +1601,11 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-[#c38935] rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">B.Tech</span>
+                    <span className="text-white font-bold">AJ</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#22336a]">B.Tech Graduate</h4>
-                    <p className="text-sm text-gray-600">Engineering Program</p>
+                    <h4 className="font-bold text-[#22336a]">Amit Joshi</h4>
+                    <p className="text-sm text-gray-600">B.Tech Graduate - Wipro</p>
                   </div>
                 </div>
                 <div className="flex mb-3">
@@ -1617,7 +1617,7 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-gray-700 text-sm italic">
-                  "Excellent faculty and comprehensive curriculum with real-world projects. The program prepared me well for the engineering industry."
+                  "The advanced certifications and project-based learning prepared me perfectly for the industry. Grateful for the excellent placement support!"
                 </p>
               </CardContent>
             </Card>
