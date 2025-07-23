@@ -1695,7 +1695,7 @@ Assured placement opportunities with 1200+ top recruiting companies
           </div>
 
           {/* Awards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
             {/* ASSOCHAM Award */}
             <div className="group relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
@@ -1791,6 +1791,33 @@ Assured placement opportunities with 1200+ top recruiting companies
                 </p>
               </div>
             </div>
+
+            {/* Education Innovation Summit Award */}
+            <div className="group relative animate-fade-in" style={{ animationDelay: '0.5s' }}>
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:rotate-1">
+                <div className="relative mb-6">
+                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F9a5d04f143714c30b0905a3a9d2c3b0f?format=webp&width=800"
+                      alt="Education Innovation Summit Award"
+                      className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center animate-bounce">
+                    <Star className="h-4 w-4 text-white" />
+                  </div>
+                  {/* Floating particles */}
+                  <div className="absolute -top-1 -left-1 w-3 h-3 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+                  <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping" style={{ animationDelay: '0.3s' }}></div>
+                </div>
+                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
+                  Education Innovation
+                </h3>
+                <p className="text-gray-600 text-sm text-center leading-relaxed">
+                  Summit & Awards 2023
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Recognition Statistics */}
@@ -1800,26 +1827,26 @@ Assured placement opportunities with 1200+ top recruiting companies
             <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
 
             <div className="relative z-10">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold mb-4">Industry Recognition</h3>
+              <div className="text-center mb-8 animate-pulse-glow">
+                <h3 className="text-3xl font-bold mb-4 animate-gradient-text">Industry Recognition</h3>
                 <p className="text-xl opacity-90 max-w-3xl mx-auto">
                   Our achievements reflect our commitment to transforming lives through quality education
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2">4+</div>
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">5+</div>
                   <p className="text-lg opacity-90">Major Awards</p>
                   <p className="text-sm opacity-70 mt-1">Industry Recognition</p>
                 </div>
-                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2">10,000+</div>
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">10,000+</div>
                   <p className="text-lg opacity-90">Students Impacted</p>
                   <p className="text-sm opacity-70 mt-1">Lives Transformed</p>
                 </div>
-                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2">100+</div>
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">100+</div>
                   <p className="text-lg opacity-90">Industry Partners</p>
                   <p className="text-sm opacity-70 mt-1">Trust & Collaboration</p>
                 </div>
