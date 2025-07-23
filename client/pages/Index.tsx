@@ -404,13 +404,13 @@ const Index = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
                   alt="Hi-Tech Institute"
-                  className="h-12 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                  className="h-8 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
                 />
                 <div className="h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-12 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
+                  className="h-8 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
                 />
               </div>
             </div>
