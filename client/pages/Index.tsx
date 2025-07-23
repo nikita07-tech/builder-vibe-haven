@@ -2250,17 +2250,17 @@ const Index = () => {
               className="group relative animate-fade-in"
               style={{ animationDelay: "0.5s" }}
             >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:rotate-1">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-8 hover:scale-110 hover:rotate-6 group-hover:animate-bounce-in">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F9a5d04f143714c30b0905a3a9d2c3b0f?format=webp&width=800"
                       alt="Education Innovation Summit Award"
-                      className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-contain p-4 group-hover:scale-125 transition-transform duration-700 group-hover:animate-pulse"
                     />
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center animate-bounce">
-                    <Star className="h-4 w-4 text-white" />
+                    <Star className="h-4 w-4 text-white animate-spin" />
                   </div>
                   {/* Floating particles */}
                   <div className="absolute -top-1 -left-1 w-3 h-3 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
@@ -2269,7 +2269,7 @@ const Index = () => {
                     style={{ animationDelay: "0.3s" }}
                   ></div>
                 </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
+                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-all duration-500 transform group-hover:scale-125 group-hover:animate-pulse">
                   Education Innovation
                 </h3>
                 <p className="text-gray-600 text-sm text-center leading-relaxed">
