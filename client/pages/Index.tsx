@@ -429,22 +429,34 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-3 text-center lg:text-left">
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight">
-                Power up your career with an MBA, BBA, BCA, MCA & B.Tech at
-                Hi-Tech Institute of Engineering & Technology
+              <div className="inline-flex items-center px-4 py-2 bg-[#c38935]/10 rounded-full mb-6">
+                <span className="text-[#22336a] font-semibold text-sm">PROFESSIONAL EXCELLENCE</span>
+              </div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+                Transform Your Future with
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]"> Premier Education</span>
               </h1>
-              <p className="text-lg lg:text-xl mb-8 text-[#c38935] font-semibold">
-                Powered by Sunstone
+              <p className="text-lg lg:text-xl mb-8 text-gray-700 leading-relaxed max-w-2xl">
+                Join Hi-Tech Institute powered by Sunstone for industry-aligned programs in MBA, BBA, BCA, MCA & B.Tech with guaranteed placement support.
               </p>
-              <a
-                href="https://sunstone.in/campuses/hi-tech-institute"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#c38935]/80 text-white font-bold rounded-lg transition-all duration-300 shadow-lg"
-              >
-                <span>Know more</span>
-                <ExternalLink className="ml-2 h-5 w-5" />
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://sunstone.in/campuses/hi-tech-institute"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  <span>Explore Programs</span>
+                  <ExternalLink className="ml-2 h-5 w-5" />
+                </a>
+                <a
+                  href="tel:+917065303030"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-[#22336a] text-[#22336a] font-bold rounded-xl hover:bg-[#22336a] hover:text-white transition-all duration-300 shadow-lg"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  <span>Call Now</span>
+                </a>
+              </div>
             </div>
             <div className="lg:col-span-2">
               <div className="relative max-w-sm mx-auto">
