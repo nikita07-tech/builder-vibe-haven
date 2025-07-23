@@ -400,17 +400,17 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-4 sm:space-x-8">
-              <div className="flex items-center space-x-3 sm:space-x-4 group animate-fade-in">
+              <div className="flex items-center space-x-3 sm:space-x-4 group animate-fade-in hover:animate-wiggle">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
                   alt="Hi-Tech Institute"
-                  className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
+                  className="h-12 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
                 />
-                <div className="h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
+                <div className="h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-24 w-auto transition-all duration-300 group-hover:scale-105"
+                  className="h-24 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
                 />
               </div>
             </div>
