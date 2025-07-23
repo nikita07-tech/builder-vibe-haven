@@ -415,7 +415,7 @@ const Index = () => {
       </header>
 
       {/* Hero Banner with Carousel */}
-      <section className="bg-[#22336a] text-white py-16 relative">
+      <section className="bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] text-white py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-3 text-center lg:text-left">
