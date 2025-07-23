@@ -343,17 +343,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Enhanced Apply Now Button */}
-      <div className="fixed right-6 bottom-6 z-50">
+      <div className="fixed right-6 bottom-6 z-50 animate-bounce-subtle">
         <div className="relative group">
           {/* Animated Background Ring */}
-          <div className="absolute inset-0 w-full h-full bg-[#c38935] rounded-xl animate-pulse opacity-30"></div>
+          <div className="absolute inset-0 w-full h-full bg-[#c38935] rounded-xl animate-pulse opacity-30 group-hover:animate-ping"></div>
 
           {/* Main Button */}
           <a
             href="https://sunstone.in/apply"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-auto px-6 py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 border-2 border-white/20"
+            className="relative flex items-center justify-center w-auto px-6 py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
           >
             {/* Button Content */}
             <div className="flex items-center space-x-3">
