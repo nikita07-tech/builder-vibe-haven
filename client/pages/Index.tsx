@@ -765,19 +765,37 @@ const Index = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Professional Header */}
+          {/* Engaging Header with Animations */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6">
-              <Award className="h-5 w-5 text-[#22336a] mr-2" />
-              <span className="text-[#22336a] font-semibold">PLACEMENT ASSURANCE</span>
+            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6 animate-fade-in">
+              <Trophy className="h-5 w-5 text-[#22336a] mr-2 animate-pulse" />
+              <span className="text-[#22336a] font-semibold">PLACEMENT OPPORTUNITY PROGRAM</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-[#22336a] mb-6 leading-tight">
-              Career Success
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]"> Guaranteed</span>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight animate-slide-up">
+              Placement
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] animate-gradient-shift"> Opportunity</span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">Program</span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Industry-leading placement program with 200+ assured opportunities and comprehensive career support
-            </p>
+            <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <p className="text-xl text-gray-700 leading-relaxed mb-4">
+                200+ assured placement opportunities with comprehensive career support and guaranteed success
+              </p>
+              <div className="flex items-center justify-center space-x-8 text-sm text-gray-600">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"></div>
+                  <span>200+ Opportunities</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                  <span>100% Fee Back</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                  <span>Expert Mentorship</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Professional Grid Layout */}
