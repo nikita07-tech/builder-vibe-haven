@@ -1105,7 +1105,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold text-[#22336a] mb-3">Placement Opportunities</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  5000+ job opportunities with 1200+ top recruiting companies
+                  200+ assured placement opportunities with 1200+ top recruiting companies
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
