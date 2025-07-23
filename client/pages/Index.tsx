@@ -1080,29 +1080,53 @@ const Index = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Enhanced Section Header */}
-          <div className="text-center mb-20 animate-slide-up">
-            <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-full mb-8 animate-fade-in hover:scale-105 transition-transform duration-300">
-              <BookOpen className="h-6 w-6 text-[#22336a] mr-3 animate-pulse" />
-              <span className="text-[#22336a] font-bold text-lg">
-                OUR EDUCATIONAL APPROACH
-              </span>
+          {/* Ultra-Enhanced Section Header */}
+          <div className="text-center mb-24 animate-slide-up">
+            {/* Decorative elements */}
+            <div className="relative mb-8">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-[#c38935]/20 to-[#22336a]/20 rounded-full blur-2xl animate-pulse"></div>
+              <div className="relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-white/80 via-blue-50/60 to-white/80 backdrop-blur-sm rounded-full mb-8 animate-fade-in hover:scale-105 transition-all duration-500 shadow-xl border border-white/50">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/5 via-[#c38935]/5 to-[#22336a]/5 rounded-full animate-gradient-shift"></div>
+                <BookOpen className="relative h-7 w-7 text-[#22336a] mr-4 animate-bounce" />
+                <span className="relative text-[#22336a] font-bold text-xl tracking-wide">
+                  OUR EDUCATIONAL APPROACH
+                </span>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#c38935] rounded-full animate-ping"></div>
+              </div>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-8 leading-tight">
-              Transforming
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] animate-gradient-shift">
-                {" "}
-                Education
-              </span>
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
-                Through Excellence
-              </span>
-            </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              We believe in providing comprehensive education that bridges the gap between
-              academic learning and industry requirements through expert guidance and practical experience
-            </p>
+
+            <div className="relative">
+              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#22336a] mb-10 leading-tight">
+                <span className="inline-block animate-fade-in">Transforming</span>
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] via-[#c38935] to-[#f4d03f] animate-gradient-shift inline-block" style={{ animationDelay: "0.2s", backgroundSize: "300% 300%" }}>
+                  Education
+                </span>
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] via-[#3b4d7a] to-[#22336a] inline-block animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                  Through Excellence
+                </span>
+              </h2>
+
+              {/* Decorative lines */}
+              <div className="flex items-center justify-center mb-8 space-x-4">
+                <div className="w-16 h-1 bg-gradient-to-r from-transparent to-[#c38935] rounded-full animate-fade-in" style={{ animationDelay: "0.6s" }}></div>
+                <div className="w-4 h-4 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: "0.8s" }}></div>
+                <div className="w-8 h-1 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: "1s" }}></div>
+                <div className="w-4 h-4 bg-[#22336a] rounded-full animate-pulse" style={{ animationDelay: "1.2s" }}></div>
+                <div className="w-16 h-1 bg-gradient-to-l from-transparent to-[#22336a] rounded-full animate-fade-in" style={{ animationDelay: "1.4s" }}></div>
+              </div>
+            </div>
+
+            <div className="relative max-w-5xl mx-auto">
+              <p className="text-2xl text-gray-700 leading-relaxed animate-fade-in font-medium" style={{ animationDelay: "0.6s" }}>
+                We believe in providing comprehensive education that bridges the gap between
+                academic learning and industry requirements through
+                <span className="text-[#c38935] font-bold"> expert guidance </span>
+                and
+                <span className="text-[#22336a] font-bold"> practical experience</span>
+              </p>
+            </div>
           </div>
 
           {/* Enhanced Main Content Layout */}
