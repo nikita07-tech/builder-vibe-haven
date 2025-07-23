@@ -514,7 +514,7 @@ const Index = () => {
                     <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                       <div className="flex items-center space-x-2 mb-2">
                         <div className="w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
-                          <span className="text-white text-xs font-bold">🏛️</span>
+                          <div className="w-2 h-2 bg-white rounded-full"></div>
                         </div>
                         <p className="text-[#22336a] font-bold text-sm">
                           {carouselImages[currentSlide].title}
