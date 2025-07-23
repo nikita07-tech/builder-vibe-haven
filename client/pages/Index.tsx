@@ -834,9 +834,9 @@ const Index = () => {
                     <TrendingUp className="h-8 w-8 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">100% Fee Back Guarantee</h3>
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">First Year Tuition Fee Back</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      If you don't receive the promised placement opportunities, we'll refund your entire first-year tuition fee.
+                      If you don't receive the promised placement opportunities, we'll refund your first-year tuition fee.
                     </p>
                   </div>
                 </div>
