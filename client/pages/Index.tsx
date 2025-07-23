@@ -402,7 +402,7 @@ const Index = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-20 w-auto transition-all duration-300 group-hover:scale-105"
+                  className="h-24 w-auto transition-all duration-300 group-hover:scale-105"
                 />
               </div>
             </div>
@@ -449,8 +449,12 @@ const Index = () => {
                   Join Hi-Tech Institute of Engineering & Technology for industry-aligned programs in MBA, BBA, BCA, MCA & B.Tech with guaranteed placement support.
                 </p>
                 <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-xl shadow-lg">
-                  <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mr-3">
-                    <Award className="h-4 w-4 text-white" />
+                  <div className="flex items-center mr-3">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
+                      alt="Sunstone"
+                      className="h-8 w-auto"
+                    />
                   </div>
                   <span className="text-white font-bold text-lg">Powered by Sunstone</span>
                 </div>
@@ -615,7 +619,7 @@ const Index = () => {
                   <span className="font-semibold text-[#c38935]">
                     Verified & Audited
                   </span>{" "}
-                  for B2K Analytics
+                  Placement report audited by B2K Analytics
                 </p>
               </div>
             </div>
@@ -899,7 +903,7 @@ Comprehensive placement support with assured career guidance and guaranteed succ
 
               <div className="mt-8 p-4 bg-[#22336a]/5 rounded-xl">
                 <p className="text-sm text-gray-600 text-center font-medium">
-                  Verified by independent auditors and trusted by 10,000+ students
+                  Trusted by 1000+ students
                 </p>
               </div>
             </div>
