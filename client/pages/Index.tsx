@@ -1056,162 +1056,128 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Sunstone Philosophy */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl animate-float"></div>
-          <div
-            className="absolute bottom-20 right-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "3s" }}
-          ></div>
-        </div>
-
+      {/* Redesigned Educational Approach Section */}
+      <section className="py-20 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6 animate-fade-in">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6">
               <BookOpen className="h-5 w-5 text-[#22336a] mr-2" />
               <span className="text-[#22336a] font-semibold">
-                OUR PHILOSOPHY
+                OUR EDUCATIONAL APPROACH
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 animate-slide-up">
-              The
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6">
+              Transforming
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
                 {" "}
-                Sunstone
+                Education
               </span>
               <br />
-              Philosophy
+              Through Excellence
             </h2>
-            <p
-              className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in"
-              style={{ animationDelay: "0.3s" }}
-            >
-              Our philosophy is deeply rooted in helping you learn from the
-              best, providing a hands-on experience so your education is not
-              just limited to theory
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              We believe in providing comprehensive education that bridges the gap between
+              academic learning and industry requirements through expert guidance and practical experience
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            <div
-              className="group relative animate-slide-up"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <Card className="relative text-center border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 bg-white/80 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto mb-6 p-6 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full w-24 h-24 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500">
-                    <Users className="h-12 w-12 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl text-[#22336a] font-bold group-hover:text-[#c38935] transition-colors duration-300">
-                    Learn from Industry Leaders
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 leading-relaxed text-lg">
-                    Learn from CEOs, CTOs, COOs, and other leaders from Fortune
-                    500 companies and leading Indian start-ups with 10+ years of
-                    recruitment experience
+          {/* Main Content - Different Layout */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+            {/* Left side - Key Features */}
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Users className="h-8 w-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#22336a] mb-2">
+                    Expert Faculty & Industry Leaders
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Learn directly from CEOs, CTOs, and senior professionals from Fortune 500 companies
+                    and successful startups with extensive industry experience.
                   </p>
-                  <div className="mt-6 flex items-center justify-center space-x-2">
-                    <div className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"></div>
-                    <div
-                      className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.2s" }}
-                    ></div>
-                    <div
-                      className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.4s" }}
-                    ></div>
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Briefcase className="h-8 w-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#22336a] mb-2">
+                    Hands-On Learning Experience
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Gain practical knowledge through real-world projects, internships,
+                    and industry collaborations that prepare you for immediate career success.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Award className="h-8 w-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#22336a] mb-2">
+                    Professional Development
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Build a comprehensive professional portfolio showcasing verified skills
+                    and achievements to enhance your employability and career prospects.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div
-              className="group relative animate-slide-up"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <Card className="relative text-center border-2 border-gray-200 hover:border-[#22336a] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 bg-white/80 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto mb-6 p-6 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full w-24 h-24 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500">
-                    <Briefcase className="h-12 w-12 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl text-[#22336a] font-bold group-hover:text-[#22336a] transition-colors duration-300">
-                    Real-World Experience
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 leading-relaxed text-lg">
-                    Put what you learn into practice and gain hands-on
-                    experience with internships & real-life projects and be
-                    ready for your job from Day 1
-                  </p>
-                  <div className="mt-6 flex items-center justify-center space-x-2">
-                    <div className="w-2 h-2 bg-[#22336a] rounded-full animate-pulse"></div>
-                    <div
-                      className="w-2 h-2 bg-[#22336a] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.2s" }}
-                    ></div>
-                    <div
-                      className="w-2 h-2 bg-[#22336a] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.4s" }}
-                    ></div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            {/* Right side - Statistics & Impact */}
+            <div className="bg-gradient-to-br from-[#22336a] to-[#2d4a7b] rounded-3xl p-10 text-white relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
 
-            <div
-              className="group relative animate-slide-up"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <Card className="relative text-center border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 bg-white/80 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto mb-6 p-6 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full w-24 h-24 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500">
-                    <Award className="h-12 w-12 text-white" />
+              <div className="relative z-10">
+                <h3 className="text-3xl font-bold mb-6">Our Impact</h3>
+                <div className="grid grid-cols-1 gap-6">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                    <div className="text-3xl font-bold text-[#f4d03f] mb-2">1000+</div>
+                    <p className="text-lg">Industry Experts</p>
+                    <p className="text-sm opacity-80">Teaching our students</p>
                   </div>
-                  <CardTitle className="text-2xl text-[#22336a] font-bold group-hover:text-[#c38935] transition-colors duration-300">
-                    Professional Portfolio
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 leading-relaxed text-lg">
-                    Increase your chances of getting hired by showcasing your
-                    verified skills and experience with a professional portfolio
-                  </p>
-                  <div className="mt-6 flex items-center justify-center space-x-2">
-                    <div className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"></div>
-                    <div
-                      className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.2s" }}
-                    ></div>
-                    <div
-                      className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.4s" }}
-                    ></div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                    <div className="text-3xl font-bold text-[#f4d03f] mb-2">95%</div>
+                    <p className="text-lg">Practical Learning</p>
+                    <p className="text-sm opacity-80">Hands-on experience</p>
                   </div>
-                </CardContent>
-              </Card>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                    <div className="text-3xl font-bold text-[#f4d03f] mb-2">100%</div>
+                    <p className="text-lg">Portfolio Development</p>
+                    <p className="text-sm opacity-80">For every graduate</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Philosophy Quote */}
-          <div
-            className="text-center mt-16 animate-fade-in"
-            style={{ animationDelay: "0.6s" }}
-          >
-            <div className="max-w-4xl mx-auto p-8 bg-white/60 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-lg">
-              <blockquote className="text-2xl font-medium text-[#22336a] italic mb-4">
-                "Education is the most powerful weapon which you can use to
-                change the world."
+          {/* Bottom Quote Section */}
+          <div className="text-center">
+            <div className="max-w-4xl mx-auto bg-gradient-to-r from-gray-50 to-white p-10 rounded-3xl border border-gray-200 shadow-lg">
+              <div className="mb-6">
+                <span className="text-6xl text-[#c38935] font-serif">"</span>
+              </div>
+              <blockquote className="text-2xl font-medium text-[#22336a] mb-6 leading-relaxed">
+                Excellence in education is not just about academic achievements, but about empowering
+                students with the skills, knowledge, and confidence to shape their futures and contribute
+                meaningfully to society.
               </blockquote>
-              <p className="text-lg text-gray-600">
-                - Our commitment to transformative learning
-              </p>
+              <div className="flex items-center justify-center space-x-4">
+                <div className="w-12 h-0.5 bg-[#c38935]"></div>
+                <p className="text-lg text-gray-600 font-medium">
+                  Our Educational Philosophy
+                </p>
+                <div className="w-12 h-0.5 bg-[#c38935]"></div>
+              </div>
             </div>
           </div>
         </div>
