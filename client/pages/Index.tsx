@@ -621,7 +621,7 @@ const Index = () => {
                   <span className="font-semibold text-[#c38935]">
                     Verified & Audited
                   </span>{" "}
-                  by Official Auditor for B2K Analytics
+                  for B2K Analytics
                 </p>
               </div>
             </div>
