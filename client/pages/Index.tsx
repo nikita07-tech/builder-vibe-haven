@@ -475,7 +475,7 @@ const Index = () => {
               </div>
             </div>
             <div className="lg:col-span-2">
-              <div className="relative max-w-lg mx-auto">
+              <div className="relative max-w-xl mx-auto">
                 <div className="relative overflow-hidden rounded-xl shadow-lg bg-white p-2">
                   {/* Carousel Container */}
                   <div className="relative">
@@ -688,7 +688,7 @@ const Index = () => {
                           <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                         </svg>
                       </div>
-                      <p className="text-gray-700">Minimum 50+ guaranteed interview opportunities</p>
+                      <p className="text-gray-700">Guaranteed interview opportunities with top companies</p>
                     </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
@@ -785,12 +785,12 @@ const Index = () => {
             </h2>
             <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <p className="text-xl text-gray-700 leading-relaxed mb-4">
-                200+ assured placement opportunities with comprehensive career support and guaranteed success
+Comprehensive placement support with assured career guidance and guaranteed success
               </p>
               <div className="flex items-center justify-center space-x-8 text-sm text-gray-600">
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"></div>
-                  <span>200+ Opportunities</span>
+                  <span>Career Opportunities</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
@@ -814,9 +814,9 @@ const Index = () => {
                     <Trophy className="h-8 w-8 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">200+ Placement Opportunities</h3>
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">Placement Opportunities</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Guaranteed access to over 200 placement opportunities across leading companies and emerging startups in your field.
+                      Guaranteed access to extensive placement opportunities across leading companies and emerging startups in your field.
                     </p>
                   </div>
                 </div>
@@ -861,8 +861,8 @@ const Index = () => {
                     <Target className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#22336a]">50+ Guaranteed Interviews</h4>
-                    <p className="text-gray-600 text-sm">Minimum interview opportunities with top companies</p>
+                    <h4 className="font-bold text-[#22336a]">Guaranteed Interviews</h4>
+                    <p className="text-gray-600 text-sm">Interview opportunities with top companies</p>
                   </div>
                 </div>
 
@@ -1099,7 +1099,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-xl font-bold text-[#22336a] mb-3">Placement Opportunities</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  200+ assured placement opportunities with 1200+ top recruiting companies
+Assured placement opportunities with 1200+ top recruiting companies
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -1285,6 +1285,132 @@ const Index = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Easy Fee Payment Section */}
+      <section className="py-20 bg-gradient-to-br from-[#c38935] via-[#d4a853] to-[#c38935] relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-10 right-10 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+          <div className="absolute top-1/2 left-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/[0.02] to-transparent transform -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full mb-6 animate-fade-in border border-white/30">
+              <svg className="h-5 w-5 text-white mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <span className="text-white font-semibold">EASY FEE PAYMENT</span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-slide-up">
+              Take Charge of Your
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-yellow-200 to-white"> Education</span>
+            </h2>
+            <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <p className="text-xl text-white/90 leading-relaxed mb-4">
+                Play smart by choosing Sunstone. Pay the college fee and a nominal amount to unlock your dream job with Sunstone.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Features */}
+            <div className="space-y-6">
+              {/* 0 Cost EMI */}
+              <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 animate-slide-in-left">
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-2">0 Cost EMI Available</h3>
+                    <p className="text-white/80 leading-relaxed">
+                      Flexible payment options with zero additional cost EMI to make education affordable
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Scholarship */}
+              <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-2">Up to 100% Scholarship Available</h3>
+                    <p className="text-white/80 leading-relaxed">
+                      Merit-based scholarships to support deserving students in their educational journey
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                <a
+                  href="https://sunstone.in/apply"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-8 py-4 bg-white text-[#c38935] hover:bg-gray-100 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 group"
+                >
+                  <span>Check Eligibility Now</span>
+                  <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                  </svg>
+                </a>
+                <p className="text-white/60 text-sm mt-3 italic">*Terms & conditions apply</p>
+              </div>
+            </div>
+
+            {/* Right side - Visual Element */}
+            <div className="relative animate-slide-in-right">
+              <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl">
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/20 rounded-full blur-xl animate-pulse"></div>
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+
+                <div className="relative z-10">
+                  <div className="text-center mb-6">
+                    <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group hover:scale-110 transition-transform duration-300">
+                      <svg className="h-10 w-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">Smart Investment</h3>
+                    <p className="text-white/80">Invest in your future with flexible payment options</p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="bg-white/10 rounded-xl p-4 border border-white/20">
+                      <div className="flex justify-between items-center">
+                        <span className="text-white font-medium">College Fee</span>
+                        <span className="text-white font-bold">Standard Rate</span>
+                      </div>
+                    </div>
+                    <div className="bg-white/20 rounded-xl p-4 border border-white/30 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent"></div>
+                      <div className="relative flex justify-between items-center">
+                        <span className="text-white font-medium">Sunstone Fee</span>
+                        <span className="text-white font-bold">Nominal Amount</span>
+                      </div>
+                    </div>
+                    <div className="bg-gradient-to-r from-white/20 to-white/10 rounded-xl p-4 border border-white/30">
+                      <div className="flex justify-between items-center">
+                        <span className="text-white font-bold text-lg">Total Value</span>
+                        <span className="text-white font-bold text-lg">Dream Career</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1823,12 +1949,12 @@ const Index = () => {
                 },
                 {
                   question: "What makes Sunstone different from other education providers?",
-                  answer: "• Industry-aligned curriculum designed with Fortune 500 companies\n• 200+ assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
+                  answer: "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
                   category: "sunstone"
                 },
                 {
                   question: "What is Sunstone's placement guarantee program?",
-                  answer: "Our placement opportunity program guarantees 200+ placement opportunities with comprehensive career support. If you don't receive the promised opportunities, we offer first year tuition fee back. The program includes dedicated placement officers, minimum 50+ guaranteed interviews, and continuous career guidance.",
+                  answer: "Our placement opportunity program guarantees comprehensive career support and placement opportunities. If you don't receive the promised opportunities, we offer first year tuition fee back. The program includes dedicated placement officers, guaranteed interviews, and continuous career guidance.",
                   category: "placement"
                 },
                 {
@@ -2118,6 +2244,20 @@ const Index = () => {
             opacity: 1;
             transform: translateX(0);
           }
+        }
+
+        @keyframes gradient-shift {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+
+        .animate-gradient-shift {
+          background-size: 200% 200%;
+          animation: gradient-shift 3s ease infinite;
         }
         
         @keyframes fade-in-delay {
