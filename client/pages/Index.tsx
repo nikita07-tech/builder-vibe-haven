@@ -645,7 +645,7 @@ const Index = () => {
               <div className="text-center mb-8">
                 <div className="inline-flex items-center px-4 py-2 bg-[#22336a]/10 rounded-full mb-4">
                   <Award className="h-4 w-4 text-[#22336a] mr-2" />
-                  <span className="text-[#22336a] font-semibold text-sm">PLACEMENT ASSURANCE PROGRAM</span>
+                  <span className="text-[#22336a] font-semibold text-sm">PLACEMENT OPPORTUNITY PROGRAM</span>
                 </div>
                 <h3 className="text-3xl font-bold text-[#22336a] mb-4">
                   Comprehensive Career Success Program
