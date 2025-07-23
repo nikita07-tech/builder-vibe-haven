@@ -343,17 +343,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Enhanced Apply Now Button */}
-      <div className="fixed right-6 bottom-6 z-50">
+      <div className="fixed right-6 bottom-6 z-50 animate-bounce-subtle">
         <div className="relative group">
           {/* Animated Background Ring */}
-          <div className="absolute inset-0 w-full h-full bg-[#c38935] rounded-xl animate-pulse opacity-30"></div>
+          <div className="absolute inset-0 w-full h-full bg-[#c38935] rounded-xl animate-pulse opacity-30 group-hover:animate-ping"></div>
 
           {/* Main Button */}
           <a
             href="https://sunstone.in/apply"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-auto px-6 py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-110 border-2 border-white/20"
+            className="relative flex items-center justify-center w-auto px-6 py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
           >
             {/* Button Content */}
             <div className="flex items-center space-x-3">
@@ -396,21 +396,21 @@ const Index = () => {
       </div>
 
       {/* Professional Header */}
-      <header className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 animate-slide-down">
+      <header className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 animate-slide-down hover:shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-4 sm:space-x-8">
-              <div className="flex items-center space-x-3 sm:space-x-4 group animate-fade-in">
+              <div className="flex items-center space-x-3 sm:space-x-4 group animate-fade-in hover:animate-wiggle">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
                   alt="Hi-Tech Institute"
-                  className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
+                  className="h-12 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
                 />
-                <div className="h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
+                <div className="h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-24 w-auto transition-all duration-300 group-hover:scale-105"
+                  className="h-12 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
                 />
               </div>
             </div>
@@ -424,7 +424,7 @@ const Index = () => {
               </a>
               <a
                 href="tel:+917065303030"
-                className="flex items-center space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-4 py-2.5 rounded-xl transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="flex items-center space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-4 py-2.5 rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
               >
                 <Phone className="h-4 w-4" />
                 <span className="text-sm">+91 7065-30-30-30</span>
@@ -466,13 +466,13 @@ const Index = () => {
                 <div className="inline-flex items-center px-6 py-3 rounded-xl">
                   <div className="flex items-center mr-3">
                     <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
-                      alt="Sunstone"
-                      className="h-8 w-auto"
+                      src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe8fe1239f4724767b509ddb3b4f8688e?format=webp&width=800"
+                      alt="Institution Image"
+                      className="h-10 w-auto rounded-lg"
                     />
                   </div>
                   <span className="text-white font-bold text-lg">
-                    Powered by Sunstone
+                    Powered By Sunstone
                   </span>
                 </div>
               </div>
@@ -574,7 +574,7 @@ const Index = () => {
       {/* Placement Highlights - Updated without emojis */}
       <section className="py-12 bg-[#22336a]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-shadow duration-500">
+          <div className="bg-white rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
             <div className="bg-[#c38935] text-white px-6 py-4">
               <div className="flex items-center justify-between">
                 <div>
@@ -716,20 +716,6 @@ const Index = () => {
                     Program Highlights
                   </h4>
                   <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-3 h-3 text-white"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                        </svg>
-                      </div>
-                      <p className="text-gray-700">
-                        Dedicated placement officer for each student
-                      </p>
-                    </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
                         <svg
@@ -1069,162 +1055,338 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Sunstone Philosophy */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+      {/* Ultra-Enhanced Educational Approach Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50/40 to-orange-50/30 relative overflow-hidden">
+        {/* Sophisticated Animated Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl animate-float"></div>
+          {/* Main floating orbs */}
+          <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-[#22336a]/15 via-[#c38935]/10 to-transparent rounded-full blur-3xl animate-float"></div>
           <div
-            className="absolute bottom-20 right-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"
+            className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-[#c38935]/15 via-[#22336a]/10 to-transparent rounded-full blur-3xl animate-float"
             style={{ animationDelay: "3s" }}
           ></div>
+
+          {/* Additional decorative elements */}
+          <div
+            className="absolute top-1/3 right-1/4 w-40 h-40 bg-gradient-to-br from-[#f4d03f]/20 to-transparent rounded-full blur-2xl animate-float"
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className="absolute bottom-1/3 left-1/4 w-32 h-32 bg-gradient-to-br from-[#3b4d7a]/20 to-transparent rounded-full blur-2xl animate-float"
+            style={{ animationDelay: "2s" }}
+          ></div>
+
+          {/* Geometric patterns */}
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-1/4 left-1/2 w-2 h-2 bg-[#c38935]/30 rounded-full animate-ping"></div>
+            <div
+              className="absolute top-3/4 left-1/3 w-1 h-1 bg-[#22336a]/40 rounded-full animate-ping"
+              style={{ animationDelay: "1s" }}
+            ></div>
+            <div
+              className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-[#f4d03f]/50 rounded-full animate-ping"
+              style={{ animationDelay: "2s" }}
+            ></div>
+          </div>
+
+          {/* Central glow */}
+          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-r from-white/30 via-blue-100/20 to-orange-100/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6 animate-fade-in">
-              <BookOpen className="h-5 w-5 text-[#22336a] mr-2" />
-              <span className="text-[#22336a] font-semibold">
-                OUR PHILOSOPHY
-              </span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 animate-slide-up">
-              The
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
-                {" "}
-                Sunstone
-              </span>
-              <br />
-              Philosophy
-            </h2>
-            <p
-              className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in"
-              style={{ animationDelay: "0.3s" }}
-            >
-              Our philosophy is deeply rooted in helping you learn from the
-              best, providing a hands-on experience so your education is not
-              just limited to theory
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            <div
-              className="group relative animate-slide-up"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <Card className="relative text-center border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 bg-white/80 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto mb-6 p-6 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full w-24 h-24 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500">
-                    <Users className="h-12 w-12 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl text-[#22336a] font-bold group-hover:text-[#c38935] transition-colors duration-300">
-                    Learn from Industry Leaders
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 leading-relaxed text-lg">
-                    Learn from CEOs, CTOs, COOs, and other leaders from Fortune
-                    500 companies and leading Indian start-ups with 10+ years of
-                    recruitment experience
-                  </p>
-                  <div className="mt-6 flex items-center justify-center space-x-2">
-                    <div className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"></div>
-                    <div
-                      className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.2s" }}
-                    ></div>
-                    <div
-                      className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.4s" }}
-                    ></div>
-                  </div>
-                </CardContent>
-              </Card>
+          {/* Ultra-Enhanced Section Header */}
+          <div className="text-center mb-24 animate-slide-up">
+            {/* Decorative elements */}
+            <div className="relative mb-8">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-[#c38935]/20 to-[#22336a]/20 rounded-full blur-2xl animate-pulse"></div>
+              <div className="relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-white/80 via-blue-50/60 to-white/80 backdrop-blur-sm rounded-full mb-8 animate-fade-in hover:scale-105 transition-all duration-500 shadow-xl border border-white/50">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/5 via-[#c38935]/5 to-[#22336a]/5 rounded-full animate-gradient-shift"></div>
+                <BookOpen className="relative h-7 w-7 text-[#22336a] mr-4 animate-bounce" />
+                <span className="relative text-[#22336a] font-bold text-xl tracking-wide">
+                  OUR EDUCATIONAL APPROACH
+                </span>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#c38935] rounded-full animate-ping"></div>
+              </div>
             </div>
 
-            <div
-              className="group relative animate-slide-up"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <Card className="relative text-center border-2 border-gray-200 hover:border-[#22336a] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 bg-white/80 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto mb-6 p-6 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full w-24 h-24 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500">
-                    <Briefcase className="h-12 w-12 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl text-[#22336a] font-bold group-hover:text-[#22336a] transition-colors duration-300">
-                    Real-World Experience
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 leading-relaxed text-lg">
-                    Put what you learn into practice and gain hands-on
-                    experience with internships & real-life projects and be
-                    ready for your job from Day 1
-                  </p>
-                  <div className="mt-6 flex items-center justify-center space-x-2">
-                    <div className="w-2 h-2 bg-[#22336a] rounded-full animate-pulse"></div>
-                    <div
-                      className="w-2 h-2 bg-[#22336a] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.2s" }}
-                    ></div>
-                    <div
-                      className="w-2 h-2 bg-[#22336a] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.4s" }}
-                    ></div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="relative">
+              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#22336a] mb-10 leading-tight">
+                <span className="inline-block animate-fade-in">
+                  Transforming
+                </span>
+                <br />
+                <span
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] via-[#c38935] to-[#f4d03f] animate-gradient-shift inline-block"
+                  style={{
+                    animationDelay: "0.2s",
+                    backgroundSize: "300% 300%",
+                  }}
+                >
+                  Education
+                </span>
+                <br />
+                <span
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] via-[#3b4d7a] to-[#22336a] inline-block animate-fade-in"
+                  style={{ animationDelay: "0.4s" }}
+                >
+                  Through Excellence
+                </span>
+              </h2>
+
+              {/* Decorative lines */}
+              <div className="flex items-center justify-center mb-8 space-x-4">
+                <div
+                  className="w-16 h-1 bg-gradient-to-r from-transparent to-[#c38935] rounded-full animate-fade-in"
+                  style={{ animationDelay: "0.6s" }}
+                ></div>
+                <div
+                  className="w-4 h-4 bg-[#c38935] rounded-full animate-pulse"
+                  style={{ animationDelay: "0.8s" }}
+                ></div>
+                <div
+                  className="w-8 h-1 bg-[#c38935] rounded-full animate-pulse"
+                  style={{ animationDelay: "1s" }}
+                ></div>
+                <div
+                  className="w-4 h-4 bg-[#22336a] rounded-full animate-pulse"
+                  style={{ animationDelay: "1.2s" }}
+                ></div>
+                <div
+                  className="w-16 h-1 bg-gradient-to-l from-transparent to-[#22336a] rounded-full animate-fade-in"
+                  style={{ animationDelay: "1.4s" }}
+                ></div>
+              </div>
             </div>
 
-            <div
-              className="group relative animate-slide-up"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <Card className="relative text-center border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 bg-white/80 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <div className="mx-auto mb-6 p-6 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full w-24 h-24 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-500">
-                    <Award className="h-12 w-12 text-white" />
-                  </div>
-                  <CardTitle className="text-2xl text-[#22336a] font-bold group-hover:text-[#c38935] transition-colors duration-300">
-                    Professional Portfolio
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 leading-relaxed text-lg">
-                    Increase your chances of getting hired by showcasing your
-                    verified skills and experience with a professional portfolio
-                  </p>
-                  <div className="mt-6 flex items-center justify-center space-x-2">
-                    <div className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"></div>
-                    <div
-                      className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.2s" }}
-                    ></div>
-                    <div
-                      className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"
-                      style={{ animationDelay: "0.4s" }}
-                    ></div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="relative max-w-5xl mx-auto">
+              <p
+                className="text-2xl text-gray-700 leading-relaxed animate-fade-in font-medium"
+                style={{ animationDelay: "0.6s" }}
+              >
+                We believe in providing comprehensive education that bridges the
+                gap between academic learning and industry requirements through
+                <span className="text-[#c38935] font-bold">
+                  {" "}
+                  expert guidance{" "}
+                </span>
+                and
+                <span className="text-[#22336a] font-bold">
+                  {" "}
+                  practical experience
+                </span>
+              </p>
             </div>
           </div>
 
-          {/* Philosophy Quote */}
+          {/* Enhanced Main Content Layout */}
+          <div className="grid lg:grid-cols-2 gap-20 items-start mb-20">
+            {/* Left side - Enhanced Key Features */}
+            <div className="space-y-8">
+              {/* Feature 1 */}
+              <div
+                className="group relative animate-slide-in-left"
+                style={{ animationDelay: "0.1s" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative flex items-start space-x-6 p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                    <Users className="h-10 w-10 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                      Expert Faculty & Industry Leaders
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-lg">
+                      Learn directly from CEOs, CTOs, and senior professionals
+                      from Fortune 500 companies and successful startups with
+                      extensive industry experience.
+                    </p>
+                    <div className="mt-4 flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"></div>
+                      <div
+                        className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"
+                        style={{ animationDelay: "0.2s" }}
+                      ></div>
+                      <div
+                        className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"
+                        style={{ animationDelay: "0.4s" }}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Feature 2 */}
+              <div
+                className="group relative animate-slide-in-left"
+                style={{ animationDelay: "0.2s" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative flex items-start space-x-6 p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                    <Briefcase className="h-10 w-10 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3 group-hover:text-[#22336a] transition-colors duration-300">
+                      Hands-On Learning Experience
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-lg">
+                      Gain practical knowledge through real-world projects,
+                      internships, and industry collaborations that prepare you
+                      for immediate career success.
+                    </p>
+                    <div className="mt-4 flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"></div>
+                      <div
+                        className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"
+                        style={{ animationDelay: "0.2s" }}
+                      ></div>
+                      <div
+                        className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"
+                        style={{ animationDelay: "0.4s" }}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Feature 3 */}
+              <div
+                className="group relative animate-slide-in-left"
+                style={{ animationDelay: "0.3s" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative flex items-start space-x-6 p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                    <Award className="h-10 w-10 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                      Professional Development
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-lg">
+                      Build a comprehensive professional portfolio showcasing
+                      verified skills and achievements to enhance your
+                      employability and career prospects.
+                    </p>
+                    <div className="mt-4 flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"></div>
+                      <div
+                        className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"
+                        style={{ animationDelay: "0.2s" }}
+                      ></div>
+                      <div
+                        className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"
+                        style={{ animationDelay: "0.4s" }}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Enhanced Statistics & Impact */}
+            <div
+              className="animate-slide-in-right"
+              style={{ animationDelay: "0.4s" }}
+            >
+              <div className="bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-3xl p-12 text-white relative overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
+                {/* Enhanced Background Elements */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20 animate-float"></div>
+                <div
+                  className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-16 -translate-x-16 animate-float"
+                  style={{ animationDelay: "2s" }}
+                ></div>
+                <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+
+                <div className="relative z-10">
+                  <div className="text-center mb-8">
+                    <h3 className="text-4xl font-bold mb-4 animate-pulse-glow">
+                      Our Impact
+                    </h3>
+                    <p className="text-xl opacity-90">
+                      Transforming Lives Through Education
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-1 gap-8">
+                    <div className="group bg-white/15 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-4xl font-bold text-[#f4d03f] group-hover:animate-bounce">
+                          1000+
+                        </div>
+                        <div className="w-12 h-12 bg-[#f4d03f]/20 rounded-full flex items-center justify-center">
+                          <Users className="h-6 w-6 text-[#f4d03f]" />
+                        </div>
+                      </div>
+                      <p className="text-xl mb-2">Industry Experts</p>
+                      <p className="text-sm opacity-80">
+                        Teaching our students
+                      </p>
+                    </div>
+                    <div className="group bg-white/15 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-4xl font-bold text-[#f4d03f] group-hover:animate-bounce">
+                          95%
+                        </div>
+                        <div className="w-12 h-12 bg-[#f4d03f]/20 rounded-full flex items-center justify-center">
+                          <Briefcase className="h-6 w-6 text-[#f4d03f]" />
+                        </div>
+                      </div>
+                      <p className="text-xl mb-2">Practical Learning</p>
+                      <p className="text-sm opacity-80">Hands-on experience</p>
+                    </div>
+                    <div className="group bg-white/15 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-4xl font-bold text-[#f4d03f] group-hover:animate-bounce">
+                          100%
+                        </div>
+                        <div className="w-12 h-12 bg-[#f4d03f]/20 rounded-full flex items-center justify-center">
+                          <Award className="h-6 w-6 text-[#f4d03f]" />
+                        </div>
+                      </div>
+                      <p className="text-xl mb-2">Portfolio Development</p>
+                      <p className="text-sm opacity-80">For every graduate</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced Bottom Quote Section */}
           <div
-            className="text-center mt-16 animate-fade-in"
+            className="text-center animate-fade-in"
             style={{ animationDelay: "0.6s" }}
           >
-            <div className="max-w-4xl mx-auto p-8 bg-white/60 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-lg">
-              <blockquote className="text-2xl font-medium text-[#22336a] italic mb-4">
-                "Education is the most powerful weapon which you can use to
-                change the world."
-              </blockquote>
-              <p className="text-lg text-gray-600">
-                - Our commitment to transformative learning
-              </p>
+            <div className="max-w-5xl mx-auto bg-gradient-to-r from-gray-50 via-white to-gray-50 p-12 rounded-3xl border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
+              {/* Background decorations */}
+              <div className="absolute top-0 left-0 w-20 h-20 bg-[#c38935]/10 rounded-full blur-xl"></div>
+              <div className="absolute bottom-0 right-0 w-16 h-16 bg-[#22336a]/10 rounded-full blur-xl"></div>
+
+              <div className="relative z-10">
+                <div className="mb-8">
+                  <span className="text-8xl text-[#c38935] font-serif animate-pulse">
+                    "
+                  </span>
+                </div>
+                <blockquote className="text-3xl font-medium text-[#22336a] mb-8 leading-relaxed">
+                  Excellence in education is not just about academic
+                  achievements, but about empowering students with the skills,
+                  knowledge, and confidence to shape their futures and
+                  contribute meaningfully to society.
+                </blockquote>
+                <div className="flex items-center justify-center space-x-6">
+                  <div className="w-16 h-1 bg-gradient-to-r from-transparent to-[#c38935] rounded-full"></div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"></div>
+                    <p className="text-xl text-gray-600 font-bold">
+                      Our Educational Philosophy
+                    </p>
+                    <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"></div>
+                  </div>
+                  <div className="w-16 h-1 bg-gradient-to-l from-transparent to-[#c38935] rounded-full"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1298,11 +1460,11 @@ const Index = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                  Placement Opportunities
+                  Placement Opportunity Program
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Assured placement opportunities with 1200+ top recruiting
-                  companies
+                  Access to 200+ guaranteed job opportunities with comprehensive
+                  placement support and career guidance from industry experts
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -2120,15 +2282,15 @@ const Index = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-[#c38935]/10 rounded-full mb-6 animate-fade-in">
-              <Trophy className="h-5 w-5 text-[#c38935] mr-2 animate-pulse" />
+            <div className="inline-flex items-center px-6 py-3 bg-[#c38935]/10 rounded-full mb-6">
+              <Trophy className="h-5 w-5 text-[#c38935] mr-2" />
               <span className="text-[#c38935] font-semibold">
                 AWARDS & RECOGNITION
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight animate-slide-up">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
               Recognized
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] animate-gradient-shift">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
                 {" "}
                 Excellence
               </span>
@@ -2155,16 +2317,16 @@ const Index = () => {
               className="group relative animate-fade-in"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-300">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F8a91f11dc8e04d358b985214fbcb8d95?format=webp&width=800"
                       alt="ASSOCHAM India Award"
-                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain p-4"
                     />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
                     <Trophy className="h-4 w-4 text-white" />
                   </div>
                 </div>
@@ -2182,16 +2344,16 @@ const Index = () => {
               className="group relative animate-fade-in"
               style={{ animationDelay: "0.2s" }}
             >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-300">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800"
                       alt="IndiGlobal Education Award"
-                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain p-4"
                     />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center animate-pulse">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
                     <Star className="h-4 w-4 text-white" />
                   </div>
                 </div>
@@ -2209,16 +2371,16 @@ const Index = () => {
               className="group relative animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-300">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fc50132f6b1ef47a481e34f16b5b1f8fa?format=webp&width=800"
                       alt="HolonIQ South Asia EdTech 100"
-                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain p-4"
                     />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
                     <Award className="h-4 w-4 text-white" />
                   </div>
                 </div>
@@ -2236,16 +2398,16 @@ const Index = () => {
               className="group relative animate-fade-in"
               style={{ animationDelay: "0.4s" }}
             >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-300">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fbdbe9f2d629c4922b6d938266a01067d?format=webp&width=800"
                       alt="GSV 150 Global Digital Learning"
-                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain p-4"
                     />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center animate-pulse">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
                     <Zap className="h-4 w-4 text-white" />
                   </div>
                 </div>
@@ -2263,24 +2425,18 @@ const Index = () => {
               className="group relative animate-fade-in"
               style={{ animationDelay: "0.5s" }}
             >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:rotate-1">
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-300">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F9a5d04f143714c30b0905a3a9d2c3b0f?format=webp&width=800"
                       alt="Education Innovation Summit Award"
-                      className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-contain p-4"
                     />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center animate-bounce">
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center">
                     <Star className="h-4 w-4 text-white" />
                   </div>
-                  {/* Floating particles */}
-                  <div className="absolute -top-1 -left-1 w-3 h-3 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
-                  <div
-                    className="absolute -bottom-1 -right-1 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"
-                    style={{ animationDelay: "0.3s" }}
-                  ></div>
                 </div>
                 <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
                   Education Innovation
@@ -2299,8 +2455,8 @@ const Index = () => {
             <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
 
             <div className="relative z-10">
-              <div className="text-center mb-8 animate-pulse-glow">
-                <h3 className="text-3xl font-bold mb-4 animate-gradient-text">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold mb-4">
                   Industry Recognition
                 </h3>
                 <p className="text-xl opacity-90 max-w-3xl mx-auto">
@@ -2311,7 +2467,7 @@ const Index = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2">
                     5+
                   </div>
                   <p className="text-lg opacity-90">Major Awards</p>
@@ -2320,14 +2476,14 @@ const Index = () => {
                   </p>
                 </div>
                 <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2">
                     10,000+
                   </div>
                   <p className="text-lg opacity-90">Students Impacted</p>
                   <p className="text-sm opacity-70 mt-1">Lives Transformed</p>
                 </div>
                 <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2">
                     100+
                   </div>
                   <p className="text-lg opacity-90">Industry Partners</p>
@@ -2341,104 +2497,296 @@ const Index = () => {
         </div>
       </section>
 
-      {/* What Students Say */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
-              What Students Say
+      {/* Enhanced Student Testimonials */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl animate-float"></div>
+          <div
+            className="absolute bottom-20 right-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Enhanced Header */}
+          <div className="text-center mb-16 animate-slide-up">
+            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6 animate-fade-in">
+              <Star className="h-5 w-5 text-[#22336a] mr-2 animate-pulse" />
+              <span className="text-[#22336a] font-semibold">
+                STUDENT SUCCESS STORIES
+              </span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
+              Success
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
+                {" "}
+                Stories
+              </span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
+                That Inspire
+              </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Hear from our successful graduates who transformed their careers
-              with Hi-Tech & Sunstone
+            <p
+              className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
+              Discover how our programs have transformed careers and opened new
+              opportunities for students across diverse industries
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-white border border-gray-200 hover:border-[#c38935] hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-[#c38935] rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">RK</span>
+          {/* Enhanced Testimonials Grid */}
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+            {/* Testimonial 1 */}
+            <div
+              className="group relative animate-slide-up"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105">
+                <CardContent className="p-8">
+                  {/* Avatar and Info */}
+                  <div className="flex items-center mb-6">
+                    <div className="relative">
+                      <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-white font-bold text-lg">RK</span>
+                      </div>
+                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                        <span className="text-white text-xs">✓</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#c38935] transition-colors duration-300">
+                        Rahul Kumar
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        MBA Graduate • Software Engineer
+                      </p>
+                      <p className="text-xs text-[#c38935] font-semibold">
+                        TCS
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">Rahul Kumar</h4>
-                    <p className="text-sm text-gray-600">MBA Graduate - TCS</p>
-                  </div>
-                </div>
-                <div className="flex mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-700 text-sm italic">
-                  "Hi-Tech with Sunstone gave me industry exposure I needed. The
-                  placement support was exceptional, and I landed my dream job
-                  at TCS with a great package!"
-                </p>
-              </CardContent>
-            </Card>
 
-            <Card className="bg-white border border-gray-200 hover:border-[#22336a] hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-[#22336a] rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">PS</span>
+                  {/* Animated Rating */}
+                  <div className="flex mb-4 space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`h-5 w-5 text-yellow-400 fill-current transform transition-all duration-300 hover:scale-125`}
+                        style={{ animationDelay: `${i * 0.1}s` }}
+                      />
+                    ))}
                   </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">Priya Sharma</h4>
-                    <p className="text-sm text-gray-600">
-                      BCA Graduate - Infosys
+
+                  {/* Quote */}
+                  <div className="relative">
+                    <span className="text-4xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
+                      "
+                    </span>
+                    <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
+                      The industry exposure and practical learning approach gave
+                      me exactly what I needed to excel in my career. The
+                      placement support was exceptional, and I landed my dream
+                      job with a fantastic package!
                     </p>
                   </div>
-                </div>
-                <div className="flex mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-700 text-sm italic">
-                  "The practical approach and industry connections at
-                  Hi-Tech-Sunstone helped me develop real skills. Now I'm
-                  working as a software developer at Infosys!"
-                </p>
-              </CardContent>
-            </Card>
 
-            <Card className="bg-white border border-gray-200 hover:border-[#c38935] hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-[#c38935] rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">AJ</span>
+                  {/* Floating Particles */}
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+                  <div
+                    className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"
+                    style={{ animationDelay: "0.3s" }}
+                  ></div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div
+              className="group relative animate-slide-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#22336a] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="relative">
+                      <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-white font-bold text-lg">PS</span>
+                      </div>
+                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                        <span className="text-white text-xs">✓</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#22336a] transition-colors duration-300">
+                        Priya Sharma
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        BCA Graduate • Full Stack Developer
+                      </p>
+                      <p className="text-xs text-[#c38935] font-semibold">
+                        Infosys
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">Amit Joshi</h4>
-                    <p className="text-sm text-gray-600">
-                      B.Tech Graduate - Wipro
+
+                  <div className="flex mb-4 space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`h-5 w-5 text-yellow-400 fill-current transform transition-all duration-300 hover:scale-125`}
+                        style={{ animationDelay: `${i * 0.1}s` }}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="relative">
+                    <span className="text-4xl text-[#22336a]/20 font-serif absolute -top-2 -left-2">
+                      "
+                    </span>
+                    <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
+                      The practical approach and industry connections helped me
+                      develop real skills that matter in today's tech landscape.
+                      The comprehensive curriculum and expert guidance prepared
+                      me perfectly for professional challenges.
                     </p>
                   </div>
-                </div>
-                <div className="flex mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-gray-700 text-sm italic">
-                  "The advanced certifications and project-based learning
-                  prepared me perfectly for the industry. Grateful for the
-                  excellent placement support!"
+
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+                  <div
+                    className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"
+                    style={{ animationDelay: "0.3s" }}
+                  ></div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div
+              className="group relative animate-slide-up md:col-span-2 xl:col-span-1"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="relative">
+                      <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                        <span className="text-white font-bold text-lg">AJ</span>
+                      </div>
+                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                        <span className="text-white text-xs">✓</span>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#c38935] transition-colors duration-300">
+                        Amit Joshi
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        B.Tech Graduate • Senior Developer
+                      </p>
+                      <p className="text-xs text-[#c38935] font-semibold">
+                        Wipro
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex mb-4 space-x-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`h-5 w-5 text-yellow-400 fill-current transform transition-all duration-300 hover:scale-125`}
+                        style={{ animationDelay: `${i * 0.1}s` }}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="relative">
+                    <span className="text-4xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
+                      "
+                    </span>
+                    <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
+                      The advanced certifications and project-based learning
+                      methodology prepared me perfectly for the industry
+                      demands. The quality of education and career support
+                      exceeded my expectations in every way.
+                    </p>
+                  </div>
+
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+                  <div
+                    className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"
+                    style={{ animationDelay: "0.3s" }}
+                  ></div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Success Metrics */}
+          <div
+            className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-3xl p-10 text-white relative overflow-hidden animate-slide-up"
+            style={{ animationDelay: "0.4s" }}
+          >
+            <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16"></div>
+
+            <div className="relative z-10">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold mb-4">
+                  Student Success Metrics
+                </h3>
+                <p className="text-xl opacity-90 max-w-3xl mx-auto">
+                  Real numbers that reflect our commitment to student success
+                  and career transformation
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in">
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">
+                    98%
+                  </div>
+                  <p className="text-lg opacity-90">Satisfaction Rate</p>
+                  <p className="text-sm opacity-70 mt-1">Student Feedback</p>
+                </div>
+                <div
+                  className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in"
+                  style={{ animationDelay: "0.1s" }}
+                >
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">
+                    95%
+                  </div>
+                  <p className="text-lg opacity-90">Career Growth</p>
+                  <p className="text-sm opacity-70 mt-1">Within 2 Years</p>
+                </div>
+                <div
+                  className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in"
+                  style={{ animationDelay: "0.2s" }}
+                >
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">
+                    15K+
+                  </div>
+                  <p className="text-lg opacity-90">Success Stories</p>
+                  <p className="text-sm opacity-70 mt-1">And Counting</p>
+                </div>
+                <div
+                  className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in"
+                  style={{ animationDelay: "0.3s" }}
+                >
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">
+                    4.9★
+                  </div>
+                  <p className="text-lg opacity-90">Average Rating</p>
+                  <p className="text-sm opacity-70 mt-1">Student Reviews</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -2654,8 +3002,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer with Facebook Icon */}
-      <footer className="bg-[#000000] text-white py-12">
+      {/* Modern Enhanced Footer */}
+      <footer className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="text-3xl font-bold text-[#c38935] mb-6">
@@ -2793,6 +3141,74 @@ const Index = () => {
           100% {
             opacity: 1;
             transform: scale(1);
+          }
+        }
+
+        @keyframes bounce-subtle {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+
+        @keyframes wiggle {
+          0%,
+          7% {
+            transform: rotateZ(0);
+          }
+          15% {
+            transform: rotateZ(-15deg);
+          }
+          20% {
+            transform: rotateZ(10deg);
+          }
+          25% {
+            transform: rotateZ(-10deg);
+          }
+          30% {
+            transform: rotateZ(6deg);
+          }
+          35% {
+            transform: rotateZ(-4deg);
+          }
+          40%,
+          100% {
+            transform: rotateZ(0);
+          }
+        }
+
+        @keyframes shake {
+          0%,
+          100% {
+            transform: translateX(0);
+          }
+          10%,
+          30%,
+          50%,
+          70%,
+          90% {
+            transform: translateX(-10px);
+          }
+          20%,
+          40%,
+          60%,
+          80% {
+            transform: translateX(10px);
+          }
+        }
+
+        @keyframes glow-pulse {
+          0%,
+          100% {
+            box-shadow: 0 0 20px rgba(195, 137, 53, 0.4);
+          }
+          50% {
+            box-shadow:
+              0 0 40px rgba(195, 137, 53, 0.8),
+              0 0 60px rgba(195, 137, 53, 0.4);
           }
         }
 
@@ -3028,6 +3444,22 @@ const Index = () => {
 
         .pulse-glow {
           animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .animate-bounce-subtle {
+          animation: bounce-subtle 2s ease-in-out infinite;
+        }
+
+        .animate-wiggle {
+          animation: wiggle 1s ease-in-out;
+        }
+
+        .animate-shake {
+          animation: shake 0.5s ease-in-out;
+        }
+
+        .animate-glow-pulse {
+          animation: glow-pulse 2s ease-in-out infinite;
         }
       `}</style>
     </div>
