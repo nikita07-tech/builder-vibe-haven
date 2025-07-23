@@ -1056,127 +1056,195 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Redesigned Educational Approach Section */}
-      <section className="py-20 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden">
+      {/* Enhanced Educational Approach Section */}
+      <section className="py-20 bg-gradient-to-br from-white via-blue-50/30 to-orange-50/20 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-[#22336a]/10 to-[#c38935]/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-[#c38935]/10 to-[#22336a]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "3s" }}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-transparent via-white/20 to-transparent rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6">
-              <BookOpen className="h-5 w-5 text-[#22336a] mr-2" />
-              <span className="text-[#22336a] font-semibold">
+          {/* Enhanced Section Header */}
+          <div className="text-center mb-20 animate-slide-up">
+            <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-full mb-8 animate-fade-in hover:scale-105 transition-transform duration-300">
+              <BookOpen className="h-6 w-6 text-[#22336a] mr-3 animate-pulse" />
+              <span className="text-[#22336a] font-bold text-lg">
                 OUR EDUCATIONAL APPROACH
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-8 leading-tight">
               Transforming
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] animate-gradient-shift">
                 {" "}
                 Education
               </span>
               <br />
-              Through Excellence
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
+                Through Excellence
+              </span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
               We believe in providing comprehensive education that bridges the gap between
               academic learning and industry requirements through expert guidance and practical experience
             </p>
           </div>
 
-          {/* Main Content - Different Layout */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-            {/* Left side - Key Features */}
+          {/* Enhanced Main Content Layout */}
+          <div className="grid lg:grid-cols-2 gap-20 items-start mb-20">
+            {/* Left side - Enhanced Key Features */}
             <div className="space-y-8">
-              <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Users className="h-8 w-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#22336a] mb-2">
-                    Expert Faculty & Industry Leaders
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Learn directly from CEOs, CTOs, and senior professionals from Fortune 500 companies
-                    and successful startups with extensive industry experience.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Briefcase className="h-8 w-8 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#22336a] mb-2">
-                    Hands-On Learning Experience
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Gain practical knowledge through real-world projects, internships,
-                    and industry collaborations that prepare you for immediate career success.
-                  </p>
+              {/* Feature 1 */}
+              <div className="group relative animate-slide-in-left" style={{ animationDelay: "0.1s" }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative flex items-start space-x-6 p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                    <Users className="h-10 w-10 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                      Expert Faculty & Industry Leaders
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-lg">
+                      Learn directly from CEOs, CTOs, and senior professionals from Fortune 500 companies
+                      and successful startups with extensive industry experience.
+                    </p>
+                    <div className="mt-4 flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"></div>
+                      <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: "0.2s" }}></div>
+                      <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: "0.4s" }}></div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Award className="h-8 w-8 text-white" />
+              {/* Feature 2 */}
+              <div className="group relative animate-slide-in-left" style={{ animationDelay: "0.2s" }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative flex items-start space-x-6 p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                    <Briefcase className="h-10 w-10 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3 group-hover:text-[#22336a] transition-colors duration-300">
+                      Hands-On Learning Experience
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-lg">
+                      Gain practical knowledge through real-world projects, internships,
+                      and industry collaborations that prepare you for immediate career success.
+                    </p>
+                    <div className="mt-4 flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"></div>
+                      <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse" style={{ animationDelay: "0.2s" }}></div>
+                      <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse" style={{ animationDelay: "0.4s" }}></div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#22336a] mb-2">
-                    Professional Development
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Build a comprehensive professional portfolio showcasing verified skills
-                    and achievements to enhance your employability and career prospects.
-                  </p>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="group relative animate-slide-in-left" style={{ animationDelay: "0.3s" }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative flex items-start space-x-6 p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                    <Award className="h-10 w-10 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                      Professional Development
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed text-lg">
+                      Build a comprehensive professional portfolio showcasing verified skills
+                      and achievements to enhance your employability and career prospects.
+                    </p>
+                    <div className="mt-4 flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"></div>
+                      <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: "0.2s" }}></div>
+                      <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: "0.4s" }}></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Right side - Statistics & Impact */}
-            <div className="bg-gradient-to-br from-[#22336a] to-[#2d4a7b] rounded-3xl p-10 text-white relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+            {/* Right side - Enhanced Statistics & Impact */}
+            <div className="animate-slide-in-right" style={{ animationDelay: "0.4s" }}>
+              <div className="bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-3xl p-12 text-white relative overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
+                {/* Enhanced Background Elements */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20 animate-float"></div>
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-16 -translate-x-16 animate-float" style={{ animationDelay: "2s" }}></div>
+                <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
 
-              <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-6">Our Impact</h3>
-                <div className="grid grid-cols-1 gap-6">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                    <div className="text-3xl font-bold text-[#f4d03f] mb-2">1000+</div>
-                    <p className="text-lg">Industry Experts</p>
-                    <p className="text-sm opacity-80">Teaching our students</p>
+                <div className="relative z-10">
+                  <div className="text-center mb-8">
+                    <h3 className="text-4xl font-bold mb-4 animate-pulse-glow">Our Impact</h3>
+                    <p className="text-xl opacity-90">Transforming Lives Through Education</p>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                    <div className="text-3xl font-bold text-[#f4d03f] mb-2">95%</div>
-                    <p className="text-lg">Practical Learning</p>
-                    <p className="text-sm opacity-80">Hands-on experience</p>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                    <div className="text-3xl font-bold text-[#f4d03f] mb-2">100%</div>
-                    <p className="text-lg">Portfolio Development</p>
-                    <p className="text-sm opacity-80">For every graduate</p>
+                  <div className="grid grid-cols-1 gap-8">
+                    <div className="group bg-white/15 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-4xl font-bold text-[#f4d03f] group-hover:animate-bounce">1000+</div>
+                        <div className="w-12 h-12 bg-[#f4d03f]/20 rounded-full flex items-center justify-center">
+                          <Users className="h-6 w-6 text-[#f4d03f]" />
+                        </div>
+                      </div>
+                      <p className="text-xl mb-2">Industry Experts</p>
+                      <p className="text-sm opacity-80">Teaching our students</p>
+                    </div>
+                    <div className="group bg-white/15 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-4xl font-bold text-[#f4d03f] group-hover:animate-bounce">95%</div>
+                        <div className="w-12 h-12 bg-[#f4d03f]/20 rounded-full flex items-center justify-center">
+                          <Briefcase className="h-6 w-6 text-[#f4d03f]" />
+                        </div>
+                      </div>
+                      <p className="text-xl mb-2">Practical Learning</p>
+                      <p className="text-sm opacity-80">Hands-on experience</p>
+                    </div>
+                    <div className="group bg-white/15 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-4xl font-bold text-[#f4d03f] group-hover:animate-bounce">100%</div>
+                        <div className="w-12 h-12 bg-[#f4d03f]/20 rounded-full flex items-center justify-center">
+                          <Award className="h-6 w-6 text-[#f4d03f]" />
+                        </div>
+                      </div>
+                      <p className="text-xl mb-2">Portfolio Development</p>
+                      <p className="text-sm opacity-80">For every graduate</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Bottom Quote Section */}
-          <div className="text-center">
-            <div className="max-w-4xl mx-auto bg-gradient-to-r from-gray-50 to-white p-10 rounded-3xl border border-gray-200 shadow-lg">
-              <div className="mb-6">
-                <span className="text-6xl text-[#c38935] font-serif">"</span>
-              </div>
-              <blockquote className="text-2xl font-medium text-[#22336a] mb-6 leading-relaxed">
-                Excellence in education is not just about academic achievements, but about empowering
-                students with the skills, knowledge, and confidence to shape their futures and contribute
-                meaningfully to society.
-              </blockquote>
-              <div className="flex items-center justify-center space-x-4">
-                <div className="w-12 h-0.5 bg-[#c38935]"></div>
-                <p className="text-lg text-gray-600 font-medium">
-                  Our Educational Philosophy
-                </p>
-                <div className="w-12 h-0.5 bg-[#c38935]"></div>
+          {/* Enhanced Bottom Quote Section */}
+          <div className="text-center animate-fade-in" style={{ animationDelay: "0.6s" }}>
+            <div className="max-w-5xl mx-auto bg-gradient-to-r from-gray-50 via-white to-gray-50 p-12 rounded-3xl border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
+              {/* Background decorations */}
+              <div className="absolute top-0 left-0 w-20 h-20 bg-[#c38935]/10 rounded-full blur-xl"></div>
+              <div className="absolute bottom-0 right-0 w-16 h-16 bg-[#22336a]/10 rounded-full blur-xl"></div>
+
+              <div className="relative z-10">
+                <div className="mb-8">
+                  <span className="text-8xl text-[#c38935] font-serif animate-pulse">"</span>
+                </div>
+                <blockquote className="text-3xl font-medium text-[#22336a] mb-8 leading-relaxed">
+                  Excellence in education is not just about academic achievements, but about empowering
+                  students with the skills, knowledge, and confidence to shape their futures and contribute
+                  meaningfully to society.
+                </blockquote>
+                <div className="flex items-center justify-center space-x-6">
+                  <div className="w-16 h-1 bg-gradient-to-r from-transparent to-[#c38935] rounded-full"></div>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"></div>
+                    <p className="text-xl text-gray-600 font-bold">
+                      Our Educational Philosophy
+                    </p>
+                    <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"></div>
+                  </div>
+                  <div className="w-16 h-1 bg-gradient-to-l from-transparent to-[#c38935] rounded-full"></div>
+                </div>
               </div>
             </div>
           </div>
