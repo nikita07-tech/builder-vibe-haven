@@ -800,7 +800,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                  <span>100% Fee Back</span>
+                  <span>First Year Fee Back</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
