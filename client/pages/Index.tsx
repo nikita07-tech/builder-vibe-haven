@@ -1452,7 +1452,7 @@ const Index = () => {
                     rel="noopener noreferrer"
                     className="group inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
-                    <ExternalLink className="h-5 w-5 mr-3 group-hover:animate-bounce" />
+                    <ExternalLink className="h-5 w-5 mr-3" />
                     <span>Start Your Application</span>
                   </a>
                 </div>
