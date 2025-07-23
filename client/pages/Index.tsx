@@ -1538,6 +1538,167 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Awards and Recognition Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#22336a]/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-6 py-3 bg-[#c38935]/10 rounded-full mb-6 animate-fade-in">
+              <Trophy className="h-5 w-5 text-[#c38935] mr-2 animate-pulse" />
+              <span className="text-[#c38935] font-semibold">AWARDS & RECOGNITION</span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight animate-slide-up">
+              Recognized
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] animate-gradient-shift"> Excellence</span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">in Education</span>
+            </h2>
+            <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <p className="text-xl text-gray-700 leading-relaxed mb-4">
+                Our commitment to educational excellence has been recognized by leading industry organizations
+              </p>
+            </div>
+          </div>
+
+          {/* Awards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {/* ASSOCHAM Award */}
+            <div className="group relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
+                <div className="relative mb-6">
+                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F8a91f11dc8e04d358b985214fbcb8d95?format=webp&width=800"
+                      alt="ASSOCHAM India Award"
+                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
+                    <Trophy className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
+                  ASSOCHAM India
+                </h3>
+                <p className="text-gray-600 text-sm text-center leading-relaxed">
+                  Excellence in Educational Innovation
+                </p>
+              </div>
+            </div>
+
+            {/* IndiGlobal Award */}
+            <div className="group relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
+                <div className="relative mb-6">
+                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800"
+                      alt="IndiGlobal Education Award"
+                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center animate-pulse">
+                    <Star className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#22336a] transition-colors duration-300">
+                  IndiGlobal Education
+                </h3>
+                <p className="text-gray-600 text-sm text-center leading-relaxed">
+                  Outstanding Academic Excellence
+                </p>
+              </div>
+            </div>
+
+            {/* HolonIQ EdTech 100 */}
+            <div className="group relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
+                <div className="relative mb-6">
+                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fc50132f6b1ef47a481e34f16b5b1f8fa?format=webp&width=800"
+                      alt="HolonIQ South Asia EdTech 100"
+                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
+                    <Award className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
+                  HolonIQ EdTech 100
+                </h3>
+                <p className="text-gray-600 text-sm text-center leading-relaxed">
+                  Top EdTech Company 2022
+                </p>
+              </div>
+            </div>
+
+            {/* GSV 150 Award */}
+            <div className="group relative animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
+                <div className="relative mb-6">
+                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fbdbe9f2d629c4922b6d938266a01067d?format=webp&width=800"
+                      alt="GSV 150 Global Digital Learning"
+                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center animate-pulse">
+                    <Zap className="h-4 w-4 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#22336a] transition-colors duration-300">
+                  GSV 150
+                </h3>
+                <p className="text-gray-600 text-sm text-center leading-relaxed">
+                  Global Digital Learning Leader
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Recognition Statistics */}
+          <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-3xl p-12 text-white relative overflow-hidden shadow-2xl">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16"></div>
+            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+
+            <div className="relative z-10">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold mb-4">Industry Recognition</h3>
+                <p className="text-xl opacity-90 max-w-3xl mx-auto">
+                  Our achievements reflect our commitment to transforming lives through quality education
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2">4+</div>
+                  <p className="text-lg opacity-90">Major Awards</p>
+                  <p className="text-sm opacity-70 mt-1">Industry Recognition</p>
+                </div>
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2">10,000+</div>
+                  <p className="text-lg opacity-90">Students Impacted</p>
+                  <p className="text-sm opacity-70 mt-1">Lives Transformed</p>
+                </div>
+                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2">100+</div>
+                  <p className="text-lg opacity-90">Industry Partners</p>
+                  <p className="text-sm opacity-70 mt-1">Trust & Collaboration</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What Students Say */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1661,6 +1822,21 @@ const Index = () => {
                   category: "sunstone"
                 },
                 {
+                  question: "What makes Sunstone different from other education providers?",
+                  answer: "• Industry-aligned curriculum designed with Fortune 500 companies\n• 200+ assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
+                  category: "sunstone"
+                },
+                {
+                  question: "What is Sunstone's placement guarantee program?",
+                  answer: "Our placement opportunity program guarantees 200+ placement opportunities with comprehensive career support. If you don't receive the promised opportunities, we offer first year tuition fee back. The program includes dedicated placement officers, minimum 50+ guaranteed interviews, and continuous career guidance.",
+                  category: "placement"
+                },
+                {
+                  question: "How does Sunstone's learning methodology work?",
+                  answer: "Sunstone follows a practical learning approach combining theoretical knowledge with hands-on experience. Students work on real industry projects, participate in internships, and build professional portfolios. Our expert faculty from premier institutions ensure quality education delivery.",
+                  category: "sunstone"
+                },
+                {
                   question: "What are the criteria to get admission into Sunstone-powered colleges?",
                   answer: "Sunstone follows the eligibility criteria of colleges along with a personal interview for Undergraduate programs, and a screening test with an interview for the Postgraduate programs.",
                   category: "admission"
@@ -1671,6 +1847,11 @@ const Index = () => {
                   category: "fees"
                 },
                 {
+                  question: "What kind of industry connections does Sunstone have?",
+                  answer: "Sunstone has partnerships with 1200+ companies including Fortune 500 firms, leading startups, and established organizations across various sectors. Our strong industry network ensures maximum placement opportunities and internship programs for students.",
+                  category: "industry"
+                },
+                {
                   question: "Do I need to give any entrance exam to get admission to Sunstone-powered colleges?",
                   answer: "The entrance exam requirements vary by program and college. Some programs may require entrance exams while others may have direct admission based on academic performance and interviews. Our counselors will guide you through the specific requirements for your chosen program.",
                   category: "admission"
@@ -1679,6 +1860,16 @@ const Index = () => {
                   question: "Can I get professional help for my studies if I choose Sunstone?",
                   answer: "Yes, if you choose Sunstone you get help from counselor to choose the right career path, 70+ training and development sessions by industry experts and top recruiters, and learn from expert faculties passed out from IIM and IIT.",
                   category: "support"
+                },
+                {
+                  question: "What certifications and skills will I gain through Sunstone programs?",
+                  answer: "Students receive 10+ advanced certifications in emerging technologies like AI/ML, Data Science, Digital Marketing, Cloud Computing, and more. These industry-recognized certifications enhance your employability and career prospects significantly.",
+                  category: "certifications"
+                },
+                {
+                  question: "How does Sunstone ensure student success and career growth?",
+                  answer: "Through dedicated placement officers, personalized career counseling, skill development workshops, professional portfolio building, continuous mentorship, and access to extensive alumni network. We maintain 95% placement rate with comprehensive career support.",
+                  category: "success"
                 }
               ].map((faq, index) => (
                 <div key={index} className="group">
@@ -1754,11 +1945,13 @@ const Index = () => {
                       Call Us Now
                     </a>
                     <a
-                      href="mailto:connect@sunstone.in"
-                      className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-xl hover:bg-white/20 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20"
+                      href="https://sunstone.in/apply"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                     >
-                      <Mail className="h-5 w-5 mr-2" />
-                      Email Us
+                      <ExternalLink className="h-5 w-5 mr-2" />
+                      Apply Now
                     </a>
                   </div>
                 </div>
