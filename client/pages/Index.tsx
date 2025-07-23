@@ -2393,66 +2393,7 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Success Metrics */}
-          <div
-            className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-3xl p-10 text-white relative overflow-hidden animate-slide-up"
-            style={{ animationDelay: "0.4s" }}
-          >
-            <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16"></div>
 
-            <div className="relative z-10">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold mb-4">
-                  Student Success Metrics
-                </h3>
-                <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                  Real numbers that reflect our commitment to student success
-                  and career transformation
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">
-                    98%
-                  </div>
-                  <p className="text-lg opacity-90">Satisfaction Rate</p>
-                  <p className="text-sm opacity-70 mt-1">Student Feedback</p>
-                </div>
-                <div
-                  className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in"
-                  style={{ animationDelay: "0.1s" }}
-                >
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">
-                    95%
-                  </div>
-                  <p className="text-lg opacity-90">Career Growth</p>
-                  <p className="text-sm opacity-70 mt-1">Within 2 Years</p>
-                </div>
-                <div
-                  className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in"
-                  style={{ animationDelay: "0.2s" }}
-                >
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">
-                    15K+
-                  </div>
-                  <p className="text-lg opacity-90">Success Stories</p>
-                  <p className="text-sm opacity-70 mt-1">And Counting</p>
-                </div>
-                <div
-                  className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in"
-                  style={{ animationDelay: "0.3s" }}
-                >
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">
-                    4.9★
-                  </div>
-                  <p className="text-lg opacity-90">Average Rating</p>
-                  <p className="text-sm opacity-70 mt-1">Student Reviews</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
