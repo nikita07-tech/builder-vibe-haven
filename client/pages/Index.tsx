@@ -2826,7 +2826,7 @@ const Index = () => {
       </section>
 
       {/* Modern Enhanced Footer */}
-      <footer className="bg-[#000000] text-white py-12">
+      <footer className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="text-3xl font-bold text-[#c38935] mb-6">
