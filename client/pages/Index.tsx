@@ -350,7 +350,7 @@ const Index = () => {
 
           {/* Main Button */}
           <a
-            href="https://sunstone.in/apply"
+            href="https://sunstone.in/apply-now"
             target="_blank"
             rel="noopener noreferrer"
             className="relative flex items-center justify-center w-auto px-6 py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
@@ -808,7 +808,7 @@ const Index = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="https://sunstone.in/apply"
+                    href="https://sunstone.in/apply-now"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-8 py-3 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -1330,7 +1330,7 @@ const Index = () => {
 
                         <div className="mt-6">
                           <a
-                            href="https://sunstone.in/apply"
+                            href="https://sunstone.in/apply-now"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`w-full inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r ${programData.color} text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
@@ -1349,135 +1349,136 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Smart Investment Hub - Professional & Crisp */}
-      <section className="py-16 bg-gradient-to-br from-[#22336a] to-[#2d4a7b] relative overflow-hidden">
-        {/* Subtle Background */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-72 h-72 bg-[#c38935]/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 left-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Smart Investment Cards */}
+      <section className="py-16 bg-white relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center px-6 py-3 bg-[#c38935]/20 rounded-full mb-6 animate-fade-in">
-              <TrendingUp className="h-5 w-5 text-[#c38935] mr-2" />
-              <span className="text-white font-semibold">SMART INVESTMENT</span>
+            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6">
+              <TrendingUp className="h-5 w-5 text-[#22336a] mr-2" />
+              <span className="text-[#22336a] font-semibold">SMART INVESTMENT</span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#22336a] mb-4">
               Flexible Payment Solutions
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Make quality education affordable with our flexible EMI options and scholarship programs
             </p>
           </div>
 
-          {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Payment Features */}
-            <div className="space-y-6">
-              <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 animate-slide-in-left">
-                <div className="flex items-start space-x-4">
-                  <div className="w-14 h-14 bg-[#c38935] rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg className="h-7 w-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">0% Interest EMI</h3>
-                    <p className="text-gray-300">Flexible monthly payments with zero additional cost</p>
-                  </div>
-                </div>
+          {/* Investment Cards Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* EMI Card */}
+            <div className="group bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                </svg>
               </div>
-
-              <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 animate-slide-in-left" style={{animationDelay: "0.1s"}}>
-                <div className="flex items-start space-x-4">
-                  <div className="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg className="h-7 w-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Merit Scholarships</h3>
-                    <p className="text-gray-300">Up to 100% tuition fee coverage for deserving students</p>
-                  </div>
+              <h3 className="text-2xl font-bold text-[#22336a] mb-4">0% Interest EMI</h3>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Break down your education investment into manageable monthly payments with zero additional interest charges.
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center text-sm text-gray-500">
+                  <div className="w-2 h-2 bg-[#c38935] rounded-full mr-2"></div>
+                  <span>No hidden charges</span>
                 </div>
-              </div>
-
-              <div className="pt-4">
-                <a
-                  href="https://sunstone.in/apply"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                >
-                  <span>Check Eligibility</span>
-                  <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </a>
+                <div className="flex items-center text-sm text-gray-500">
+                  <div className="w-2 h-2 bg-[#c38935] rounded-full mr-2"></div>
+                  <span>Flexible terms</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-500">
+                  <div className="w-2 h-2 bg-[#c38935] rounded-full mr-2"></div>
+                  <span>Quick approval</span>
+                </div>
               </div>
             </div>
 
-            {/* Right - ROI Calculator */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-slide-in-right">
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-2.6-1.53C16.17 17.98 14.21 19 12 19z"/>
-                  </svg>
+            {/* Scholarship Card */}
+            <div className="group bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-blue-400/30 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-[#22336a] mb-4">Merit Scholarships</h3>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Up to 100% tuition fee coverage for deserving students based on academic excellence and potential.
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center text-sm text-gray-500">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                  <span>Merit-based selection</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">Investment Calculator</h3>
-                <p className="text-gray-300">Your education ROI breakdown</p>
+                <div className="flex items-center text-sm text-gray-500">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                  <span>Up to 100% coverage</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-500">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                  <span>Need-based support</span>
+                </div>
+              </div>
+            </div>
+
+            {/* ROI Calculator Card */}
+            <div className="group bg-gradient-to-br from-[#22336a] to-[#2d4a7b] rounded-2xl p-8 shadow-xl border-2 border-[#22336a] hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-2.6-1.53C16.17 17.98 14.21 19 12 19z"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">ROI Calculator</h3>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                Calculate your education investment returns and see the potential career growth.
+              </p>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                  <span className="text-white text-sm">Investment</span>
+                  <span className="text-[#c38935] font-bold">₹3L/yr</span>
+                </div>
+                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
+                  <span className="text-white text-sm">Career Returns</span>
+                  <span className="text-green-400 font-bold">₹10L+/yr</span>
+                </div>
               </div>
 
-              <div className="space-y-4">
-                <div className="flex justify-between items-center p-4 bg-white/10 rounded-xl">
-                  <span className="text-white font-medium">College Fee</span>
-                  <span className="text-[#c38935] font-bold">₹2.5L/yr</span>
-                </div>
-                <div className="flex justify-between items-center p-4 bg-white/10 rounded-xl">
-                  <span className="text-white font-medium">Sunstone Fee</span>
-                  <span className="text-blue-400 font-bold">₹50K/yr</span>
-                </div>
-                <div className="flex justify-between items-center p-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl border border-green-400/30">
-                  <span className="text-white font-bold">Career Returns</span>
-                  <span className="text-green-400 font-bold text-xl">₹10L+/yr</span>
-                </div>
-              </div>
-
-              <div className="mt-6 text-center">
+              <div className="text-center">
                 <div className="inline-flex items-center px-4 py-2 bg-green-500/20 rounded-full border border-green-400/30">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2"></div>
-                  <span className="text-green-300 text-sm font-semibold">400% ROI Potential</span>
+                  <span className="text-green-300 text-sm font-semibold">400% ROI</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Bottom CTA */}
-          <div className="text-center mt-12">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Ready to Transform Your Career?
+          {/* CTA Section */}
+          <div className="text-center">
+            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+              <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                Ready to Invest in Your Future?
               </h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Join thousands of students who secured their future with smart financial planning
+              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                Join thousands of students who transformed their careers with smart financial planning
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+917065303030"
-                  className="inline-flex items-center px-6 py-3 bg-white/10 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 bg-white border-2 border-[#22336a] text-[#22336a] font-semibold rounded-lg hover:bg-[#22336a] hover:text-white transition-all duration-300"
                 >
                   <Phone className="h-4 w-4 mr-2" />
                   Talk to Counselor
                 </a>
                 <a
-                  href="https://sunstone.in/apply"
+                  href="https://sunstone.in/apply-now"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-semibold rounded-lg transition-all duration-300"
+                  className="inline-flex items-center px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
                 >
                   <ExternalLink className="h-4 w-4 mr-2" />
-                  Apply Now
+                  Check Eligibility
                 </a>
               </div>
             </div>
@@ -1867,13 +1868,13 @@ const Index = () => {
                     <span>Call: +91 7065-30-30-30</span>
                   </a>
                   <a
-                    href="https://sunstone.in/apply"
+                    href="https://sunstone.in/apply-now"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <ExternalLink className="h-5 w-5 mr-3" />
-                    <span>Secure Your Spot</span>
+                    <span>Secure Your Spot Now</span>
                   </a>
                 </div>
               </div>
@@ -2539,7 +2540,7 @@ const Index = () => {
                       Call Us Now
                     </a>
                     <a
-                      href="https://sunstone.in/apply"
+                      href="https://sunstone.in/apply-now"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
@@ -2685,7 +2686,7 @@ const Index = () => {
               </h3>
               <div className="space-y-3">
                 <a
-                  href="https://sunstone.in/apply"
+                  href="https://sunstone.in/apply-now"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center justify-between p-3 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white rounded-xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg"
