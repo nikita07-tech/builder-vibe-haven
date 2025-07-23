@@ -587,7 +587,7 @@ const Index = () => {
                   <div className="text-3xl font-bold text-[#22336a] mb-2">
                     5000+
                   </div>
-                  <p className="text-sm text-gray-600">Job Opportunities</p>
+                  <p className="text-sm text-gray-600">Students Placed</p>
                 </div>
               </div>
 
