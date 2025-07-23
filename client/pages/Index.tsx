@@ -1349,137 +1349,157 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Smart Investment Cards */}
-      <section className="py-16 bg-white relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6">
-              <TrendingUp className="h-5 w-5 text-[#22336a] mr-2" />
-              <span className="text-[#22336a] font-semibold">SMART INVESTMENT</span>
+      {/* Enhanced Smart Investment Hub */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: "2s"}}></div>
+          <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-[#c38935] rounded-full animate-ping opacity-40 -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping opacity-30" style={{animationDelay: "1s"}}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Enhanced Header */}
+          <div className="text-center mb-16">
+            <div className="relative mb-8">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-[#c38935]/20 to-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
+              <div className="relative inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-xl border border-white/50 hover:scale-105 transition-all duration-500">
+                <TrendingUp className="h-6 w-6 text-[#22336a] mr-3 animate-bounce" />
+                <span className="text-[#22336a] font-bold text-lg tracking-wide">SMART INVESTMENT HUB</span>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-[#c38935] to-yellow-400 rounded-full animate-ping"></div>
+              </div>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#22336a] mb-4">
-              Flexible Payment Solutions
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
+              <span className="inline-block animate-slide-up">Flexible Payment</span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-yellow-400 to-[#c38935] animate-gradient-shift">
+                Solutions
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Make quality education affordable with our flexible EMI options and scholarship programs
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in">
+              Make quality education affordable with our innovative EMI options, scholarship programs, and smart financial planning
             </p>
           </div>
 
-          {/* Investment Cards Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {/* EMI Card */}
-            <div className="group bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-[#22336a] mb-4">0% Interest EMI</h3>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Break down your education investment into manageable monthly payments with zero additional interest charges.
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-center text-sm text-gray-500">
-                  <div className="w-2 h-2 bg-[#c38935] rounded-full mr-2"></div>
-                  <span>No hidden charges</span>
+          {/* Interactive Investment Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
+            {/* Enhanced EMI Card */}
+            <div className="group relative bg-white rounded-3xl p-6 lg:p-8 shadow-2xl border-2 border-gray-100 hover:border-[#c38935]/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-slide-up">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative">
+                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
+                  <svg className="h-8 w-8 lg:h-10 lg:w-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
                 </div>
-                <div className="flex items-center text-sm text-gray-500">
-                  <div className="w-2 h-2 bg-[#c38935] rounded-full mr-2"></div>
-                  <span>Flexible terms</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-500">
-                  <div className="w-2 h-2 bg-[#c38935] rounded-full mr-2"></div>
-                  <span>Quick approval</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Scholarship Card */}
-            <div className="group bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100 hover:border-blue-400/30 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-[#22336a] mb-4">Merit Scholarships</h3>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Up to 100% tuition fee coverage for deserving students based on academic excellence and potential.
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-center text-sm text-gray-500">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                  <span>Merit-based selection</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-500">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                  <span>Up to 100% coverage</span>
-                </div>
-                <div className="flex items-center text-sm text-gray-500">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                  <span>Need-based support</span>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#c38935] transition-colors duration-300">0% Interest EMI</h3>
+                <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
+                  Transform your education dreams into reality with zero-cost EMI plans designed for your convenience.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center p-3 bg-gray-50 rounded-xl group-hover:bg-[#c38935]/10 transition-colors duration-300">
+                    <div className="w-3 h-3 bg-[#c38935] rounded-full mr-3 animate-pulse"></div>
+                    <span className="text-sm font-medium text-gray-700">No hidden charges</span>
+                  </div>
+                  <div className="flex items-center p-3 bg-gray-50 rounded-xl group-hover:bg-[#c38935]/10 transition-colors duration-300">
+                    <div className="w-3 h-3 bg-[#c38935] rounded-full mr-3 animate-pulse" style={{animationDelay: "0.2s"}}></div>
+                    <span className="text-sm font-medium text-gray-700">Flexible terms up to 24 months</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* ROI Calculator Card */}
-            <div className="group bg-gradient-to-br from-[#22336a] to-[#2d4a7b] rounded-2xl p-8 shadow-xl border-2 border-[#22336a] hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 md:col-span-2 lg:col-span-1">
-              <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-2.6-1.53C16.17 17.98 14.21 19 12 19z"/>
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">ROI Calculator</h3>
-              <p className="text-gray-300 leading-relaxed mb-6">
-                Calculate your education investment returns and see the potential career growth.
-              </p>
-
-              <div className="space-y-3 mb-6">
-                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                  <span className="text-white text-sm">Investment</span>
-                  <span className="text-[#c38935] font-bold">₹3L/yr</span>
+            {/* Enhanced Scholarship Card */}
+            <div className="group relative bg-white rounded-3xl p-6 lg:p-8 shadow-2xl border-2 border-gray-100 hover:border-blue-500/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-slide-up" style={{animationDelay: "0.1s"}}>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative">
+                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
+                  <svg className="h-8 w-8 lg:h-10 lg:w-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
                 </div>
-                <div className="flex justify-between items-center p-3 bg-white/10 rounded-lg">
-                  <span className="text-white text-sm">Career Returns</span>
-                  <span className="text-green-400 font-bold">₹10L+/yr</span>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#22336a] mb-4 group-hover:text-blue-600 transition-colors duration-300">Merit Scholarships</h3>
+                <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
+                  Unlock up to 100% scholarship coverage based on your academic excellence and potential.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center p-3 bg-gray-50 rounded-xl group-hover:bg-blue-50 transition-colors duration-300">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+                    <span className="text-sm font-medium text-gray-700">Merit-based selection</span>
+                  </div>
+                  <div className="flex items-center p-3 bg-gray-50 rounded-xl group-hover:bg-blue-50 transition-colors duration-300">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full mr-3 animate-pulse" style={{animationDelay: "0.2s"}}></div>
+                    <span className="text-sm font-medium text-gray-700">Up to 100% fee coverage</span>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div className="text-center">
-                <div className="inline-flex items-center px-4 py-2 bg-green-500/20 rounded-full border border-green-400/30">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2"></div>
-                  <span className="text-green-300 text-sm font-semibold">400% ROI</span>
+            {/* Enhanced ROI Calculator Card */}
+            <div className="group relative bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-3xl p-6 lg:p-8 shadow-2xl border-2 border-[#22336a] hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 md:col-span-2 lg:col-span-1 animate-slide-up" style={{animationDelay: "0.2s"}}>
+              <div className="relative">
+                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
+                  <svg className="h-8 w-8 lg:h-10 lg:w-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-2.6-1.53C16.17 17.98 14.21 19 12 19z"/>
+                  </svg>
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold text-white mb-4 group-hover:text-[#c38935] transition-colors duration-300">Smart ROI Calculator</h3>
+                <p className="text-gray-300 leading-relaxed mb-6 group-hover:text-gray-200 transition-colors duration-300">
+                  Visualize your education investment returns and future earning potential.
+                </p>
+
+                <div className="space-y-4 mb-6">
+                  <div className="flex justify-between items-center p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors duration-300">
+                    <span className="text-white font-medium">Investment</span>
+                    <span className="text-[#c38935] font-bold text-lg">₹3L/yr</span>
+                  </div>
+                  <div className="flex justify-between items-center p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors duration-300">
+                    <span className="text-white font-medium">Returns</span>
+                    <span className="text-green-400 font-bold text-lg">₹10L+/yr</span>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-3 h-3 bg-green-400 rounded-full animate-ping mr-3"></div>
+                    <span className="text-green-300 font-bold">330% Growth</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* CTA Section */}
+          {/* Enhanced CTA Section */}
           <div className="text-center">
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
-              <h3 className="text-2xl font-bold text-[#22336a] mb-4">
-                Ready to Invest in Your Future?
-              </h3>
-              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                Join thousands of students who transformed their careers with smart financial planning
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+917065303030"
-                  className="inline-flex items-center px-6 py-3 bg-white border-2 border-[#22336a] text-[#22336a] font-semibold rounded-lg hover:bg-[#22336a] hover:text-white transition-all duration-300"
-                >
-                  <Phone className="h-4 w-4 mr-2" />
-                  Talk to Counselor
-                </a>
-                <a
-                  href="https://sunstone.in/apply-now"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-                >
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Check Eligibility
-                </a>
+            <div className="relative bg-gradient-to-r from-white via-gray-50 to-white rounded-3xl p-8 lg:p-12 shadow-2xl border-2 border-gray-200 hover:shadow-3xl transition-all duration-500 hover:scale-105 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full -translate-y-16 translate-x-16 animate-float"></div>
+
+              <div className="relative z-10">
+                <h3 className="text-2xl lg:text-3xl font-bold text-[#22336a] mb-6">
+                  Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-yellow-400">Transform</span> Your Future?
+                </h3>
+                <p className="text-lg lg:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                  Join thousands of successful students who secured their dream careers with our smart investment solutions
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center">
+                  <a
+                    href="tel:+917065303030"
+                    className="group inline-flex items-center px-6 lg:px-8 py-3 lg:py-4 bg-white border-2 border-[#22336a] text-[#22336a] font-bold rounded-xl hover:bg-[#22336a] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  >
+                    <Phone className="h-4 w-4 lg:h-5 lg:w-5 mr-2 lg:mr-3 group-hover:animate-bounce" />
+                    <span>Talk to Expert</span>
+                  </a>
+                  <a
+                    href="https://sunstone.in/apply-now"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative inline-flex items-center px-6 lg:px-8 py-3 lg:py-4 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white font-bold rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 overflow-hidden"
+                  >
+                    <ExternalLink className="h-4 w-4 lg:h-5 lg:w-5 mr-2 lg:mr-3 group-hover:animate-bounce" />
+                    <span>Calculate Investment</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
