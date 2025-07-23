@@ -2308,9 +2308,51 @@ Assured placement opportunities with 1200+ top recruiting companies
           }
         }
 
+        @keyframes gradient-text {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+
+        @keyframes pulse-glow {
+          0%, 100% {
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+          }
+          50% {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+          }
+        }
+
+        @keyframes ping {
+          75%, 100% {
+            transform: scale(2);
+            opacity: 0;
+          }
+        }
+
         .animate-gradient-shift {
           background-size: 200% 200%;
           animation: gradient-shift 3s ease infinite;
+        }
+
+        .animate-gradient-text {
+          background: linear-gradient(45deg, #ffffff, #f4d03f, #ffffff);
+          background-size: 200% 200%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: gradient-text 3s ease infinite;
+        }
+
+        .animate-pulse-glow {
+          animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .animate-ping {
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
         }
         
         @keyframes fade-in-delay {
