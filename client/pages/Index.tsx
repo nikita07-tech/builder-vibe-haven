@@ -2783,6 +2783,72 @@ const Index = () => {
           }
         }
 
+        @keyframes bounce-subtle {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+
+        @keyframes wiggle {
+          0%,
+          7% {
+            transform: rotateZ(0);
+          }
+          15% {
+            transform: rotateZ(-15deg);
+          }
+          20% {
+            transform: rotateZ(10deg);
+          }
+          25% {
+            transform: rotateZ(-10deg);
+          }
+          30% {
+            transform: rotateZ(6deg);
+          }
+          35% {
+            transform: rotateZ(-4deg);
+          }
+          40%,
+          100% {
+            transform: rotateZ(0);
+          }
+        }
+
+        @keyframes shake {
+          0%,
+          100% {
+            transform: translateX(0);
+          }
+          10%,
+          30%,
+          50%,
+          70%,
+          90% {
+            transform: translateX(-10px);
+          }
+          20%,
+          40%,
+          60%,
+          80% {
+            transform: translateX(10px);
+          }
+        }
+
+        @keyframes glow-pulse {
+          0%,
+          100% {
+            box-shadow: 0 0 20px rgba(195, 137, 53, 0.4);
+          }
+          50% {
+            box-shadow: 0 0 40px rgba(195, 137, 53, 0.8), 0 0 60px rgba(195, 137, 53, 0.4);
+          }
+        }
+
         @keyframes slide-up {
           0% {
             opacity: 0;
