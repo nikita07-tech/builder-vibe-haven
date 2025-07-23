@@ -560,12 +560,6 @@ const Index = () => {
                     MBA | MCA | BBA | BCA | B.Tech
                   </p>
                 </div>
-                <button 
-                  onClick={() => setShowPlacementPopup(true)}
-                  className="bg-white/20 hover:bg-white/30 backdrop-blur-sm px-6 py-3 rounded-md text-sm font-semibold transition-all duration-300 pulse-glow"
-                >
-                  View Placement Opportunity Program
-                </button>
               </div>
             </div>
 
