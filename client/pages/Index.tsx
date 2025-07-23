@@ -375,36 +375,36 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+      {/* Professional Header */}
+      <header className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200 sticky top-0 z-50 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center space-x-4 sm:space-x-8">
-              <div className="flex items-center space-x-3 sm:space-x-4">
+              <div className="flex items-center space-x-3 sm:space-x-4 group">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
                   alt="Hi-Tech Institute"
-                  className="h-12 w-auto"
+                  className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
                 />
-                <div className="h-6 w-px bg-gray-300"></div>
+                <div className="h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-20 w-auto"
+                  className="h-20 w-auto transition-all duration-300 group-hover:scale-105"
                 />
               </div>
             </div>
-            <div className="flex items-center space-x-3 sm:space-x-6">
+            <div className="flex items-center space-x-3 sm:space-x-4">
               <a
                 href="mailto:connect@sunstone.in"
-                className="hidden sm:flex items-center space-x-2 text-[#22336a] hover:text-[#c38935] transition-colors font-medium"
+                className="hidden sm:flex items-center space-x-2 text-[#22336a] hover:text-[#c38935] transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-gray-50"
               >
                 <Mail className="h-4 w-4" />
                 <span className="text-sm">connect@sunstone.in</span>
               </a>
               <a
                 href="tel:+917065303030"
-                className="flex items-center space-x-2 bg-[#c38935] hover:bg-[#c38935]/80 text-white px-4 py-2 rounded-lg transition-colors font-semibold shadow-sm"
+                className="flex items-center space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-4 py-2.5 rounded-xl transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 <Phone className="h-4 w-4" />
                 <span className="text-sm">+91 7065-30-30-30</span>
