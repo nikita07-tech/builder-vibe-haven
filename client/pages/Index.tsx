@@ -617,7 +617,9 @@ const Index = () => {
               <div className="bg-gray-50 rounded-lg p-3 text-center">
                 <p className="text-sm text-gray-700">
                   <span className="font-semibold text-[#c38935]">
-                    Verified & Audited
+                    <p>
+                      <br />
+                    </p>
                   </span>{" "}
                   Placement report audited by B2K Analytics
                 </p>
@@ -820,7 +822,9 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-3">Placement Opportunities</h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Guaranteed access to extensive placement opportunities across leading companies and emerging startups in your field.
+                      <p>
+                        Guaranteed access to extensive placement opportunities across leading companies{" "}
+                      </p>
                     </p>
                   </div>
                 </div>
@@ -1659,7 +1663,6 @@ Assured placement opportunities with 1200+ top recruiting companies
                     className="group inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <ExternalLink className="h-5 w-5 mr-3" />
-                    <span>Start Your Application</span>
                   </a>
                 </div>
               </div>
