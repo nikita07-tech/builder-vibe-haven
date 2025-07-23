@@ -48,14 +48,14 @@ const Index = () => {
       src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600",
       alt: "Hi-Tech Institute Campus",
       title: "Hi-Tech Institute Campus",
-      subtitle: "Modern Infrastructure & Facilities"
+      subtitle: "Modern Infrastructure & Facilities",
     },
     {
       src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=800",
       alt: "Campus View",
       title: "Campus Infrastructure",
-      subtitle: "World-Class Education Hub"
-    }
+      subtitle: "World-Class Education Hub",
+    },
   ];
 
   // Auto-advance carousel
@@ -71,7 +71,9 @@ const Index = () => {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + carouselImages.length) % carouselImages.length,
+    );
   };
 
   const programs = {
@@ -356,8 +358,12 @@ const Index = () => {
             {/* Button Content */}
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                <svg
+                  className="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
                 </svg>
               </div>
               <div className="text-left">
@@ -374,7 +380,9 @@ const Index = () => {
           <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
             <div className="bg-[#22336a] text-white px-4 py-3 rounded-xl shadow-xl whitespace-nowrap relative">
               <div className="text-sm font-bold">Start Your Journey</div>
-              <div className="text-xs opacity-80">Apply via Sunstone Portal</div>
+              <div className="text-xs opacity-80">
+                Apply via Sunstone Portal
+              </div>
               {/* Arrow pointing to button */}
               <div className="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-[#22336a]"></div>
             </div>
@@ -438,15 +446,22 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-3 text-center lg:text-left animate-slide-in-left">
               <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6 border border-white/30">
-                <span className="text-white font-semibold text-sm">PROFESSIONAL EXCELLENCE</span>
+                <span className="text-white font-semibold text-sm">
+                  PROFESSIONAL EXCELLENCE
+                </span>
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight text-white">
                 Transform Your Future with
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]"> Premier Education</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
+                  {" "}
+                  Premier Education
+                </span>
               </h1>
               <div className="mb-6">
                 <p className="text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl mb-4">
-                  Join Hi-Tech Institute of Engineering & Technology for industry-aligned programs in MBA, BBA, BCA, MCA & B.Tech with guaranteed placement support.
+                  Join Hi-Tech Institute of Engineering & Technology for
+                  industry-aligned programs in MBA, BBA, BCA, MCA & B.Tech with
+                  guaranteed placement support.
                 </p>
                 <div className="inline-flex items-center px-6 py-3 rounded-xl">
                   <div className="flex items-center mr-3">
@@ -456,7 +471,9 @@ const Index = () => {
                       className="h-8 w-auto"
                     />
                   </div>
-                  <span className="text-white font-bold text-lg">Powered by Sunstone</span>
+                  <span className="text-white font-bold text-lg">
+                    Powered by Sunstone
+                  </span>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -484,9 +501,11 @@ const Index = () => {
                   {/* Carousel Container */}
                   <div className="relative">
                     <div className="overflow-hidden rounded-lg">
-                      <div 
+                      <div
                         className="flex transition-transform duration-500 ease-in-out"
-                        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                        style={{
+                          transform: `translateX(-${currentSlide * 100}%)`,
+                        }}
                       >
                         {carouselImages.map((image, index) => (
                           <div key={index} className="w-full flex-shrink-0">
@@ -522,7 +541,7 @@ const Index = () => {
                           key={index}
                           onClick={() => setCurrentSlide(index)}
                           className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                            index === currentSlide ? 'bg-white' : 'bg-white/50'
+                            index === currentSlide ? "bg-white" : "bg-white/50"
                           }`}
                         />
                       ))}
@@ -645,32 +664,47 @@ const Index = () => {
               <div className="text-center mb-8">
                 <div className="inline-flex items-center px-4 py-2 bg-[#22336a]/10 rounded-full mb-4">
                   <Award className="h-4 w-4 text-[#22336a] mr-2" />
-                  <span className="text-[#22336a] font-semibold text-sm">PLACEMENT OPPORTUNITY PROGRAM</span>
+                  <span className="text-[#22336a] font-semibold text-sm">
+                    PLACEMENT OPPORTUNITY PROGRAM
+                  </span>
                 </div>
                 <h3 className="text-3xl font-bold text-[#22336a] mb-4">
                   Comprehensive Career Success Program
                 </h3>
                 <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                  Industry-leading placement program with guaranteed opportunities and comprehensive support system
+                  Industry-leading placement program with guaranteed
+                  opportunities and comprehensive support system
                 </p>
               </div>
 
               {/* Key Metrics Grid */}
               <div className="grid md:grid-cols-4 gap-6 mb-8">
                 <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">200+</div>
-                  <p className="text-gray-600 font-medium">Guaranteed Opportunities</p>
+                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                    200+
+                  </div>
+                  <p className="text-gray-600 font-medium">
+                    Guaranteed Opportunities
+                  </p>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">100%</div>
-                  <p className="text-gray-600 font-medium">First Year Tuition Fee Back</p>
+                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                    100%
+                  </div>
+                  <p className="text-gray-600 font-medium">
+                    First Year Tuition Fee Back
+                  </p>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">1200+</div>
+                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                    1200+
+                  </div>
                   <p className="text-gray-600 font-medium">Partner Companies</p>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">26 LPA</div>
+                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                    26 LPA
+                  </div>
                   <p className="text-gray-600 font-medium">Highest Package</p>
                 </div>
               </div>
@@ -678,62 +712,100 @@ const Index = () => {
               {/* Program Features */}
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div>
-                  <h4 className="text-xl font-bold text-[#22336a] mb-4">Program Highlights</h4>
+                  <h4 className="text-xl font-bold text-[#22336a] mb-4">
+                    Program Highlights
+                  </h4>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
-                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        <svg
+                          className="w-3 h-3 text-white"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                         </svg>
                       </div>
-                      <p className="text-gray-700">Dedicated placement officer for each student</p>
+                      <p className="text-gray-700">
+                        Dedicated placement officer for each student
+                      </p>
                     </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
-                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        <svg
+                          className="w-3 h-3 text-white"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                         </svg>
                       </div>
-                      <p className="text-gray-700">Guaranteed interview opportunities with top companies</p>
+                      <p className="text-gray-700">
+                        Guaranteed interview opportunities with top companies
+                      </p>
                     </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
-                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        <svg
+                          className="w-3 h-3 text-white"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                         </svg>
                       </div>
-                      <p className="text-gray-700">Comprehensive skill development workshops</p>
+                      <p className="text-gray-700">
+                        Comprehensive skill development workshops
+                      </p>
                     </div>
                     <div className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
-                        <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        <svg
+                          className="w-3 h-3 text-white"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                         </svg>
                       </div>
-                      <p className="text-gray-700">Professional portfolio development</p>
+                      <p className="text-gray-700">
+                        Professional portfolio development
+                      </p>
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-bold text-[#22336a] mb-4">Success Metrics</h4>
+                  <h4 className="text-xl font-bold text-[#22336a] mb-4">
+                    Success Metrics
+                  </h4>
                   <div className="space-y-4">
                     <div className="p-4 bg-[#22336a]/5 rounded-lg">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-gray-700 font-medium">Placement Rate</span>
+                        <span className="text-gray-700 font-medium">
+                          Placement Rate
+                        </span>
                         <span className="text-[#22336a] font-bold">95%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-[#22336a] h-2 rounded-full" style={{ width: '95%' }}></div>
+                        <div
+                          className="bg-[#22336a] h-2 rounded-full"
+                          style={{ width: "95%" }}
+                        ></div>
                       </div>
                     </div>
                     <div className="p-4 bg-[#c38935]/5 rounded-lg">
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-gray-700 font-medium">Student Satisfaction</span>
+                        <span className="text-gray-700 font-medium">
+                          Student Satisfaction
+                        </span>
                         <span className="text-[#22336a] font-bold">98%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-[#c38935] h-2 rounded-full" style={{ width: '98%' }}></div>
+                        <div
+                          className="bg-[#c38935] h-2 rounded-full"
+                          style={{ width: "98%" }}
+                        ></div>
                       </div>
                     </div>
                   </div>
@@ -743,7 +815,10 @@ const Index = () => {
               {/* Terms and CTA */}
               <div className="border-t border-gray-200 pt-6">
                 <p className="text-sm text-gray-500 text-center mb-6 max-w-3xl mx-auto">
-                  Terms and conditions apply. Placement guarantee subject to program completion, maintaining minimum academic standards, and active participation in placement activities. Full terms available upon enrollment.
+                  Terms and conditions apply. Placement guarantee subject to
+                  program completion, maintaining minimum academic standards,
+                  and active participation in placement activities. Full terms
+                  available upon enrollment.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -781,17 +856,28 @@ const Index = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6 animate-fade-in">
               <Trophy className="h-5 w-5 text-[#22336a] mr-2 animate-pulse" />
-              <span className="text-[#22336a] font-semibold">PLACEMENT OPPORTUNITY PROGRAM</span>
+              <span className="text-[#22336a] font-semibold">
+                PLACEMENT OPPORTUNITY PROGRAM
+              </span>
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight animate-slide-up">
               Placement
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] animate-gradient-shift"> Opportunity</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] animate-gradient-shift">
+                {" "}
+                Opportunity
+              </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">Program</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
+                Program
+              </span>
             </h2>
-            <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div
+              className="max-w-4xl mx-auto animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
               <p className="text-xl text-gray-700 leading-relaxed mb-4">
-Comprehensive placement support with assured career guidance and guaranteed success
+                Comprehensive placement support with assured career guidance and
+                guaranteed success
               </p>
               <div className="flex items-center justify-center space-x-8 text-sm text-gray-600">
                 <div className="flex items-center space-x-2">
@@ -799,11 +885,17 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                   <span>Career Opportunities</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                  <div
+                    className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"
+                    style={{ animationDelay: "0.5s" }}
+                  ></div>
                   <span>First Year Fee Back</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                  <div
+                    className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"
+                    style={{ animationDelay: "1s" }}
+                  ></div>
                   <span>Expert Mentorship</span>
                 </div>
               </div>
@@ -820,10 +912,13 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                     <Trophy className="h-8 w-8 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">Placement Opportunities</h3>
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">
+                      Placement Opportunities
+                    </h3>
                     <p className="text-gray-600 leading-relaxed">
                       <p>
-                        Guaranteed access to extensive placement opportunities across leading companies{" "}
+                        Guaranteed access to extensive placement opportunities
+                        across leading companies{" "}
                       </p>
                     </p>
                   </div>
@@ -836,9 +931,12 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                     <TrendingUp className="h-8 w-8 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">First Year Tuition Fee Back</h3>
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">
+                      First Year Tuition Fee Back
+                    </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      If you don't receive the promised placement opportunities, we'll refund your first-year tuition fee.
+                      If you don't receive the promised placement opportunities,
+                      we'll refund your first-year tuition fee.
                     </p>
                   </div>
                 </div>
@@ -850,9 +948,13 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                     <Users className="h-8 w-8 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">Dedicated Career Support</h3>
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">
+                      Dedicated Career Support
+                    </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Personal mentorship, interview preparation, and continuous guidance from industry professionals throughout your journey.
+                      Personal mentorship, interview preparation, and continuous
+                      guidance from industry professionals throughout your
+                      journey.
                     </p>
                   </div>
                 </div>
@@ -861,7 +963,9 @@ Comprehensive placement support with assured career guidance and guaranteed succ
 
             {/* Right Side - Program Benefits */}
             <div className="bg-white rounded-2xl p-10 shadow-xl border border-gray-200">
-              <h3 className="text-3xl font-bold text-[#22336a] mb-8 text-center">Program Benefits</h3>
+              <h3 className="text-3xl font-bold text-[#22336a] mb-8 text-center">
+                Program Benefits
+              </h3>
 
               <div className="space-y-6">
                 <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
@@ -869,8 +973,12 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                     <Target className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#22336a]">Guaranteed Interviews</h4>
-                    <p className="text-gray-600 text-sm">Interview opportunities with top companies</p>
+                    <h4 className="font-bold text-[#22336a]">
+                      Guaranteed Interviews
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Interview opportunities with top companies
+                    </p>
                   </div>
                 </div>
 
@@ -879,8 +987,12 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                     <BookOpen className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#22336a]">Skills Development</h4>
-                    <p className="text-gray-600 text-sm">70+ training sessions by industry experts</p>
+                    <h4 className="font-bold text-[#22336a]">
+                      Skills Development
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      70+ training sessions by industry experts
+                    </p>
                   </div>
                 </div>
 
@@ -889,8 +1001,12 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                     <Award className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#22336a]">Professional Portfolio</h4>
-                    <p className="text-gray-600 text-sm">Build impressive portfolio with real projects</p>
+                    <h4 className="font-bold text-[#22336a]">
+                      Professional Portfolio
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Build impressive portfolio with real projects
+                    </p>
                   </div>
                 </div>
 
@@ -899,8 +1015,12 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                     <Briefcase className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#22336a]">Industry Network</h4>
-                    <p className="text-gray-600 text-sm">Access to extensive professional network</p>
+                    <h4 className="font-bold text-[#22336a]">
+                      Industry Network
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Access to extensive professional network
+                    </p>
                   </div>
                 </div>
               </div>
@@ -919,8 +1039,13 @@ Comprehensive placement support with assured career guidance and guaranteed succ
               <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-2xl p-8 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-4">Ready to Secure Your Future?</h3>
-                  <p className="text-lg opacity-90 mb-6">Join our placement guarantee program and take the first step towards career success</p>
+                  <h3 className="text-2xl font-bold mb-4">
+                    Ready to Secure Your Future?
+                  </h3>
+                  <p className="text-lg opacity-90 mb-6">
+                    Join our placement guarantee program and take the first step
+                    towards career success
+                  </p>
                   <button
                     onClick={() => setShowPlacementPopup(true)}
                     className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
@@ -935,7 +1060,10 @@ Comprehensive placement support with assured career guidance and guaranteed succ
           {/* Terms */}
           <div className="text-center mt-8">
             <p className="text-sm text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              Terms and conditions apply. Placement guarantee is subject to program completion, maintaining minimum academic standards, and active participation in placement activities. Full terms available upon request.
+              Terms and conditions apply. Placement guarantee is subject to
+              program completion, maintaining minimum academic standards, and
+              active participation in placement activities. Full terms available
+              upon request.
             </p>
           </div>
         </div>
@@ -945,28 +1073,44 @@ Comprehensive placement support with assured career guidance and guaranteed succ
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+          <div
+            className="absolute bottom-20 right-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6 animate-fade-in">
               <BookOpen className="h-5 w-5 text-[#22336a] mr-2" />
-              <span className="text-[#22336a] font-semibold">OUR PHILOSOPHY</span>
+              <span className="text-[#22336a] font-semibold">
+                OUR PHILOSOPHY
+              </span>
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 animate-slide-up">
               The
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]"> Sunstone</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
+                {" "}
+                Sunstone
+              </span>
               <br />
               Philosophy
             </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              Our philosophy is deeply rooted in helping you learn from the best, providing a hands-on experience so your education is not just limited to theory
+            <p
+              className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
+              Our philosophy is deeply rooted in helping you learn from the
+              best, providing a hands-on experience so your education is not
+              just limited to theory
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            <div className="group relative animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            <div
+              className="group relative animate-slide-up"
+              style={{ animationDelay: "0.1s" }}
+            >
               <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <Card className="relative text-center border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 bg-white/80 backdrop-blur-sm">
                 <CardHeader className="pb-4">
@@ -979,18 +1123,29 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 leading-relaxed text-lg">
-                    Learn from CEOs, CTOs, COOs, and other leaders from Fortune 500 companies and leading Indian start-ups with 10+ years of recruitment experience
+                    Learn from CEOs, CTOs, COOs, and other leaders from Fortune
+                    500 companies and leading Indian start-ups with 10+ years of
+                    recruitment experience
                   </p>
                   <div className="mt-6 flex items-center justify-center space-x-2">
                     <div className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"></div>
-                    <div className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                    <div className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                    <div
+                      className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"
+                      style={{ animationDelay: "0.2s" }}
+                    ></div>
+                    <div
+                      className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"
+                      style={{ animationDelay: "0.4s" }}
+                    ></div>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="group relative animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <div
+              className="group relative animate-slide-up"
+              style={{ animationDelay: "0.2s" }}
+            >
               <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <Card className="relative text-center border-2 border-gray-200 hover:border-[#22336a] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 bg-white/80 backdrop-blur-sm">
                 <CardHeader className="pb-4">
@@ -1003,18 +1158,29 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 leading-relaxed text-lg">
-                    Put what you learn into practice and gain hands-on experience with internships & real-life projects and be ready for your job from Day 1
+                    Put what you learn into practice and gain hands-on
+                    experience with internships & real-life projects and be
+                    ready for your job from Day 1
                   </p>
                   <div className="mt-6 flex items-center justify-center space-x-2">
                     <div className="w-2 h-2 bg-[#22336a] rounded-full animate-pulse"></div>
-                    <div className="w-2 h-2 bg-[#22336a] rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                    <div className="w-2 h-2 bg-[#22336a] rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                    <div
+                      className="w-2 h-2 bg-[#22336a] rounded-full animate-pulse"
+                      style={{ animationDelay: "0.2s" }}
+                    ></div>
+                    <div
+                      className="w-2 h-2 bg-[#22336a] rounded-full animate-pulse"
+                      style={{ animationDelay: "0.4s" }}
+                    ></div>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="group relative animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            <div
+              className="group relative animate-slide-up"
+              style={{ animationDelay: "0.3s" }}
+            >
               <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <Card className="relative text-center border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 bg-white/80 backdrop-blur-sm">
                 <CardHeader className="pb-4">
@@ -1027,12 +1193,19 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 leading-relaxed text-lg">
-                    Increase your chances of getting hired by showcasing your verified skills and experience with a professional portfolio
+                    Increase your chances of getting hired by showcasing your
+                    verified skills and experience with a professional portfolio
                   </p>
                   <div className="mt-6 flex items-center justify-center space-x-2">
                     <div className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"></div>
-                    <div className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                    <div className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                    <div
+                      className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"
+                      style={{ animationDelay: "0.2s" }}
+                    ></div>
+                    <div
+                      className="w-2 h-2 bg-[#c38935] rounded-full animate-pulse"
+                      style={{ animationDelay: "0.4s" }}
+                    ></div>
                   </div>
                 </CardContent>
               </Card>
@@ -1040,12 +1213,18 @@ Comprehensive placement support with assured career guidance and guaranteed succ
           </div>
 
           {/* Philosophy Quote */}
-          <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div
+            className="text-center mt-16 animate-fade-in"
+            style={{ animationDelay: "0.6s" }}
+          >
             <div className="max-w-4xl mx-auto p-8 bg-white/60 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-lg">
               <blockquote className="text-2xl font-medium text-[#22336a] italic mb-4">
-                "Education is the most powerful weapon which you can use to change the world."
+                "Education is the most powerful weapon which you can use to
+                change the world."
               </blockquote>
-              <p className="text-lg text-gray-600">- Our commitment to transformative learning</p>
+              <p className="text-lg text-gray-600">
+                - Our commitment to transformative learning
+              </p>
             </div>
           </div>
         </div>
@@ -1066,28 +1245,40 @@ Comprehensive placement support with assured career guidance and guaranteed succ
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* 1. Industry Expert Sessions */}
-            <div className="group relative animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.1s" }}
+            >
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <BookOpen className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">Expert Sessions</h3>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                  Expert Sessions
+                </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Sessions by industry experts and leading faculty from Fortune 500 companies
+                  Sessions by industry experts and leading faculty from Fortune
+                  500 companies
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
 
             {/* 2. Professional Portfolio */}
-            <div className="group relative animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.2s" }}
+            >
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Award className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">Professional Portfolio</h3>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                  Professional Portfolio
+                </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Showcase verified skills and experience to increase hiring chances
+                  Showcase verified skills and experience to increase hiring
+                  chances
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1095,7 +1286,8 @@ Comprehensive placement support with assured career guidance and guaranteed succ
 
             {/* 3. Placement Opportunities (with enhanced popup) */}
             <div
-              className="group relative cursor-pointer animate-fade-in-up" style={{ animationDelay: '0.3s' }}
+              className="group relative cursor-pointer animate-fade-in-up"
+              style={{ animationDelay: "0.3s" }}
               onClick={() => setShowPlacementPopup(true)}
             >
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
@@ -1105,24 +1297,32 @@ Comprehensive placement support with assured career guidance and guaranteed succ
                     <span className="text-white text-xs font-bold">!</span>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">Placement Opportunities</h3>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                  Placement Opportunities
+                </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-Assured placement opportunities with 1200+ top recruiting companies
+                  Assured placement opportunities with 1200+ top recruiting
+                  companies
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
               </div>
             </div>
 
             {/* 4. Advanced Certifications */}
-            <div className="group relative animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.4s" }}
+            >
               <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
                 <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">Certifications</h3>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                  Certifications
+                </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  In-demand advanced certifications to choose from various domains
+                  In-demand advanced certifications to choose from various
+                  domains
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1137,39 +1337,42 @@ Assured placement opportunities with 1200+ top recruiting companies
           <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#22336a]/5 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6">
               Programs Offered
             </h2>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Transform your career with industry-aligned programs designed by experts
+              Transform your career with industry-aligned programs designed by
+              experts
             </p>
           </div>
 
           {/* Program Selector - All Blue */}
           <div className="flex flex-wrap justify-center gap-4 mb-16">
-            {Object.entries(programs).map(([programName, programData], index) => (
-              <button
-                key={programName}
-                onClick={() => setActiveTab(programName)}
-                className={`group relative px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-105 ${
-                  activeTab === programName
-                    ? `bg-gradient-to-r ${programData.color} text-white shadow-2xl`
-                    : 'bg-white text-[#22336a] hover:bg-gray-50 shadow-lg border border-gray-200'
-                }`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="flex items-center space-x-3">
-                  <GraduationCap className="h-6 w-6" />
-                  <span>{programName}</span>
-                </div>
-                {activeTab === programName && (
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-white rounded-full"></div>
-                )}
-              </button>
-            ))}
+            {Object.entries(programs).map(
+              ([programName, programData], index) => (
+                <button
+                  key={programName}
+                  onClick={() => setActiveTab(programName)}
+                  className={`group relative px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-105 ${
+                    activeTab === programName
+                      ? `bg-gradient-to-r ${programData.color} text-white shadow-2xl`
+                      : "bg-white text-[#22336a] hover:bg-gray-50 shadow-lg border border-gray-200"
+                  }`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="flex items-center space-x-3">
+                    <GraduationCap className="h-6 w-6" />
+                    <span>{programName}</span>
+                  </div>
+                  {activeTab === programName && (
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-white rounded-full"></div>
+                  )}
+                </button>
+              ),
+            )}
           </div>
 
           {/* Program Content */}
@@ -1178,25 +1381,31 @@ Assured placement opportunities with 1200+ top recruiting companies
               <div
                 key={programName}
                 className={`transition-all duration-700 ${
-                  activeTab === programName 
-                    ? 'opacity-100 transform translate-y-0' 
-                    : 'opacity-0 absolute inset-0 transform translate-y-8 pointer-events-none'
+                  activeTab === programName
+                    ? "opacity-100 transform translate-y-0"
+                    : "opacity-0 absolute inset-0 transform translate-y-8 pointer-events-none"
                 }`}
               >
                 <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
                   {/* Header with Blue Gradient */}
-                  <div className={`bg-gradient-to-r ${programData.color} p-8 text-white relative overflow-hidden`}>
+                  <div
+                    className={`bg-gradient-to-r ${programData.color} p-8 text-white relative overflow-hidden`}
+                  >
                     <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20"></div>
                     <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-16 -translate-x-16"></div>
-                    
+
                     <div className="relative z-10">
                       <div className="flex items-center justify-center mb-6">
                         <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
                           <GraduationCap className="h-10 w-10 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-3xl font-bold">{programName} Program</h3>
-                          <p className="text-xl opacity-90">Excellence in Education</p>
+                          <h3 className="text-3xl font-bold">
+                            {programName} Program
+                          </h3>
+                          <p className="text-xl opacity-90">
+                            Excellence in Education
+                          </p>
                         </div>
                       </div>
 
@@ -1204,28 +1413,42 @@ Assured placement opportunities with 1200+ top recruiting companies
                       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-8">
                         <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
                           <Clock className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">{programData.duration}</div>
+                          <div className="font-bold text-sm">
+                            {programData.duration}
+                          </div>
                           <div className="text-xs opacity-80">Duration</div>
                         </div>
                         <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
                           <Award className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">{programData.certifications}</div>
-                          <div className="text-xs opacity-80">Certifications</div>
+                          <div className="font-bold text-sm">
+                            {programData.certifications}
+                          </div>
+                          <div className="text-xs opacity-80">
+                            Certifications
+                          </div>
                         </div>
                         <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
                           <Briefcase className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">{programData.internships}</div>
+                          <div className="font-bold text-sm">
+                            {programData.internships}
+                          </div>
                           <div className="text-xs opacity-80">Experience</div>
                         </div>
                         <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
                           <Target className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">{programData.projects}</div>
+                          <div className="font-bold text-sm">
+                            {programData.projects}
+                          </div>
                           <div className="text-xs opacity-80">Projects</div>
                         </div>
                         <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
                           <Star className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">{programData.specializations}</div>
-                          <div className="text-xs opacity-80">Specializations</div>
+                          <div className="font-bold text-sm">
+                            {programData.specializations}
+                          </div>
+                          <div className="text-xs opacity-80">
+                            Specializations
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1241,26 +1464,28 @@ Assured placement opportunities with 1200+ top recruiting companies
                           Advanced Certifications
                         </h4>
                         <div className="grid gap-4">
-                          {programData.certificationsList.slice(0, 6).map((cert, index) => (
-                            <div
-                              key={index}
-                              className="group p-4 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 cursor-pointer border border-transparent hover:border-[#c38935]/20"
-                            >
-                              <div className="flex items-start space-x-3">
-                                <div className="w-8 h-8 bg-[#c38935] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                                  <Target className="h-4 w-4 text-white" />
-                                </div>
-                                <div className="flex-1">
-                                  <h5 className="font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
-                                    {cert.name}
-                                  </h5>
-                                  <p className="text-sm text-gray-600 mt-1">
-                                    {cert.careers}
-                                  </p>
+                          {programData.certificationsList
+                            .slice(0, 6)
+                            .map((cert, index) => (
+                              <div
+                                key={index}
+                                className="group p-4 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 cursor-pointer border border-transparent hover:border-[#c38935]/20"
+                              >
+                                <div className="flex items-start space-x-3">
+                                  <div className="w-8 h-8 bg-[#c38935] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                    <Target className="h-4 w-4 text-white" />
+                                  </div>
+                                  <div className="flex-1">
+                                    <h5 className="font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                                      {cert.name}
+                                    </h5>
+                                    <p className="text-sm text-gray-600 mt-1">
+                                      {cert.careers}
+                                    </p>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          ))}
+                            ))}
                         </div>
                       </div>
 
@@ -1301,25 +1526,39 @@ Assured placement opportunities with 1200+ top recruiting companies
       <section className="py-20 bg-gradient-to-br from-[#c38935] via-[#d4a853] to-[#c38935] relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-10 right-10 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+          <div
+            className="absolute bottom-10 right-10 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
           <div className="absolute top-1/2 left-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/[0.02] to-transparent transform -translate-x-1/2 -translate-y-1/2"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full mb-6 animate-fade-in border border-white/30">
-              <svg className="h-5 w-5 text-white mr-2" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              <svg
+                className="h-5 w-5 text-white mr-2"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
               </svg>
               <span className="text-white font-semibold">EASY FEE PAYMENT</span>
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-slide-up">
               Take Charge of Your
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-yellow-200 to-white"> Education</span>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-yellow-200 to-white">
+                {" "}
+                Education
+              </span>
             </h2>
-            <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div
+              className="max-w-4xl mx-auto animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
               <p className="text-xl text-white/90 leading-relaxed mb-4">
-                Play smart by choosing Sunstone. Pay the college fee and a nominal amount to unlock your dream job with Sunstone.
+                Play smart by choosing Sunstone. Pay the college fee and a
+                nominal amount to unlock your dream job with Sunstone.
               </p>
             </div>
           </div>
@@ -1331,38 +1570,58 @@ Assured placement opportunities with 1200+ top recruiting companies
               <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 animate-slide-in-left">
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                    <svg
+                      className="h-8 w-8 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">0 Cost EMI Available</h3>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      0 Cost EMI Available
+                    </h3>
                     <p className="text-white/80 leading-relaxed">
-                      Flexible payment options with zero additional cost EMI to make education affordable
+                      Flexible payment options with zero additional cost EMI to
+                      make education affordable
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* Scholarship */}
-              <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
+              <div
+                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 animate-slide-in-left"
+                style={{ animationDelay: "0.2s" }}
+              >
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    <svg
+                      className="h-8 w-8 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">Up to 100% Scholarship Available</h3>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      Up to 100% Scholarship Available
+                    </h3>
                     <p className="text-white/80 leading-relaxed">
-                      Merit-based scholarships to support deserving students in their educational journey
+                      Merit-based scholarships to support deserving students in
+                      their educational journey
                     </p>
                   </div>
                 </div>
               </div>
 
               {/* CTA Button */}
-              <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div
+                className="animate-fade-in"
+                style={{ animationDelay: "0.4s" }}
+              >
                 <a
                   href="https://sunstone.in/apply"
                   target="_blank"
@@ -1370,11 +1629,17 @@ Assured placement opportunities with 1200+ top recruiting companies
                   className="inline-flex items-center px-8 py-4 bg-white text-[#c38935] hover:bg-gray-100 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 group"
                 >
                   <span>Check Eligibility Now</span>
-                  <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                  <svg
+                    className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
                   </svg>
                 </a>
-                <p className="text-white/60 text-sm mt-3 italic">*Terms & conditions apply</p>
+                <p className="text-white/60 text-sm mt-3 italic">
+                  *Terms & conditions apply
+                </p>
               </div>
             </div>
 
@@ -1382,37 +1647,60 @@ Assured placement opportunities with 1200+ top recruiting companies
             <div className="relative animate-slide-in-right">
               <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl">
                 <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/20 rounded-full blur-xl animate-pulse"></div>
-                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '1s' }}></div>
+                <div
+                  className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/15 rounded-full blur-lg animate-pulse"
+                  style={{ animationDelay: "1s" }}
+                ></div>
 
                 <div className="relative z-10">
                   <div className="text-center mb-6">
                     <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group hover:scale-110 transition-transform duration-300">
-                      <svg className="h-10 w-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      <svg
+                        className="h-10 w-10 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Smart Investment</h3>
-                    <p className="text-white/80">Invest in your future with flexible payment options</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      Smart Investment
+                    </h3>
+                    <p className="text-white/80">
+                      Invest in your future with flexible payment options
+                    </p>
                   </div>
 
                   <div className="space-y-4">
                     <div className="bg-white/10 rounded-xl p-4 border border-white/20">
                       <div className="flex justify-between items-center">
-                        <span className="text-white font-medium">College Fee</span>
-                        <span className="text-white font-bold">Standard Rate</span>
+                        <span className="text-white font-medium">
+                          College Fee
+                        </span>
+                        <span className="text-white font-bold">
+                          Standard Rate
+                        </span>
                       </div>
                     </div>
                     <div className="bg-white/20 rounded-xl p-4 border border-white/30 relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent"></div>
                       <div className="relative flex justify-between items-center">
-                        <span className="text-white font-medium">Sunstone Fee</span>
-                        <span className="text-white font-bold">Nominal Amount</span>
+                        <span className="text-white font-medium">
+                          Sunstone Fee
+                        </span>
+                        <span className="text-white font-bold">
+                          Nominal Amount
+                        </span>
                       </div>
                     </div>
                     <div className="bg-gradient-to-r from-white/20 to-white/10 rounded-xl p-4 border border-white/30">
                       <div className="flex justify-between items-center">
-                        <span className="text-white font-bold text-lg">Total Value</span>
-                        <span className="text-white font-bold text-lg">Dream Career</span>
+                        <span className="text-white font-bold text-lg">
+                          Total Value
+                        </span>
+                        <span className="text-white font-bold text-lg">
+                          Dream Career
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -1431,39 +1719,136 @@ Assured placement opportunities with 1200+ top recruiting companies
               Top Recruiters
             </h2>
             <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Join a network of 1,200+ leading companies that actively recruit our graduates
+              Join a network of 1,200+ leading companies that actively recruit
+              our graduates
             </p>
           </div>
 
           {/* Horizontal Scrolling Logos */}
           <div className="relative overflow-hidden bg-gray-50 rounded-xl py-8 mb-12">
             <div className="flex space-x-8 animate-scroll">
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800" alt="Bosch" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800" alt="HCL" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800" alt="TCS" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800" alt="Paytm" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800" alt="Microsoft" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800" alt="Genpact" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800" alt="Bajaj Finserv" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800" alt="Airtel" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800" alt="IBM" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800" alt="Infosys" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800" alt="Hero" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800" alt="Axis Bank" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800"
+                alt="Bosch"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800"
+                alt="HCL"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800"
+                alt="TCS"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800"
+                alt="Paytm"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800"
+                alt="Microsoft"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800"
+                alt="Genpact"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800"
+                alt="Bajaj Finserv"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800"
+                alt="Airtel"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800"
+                alt="IBM"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800"
+                alt="Infosys"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800"
+                alt="Hero"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800"
+                alt="Axis Bank"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+
               {/* Duplicate for seamless loop */}
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800" alt="Bosch" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800" alt="HCL" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800" alt="TCS" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800" alt="Paytm" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800" alt="Microsoft" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800" alt="Genpact" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800" alt="Bajaj Finserv" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800" alt="Airtel" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800" alt="IBM" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800" alt="Infosys" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800" alt="Hero" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800" alt="Axis Bank" className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800"
+                alt="Bosch"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800"
+                alt="HCL"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800"
+                alt="TCS"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800"
+                alt="Paytm"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800"
+                alt="Microsoft"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800"
+                alt="Genpact"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800"
+                alt="Bajaj Finserv"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800"
+                alt="Airtel"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800"
+                alt="IBM"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800"
+                alt="Infosys"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800"
+                alt="Hero"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800"
+                alt="Axis Bank"
+                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              />
             </div>
           </div>
 
@@ -1473,22 +1858,34 @@ Assured placement opportunities with 1200+ top recruiting companies
               <div className="w-16 h-16 mx-auto mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
                 <Users className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-[#22336a] mb-2">Industry Connections</h3>
-              <p className="text-gray-600">Strong network of leading companies across sectors</p>
+              <h3 className="text-xl font-bold text-[#22336a] mb-2">
+                Industry Connections
+              </h3>
+              <p className="text-gray-600">
+                Strong network of leading companies across sectors
+              </p>
             </div>
             <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-200">
               <div className="w-16 h-16 mx-auto mb-4 bg-[#22336a] rounded-full flex items-center justify-center">
                 <Trophy className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-[#22336a] mb-2">Career Growth</h3>
-              <p className="text-gray-600">Excellent packages and growth opportunities</p>
+              <h3 className="text-xl font-bold text-[#22336a] mb-2">
+                Career Growth
+              </h3>
+              <p className="text-gray-600">
+                Excellent packages and growth opportunities
+              </p>
             </div>
             <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-200">
               <div className="w-16 h-16 mx-auto mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
                 <Target className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-[#22336a] mb-2">Success Stories</h3>
-              <p className="text-gray-600">Proven track record of student achievements</p>
+              <h3 className="text-xl font-bold text-[#22336a] mb-2">
+                Success Stories
+              </h3>
+              <p className="text-gray-600">
+                Proven track record of student achievements
+              </p>
             </div>
           </div>
         </div>
@@ -1498,21 +1895,30 @@ Assured placement opportunities with 1200+ top recruiting companies
       <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-orange-50 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-[#22336a]/10 to-[#c38935]/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-[#c38935]/10 to-[#22336a]/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+          <div
+            className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-[#c38935]/10 to-[#22336a]/10 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-6 py-2 bg-[#22336a]/10 rounded-full mb-6">
               <Clock className="h-5 w-5 text-[#22336a] mr-2" />
-              <span className="text-[#22336a] font-semibold">Quick & Easy Process</span>
+              <span className="text-[#22336a] font-semibold">
+                Quick & Easy Process
+              </span>
             </div>
             <h2 className="text-5xl sm:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
               Your Journey to
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#d4a853]"> Success</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#d4a853]">
+                {" "}
+                Success
+              </span>
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Four streamlined steps to unlock your potential and transform your career
+              Four streamlined steps to unlock your potential and transform your
+              career
             </p>
           </div>
 
@@ -1532,19 +1938,25 @@ Assured placement opportunities with 1200+ top recruiting companies
                     <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                      <svg
+                        className="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
                       </svg>
                     </div>
                   </div>
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">Apply Online</h3>
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                      Apply Online
+                    </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Submit your application through our user-friendly online portal with guided steps
+                      Submit your application through our user-friendly online
+                      portal with guided steps
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Clock className="h-4 w-4 mr-1" />
-                      5 minutes
+                      <Clock className="h-4 w-4 mr-1" />5 minutes
                     </div>
                   </div>
                 </div>
@@ -1560,15 +1972,22 @@ Assured placement opportunities with 1200+ top recruiting companies
                     <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      <svg
+                        className="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                       </svg>
                     </div>
                   </div>
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">Assessment & Counseling</h3>
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                      Assessment & Counseling
+                    </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Personalized evaluation and expert guidance to find your perfect program match
+                      Personalized evaluation and expert guidance to find your
+                      perfect program match
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Users className="h-4 w-4 mr-1" />
@@ -1588,15 +2007,22 @@ Assured placement opportunities with 1200+ top recruiting companies
                     <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z"/>
+                      <svg
+                        className="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z" />
                       </svg>
                     </div>
                   </div>
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">Document Verification</h3>
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                      Document Verification
+                    </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Quick verification of your academic credentials and eligibility confirmation
+                      Quick verification of your academic credentials and
+                      eligibility confirmation
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Award className="h-4 w-4 mr-1" />
@@ -1616,15 +2042,22 @@ Assured placement opportunities with 1200+ top recruiting companies
                     <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      <svg
+                        className="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                       </svg>
                     </div>
                   </div>
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">Welcome Aboard!</h3>
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                      Welcome Aboard!
+                    </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Secure your seat and begin your transformational educational journey with us
+                      Secure your seat and begin your transformational
+                      educational journey with us
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Trophy className="h-4 w-4 mr-1" />
@@ -1644,9 +2077,12 @@ Assured placement opportunities with 1200+ top recruiting companies
               <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
 
               <div className="relative z-10">
-                <h3 className="text-4xl font-bold mb-4">Ready to Transform Your Future?</h3>
+                <h3 className="text-4xl font-bold mb-4">
+                  Ready to Transform Your Future?
+                </h3>
                 <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                  Join thousands of successful graduates who chose excellence. Your journey starts here.
+                  Join thousands of successful graduates who chose excellence.
+                  Your journey starts here.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                   <a
@@ -1676,24 +2112,38 @@ Assured placement opportunities with 1200+ top recruiting companies
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#22336a]/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+          <div
+            className="absolute bottom-20 right-20 w-80 h-80 bg-[#22336a]/5 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-6 py-3 bg-[#c38935]/10 rounded-full mb-6 animate-fade-in">
               <Trophy className="h-5 w-5 text-[#c38935] mr-2 animate-pulse" />
-              <span className="text-[#c38935] font-semibold">AWARDS & RECOGNITION</span>
+              <span className="text-[#c38935] font-semibold">
+                AWARDS & RECOGNITION
+              </span>
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight animate-slide-up">
               Recognized
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] animate-gradient-shift"> Excellence</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] animate-gradient-shift">
+                {" "}
+                Excellence
+              </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">in Education</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
+                in Education
+              </span>
             </h2>
-            <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div
+              className="max-w-4xl mx-auto animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
               <p className="text-xl text-gray-700 leading-relaxed mb-4">
-                Our commitment to educational excellence has been recognized by leading industry organizations
+                Our commitment to educational excellence has been recognized by
+                leading industry organizations
               </p>
             </div>
           </div>
@@ -1701,7 +2151,10 @@ Assured placement opportunities with 1200+ top recruiting companies
           {/* Awards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
             {/* ASSOCHAM Award */}
-            <div className="group relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div
+              className="group relative animate-fade-in"
+              style={{ animationDelay: "0.1s" }}
+            >
               <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
@@ -1725,7 +2178,10 @@ Assured placement opportunities with 1200+ top recruiting companies
             </div>
 
             {/* IndiGlobal Award */}
-            <div className="group relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div
+              className="group relative animate-fade-in"
+              style={{ animationDelay: "0.2s" }}
+            >
               <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
@@ -1749,7 +2205,10 @@ Assured placement opportunities with 1200+ top recruiting companies
             </div>
 
             {/* HolonIQ EdTech 100 */}
-            <div className="group relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div
+              className="group relative animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
               <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
@@ -1773,7 +2232,10 @@ Assured placement opportunities with 1200+ top recruiting companies
             </div>
 
             {/* GSV 150 Award */}
-            <div className="group relative animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div
+              className="group relative animate-fade-in"
+              style={{ animationDelay: "0.4s" }}
+            >
               <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
@@ -1797,7 +2259,10 @@ Assured placement opportunities with 1200+ top recruiting companies
             </div>
 
             {/* Education Innovation Summit Award */}
-            <div className="group relative animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            <div
+              className="group relative animate-fade-in"
+              style={{ animationDelay: "0.5s" }}
+            >
               <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:rotate-1">
                 <div className="relative mb-6">
                   <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
@@ -1812,7 +2277,10 @@ Assured placement opportunities with 1200+ top recruiting companies
                   </div>
                   {/* Floating particles */}
                   <div className="absolute -top-1 -left-1 w-3 h-3 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
-                  <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping" style={{ animationDelay: '0.3s' }}></div>
+                  <div
+                    className="absolute -bottom-1 -right-1 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"
+                    style={{ animationDelay: "0.3s" }}
+                  ></div>
                 </div>
                 <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
                   Education Innovation
@@ -1832,27 +2300,40 @@ Assured placement opportunities with 1200+ top recruiting companies
 
             <div className="relative z-10">
               <div className="text-center mb-8 animate-pulse-glow">
-                <h3 className="text-3xl font-bold mb-4 animate-gradient-text">Industry Recognition</h3>
+                <h3 className="text-3xl font-bold mb-4 animate-gradient-text">
+                  Industry Recognition
+                </h3>
                 <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                  Our achievements reflect our commitment to transforming lives through quality education
+                  Our achievements reflect our commitment to transforming lives
+                  through quality education
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">5+</div>
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">
+                    5+
+                  </div>
                   <p className="text-lg opacity-90">Major Awards</p>
-                  <p className="text-sm opacity-70 mt-1">Industry Recognition</p>
+                  <p className="text-sm opacity-70 mt-1">
+                    Industry Recognition
+                  </p>
                 </div>
                 <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">10,000+</div>
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">
+                    10,000+
+                  </div>
                   <p className="text-lg opacity-90">Students Impacted</p>
                   <p className="text-sm opacity-70 mt-1">Lives Transformed</p>
                 </div>
                 <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">100+</div>
+                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 animate-count-up group-hover:animate-bounce">
+                    100+
+                  </div>
                   <p className="text-lg opacity-90">Industry Partners</p>
-                  <p className="text-sm opacity-70 mt-1">Trust & Collaboration</p>
+                  <p className="text-sm opacity-70 mt-1">
+                    Trust & Collaboration
+                  </p>
                 </div>
               </div>
             </div>
@@ -1894,7 +2375,9 @@ Assured placement opportunities with 1200+ top recruiting companies
                   ))}
                 </div>
                 <p className="text-gray-700 text-sm italic">
-                  "Hi-Tech with Sunstone gave me industry exposure I needed. The placement support was exceptional, and I landed my dream job at TCS with a great package!"
+                  "Hi-Tech with Sunstone gave me industry exposure I needed. The
+                  placement support was exceptional, and I landed my dream job
+                  at TCS with a great package!"
                 </p>
               </CardContent>
             </Card>
@@ -1907,7 +2390,9 @@ Assured placement opportunities with 1200+ top recruiting companies
                   </div>
                   <div>
                     <h4 className="font-bold text-[#22336a]">Priya Sharma</h4>
-                    <p className="text-sm text-gray-600">BCA Graduate - Infosys</p>
+                    <p className="text-sm text-gray-600">
+                      BCA Graduate - Infosys
+                    </p>
                   </div>
                 </div>
                 <div className="flex mb-3">
@@ -1919,7 +2404,9 @@ Assured placement opportunities with 1200+ top recruiting companies
                   ))}
                 </div>
                 <p className="text-gray-700 text-sm italic">
-                  "The practical approach and industry connections at Hi-Tech-Sunstone helped me develop real skills. Now I'm working as a software developer at Infosys!"
+                  "The practical approach and industry connections at
+                  Hi-Tech-Sunstone helped me develop real skills. Now I'm
+                  working as a software developer at Infosys!"
                 </p>
               </CardContent>
             </Card>
@@ -1932,7 +2419,9 @@ Assured placement opportunities with 1200+ top recruiting companies
                   </div>
                   <div>
                     <h4 className="font-bold text-[#22336a]">Amit Joshi</h4>
-                    <p className="text-sm text-gray-600">B.Tech Graduate - Wipro</p>
+                    <p className="text-sm text-gray-600">
+                      B.Tech Graduate - Wipro
+                    </p>
                   </div>
                 </div>
                 <div className="flex mb-3">
@@ -1944,7 +2433,9 @@ Assured placement opportunities with 1200+ top recruiting companies
                   ))}
                 </div>
                 <p className="text-gray-700 text-sm italic">
-                  "The advanced certifications and project-based learning prepared me perfectly for the industry. Grateful for the excellent placement support!"
+                  "The advanced certifications and project-based learning
+                  prepared me perfectly for the industry. Grateful for the
+                  excellent placement support!"
                 </p>
               </CardContent>
             </Card>
@@ -1974,64 +2465,85 @@ Assured placement opportunities with 1200+ top recruiting companies
               {[
                 {
                   question: "Why should I choose Sunstone?",
-                  answer: "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
-                  category: "sunstone"
+                  answer:
+                    "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
+                  category: "sunstone",
                 },
                 {
-                  question: "Does Sunstone provide an online or distance learning program?",
-                  answer: "Sunstone offers both online and offline learning programs. Our hybrid approach ensures flexibility while maintaining quality education standards. You can choose from various learning modes based on your preferences and requirements.",
-                  category: "sunstone"
+                  question:
+                    "Does Sunstone provide an online or distance learning program?",
+                  answer:
+                    "Sunstone offers both online and offline learning programs. Our hybrid approach ensures flexibility while maintaining quality education standards. You can choose from various learning modes based on your preferences and requirements.",
+                  category: "sunstone",
                 },
                 {
-                  question: "What makes Sunstone different from other education providers?",
-                  answer: "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
-                  category: "sunstone"
+                  question:
+                    "What makes Sunstone different from other education providers?",
+                  answer:
+                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
+                  category: "sunstone",
                 },
                 {
                   question: "What is Sunstone's placement guarantee program?",
-                  answer: "Our placement opportunity program guarantees comprehensive career support and placement opportunities. If you don't receive the promised opportunities, we offer first year tuition fee back. The program includes dedicated placement officers, guaranteed interviews, and continuous career guidance.",
-                  category: "placement"
+                  answer:
+                    "Our placement opportunity program guarantees comprehensive career support and placement opportunities. If you don't receive the promised opportunities, we offer first year tuition fee back. The program includes dedicated placement officers, guaranteed interviews, and continuous career guidance.",
+                  category: "placement",
                 },
                 {
                   question: "How does Sunstone's learning methodology work?",
-                  answer: "Sunstone follows a practical learning approach combining theoretical knowledge with hands-on experience. Students work on real industry projects, participate in internships, and build professional portfolios. Our expert faculty from premier institutions ensure quality education delivery.",
-                  category: "sunstone"
+                  answer:
+                    "Sunstone follows a practical learning approach combining theoretical knowledge with hands-on experience. Students work on real industry projects, participate in internships, and build professional portfolios. Our expert faculty from premier institutions ensure quality education delivery.",
+                  category: "sunstone",
                 },
                 {
-                  question: "What are the criteria to get admission into Sunstone-powered colleges?",
-                  answer: "Sunstone follows the eligibility criteria of colleges along with a personal interview for Undergraduate programs, and a screening test with an interview for the Postgraduate programs.",
-                  category: "admission"
+                  question:
+                    "What are the criteria to get admission into Sunstone-powered colleges?",
+                  answer:
+                    "Sunstone follows the eligibility criteria of colleges along with a personal interview for Undergraduate programs, and a screening test with an interview for the Postgraduate programs.",
+                  category: "admission",
                 },
                 {
-                  question: "Are any EMI options available if I pursue a full-time course from Sunstone?",
-                  answer: "Yes, Sunstone offers flexible EMI options and financing solutions to make quality education accessible. We have partnered with leading financial institutions to provide easy payment plans that suit your financial situation.",
-                  category: "fees"
+                  question:
+                    "Are any EMI options available if I pursue a full-time course from Sunstone?",
+                  answer:
+                    "Yes, Sunstone offers flexible EMI options and financing solutions to make quality education accessible. We have partnered with leading financial institutions to provide easy payment plans that suit your financial situation.",
+                  category: "fees",
                 },
                 {
-                  question: "What kind of industry connections does Sunstone have?",
-                  answer: "Sunstone has partnerships with 1200+ companies including Fortune 500 firms, leading startups, and established organizations across various sectors. Our strong industry network ensures maximum placement opportunities and internship programs for students.",
-                  category: "industry"
+                  question:
+                    "What kind of industry connections does Sunstone have?",
+                  answer:
+                    "Sunstone has partnerships with 1200+ companies including Fortune 500 firms, leading startups, and established organizations across various sectors. Our strong industry network ensures maximum placement opportunities and internship programs for students.",
+                  category: "industry",
                 },
                 {
-                  question: "Do I need to give any entrance exam to get admission to Sunstone-powered colleges?",
-                  answer: "The entrance exam requirements vary by program and college. Some programs may require entrance exams while others may have direct admission based on academic performance and interviews. Our counselors will guide you through the specific requirements for your chosen program.",
-                  category: "admission"
+                  question:
+                    "Do I need to give any entrance exam to get admission to Sunstone-powered colleges?",
+                  answer:
+                    "The entrance exam requirements vary by program and college. Some programs may require entrance exams while others may have direct admission based on academic performance and interviews. Our counselors will guide you through the specific requirements for your chosen program.",
+                  category: "admission",
                 },
                 {
-                  question: "Can I get professional help for my studies if I choose Sunstone?",
-                  answer: "Yes, if you choose Sunstone you get help from counselor to choose the right career path, 70+ training and development sessions by industry experts and top recruiters, and learn from expert faculties passed out from IIM and IIT.",
-                  category: "support"
+                  question:
+                    "Can I get professional help for my studies if I choose Sunstone?",
+                  answer:
+                    "Yes, if you choose Sunstone you get help from counselor to choose the right career path, 70+ training and development sessions by industry experts and top recruiters, and learn from expert faculties passed out from IIM and IIT.",
+                  category: "support",
                 },
                 {
-                  question: "What certifications and skills will I gain through Sunstone programs?",
-                  answer: "Students receive 10+ advanced certifications in emerging technologies like AI/ML, Data Science, Digital Marketing, Cloud Computing, and more. These industry-recognized certifications enhance your employability and career prospects significantly.",
-                  category: "certifications"
+                  question:
+                    "What certifications and skills will I gain through Sunstone programs?",
+                  answer:
+                    "Students receive 10+ advanced certifications in emerging technologies like AI/ML, Data Science, Digital Marketing, Cloud Computing, and more. These industry-recognized certifications enhance your employability and career prospects significantly.",
+                  category: "certifications",
                 },
                 {
-                  question: "How does Sunstone ensure student success and career growth?",
-                  answer: "Through dedicated placement officers, personalized career counseling, skill development workshops, professional portfolio building, continuous mentorship, and access to extensive alumni network. We maintain 95% placement rate with comprehensive career support.",
-                  category: "success"
-                }
+                  question:
+                    "How does Sunstone ensure student success and career growth?",
+                  answer:
+                    "Through dedicated placement officers, personalized career counseling, skill development workshops, professional portfolio building, continuous mentorship, and access to extensive alumni network. We maintain 95% placement rate with comprehensive career support.",
+                  category: "success",
+                },
               ].map((faq, index) => (
                 <div key={index} className="group">
                   <Collapsible>
@@ -2040,16 +2552,22 @@ Assured placement opportunities with 1200+ top recruiting companies
                         <div className="flex items-center justify-between text-left">
                           <div className="flex items-center space-x-4 flex-1">
                             <div className="w-12 h-12 bg-[#22336a] rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                              <span className="text-white font-bold">{index + 1}</span>
+                              <span className="text-white font-bold">
+                                {index + 1}
+                              </span>
                             </div>
                             <div className="flex-1">
                               <h3 className="text-lg font-bold text-[#22336a] group-hover:text-[#22336a] transition-colors duration-300">
                                 {faq.question}
                               </h3>
                               <div className="text-sm font-medium mt-1 text-[#22336a]/70">
-                                {faq.category === 'sunstone' ? 'Sunstone' : 
-                                 faq.category === 'admission' ? 'Admission' :
-                                 faq.category === 'fees' ? 'Fees' : 'Support'}
+                                {faq.category === "sunstone"
+                                  ? "Sunstone"
+                                  : faq.category === "admission"
+                                    ? "Admission"
+                                    : faq.category === "fees"
+                                      ? "Fees"
+                                      : "Support"}
                               </div>
                             </div>
                           </div>
@@ -2061,20 +2579,29 @@ Assured placement opportunities with 1200+ top recruiting companies
                       <div className="px-6 pb-6 -mt-2">
                         <div className="pt-6 border-t border-gray-200 bg-white rounded-xl p-6 ml-16 shadow-sm">
                           <div className="text-gray-700 leading-relaxed text-lg">
-                            {faq.answer.includes('•') ? (
+                            {faq.answer.includes("•") ? (
                               <div className="space-y-2">
-                                {faq.answer.split('\n').map((point, pointIndex) => (
-                                  <div key={pointIndex} className="flex items-start space-x-2">
-                                    {point.startsWith('•') ? (
-                                      <>
-                                        <span className="text-[#c38935] font-bold text-xl mt-0.5">•</span>
-                                        <span>{point.substring(1).trim()}</span>
-                                      </>
-                                    ) : (
-                                      <span>{point}</span>
-                                    )}
-                                  </div>
-                                ))}
+                                {faq.answer
+                                  .split("\n")
+                                  .map((point, pointIndex) => (
+                                    <div
+                                      key={pointIndex}
+                                      className="flex items-start space-x-2"
+                                    >
+                                      {point.startsWith("•") ? (
+                                        <>
+                                          <span className="text-[#c38935] font-bold text-xl mt-0.5">
+                                            •
+                                          </span>
+                                          <span>
+                                            {point.substring(1).trim()}
+                                          </span>
+                                        </>
+                                      ) : (
+                                        <span>{point}</span>
+                                      )}
+                                    </div>
+                                  ))}
                               </div>
                             ) : (
                               <p>{faq.answer}</p>
@@ -2093,10 +2620,15 @@ Assured placement opportunities with 1200+ top recruiting companies
               <div className="bg-[#22336a] rounded-3xl p-10 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
-                
+
                 <div className="relative z-10">
-                  <h3 className="text-3xl font-bold text-white mb-4">Still Have Questions?</h3>
-                  <p className="text-gray-300 mb-8 text-lg">Our expert counselors are here to guide you through your educational journey</p>
+                  <h3 className="text-3xl font-bold text-white mb-4">
+                    Still Have Questions?
+                  </h3>
+                  <p className="text-gray-300 mb-8 text-lg">
+                    Our expert counselors are here to guide you through your
+                    educational journey
+                  </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a
                       href="tel:+917065303030"
@@ -2132,7 +2664,7 @@ Assured placement opportunities with 1200+ top recruiting companies
             <p className="text-gray-400 mb-8 text-lg">
               Hi-Tech Institute of Engineering & Technology, powered by Sunstone
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
               <a
                 href="mailto:connect@sunstone.in"
@@ -2157,8 +2689,12 @@ Assured placement opportunities with 1200+ top recruiting companies
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300"
               >
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
               </a>
               <a
@@ -2167,8 +2703,12 @@ Assured placement opportunities with 1200+ top recruiting companies
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center transition-all duration-300"
               >
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.498 6.186a2.998 2.998 0 0 0-2.108-2.085C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.39.555A2.998 2.998 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.998 2.998 0 0 0 2.108 2.085c1.885.555 9.39.555 9.39.555s7.505 0 9.39-.555a2.998 2.998 0 0 0 2.108-2.085C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M23.498 6.186a2.998 2.998 0 0 0-2.108-2.085C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.39.555A2.998 2.998 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.998 2.998 0 0 0 2.108 2.085c1.885.555 9.39.555 9.39.555s7.505 0 9.39-.555a2.998 2.998 0 0 0 2.108-2.085C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                 </svg>
               </a>
               <a
@@ -2177,8 +2717,12 @@ Assured placement opportunities with 1200+ top recruiting companies
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center transition-all duration-300"
               >
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
               </a>
               <a
@@ -2187,8 +2731,12 @@ Assured placement opportunities with 1200+ top recruiting companies
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-full flex items-center justify-center transition-all duration-300"
               >
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                <svg
+                  className="w-6 h-6 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                 </svg>
               </a>
             </div>
@@ -2212,7 +2760,7 @@ Assured placement opportunities with 1200+ top recruiting companies
             transform: translateX(-50%);
           }
         }
-        
+
         @keyframes fadeIn {
           0% {
             opacity: 0;
@@ -2221,7 +2769,7 @@ Assured placement opportunities with 1200+ top recruiting companies
             opacity: 1;
           }
         }
-        
+
         @keyframes scaleIn {
           0% {
             opacity: 0;
@@ -2232,7 +2780,7 @@ Assured placement opportunities with 1200+ top recruiting companies
             transform: scale(1);
           }
         }
-        
+
         @keyframes bounce-in {
           0% {
             opacity: 0;
@@ -2247,7 +2795,7 @@ Assured placement opportunities with 1200+ top recruiting companies
             transform: scale(1);
           }
         }
-        
+
         @keyframes slide-up {
           0% {
             opacity: 0;
@@ -2258,7 +2806,7 @@ Assured placement opportunities with 1200+ top recruiting companies
             transform: translateY(0);
           }
         }
-        
+
         @keyframes slide-in-left {
           0% {
             opacity: 0;
@@ -2269,7 +2817,7 @@ Assured placement opportunities with 1200+ top recruiting companies
             transform: translateX(0);
           }
         }
-        
+
         @keyframes slide-in-right {
           0% {
             opacity: 0;
@@ -2304,7 +2852,8 @@ Assured placement opportunities with 1200+ top recruiting companies
         }
 
         @keyframes gradient-shift {
-          0%, 100% {
+          0%,
+          100% {
             background-position: 0% 50%;
           }
           50% {
@@ -2313,7 +2862,8 @@ Assured placement opportunities with 1200+ top recruiting companies
         }
 
         @keyframes gradient-text {
-          0%, 100% {
+          0%,
+          100% {
             background-position: 0% 50%;
           }
           50% {
@@ -2322,16 +2872,20 @@ Assured placement opportunities with 1200+ top recruiting companies
         }
 
         @keyframes pulse-glow {
-          0%, 100% {
+          0%,
+          100% {
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
           }
           50% {
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+            text-shadow:
+              0 0 20px rgba(255, 255, 255, 0.8),
+              0 0 30px rgba(255, 255, 255, 0.6);
           }
         }
 
         @keyframes ping {
-          75%, 100% {
+          75%,
+          100% {
             transform: scale(2);
             opacity: 0;
           }
@@ -2358,7 +2912,7 @@ Assured placement opportunities with 1200+ top recruiting companies
         .animate-ping {
           animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
         }
-        
+
         @keyframes fade-in-delay {
           0% {
             opacity: 0;
@@ -2367,7 +2921,7 @@ Assured placement opportunities with 1200+ top recruiting companies
             opacity: 1;
           }
         }
-        
+
         @keyframes spin-slow {
           0% {
             transform: rotate(0deg);
@@ -2376,16 +2930,17 @@ Assured placement opportunities with 1200+ top recruiting companies
             transform: rotate(360deg);
           }
         }
-        
+
         @keyframes float {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0px);
           }
           50% {
             transform: translateY(-20px);
           }
         }
-        
+
         @keyframes count-up {
           0% {
             opacity: 0;
@@ -2396,36 +2951,37 @@ Assured placement opportunities with 1200+ top recruiting companies
             transform: scale(1);
           }
         }
-        
+
         @keyframes pulse-glow {
-          0%, 100% {
+          0%,
+          100% {
             box-shadow: 0 0 20px rgba(34, 51, 106, 0.3);
           }
           50% {
             box-shadow: 0 0 40px rgba(34, 51, 106, 0.6);
           }
         }
-        
+
         .animate-scroll {
           animation: scroll 30s linear infinite;
         }
-        
+
         .animate-scroll:hover {
           animation-play-state: paused;
         }
-        
+
         .animate-fadeIn {
           animation: fadeIn 0.3s ease-out;
         }
-        
+
         .animate-scaleIn {
           animation: scaleIn 0.3s ease-out;
         }
-        
+
         .animate-bounce-in {
           animation: bounce-in 0.6s ease-out;
         }
-        
+
         .animate-slide-up {
           animation: slide-up 0.6s ease-out;
         }
@@ -2437,35 +2993,35 @@ Assured placement opportunities with 1200+ top recruiting companies
         .animate-fade-in-up {
           animation: fade-in-up 0.6s ease-out;
         }
-        
+
         .animate-slide-in-left {
           animation: slide-in-left 0.6s ease-out;
         }
-        
+
         .animate-slide-in-right {
           animation: slide-in-right 0.6s ease-out;
         }
-        
+
         .animate-fade-in {
           animation: fadeIn 0.8s ease-out;
         }
-        
+
         .animate-fade-in-delay {
           animation: fade-in-delay 1s ease-out 0.3s both;
         }
-        
+
         .animate-spin-slow {
           animation: spin-slow 3s linear infinite;
         }
-        
+
         .animate-float {
           animation: float 6s ease-in-out infinite;
         }
-        
+
         .animate-count-up {
           animation: count-up 0.8s ease-out 0.5s both;
         }
-        
+
         .animate-pulse-glow {
           animation: pulse-glow 2s ease-in-out infinite;
         }
