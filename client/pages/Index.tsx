@@ -3082,6 +3082,22 @@ const Index = () => {
         .pulse-glow {
           animation: pulse-glow 2s ease-in-out infinite;
         }
+
+        .animate-bounce-subtle {
+          animation: bounce-subtle 2s ease-in-out infinite;
+        }
+
+        .animate-wiggle {
+          animation: wiggle 1s ease-in-out;
+        }
+
+        .animate-shake {
+          animation: shake 0.5s ease-in-out;
+        }
+
+        .animate-glow-pulse {
+          animation: glow-pulse 2s ease-in-out infinite;
+        }
       `}</style>
     </div>
   );
