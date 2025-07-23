@@ -1251,11 +1251,11 @@ const Index = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                  Career Support
+                  Placement Opportunity Program
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Comprehensive placement support and career guidance with 1200+
-                  partner companies for optimal opportunities
+                  Access to 200+ guaranteed job opportunities with comprehensive
+                  placement support and career guidance from industry experts
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
