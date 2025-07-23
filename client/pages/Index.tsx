@@ -574,7 +574,7 @@ const Index = () => {
       {/* Placement Highlights - Updated without emojis */}
       <section className="py-12 bg-[#22336a]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-shadow duration-500">
+          <div className="bg-white rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
             <div className="bg-[#c38935] text-white px-6 py-4">
               <div className="flex items-center justify-between">
                 <div>
