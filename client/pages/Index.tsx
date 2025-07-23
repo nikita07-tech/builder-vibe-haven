@@ -448,7 +448,7 @@ const Index = () => {
                 <p className="text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl mb-4">
                   Join Hi-Tech Institute of Engineering & Technology for industry-aligned programs in MBA, BBA, BCA, MCA & B.Tech with guaranteed placement support.
                 </p>
-                <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-xl shadow-lg">
+                <div className="inline-flex items-center px-6 py-3 rounded-xl">
                   <div className="flex items-center mr-3">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ff2ddce4e7a6641ef94f7545d416ae4f4?format=webp&width=800"
@@ -1663,6 +1663,7 @@ Assured placement opportunities with 1200+ top recruiting companies
                     className="group inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <ExternalLink className="h-5 w-5 mr-3" />
+                    <span>Secure Your Spot</span>
                   </a>
                 </div>
               </div>
