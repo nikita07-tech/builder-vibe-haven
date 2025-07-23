@@ -1798,7 +1798,7 @@ const Index = () => {
 
             <div className="flex items-center justify-center space-x-6 mb-8">
               <a
-                href="https://facebook.com/sunstone.in"
+                href="https://www.facebook.com/sunstoneeducation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300"
@@ -1808,7 +1808,7 @@ const Index = () => {
                 </svg>
               </a>
               <a
-                href="https://youtube.com/@SunstoneEducation"
+                href="https://www.youtube.com/@SunstoneEducation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center transition-all duration-300"
@@ -1818,7 +1818,7 @@ const Index = () => {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com/company/sunstone-business-school"
+                href="https://www.linkedin.com/company/sunstone-business-school"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center transition-all duration-300"
@@ -1828,7 +1828,7 @@ const Index = () => {
                 </svg>
               </a>
               <a
-                href="https://instagram.com/sunstone.in"
+                href="https://www.instagram.com/sunstone_education"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-full flex items-center justify-center transition-all duration-300"
