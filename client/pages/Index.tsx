@@ -716,20 +716,7 @@ const Index = () => {
                     Program Highlights
                   </h4>
                   <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
-                        <svg
-                          className="w-3 h-3 text-white"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                        </svg>
-                      </div>
-                      <p className="text-gray-700">
-                        Dedicated placement officer for each student
-                      </p>
-                    </div>
+
                     <div className="flex items-center space-x-3">
                       <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
                         <svg
