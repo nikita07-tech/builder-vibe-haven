@@ -2136,7 +2136,7 @@ const Index = () => {
           </div>
 
           {/* Awards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
             {/* ASSOCHAM Award */}
             <div
               className="group relative animate-fade-in"
