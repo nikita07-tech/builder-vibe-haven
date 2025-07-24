@@ -1436,38 +1436,7 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Enhanced ROI Calculator Card */}
-            <div className="group relative bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-3xl p-6 lg:p-8 shadow-2xl border-2 border-[#22336a] hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 md:col-span-2 lg:col-span-1 animate-slide-up" style={{animationDelay: "0.2s"}}>
-              <div className="relative">
-                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
-                  <svg className="h-8 w-8 lg:h-10 lg:w-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.48 2.54l2.6 1.53c.56-1.24.88-2.62.88-4.07 0-5.18-3.95-9.45-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 9.99 10 3.31 0 6.24-1.61 8.06-4.09l-2.6-1.53C16.17 17.98 14.21 19 12 19z"/>
-                  </svg>
-                </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-white mb-4 group-hover:text-[#c38935] transition-colors duration-300">Smart ROI Calculator</h3>
-                <p className="text-gray-300 leading-relaxed mb-6 group-hover:text-gray-200 transition-colors duration-300">
-                  Visualize your education investment returns and future earning potential.
-                </p>
 
-                <div className="space-y-4 mb-6">
-                  <div className="flex justify-between items-center p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors duration-300">
-                    <span className="text-white font-medium">Investment</span>
-                    <span className="text-[#c38935] font-bold text-lg">₹3L/yr</span>
-                  </div>
-                  <div className="flex justify-between items-center p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors duration-300">
-                    <span className="text-white font-medium">Returns</span>
-                    <span className="text-green-400 font-bold text-lg">₹10L+/yr</span>
-                  </div>
-                </div>
-
-                <div className="text-center">
-                  <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 group-hover:scale-105 transition-transform duration-300">
-                    <div className="w-3 h-3 bg-green-400 rounded-full animate-ping mr-3"></div>
-                    <span className="text-green-300 font-bold">330% Growth</span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Enhanced CTA Section */}
