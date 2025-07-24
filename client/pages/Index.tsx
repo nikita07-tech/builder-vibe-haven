@@ -1383,7 +1383,7 @@ const Index = () => {
           </div>
 
           {/* Interactive Investment Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
             {/* Enhanced EMI Card */}
             <div className="group relative bg-white rounded-3xl p-6 lg:p-8 shadow-2xl border-2 border-gray-100 hover:border-[#c38935]/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-slide-up">
               <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
