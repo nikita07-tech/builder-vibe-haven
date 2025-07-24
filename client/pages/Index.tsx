@@ -350,7 +350,7 @@ const Index = () => {
 
           {/* Main Button */}
           <a
-            href="https://sunstone.in/apply"
+            href="https://sunstone.in/apply-now"
             target="_blank"
             rel="noopener noreferrer"
             className="relative flex items-center justify-center w-auto px-6 py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
@@ -404,13 +404,13 @@ const Index = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
                   alt="Hi-Tech Institute"
-                  className="h-12 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                  className="h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
                 />
                 <div className="h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-12 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
+                  className="h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
                 />
               </div>
             </div>
@@ -808,7 +808,7 @@ const Index = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="https://sunstone.in/apply"
+                    href="https://sunstone.in/apply-now"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center px-8 py-3 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -1051,343 +1051,6 @@ const Index = () => {
               active participation in placement activities. Full terms available
               upon request.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Ultra-Enhanced Educational Approach Section */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50/40 to-orange-50/30 relative overflow-hidden">
-        {/* Sophisticated Animated Background */}
-        <div className="absolute inset-0">
-          {/* Main floating orbs */}
-          <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-br from-[#22336a]/15 via-[#c38935]/10 to-transparent rounded-full blur-3xl animate-float"></div>
-          <div
-            className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-[#c38935]/15 via-[#22336a]/10 to-transparent rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "3s" }}
-          ></div>
-
-          {/* Additional decorative elements */}
-          <div
-            className="absolute top-1/3 right-1/4 w-40 h-40 bg-gradient-to-br from-[#f4d03f]/20 to-transparent rounded-full blur-2xl animate-float"
-            style={{ animationDelay: "1s" }}
-          ></div>
-          <div
-            className="absolute bottom-1/3 left-1/4 w-32 h-32 bg-gradient-to-br from-[#3b4d7a]/20 to-transparent rounded-full blur-2xl animate-float"
-            style={{ animationDelay: "2s" }}
-          ></div>
-
-          {/* Geometric patterns */}
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-1/4 left-1/2 w-2 h-2 bg-[#c38935]/30 rounded-full animate-ping"></div>
-            <div
-              className="absolute top-3/4 left-1/3 w-1 h-1 bg-[#22336a]/40 rounded-full animate-ping"
-              style={{ animationDelay: "1s" }}
-            ></div>
-            <div
-              className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-[#f4d03f]/50 rounded-full animate-ping"
-              style={{ animationDelay: "2s" }}
-            ></div>
-          </div>
-
-          {/* Central glow */}
-          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-r from-white/30 via-blue-100/20 to-orange-100/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Ultra-Enhanced Section Header */}
-          <div className="text-center mb-24 animate-slide-up">
-            {/* Decorative elements */}
-            <div className="relative mb-8">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-[#c38935]/20 to-[#22336a]/20 rounded-full blur-2xl animate-pulse"></div>
-              <div className="relative inline-flex items-center px-10 py-5 bg-gradient-to-r from-white/80 via-blue-50/60 to-white/80 backdrop-blur-sm rounded-full mb-8 animate-fade-in hover:scale-105 transition-all duration-500 shadow-xl border border-white/50">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/5 via-[#c38935]/5 to-[#22336a]/5 rounded-full animate-gradient-shift"></div>
-                <BookOpen className="relative h-7 w-7 text-[#22336a] mr-4 animate-bounce" />
-                <span className="relative text-[#22336a] font-bold text-xl tracking-wide">
-                  OUR EDUCATIONAL APPROACH
-                </span>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#c38935] rounded-full animate-ping"></div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-[#22336a] mb-10 leading-tight">
-                <span className="inline-block animate-fade-in">
-                  Transforming
-                </span>
-                <br />
-                <span
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] via-[#c38935] to-[#f4d03f] animate-gradient-shift inline-block"
-                  style={{
-                    animationDelay: "0.2s",
-                    backgroundSize: "300% 300%",
-                  }}
-                >
-                  Education
-                </span>
-                <br />
-                <span
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] via-[#3b4d7a] to-[#22336a] inline-block animate-fade-in"
-                  style={{ animationDelay: "0.4s" }}
-                >
-                  Through Excellence
-                </span>
-              </h2>
-
-              {/* Decorative lines */}
-              <div className="flex items-center justify-center mb-8 space-x-4">
-                <div
-                  className="w-16 h-1 bg-gradient-to-r from-transparent to-[#c38935] rounded-full animate-fade-in"
-                  style={{ animationDelay: "0.6s" }}
-                ></div>
-                <div
-                  className="w-4 h-4 bg-[#c38935] rounded-full animate-pulse"
-                  style={{ animationDelay: "0.8s" }}
-                ></div>
-                <div
-                  className="w-8 h-1 bg-[#c38935] rounded-full animate-pulse"
-                  style={{ animationDelay: "1s" }}
-                ></div>
-                <div
-                  className="w-4 h-4 bg-[#22336a] rounded-full animate-pulse"
-                  style={{ animationDelay: "1.2s" }}
-                ></div>
-                <div
-                  className="w-16 h-1 bg-gradient-to-l from-transparent to-[#22336a] rounded-full animate-fade-in"
-                  style={{ animationDelay: "1.4s" }}
-                ></div>
-              </div>
-            </div>
-
-            <div className="relative max-w-5xl mx-auto">
-              <p
-                className="text-2xl text-gray-700 leading-relaxed animate-fade-in font-medium"
-                style={{ animationDelay: "0.6s" }}
-              >
-                We believe in providing comprehensive education that bridges the
-                gap between academic learning and industry requirements through
-                <span className="text-[#c38935] font-bold">
-                  {" "}
-                  expert guidance{" "}
-                </span>
-                and
-                <span className="text-[#22336a] font-bold">
-                  {" "}
-                  practical experience
-                </span>
-              </p>
-            </div>
-          </div>
-
-          {/* Enhanced Main Content Layout */}
-          <div className="grid lg:grid-cols-2 gap-20 items-start mb-20">
-            {/* Left side - Enhanced Key Features */}
-            <div className="space-y-8">
-              {/* Feature 1 */}
-              <div
-                className="group relative animate-slide-in-left"
-                style={{ animationDelay: "0.1s" }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                <div className="relative flex items-start space-x-6 p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
-                    <Users className="h-10 w-10 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
-                      Expert Faculty & Industry Leaders
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-lg">
-                      Learn directly from CEOs, CTOs, and senior professionals
-                      from Fortune 500 companies and successful startups with
-                      extensive industry experience.
-                    </p>
-                    <div className="mt-4 flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"></div>
-                      <div
-                        className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"
-                        style={{ animationDelay: "0.2s" }}
-                      ></div>
-                      <div
-                        className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"
-                        style={{ animationDelay: "0.4s" }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Feature 2 */}
-              <div
-                className="group relative animate-slide-in-left"
-                style={{ animationDelay: "0.2s" }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                <div className="relative flex items-start space-x-6 p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
-                    <Briefcase className="h-10 w-10 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3 group-hover:text-[#22336a] transition-colors duration-300">
-                      Hands-On Learning Experience
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-lg">
-                      Gain practical knowledge through real-world projects,
-                      internships, and industry collaborations that prepare you
-                      for immediate career success.
-                    </p>
-                    <div className="mt-4 flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"></div>
-                      <div
-                        className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"
-                        style={{ animationDelay: "0.2s" }}
-                      ></div>
-                      <div
-                        className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"
-                        style={{ animationDelay: "0.4s" }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Feature 3 */}
-              <div
-                className="group relative animate-slide-in-left"
-                style={{ animationDelay: "0.3s" }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                <div className="relative flex items-start space-x-6 p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
-                  <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
-                    <Award className="h-10 w-10 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
-                      Professional Development
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-lg">
-                      Build a comprehensive professional portfolio showcasing
-                      verified skills and achievements to enhance your
-                      employability and career prospects.
-                    </p>
-                    <div className="mt-4 flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"></div>
-                      <div
-                        className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"
-                        style={{ animationDelay: "0.2s" }}
-                      ></div>
-                      <div
-                        className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"
-                        style={{ animationDelay: "0.4s" }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right side - Enhanced Statistics & Impact */}
-            <div
-              className="animate-slide-in-right"
-              style={{ animationDelay: "0.4s" }}
-            >
-              <div className="bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-3xl p-12 text-white relative overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
-                {/* Enhanced Background Elements */}
-                <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20 animate-float"></div>
-                <div
-                  className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-16 -translate-x-16 animate-float"
-                  style={{ animationDelay: "2s" }}
-                ></div>
-                <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-
-                <div className="relative z-10">
-                  <div className="text-center mb-8">
-                    <h3 className="text-4xl font-bold mb-4 animate-pulse-glow">
-                      Our Impact
-                    </h3>
-                    <p className="text-xl opacity-90">
-                      Transforming Lives Through Education
-                    </p>
-                  </div>
-                  <div className="grid grid-cols-1 gap-8">
-                    <div className="group bg-white/15 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="text-4xl font-bold text-[#f4d03f] group-hover:animate-bounce">
-                          1000+
-                        </div>
-                        <div className="w-12 h-12 bg-[#f4d03f]/20 rounded-full flex items-center justify-center">
-                          <Users className="h-6 w-6 text-[#f4d03f]" />
-                        </div>
-                      </div>
-                      <p className="text-xl mb-2">Industry Experts</p>
-                      <p className="text-sm opacity-80">
-                        Teaching our students
-                      </p>
-                    </div>
-                    <div className="group bg-white/15 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="text-4xl font-bold text-[#f4d03f] group-hover:animate-bounce">
-                          95%
-                        </div>
-                        <div className="w-12 h-12 bg-[#f4d03f]/20 rounded-full flex items-center justify-center">
-                          <Briefcase className="h-6 w-6 text-[#f4d03f]" />
-                        </div>
-                      </div>
-                      <p className="text-xl mb-2">Practical Learning</p>
-                      <p className="text-sm opacity-80">Hands-on experience</p>
-                    </div>
-                    <div className="group bg-white/15 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="text-4xl font-bold text-[#f4d03f] group-hover:animate-bounce">
-                          100%
-                        </div>
-                        <div className="w-12 h-12 bg-[#f4d03f]/20 rounded-full flex items-center justify-center">
-                          <Award className="h-6 w-6 text-[#f4d03f]" />
-                        </div>
-                      </div>
-                      <p className="text-xl mb-2">Portfolio Development</p>
-                      <p className="text-sm opacity-80">For every graduate</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Enhanced Bottom Quote Section */}
-          <div
-            className="text-center animate-fade-in"
-            style={{ animationDelay: "0.6s" }}
-          >
-            <div className="max-w-5xl mx-auto bg-gradient-to-r from-gray-50 via-white to-gray-50 p-12 rounded-3xl border-2 border-gray-200 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 relative overflow-hidden">
-              {/* Background decorations */}
-              <div className="absolute top-0 left-0 w-20 h-20 bg-[#c38935]/10 rounded-full blur-xl"></div>
-              <div className="absolute bottom-0 right-0 w-16 h-16 bg-[#22336a]/10 rounded-full blur-xl"></div>
-
-              <div className="relative z-10">
-                <div className="mb-8">
-                  <span className="text-8xl text-[#c38935] font-serif animate-pulse">
-                    "
-                  </span>
-                </div>
-                <blockquote className="text-3xl font-medium text-[#22336a] mb-8 leading-relaxed">
-                  Excellence in education is not just about academic
-                  achievements, but about empowering students with the skills,
-                  knowledge, and confidence to shape their futures and
-                  contribute meaningfully to society.
-                </blockquote>
-                <div className="flex items-center justify-center space-x-6">
-                  <div className="w-16 h-1 bg-gradient-to-r from-transparent to-[#c38935] rounded-full"></div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"></div>
-                    <p className="text-xl text-gray-600 font-bold">
-                      Our Educational Philosophy
-                    </p>
-                    <div className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"></div>
-                  </div>
-                  <div className="w-16 h-1 bg-gradient-to-l from-transparent to-[#c38935] rounded-full"></div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -1665,7 +1328,7 @@ const Index = () => {
 
                         <div className="mt-6">
                           <a
-                            href="https://sunstone.in/apply"
+                            href="https://sunstone.in/apply-now"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`w-full inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r ${programData.color} text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
@@ -1684,188 +1347,170 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Easy Fee Payment Section */}
-      <section className="py-20 bg-gradient-to-br from-[#c38935] via-[#d4a853] to-[#c38935] relative overflow-hidden">
+      {/* Enhanced Smart Investment Hub */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+        {/* Animated Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
           <div
-            className="absolute bottom-10 right-10 w-80 h-80 bg-white/5 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "3s" }}
+            className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "2s" }}
           ></div>
-          <div className="absolute top-1/2 left-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/[0.02] to-transparent transform -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-[#c38935] rounded-full animate-ping opacity-40 -translate-x-1/2 -translate-y-1/2"></div>
+          <div
+            className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping opacity-30"
+            style={{ animationDelay: "1s" }}
+          ></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Enhanced Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full mb-6 animate-fade-in border border-white/30">
-              <svg
-                className="h-5 w-5 text-white mr-2"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
-              <span className="text-white font-semibold">EASY FEE PAYMENT</span>
+            <div className="relative mb-8">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-[#c38935]/20 to-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
+              <div className="relative inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-xl border border-white/50 hover:scale-105 transition-all duration-500">
+                <TrendingUp className="h-6 w-6 text-[#22336a] mr-3 animate-bounce" />
+                <span className="text-[#22336a] font-bold text-lg tracking-wide">
+                  SMART INVESTMENT HUB
+                </span>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-[#c38935] to-yellow-400 rounded-full animate-ping"></div>
+              </div>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-slide-up">
-              Take Charge of Your
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white via-yellow-200 to-white">
-                {" "}
-                Education
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
+              <span className="inline-block animate-slide-up">
+                Flexible Payment
+              </span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-yellow-400 to-[#c38935] animate-gradient-shift">
+                Solutions
               </span>
             </h2>
-            <div
-              className="max-w-4xl mx-auto animate-fade-in"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <p className="text-xl text-white/90 leading-relaxed mb-4">
-                Play smart by choosing Sunstone. Pay the college fee and a
-                nominal amount to unlock your dream job with Sunstone.
-              </p>
-            </div>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in">
+              Make quality education affordable with our innovative EMI options,
+              scholarship programs, and smart financial planning
+            </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Features */}
-            <div className="space-y-6">
-              {/* 0 Cost EMI */}
-              <div className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 animate-slide-in-left">
-                <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg
-                      className="h-8 w-8 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      0 Cost EMI Available
-                    </h3>
-                    <p className="text-white/80 leading-relaxed">
-                      Flexible payment options with zero additional cost EMI to
-                      make education affordable
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Scholarship */}
-              <div
-                className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 animate-slide-in-left"
-                style={{ animationDelay: "0.2s" }}
-              >
-                <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg
-                      className="h-8 w-8 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      Up to 100% Scholarship Available
-                    </h3>
-                    <p className="text-white/80 leading-relaxed">
-                      Merit-based scholarships to support deserving students in
-                      their educational journey
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <div
-                className="animate-fade-in"
-                style={{ animationDelay: "0.4s" }}
-              >
-                <a
-                  href="https://sunstone.in/apply"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-8 py-4 bg-white text-[#c38935] hover:bg-gray-100 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 group"
-                >
-                  <span>Check Eligibility Now</span>
+          {/* Interactive Investment Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
+            {/* Enhanced EMI Card */}
+            <div className="group relative bg-white rounded-3xl p-6 lg:p-8 shadow-2xl border-2 border-gray-100 hover:border-[#c38935]/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-slide-up">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative">
+                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
                   <svg
-                    className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300"
+                    className="h-8 w-8 lg:h-10 lg:w-10 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                   </svg>
-                </a>
-                <p className="text-white/60 text-sm mt-3 italic">
-                  *Terms & conditions apply
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#c38935] transition-colors duration-300">
+                  0% Interest EMI
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
+                  Transform your education dreams into reality with zero-cost
+                  EMI plans designed for your convenience.
                 </p>
+                <div className="space-y-3">
+                  <div className="flex items-center p-3 bg-gray-50 rounded-xl group-hover:bg-[#c38935]/10 transition-colors duration-300">
+                    <div className="w-3 h-3 bg-[#c38935] rounded-full mr-3 animate-pulse"></div>
+                    <span className="text-sm font-medium text-gray-700">
+                      No hidden charges
+                    </span>
+                  </div>
+                  <div className="flex items-center p-3 bg-gray-50 rounded-xl group-hover:bg-[#c38935]/10 transition-colors duration-300">
+                    <div
+                      className="w-3 h-3 bg-[#c38935] rounded-full mr-3 animate-pulse"
+                      style={{ animationDelay: "0.2s" }}
+                    ></div>
+                    <span className="text-sm font-medium text-gray-700">
+                      Flexible terms up to 24 months
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Right side - Visual Element */}
-            <div className="relative animate-slide-in-right">
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl">
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/20 rounded-full blur-xl animate-pulse"></div>
-                <div
-                  className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/15 rounded-full blur-lg animate-pulse"
-                  style={{ animationDelay: "1s" }}
-                ></div>
-
-                <div className="relative z-10">
-                  <div className="text-center mb-6">
-                    <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group hover:scale-110 transition-transform duration-300">
-                      <svg
-                        className="h-10 w-10 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      Smart Investment
-                    </h3>
-                    <p className="text-white/80">
-                      Invest in your future with flexible payment options
-                    </p>
+            {/* Enhanced Scholarship Card */}
+            <div
+              className="group relative bg-white rounded-3xl p-6 lg:p-8 shadow-2xl border-2 border-gray-100 hover:border-blue-500/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-slide-up"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative">
+                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
+                  <svg
+                    className="h-8 w-8 lg:h-10 lg:w-10 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#22336a] mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                  Merit Scholarships
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
+                  Unlock up to 100% scholarship coverage based on your academic
+                  excellence and potential.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center p-3 bg-gray-50 rounded-xl group-hover:bg-blue-50 transition-colors duration-300">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+                    <span className="text-sm font-medium text-gray-700">
+                      Merit-based selection
+                    </span>
                   </div>
-
-                  <div className="space-y-4">
-                    <div className="bg-white/10 rounded-xl p-4 border border-white/20">
-                      <div className="flex justify-between items-center">
-                        <span className="text-white font-medium">
-                          College Fee
-                        </span>
-                        <span className="text-white font-bold">
-                          Standard Rate
-                        </span>
-                      </div>
-                    </div>
-                    <div className="bg-white/20 rounded-xl p-4 border border-white/30 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent"></div>
-                      <div className="relative flex justify-between items-center">
-                        <span className="text-white font-medium">
-                          Sunstone Fee
-                        </span>
-                        <span className="text-white font-bold">
-                          Nominal Amount
-                        </span>
-                      </div>
-                    </div>
-                    <div className="bg-gradient-to-r from-white/20 to-white/10 rounded-xl p-4 border border-white/30">
-                      <div className="flex justify-between items-center">
-                        <span className="text-white font-bold text-lg">
-                          Total Value
-                        </span>
-                        <span className="text-white font-bold text-lg">
-                          Dream Career
-                        </span>
-                      </div>
-                    </div>
+                  <div className="flex items-center p-3 bg-gray-50 rounded-xl group-hover:bg-blue-50 transition-colors duration-300">
+                    <div
+                      className="w-3 h-3 bg-blue-500 rounded-full mr-3 animate-pulse"
+                      style={{ animationDelay: "0.2s" }}
+                    ></div>
+                    <span className="text-sm font-medium text-gray-700">
+                      Up to 100% fee coverage
+                    </span>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced CTA Section */}
+          <div className="text-center">
+            <div className="relative bg-gradient-to-r from-white via-gray-50 to-white rounded-3xl p-8 lg:p-12 shadow-2xl border-2 border-gray-200 hover:shadow-3xl transition-all duration-500 hover:scale-105 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full -translate-y-16 translate-x-16 animate-float"></div>
+
+              <div className="relative z-10">
+                <h3 className="text-2xl lg:text-3xl font-bold text-[#22336a] mb-6">
+                  Ready to{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-yellow-400">
+                    Transform
+                  </span>{" "}
+                  Your Future?
+                </h3>
+                <p className="text-lg lg:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                  Join thousands of successful students who secured their dream
+                  careers with our smart investment solutions
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center">
+                  <a
+                    href="tel:+917065303030"
+                    className="group inline-flex items-center px-6 lg:px-8 py-3 lg:py-4 bg-white border-2 border-[#22336a] text-[#22336a] font-bold rounded-xl hover:bg-[#22336a] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  >
+                    <Phone className="h-4 w-4 lg:h-5 lg:w-5 mr-2 lg:mr-3 group-hover:animate-bounce" />
+                    <span>Talk to Expert</span>
+                  </a>
+                  <a
+                    href="https://sunstone.in/apply-now"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative inline-flex items-center px-6 lg:px-8 py-3 lg:py-4 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white font-bold rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 overflow-hidden"
+                  >
+                    <ExternalLink className="h-4 w-4 lg:h-5 lg:w-5 mr-2 lg:mr-3 group-hover:animate-bounce" />
+                    <span>Calculate Investment</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -2255,13 +1900,13 @@ const Index = () => {
                     <span>Call: +91 7065-30-30-30</span>
                   </a>
                   <a
-                    href="https://sunstone.in/apply"
+                    href="https://sunstone.in/apply-now"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
                     <ExternalLink className="h-5 w-5 mr-3" />
-                    <span>Secure Your Spot</span>
+                    <span>Secure Your Spot Now</span>
                   </a>
                 </div>
               </div>
@@ -2727,67 +2372,6 @@ const Index = () => {
               </Card>
             </div>
           </div>
-
-          {/* Success Metrics */}
-          <div
-            className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-3xl p-10 text-white relative overflow-hidden animate-slide-up"
-            style={{ animationDelay: "0.4s" }}
-          >
-            <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16"></div>
-
-            <div className="relative z-10">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold mb-4">
-                  Student Success Metrics
-                </h3>
-                <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                  Real numbers that reflect our commitment to student success
-                  and career transformation
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">
-                    98%
-                  </div>
-                  <p className="text-lg opacity-90">Satisfaction Rate</p>
-                  <p className="text-sm opacity-70 mt-1">Student Feedback</p>
-                </div>
-                <div
-                  className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in"
-                  style={{ animationDelay: "0.1s" }}
-                >
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">
-                    95%
-                  </div>
-                  <p className="text-lg opacity-90">Career Growth</p>
-                  <p className="text-sm opacity-70 mt-1">Within 2 Years</p>
-                </div>
-                <div
-                  className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in"
-                  style={{ animationDelay: "0.2s" }}
-                >
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">
-                    15K+
-                  </div>
-                  <p className="text-lg opacity-90">Success Stories</p>
-                  <p className="text-sm opacity-70 mt-1">And Counting</p>
-                </div>
-                <div
-                  className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105 animate-fade-in"
-                  style={{ animationDelay: "0.3s" }}
-                >
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2 group-hover:animate-bounce">
-                    4.9★
-                  </div>
-                  <p className="text-lg opacity-90">Average Rating</p>
-                  <p className="text-sm opacity-70 mt-1">Student Reviews</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -2986,7 +2570,7 @@ const Index = () => {
                       Call Us Now
                     </a>
                     <a
-                      href="https://sunstone.in/apply"
+                      href="https://sunstone.in/apply-now"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
@@ -3002,97 +2586,186 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Modern Enhanced Footer */}
-      <footer className="relative bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-[#c38935] mb-6">
-              Sunstone
-            </div>
-            <p className="text-gray-400 mb-8 text-lg">
-              Hi-Tech Institute of Engineering & Technology, powered by Sunstone
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
-              <a
-                href="mailto:connect@sunstone.in"
-                className="flex items-center text-gray-400 hover:text-[#c38935] transition-colors"
-              >
-                <Mail className="h-4 w-4 mr-2" />
-                connect@sunstone.in
-              </a>
-              <a
-                href="tel:+917065303030"
-                className="flex items-center text-gray-400 hover:text-[#c38935] transition-colors"
-              >
-                <Phone className="h-4 w-4 mr-2" />
-                +91 7065-30-30-30
-              </a>
-            </div>
-
-            <div className="flex items-center justify-center space-x-6 mb-8">
-              <a
-                href="https://www.facebook.com/sunstoneeducation"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300"
-              >
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg>
-              </a>
-              <a
-                href="https://www.youtube.com/@SunstoneEducation"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center transition-all duration-300"
-              >
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M23.498 6.186a2.998 2.998 0 0 0-2.108-2.085C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.39.555A2.998 2.998 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.998 2.998 0 0 0 2.108 2.085c1.885.555 9.39.555 9.39.555s7.505 0 9.39-.555a2.998 2.998 0 0 0 2.108-2.085C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                </svg>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/sunstone-business-school"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 bg-blue-700 hover:bg-blue-800 rounded-full flex items-center justify-center transition-all duration-300"
-              >
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-              </a>
-              <a
-                href="https://www.instagram.com/sunstone_education"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 rounded-full flex items-center justify-center transition-all duration-300"
-              >
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
-            </div>
-
-            <div className="border-t border-gray-700 pt-6">
-              <p className="text-gray-500 text-sm">
-                © 2025 Sunstone. All rights reserved | sunstone.in
+      {/* Simple Footer */}
+      <footer className="bg-[#22336a] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* About */}
+            <div className="md:col-span-2">
+              <h3 className="text-xl font-bold text-white mb-4">
+                Sunstone Education
+              </h3>
+              <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-md">
+                Hi-Tech Institute of Engineering & Technology, powered by
+                Sunstone. Transforming careers through quality education and
+                industry partnerships.
               </p>
+              <div className="flex space-x-4">
+                <a
+                  href="https://www.facebook.com/sunstoneedu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#1877F2] hover:bg-[#1655C4] rounded-lg flex items-center justify-center transition-colors duration-300"
+                >
+                  <svg
+                    className="w-5 h-5 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://in.linkedin.com/school/sunstone-/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#0A66C2] hover:bg-[#084C8C] rounded-lg flex items-center justify-center transition-colors duration-300"
+                >
+                  <svg
+                    className="w-5 h-5 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.youtube.com/@SunstoneIND"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#FF0000] hover:bg-[#CC0000] rounded-lg flex items-center justify-center transition-colors duration-300"
+                >
+                  <svg
+                    className="w-5 h-5 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M23.498 6.186a2.998 2.998 0 0 0-2.108-2.085C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.39.555A2.998 2.998 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.998 2.998 0 0 0 2.108 2.085c1.885.555 9.39.555 9.39.555s7.505 0 9.39-.555a2.998 2.998 0 0 0 2.108-2.085C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.instagram.com/sunstone.in/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#6B2A94] hover:via-[#DC1515] hover:to-[#E5642A] rounded-lg flex items-center justify-center transition-colors duration-300"
+                >
+                  <svg
+                    className="w-5 h-5 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            {/* Programs */}
+            <div>
+              <h3 className="text-lg font-bold text-white mb-4">Programs</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
+                  >
+                    MBA Program
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
+                  >
+                    BBA Program
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
+                  >
+                    BCA Program
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
+                  >
+                    MCA Program
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
+                  >
+                    B.Tech Program
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div>
+              <h3 className="text-lg font-bold text-white mb-4">Contact</h3>
+              <div className="space-y-3 text-sm">
+                <a
+                  href="mailto:connect@sunstone.in"
+                  className="flex items-center text-gray-300 hover:text-[#c38935] transition-colors duration-300"
+                >
+                  <Mail className="h-4 w-4 mr-2" />
+                  connect@sunstone.in
+                </a>
+                <a
+                  href="tel:+917065303030"
+                  className="flex items-center text-gray-300 hover:text-[#c38935] transition-colors duration-300"
+                >
+                  <Phone className="h-4 w-4 mr-2" />
+                  +91 7065-30-30-30
+                </a>
+                <a
+                  href="https://sunstone.in/apply-now"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 bg-[#c38935] hover:bg-[#d4a853] text-white text-sm font-semibold rounded-lg transition-colors duration-300 mt-4"
+                >
+                  Apply Now
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom */}
+          <div className="border-t border-white/20 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm mb-4 sm:mb-0">
+              © 2025 Sunstone Education. All rights reserved.
+            </p>
+            <div className="flex items-center space-x-4">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-[#c38935] text-sm transition-colors duration-300"
+              >
+                Privacy Policy
+              </a>
+              <span className="text-gray-600">•</span>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-[#c38935] text-sm transition-colors duration-300"
+              >
+                Terms
+              </a>
+              <span className="text-gray-600">•</span>
+              <a
+                href="https://sunstone.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-[#c38935] text-sm transition-colors duration-300"
+              >
+                sunstone.in
+              </a>
             </div>
           </div>
         </div>
