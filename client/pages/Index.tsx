@@ -580,8 +580,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Top Recruiters Section with Horizontal Scrolling - Now after Hero */}
-      <section className="py-12 md:py-16 bg-white relative overflow-hidden">
+      {/* Placement Highlights - Moved right after Hero Banner */}
+      <section className="py-6 md:py-8 lg:py-12 bg-[#22336a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-4 md:mb-6">
