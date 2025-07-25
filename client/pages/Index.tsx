@@ -351,24 +351,24 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Enhanced Apply Now Button */}
-      <div className="fixed right-6 bottom-6 z-50 animate-bounce-subtle">
+      {/* Enhanced Apply Now Button - Mobile Responsive */}
+      <div className="fixed right-3 md:right-6 bottom-3 md:bottom-6 z-50 animate-bounce-subtle">
         <div className="relative group">
           {/* Animated Background Ring */}
-          <div className="absolute inset-0 w-full h-full bg-[#c38935] rounded-xl animate-pulse opacity-30 group-hover:animate-ping"></div>
+          <div className="absolute inset-0 w-full h-full bg-[#c38935] rounded-lg md:rounded-xl animate-pulse opacity-30 group-hover:animate-ping"></div>
 
           {/* Main Button */}
           <a
             href="https://sunstone.in/apply-now"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-auto px-6 py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
+            className="relative flex items-center justify-center w-auto px-3 md:px-6 py-2 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-lg md:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
           >
             {/* Button Content */}
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+            <div className="flex items-center space-x-2 md:space-x-3">
+              <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-md md:rounded-lg flex items-center justify-center">
                 <svg
-                  className="w-5 h-5 text-white"
+                  className="w-3 h-3 md:w-5 md:h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -376,17 +376,17 @@ const Index = () => {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="text-sm font-bold">Apply Now</div>
-                <div className="text-xs opacity-90">Sunstone Portal</div>
+                <div className="text-xs md:text-sm font-bold">Apply Now</div>
+                <div className="text-xs opacity-90 hidden md:block">Sunstone Portal</div>
               </div>
             </div>
 
             {/* Shine Effect */}
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            <div className="absolute inset-0 rounded-lg md:rounded-xl bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
           </a>
 
-          {/* Enhanced Tooltip */}
-          <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
+          {/* Enhanced Tooltip - Hidden on mobile */}
+          <div className="hidden md:block absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
             <div className="bg-[#22336a] text-white px-4 py-3 rounded-xl shadow-xl whitespace-nowrap relative">
               <div className="text-sm font-bold">Start Your Journey</div>
               <div className="text-xs opacity-80">
@@ -398,7 +398,7 @@ const Index = () => {
           </div>
 
           {/* Notification Badge */}
-          <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
+          <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-4 h-4 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
             <span className="text-white text-xs font-bold">!</span>
           </div>
         </div>
