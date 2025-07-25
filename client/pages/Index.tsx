@@ -1032,12 +1032,24 @@ const Index = () => {
                     Join our placement guarantee program and take the first step
                     towards career success
                   </p>
-                  <button
-                    onClick={() => setShowPlacementPopup(true)}
-                    className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-                  >
-                    <ChevronRight className="h-5 w-5" />
-                  </button>
+                  <div className="flex gap-4 justify-center">
+                    <button
+                      onClick={() => setShowPlacementPopup(true)}
+                      className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    >
+                      <span>Learn More</span>
+                      <ChevronRight className="h-5 w-5 ml-2" />
+                    </button>
+                    <a
+                      href="https://sunstone.in/apply-now"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-8 py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    >
+                      <span>Apply Now</span>
+                      <ExternalLink className="h-5 w-5 ml-2" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
