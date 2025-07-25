@@ -1919,21 +1919,21 @@ const Index = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-2 bg-[#22336a]/10 rounded-full mb-6">
-              <Clock className="h-5 w-5 text-[#22336a] mr-2" />
-              <span className="text-[#22336a] font-semibold">
+          <div className="text-center mb-12 md:mb-16 lg:mb-20">
+            <div className="inline-flex items-center px-4 md:px-6 py-1.5 md:py-2 bg-[#22336a]/10 rounded-full mb-4 md:mb-6">
+              <Clock className="h-4 w-4 md:h-5 md:w-5 text-[#22336a] mr-2" />
+              <span className="text-[#22336a] font-semibold text-sm md:text-base">
                 Quick & Easy Process
               </span>
             </div>
-            <h2 className="text-5xl sm:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-4 md:mb-6 leading-tight">
               Your Journey to
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#d4a853]">
                 {" "}
                 Success
               </span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-base lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Four streamlined steps to unlock your potential and transform your
               career
             </p>
