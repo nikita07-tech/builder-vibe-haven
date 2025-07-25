@@ -2901,7 +2901,7 @@ const Index = () => {
 
             {/* Programs */}
             <div>
-              <h3 className="text-base md:text-lg font-bold text-white mb-3 md:mb-4">Programs</h3>
+              <h3 className="text-sm md:text-base lg:text-lg font-bold text-white mb-2 md:mb-3 lg:mb-4">Programs</h3>
               <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm">
                 <li>
                   <a
