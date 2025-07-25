@@ -1724,30 +1724,30 @@ const Index = () => {
 
                   {/* Content - Mobile Responsive */}
                   <div className="p-4 md:p-6 lg:p-8">
-                    <div className="grid md:grid-cols-3 gap-8">
-                      {/* Certifications */}
-                      <div className="md:col-span-2">
-                        <h4 className="text-2xl font-bold text-[#22336a] mb-6 flex items-center">
-                          <Star className="h-6 w-6 mr-2 text-[#c38935]" />
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+                      {/* Certifications - Mobile Responsive */}
+                      <div className="lg:col-span-2">
+                        <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-[#22336a] mb-4 md:mb-6 flex items-center">
+                          <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mr-2 text-[#c38935]" />
                           Advanced Certifications
                         </h4>
-                        <div className="grid gap-4">
+                        <div className="grid gap-3 md:gap-4">
                           {programData.certificationsList
                             .slice(0, 6)
                             .map((cert, index) => (
                               <div
                                 key={index}
-                                className="group p-4 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 cursor-pointer border border-transparent hover:border-[#c38935]/20"
+                                className="group p-3 md:p-4 bg-gray-50 rounded-lg md:rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 cursor-pointer border border-transparent hover:border-[#c38935]/20"
                               >
-                                <div className="flex items-start space-x-3">
-                                  <div className="w-8 h-8 bg-[#c38935] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                                    <Target className="h-4 w-4 text-white" />
+                                <div className="flex items-start space-x-2 md:space-x-3">
+                                  <div className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 bg-[#c38935] rounded-md md:rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                    <Target className="h-3 w-3 md:h-4 md:w-4 text-white" />
                                   </div>
                                   <div className="flex-1">
-                                    <h5 className="font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                                    <h5 className="font-bold text-sm md:text-base text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
                                       {cert.name}
                                     </h5>
-                                    <p className="text-sm text-gray-600 mt-1">
+                                    <p className="text-xs md:text-sm text-gray-600 mt-0.5 md:mt-1">
                                       {cert.careers}
                                     </p>
                                   </div>
@@ -1757,27 +1757,27 @@ const Index = () => {
                         </div>
                       </div>
 
-                      {/* Eligibility */}
+                      {/* Eligibility - Mobile Responsive */}
                       <div>
-                        <h4 className="text-2xl font-bold text-[#22336a] mb-6 flex items-center">
-                          <Award className="h-6 w-6 mr-2 text-[#c38935]" />
+                        <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-[#22336a] mb-4 md:mb-6 flex items-center">
+                          <Award className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mr-2 text-[#c38935]" />
                           Eligibility
                         </h4>
-                        <div className="p-6 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 rounded-xl border border-gray-100">
-                          <p className="text-gray-700 leading-relaxed">
+                        <div className="p-4 md:p-5 lg:p-6 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 rounded-lg md:rounded-xl border border-gray-100">
+                          <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                             {programData.eligibility}
                           </p>
                         </div>
 
-                        <div className="mt-6">
+                        <div className="mt-4 md:mt-6">
                           <a
                             href="https://sunstone.in/apply-now"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`w-full inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r ${programData.color} text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
+                            className={`w-full inline-flex items-center justify-center px-4 md:px-5 lg:px-6 py-3 md:py-3.5 lg:py-4 bg-gradient-to-r ${programData.color} text-white font-bold text-sm md:text-base rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
                           >
                             <span>Apply Now</span>
-                            <ExternalLink className="ml-2 h-5 w-5" />
+                            <ExternalLink className="ml-1.5 md:ml-2 h-4 w-4 md:h-5 md:w-5" />
                           </a>
                         </div>
                       </div>
