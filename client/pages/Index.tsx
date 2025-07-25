@@ -2922,10 +2922,10 @@ const Index = () => {
                   href="https://in.linkedin.com/school/sunstone-/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#0A66C2] hover:bg-[#084C8C] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#0A66C2] hover:bg-[#084C8C] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-2.5 h-2.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
+                    className="w-2 h-2 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2936,10 +2936,10 @@ const Index = () => {
                   href="https://www.youtube.com/@SunstoneIND"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#FF0000] hover:bg-[#CC0000] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#FF0000] hover:bg-[#CC0000] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-2.5 h-2.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
+                    className="w-2 h-2 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2950,10 +2950,10 @@ const Index = () => {
                   href="https://www.instagram.com/sunstone.in/?hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#6B2A94] hover:via-[#DC1515] hover:to-[#E5642A] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#6B2A94] hover:via-[#DC1515] hover:to-[#E5642A] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-2.5 h-2.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
+                    className="w-2 h-2 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
