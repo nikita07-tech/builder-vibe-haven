@@ -2908,10 +2908,10 @@ const Index = () => {
                   href="https://www.facebook.com/sunstoneedu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#1877F2] hover:bg-[#1655C4] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#1877F2] hover:bg-[#1655C4] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-2.5 h-2.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
+                    className="w-2 h-2 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
