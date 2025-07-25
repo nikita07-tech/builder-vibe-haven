@@ -1067,10 +1067,9 @@ const Index = () => {
           {/* Terms */}
           <div className="text-center mt-8">
             <p className="text-sm text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              Terms and conditions apply. Placement guarantee is subject to
-              program completion, maintaining minimum academic standards, and
-              active participation in placement activities. Full terms available
-              upon request.
+              <p>
+                <br />
+              </p>
             </p>
           </div>
         </div>
