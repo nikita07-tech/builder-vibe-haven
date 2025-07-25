@@ -1434,9 +1434,7 @@ const Index = () => {
                   className="w-full p-3 border-2 border-[#22336a] rounded-lg text-[#22336a] font-medium focus:outline-none focus:ring-4 focus:ring-[#22336a]/20 focus:border-[#c38935] bg-white shadow-lg"
                 >
                   <option value="">Choose a program...</option>
-                  {Object.keys(programs)
-                    .filter((programName) => programName !== "MBA")
-                    .map((programName) => (
+                  {Object.keys(programs).map((programName) => (
                       <option key={programName} value={programName}>
                         {programName} Program
                       </option>
