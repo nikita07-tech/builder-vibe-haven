@@ -2327,7 +2327,7 @@ const Index = () => {
                   },
                   {
                     name: "Priya Sharma",
-                    role: "BCA Graduate ��� Full Stack Developer",
+                    role: "BCA Graduate • Full Stack Developer",
                     company: "Infosys",
                     initials: "PS",
                     quote: "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
@@ -3042,11 +3042,11 @@ const Index = () => {
           </div>
 
           {/* Bottom */}
-          <div className="border-t border-white/20 mt-3 md:mt-8 pt-2 md:pt-6 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-gray-400 text-xs md:text-sm mb-2 sm:mb-0">
+          <div className="border-t border-white/20 mt-1 md:mt-8 pt-1 md:pt-6 flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-gray-400 text-xs md:text-sm mb-1 sm:mb-0">
               © 2025 Sunstone Education. All rights reserved.
             </p>
-            <div className="flex items-center space-x-1.5 md:space-x-4">
+            <div className="flex items-center space-x-1 md:space-x-4">
               <a
                 href="#"
                 className="text-gray-400 hover:text-[#c38935] text-xs md:text-sm transition-colors duration-300"
