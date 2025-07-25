@@ -2146,9 +2146,15 @@ const Index = () => {
                   <div className="text-4xl font-bold text-[#f4d03f] mb-2">
                     5+
                   </div>
-                  <p className="text-lg opacity-90">Major Awards</p>
+                  <p className="text-lg opacity-90">
+                    <p>Specialisations</p>
+                  </p>
                   <p className="text-sm opacity-70 mt-1">
-                    Industry Recognition
+                    <p>
+                      <strong style="font-size: 14px;">
+                        Future-ready skills for tomorrow's careers
+                      </strong>
+                    </p>
                   </p>
                 </div>
                 <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
