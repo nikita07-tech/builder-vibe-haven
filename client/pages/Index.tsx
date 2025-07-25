@@ -1523,15 +1523,7 @@ const Index = () => {
                     <Phone className="h-4 w-4 lg:h-5 lg:w-5 mr-2 lg:mr-3 group-hover:animate-bounce" />
                     <span>Talk to Expert</span>
                   </a>
-                  <a
-                    href="https://sunstone.in/apply-now"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative inline-flex items-center px-6 lg:px-8 py-3 lg:py-4 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white font-bold rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 overflow-hidden"
-                  >
-                    <ExternalLink className="h-4 w-4 lg:h-5 lg:w-5 mr-2 lg:mr-3 group-hover:animate-bounce" />
-                    <span>Calculate Investment</span>
-                  </a>
+
                 </div>
               </div>
             </div>
