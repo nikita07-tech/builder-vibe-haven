@@ -1435,10 +1435,10 @@ const Index = () => {
                 >
                   <option value="">Choose a program...</option>
                   {Object.keys(programs).map((programName) => (
-                      <option key={programName} value={programName}>
-                        {programName} Program
-                      </option>
-                    ))}
+                    <option key={programName} value={programName}>
+                      {programName} Program
+                    </option>
+                  ))}
                 </select>
 
                 {/* Helper text */}
@@ -1634,14 +1634,14 @@ const Index = () => {
                         selectedMobileProgram === "MBA"
                           ? "https://sunstone.in/campuses/hi-tech-institute/mba"
                           : selectedMobileProgram === "BBA"
-                          ? "https://sunstone.in/campuses/hi-tech-institute/bba"
-                          : selectedMobileProgram === "BCA"
-                          ? "https://sunstone.in/campuses/hi-tech-institute/bca"
-                          : selectedMobileProgram === "MCA"
-                          ? "https://sunstone.in/campuses/hi-tech-institute/mca"
-                          : selectedMobileProgram === "B.Tech"
-                          ? "https://sunstone.in/campuses/hi-tech-institute/b-tech"
-                          : "https://sunstone.in/apply-now"
+                            ? "https://sunstone.in/campuses/hi-tech-institute/bba"
+                            : selectedMobileProgram === "BCA"
+                              ? "https://sunstone.in/campuses/hi-tech-institute/bca"
+                              : selectedMobileProgram === "MCA"
+                                ? "https://sunstone.in/campuses/hi-tech-institute/mca"
+                                : selectedMobileProgram === "B.Tech"
+                                  ? "https://sunstone.in/campuses/hi-tech-institute/b-tech"
+                                  : "https://sunstone.in/apply-now"
                       }
                       target="_blank"
                       rel="noopener noreferrer"
@@ -1814,14 +1814,14 @@ const Index = () => {
                               programName === "MBA"
                                 ? "https://sunstone.in/campuses/hi-tech-institute/mba"
                                 : programName === "BBA"
-                                ? "https://sunstone.in/campuses/hi-tech-institute/bba"
-                                : programName === "BCA"
-                                ? "https://sunstone.in/campuses/hi-tech-institute/bca"
-                                : programName === "MCA"
-                                ? "https://sunstone.in/campuses/hi-tech-institute/mca"
-                                : programName === "B.Tech"
-                                ? "https://sunstone.in/campuses/hi-tech-institute/b-tech"
-                                : "https://sunstone.in/apply-now"
+                                  ? "https://sunstone.in/campuses/hi-tech-institute/bba"
+                                  : programName === "BCA"
+                                    ? "https://sunstone.in/campuses/hi-tech-institute/bca"
+                                    : programName === "MCA"
+                                      ? "https://sunstone.in/campuses/hi-tech-institute/mca"
+                                      : programName === "B.Tech"
+                                        ? "https://sunstone.in/campuses/hi-tech-institute/b-tech"
+                                        : "https://sunstone.in/apply-now"
                             }
                             target="_blank"
                             rel="noopener noreferrer"
