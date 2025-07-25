@@ -46,6 +46,7 @@ const Index = () => {
   const [mobileTabState, setMobileTabState] = useState<{[key: string]: 'specs' | 'eligibility'}>({});
   const [showMoreFAQs, setShowMoreFAQs] = useState(false);
   const [selectedMobileProgram, setSelectedMobileProgram] = useState<string | null>(null);
+  const [showAllCertifications, setShowAllCertifications] = useState<{[key: string]: boolean}>({});
 
   // Carousel images
   const carouselImages = [
