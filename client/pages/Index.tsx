@@ -2014,7 +2014,7 @@ const Index = () => {
                   </p>
                   <p className="text-sm opacity-70 mt-1">
                     <p>
-                      <strong style="font-size: 14px;">
+                      <strong style={{fontSize: "14px"}}>
                         &nbsp;Spanning tech, management &amp; more
                       </strong>
                     </p>
