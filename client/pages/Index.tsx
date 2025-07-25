@@ -1431,21 +1431,21 @@ const Index = () => {
                         <div className="flex space-x-4">
                           <button
                             className={`py-2 px-1 border-b-2 font-medium text-sm ${
-                              activeTab === 'specs'
+                              (mobileTabState[programName] || 'specs') === 'specs'
                                 ? 'border-[#22336a] text-[#22336a]'
                                 : 'border-transparent text-gray-500'
                             }`}
-                            onClick={() => setActiveTab('specs')}
+                            onClick={() => setMobileTabState({...mobileTabState, [programName]: 'specs'})}
                           >
                             Specifications
                           </button>
                           <button
                             className={`py-2 px-1 border-b-2 font-medium text-sm ${
-                              activeTab === 'eligibility'
+                              mobileTabState[programName] === 'eligibility'
                                 ? 'border-[#22336a] text-[#22336a]'
                                 : 'border-transparent text-gray-500'
                             }`}
-                            onClick={() => setActiveTab('eligibility')}
+                            onClick={() => setMobileTabState({...mobileTabState, [programName]: 'eligibility'})}
                           >
                             Eligibility
                           </button>
@@ -1453,7 +1453,7 @@ const Index = () => {
                       </div>
 
                       {/* Tab Content */}
-                      {activeTab === 'specs' ? (
+                      {(mobileTabState[programName] || 'specs') === 'specs' ? (
                         <div className="space-y-2">
                           <h4 className="font-semibold text-[#22336a] text-sm">Key Certifications:</h4>
                           {programData.certificationsList.slice(0, 3).map((cert, certIndex) => (
@@ -1722,7 +1722,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-2 md:space-x-3 bg-white/20 rounded-lg md:rounded-xl p-2 md:p-4">
                     <div className="w-4 h-4 md:w-6 md:h-6 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-[#c38935] text-xs md:text-sm">✓</span>
+                      <span className="text-[#c38935] text-xs md:text-sm">��</span>
                     </div>
                     <span className="text-white font-medium text-sm md:text-base">
                       Up to 100% scholarship available
