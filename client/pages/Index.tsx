@@ -1238,7 +1238,7 @@ const Index = () => {
           {/* Mobile Carousel */}
           <div className="block md:hidden mb-8">
             <div className="overflow-hidden">
-              <div className="flex space-x-4 animate-scroll-right-to-left">
+              <div className="flex space-x-4 animate-scroll-right-to-left-fast">
                 <div className="flex-shrink-0 w-72 group relative cursor-pointer">
                   <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                     <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
