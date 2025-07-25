@@ -1461,18 +1461,16 @@ const Index = () => {
               className="group relative animate-fade-in-up"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <BookOpen className="h-8 w-8 text-white" />
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <BookOpen className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
                   Expert Sessions
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  <p>
-                    Session by industry experts and leading faculty from Fortune
-                    500 companies
-                  </p>
+                  Session by industry experts and leading faculty from Fortune
+                  500 companies
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1483,11 +1481,11 @@ const Index = () => {
               className="group relative animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Award className="h-8 w-8 text-white" />
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Award className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
                   Professional Portfolio
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -1504,21 +1502,19 @@ const Index = () => {
               style={{ animationDelay: "0.3s" }}
               onClick={() => setShowPlacementPopup(true)}
             >
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative">
-                  <TrendingUp className="h-8 w-8 text-white" />
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 relative">
+                  <TrendingUp className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
+                  <div className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 w-4 h-4 lg:w-6 lg:h-6 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
                     <span className="text-white text-xs font-bold">!</span>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                  <p>POP</p>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  POP
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  <p>
-                    Access to 200+ guaranteed job opportunities with
-                    comprehensive placement support{" "}
-                  </p>
+                  Access to 200+ guaranteed job opportunities with
+                  comprehensive placement support
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1529,21 +1525,16 @@ const Index = () => {
               className="group relative animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
             >
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="h-8 w-8 text-white" />
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
                   Certifications
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  <p>
-                    In-demand advanced certifications to choose from various
-                    domains and enhance your carrer prospects
-                  </p>
-                  <p>
-                    <br />
-                  </p>
+                  In-demand advanced certifications to choose from various
+                  domains and enhance your career prospects
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
