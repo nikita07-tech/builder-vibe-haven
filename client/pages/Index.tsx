@@ -1489,7 +1489,9 @@ const Index = () => {
                   {(mobileTabState[selectedMobileProgram] || 'specs') === 'specs' ? (
                     <div className="space-y-2">
                       <h4 className="font-semibold text-[#22336a] text-sm">Key Certifications:</h4>
-                      {programs[selectedMobileProgram].certificationsList.slice(0, 3).map((cert, certIndex) => (
+                      {programs[selectedMobileProgram].certificationsList
+                        .slice(0, showAllCertifications[selectedMobileProgram] ? undefined : 3)
+                        .map((cert, certIndex) => (
                         <div key={certIndex} className="flex items-start space-x-2 p-2 bg-gray-50 rounded-md">
                           <div className="w-4 h-4 bg-[#c38935] rounded-full mt-0.5 flex-shrink-0"></div>
                           <div>
@@ -1498,9 +1500,31 @@ const Index = () => {
                           </div>
                         </div>
                       ))}
-                      <p className="text-xs text-gray-500 mt-2">
-                        +{programs[selectedMobileProgram].certificationsList.length - 3} more specializations
-                      </p>
+
+                      {/* View More / View Less Button */}
+                      {programs[selectedMobileProgram].certificationsList.length > 3 && (
+                        <div className="text-center mt-3">
+                          <button
+                            onClick={() => setShowAllCertifications({
+                              ...showAllCertifications,
+                              [selectedMobileProgram]: !showAllCertifications[selectedMobileProgram]
+                            })}
+                            className="inline-flex items-center px-4 py-2 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-medium rounded-lg transition-all duration-300 text-sm"
+                          >
+                            {showAllCertifications[selectedMobileProgram] ? (
+                              <>
+                                <span>View Less</span>
+                                <ChevronDown className="ml-1 h-4 w-4 rotate-180" />
+                              </>
+                            ) : (
+                              <>
+                                <span>View More ({programs[selectedMobileProgram].certificationsList.length - 3} more)</span>
+                                <ChevronDown className="ml-1 h-4 w-4" />
+                              </>
+                            )}
+                          </button>
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <div className="bg-gray-50 rounded-lg p-3">
