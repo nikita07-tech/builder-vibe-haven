@@ -652,7 +652,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Awards and Recognition Section - Now after Top Recruiters */}
+
       <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
