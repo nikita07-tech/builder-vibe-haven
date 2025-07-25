@@ -580,61 +580,435 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Top Recruiters Section with Horizontal Scrolling - Now after Hero */}
+      <section className="py-12 md:py-16 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-4 md:mb-6">
+              Top Recruiters
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Join a network of 1,200+ leading companies that actively recruit
+              our graduates
+            </p>
+          </div>
+
+          {/* Mobile Carousel for Recruiters */}
+          <div className="block md:hidden mb-8">
+            <div className="overflow-hidden bg-gray-50 rounded-xl py-4">
+              <div className="flex space-x-8 animate-scroll-right-to-left whitespace-nowrap">
+                {[
+                  {
+                    name: "Bosch",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
+                  },
+                  {
+                    name: "HCL",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
+                  },
+                  {
+                    name: "TCS",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
+                  },
+                  {
+                    name: "Paytm",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
+                  },
+                  {
+                    name: "Microsoft",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800",
+                  },
+                  {
+                    name: "Genpact",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800",
+                  },
+                  {
+                    name: "Infosys",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
+                  },
+                  {
+                    name: "Airtel",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
+                  },
+                ].map((recruiter, index) => (
+                  <div
+                    key={`${recruiter.name}-${index}`}
+                    className="flex-shrink-0 transition-all duration-300 transform hover:scale-110 filter grayscale hover:filter-none"
+                  >
+                    <img
+                      src={recruiter.src}
+                      alt={recruiter.name}
+                      className="h-10 sm:h-12 w-auto"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Two-line Animated Recruiters */}
+          <div className="hidden md:block space-y-6 mb-8">
+            {/* First line - Right to Left */}
+            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
+              <div className="flex space-x-12 animate-scroll-right-to-left whitespace-nowrap">
+                {[
+                  {
+                    name: "Bosch",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
+                  },
+                  {
+                    name: "HCL",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
+                  },
+                  {
+                    name: "TCS",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
+                  },
+                  {
+                    name: "Paytm",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
+                  },
+                  {
+                    name: "Microsoft",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800",
+                  },
+                  {
+                    name: "Genpact",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800",
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    name: "Bosch",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
+                  },
+                  {
+                    name: "HCL",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
+                  },
+                ].map((recruiter, index) => (
+                  <button
+                    key={`${recruiter.name}-${index}`}
+                    onClick={() => handleRecruiterClick(recruiter.name)}
+                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
+                      clickedRecruiters.includes(recruiter.name)
+                        ? "filter-none"
+                        : "filter grayscale hover:filter-none"
+                    }`}
+                  >
+                    <img
+                      src={recruiter.src}
+                      alt={recruiter.name}
+                      className="h-16 w-auto"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Second line - Left to Right */}
+            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
+              <div className="flex space-x-12 animate-scroll-left-to-right whitespace-nowrap">
+                {[
+                  {
+                    name: "Bajaj Finserv",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
+                  },
+                  {
+                    name: "Airtel",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
+                  },
+                  {
+                    name: "IBM",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
+                  },
+                  {
+                    name: "Infosys",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
+                  },
+                  {
+                    name: "Hero",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800",
+                  },
+                  {
+                    name: "Axis Bank",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800",
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    name: "Bajaj Finserv",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
+                  },
+                  {
+                    name: "Airtel",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
+                  },
+                ].map((recruiter, index) => (
+                  <button
+                    key={`${recruiter.name}-${index}`}
+                    onClick={() => handleRecruiterClick(recruiter.name)}
+                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
+                      clickedRecruiters.includes(recruiter.name)
+                        ? "filter-none"
+                        : "filter grayscale hover:filter-none"
+                    }`}
+                  >
+                    <img
+                      src={recruiter.src}
+                      alt={recruiter.name}
+                      className="h-16 w-auto"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Career Focus Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+            <div className="text-center p-4 md:p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
+                <Users className="h-6 w-6 md:h-8 md:w-8 text-white" />
+              </div>
+              <h3 className="text-lg md:text-xl font-bold text-[#22336a] mb-2">
+                Industry Connections
+              </h3>
+              <p className="text-sm md:text-base text-gray-600">
+                Strong network of leading companies across sectors
+              </p>
+            </div>
+            <div className="text-center p-4 md:p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-[#22336a] rounded-full flex items-center justify-center">
+                <Trophy className="h-6 w-6 md:h-8 md:w-8 text-white" />
+              </div>
+              <h3 className="text-lg md:text-xl font-bold text-[#22336a] mb-2">
+                Career Growth
+              </h3>
+              <p className="text-sm md:text-base text-gray-600">
+                Excellent packages and growth opportunities
+              </p>
+            </div>
+            <div className="text-center p-4 md:p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
+                <Target className="h-6 w-6 md:h-8 md:w-8 text-white" />
+              </div>
+              <h3 className="text-lg md:text-xl font-bold text-[#22336a] mb-2">
+                Success Stories
+              </h3>
+              <p className="text-sm md:text-base text-gray-600">
+                Proven track record of student achievements
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Awards and Recognition Section - Now after Top Recruiters */}
+      <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
+          <div
+            className="absolute bottom-20 right-20 w-80 h-80 bg-[#22336a]/5 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 md:mb-16">
+            <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-[#c38935]/10 rounded-full mb-4 md:mb-6">
+              <Trophy className="h-4 w-4 md:h-5 md:w-5 text-[#c38935] mr-2" />
+              <span className="text-[#c38935] font-semibold text-xs md:text-sm">
+                AWARDS & RECOGNITION
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-4 md:mb-6 leading-tight">
+              Recognized
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
+                {" "}
+                Excellence
+              </span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
+                in Education
+              </span>
+            </h2>
+            <div
+              className="max-w-4xl mx-auto animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <p className="text-base md:text-xl text-gray-700 leading-relaxed mb-4">
+                Our commitment to educational excellence has been recognized by
+                leading industry organizations
+              </p>
+            </div>
+          </div>
+
+          {/* Mobile Awards Carousel */}
+          <div className="block md:hidden mb-12">
+            <div className="overflow-hidden bg-gray-50 rounded-xl py-6">
+              <div className="flex space-x-6 animate-scroll whitespace-nowrap">
+                {[
+                  {
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F634b6859a0a5475897251bed28fb9a48?format=webp&width=800",
+                    title: "Excellence in Education",
+                    desc: "Recognized for outstanding educational services"
+                  },
+                  {
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F21c4bdaba70546e89b1432a5a71417d5?format=webp&width=800",
+                    title: "Innovation Excellence",
+                    desc: "Leading innovation in educational technology"
+                  },
+                  {
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F8a91f11dc8e04d358b985214fbcb8d95?format=webp&width=800",
+                    title: "ASSOCHAM India",
+                    desc: "Excellence in Educational Innovation"
+                  },
+                  {
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800",
+                    title: "IndiGlobal Education",
+                    desc: "Outstanding Academic Excellence"
+                  }
+                ].map((award, index) => (
+                  <div key={index} className="flex-shrink-0 w-60">
+                    <div className="bg-white rounded-2xl p-4 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                      <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
+                        <img
+                          src={award.src}
+                          alt={award.title}
+                          className="w-full h-full object-contain p-2"
+                        />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
+                        <Trophy className="h-3 w-3 text-white" />
+                      </div>
+                      <h3 className="text-sm font-bold text-[#22336a] mb-1 text-center">
+                        {award.title}
+                      </h3>
+                      <p className="text-gray-600 text-xs text-center">
+                        {award.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Awards Horizontal Scrolling */}
+          <div className="hidden md:block relative overflow-hidden bg-gray-50 rounded-xl py-8 mb-16">
+            <div className="flex space-x-8 animate-scroll">
+              {[
+                {
+                  src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F634b6859a0a5475897251bed28fb9a48?format=webp&width=800",
+                  title: "Excellence in Education",
+                  desc: "Recognized for outstanding educational services"
+                },
+                {
+                  src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F21c4bdaba70546e89b1432a5a71417d5?format=webp&width=800",
+                  title: "Innovation Excellence",
+                  desc: "Leading innovation in educational technology"
+                },
+                {
+                  src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2Ffb516054d41948ecafc7dad3868c1bea?format=webp&width=800",
+                  title: "Quality Assurance",
+                  desc: "Commitment to quality education standards"
+                },
+                {
+                  src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F8a91f11dc8e04d358b985214fbcb8d95?format=webp&width=800",
+                  title: "ASSOCHAM India",
+                  desc: "Excellence in Educational Innovation"
+                },
+                {
+                  src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800",
+                  title: "IndiGlobal Education",
+                  desc: "Outstanding Academic Excellence"
+                },
+                {
+                  src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fc50132f6b1ef47a481e34f16b5b1f8fa?format=webp&width=800",
+                  title: "HolonIQ EdTech 100",
+                  desc: "Top EdTech Company 2022"
+                }
+              ].map((award, index) => (
+                <div key={index} className="flex-shrink-0 w-80">
+                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                    <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
+                      <img
+                        src={award.src}
+                        alt={award.title}
+                        className="w-full h-full object-contain p-4"
+                      />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
+                      <Trophy className="h-4 w-4 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                      {award.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm text-center">
+                      {award.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Placement Highlights - Updated without emojis */}
-      <section className="py-12 bg-[#22336a]">
+      <section className="py-8 md:py-12 bg-[#22336a]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
-            <div className="bg-[#c38935] text-white px-6 py-4">
+            <div className="bg-[#c38935] text-white px-4 md:px-6 py-3 md:py-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-bold">Placement Highlights</h3>
-                  <p className="text-sm opacity-90">
+                  <h3 className="text-lg md:text-xl font-bold">Placement Highlights</h3>
+                  <p className="text-xs md:text-sm opacity-90">
                     MBA | MCA | BBA | BCA | B.Tech
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="p-6">
-              <div className="grid grid-cols-3 gap-6 mb-6">
+            <div className="p-4 md:p-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-4 md:mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                  <div className="text-2xl md:text-3xl font-bold text-[#22336a] mb-2">
                     26 LPA
                   </div>
-                  <p className="text-sm text-gray-600">Highest Package</p>
+                  <p className="text-xs md:text-sm text-gray-600">Highest Package</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                  <div className="text-2xl md:text-3xl font-bold text-[#22336a] mb-2">
                     1200+
                   </div>
-                  <p className="text-sm text-gray-600">Top Recruiters</p>
+                  <p className="text-xs md:text-sm text-gray-600">Top Recruiters</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                  <div className="text-2xl md:text-3xl font-bold text-[#22336a] mb-2">
                     5000+
                   </div>
-                  <p className="text-sm text-gray-600">Students Placed</p>
+                  <p className="text-xs md:text-sm text-gray-600">Students Placed</p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div className="bg-gray-50 rounded-lg p-4 flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">63%</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-3 md:mb-4">
+                <div className="bg-gray-50 rounded-lg p-3 md:p-4 flex items-center space-x-2 md:space-x-3">
+                  <div className="w-8 h-8 md:w-10 md:h-10 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-xs md:text-sm">63%</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#22336a] text-sm">
+                    <p className="font-semibold text-[#22336a] text-xs md:text-sm">
                       63% Higher ROI
                     </p>
                     <p className="text-xs text-gray-600">vs private colleges</p>
                   </div>
                 </div>
-                <div className="bg-gray-50 rounded-lg p-4 flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-[#22336a] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">7X</span>
+                <div className="bg-gray-50 rounded-lg p-3 md:p-4 flex items-center space-x-2 md:space-x-3">
+                  <div className="w-8 h-8 md:w-10 md:h-10 bg-[#22336a] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-xs md:text-sm">7X</span>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#22336a] text-sm">
+                    <p className="font-semibold text-[#22336a] text-xs md:text-sm">
                       7X More Companies
                     </p>
                     <p className="text-xs text-gray-600">vs institutes</p>
@@ -642,8 +1016,8 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-lg p-3 text-center">
-                <p className="text-sm text-gray-700">
+              <div className="bg-gray-50 rounded-lg p-2 md:p-3 text-center">
+                <p className="text-xs md:text-sm text-gray-700">
                   <span className="font-semibold text-[#c38935]">
                     <p>
                       <br />
