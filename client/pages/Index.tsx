@@ -1624,19 +1624,19 @@ const Index = () => {
                 <button
                   key={programName}
                   onClick={() => setActiveTab(programName)}
-                  className={`group relative px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-105 ${
+                  className={`group relative px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 rounded-xl md:rounded-2xl font-bold text-sm md:text-base lg:text-lg transition-all duration-500 transform hover:scale-105 ${
                     activeTab === programName
                       ? `bg-gradient-to-r ${programData.color} text-white shadow-2xl`
                       : "bg-white text-[#22336a] hover:bg-gray-50 shadow-lg border border-gray-200"
                   }`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="flex items-center space-x-3">
-                    <GraduationCap className="h-6 w-6" />
+                  <div className="flex items-center space-x-2 md:space-x-3">
+                    <GraduationCap className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
                     <span>{programName}</span>
                   </div>
                   {activeTab === programName && (
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-white rounded-full"></div>
+                    <div className="absolute -bottom-1 md:-bottom-2 left-1/2 transform -translate-x-1/2 w-6 md:w-8 h-0.5 md:h-1 bg-white rounded-full"></div>
                   )}
                 </button>
               ),
