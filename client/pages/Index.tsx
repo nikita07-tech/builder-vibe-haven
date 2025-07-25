@@ -412,19 +412,19 @@ const Index = () => {
       {/* Professional Header - Extra Small Mobile */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 animate-slide-down hover:shadow-lg">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-10 sm:h-16 md:h-18 lg:h-20">
+          <div className="flex items-center justify-between h-8 sm:h-16 md:h-18 lg:h-20">
             <div className="flex items-center space-x-1 sm:space-x-4 md:space-x-6 lg:space-x-8">
               <div className="flex items-center space-x-1 sm:space-x-3 md:space-x-4 group animate-fade-in hover:animate-wiggle">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
                   alt="Hi-Tech Institute"
-                  className="h-3 sm:h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                  className="h-2 sm:h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
                 />
-                <div className="h-4 sm:h-7 md:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
+                <div className="h-3 sm:h-7 md:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-3 sm:h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
+                  className="h-2 sm:h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
                 />
               </div>
             </div>
@@ -438,9 +438,9 @@ const Index = () => {
               </a>
               <a
                 href="tel:+917065303030"
-                className="flex items-center space-x-1 sm:space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-1.5 sm:px-3 md:px-4 py-1 sm:py-2 md:py-2.5 rounded-md md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
+                className="flex items-center space-x-1 sm:space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-1 sm:px-3 md:px-4 py-0.5 sm:py-2 md:py-2.5 rounded-md md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
               >
-                <Phone className="h-3 w-3 sm:h-4 sm:w-4" />
+                <Phone className="h-2 w-2 sm:h-4 sm:w-4" />
                 <span className="text-xs sm:text-sm">+91 7065-30-30-30</span>
               </a>
             </div>
@@ -459,7 +459,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-12 items-center">
             <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
-              <div className="inline-flex items-center px-1.5 md:px-4 py-0.5 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-1 md:mb-6 border border-white/30">
+              <div className="inline-flex items-center px-1 md:px-4 py-0.5 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-1 md:mb-6 border border-white/30">
                 <span className="text-white font-semibold text-xs md:text-sm">
                   PROFESSIONAL EXCELLENCE
                 </span>
@@ -1402,7 +1402,7 @@ const Index = () => {
                   className="w-full p-3 border-2 border-[#22336a] rounded-lg text-[#22336a] font-medium focus:outline-none focus:ring-4 focus:ring-[#22336a]/20 focus:border-[#c38935] bg-white shadow-lg"
                 >
                   <option value="">Choose a program...</option>
-                  {Object.keys(programs).map((programName) => (
+                  {Object.keys(programs).filter(programName => programName !== 'MBA').map((programName) => (
                     <option key={programName} value={programName}>
                       {programName} Program
                     </option>
@@ -1418,7 +1418,7 @@ const Index = () => {
             </div>
 
             {/* Selected Program Details */}
-            {selectedMobileProgram && (
+            {selectedMobileProgram && selectedMobileProgram !== 'MBA' && (
               <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
                 {/* Program Header */}
                 <div className={`bg-gradient-to-r ${programs[selectedMobileProgram].color} p-4 text-white`}>
