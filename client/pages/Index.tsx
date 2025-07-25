@@ -42,6 +42,19 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState("MBA");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [clickedRecruiters, setClickedRecruiters] = useState<string[]>([]);
+  const [expandedMobileProgram, setExpandedMobileProgram] = useState<
+    string | null
+  >(null);
+  const [mobileTabState, setMobileTabState] = useState<{
+    [key: string]: "specs" | "eligibility";
+  }>({});
+  const [showMoreFAQs, setShowMoreFAQs] = useState(false);
+  const [selectedMobileProgram, setSelectedMobileProgram] = useState<
+    string | null
+  >(null);
+  const [showAllCertifications, setShowAllCertifications] = useState<{
+    [key: string]: boolean;
+  }>({});
 
   // Carousel images
   const carouselImages = [
@@ -351,24 +364,24 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Enhanced Apply Now Button */}
-      <div className="fixed right-6 bottom-6 z-50 animate-bounce-subtle">
+      {/* Enhanced Apply Now Button - Mobile Responsive */}
+      <div className="fixed right-3 md:right-6 bottom-3 md:bottom-6 z-50 animate-bounce-subtle">
         <div className="relative group">
           {/* Animated Background Ring */}
-          <div className="absolute inset-0 w-full h-full bg-[#c38935] rounded-xl animate-pulse opacity-30 group-hover:animate-ping"></div>
+          <div className="absolute inset-0 w-full h-full bg-[#c38935] rounded-lg md:rounded-xl animate-pulse opacity-30 group-hover:animate-ping"></div>
 
           {/* Main Button */}
           <a
             href="https://sunstone.in/apply-now"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-auto px-6 py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
+            className="relative flex items-center justify-center w-auto px-3 md:px-6 py-2 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-lg md:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
           >
             {/* Button Content */}
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+            <div className="flex items-center space-x-2 md:space-x-3">
+              <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-md md:rounded-lg flex items-center justify-center">
                 <svg
-                  className="w-5 h-5 text-white"
+                  className="w-3 h-3 md:w-5 md:h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -376,17 +389,19 @@ const Index = () => {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="text-sm font-bold">Apply Now</div>
-                <div className="text-xs opacity-90">Sunstone Portal</div>
+                <div className="text-xs md:text-sm font-bold">Apply Now</div>
+                <div className="text-xs opacity-90 hidden md:block">
+                  Sunstone Portal
+                </div>
               </div>
             </div>
 
             {/* Shine Effect */}
-            <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            <div className="absolute inset-0 rounded-lg md:rounded-xl bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
           </a>
 
-          {/* Enhanced Tooltip */}
-          <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
+          {/* Enhanced Tooltip - Hidden on mobile */}
+          <div className="hidden md:block absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
             <div className="bg-[#22336a] text-white px-4 py-3 rounded-xl shadow-xl whitespace-nowrap relative">
               <div className="text-sm font-bold">Start Your Journey</div>
               <div className="text-xs opacity-80">
@@ -398,118 +413,117 @@ const Index = () => {
           </div>
 
           {/* Notification Badge */}
-          <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
+          <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-4 h-4 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
             <span className="text-white text-xs font-bold">!</span>
           </div>
         </div>
       </div>
 
-      {/* Professional Header */}
+      {/* Professional Header - Extra Small Mobile */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 animate-slide-down hover:shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            <div className="flex items-center space-x-4 sm:space-x-8">
-              <div className="flex items-center space-x-3 sm:space-x-4 group animate-fade-in hover:animate-wiggle">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-8 sm:h-16 md:h-18 lg:h-20">
+            <div className="flex items-center space-x-1 sm:space-x-4 md:space-x-6 lg:space-x-8">
+              <div className="flex items-center space-x-1 sm:space-x-3 md:space-x-4 group animate-fade-in hover:animate-wiggle">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
                   alt="Hi-Tech Institute"
-                  className="h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                  className="h-2 sm:h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
                 />
-                <div className="h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
+                <div className="h-3 sm:h-7 md:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
+                  className="h-2 sm:h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
                 />
               </div>
             </div>
-            <div className="flex items-center space-x-3 sm:space-x-4">
+            <div className="flex items-center space-x-1 sm:space-x-3 md:space-x-4">
               <a
                 href="mailto:connect@sunstone.in"
-                className="hidden sm:flex items-center space-x-2 text-[#22336a] hover:text-[#c38935] transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-gray-50"
+                className="hidden md:flex items-center space-x-2 text-[#22336a] hover:text-[#c38935] transition-all duration-300 font-medium px-2 md:px-3 py-1.5 md:py-2 rounded-lg hover:bg-gray-50"
               >
-                <Mail className="h-4 w-4" />
-                <span className="text-sm">connect@sunstone.in</span>
+                <Mail className="h-3 w-3 md:h-4 md:w-4" />
+                <span className="text-xs md:text-sm">connect@sunstone.in</span>
               </a>
               <a
                 href="tel:+917065303030"
-                className="flex items-center space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-4 py-2.5 rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
+                className="flex items-center space-x-1 sm:space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-1 sm:px-3 md:px-4 py-0.5 sm:py-2 md:py-2.5 rounded-md md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
               >
-                <Phone className="h-4 w-4" />
-                <span className="text-sm">+91 7065-30-30-30</span>
+                <Phone className="h-2 w-2 sm:h-4 sm:w-4" />
+                <span className="text-xs sm:text-sm">+91 7065-30-30-30</span>
               </a>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Hero Banner with Carousel */}
-      <section className="bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] text-white py-20 relative overflow-hidden">
+      {/* Hero Banner with Carousel - Mobile Optimized */}
+      <section className="bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] text-white py-4 md:py-16 lg:py-20 relative overflow-hidden">
         {/* Professional Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 right-20 w-96 h-96 bg-[#c38935]/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/[0.02] to-transparent"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-            <div className="lg:col-span-3 text-center lg:text-left animate-slide-in-left">
-              <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6 border border-white/30">
-                <span className="text-white font-semibold text-sm">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-12 items-center">
+            <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
+              <div className="inline-flex items-center px-1 md:px-4 py-0.5 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-1 md:mb-6 border border-white/30">
+                <span className="text-white font-semibold text-xs md:text-sm">
                   PROFESSIONAL EXCELLENCE
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight text-white">
+              <h1 className="text-sm sm:text-lg md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
                 Transform Your Future with
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
                   {" "}
                   Premier Education
                 </span>
               </h1>
-              <div className="mb-6">
-                <p className="text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl mb-4">
-                  Join Hi-Tech Institute of Engineering & Technology for
-                  industry-aligned programs in MBA, BBA, BCA, MCA & B.Tech with
+              <div className="mb-2 md:mb-6">
+                <p className="text-xs sm:text-xs md:text-base lg:text-lg xl:text-xl text-white/90 leading-relaxed max-w-2xl mb-1 md:mb-3 lg:mb-4">
+                  Join Hi-Tech Institute for industry-aligned programs with
                   guaranteed placement support.
                 </p>
-                <div className="inline-flex items-center px-6 py-3 rounded-xl">
-                  <div className="flex items-center mr-3">
+                <div className="inline-flex items-center px-2 md:px-6 py-1 md:py-3 rounded-lg md:rounded-xl">
+                  <div className="flex items-center mr-1 md:mr-3">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe8fe1239f4724767b509ddb3b4f8688e?format=webp&width=800"
                       alt="Institution Image"
-                      className="h-10 w-auto rounded-lg"
+                      className="h-4 md:h-8 lg:h-10 w-auto rounded-md md:rounded-lg"
                     />
                   </div>
-                  <span className="text-white font-bold text-lg">
+                  <span className="text-white font-bold text-xs md:text-base lg:text-lg">
                     Powered By Sunstone
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col gap-1 md:gap-3 lg:gap-4">
                 <a
                   href="https://sunstone.in/campuses/hi-tech-institute"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-2 sm:px-3 md:px-6 lg:px-8 py-1 sm:py-1.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-xs sm:text-xs md:text-base rounded-md sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   <span>Explore Programs</span>
-                  <ExternalLink className="ml-2 h-5 w-5" />
+                  <ExternalLink className="ml-1 sm:ml-1 md:ml-2 h-3 w-3 sm:h-3 sm:w-3 md:h-5 md:w-5" />
                 </a>
                 <a
                   href="tel:+917065303030"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center justify-center px-2 sm:px-3 md:px-6 lg:px-8 py-1 sm:py-1.5 md:py-3 lg:py-4 bg-transparent border border-white text-white font-bold text-xs sm:text-xs md:text-base rounded-md sm:rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
                 >
-                  <Phone className="mr-2 h-5 w-5" />
+                  <Phone className="mr-1 sm:mr-1 md:mr-2 h-3 w-3 sm:h-3 sm:w-3 md:h-5 md:w-5" />
                   <span>Call Now</span>
                 </a>
               </div>
             </div>
-            <div className="lg:col-span-2 animate-slide-in-right">
-              <div className="relative max-w-xl mx-auto">
-                <div className="relative overflow-hidden rounded-xl shadow-lg bg-white p-2">
+            <div className="col-span-1 md:col-span-1 lg:col-span-2 animate-slide-in-right">
+              <div className="relative max-w-xs md:max-w-xl mx-auto">
+                <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg bg-white p-1 md:p-2">
                   {/* Carousel Container */}
                   <div className="relative">
-                    <div className="overflow-hidden rounded-lg">
+                    <div className="overflow-hidden rounded-md md:rounded-lg">
                       <div
                         className="flex transition-transform duration-500 ease-in-out"
                         style={{
@@ -529,27 +543,27 @@ const Index = () => {
                       </div>
                     </div>
 
-                    {/* Navigation Arrows */}
+                    {/* Navigation Arrows - Hidden on small mobile */}
                     <button
                       onClick={prevSlide}
-                      className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-all duration-200"
+                      className="hidden sm:flex absolute left-1 md:left-2 top-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 bg-black/50 hover:bg-black/70 rounded-full items-center justify-center text-white transition-all duration-200"
                     >
-                      <ChevronLeft className="h-4 w-4" />
+                      <ChevronLeft className="h-3 w-3 md:h-4 md:w-4" />
                     </button>
                     <button
                       onClick={nextSlide}
-                      className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-all duration-200"
+                      className="hidden sm:flex absolute right-1 md:right-2 top-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 bg-black/50 hover:bg-black/70 rounded-full items-center justify-center text-white transition-all duration-200"
                     >
-                      <ChevronRight className="h-4 w-4" />
+                      <ChevronRight className="h-3 w-3 md:h-4 md:w-4" />
                     </button>
 
                     {/* Dots Indicator */}
-                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2">
+                    <div className="absolute bottom-1 md:bottom-3 left-1/2 -translate-x-1/2 flex space-x-1 md:space-x-2">
                       {carouselImages.map((_, index) => (
                         <button
                           key={index}
                           onClick={() => setCurrentSlide(index)}
-                          className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                          className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-200 ${
                             index === currentSlide ? "bg-white" : "bg-white/50"
                           }`}
                         />
@@ -557,14 +571,14 @@ const Index = () => {
                     </div>
                   </div>
 
-                  {/* Caption */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-                      <div className="flex items-center space-x-2 mb-2">
-                        <div className="w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                  {/* Caption - Hidden on small mobile */}
+                  <div className="hidden md:block absolute bottom-2 md:bottom-4 left-2 md:left-4 right-2 md:right-4">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-2 md:p-4 shadow-lg">
+                      <div className="flex items-center space-x-2 mb-1 md:mb-2">
+                        <div className="w-4 h-4 md:w-6 md:h-6 bg-[#c38935] rounded-full flex items-center justify-center">
+                          <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full"></div>
                         </div>
-                        <p className="text-[#22336a] font-bold text-sm">
+                        <p className="text-[#22336a] font-bold text-xs md:text-sm">
                           {carouselImages[currentSlide].title}
                         </p>
                       </div>
@@ -580,61 +594,75 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Placement Highlights - Updated without emojis */}
-      <section className="py-12 bg-[#22336a]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
-            <div className="bg-[#c38935] text-white px-6 py-4">
+      {/* Placement Highlights - Extra Small Mobile */}
+      <section className="py-2 md:py-8 lg:py-12 bg-[#22336a]">
+        <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-md md:rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+            <div className="bg-[#c38935] text-white px-2 md:px-6 py-1.5 md:py-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xl font-bold">Placement Highlights</h3>
-                  <p className="text-sm opacity-90">
+                  <h3 className="text-xs md:text-lg lg:text-xl font-bold">
+                    Placement Highlights
+                  </h3>
+                  <p className="text-xs md:text-sm opacity-90">
                     MBA | MCA | BBA | BCA | B.Tech
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="p-6">
-              <div className="grid grid-cols-3 gap-6 mb-6">
+            <div className="p-1.5 md:p-4 lg:p-6">
+              {/* Mobile: Extra compact stats */}
+              <div className="grid grid-cols-3 sm:grid-cols-3 gap-1.5 md:gap-4 lg:gap-6 mb-2 md:mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                  <div className="text-sm md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
                     26 LPA
                   </div>
-                  <p className="text-sm text-gray-600">Highest Package</p>
+                  <p className="text-xs md:text-sm text-gray-600">
+                    Highest Package
+                  </p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                  <div className="text-sm md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
                     1200+
                   </div>
-                  <p className="text-sm text-gray-600">Top Recruiters</p>
+                  <p className="text-xs md:text-sm text-gray-600">
+                    Top Recruiters
+                  </p>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                  <div className="text-sm md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
                     5000+
                   </div>
-                  <p className="text-sm text-gray-600">Students Placed</p>
+                  <p className="text-xs md:text-sm text-gray-600">
+                    Students Placed
+                  </p>
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div className="bg-gray-50 rounded-lg p-4 flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">63%</span>
+              {/* Mobile: Ultra compact comparison cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 md:gap-3 lg:gap-4 mb-1.5 md:mb-4">
+                <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
+                  <div className="w-4 h-4 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-xs md:text-sm">
+                      63%
+                    </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#22336a] text-sm">
+                    <p className="font-semibold text-[#22336a] text-xs md:text-sm">
                       63% Higher ROI
                     </p>
                     <p className="text-xs text-gray-600">vs private colleges</p>
                   </div>
                 </div>
-                <div className="bg-gray-50 rounded-lg p-4 flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-[#22336a] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">7X</span>
+                <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
+                  <div className="w-4 h-4 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#22336a] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-xs md:text-sm">
+                      7X
+                    </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#22336a] text-sm">
+                    <p className="font-semibold text-[#22336a] text-xs md:text-sm">
                       7X More Companies
                     </p>
                     <p className="text-xs text-gray-600">vs institutes</p>
@@ -642,16 +670,162 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-lg p-3 text-center">
-                <p className="text-sm text-gray-700">
-                  <span className="font-semibold text-[#c38935]">
-                    <p>
-                      <br />
-                    </p>
-                  </span>{" "}
+              <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 text-center">
+                <p className="text-xs md:text-sm text-gray-700">
                   Placement report audited by B2K Analytics
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
+          <div
+            className="absolute bottom-20 right-20 w-80 h-80 bg-[#22336a]/5 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12 md:mb-16">
+            <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-[#c38935]/10 rounded-full mb-4 md:mb-6">
+              <Trophy className="h-4 w-4 md:h-5 md:w-5 text-[#c38935] mr-2" />
+              <span className="text-[#c38935] font-semibold text-xs md:text-sm">
+                AWARDS & RECOGNITION
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-4 md:mb-6 leading-tight">
+              Recognized
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
+                {" "}
+                Excellence
+              </span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
+                in Education
+              </span>
+            </h2>
+            <div
+              className="max-w-4xl mx-auto animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <p className="text-base md:text-xl text-gray-700 leading-relaxed mb-4">
+                Our commitment to educational excellence has been recognized by
+                leading industry organizations
+              </p>
+            </div>
+          </div>
+
+          {/* Mobile Awards Carousel */}
+          <div className="block md:hidden mb-12">
+            <div className="overflow-hidden bg-gray-50 rounded-xl py-6">
+              <div className="flex space-x-6 animate-scroll whitespace-nowrap">
+                {[
+                  {
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F634b6859a0a5475897251bed28fb9a48?format=webp&width=800",
+                    title: "Excellence in Education",
+                    desc: "Recognized for outstanding educational services",
+                  },
+                  {
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F21c4bdaba70546e89b1432a5a71417d5?format=webp&width=800",
+                    title: "Innovation Excellence",
+                    desc: "Leading innovation in educational technology",
+                  },
+                  {
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F8a91f11dc8e04d358b985214fbcb8d95?format=webp&width=800",
+                    title: "ASSOCHAM India",
+                    desc: "Excellence in Educational Innovation",
+                  },
+                  {
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800",
+                    title: "IndiGlobal Education",
+                    desc: "Outstanding Academic Excellence",
+                  },
+                ].map((award, index) => (
+                  <div key={index} className="flex-shrink-0 w-60">
+                    <div className="bg-white rounded-2xl p-4 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                      <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
+                        <img
+                          src={award.src}
+                          alt={award.title}
+                          className="w-full h-full object-contain p-2"
+                        />
+                      </div>
+                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
+                        <Trophy className="h-3 w-3 text-white" />
+                      </div>
+                      <h3 className="text-sm font-bold text-[#22336a] mb-1 text-center">
+                        {award.title}
+                      </h3>
+                      <p className="text-gray-600 text-xs text-center">
+                        {award.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Awards Horizontal Scrolling */}
+          <div className="hidden md:block relative overflow-hidden bg-gray-50 rounded-xl py-8 mb-16">
+            <div className="flex space-x-8 animate-scroll">
+              {[
+                {
+                  src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F634b6859a0a5475897251bed28fb9a48?format=webp&width=800",
+                  title: "Excellence in Education",
+                  desc: "Recognized for outstanding educational services",
+                },
+                {
+                  src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F21c4bdaba70546e89b1432a5a71417d5?format=webp&width=800",
+                  title: "Innovation Excellence",
+                  desc: "Leading innovation in educational technology",
+                },
+                {
+                  src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2Ffb516054d41948ecafc7dad3868c1bea?format=webp&width=800",
+                  title: "Quality Assurance",
+                  desc: "Commitment to quality education standards",
+                },
+                {
+                  src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F8a91f11dc8e04d358b985214fbcb8d95?format=webp&width=800",
+                  title: "ASSOCHAM India",
+                  desc: "Excellence in Educational Innovation",
+                },
+                {
+                  src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800",
+                  title: "IndiGlobal Education",
+                  desc: "Outstanding Academic Excellence",
+                },
+                {
+                  src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fc50132f6b1ef47a481e34f16b5b1f8fa?format=webp&width=800",
+                  title: "HolonIQ EdTech 100",
+                  desc: "Top EdTech Company 2022",
+                },
+              ].map((award, index) => (
+                <div key={index} className="flex-shrink-0 w-80">
+                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                    <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
+                      <img
+                        src={award.src}
+                        alt={award.title}
+                        className="w-full h-full object-contain p-4"
+                      />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
+                      <Trophy className="h-4 w-4 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                      {award.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm text-center">
+                      {award.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -839,23 +1013,23 @@ const Index = () => {
         </div>
       )}
 
-      {/* Professional Placement Guarantee Program */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      {/* Professional Placement Guarantee Program - Mobile Optimized */}
+      <section className="py-8 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 right-10 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Engaging Header with Animations */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6 animate-fade-in">
-              <Trophy className="h-5 w-5 text-[#22336a] mr-2 animate-pulse" />
-              <span className="text-[#22336a] font-semibold">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+          {/* Compact Header for Mobile */}
+          <div className="text-center mb-8 md:mb-16">
+            <div className="inline-flex items-center px-3 md:px-6 py-2 md:py-3 bg-[#22336a]/10 rounded-full mb-3 md:mb-6 animate-fade-in">
+              <Trophy className="h-4 w-4 md:h-5 md:w-5 text-[#22336a] mr-1 md:mr-2 animate-pulse" />
+              <span className="text-[#22336a] font-semibold text-xs md:text-base">
                 PLACEMENT OPPORTUNITY PROGRAM
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight animate-slide-up">
+            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight animate-slide-up">
               Placement
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] animate-gradient-shift">
                 {" "}
@@ -870,11 +1044,10 @@ const Index = () => {
               className="max-w-4xl mx-auto animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              <p className="text-xl text-gray-700 leading-relaxed mb-4">
-                Comprehensive placement support with assured career guidance and
-                guaranteed success
+              <p className="text-sm md:text-xl text-gray-700 leading-relaxed mb-2 md:mb-4">
+                Comprehensive placement support with assured career guidance
               </p>
-              <div className="flex items-center justify-center space-x-8 text-sm text-gray-600">
+              <div className="hidden md:flex items-center justify-center space-x-8 text-sm text-gray-600">
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"></div>
                   <span>Career Opportunities</span>
@@ -897,8 +1070,64 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Professional Grid Layout */}
-          <div className="grid lg:grid-cols-2 gap-16 mb-20">
+          {/* Mobile: Compact Cards Layout */}
+          <div className="block md:hidden mb-6">
+            <div className="space-y-3">
+              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Trophy className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-bold text-[#22336a] mb-1">
+                      200+ Placement Opportunities
+                    </h3>
+                    <p className="text-xs text-gray-600">
+                      Guaranteed access to extensive placement opportunities
+                      across leading companies
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <TrendingUp className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-bold text-[#22336a] mb-1">
+                      First Year Tuition Fee Back
+                    </h3>
+                    <p className="text-xs text-gray-600">
+                      We'll refund your first-year tuition fee if you don't
+                      receive promised opportunities
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Users className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-bold text-[#22336a] mb-1">
+                      Dedicated Career Support
+                    </h3>
+                    <p className="text-xs text-gray-600">
+                      Personal mentorship, interview preparation, and continuous
+                      guidance
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Professional Grid Layout */}
+          <div className="hidden md:grid lg:grid-cols-2 gap-16 mb-20">
             {/* Left Side - Key Guarantees */}
             <div className="space-y-8">
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 group">
@@ -908,13 +1137,11 @@ const Index = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-3">
-                      <p>200 +Placement Opportunities</p>
+                      200+ Placement Opportunities
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      <p>
-                        Guaranteed access to extensive placement opportunities
-                        across leading companies{" "}
-                      </p>
+                      Guaranteed access to extensive placement opportunities
+                      across leading companies
                     </p>
                   </div>
                 </div>
@@ -957,84 +1184,144 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Professional CTA */}
+          {/* Compact CTA for Mobile */}
           <div className="text-center">
             <div className="max-w-2xl mx-auto">
-              <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-lg md:rounded-2xl p-4 md:p-8 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-4">
+                  <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-4">
                     Ready to Secure Your Future?
                   </h3>
-                  <p className="text-lg opacity-90 mb-6">
+                  <p className="text-sm md:text-lg opacity-90 mb-4 md:mb-6">
                     Join our placement guarantee program and take the first step
                     towards career success
                   </p>
-                  <div className="flex gap-4 justify-center">
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center">
                     <button
                       onClick={() => setShowPlacementPopup(true)}
-                      className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                      className="inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base"
                     >
                       <span>Learn More</span>
-                      <ChevronRight className="h-5 w-5 ml-2" />
+                      <ChevronRight className="h-4 w-4 md:h-5 md:w-5 ml-1 md:ml-2" />
                     </button>
                     <a
                       href="https://sunstone.in/apply-now"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-8 py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                      className="inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base"
                     >
                       <span>Apply Now</span>
-                      <ExternalLink className="h-5 w-5 ml-2" />
+                      <ExternalLink className="h-4 w-4 md:h-5 md:w-5 ml-1 md:ml-2" />
                     </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Terms */}
-          <div className="text-center mt-8">
-            <p className="text-sm text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              <p>
-                <br />
-              </p>
-            </p>
-          </div>
         </div>
       </section>
 
-      {/* Key Offerings - Updated with 4 items and enhanced popup */}
-      <section className="py-16 bg-white relative overflow-hidden">
+      {/* Key Offerings - Mobile Responsive with Carousel */}
+      <section className="py-12 md:py-16 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-4 md:mb-6">
               Key Offerings
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
               Discover what makes our programs exceptional and job-ready
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Mobile Carousel */}
+          <div className="block md:hidden mb-8">
+            <div className="overflow-hidden">
+              <div className="flex space-x-4 animate-scroll-right-to-left">
+                <div className="flex-shrink-0 w-72 group relative cursor-pointer">
+                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <BookOpen className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-[#22336a] mb-2">
+                      Expert Sessions
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Session by industry experts and leading faculty from
+                      Fortune 500 companies
+                    </p>
+                  </div>
+                </div>
+                <div className="flex-shrink-0 w-72 group relative cursor-pointer">
+                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Award className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-[#22336a] mb-2">
+                      Professional Portfolio
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Showcase verified skills and experience to increase hiring
+                      chances
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-72 group relative cursor-pointer"
+                  onClick={() => setShowPlacementPopup(true)}
+                >
+                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 relative">
+                      <TrendingUp className="h-6 w-6 text-white" />
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
+                        <span className="text-white text-xs font-bold">!</span>
+                      </div>
+                    </div>
+                    <h3 className="text-lg font-bold text-[#22336a] mb-2">
+                      POP
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Access to 200+ guaranteed job opportunities with
+                      comprehensive placement support
+                    </p>
+                  </div>
+                </div>
+                <div className="flex-shrink-0 w-72 group relative cursor-pointer">
+                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Zap className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-[#22336a] mb-2">
+                      Certifications
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      In-demand advanced certifications to choose from various
+                      domains and enhance your career prospects
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Grid */}
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {/* 1. Industry Expert Sessions */}
             <div
               className="group relative animate-fade-in-up"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <BookOpen className="h-8 w-8 text-white" />
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <BookOpen className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
                   Expert Sessions
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  <p>
-                    Session by industry experts and leading faculty from Fortune
-                    500 companies
-                  </p>
+                  Session by industry experts and leading faculty from Fortune
+                  500 companies
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1045,11 +1332,11 @@ const Index = () => {
               className="group relative animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Award className="h-8 w-8 text-white" />
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Award className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
                   Professional Portfolio
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -1066,21 +1353,19 @@ const Index = () => {
               style={{ animationDelay: "0.3s" }}
               onClick={() => setShowPlacementPopup(true)}
             >
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative">
-                  <TrendingUp className="h-8 w-8 text-white" />
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300 relative">
+                  <TrendingUp className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
+                  <div className="absolute -top-1 -right-1 lg:-top-2 lg:-right-2 w-4 h-4 lg:w-6 lg:h-6 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
                     <span className="text-white text-xs font-bold">!</span>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                  <p>POP</p>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  POP
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  <p>
-                    Access to 200+ guaranteed job opportunities with
-                    comprehensive placement support{" "}
-                  </p>
+                  Access to 200+ guaranteed job opportunities with comprehensive
+                  placement support
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1091,21 +1376,16 @@ const Index = () => {
               className="group relative animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
             >
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="h-8 w-8 text-white" />
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
                   Certifications
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  <p>
-                    In-demand advanced certifications to choose from various
-                    domains and enhance your carrer prospects
-                  </p>
-                  <p>
-                    <br />
-                  </p>
+                  In-demand advanced certifications to choose from various
+                  domains and enhance your career prospects
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1114,44 +1394,278 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Programs Section - All Blue Colors */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+      {/* Programs Section - Mobile Responsive */}
+      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#22336a]/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-4 md:mb-6">
               Programs Offered
             </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-base lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Transform your career with industry-aligned programs designed by
               experts
             </p>
           </div>
 
-          {/* Program Selector - All Blue */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
+          {/* Mobile: Program Selection Dropdown */}
+          <div className="block md:hidden mb-8">
+            {/* Program Selector - Highlighted */}
+            <div className="mb-4 p-4 bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-xl border-2 border-[#22336a]/20 relative overflow-hidden">
+              {/* Highlight background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/5 via-[#c38935]/5 to-[#22336a]/5 animate-pulse"></div>
+
+              <div className="relative z-10">
+                <label className="flex items-center text-sm font-bold text-[#22336a] mb-3">
+                  <div className="w-5 h-5 bg-[#c38935] rounded-full flex items-center justify-center mr-2 animate-bounce">
+                    <span className="text-white text-xs font-bold">!</span>
+                  </div>
+                  Select Program to View Details:
+                </label>
+                <select
+                  value={selectedMobileProgram || ""}
+                  onChange={(e) =>
+                    setSelectedMobileProgram(e.target.value || null)
+                  }
+                  className="w-full p-3 border-2 border-[#22336a] rounded-lg text-[#22336a] font-medium focus:outline-none focus:ring-4 focus:ring-[#22336a]/20 focus:border-[#c38935] bg-white shadow-lg"
+                >
+                  <option value="">Choose a program...</option>
+                  {Object.keys(programs)
+                    .filter((programName) => programName !== "MBA")
+                    .map((programName) => (
+                      <option key={programName} value={programName}>
+                        {programName} Program
+                      </option>
+                    ))}
+                </select>
+
+                {/* Helper text */}
+                <p className="text-xs text-[#c38935] font-medium mt-2 flex items-center">
+                  <span className="animate-pulse mr-1">👆</span>
+                  Tap to explore our programs
+                </p>
+              </div>
+            </div>
+
+            {/* Selected Program Details */}
+            {selectedMobileProgram && selectedMobileProgram !== "MBA" && (
+              <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
+                {/* Program Header */}
+                <div
+                  className={`bg-gradient-to-r ${programs[selectedMobileProgram].color} p-4 text-white`}
+                >
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                      <GraduationCap className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold">
+                        {selectedMobileProgram}
+                      </h3>
+                      <p className="text-sm opacity-90">Program Details</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-white">
+                  {/* Dropdown for Duration & Projects */}
+                  <div className="mb-4">
+                    <div className="bg-gray-50 rounded-lg p-3">
+                      <h4 className="font-semibold text-[#22336a] text-sm mb-2">
+                        Program Overview:
+                      </h4>
+                      <div className="space-y-2">
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-gray-600">
+                            Duration:
+                          </span>
+                          <span className="text-sm font-medium text-[#22336a]">
+                            {programs[selectedMobileProgram].duration}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-gray-600">
+                            Projects:
+                          </span>
+                          <span className="text-sm font-medium text-[#22336a]">
+                            {programs[selectedMobileProgram].projects}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-gray-600">
+                            Certifications:
+                          </span>
+                          <span className="text-sm font-medium text-[#22336a]">
+                            {programs[selectedMobileProgram].certifications}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-gray-600">
+                            Internships:
+                          </span>
+                          <span className="text-sm font-medium text-[#22336a]">
+                            {programs[selectedMobileProgram].internships}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Tabs for Specifications and Eligibility */}
+                  <div className="border-b border-gray-200 mb-4">
+                    <div className="flex space-x-4">
+                      <button
+                        className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                          (mobileTabState[selectedMobileProgram] || "specs") ===
+                          "specs"
+                            ? "border-[#22336a] text-[#22336a]"
+                            : "border-transparent text-gray-500"
+                        }`}
+                        onClick={() =>
+                          setMobileTabState({
+                            ...mobileTabState,
+                            [selectedMobileProgram]: "specs",
+                          })
+                        }
+                      >
+                        Specifications
+                      </button>
+                      <button
+                        className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                          mobileTabState[selectedMobileProgram] ===
+                          "eligibility"
+                            ? "border-[#22336a] text-[#22336a]"
+                            : "border-transparent text-gray-500"
+                        }`}
+                        onClick={() =>
+                          setMobileTabState({
+                            ...mobileTabState,
+                            [selectedMobileProgram]: "eligibility",
+                          })
+                        }
+                      >
+                        Eligibility
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Tab Content */}
+                  {(mobileTabState[selectedMobileProgram] || "specs") ===
+                  "specs" ? (
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-[#22336a] text-sm">
+                        Key Certifications:
+                      </h4>
+                      {programs[selectedMobileProgram].certificationsList
+                        .slice(
+                          0,
+                          showAllCertifications[selectedMobileProgram]
+                            ? undefined
+                            : 3,
+                        )
+                        .map((cert, certIndex) => (
+                          <div
+                            key={certIndex}
+                            className="flex items-start space-x-2 p-2 bg-gray-50 rounded-md"
+                          >
+                            <div className="w-4 h-4 bg-[#c38935] rounded-full mt-0.5 flex-shrink-0"></div>
+                            <div>
+                              <p className="text-sm font-medium text-[#22336a]">
+                                {cert.name}
+                              </p>
+                              <p className="text-xs text-gray-600">
+                                {cert.careers}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+
+                      {/* View More / View Less Button */}
+                      {programs[selectedMobileProgram].certificationsList
+                        .length > 3 && (
+                        <div className="text-center mt-3">
+                          <button
+                            onClick={() =>
+                              setShowAllCertifications({
+                                ...showAllCertifications,
+                                [selectedMobileProgram]:
+                                  !showAllCertifications[selectedMobileProgram],
+                              })
+                            }
+                            className="inline-flex items-center px-4 py-2 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-medium rounded-lg transition-all duration-300 text-sm"
+                          >
+                            {showAllCertifications[selectedMobileProgram] ? (
+                              <>
+                                <span>View Less</span>
+                                <ChevronDown className="ml-1 h-4 w-4 rotate-180" />
+                              </>
+                            ) : (
+                              <>
+                                <span>
+                                  View More (
+                                  {programs[selectedMobileProgram]
+                                    .certificationsList.length - 3}{" "}
+                                  more)
+                                </span>
+                                <ChevronDown className="ml-1 h-4 w-4" />
+                              </>
+                            )}
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="bg-gray-50 rounded-lg p-3">
+                      <h4 className="font-semibold text-[#22336a] text-sm mb-2">
+                        Eligibility Criteria:
+                      </h4>
+                      <p className="text-sm text-gray-700">
+                        {programs[selectedMobileProgram].eligibility}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Apply Button */}
+                  <div className="mt-4">
+                    <a
+                      href="https://sunstone.in/apply-now"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r ${programs[selectedMobileProgram].color} text-white font-bold text-sm rounded-lg transition-all duration-300 transform hover:scale-105`}
+                    >
+                      <span>Apply for {selectedMobileProgram}</span>
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Desktop Program Selector */}
+          <div className="hidden md:flex flex-wrap justify-center gap-3 md:gap-4 mb-12 md:mb-16">
             {Object.entries(programs).map(
               ([programName, programData], index) => (
                 <button
                   key={programName}
                   onClick={() => setActiveTab(programName)}
-                  className={`group relative px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-500 transform hover:scale-105 ${
+                  className={`group relative px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 rounded-xl md:rounded-2xl font-bold text-sm md:text-base lg:text-lg transition-all duration-500 transform hover:scale-105 ${
                     activeTab === programName
                       ? `bg-gradient-to-r ${programData.color} text-white shadow-2xl`
                       : "bg-white text-[#22336a] hover:bg-gray-50 shadow-lg border border-gray-200"
                   }`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="flex items-center space-x-3">
-                    <GraduationCap className="h-6 w-6" />
+                  <div className="flex items-center space-x-2 md:space-x-3">
+                    <GraduationCap className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
                     <span>{programName}</span>
                   </div>
                   {activeTab === programName && (
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-white rounded-full"></div>
+                    <div className="absolute -bottom-1 md:-bottom-2 left-1/2 transform -translate-x-1/2 w-6 md:w-8 h-0.5 md:h-1 bg-white rounded-full"></div>
                   )}
                 </button>
               ),
@@ -1170,63 +1684,63 @@ const Index = () => {
                 }`}
               >
                 <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-                  {/* Header with Blue Gradient */}
+                  {/* Header with Blue Gradient - Mobile Responsive */}
                   <div
-                    className={`bg-gradient-to-r ${programData.color} p-8 text-white relative overflow-hidden`}
+                    className={`bg-gradient-to-r ${programData.color} p-4 md:p-6 lg:p-8 text-white relative overflow-hidden`}
                   >
-                    <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20"></div>
-                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-16 -translate-x-16"></div>
+                    <div className="absolute top-0 right-0 w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-white/10 rounded-full -translate-y-10 translate-x-10 md:-translate-y-16 md:translate-x-16 lg:-translate-y-20 lg:translate-x-20"></div>
+                    <div className="absolute bottom-0 left-0 w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-white/10 rounded-full translate-y-8 -translate-x-8 md:translate-y-12 md:-translate-x-12 lg:translate-y-16 lg:-translate-x-16"></div>
 
                     <div className="relative z-10">
-                      <div className="flex items-center justify-center mb-6">
-                        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                          <GraduationCap className="h-10 w-10 text-white" />
+                      <div className="flex flex-col md:flex-row items-center justify-center mb-4 md:mb-6">
+                        <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white/20 rounded-full flex items-center justify-center mb-3 md:mb-0 md:mr-4">
+                          <GraduationCap className="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 text-white" />
                         </div>
-                        <div>
-                          <h3 className="text-3xl font-bold">
+                        <div className="text-center md:text-left">
+                          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold">
                             {programName} Program
                           </h3>
-                          <p className="text-xl opacity-90">
+                          <p className="text-sm md:text-lg lg:text-xl opacity-90">
                             Excellence in Education
                           </p>
                         </div>
                       </div>
 
-                      {/* Program Stats */}
-                      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-8">
-                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
-                          <Clock className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">
+                      {/* Program Stats - Mobile Responsive */}
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-3 lg:gap-4 mt-4 md:mt-6 lg:mt-8">
+                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
+                          <Clock className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
+                          <div className="font-bold text-xs md:text-sm">
                             {programData.duration}
                           </div>
                           <div className="text-xs opacity-80">Duration</div>
                         </div>
-                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
-                          <Award className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">
+                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
+                          <Award className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
+                          <div className="font-bold text-xs md:text-sm">
                             {programData.certifications}
                           </div>
                           <div className="text-xs opacity-80">
                             Certifications
                           </div>
                         </div>
-                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
-                          <Briefcase className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">
+                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
+                          <Briefcase className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
+                          <div className="font-bold text-xs md:text-sm">
                             {programData.internships}
                           </div>
                           <div className="text-xs opacity-80">Experience</div>
                         </div>
-                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
-                          <Target className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">
+                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
+                          <Target className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
+                          <div className="font-bold text-xs md:text-sm">
                             {programData.projects}
                           </div>
                           <div className="text-xs opacity-80">Projects</div>
                         </div>
-                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
-                          <Star className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">
+                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm col-span-2 md:col-span-1">
+                          <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
+                          <div className="font-bold text-xs md:text-sm">
                             {programData.specializations}
                           </div>
                           <div className="text-xs opacity-80">
@@ -1237,32 +1751,32 @@ const Index = () => {
                     </div>
                   </div>
 
-                  {/* Content */}
-                  <div className="p-8">
-                    <div className="grid md:grid-cols-3 gap-8">
-                      {/* Certifications */}
-                      <div className="md:col-span-2">
-                        <h4 className="text-2xl font-bold text-[#22336a] mb-6 flex items-center">
-                          <Star className="h-6 w-6 mr-2 text-[#c38935]" />
+                  {/* Content - Mobile Responsive */}
+                  <div className="p-4 md:p-6 lg:p-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+                      {/* Certifications - Mobile Responsive */}
+                      <div className="lg:col-span-2">
+                        <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-[#22336a] mb-4 md:mb-6 flex items-center">
+                          <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mr-2 text-[#c38935]" />
                           Advanced Certifications
                         </h4>
-                        <div className="grid gap-4">
+                        <div className="grid gap-3 md:gap-4">
                           {programData.certificationsList
                             .slice(0, 6)
                             .map((cert, index) => (
                               <div
                                 key={index}
-                                className="group p-4 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 cursor-pointer border border-transparent hover:border-[#c38935]/20"
+                                className="group p-3 md:p-4 bg-gray-50 rounded-lg md:rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 cursor-pointer border border-transparent hover:border-[#c38935]/20"
                               >
-                                <div className="flex items-start space-x-3">
-                                  <div className="w-8 h-8 bg-[#c38935] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                                    <Target className="h-4 w-4 text-white" />
+                                <div className="flex items-start space-x-2 md:space-x-3">
+                                  <div className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 bg-[#c38935] rounded-md md:rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                    <Target className="h-3 w-3 md:h-4 md:w-4 text-white" />
                                   </div>
                                   <div className="flex-1">
-                                    <h5 className="font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                                    <h5 className="font-bold text-sm md:text-base text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
                                       {cert.name}
                                     </h5>
-                                    <p className="text-sm text-gray-600 mt-1">
+                                    <p className="text-xs md:text-sm text-gray-600 mt-0.5 md:mt-1">
                                       {cert.careers}
                                     </p>
                                   </div>
@@ -1272,27 +1786,27 @@ const Index = () => {
                         </div>
                       </div>
 
-                      {/* Eligibility */}
+                      {/* Eligibility - Mobile Responsive */}
                       <div>
-                        <h4 className="text-2xl font-bold text-[#22336a] mb-6 flex items-center">
-                          <Award className="h-6 w-6 mr-2 text-[#c38935]" />
+                        <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-[#22336a] mb-4 md:mb-6 flex items-center">
+                          <Award className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mr-2 text-[#c38935]" />
                           Eligibility
                         </h4>
-                        <div className="p-6 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 rounded-xl border border-gray-100">
-                          <p className="text-gray-700 leading-relaxed">
+                        <div className="p-4 md:p-5 lg:p-6 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 rounded-lg md:rounded-xl border border-gray-100">
+                          <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                             {programData.eligibility}
                           </p>
                         </div>
 
-                        <div className="mt-6">
+                        <div className="mt-4 md:mt-6">
                           <a
                             href="https://sunstone.in/apply-now"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`w-full inline-flex items-center justify-center px-6 py-4 bg-gradient-to-r ${programData.color} text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
+                            className={`w-full inline-flex items-center justify-center px-4 md:px-5 lg:px-6 py-3 md:py-3.5 lg:py-4 bg-gradient-to-r ${programData.color} text-white font-bold text-sm md:text-base rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
                           >
                             <span>Apply Now</span>
-                            <ExternalLink className="ml-2 h-5 w-5" />
+                            <ExternalLink className="ml-1.5 md:ml-2 h-4 w-4 md:h-5 md:w-5" />
                           </a>
                         </div>
                       </div>
@@ -1305,81 +1819,85 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Easy Fee Payment Banner */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-lg border border-gray-200">
-              <span className="text-[#22336a] font-bold text-sm tracking-wide">
+      {/* Easy Fee Payment Banner - Mobile Optimized */}
+      <section className="py-6 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+          {/* Compact Header for Mobile */}
+          <div className="text-center mb-4 md:mb-16">
+            <div className="inline-flex items-center px-3 md:px-6 py-1.5 md:py-3 bg-white/80 backdrop-blur-sm rounded-full mb-3 md:mb-8 shadow-lg border border-gray-200">
+              <span className="text-[#22336a] font-bold text-xs md:text-sm tracking-wide">
                 🏦 EASY FEE PAYMENT
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-[#22336a] mb-6 leading-tight">
+            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight">
               TAKE CHARGE OF YOUR
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-yellow-400">
                 EDUCATION
               </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Make quality education affordable with our innovative EMI options,
-              scholarship programs, and smart financial assistance
+            <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Make quality education affordable with our innovative EMI options
+              and scholarship programs
             </p>
           </div>
 
-          {/* Banner Card */}
+          {/* Compact Banner Card for Mobile */}
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-[#c38935] to-[#d4a853] rounded-2xl p-8 text-white relative overflow-hidden shadow-2xl">
+            <div className="bg-gradient-to-r from-[#c38935] to-[#d4a853] rounded-lg md:rounded-2xl p-4 md:p-8 text-white relative overflow-hidden shadow-2xl">
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
               <div className="relative z-10">
-                <div className="flex items-center mb-6">
-                  <div className="bg-white/20 px-4 py-2 rounded-full">
-                    <span className="text-white font-bold text-sm">
+                <div className="flex items-center mb-3 md:mb-6">
+                  <div className="bg-white/20 px-2 md:px-4 py-1 md:py-2 rounded-full">
+                    <span className="text-white font-bold text-xs md:text-sm">
                       EASY FEE PAYMENT
                     </span>
                   </div>
                 </div>
 
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                <h3 className="text-lg md:text-2xl lg:text-3xl font-bold mb-2 md:mb-4">
                   Take charge of your education
                 </h3>
-                <p className="text-lg opacity-90 mb-8 max-w-2xl">
+                <p className="text-sm md:text-lg opacity-90 mb-4 md:mb-8 max-w-2xl">
                   Pay smart by choosing Sunstone. Pay the college fee and a
                   nominal amount to unlock your dream job with Sunstone.
                 </p>
 
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center space-x-3 bg-white/20 rounded-xl p-4">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-[#c38935] text-sm">✓</span>
+                <div className="space-y-2 md:space-y-4 mb-4 md:mb-8">
+                  <div className="flex items-center space-x-2 md:space-x-3 bg-white/20 rounded-lg md:rounded-xl p-2 md:p-4">
+                    <div className="w-4 h-4 md:w-6 md:h-6 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-[#c38935] text-xs md:text-sm">
+                        ✓
+                      </span>
                     </div>
-                    <span className="text-white font-medium">
+                    <span className="text-white font-medium text-sm md:text-base">
                       0-Cost EMI available
                     </span>
                   </div>
-                  <div className="flex items-center space-x-3 bg-white/20 rounded-xl p-4">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-[#c38935] text-sm">✓</span>
+                  <div className="flex items-center space-x-2 md:space-x-3 bg-white/20 rounded-lg md:rounded-xl p-2 md:p-4">
+                    <div className="w-4 h-4 md:w-6 md:h-6 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-[#c38935] text-xs md:text-sm">
+                        ✓
+                      </span>
                     </div>
-                    <span className="text-white font-medium">
+                    <span className="text-white font-medium text-sm md:text-base">
                       Up to 100% scholarship available
                     </span>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
                   <a
                     href="https://sunstone.in/apply-now"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-6 py-3 bg-white text-[#22336a] hover:bg-gray-100 font-bold rounded-lg transition-all duration-300 shadow-lg"
+                    className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-white text-[#22336a] hover:bg-gray-100 font-bold rounded-lg transition-all duration-300 shadow-lg text-sm md:text-base"
                   >
                     <span>Apply Now →</span>
                   </a>
                 </div>
 
-                <p className="text-xs text-white/70 mt-6">
+                <p className="text-xs text-white/70 mt-3 md:mt-6">
                   *Terms & conditions apply
                 </p>
               </div>
@@ -1389,13 +1907,13 @@ const Index = () => {
       </section>
 
       {/* Top Recruiters Section with Horizontal Scrolling */}
-      <section className="py-16 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
+      <section className="py-8 md:py-16 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-3 md:mb-6">
               Top Recruiters
             </h2>
-            <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Join a network of 1,200+ leading companies that actively recruit
               our graduates
             </p>
@@ -1461,7 +1979,7 @@ const Index = () => {
                     <img
                       src={recruiter.src}
                       alt={recruiter.name}
-                      className="h-16 w-auto"
+                      className="h-10 md:h-16 w-auto"
                     />
                   </button>
                 ))}
@@ -1526,7 +2044,7 @@ const Index = () => {
                     <img
                       src={recruiter.src}
                       alt={recruiter.name}
-                      className="h-16 w-auto"
+                      className="h-10 md:h-16 w-auto"
                     />
                   </button>
                 ))}
@@ -1535,37 +2053,37 @@ const Index = () => {
           </div>
 
           {/* Career Focus Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-200">
-              <div className="w-16 h-16 mx-auto mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
-                <Users className="h-8 w-8 text-white" />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 lg:gap-8">
+            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
+              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
+                <Users className="h-5 w-5 md:h-8 md:w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-[#22336a] mb-2">
+              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
                 Industry Connections
               </h3>
-              <p className="text-gray-600">
+              <p className="text-xs md:text-base text-gray-600">
                 Strong network of leading companies across sectors
               </p>
             </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-200">
-              <div className="w-16 h-16 mx-auto mb-4 bg-[#22336a] rounded-full flex items-center justify-center">
-                <Trophy className="h-8 w-8 text-white" />
+            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
+              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#22336a] rounded-full flex items-center justify-center">
+                <Trophy className="h-5 w-5 md:h-8 md:w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-[#22336a] mb-2">
+              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
                 Career Growth
               </h3>
-              <p className="text-gray-600">
+              <p className="text-xs md:text-base text-gray-600">
                 Excellent packages and growth opportunities
               </p>
             </div>
-            <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-200">
-              <div className="w-16 h-16 mx-auto mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
-                <Target className="h-8 w-8 text-white" />
+            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
+              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
+                <Target className="h-5 w-5 md:h-8 md:w-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-[#22336a] mb-2">
+              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
                 Success Stories
               </h3>
-              <p className="text-gray-600">
+              <p className="text-xs md:text-base text-gray-600">
                 Proven track record of student achievements
               </p>
             </div>
@@ -1584,32 +2102,106 @@ const Index = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center px-6 py-2 bg-[#22336a]/10 rounded-full mb-6">
-              <Clock className="h-5 w-5 text-[#22336a] mr-2" />
-              <span className="text-[#22336a] font-semibold">
+          <div className="text-center mb-12 md:mb-16 lg:mb-20">
+            <div className="inline-flex items-center px-4 md:px-6 py-1.5 md:py-2 bg-[#22336a]/10 rounded-full mb-4 md:mb-6">
+              <Clock className="h-4 w-4 md:h-5 md:w-5 text-[#22336a] mr-2" />
+              <span className="text-[#22336a] font-semibold text-sm md:text-base">
                 Quick & Easy Process
               </span>
             </div>
-            <h2 className="text-5xl sm:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-4 md:mb-6 leading-tight">
               Your Journey to
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#d4a853]">
                 {" "}
                 Success
               </span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-base lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Four streamlined steps to unlock your potential and transform your
               career
             </p>
           </div>
 
-          {/* Process Steps with Enhanced Design */}
-          <div className="relative">
+          {/* Mobile Grid for Journey Steps - All Visible at Once */}
+          <div className="block md:hidden mb-8">
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                {
+                  step: "1",
+                  title: "Apply Online",
+                  desc: "Submit application online",
+                  time: "5 minutes",
+                  color: "from-[#22336a] to-[#3b4d7a]",
+                  icon: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z",
+                },
+                {
+                  step: "2",
+                  title: "Assessment",
+                  desc: "Expert guidance & evaluation",
+                  time: "Expert Help",
+                  color: "from-[#c38935] to-[#d4a853]",
+                  icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z",
+                },
+                {
+                  step: "3",
+                  title: "Verification",
+                  desc: "Document verification",
+                  time: "Secure",
+                  color: "from-[#22336a] to-[#3b4d7a]",
+                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
+                },
+                {
+                  step: "4",
+                  title: "Welcome!",
+                  desc: "Begin your journey",
+                  time: "Success",
+                  color: "from-[#c38935] to-[#d4a853]",
+                  icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
+                },
+              ].map((item, index) => (
+                <div key={index} className="group relative">
+                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div className="flex items-center mb-2">
+                      <div
+                        className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
+                      >
+                        <span className="text-white font-bold text-sm">
+                          {item.step}
+                        </span>
+                        <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#c38935] rounded-full flex items-center justify-center">
+                          <svg
+                            className="w-2 h-2 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d={item.icon} />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xs font-bold text-[#22336a] mb-0.5">
+                          {item.title}
+                        </h3>
+                        <div className="text-xs text-[#c38935] font-semibold">
+                          {item.time}
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-gray-600 text-xs leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Process Steps with Enhanced Design - Desktop */}
+          <div className="hidden md:block relative">
             {/* Connecting Line */}
             <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] opacity-30"></div>
 
-            <div className="grid lg:grid-cols-4 gap-8 mb-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
               {/* Step 1 */}
               <div className="group relative">
                 <div className="flex flex-col items-center text-center">
@@ -1751,294 +2343,38 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Enhanced CTA Section */}
+          {/* Enhanced CTA Section - Mobile Optimized */}
           <div className="text-center">
-            <div className="bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-3xl p-12 text-white relative overflow-hidden shadow-2xl">
+            <div className="bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-lg md:rounded-3xl p-4 md:p-12 text-white relative overflow-hidden shadow-2xl">
               <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16"></div>
               <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
 
               <div className="relative z-10">
-                <h3 className="text-4xl font-bold mb-4">
+                <h3 className="text-lg md:text-4xl font-bold mb-2 md:mb-4">
                   Ready to Transform Your Future?
                 </h3>
-                <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                <p className="text-sm md:text-xl mb-4 md:mb-8 opacity-90 max-w-2xl mx-auto">
                   Join thousands of successful graduates who chose excellence.
                   Your journey starts here.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-6 justify-center items-center">
                   <a
                     href="tel:+917065303030"
-                    className="group inline-flex items-center px-8 py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50"
+                    className="group inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-white text-[#22336a] font-bold rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50 text-sm md:text-base"
                   >
-                    <Phone className="h-5 w-5 mr-3 group-hover:animate-pulse" />
+                    <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3 group-hover:animate-pulse" />
                     <span>Call: +91 7065-30-30-30</span>
                   </a>
                   <a
                     href="https://sunstone.in/apply-now"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    className="group inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm md:text-base"
                   >
-                    <ExternalLink className="h-5 w-5 mr-3" />
+                    <ExternalLink className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3" />
                     <span>Secure Your Spot Now</span>
                   </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Awards and Recognition Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
-          <div
-            className="absolute bottom-20 right-20 w-80 h-80 bg-[#22336a]/5 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "3s" }}
-          ></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-[#c38935]/10 rounded-full mb-6">
-              <Trophy className="h-5 w-5 text-[#c38935] mr-2" />
-              <span className="text-[#c38935] font-semibold">
-                AWARDS & RECOGNITION
-              </span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
-              Recognized
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
-                {" "}
-                Excellence
-              </span>
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
-                in Education
-              </span>
-            </h2>
-            <div
-              className="max-w-4xl mx-auto animate-fade-in"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <p className="text-xl text-gray-700 leading-relaxed mb-4">
-                Our commitment to educational excellence has been recognized by
-                leading industry organizations
-              </p>
-            </div>
-          </div>
-
-          {/* Awards Horizontal Scrolling */}
-          <div className="relative overflow-hidden bg-gray-50 rounded-xl py-8 mb-16">
-            <div className="flex space-x-8 animate-scroll">
-              {/* New Award 1 */}
-              <div className="flex-shrink-0 w-80">
-                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
-                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F634b6859a0a5475897251bed28fb9a48?format=webp&width=800"
-                      alt="Education Award"
-                      className="w-full h-full object-contain p-4"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <Trophy className="h-4 w-4 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
-                    Excellence in Education
-                  </h3>
-                  <p className="text-gray-600 text-sm text-center">
-                    Recognized for outstanding educational services
-                  </p>
-                </div>
-              </div>
-
-              {/* New Award 2 */}
-              <div className="flex-shrink-0 w-80">
-                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
-                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F21c4bdaba70546e89b1432a5a71417d5?format=webp&width=800"
-                      alt="Innovation Award"
-                      className="w-full h-full object-contain p-4"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <Trophy className="h-4 w-4 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
-                    Innovation Excellence
-                  </h3>
-                  <p className="text-gray-600 text-sm text-center">
-                    Leading innovation in educational technology
-                  </p>
-                </div>
-              </div>
-
-              {/* New Award 3 */}
-              <div className="flex-shrink-0 w-80">
-                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
-                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2Ffb516054d41948ecafc7dad3868c1bea?format=webp&width=800"
-                      alt="Quality Award"
-                      className="w-full h-full object-contain p-4"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <Trophy className="h-4 w-4 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
-                    Quality Assurance
-                  </h3>
-                  <p className="text-gray-600 text-sm text-center">
-                    Commitment to quality education standards
-                  </p>
-                </div>
-              </div>
-
-              {/* ASSOCHAM Award */}
-              <div className="flex-shrink-0 w-80">
-                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
-                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F8a91f11dc8e04d358b985214fbcb8d95?format=webp&width=800"
-                      alt="ASSOCHAM India Award"
-                      className="w-full h-full object-contain p-4"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <Trophy className="h-4 w-4 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
-                    ASSOCHAM India
-                  </h3>
-                  <p className="text-gray-600 text-sm text-center">
-                    Excellence in Educational Innovation
-                  </p>
-                </div>
-              </div>
-
-              {/* IndiGlobal Award */}
-              <div className="flex-shrink-0 w-80">
-                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
-                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800"
-                      alt="IndiGlobal Education Award"
-                      className="w-full h-full object-contain p-4"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
-                    <Star className="h-4 w-4 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
-                    IndiGlobal Education
-                  </h3>
-                  <p className="text-gray-600 text-sm text-center">
-                    Outstanding Academic Excellence
-                  </p>
-                </div>
-              </div>
-
-              {/* HolonIQ EdTech 100 */}
-              <div className="flex-shrink-0 w-80">
-                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
-                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fc50132f6b1ef47a481e34f16b5b1f8fa?format=webp&width=800"
-                      alt="HolonIQ South Asia EdTech 100"
-                      className="w-full h-full object-contain p-4"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <Award className="h-4 w-4 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
-                    HolonIQ EdTech 100
-                  </h3>
-                  <p className="text-gray-600 text-sm text-center">
-                    Top EdTech Company 2022
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Recognition Statistics */}
-          <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-3xl p-12 text-white relative overflow-hidden shadow-2xl">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16"></div>
-            <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-
-            <div className="relative z-10">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold mb-4">
-                  <h3 style={{ textAlign: "center" }}>
-                    <strong>Career-Focused Learning Outcomes</strong>
-                  </h3>
-                  <p>
-                    <br />
-                  </p>
-                </h3>
-                <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                  <p>
-                    <strong style={{ fontSize: "20px" }}>
-                      Our programs are designed to equip students with the right
-                      skills, certifications, and opportunities to succeed in
-                      today's job market.
-                    </strong>
-                  </p>
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2">
-                    5+
-                  </div>
-                  <p className="text-lg opacity-90">
-                    <p>Specialisations</p>
-                  </p>
-                  <p className="text-sm opacity-70 mt-1">
-                    <p>
-                      <strong style={{ fontSize: "14px" }}>
-                        Future-ready skills for tomorrow's careers
-                      </strong>
-                    </p>
-                  </p>
-                </div>
-                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2">
-                    <p>20+</p>
-                  </div>
-                  <p className="text-lg opacity-90">
-                    <p>Program domains</p>
-                  </p>
-                  <p className="text-sm opacity-70 mt-1">
-                    <p>
-                      <strong style={{ fontSize: "14px" }}>
-                        &nbsp;Spanning tech, management &amp; more
-                      </strong>
-                    </p>
-                  </p>
-                </div>
-                <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl font-bold text-[#f4d03f] mb-2">
-                    <p>10+</p>
-                  </div>
-                  <p className="text-lg opacity-90">
-                    <p>Advanced Certifications</p>
-                  </p>
-                  <p className="text-sm opacity-70 mt-1">
-                    <p>
-                      <strong style={{ fontSize: "14px" }}>
-                        &nbsp;Aligned with industry needs
-                      </strong>
-                    </p>
-                  </p>
                 </div>
               </div>
             </div>
@@ -2060,14 +2396,14 @@ const Index = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Enhanced Header */}
-          <div className="text-center mb-16 animate-slide-up">
-            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6 animate-fade-in">
-              <Star className="h-5 w-5 text-[#22336a] mr-2 animate-pulse" />
-              <span className="text-[#22336a] font-semibold">
+          <div className="text-center mb-8 md:mb-16 animate-slide-up">
+            <div className="inline-flex items-center px-3 md:px-6 py-2 md:py-3 bg-[#22336a]/10 rounded-full mb-3 md:mb-6 animate-fade-in">
+              <Star className="h-4 w-4 md:h-5 md:w-5 text-[#22336a] mr-1 md:mr-2 animate-pulse" />
+              <span className="text-[#22336a] font-semibold text-xs md:text-base">
                 STUDENT SUCCESS STORIES
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
+            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight">
               Success
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
                 {" "}
@@ -2079,7 +2415,7 @@ const Index = () => {
               </span>
             </h2>
             <p
-              className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in"
+              className="text-sm md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
               Discover how our programs have transformed careers and opened new
@@ -2087,8 +2423,174 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Enhanced Testimonials Grid */}
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+          {/* Mobile Carousel for Testimonials */}
+          <div className="block md:hidden mb-8">
+            <div className="overflow-hidden">
+              <div className="flex space-x-4 animate-scroll-right-to-left">
+                {[
+                  {
+                    name: "Rahul Kumar",
+                    role: "MBA Graduate • Software Engineer",
+                    company: "TCS",
+                    initials: "RK",
+                    quote:
+                      "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Priya Sharma",
+                    role: "BCA Graduate • Full Stack Developer",
+                    company: "Infosys",
+                    initials: "PS",
+                    quote:
+                      "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  {
+                    name: "Amit Joshi",
+                    role: "B.Tech Graduate • Senior Developer",
+                    company: "Wipro",
+                    initials: "AJ",
+                    quote:
+                      "The advanced certifications and project-based learning methodology prepared me perfectly for the industry demands.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                ].map((testimonial, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 w-72 group relative"
+                  >
+                    <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4">
+                      {/* Avatar and Info */}
+                      <div className="flex items-center mb-4">
+                        <div className="relative">
+                          <div
+                            className={`w-12 h-12 bg-gradient-to-br ${testimonial.color} rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300`}
+                          >
+                            <span className="text-white font-bold text-sm">
+                              {testimonial.initials}
+                            </span>
+                          </div>
+                          <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                            <span className="text-white text-xs">✓</span>
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-[#22336a] text-sm group-hover:text-[#c38935] transition-colors duration-300">
+                            {testimonial.name}
+                          </h4>
+                          <p className="text-xs text-gray-600">
+                            {testimonial.role}
+                          </p>
+                          <p className="text-xs text-[#c38935] font-semibold">
+                            {testimonial.company}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Rating */}
+                      <div className="flex mb-3 space-x-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-4 w-4 text-yellow-400 fill-current"
+                          />
+                        ))}
+                      </div>
+
+                      {/* Quote */}
+                      <div className="relative">
+                        <span className="text-3xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
+                          "
+                        </span>
+                        <p className="text-gray-700 text-xs italic leading-relaxed pl-4">
+                          {testimonial.quote}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                {/* Duplicate for seamless loop */}
+                {[
+                  {
+                    name: "Rahul Kumar",
+                    role: "MBA Graduate • Software Engineer",
+                    company: "TCS",
+                    initials: "RK",
+                    quote:
+                      "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Priya Sharma",
+                    role: "BCA Graduate • Full Stack Developer",
+                    company: "Infosys",
+                    initials: "PS",
+                    quote:
+                      "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                ].map((testimonial, index) => (
+                  <div
+                    key={`duplicate-${index}`}
+                    className="flex-shrink-0 w-72 group relative"
+                  >
+                    <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4">
+                      {/* Avatar and Info */}
+                      <div className="flex items-center mb-4">
+                        <div className="relative">
+                          <div
+                            className={`w-12 h-12 bg-gradient-to-br ${testimonial.color} rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300`}
+                          >
+                            <span className="text-white font-bold text-sm">
+                              {testimonial.initials}
+                            </span>
+                          </div>
+                          <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                            <span className="text-white text-xs">✓</span>
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-[#22336a] text-sm group-hover:text-[#c38935] transition-colors duration-300">
+                            {testimonial.name}
+                          </h4>
+                          <p className="text-xs text-gray-600">
+                            {testimonial.role}
+                          </p>
+                          <p className="text-xs text-[#c38935] font-semibold">
+                            {testimonial.company}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Rating */}
+                      <div className="flex mb-3 space-x-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-4 w-4 text-yellow-400 fill-current"
+                          />
+                        ))}
+                      </div>
+
+                      {/* Quote */}
+                      <div className="relative">
+                        <span className="text-3xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
+                          "
+                        </span>
+                        <p className="text-gray-700 text-xs italic leading-relaxed pl-4">
+                          {testimonial.quote}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Testimonials Grid */}
+          <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
             {/* Testimonial 1 */}
             <div
               className="group relative animate-slide-up"
@@ -2279,30 +2781,30 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section - Updated with new questions */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      {/* FAQ Section - Mobile Optimized */}
+      <section className="py-8 md:py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-64 h-64 bg-[#22336a]/3 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#22336a]/3 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-3 md:mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-sm md:text-xl text-gray-700 max-w-3xl mx-auto">
               Find answers to commonly asked questions about our programs
             </p>
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="space-y-4">
+            <div className="space-y-2 md:space-y-4">
               {[
                 {
                   question: "Why should I choose Sunstone?",
                   answer:
-                    "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
+                    "• Training and development sessions by industry experts\n��� Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
                   category: "sunstone",
                 },
                 {
@@ -2380,106 +2882,138 @@ const Index = () => {
                     "Through dedicated placement officers, personalized career counseling, skill development workshops, professional portfolio building, continuous mentorship, and access to extensive alumni network. We maintain 95% placement rate with comprehensive career support.",
                   category: "success",
                 },
-              ].map((faq, index) => (
-                <div key={index} className="group">
-                  <Collapsible>
-                    <CollapsibleTrigger className="w-full">
-                      <div className="p-6 rounded-xl transition-all duration-300 cursor-pointer bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#22336a]/30 hover:shadow-lg">
-                        <div className="flex items-center justify-between text-left">
-                          <div className="flex items-center space-x-4 flex-1">
-                            <div className="w-12 h-12 bg-[#22336a] rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                              <span className="text-white font-bold">
-                                {index + 1}
-                              </span>
-                            </div>
-                            <div className="flex-1">
-                              <h3 className="text-lg font-bold text-[#22336a] group-hover:text-[#22336a] transition-colors duration-300">
-                                {faq.question}
-                              </h3>
-                              <div className="text-sm font-medium mt-1 text-[#22336a]/70">
-                                {faq.category === "sunstone"
-                                  ? "Sunstone"
-                                  : faq.category === "admission"
-                                    ? "Admission"
-                                    : faq.category === "fees"
-                                      ? "Fees"
-                                      : "Support"}
+              ]
+                .slice(0, showMoreFAQs ? undefined : 6) // Show first 6 by default
+                .map((faq, index) => (
+                  <div key={index} className="group">
+                    <Collapsible>
+                      <CollapsibleTrigger className="w-full">
+                        <div className="p-3 md:p-6 rounded-lg md:rounded-xl transition-all duration-300 cursor-pointer bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#22336a]/30 hover:shadow-lg">
+                          <div className="flex items-center justify-between text-left">
+                            <div className="flex items-center space-x-2 md:space-x-4 flex-1">
+                              <div className="w-8 h-8 md:w-12 md:h-12 bg-[#22336a] rounded-lg md:rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                                <span className="text-white font-bold text-sm md:text-base">
+                                  {index + 1}
+                                </span>
+                              </div>
+                              <div className="flex-1">
+                                <h3 className="text-sm md:text-lg font-bold text-[#22336a] group-hover:text-[#22336a] transition-colors duration-300">
+                                  {faq.question}
+                                </h3>
+                                <div className="text-xs md:text-sm font-medium mt-1 text-[#22336a]/70">
+                                  {faq.category === "sunstone"
+                                    ? "Sunstone"
+                                    : faq.category === "admission"
+                                      ? "Admission"
+                                      : faq.category === "fees"
+                                        ? "Fees"
+                                        : "Support"}
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <ChevronDown className="h-6 w-6 text-gray-600 group-hover:text-[#22336a] transform group-hover:rotate-180 transition-all duration-300" />
-                        </div>
-                      </div>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent>
-                      <div className="px-6 pb-6 -mt-2">
-                        <div className="pt-6 border-t border-gray-200 bg-white rounded-xl p-6 ml-16 shadow-sm">
-                          <div className="text-gray-700 leading-relaxed text-lg">
-                            {faq.answer.includes("•") ? (
-                              <div className="space-y-2">
-                                {faq.answer
-                                  .split("\n")
-                                  .map((point, pointIndex) => (
-                                    <div
-                                      key={pointIndex}
-                                      className="flex items-start space-x-2"
-                                    >
-                                      {point.startsWith("•") ? (
-                                        <>
-                                          <span className="text-[#c38935] font-bold text-xl mt-0.5">
-                                            ���
-                                          </span>
-                                          <span>
-                                            {point.substring(1).trim()}
-                                          </span>
-                                        </>
-                                      ) : (
-                                        <span>{point}</span>
-                                      )}
-                                    </div>
-                                  ))}
-                              </div>
-                            ) : (
-                              <p>{faq.answer}</p>
-                            )}
+                            <ChevronDown className="h-5 w-5 md:h-6 md:w-6 text-gray-600 group-hover:text-[#22336a] transform group-hover:rotate-180 transition-all duration-300" />
                           </div>
                         </div>
-                      </div>
-                    </CollapsibleContent>
-                  </Collapsible>
-                </div>
-              ))}
+                      </CollapsibleTrigger>
+                      <CollapsibleContent>
+                        <div className="px-3 md:px-6 pb-3 md:pb-6 -mt-2">
+                          <div className="pt-3 md:pt-6 border-t border-gray-200 bg-white rounded-lg md:rounded-xl p-3 md:p-6 ml-8 md:ml-16 shadow-sm">
+                            <div className="text-gray-700 leading-relaxed text-sm md:text-lg">
+                              {faq.answer.includes("•") ? (
+                                <div className="space-y-1 md:space-y-2">
+                                  {faq.answer
+                                    .split("\n")
+                                    .map((point, pointIndex) => (
+                                      <div
+                                        key={pointIndex}
+                                        className="flex items-start space-x-2"
+                                      >
+                                        {point.startsWith("•") ? (
+                                          <>
+                                            <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
+                                              ���
+                                            </span>
+                                            <span className="text-sm md:text-base">
+                                              {point.substring(1).trim()}
+                                            </span>
+                                          </>
+                                        ) : (
+                                          <span className="text-sm md:text-base">
+                                            {point}
+                                          </span>
+                                        )}
+                                      </div>
+                                    ))}
+                                </div>
+                              ) : (
+                                <p className="text-sm md:text-base">
+                                  {faq.answer}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  </div>
+                ))}
             </div>
 
-            {/* CTA Section */}
-            <div className="text-center mt-16">
-              <div className="bg-[#22336a] rounded-3xl p-10 shadow-2xl relative overflow-hidden">
+            {/* Know More Button */}
+            {!showMoreFAQs && (
+              <div className="text-center mt-6 md:mt-8">
+                <button
+                  onClick={() => setShowMoreFAQs(true)}
+                  className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base"
+                >
+                  <span>Know More</span>
+                  <ChevronDown className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                </button>
+              </div>
+            )}
+
+            {/* Show Less Button */}
+            {showMoreFAQs && (
+              <div className="text-center mt-6 md:mt-8">
+                <button
+                  onClick={() => setShowMoreFAQs(false)}
+                  className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base"
+                >
+                  <span>Show Less</span>
+                  <ChevronDown className="ml-2 h-4 w-4 md:h-5 md:w-5 rotate-180" />
+                </button>
+              </div>
+            )}
+
+            {/* CTA Section - Mobile Optimized */}
+            <div className="text-center mt-8 md:mt-16">
+              <div className="bg-[#22336a] rounded-lg md:rounded-3xl p-4 md:p-10 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
 
                 <div className="relative z-10">
-                  <h3 className="text-3xl font-bold text-white mb-4">
+                  <h3 className="text-lg md:text-3xl font-bold text-white mb-2 md:mb-4">
                     Still Have Questions?
                   </h3>
-                  <p className="text-gray-300 mb-8 text-lg">
+                  <p className="text-gray-300 mb-4 md:mb-8 text-sm md:text-lg">
                     Our expert counselors are here to guide you through your
                     educational journey
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex flex-col sm:flex-row gap-2 md:gap-4 justify-center">
                     <a
                       href="tel:+917065303030"
-                      className="inline-flex items-center px-8 py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                      className="inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-white text-[#22336a] font-bold rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm md:text-base"
                     >
-                      <Phone className="h-5 w-5 mr-2" />
+                      <Phone className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2" />
                       Call Us Now
                     </a>
                     <a
                       href="https://sunstone.in/apply-now"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                      className="inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm md:text-base"
                     >
-                      <ExternalLink className="h-5 w-5 mr-2" />
+                      <ExternalLink className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2" />
                       Apply Now
                     </a>
                   </div>
@@ -2490,29 +3024,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Simple Footer */}
+      {/* Simple Footer - Extra Small Mobile */}
       <footer className="bg-[#22336a] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-1 sm:px-4 md:px-6 lg:px-8 py-1 sm:py-4 md:py-6 lg:py-8 xl:py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-4 md:gap-6 lg:gap-8">
             {/* About */}
-            <div className="md:col-span-2">
-              <h3 className="text-xl font-bold text-white mb-4">
+            <div className="sm:col-span-2 lg:col-span-2">
+              <h3 className="text-xs md:text-lg lg:text-xl font-bold text-white mb-0.5 md:mb-3 lg:mb-4">
                 Sunstone Education
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-md">
-                Hi-Tech Institute of Engineering & Technology, powered by
-                Sunstone. Transforming careers through quality education and
+              <p className="text-gray-300 text-xs leading-tight mb-1 md:mb-4 lg:mb-6 max-w-md">
+                Hi-Tech Institute powered by Sunstone. Quality education and
                 industry partnerships.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-1 md:space-x-3 lg:space-x-4">
                 <a
                   href="https://www.facebook.com/sunstoneedu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-[#1877F2] hover:bg-[#1655C4] rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#1877F2] hover:bg-[#1655C4] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-2 h-2 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2523,10 +3056,10 @@ const Index = () => {
                   href="https://in.linkedin.com/school/sunstone-/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-[#0A66C2] hover:bg-[#084C8C] rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#0A66C2] hover:bg-[#084C8C] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-2 h-2 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2537,10 +3070,10 @@ const Index = () => {
                   href="https://www.youtube.com/@SunstoneIND"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-[#FF0000] hover:bg-[#CC0000] rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#FF0000] hover:bg-[#CC0000] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-2 h-2 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2551,10 +3084,10 @@ const Index = () => {
                   href="https://www.instagram.com/sunstone.in/?hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#6B2A94] hover:via-[#DC1515] hover:to-[#E5642A] rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#6B2A94] hover:via-[#DC1515] hover:to-[#E5642A] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-2 h-2 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2566,8 +3099,10 @@ const Index = () => {
 
             {/* Programs */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-4">Programs</h3>
-              <ul className="space-y-2 text-sm">
+              <h3 className="text-xs md:text-base lg:text-lg font-bold text-white mb-0.5 md:mb-3 lg:mb-4">
+                Programs
+              </h3>
+              <ul className="space-y-0.5 md:space-y-2 text-xs md:text-sm">
                 <li>
                   <a
                     href="#"
@@ -2613,51 +3148,53 @@ const Index = () => {
 
             {/* Contact */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-4">Contact</h3>
-              <div className="space-y-3 text-sm">
+              <h3 className="text-xs md:text-base lg:text-lg font-bold text-white mb-0.5 md:mb-3 lg:mb-4">
+                Contact
+              </h3>
+              <div className="space-y-0.5 md:space-y-3 text-xs md:text-sm">
                 <a
                   href="mailto:connect@sunstone.in"
                   className="flex items-center text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                 >
-                  <Mail className="h-4 w-4 mr-2" />
+                  <Mail className="h-2 w-2 md:h-4 md:w-4 mr-1 md:mr-2" />
                   connect@sunstone.in
                 </a>
                 <a
                   href="tel:+917065303030"
                   className="flex items-center text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                 >
-                  <Phone className="h-4 w-4 mr-2" />
+                  <Phone className="h-2 w-2 md:h-4 md:w-4 mr-1 md:mr-2" />
                   +91 7065-30-30-30
                 </a>
                 <a
                   href="https://sunstone.in/apply-now"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-[#c38935] hover:bg-[#d4a853] text-white text-sm font-semibold rounded-lg transition-colors duration-300 mt-4"
+                  className="inline-flex items-center px-1 md:px-4 py-0.5 md:py-2 bg-[#c38935] hover:bg-[#d4a853] text-white text-xs md:text-sm font-semibold rounded-lg transition-colors duration-300 mt-1 md:mt-4"
                 >
                   Apply Now
-                  <ExternalLink className="ml-2 h-4 w-4" />
+                  <ExternalLink className="ml-0.5 md:ml-2 h-2 w-2 md:h-4 md:w-4" />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Bottom */}
-          <div className="border-t border-white/20 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 sm:mb-0">
+          <div className="border-t border-white/20 mt-1 md:mt-8 pt-1 md:pt-6 flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-gray-400 text-xs md:text-sm mb-1 sm:mb-0">
               © 2025 Sunstone Education. All rights reserved.
             </p>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-1 md:space-x-4">
               <a
                 href="#"
-                className="text-gray-400 hover:text-[#c38935] text-sm transition-colors duration-300"
+                className="text-gray-400 hover:text-[#c38935] text-xs md:text-sm transition-colors duration-300"
               >
                 Privacy Policy
               </a>
               <span className="text-gray-600">•</span>
               <a
                 href="#"
-                className="text-gray-400 hover:text-[#c38935] text-sm transition-colors duration-300"
+                className="text-gray-400 hover:text-[#c38935] text-xs md:text-sm transition-colors duration-300"
               >
                 Terms
               </a>
@@ -2666,7 +3203,7 @@ const Index = () => {
                 href="https://sunstone.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#c38935] text-sm transition-colors duration-300"
+                className="text-gray-400 hover:text-[#c38935] text-xs md:text-sm transition-colors duration-300"
               >
                 sunstone.in
               </a>
