@@ -1971,7 +1971,7 @@ const Index = () => {
             <div className="relative z-10">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold mb-4">
-                  <h3 style="text-align: center;">
+                  <h3 style={{textAlign: "center"}}>
                     <strong>Career-Focused Learning Outcomes</strong>
                   </h3>
                   <p>
