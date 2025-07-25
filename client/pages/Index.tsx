@@ -2260,8 +2260,155 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Enhanced Testimonials Grid */}
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+          {/* Mobile Carousel for Testimonials */}
+          <div className="block md:hidden mb-8">
+            <div className="overflow-hidden">
+              <div className="flex space-x-4 animate-scroll-right-to-left">
+                {[
+                  {
+                    name: "Rahul Kumar",
+                    role: "MBA Graduate • Software Engineer",
+                    company: "TCS",
+                    initials: "RK",
+                    quote: "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
+                    color: "from-[#c38935] to-[#f4d03f]"
+                  },
+                  {
+                    name: "Priya Sharma",
+                    role: "BCA Graduate • Full Stack Developer",
+                    company: "Infosys",
+                    initials: "PS",
+                    quote: "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
+                    color: "from-[#22336a] to-[#3b4d7a]"
+                  },
+                  {
+                    name: "Amit Joshi",
+                    role: "B.Tech Graduate • Senior Developer",
+                    company: "Wipro",
+                    initials: "AJ",
+                    quote: "The advanced certifications and project-based learning methodology prepared me perfectly for the industry demands.",
+                    color: "from-[#c38935] to-[#f4d03f]"
+                  }
+                ].map((testimonial, index) => (
+                  <div key={index} className="flex-shrink-0 w-72 group relative">
+                    <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4">
+                      {/* Avatar and Info */}
+                      <div className="flex items-center mb-4">
+                        <div className="relative">
+                          <div className={`w-12 h-12 bg-gradient-to-br ${testimonial.color} rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300`}>
+                            <span className="text-white font-bold text-sm">{testimonial.initials}</span>
+                          </div>
+                          <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                            <span className="text-white text-xs">✓</span>
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-[#22336a] text-sm group-hover:text-[#c38935] transition-colors duration-300">
+                            {testimonial.name}
+                          </h4>
+                          <p className="text-xs text-gray-600">
+                            {testimonial.role}
+                          </p>
+                          <p className="text-xs text-[#c38935] font-semibold">
+                            {testimonial.company}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Rating */}
+                      <div className="flex mb-3 space-x-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-4 w-4 text-yellow-400 fill-current"
+                          />
+                        ))}
+                      </div>
+
+                      {/* Quote */}
+                      <div className="relative">
+                        <span className="text-3xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
+                          "
+                        </span>
+                        <p className="text-gray-700 text-xs italic leading-relaxed pl-4">
+                          {testimonial.quote}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                {/* Duplicate for seamless loop */}
+                {[
+                  {
+                    name: "Rahul Kumar",
+                    role: "MBA Graduate • Software Engineer",
+                    company: "TCS",
+                    initials: "RK",
+                    quote: "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
+                    color: "from-[#c38935] to-[#f4d03f]"
+                  },
+                  {
+                    name: "Priya Sharma",
+                    role: "BCA Graduate • Full Stack Developer",
+                    company: "Infosys",
+                    initials: "PS",
+                    quote: "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
+                    color: "from-[#22336a] to-[#3b4d7a]"
+                  }
+                ].map((testimonial, index) => (
+                  <div key={`duplicate-${index}`} className="flex-shrink-0 w-72 group relative">
+                    <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4">
+                      {/* Avatar and Info */}
+                      <div className="flex items-center mb-4">
+                        <div className="relative">
+                          <div className={`w-12 h-12 bg-gradient-to-br ${testimonial.color} rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300`}>
+                            <span className="text-white font-bold text-sm">{testimonial.initials}</span>
+                          </div>
+                          <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                            <span className="text-white text-xs">✓</span>
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-[#22336a] text-sm group-hover:text-[#c38935] transition-colors duration-300">
+                            {testimonial.name}
+                          </h4>
+                          <p className="text-xs text-gray-600">
+                            {testimonial.role}
+                          </p>
+                          <p className="text-xs text-[#c38935] font-semibold">
+                            {testimonial.company}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Rating */}
+                      <div className="flex mb-3 space-x-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-4 w-4 text-yellow-400 fill-current"
+                          />
+                        ))}
+                      </div>
+
+                      {/* Quote */}
+                      <div className="relative">
+                        <span className="text-3xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
+                          "
+                        </span>
+                        <p className="text-gray-700 text-xs italic leading-relaxed pl-4">
+                          {testimonial.quote}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Testimonials Grid */}
+          <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
             {/* Testimonial 1 */}
             <div
               className="group relative animate-slide-up"
