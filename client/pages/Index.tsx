@@ -2847,7 +2847,7 @@ const Index = () => {
                   className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#1877F2] hover:bg-[#1655C4] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-4 h-4 md:w-5 md:h-5 text-white"
+                    className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2858,10 +2858,10 @@ const Index = () => {
                   href="https://in.linkedin.com/school/sunstone-/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 md:w-10 md:h-10 bg-[#0A66C2] hover:bg-[#084C8C] rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#0A66C2] hover:bg-[#084C8C] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-4 h-4 md:w-5 md:h-5 text-white"
+                    className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2872,10 +2872,10 @@ const Index = () => {
                   href="https://www.youtube.com/@SunstoneIND"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 md:w-10 md:h-10 bg-[#FF0000] hover:bg-[#CC0000] rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#FF0000] hover:bg-[#CC0000] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-4 h-4 md:w-5 md:h-5 text-white"
+                    className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2886,10 +2886,10 @@ const Index = () => {
                   href="https://www.instagram.com/sunstone.in/?hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#6B2A94] hover:via-[#DC1515] hover:to-[#E5642A] rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#6B2A94] hover:via-[#DC1515] hover:to-[#E5642A] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-4 h-4 md:w-5 md:h-5 text-white"
+                    className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
