@@ -45,6 +45,7 @@ const Index = () => {
   const [expandedMobileProgram, setExpandedMobileProgram] = useState<string | null>(null);
   const [mobileTabState, setMobileTabState] = useState<{[key: string]: 'specs' | 'eligibility'}>({});
   const [showMoreFAQs, setShowMoreFAQs] = useState(false);
+  const [selectedMobileProgram, setSelectedMobileProgram] = useState<string | null>(null);
 
   // Carousel images
   const carouselImages = [
