@@ -2914,8 +2914,8 @@ const Index = () => {
 
             {/* Programs */}
             <div>
-              <h3 className="text-sm md:text-base lg:text-lg font-bold text-white mb-2 md:mb-3 lg:mb-4">Programs</h3>
-              <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm">
+              <h3 className="text-xs md:text-base lg:text-lg font-bold text-white mb-1 md:mb-3 lg:mb-4">Programs</h3>
+              <ul className="space-y-1 md:space-y-2 text-xs md:text-sm">
                 <li>
                   <a
                     href="#"
@@ -2961,30 +2961,30 @@ const Index = () => {
 
             {/* Contact */}
             <div>
-              <h3 className="text-sm md:text-base lg:text-lg font-bold text-white mb-2 md:mb-3 lg:mb-4">Contact</h3>
-              <div className="space-y-2 md:space-y-3 text-xs md:text-sm">
+              <h3 className="text-xs md:text-base lg:text-lg font-bold text-white mb-1 md:mb-3 lg:mb-4">Contact</h3>
+              <div className="space-y-1 md:space-y-3 text-xs md:text-sm">
                 <a
                   href="mailto:connect@sunstone.in"
                   className="flex items-center text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                 >
-                  <Mail className="h-3 w-3 md:h-4 md:w-4 mr-1.5 md:mr-2" />
+                  <Mail className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2" />
                   connect@sunstone.in
                 </a>
                 <a
                   href="tel:+917065303030"
                   className="flex items-center text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                 >
-                  <Phone className="h-3 w-3 md:h-4 md:w-4 mr-1.5 md:mr-2" />
+                  <Phone className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2" />
                   +91 7065-30-30-30
                 </a>
                 <a
                   href="https://sunstone.in/apply-now"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-[#c38935] hover:bg-[#d4a853] text-white text-xs md:text-sm font-semibold rounded-lg transition-colors duration-300 mt-3 md:mt-4"
+                  className="inline-flex items-center px-2 md:px-4 py-1 md:py-2 bg-[#c38935] hover:bg-[#d4a853] text-white text-xs md:text-sm font-semibold rounded-lg transition-colors duration-300 mt-2 md:mt-4"
                 >
                   Apply Now
-                  <ExternalLink className="ml-1.5 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
+                  <ExternalLink className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
                 </a>
               </div>
             </div>
