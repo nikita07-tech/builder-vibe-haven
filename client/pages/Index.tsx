@@ -1606,81 +1606,80 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Easy Fee Payment Banner */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-lg border border-gray-200">
-              <span className="text-[#22336a] font-bold text-sm tracking-wide">
+      {/* Easy Fee Payment Banner - Mobile Optimized */}
+      <section className="py-6 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+          {/* Compact Header for Mobile */}
+          <div className="text-center mb-4 md:mb-16">
+            <div className="inline-flex items-center px-3 md:px-6 py-1.5 md:py-3 bg-white/80 backdrop-blur-sm rounded-full mb-3 md:mb-8 shadow-lg border border-gray-200">
+              <span className="text-[#22336a] font-bold text-xs md:text-sm tracking-wide">
                 🏦 EASY FEE PAYMENT
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-[#22336a] mb-6 leading-tight">
+            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight">
               TAKE CHARGE OF YOUR
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-yellow-400">
                 EDUCATION
               </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Make quality education affordable with our innovative EMI options,
-              scholarship programs, and smart financial assistance
+            <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Make quality education affordable with our innovative EMI options and scholarship programs
             </p>
           </div>
 
-          {/* Banner Card */}
+          {/* Compact Banner Card for Mobile */}
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-[#c38935] to-[#d4a853] rounded-2xl p-8 text-white relative overflow-hidden shadow-2xl">
+            <div className="bg-gradient-to-r from-[#c38935] to-[#d4a853] rounded-lg md:rounded-2xl p-4 md:p-8 text-white relative overflow-hidden shadow-2xl">
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
               <div className="relative z-10">
-                <div className="flex items-center mb-6">
-                  <div className="bg-white/20 px-4 py-2 rounded-full">
-                    <span className="text-white font-bold text-sm">
+                <div className="flex items-center mb-3 md:mb-6">
+                  <div className="bg-white/20 px-2 md:px-4 py-1 md:py-2 rounded-full">
+                    <span className="text-white font-bold text-xs md:text-sm">
                       EASY FEE PAYMENT
                     </span>
                   </div>
                 </div>
 
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                <h3 className="text-lg md:text-2xl lg:text-3xl font-bold mb-2 md:mb-4">
                   Take charge of your education
                 </h3>
-                <p className="text-lg opacity-90 mb-8 max-w-2xl">
+                <p className="text-sm md:text-lg opacity-90 mb-4 md:mb-8 max-w-2xl">
                   Pay smart by choosing Sunstone. Pay the college fee and a
                   nominal amount to unlock your dream job with Sunstone.
                 </p>
 
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center space-x-3 bg-white/20 rounded-xl p-4">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-[#c38935] text-sm">✓</span>
+                <div className="space-y-2 md:space-y-4 mb-4 md:mb-8">
+                  <div className="flex items-center space-x-2 md:space-x-3 bg-white/20 rounded-lg md:rounded-xl p-2 md:p-4">
+                    <div className="w-4 h-4 md:w-6 md:h-6 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-[#c38935] text-xs md:text-sm">✓</span>
                     </div>
-                    <span className="text-white font-medium">
+                    <span className="text-white font-medium text-sm md:text-base">
                       0-Cost EMI available
                     </span>
                   </div>
-                  <div className="flex items-center space-x-3 bg-white/20 rounded-xl p-4">
-                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-[#c38935] text-sm">✓</span>
+                  <div className="flex items-center space-x-2 md:space-x-3 bg-white/20 rounded-lg md:rounded-xl p-2 md:p-4">
+                    <div className="w-4 h-4 md:w-6 md:h-6 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-[#c38935] text-xs md:text-sm">✓</span>
                     </div>
-                    <span className="text-white font-medium">
+                    <span className="text-white font-medium text-sm md:text-base">
                       Up to 100% scholarship available
                     </span>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
                   <a
                     href="https://sunstone.in/apply-now"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-6 py-3 bg-white text-[#22336a] hover:bg-gray-100 font-bold rounded-lg transition-all duration-300 shadow-lg"
+                    className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-white text-[#22336a] hover:bg-gray-100 font-bold rounded-lg transition-all duration-300 shadow-lg text-sm md:text-base"
                   >
                     <span>Apply Now →</span>
                   </a>
                 </div>
 
-                <p className="text-xs text-white/70 mt-6">
+                <p className="text-xs text-white/70 mt-3 md:mt-6">
                   *Terms & conditions apply
                 </p>
               </div>
