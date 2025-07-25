@@ -757,10 +757,10 @@ const Index = () => {
                       <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
                         <Trophy className="h-3 w-3 text-white" />
                       </div>
-                      <h3 className="text-sm font-bold text-[#22336a] mb-1 text-center">
+                      <h3 className="text-xs font-bold text-[#22336a] mb-1 text-center">
                         {award.title}
                       </h3>
-                      <p className="text-gray-600 text-xs text-center">
+                      <p className="text-gray-600 text-[10px] text-center">
                         {award.desc}
                       </p>
                     </div>
