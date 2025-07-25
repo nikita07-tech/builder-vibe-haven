@@ -1837,16 +1837,79 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Awards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
-            {/* ASSOCHAM Award */}
-            <div
-              className="group relative animate-fade-in"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-300">
-                <div className="relative mb-6">
-                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
+          {/* Awards Horizontal Scrolling */}
+          <div className="relative overflow-hidden bg-gray-50 rounded-xl py-8 mb-16">
+            <div className="flex space-x-8 animate-scroll">
+              {/* New Award 1 */}
+              <div className="flex-shrink-0 w-80">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F634b6859a0a5475897251bed28fb9a48?format=webp&width=800"
+                      alt="Education Award"
+                      className="w-full h-full object-contain p-4"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <Trophy className="h-4 w-4 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                    Excellence in Education
+                  </h3>
+                  <p className="text-gray-600 text-sm text-center">
+                    Recognized for outstanding educational services
+                  </p>
+                </div>
+              </div>
+
+              {/* New Award 2 */}
+              <div className="flex-shrink-0 w-80">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F21c4bdaba70546e89b1432a5a71417d5?format=webp&width=800"
+                      alt="Innovation Award"
+                      className="w-full h-full object-contain p-4"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <Trophy className="h-4 w-4 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                    Innovation Excellence
+                  </h3>
+                  <p className="text-gray-600 text-sm text-center">
+                    Leading innovation in educational technology
+                  </p>
+                </div>
+              </div>
+
+              {/* New Award 3 */}
+              <div className="flex-shrink-0 w-80">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2Ffb516054d41948ecafc7dad3868c1bea?format=webp&width=800"
+                      alt="Quality Award"
+                      className="w-full h-full object-contain p-4"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <Trophy className="h-4 w-4 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                    Quality Assurance
+                  </h3>
+                  <p className="text-gray-600 text-sm text-center">
+                    Commitment to quality education standards
+                  </p>
+                </div>
+              </div>
+
+              {/* ASSOCHAM Award */}
+              <div className="flex-shrink-0 w-80">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F8a91f11dc8e04d358b985214fbcb8d95?format=webp&width=800"
                       alt="ASSOCHAM India Award"
@@ -1856,24 +1919,19 @@ const Index = () => {
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
                     <Trophy className="h-4 w-4 text-white" />
                   </div>
+                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                    ASSOCHAM India
+                  </h3>
+                  <p className="text-gray-600 text-sm text-center">
+                    Excellence in Educational Innovation
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
-                  ASSOCHAM India
-                </h3>
-                <p className="text-gray-600 text-sm text-center leading-relaxed">
-                  Excellence in Educational Innovation
-                </p>
               </div>
-            </div>
 
-            {/* IndiGlobal Award */}
-            <div
-              className="group relative animate-fade-in"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-300">
-                <div className="relative mb-6">
-                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
+              {/* IndiGlobal Award */}
+              <div className="flex-shrink-0 w-80">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800"
                       alt="IndiGlobal Education Award"
@@ -1883,24 +1941,19 @@ const Index = () => {
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
                     <Star className="h-4 w-4 text-white" />
                   </div>
+                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                    IndiGlobal Education
+                  </h3>
+                  <p className="text-gray-600 text-sm text-center">
+                    Outstanding Academic Excellence
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#22336a] transition-colors duration-300">
-                  IndiGlobal Education
-                </h3>
-                <p className="text-gray-600 text-sm text-center leading-relaxed">
-                  Outstanding Academic Excellence
-                </p>
               </div>
-            </div>
 
-            {/* HolonIQ EdTech 100 */}
-            <div
-              className="group relative animate-fade-in"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-300">
-                <div className="relative mb-6">
-                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
+              {/* HolonIQ EdTech 100 */}
+              <div className="flex-shrink-0 w-80">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fc50132f6b1ef47a481e34f16b5b1f8fa?format=webp&width=800"
                       alt="HolonIQ South Asia EdTech 100"
@@ -1910,67 +1963,13 @@ const Index = () => {
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
                     <Award className="h-4 w-4 text-white" />
                   </div>
+                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                    HolonIQ EdTech 100
+                  </h3>
+                  <p className="text-gray-600 text-sm text-center">
+                    Top EdTech Company 2022
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
-                  HolonIQ EdTech 100
-                </h3>
-                <p className="text-gray-600 text-sm text-center leading-relaxed">
-                  Top EdTech Company 2022
-                </p>
-              </div>
-            </div>
-
-            {/* GSV 150 Award */}
-            <div
-              className="group relative animate-fade-in"
-              style={{ animationDelay: "0.4s" }}
-            >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-300">
-                <div className="relative mb-6">
-                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fbdbe9f2d629c4922b6d938266a01067d?format=webp&width=800"
-                      alt="GSV 150 Global Digital Learning"
-                      className="w-full h-full object-contain p-4"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
-                    <Zap className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#22336a] transition-colors duration-300">
-                  GSV 150
-                </h3>
-                <p className="text-gray-600 text-sm text-center leading-relaxed">
-                  Global Digital Learning Leader
-                </p>
-              </div>
-            </div>
-
-            {/* Education Innovation Summit Award */}
-            <div
-              className="group relative animate-fade-in"
-              style={{ animationDelay: "0.5s" }}
-            >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-300">
-                <div className="relative mb-6">
-                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F9a5d04f143714c30b0905a3a9d2c3b0f?format=webp&width=800"
-                      alt="Education Innovation Summit Award"
-                      className="w-full h-full object-contain p-4"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center">
-                    <Star className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
-                  Education Innovation
-                </h3>
-                <p className="text-gray-600 text-sm text-center leading-relaxed">
-                  Summit & Awards 2023
-                </p>
               </div>
             </div>
           </div>
