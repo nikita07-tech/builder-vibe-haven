@@ -1082,8 +1082,10 @@ const Index = () => {
                   Expert Sessions
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Sessions by industry experts and leading faculty from Fortune
-                  500 companies
+                  <p>
+                    Session by industry experts and leading faculty from
+                    Fortune 500 companies
+                  </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
