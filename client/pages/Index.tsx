@@ -51,7 +51,7 @@ const Index = () => {
   const [showMoreFAQs, setShowMoreFAQs] = useState(false);
   const [selectedMobileProgram, setSelectedMobileProgram] = useState<
     string | null
-  >(null);
+  >("MBA");
   const [showAllCertifications, setShowAllCertifications] = useState<{
     [key: string]: boolean;
   }>({});
