@@ -201,6 +201,14 @@
     animation: countUp 1s ease-out;
   }
 
+  .animate-scroll-right-to-left {
+    animation: scrollRightToLeft 30s linear infinite;
+  }
+
+  .animate-scroll-left-to-right {
+    animation: scrollLeftToRight 30s linear infinite;
+  }
+
   /* Hover effects */
   .hover-lift {
     transition:
@@ -358,5 +366,23 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes scrollRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollLeftToRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

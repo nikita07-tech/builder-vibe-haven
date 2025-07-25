@@ -41,6 +41,7 @@ const Index = () => {
   const [showPlacementPopup, setShowPlacementPopup] = useState(false);
   const [activeTab, setActiveTab] = useState("MBA");
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [clickedRecruiters, setClickedRecruiters] = useState<string[]>([]);
 
   // Carousel images
   const carouselImages = [
@@ -73,6 +74,14 @@ const Index = () => {
   const prevSlide = () => {
     setCurrentSlide(
       (prev) => (prev - 1 + carouselImages.length) % carouselImages.length,
+    );
+  };
+
+  const handleRecruiterClick = (recruiterName: string) => {
+    setClickedRecruiters((prev) =>
+      prev.includes(recruiterName)
+        ? prev.filter((name) => name !== recruiterName)
+        : [...prev, recruiterName],
     );
   };
 
@@ -899,7 +908,7 @@ const Index = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-3">
-                      Placement Opportunities
+                      <p>200 +Placement Opportunities</p>
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
                       <p>
@@ -946,77 +955,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-
-            {/* Right Side - Program Benefits */}
-            <div className="bg-white rounded-2xl p-10 shadow-xl border border-gray-200">
-              <h3 className="text-3xl font-bold text-[#22336a] mb-8 text-center">
-                Program Benefits
-              </h3>
-
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                  <div className="w-10 h-10 bg-[#22336a] rounded-lg flex items-center justify-center">
-                    <Target className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">
-                      Guaranteed Interviews
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      Interview opportunities with top companies
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                  <div className="w-10 h-10 bg-[#c38935] rounded-lg flex items-center justify-center">
-                    <BookOpen className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">
-                      Skills Development
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      70+ training sessions by industry experts
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                  <div className="w-10 h-10 bg-[#22336a] rounded-lg flex items-center justify-center">
-                    <Award className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">
-                      Professional Portfolio
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      Build impressive portfolio with real projects
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                  <div className="w-10 h-10 bg-[#c38935] rounded-lg flex items-center justify-center">
-                    <Briefcase className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">
-                      Industry Network
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      Access to extensive professional network
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8 p-4 bg-[#22336a]/5 rounded-xl">
-                <p className="text-sm text-gray-600 text-center font-medium">
-                  Trusted by 1000+ students
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Professional CTA */}
@@ -1032,12 +970,24 @@ const Index = () => {
                     Join our placement guarantee program and take the first step
                     towards career success
                   </p>
-                  <button
-                    onClick={() => setShowPlacementPopup(true)}
-                    className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-                  >
-                    <ChevronRight className="h-5 w-5" />
-                  </button>
+                  <div className="flex gap-4 justify-center">
+                    <button
+                      onClick={() => setShowPlacementPopup(true)}
+                      className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    >
+                      <span>Learn More</span>
+                      <ChevronRight className="h-5 w-5 ml-2" />
+                    </button>
+                    <a
+                      href="https://sunstone.in/apply-now"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-8 py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                    >
+                      <span>Apply Now</span>
+                      <ExternalLink className="h-5 w-5 ml-2" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1046,10 +996,9 @@ const Index = () => {
           {/* Terms */}
           <div className="text-center mt-8">
             <p className="text-sm text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              Terms and conditions apply. Placement guarantee is subject to
-              program completion, maintaining minimum academic standards, and
-              active participation in placement activities. Full terms available
-              upon request.
+              <p>
+                <br />
+              </p>
             </p>
           </div>
         </div>
@@ -1082,8 +1031,10 @@ const Index = () => {
                   Expert Sessions
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Sessions by industry experts and leading faculty from Fortune
-                  500 companies
+                  <p>
+                    Session by industry experts and leading faculty from Fortune
+                    500 companies
+                  </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1123,11 +1074,13 @@ const Index = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                  Placement Opportunity Program
+                  <p>POP</p>
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Access to 200+ guaranteed job opportunities with comprehensive
-                  placement support and career guidance from industry experts
+                  <p>
+                    Access to 200+ guaranteed job opportunities with
+                    comprehensive placement support{" "}
+                  </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1146,8 +1099,13 @@ const Index = () => {
                   Certifications
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  In-demand advanced certifications to choose from various
-                  domains
+                  <p>
+                    In-demand advanced certifications to choose from various
+                    domains and enhance your carrer prospects
+                  </p>
+                  <p>
+                    <br />
+                  </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1347,171 +1305,83 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Smart Investment Hub */}
+      {/* Easy Fee Payment Banner */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
-          <div
-            className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-3xl animate-pulse"
-            style={{ animationDelay: "2s" }}
-          ></div>
-          <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-[#c38935] rounded-full animate-ping opacity-40 -translate-x-1/2 -translate-y-1/2"></div>
-          <div
-            className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping opacity-30"
-            style={{ animationDelay: "1s" }}
-          ></div>
-        </div>
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Enhanced Header */}
+          {/* Header */}
           <div className="text-center mb-16">
-            <div className="relative mb-8">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-[#c38935]/20 to-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
-              <div className="relative inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-xl border border-white/50 hover:scale-105 transition-all duration-500">
-                <TrendingUp className="h-6 w-6 text-[#22336a] mr-3 animate-bounce" />
-                <span className="text-[#22336a] font-bold text-lg tracking-wide">
-                  SMART INVESTMENT HUB
-                </span>
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-[#c38935] to-yellow-400 rounded-full animate-ping"></div>
-              </div>
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
-              <span className="inline-block animate-slide-up">
-                Flexible Payment
+            <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-lg border border-gray-200">
+              <span className="text-[#22336a] font-bold text-sm tracking-wide">
+                🏦 EASY FEE PAYMENT
               </span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold text-[#22336a] mb-6 leading-tight">
+              TAKE CHARGE OF YOUR
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-yellow-400 to-[#c38935] animate-gradient-shift">
-                Solutions
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-yellow-400">
+                EDUCATION
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Make quality education affordable with our innovative EMI options,
-              scholarship programs, and smart financial planning
+              scholarship programs, and smart financial assistance
             </p>
           </div>
 
-          {/* Interactive Investment Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
-            {/* Enhanced EMI Card */}
-            <div className="group relative bg-white rounded-3xl p-6 lg:p-8 shadow-2xl border-2 border-gray-100 hover:border-[#c38935]/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-slide-up">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative">
-                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
-                  <svg
-                    className="h-8 w-8 lg:h-10 lg:w-10 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-[#22336a] mb-4 group-hover:text-[#c38935] transition-colors duration-300">
-                  0% Interest EMI
-                </h3>
-                <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
-                  Transform your education dreams into reality with zero-cost
-                  EMI plans designed for your convenience.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center p-3 bg-gray-50 rounded-xl group-hover:bg-[#c38935]/10 transition-colors duration-300">
-                    <div className="w-3 h-3 bg-[#c38935] rounded-full mr-3 animate-pulse"></div>
-                    <span className="text-sm font-medium text-gray-700">
-                      No hidden charges
-                    </span>
-                  </div>
-                  <div className="flex items-center p-3 bg-gray-50 rounded-xl group-hover:bg-[#c38935]/10 transition-colors duration-300">
-                    <div
-                      className="w-3 h-3 bg-[#c38935] rounded-full mr-3 animate-pulse"
-                      style={{ animationDelay: "0.2s" }}
-                    ></div>
-                    <span className="text-sm font-medium text-gray-700">
-                      Flexible terms up to 24 months
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Enhanced Scholarship Card */}
-            <div
-              className="group relative bg-white rounded-3xl p-6 lg:p-8 shadow-2xl border-2 border-gray-100 hover:border-blue-500/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-slide-up"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative">
-                <div className="w-16 h-16 lg:w-20 lg:h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
-                  <svg
-                    className="h-8 w-8 lg:h-10 lg:w-10 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-[#22336a] mb-4 group-hover:text-blue-600 transition-colors duration-300">
-                  Merit Scholarships
-                </h3>
-                <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
-                  Unlock up to 100% scholarship coverage based on your academic
-                  excellence and potential.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center p-3 bg-gray-50 rounded-xl group-hover:bg-blue-50 transition-colors duration-300">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
-                    <span className="text-sm font-medium text-gray-700">
-                      Merit-based selection
-                    </span>
-                  </div>
-                  <div className="flex items-center p-3 bg-gray-50 rounded-xl group-hover:bg-blue-50 transition-colors duration-300">
-                    <div
-                      className="w-3 h-3 bg-blue-500 rounded-full mr-3 animate-pulse"
-                      style={{ animationDelay: "0.2s" }}
-                    ></div>
-                    <span className="text-sm font-medium text-gray-700">
-                      Up to 100% fee coverage
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Enhanced CTA Section */}
-          <div className="text-center">
-            <div className="relative bg-gradient-to-r from-white via-gray-50 to-white rounded-3xl p-8 lg:p-12 shadow-2xl border-2 border-gray-200 hover:shadow-3xl transition-all duration-500 hover:scale-105 overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full -translate-y-16 translate-x-16 animate-float"></div>
-
+          {/* Banner Card */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-[#c38935] to-[#d4a853] rounded-2xl p-8 text-white relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
               <div className="relative z-10">
-                <h3 className="text-2xl lg:text-3xl font-bold text-[#22336a] mb-6">
-                  Ready to{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-yellow-400">
-                    Transform
-                  </span>{" "}
-                  Your Future?
+                <div className="flex items-center mb-6">
+                  <div className="bg-white/20 px-4 py-2 rounded-full">
+                    <span className="text-white font-bold text-sm">
+                      EASY FEE PAYMENT
+                    </span>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                  Take charge of your education
                 </h3>
-                <p className="text-lg lg:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-                  Join thousands of successful students who secured their dream
-                  careers with our smart investment solutions
+                <p className="text-lg opacity-90 mb-8 max-w-2xl">
+                  Pay smart by choosing Sunstone. Pay the college fee and a
+                  nominal amount to unlock your dream job with Sunstone.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center">
-                  <a
-                    href="tel:+917065303030"
-                    className="group inline-flex items-center px-6 lg:px-8 py-3 lg:py-4 bg-white border-2 border-[#22336a] text-[#22336a] font-bold rounded-xl hover:bg-[#22336a] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-                  >
-                    <Phone className="h-4 w-4 lg:h-5 lg:w-5 mr-2 lg:mr-3 group-hover:animate-bounce" />
-                    <span>Talk to Expert</span>
-                  </a>
+
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center space-x-3 bg-white/20 rounded-xl p-4">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-[#c38935] text-sm">✓</span>
+                    </div>
+                    <span className="text-white font-medium">
+                      0-Cost EMI available
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3 bg-white/20 rounded-xl p-4">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-[#c38935] text-sm">✓</span>
+                    </div>
+                    <span className="text-white font-medium">
+                      Up to 100% scholarship available
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
                   <a
                     href="https://sunstone.in/apply-now"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative inline-flex items-center px-6 lg:px-8 py-3 lg:py-4 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white font-bold rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 overflow-hidden"
+                    className="inline-flex items-center px-6 py-3 bg-white text-[#22336a] hover:bg-gray-100 font-bold rounded-lg transition-all duration-300 shadow-lg"
                   >
-                    <ExternalLink className="h-4 w-4 lg:h-5 lg:w-5 mr-2 lg:mr-3 group-hover:animate-bounce" />
-                    <span>Calculate Investment</span>
+                    <span>Apply Now →</span>
                   </a>
                 </div>
+
+                <p className="text-xs text-white/70 mt-6">
+                  *Terms & conditions apply
+                </p>
               </div>
             </div>
           </div>
@@ -1531,131 +1401,136 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Horizontal Scrolling Logos */}
-          <div className="relative overflow-hidden bg-gray-50 rounded-xl py-8 mb-12">
-            <div className="flex space-x-8 animate-scroll">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800"
-                alt="Bosch"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800"
-                alt="HCL"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800"
-                alt="TCS"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800"
-                alt="Paytm"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800"
-                alt="Microsoft"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800"
-                alt="Genpact"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800"
-                alt="Bajaj Finserv"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800"
-                alt="Airtel"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800"
-                alt="IBM"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800"
-                alt="Infosys"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800"
-                alt="Hero"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800"
-                alt="Axis Bank"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
+          {/* Two-line Animated Recruiters */}
+          <div className="space-y-8 mb-12">
+            {/* First line - Right to Left */}
+            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
+              <div className="flex space-x-12 animate-scroll-right-to-left whitespace-nowrap">
+                {[
+                  {
+                    name: "Bosch",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
+                  },
+                  {
+                    name: "HCL",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
+                  },
+                  {
+                    name: "TCS",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
+                  },
+                  {
+                    name: "Paytm",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
+                  },
+                  {
+                    name: "Microsoft",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800",
+                  },
+                  {
+                    name: "Genpact",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800",
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    name: "Bosch",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
+                  },
+                  {
+                    name: "HCL",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
+                  },
+                  {
+                    name: "TCS",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
+                  },
+                  {
+                    name: "Paytm",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
+                  },
+                ].map((recruiter, index) => (
+                  <button
+                    key={`${recruiter.name}-${index}`}
+                    onClick={() => handleRecruiterClick(recruiter.name)}
+                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
+                      clickedRecruiters.includes(recruiter.name)
+                        ? "filter-none"
+                        : "filter grayscale hover:filter-none"
+                    }`}
+                  >
+                    <img
+                      src={recruiter.src}
+                      alt={recruiter.name}
+                      className="h-16 w-auto"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
 
-              {/* Duplicate for seamless loop */}
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800"
-                alt="Bosch"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800"
-                alt="HCL"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800"
-                alt="TCS"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800"
-                alt="Paytm"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800"
-                alt="Microsoft"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800"
-                alt="Genpact"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800"
-                alt="Bajaj Finserv"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800"
-                alt="Airtel"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800"
-                alt="IBM"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800"
-                alt="Infosys"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800"
-                alt="Hero"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800"
-                alt="Axis Bank"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
+            {/* Second line - Left to Right */}
+            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
+              <div className="flex space-x-12 animate-scroll-left-to-right whitespace-nowrap">
+                {[
+                  {
+                    name: "Bajaj Finserv",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
+                  },
+                  {
+                    name: "Airtel",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
+                  },
+                  {
+                    name: "IBM",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
+                  },
+                  {
+                    name: "Infosys",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
+                  },
+                  {
+                    name: "Hero",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800",
+                  },
+                  {
+                    name: "Axis Bank",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800",
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    name: "Bajaj Finserv",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
+                  },
+                  {
+                    name: "Airtel",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
+                  },
+                  {
+                    name: "IBM",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
+                  },
+                  {
+                    name: "Infosys",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
+                  },
+                ].map((recruiter, index) => (
+                  <button
+                    key={`${recruiter.name}-${index}`}
+                    onClick={() => handleRecruiterClick(recruiter.name)}
+                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
+                      clickedRecruiters.includes(recruiter.name)
+                        ? "filter-none"
+                        : "filter grayscale hover:filter-none"
+                    }`}
+                  >
+                    <img
+                      src={recruiter.src}
+                      alt={recruiter.name}
+                      className="h-16 w-auto"
+                    />
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -1955,16 +1830,79 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Awards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
-            {/* ASSOCHAM Award */}
-            <div
-              className="group relative animate-fade-in"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-300">
-                <div className="relative mb-6">
-                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
+          {/* Awards Horizontal Scrolling */}
+          <div className="relative overflow-hidden bg-gray-50 rounded-xl py-8 mb-16">
+            <div className="flex space-x-8 animate-scroll">
+              {/* New Award 1 */}
+              <div className="flex-shrink-0 w-80">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F634b6859a0a5475897251bed28fb9a48?format=webp&width=800"
+                      alt="Education Award"
+                      className="w-full h-full object-contain p-4"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <Trophy className="h-4 w-4 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                    Excellence in Education
+                  </h3>
+                  <p className="text-gray-600 text-sm text-center">
+                    Recognized for outstanding educational services
+                  </p>
+                </div>
+              </div>
+
+              {/* New Award 2 */}
+              <div className="flex-shrink-0 w-80">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F21c4bdaba70546e89b1432a5a71417d5?format=webp&width=800"
+                      alt="Innovation Award"
+                      className="w-full h-full object-contain p-4"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <Trophy className="h-4 w-4 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                    Innovation Excellence
+                  </h3>
+                  <p className="text-gray-600 text-sm text-center">
+                    Leading innovation in educational technology
+                  </p>
+                </div>
+              </div>
+
+              {/* New Award 3 */}
+              <div className="flex-shrink-0 w-80">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2Ffb516054d41948ecafc7dad3868c1bea?format=webp&width=800"
+                      alt="Quality Award"
+                      className="w-full h-full object-contain p-4"
+                    />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <Trophy className="h-4 w-4 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                    Quality Assurance
+                  </h3>
+                  <p className="text-gray-600 text-sm text-center">
+                    Commitment to quality education standards
+                  </p>
+                </div>
+              </div>
+
+              {/* ASSOCHAM Award */}
+              <div className="flex-shrink-0 w-80">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F8a91f11dc8e04d358b985214fbcb8d95?format=webp&width=800"
                       alt="ASSOCHAM India Award"
@@ -1974,24 +1912,19 @@ const Index = () => {
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
                     <Trophy className="h-4 w-4 text-white" />
                   </div>
+                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                    ASSOCHAM India
+                  </h3>
+                  <p className="text-gray-600 text-sm text-center">
+                    Excellence in Educational Innovation
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
-                  ASSOCHAM India
-                </h3>
-                <p className="text-gray-600 text-sm text-center leading-relaxed">
-                  Excellence in Educational Innovation
-                </p>
               </div>
-            </div>
 
-            {/* IndiGlobal Award */}
-            <div
-              className="group relative animate-fade-in"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-300">
-                <div className="relative mb-6">
-                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
+              {/* IndiGlobal Award */}
+              <div className="flex-shrink-0 w-80">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800"
                       alt="IndiGlobal Education Award"
@@ -2001,24 +1934,19 @@ const Index = () => {
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
                     <Star className="h-4 w-4 text-white" />
                   </div>
+                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                    IndiGlobal Education
+                  </h3>
+                  <p className="text-gray-600 text-sm text-center">
+                    Outstanding Academic Excellence
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#22336a] transition-colors duration-300">
-                  IndiGlobal Education
-                </h3>
-                <p className="text-gray-600 text-sm text-center leading-relaxed">
-                  Outstanding Academic Excellence
-                </p>
               </div>
-            </div>
 
-            {/* HolonIQ EdTech 100 */}
-            <div
-              className="group relative animate-fade-in"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-300">
-                <div className="relative mb-6">
-                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
+              {/* HolonIQ EdTech 100 */}
+              <div className="flex-shrink-0 w-80">
+                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fc50132f6b1ef47a481e34f16b5b1f8fa?format=webp&width=800"
                       alt="HolonIQ South Asia EdTech 100"
@@ -2028,67 +1956,13 @@ const Index = () => {
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
                     <Award className="h-4 w-4 text-white" />
                   </div>
+                  <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                    HolonIQ EdTech 100
+                  </h3>
+                  <p className="text-gray-600 text-sm text-center">
+                    Top EdTech Company 2022
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
-                  HolonIQ EdTech 100
-                </h3>
-                <p className="text-gray-600 text-sm text-center leading-relaxed">
-                  Top EdTech Company 2022
-                </p>
-              </div>
-            </div>
-
-            {/* GSV 150 Award */}
-            <div
-              className="group relative animate-fade-in"
-              style={{ animationDelay: "0.4s" }}
-            >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#22336a]/30 hover:shadow-2xl transition-all duration-300">
-                <div className="relative mb-6">
-                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fbdbe9f2d629c4922b6d938266a01067d?format=webp&width=800"
-                      alt="GSV 150 Global Digital Learning"
-                      className="w-full h-full object-contain p-4"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
-                    <Zap className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#22336a] transition-colors duration-300">
-                  GSV 150
-                </h3>
-                <p className="text-gray-600 text-sm text-center leading-relaxed">
-                  Global Digital Learning Leader
-                </p>
-              </div>
-            </div>
-
-            {/* Education Innovation Summit Award */}
-            <div
-              className="group relative animate-fade-in"
-              style={{ animationDelay: "0.5s" }}
-            >
-              <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-300">
-                <div className="relative mb-6">
-                  <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F9a5d04f143714c30b0905a3a9d2c3b0f?format=webp&width=800"
-                      alt="Education Innovation Summit Award"
-                      className="w-full h-full object-contain p-4"
-                    />
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center">
-                    <Star className="h-4 w-4 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center group-hover:text-[#c38935] transition-colors duration-300">
-                  Education Innovation
-                </h3>
-                <p className="text-gray-600 text-sm text-center leading-relaxed">
-                  Summit & Awards 2023
-                </p>
               </div>
             </div>
           </div>
@@ -2102,11 +1976,21 @@ const Index = () => {
             <div className="relative z-10">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold mb-4">
-                  Industry Recognition
+                  <h3 style={{ textAlign: "center" }}>
+                    <strong>Career-Focused Learning Outcomes</strong>
+                  </h3>
+                  <p>
+                    <br />
+                  </p>
                 </h3>
                 <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                  Our achievements reflect our commitment to transforming lives
-                  through quality education
+                  <p>
+                    <strong style={{ fontSize: "20px" }}>
+                      Our programs are designed to equip students with the right
+                      skills, certifications, and opportunities to succeed in
+                      today's job market.
+                    </strong>
+                  </p>
                 </p>
               </div>
 
@@ -2115,25 +1999,45 @@ const Index = () => {
                   <div className="text-4xl font-bold text-[#f4d03f] mb-2">
                     5+
                   </div>
-                  <p className="text-lg opacity-90">Major Awards</p>
+                  <p className="text-lg opacity-90">
+                    <p>Specialisations</p>
+                  </p>
                   <p className="text-sm opacity-70 mt-1">
-                    Industry Recognition
+                    <p>
+                      <strong style={{ fontSize: "14px" }}>
+                        Future-ready skills for tomorrow's careers
+                      </strong>
+                    </p>
                   </p>
                 </div>
                 <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="text-4xl font-bold text-[#f4d03f] mb-2">
-                    10,000+
+                    <p>20+</p>
                   </div>
-                  <p className="text-lg opacity-90">Students Impacted</p>
-                  <p className="text-sm opacity-70 mt-1">Lives Transformed</p>
+                  <p className="text-lg opacity-90">
+                    <p>Program domains</p>
+                  </p>
+                  <p className="text-sm opacity-70 mt-1">
+                    <p>
+                      <strong style={{ fontSize: "14px" }}>
+                        &nbsp;Spanning tech, management &amp; more
+                      </strong>
+                    </p>
+                  </p>
                 </div>
                 <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="text-4xl font-bold text-[#f4d03f] mb-2">
-                    100+
+                    <p>10+</p>
                   </div>
-                  <p className="text-lg opacity-90">Industry Partners</p>
+                  <p className="text-lg opacity-90">
+                    <p>Advanced Certifications</p>
+                  </p>
                   <p className="text-sm opacity-70 mt-1">
-                    Trust & Collaboration
+                    <p>
+                      <strong style={{ fontSize: "14px" }}>
+                        &nbsp;Aligned with industry needs
+                      </strong>
+                    </p>
                   </p>
                 </div>
               </div>
@@ -2523,7 +2427,7 @@ const Index = () => {
                                       {point.startsWith("•") ? (
                                         <>
                                           <span className="text-[#c38935] font-bold text-xl mt-0.5">
-                                            •
+                                            ���
                                           </span>
                                           <span>
                                             {point.substring(1).trim()}
