@@ -2839,12 +2839,12 @@ const Index = () => {
                 Sunstone. Transforming careers through quality education and
                 industry partnerships.
               </p>
-              <div className="flex space-x-3 md:space-x-4">
+              <div className="flex space-x-2 md:space-x-3 lg:space-x-4">
                 <a
                   href="https://www.facebook.com/sunstoneedu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 md:w-10 md:h-10 bg-[#1877F2] hover:bg-[#1655C4] rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#1877F2] hover:bg-[#1655C4] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
                     className="w-4 h-4 md:w-5 md:h-5 text-white"
