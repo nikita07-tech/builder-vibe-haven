@@ -459,7 +459,7 @@ const Index = () => {
                   PROFESSIONAL EXCELLENCE
                 </span>
               </div>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight text-white">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-3 md:mb-4 lg:mb-6 leading-tight text-white">
                 Transform Your Future with
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
                   {" "}
@@ -467,7 +467,7 @@ const Index = () => {
                 </span>
               </h1>
               <div className="mb-4 md:mb-6">
-                <p className="text-sm md:text-base lg:text-lg xl:text-xl text-white/90 leading-relaxed max-w-2xl mb-3 md:mb-4">
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white/90 leading-relaxed max-w-2xl mb-2 md:mb-3 lg:mb-4">
                   Join Hi-Tech Institute of Engineering & Technology for
                   industry-aligned programs in MBA, BBA, BCA, MCA & B.Tech with
                   guaranteed placement support.
@@ -485,21 +485,21 @@ const Index = () => {
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+              <div className="flex flex-col sm:flex-row gap-2 md:gap-3 lg:gap-4">
                 <a
                   href="https://sunstone.in/campuses/hi-tech-institute"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-sm md:text-base rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-xs sm:text-sm md:text-base rounded-md sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   <span>Explore Programs</span>
-                  <ExternalLink className="ml-1.5 md:ml-2 h-4 w-4 md:h-5 md:w-5" />
+                  <ExternalLink className="ml-1 sm:ml-1.5 md:ml-2 h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5" />
                 </a>
                 <a
                   href="tel:+917065303030"
-                  className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-transparent border-2 border-white text-white font-bold text-sm md:text-base rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center justify-center px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 bg-transparent border-2 border-white text-white font-bold text-xs sm:text-sm md:text-base rounded-md sm:rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
                 >
-                  <Phone className="mr-1.5 md:mr-2 h-4 w-4 md:h-5 md:w-5" />
+                  <Phone className="mr-1 sm:mr-1.5 md:mr-2 h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5" />
                   <span>Call Now</span>
                 </a>
               </div>
