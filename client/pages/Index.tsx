@@ -2021,67 +2021,65 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Mobile Carousel for Journey Steps */}
+          {/* Mobile Grid for Journey Steps - All Visible at Once */}
           <div className="block md:hidden mb-8">
-            <div className="overflow-hidden">
-              <div className="flex space-x-4 animate-scroll-right-to-left">
-                {[
-                  {
-                    step: "1",
-                    title: "Apply Online",
-                    desc: "Submit your application through our user-friendly online portal with guided steps",
-                    time: "5 minutes",
-                    color: "from-[#22336a] to-[#3b4d7a]",
-                    icon: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
-                  },
-                  {
-                    step: "2",
-                    title: "Assessment & Counseling",
-                    desc: "Personalized evaluation and expert guidance to find your perfect program match",
-                    time: "Expert Guidance",
-                    color: "from-[#c38935] to-[#d4a853]",
-                    icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                  },
-                  {
-                    step: "3",
-                    title: "Document Verification",
-                    desc: "Quick verification of your academic credentials and eligibility confirmation",
-                    time: "Secure Process",
-                    color: "from-[#22336a] to-[#3b4d7a]",
-                    icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z"
-                  },
-                  {
-                    step: "4",
-                    title: "Welcome Aboard!",
-                    desc: "Secure your seat and begin your transformational educational journey with us",
-                    time: "Success Begins",
-                    color: "from-[#c38935] to-[#d4a853]",
-                    icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                  }
-                ].map((item, index) => (
-                  <div key={index} className="flex-shrink-0 w-72 group relative">
-                    <div className="bg-white rounded-2xl p-4 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                      <div className="flex items-center mb-4">
-                        <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-3 relative`}>
-                          <span className="text-white font-bold text-lg">{item.step}</span>
-                          <div className="absolute -top-1 -right-1 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
-                            <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-                              <path d={item.icon} />
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-sm font-bold text-[#22336a] mb-1">{item.title}</h3>
-                          <div className="text-xs text-[#c38935] font-semibold">{item.time}</div>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                {
+                  step: "1",
+                  title: "Apply Online",
+                  desc: "Submit application online",
+                  time: "5 minutes",
+                  color: "from-[#22336a] to-[#3b4d7a]",
+                  icon: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+                },
+                {
+                  step: "2",
+                  title: "Assessment",
+                  desc: "Expert guidance & evaluation",
+                  time: "Expert Help",
+                  color: "from-[#c38935] to-[#d4a853]",
+                  icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                },
+                {
+                  step: "3",
+                  title: "Verification",
+                  desc: "Document verification",
+                  time: "Secure",
+                  color: "from-[#22336a] to-[#3b4d7a]",
+                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z"
+                },
+                {
+                  step: "4",
+                  title: "Welcome!",
+                  desc: "Begin your journey",
+                  time: "Success",
+                  color: "from-[#c38935] to-[#d4a853]",
+                  icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+                }
+              ].map((item, index) => (
+                <div key={index} className="group relative">
+                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div className="flex items-center mb-2">
+                      <div className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}>
+                        <span className="text-white font-bold text-sm">{item.step}</span>
+                        <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#c38935] rounded-full flex items-center justify-center">
+                          <svg className="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d={item.icon} />
+                          </svg>
                         </div>
                       </div>
-                      <p className="text-gray-600 text-xs leading-relaxed">
-                        {item.desc}
-                      </p>
+                      <div className="flex-1">
+                        <h3 className="text-xs font-bold text-[#22336a] mb-0.5">{item.title}</h3>
+                        <div className="text-xs text-[#c38935] font-semibold">{item.time}</div>
+                      </div>
                     </div>
+                    <p className="text-gray-600 text-xs leading-relaxed">
+                      {item.desc}
+                    </p>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -2676,7 +2674,7 @@ const Index = () => {
                 {
                   question: "Why should I choose Sunstone?",
                   answer:
-                    "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
+                    "• Training and development sessions by industry experts\n��� Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
                   category: "sunstone",
                 },
                 {
