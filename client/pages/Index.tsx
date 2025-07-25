@@ -2287,14 +2287,14 @@ const Index = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Enhanced Header */}
-          <div className="text-center mb-16 animate-slide-up">
-            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6 animate-fade-in">
-              <Star className="h-5 w-5 text-[#22336a] mr-2 animate-pulse" />
-              <span className="text-[#22336a] font-semibold">
+          <div className="text-center mb-8 md:mb-16 animate-slide-up">
+            <div className="inline-flex items-center px-3 md:px-6 py-2 md:py-3 bg-[#22336a]/10 rounded-full mb-3 md:mb-6 animate-fade-in">
+              <Star className="h-4 w-4 md:h-5 md:w-5 text-[#22336a] mr-1 md:mr-2 animate-pulse" />
+              <span className="text-[#22336a] font-semibold text-xs md:text-base">
                 STUDENT SUCCESS STORIES
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
+            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight">
               Success
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
                 {" "}
@@ -2306,7 +2306,7 @@ const Index = () => {
               </span>
             </h2>
             <p
-              className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in"
+              className="text-sm md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
               Discover how our programs have transformed careers and opened new
