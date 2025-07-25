@@ -908,7 +908,7 @@ const Index = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-3">
-                      Placement Opportunities
+                      <p>200 +Placement Opportunities</p>
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
                       <p>
