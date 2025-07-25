@@ -1150,8 +1150,13 @@ const Index = () => {
                   Certifications
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  In-demand advanced certifications to choose from various
-                  domains
+                  <p>
+                    In-demand advanced certifications to choose from various
+                    domains and enhance your carrer prospects
+                  </p>
+                  <p>
+                    <br />
+                  </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
