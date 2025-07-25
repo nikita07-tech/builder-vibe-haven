@@ -2174,11 +2174,17 @@ const Index = () => {
                 </div>
                 <div className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 group hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="text-4xl font-bold text-[#f4d03f] mb-2">
-                    100+
+                    <p>10+</p>
                   </div>
-                  <p className="text-lg opacity-90">Industry Partners</p>
+                  <p className="text-lg opacity-90">
+                    <p>Advanced Certifications</p>
+                  </p>
                   <p className="text-sm opacity-70 mt-1">
-                    Trust & Collaboration
+                    <p>
+                      <strong style="font-size: 14px;">
+                        &nbsp;Aligned with industry needs
+                      </strong>
+                    </p>
                   </p>
                 </div>
               </div>
