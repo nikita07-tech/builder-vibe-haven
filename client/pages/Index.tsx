@@ -1655,63 +1655,63 @@ const Index = () => {
                 }`}
               >
                 <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-                  {/* Header with Blue Gradient */}
+                  {/* Header with Blue Gradient - Mobile Responsive */}
                   <div
-                    className={`bg-gradient-to-r ${programData.color} p-8 text-white relative overflow-hidden`}
+                    className={`bg-gradient-to-r ${programData.color} p-4 md:p-6 lg:p-8 text-white relative overflow-hidden`}
                   >
-                    <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-20 translate-x-20"></div>
-                    <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full translate-y-16 -translate-x-16"></div>
+                    <div className="absolute top-0 right-0 w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-white/10 rounded-full -translate-y-10 translate-x-10 md:-translate-y-16 md:translate-x-16 lg:-translate-y-20 lg:translate-x-20"></div>
+                    <div className="absolute bottom-0 left-0 w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-white/10 rounded-full translate-y-8 -translate-x-8 md:translate-y-12 md:-translate-x-12 lg:translate-y-16 lg:-translate-x-16"></div>
 
                     <div className="relative z-10">
-                      <div className="flex items-center justify-center mb-6">
-                        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mr-4">
-                          <GraduationCap className="h-10 w-10 text-white" />
+                      <div className="flex flex-col md:flex-row items-center justify-center mb-4 md:mb-6">
+                        <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white/20 rounded-full flex items-center justify-center mb-3 md:mb-0 md:mr-4">
+                          <GraduationCap className="h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10 text-white" />
                         </div>
-                        <div>
-                          <h3 className="text-3xl font-bold">
+                        <div className="text-center md:text-left">
+                          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold">
                             {programName} Program
                           </h3>
-                          <p className="text-xl opacity-90">
+                          <p className="text-sm md:text-lg lg:text-xl opacity-90">
                             Excellence in Education
                           </p>
                         </div>
                       </div>
 
-                      {/* Program Stats */}
-                      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mt-8">
-                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
-                          <Clock className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">
+                      {/* Program Stats - Mobile Responsive */}
+                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-3 lg:gap-4 mt-4 md:mt-6 lg:mt-8">
+                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
+                          <Clock className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
+                          <div className="font-bold text-xs md:text-sm">
                             {programData.duration}
                           </div>
                           <div className="text-xs opacity-80">Duration</div>
                         </div>
-                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
-                          <Award className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">
+                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
+                          <Award className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
+                          <div className="font-bold text-xs md:text-sm">
                             {programData.certifications}
                           </div>
                           <div className="text-xs opacity-80">
                             Certifications
                           </div>
                         </div>
-                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
-                          <Briefcase className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">
+                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
+                          <Briefcase className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
+                          <div className="font-bold text-xs md:text-sm">
                             {programData.internships}
                           </div>
                           <div className="text-xs opacity-80">Experience</div>
                         </div>
-                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
-                          <Target className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">
+                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
+                          <Target className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
+                          <div className="font-bold text-xs md:text-sm">
                             {programData.projects}
                           </div>
                           <div className="text-xs opacity-80">Projects</div>
                         </div>
-                        <div className="text-center p-4 bg-white/20 rounded-xl backdrop-blur-sm">
-                          <Star className="h-6 w-6 mx-auto mb-2" />
-                          <div className="font-bold text-sm">
+                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm col-span-2 md:col-span-1">
+                          <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
+                          <div className="font-bold text-xs md:text-sm">
                             {programData.specializations}
                           </div>
                           <div className="text-xs opacity-80">
@@ -1722,8 +1722,8 @@ const Index = () => {
                     </div>
                   </div>
 
-                  {/* Content */}
-                  <div className="p-8">
+                  {/* Content - Mobile Responsive */}
+                  <div className="p-4 md:p-6 lg:p-8">
                     <div className="grid md:grid-cols-3 gap-8">
                       {/* Certifications */}
                       <div className="md:col-span-2">
