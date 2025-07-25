@@ -1418,7 +1418,7 @@ const Index = () => {
                 {Object.entries(programs).map(([programName, programData], index) => (
                   <div
                     key={programName}
-                    className="flex-shrink-0 w-80 group relative cursor-pointer"
+                    className="flex-shrink-0 w-64 group relative cursor-pointer"
                     onClick={() => setActiveTab(programName)}
                   >
                     <div className={`bg-white rounded-2xl p-4 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
