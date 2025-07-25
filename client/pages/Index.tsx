@@ -2452,25 +2452,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section - Updated with new questions */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      {/* FAQ Section - Mobile Optimized */}
+      <section className="py-8 md:py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 left-10 w-64 h-64 bg-[#22336a]/3 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#22336a]/3 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-3 md:mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            <p className="text-sm md:text-xl text-gray-700 max-w-3xl mx-auto">
               Find answers to commonly asked questions about our programs
             </p>
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="space-y-4">
+            <div className="space-y-2 md:space-y-4">
               {[
                 {
                   question: "Why should I choose Sunstone?",
