@@ -2827,7 +2827,7 @@ const Index = () => {
 
       {/* Simple Footer - Mobile Responsive */}
       <footer className="bg-[#22336a] text-white">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-12">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6 lg:py-8 xl:py-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {/* About */}
             <div className="sm:col-span-2 lg:col-span-2">
