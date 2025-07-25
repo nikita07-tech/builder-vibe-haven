@@ -956,76 +956,7 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Right Side - Program Benefits */}
-            <div className="bg-white rounded-2xl p-10 shadow-xl border border-gray-200">
-              <h3 className="text-3xl font-bold text-[#22336a] mb-8 text-center">
-                Program Benefits
-              </h3>
 
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                  <div className="w-10 h-10 bg-[#22336a] rounded-lg flex items-center justify-center">
-                    <Target className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">
-                      Guaranteed Interviews
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      Interview opportunities with top companies
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                  <div className="w-10 h-10 bg-[#c38935] rounded-lg flex items-center justify-center">
-                    <BookOpen className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">
-                      Skills Development
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      70+ training sessions by industry experts
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                  <div className="w-10 h-10 bg-[#22336a] rounded-lg flex items-center justify-center">
-                    <Award className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">
-                      Professional Portfolio
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      Build impressive portfolio with real projects
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
-                  <div className="w-10 h-10 bg-[#c38935] rounded-lg flex items-center justify-center">
-                    <Briefcase className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#22336a]">
-                      Industry Network
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      Access to extensive professional network
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8 p-4 bg-[#22336a]/5 rounded-xl">
-                <p className="text-sm text-gray-600 text-center font-medium">
-                  Trusted by 1000+ students
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Professional CTA */}
@@ -2434,7 +2365,7 @@ const Index = () => {
                                       {point.startsWith("•") ? (
                                         <>
                                           <span className="text-[#c38935] font-bold text-xl mt-0.5">
-                                            •
+                                            ���
                                           </span>
                                           <span>
                                             {point.substring(1).trim()}
