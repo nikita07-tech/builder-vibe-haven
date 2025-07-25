@@ -2838,21 +2838,21 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Simple Footer - Mobile Responsive */}
+      {/* Simple Footer - Extra Small Mobile */}
       <footer className="bg-[#22336a] text-white">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-3 sm:py-4 md:py-6 lg:py-8 xl:py-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-4 md:py-6 lg:py-8 xl:py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 md:gap-6 lg:gap-8">
             {/* About */}
             <div className="sm:col-span-2 lg:col-span-2">
-              <h3 className="text-sm md:text-lg lg:text-xl font-bold text-white mb-2 md:mb-3 lg:mb-4">
+              <h3 className="text-xs md:text-lg lg:text-xl font-bold text-white mb-1 md:mb-3 lg:mb-4">
                 Sunstone Education
               </h3>
-              <p className="text-gray-300 text-xs leading-relaxed mb-3 md:mb-4 lg:mb-6 max-w-md">
+              <p className="text-gray-300 text-xs leading-relaxed mb-2 md:mb-4 lg:mb-6 max-w-md">
                 Hi-Tech Institute of Engineering & Technology, powered by
                 Sunstone. Transforming careers through quality education and
                 industry partnerships.
               </p>
-              <div className="flex space-x-2 md:space-x-3 lg:space-x-4">
+              <div className="flex space-x-1 md:space-x-3 lg:space-x-4">
                 <a
                   href="https://www.facebook.com/sunstoneedu"
                   target="_blank"
