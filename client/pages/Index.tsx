@@ -581,14 +581,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Placement Highlights - Mobile Optimized */}
-      <section className="py-3 md:py-8 lg:py-12 bg-[#22336a]">
-        <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg md:rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
-            <div className="bg-[#c38935] text-white px-3 md:px-6 py-2 md:py-4">
+      {/* Placement Highlights - Extra Small Mobile */}
+      <section className="py-2 md:py-8 lg:py-12 bg-[#22336a]">
+        <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-md md:rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+            <div className="bg-[#c38935] text-white px-2 md:px-6 py-1.5 md:py-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-sm md:text-lg lg:text-xl font-bold">Placement Highlights</h3>
+                  <h3 className="text-xs md:text-lg lg:text-xl font-bold">Placement Highlights</h3>
                   <p className="text-xs md:text-sm opacity-90">
                     MBA | MCA | BBA | BCA | B.Tech
                   </p>
@@ -596,33 +596,33 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="p-2 md:p-4 lg:p-6">
-              {/* Mobile: Single column layout for key stats */}
-              <div className="grid grid-cols-3 sm:grid-cols-3 gap-2 md:gap-4 lg:gap-6 mb-3 md:mb-6">
+            <div className="p-1.5 md:p-4 lg:p-6">
+              {/* Mobile: Extra compact stats */}
+              <div className="grid grid-cols-3 sm:grid-cols-3 gap-1.5 md:gap-4 lg:gap-6 mb-2 md:mb-6">
                 <div className="text-center">
-                  <div className="text-lg md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
+                  <div className="text-sm md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
                     26 LPA
                   </div>
                   <p className="text-xs md:text-sm text-gray-600">Highest Package</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-lg md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
+                  <div className="text-sm md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
                     1200+
                   </div>
                   <p className="text-xs md:text-sm text-gray-600">Top Recruiters</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-lg md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
+                  <div className="text-sm md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
                     5000+
                   </div>
                   <p className="text-xs md:text-sm text-gray-600">Students Placed</p>
                 </div>
               </div>
 
-              {/* Mobile: Compact comparison cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 lg:gap-4 mb-2 md:mb-4">
-                <div className="bg-gray-50 rounded-md md:rounded-lg p-2 md:p-3 lg:p-4 flex items-center space-x-2 md:space-x-3">
-                  <div className="w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#c38935] rounded-full flex items-center justify-center">
+              {/* Mobile: Ultra compact comparison cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 md:gap-3 lg:gap-4 mb-1.5 md:mb-4">
+                <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
+                  <div className="w-4 h-4 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#c38935] rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-xs md:text-sm">63%</span>
                   </div>
                   <div>
@@ -632,8 +632,8 @@ const Index = () => {
                     <p className="text-xs text-gray-600">vs private colleges</p>
                   </div>
                 </div>
-                <div className="bg-gray-50 rounded-md md:rounded-lg p-2 md:p-3 lg:p-4 flex items-center space-x-2 md:space-x-3">
-                  <div className="w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#22336a] rounded-full flex items-center justify-center">
+                <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
+                  <div className="w-4 h-4 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#22336a] rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-xs md:text-sm">7X</span>
                   </div>
                   <div>
@@ -645,7 +645,7 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-md md:rounded-lg p-2 md:p-3 text-center">
+              <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 text-center">
                 <p className="text-xs md:text-sm text-gray-700">
                   Placement report audited by B2K Analytics
                 </p>
