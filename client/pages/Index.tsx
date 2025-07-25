@@ -51,7 +51,7 @@ const Index = () => {
   const [showMoreFAQs, setShowMoreFAQs] = useState(false);
   const [selectedMobileProgram, setSelectedMobileProgram] = useState<
     string | null
-  >(null);
+  >("MBA");
   const [showAllCertifications, setShowAllCertifications] = useState<{
     [key: string]: boolean;
   }>({});
@@ -428,13 +428,13 @@ const Index = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
                   alt="Hi-Tech Institute"
-                  className="h-2 sm:h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                  className="h-4 sm:h-8 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
                 />
-                <div className="h-3 sm:h-7 md:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
+                <div className="h-4 sm:h-8 md:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-2 sm:h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
+                  className="h-4 sm:h-8 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
                 />
               </div>
             </div>
@@ -757,10 +757,10 @@ const Index = () => {
                       <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
                         <Trophy className="h-3 w-3 text-white" />
                       </div>
-                      <h3 className="text-sm font-bold text-[#22336a] mb-1 text-center">
+                      <h3 className="text-xs font-bold text-[#22336a] mb-1 text-center">
                         {award.title}
                       </h3>
-                      <p className="text-gray-600 text-xs text-center">
+                      <p className="text-gray-600 text-[10px] text-center">
                         {award.desc}
                       </p>
                     </div>
@@ -1238,7 +1238,7 @@ const Index = () => {
           {/* Mobile Carousel */}
           <div className="block md:hidden mb-8">
             <div className="overflow-hidden">
-              <div className="flex space-x-4 animate-scroll-right-to-left">
+              <div className="flex space-x-4 animate-scroll-right-to-left-fast">
                 <div className="flex-shrink-0 w-72 group relative cursor-pointer">
                   <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                     <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -1434,13 +1434,11 @@ const Index = () => {
                   className="w-full p-3 border-2 border-[#22336a] rounded-lg text-[#22336a] font-medium focus:outline-none focus:ring-4 focus:ring-[#22336a]/20 focus:border-[#c38935] bg-white shadow-lg"
                 >
                   <option value="">Choose a program...</option>
-                  {Object.keys(programs)
-                    .filter((programName) => programName !== "MBA")
-                    .map((programName) => (
-                      <option key={programName} value={programName}>
-                        {programName} Program
-                      </option>
-                    ))}
+                  {Object.keys(programs).map((programName) => (
+                    <option key={programName} value={programName}>
+                      {programName} Program
+                    </option>
+                  ))}
                 </select>
 
                 {/* Helper text */}
@@ -1452,7 +1450,7 @@ const Index = () => {
             </div>
 
             {/* Selected Program Details */}
-            {selectedMobileProgram && selectedMobileProgram !== "MBA" && (
+            {selectedMobileProgram && (
               <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
                 {/* Program Header */}
                 <div
@@ -1632,7 +1630,19 @@ const Index = () => {
                   {/* Apply Button */}
                   <div className="mt-4">
                     <a
-                      href="https://sunstone.in/apply-now"
+                      href={
+                        selectedMobileProgram === "MBA"
+                          ? "https://sunstone.in/campuses/hi-tech-institute/mba"
+                          : selectedMobileProgram === "BBA"
+                            ? "https://sunstone.in/campuses/hi-tech-institute/bba"
+                            : selectedMobileProgram === "BCA"
+                              ? "https://sunstone.in/campuses/hi-tech-institute/bca"
+                              : selectedMobileProgram === "MCA"
+                                ? "https://sunstone.in/campuses/hi-tech-institute/mca"
+                                : selectedMobileProgram === "B.Tech"
+                                  ? "https://sunstone.in/campuses/hi-tech-institute/b-tech"
+                                  : "https://sunstone.in/apply-now"
+                      }
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r ${programs[selectedMobileProgram].color} text-white font-bold text-sm rounded-lg transition-all duration-300 transform hover:scale-105`}
@@ -1800,7 +1810,19 @@ const Index = () => {
 
                         <div className="mt-4 md:mt-6">
                           <a
-                            href="https://sunstone.in/apply-now"
+                            href={
+                              programName === "MBA"
+                                ? "https://sunstone.in/campuses/hi-tech-institute/mba"
+                                : programName === "BBA"
+                                  ? "https://sunstone.in/campuses/hi-tech-institute/bba"
+                                  : programName === "BCA"
+                                    ? "https://sunstone.in/campuses/hi-tech-institute/bca"
+                                    : programName === "MCA"
+                                      ? "https://sunstone.in/campuses/hi-tech-institute/mca"
+                                      : programName === "B.Tech"
+                                        ? "https://sunstone.in/campuses/hi-tech-institute/b-tech"
+                                        : "https://sunstone.in/apply-now"
+                            }
                             target="_blank"
                             rel="noopener noreferrer"
                             className={`w-full inline-flex items-center justify-center px-4 md:px-5 lg:px-6 py-3 md:py-3.5 lg:py-4 bg-gradient-to-r ${programData.color} text-white font-bold text-sm md:text-base rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
