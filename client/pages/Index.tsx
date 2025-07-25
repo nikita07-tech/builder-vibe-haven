@@ -1421,38 +1421,38 @@ const Index = () => {
                     className="flex-shrink-0 w-64 group relative cursor-pointer"
                     onClick={() => setActiveTab(programName)}
                   >
-                    <div className={`bg-white rounded-2xl p-4 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
+                    <div className={`bg-white rounded-xl p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 ${
                       activeTab === programName ? 'ring-2 ring-[#22336a] bg-[#22336a]/5' : ''
                     }`}>
-                      <div className={`w-full h-32 bg-gradient-to-r ${programData.color} rounded-xl p-4 text-white mb-4 relative overflow-hidden`}>
-                        <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-10 translate-x-10"></div>
+                      <div className={`w-full h-24 bg-gradient-to-r ${programData.color} rounded-lg p-3 text-white mb-3 relative overflow-hidden`}>
+                        <div className="absolute top-0 right-0 w-16 h-16 bg-white/10 rounded-full -translate-y-8 translate-x-8"></div>
                         <div className="relative z-10">
-                          <div className="flex items-center mb-2">
-                            <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-2">
-                              <GraduationCap className="h-5 w-5 text-white" />
+                          <div className="flex items-center mb-1">
+                            <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mr-2">
+                              <GraduationCap className="h-3 w-3 text-white" />
                             </div>
                             <div>
-                              <h3 className="text-lg font-bold">{programName}</h3>
+                              <h3 className="text-sm font-bold">{programName}</h3>
                               <p className="text-xs opacity-90">Program</p>
                             </div>
                           </div>
-                          <div className="grid grid-cols-2 gap-2 text-xs">
-                            <div className="bg-white/20 rounded-lg p-2 text-center">
-                              <div className="font-bold">{programData.duration.split(' ')[0]}</div>
-                              <div className="opacity-80">Duration</div>
+                          <div className="grid grid-cols-2 gap-1 text-xs">
+                            <div className="bg-white/20 rounded-md p-1 text-center">
+                              <div className="font-bold text-xs">{programData.duration.split(' ')[0]}</div>
+                              <div className="opacity-80 text-xs">Duration</div>
                             </div>
-                            <div className="bg-white/20 rounded-lg p-2 text-center">
-                              <div className="font-bold">{programData.certifications.split(' ')[0]}</div>
-                              <div className="opacity-80">Certs</div>
+                            <div className="bg-white/20 rounded-md p-1 text-center">
+                              <div className="font-bold text-xs">{programData.certifications.split(' ')[0]}</div>
+                              <div className="opacity-80 text-xs">Certs</div>
                             </div>
                           </div>
                         </div>
                       </div>
                       <div className="text-center">
-                        <p className="text-sm text-gray-600 mb-3">
+                        <p className="text-xs text-gray-600 mb-2">
                           {programData.certificationsList.length} specialized certifications
                         </p>
-                        <button className={`w-full py-2 px-4 rounded-lg font-semibold text-sm transition-all duration-300 ${
+                        <button className={`w-full py-1.5 px-3 rounded-md font-semibold text-xs transition-all duration-300 ${
                           activeTab === programName
                             ? `bg-gradient-to-r ${programData.color} text-white`
                             : 'bg-gray-100 text-[#22336a] hover:bg-gray-200'
