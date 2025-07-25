@@ -443,73 +443,71 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Banner with Carousel - Mobile Responsive */}
-      <section className="bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] text-white py-12 md:py-16 lg:py-20 relative overflow-hidden">
+      {/* Hero Banner with Carousel - Mobile Optimized */}
+      <section className="bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] text-white py-4 md:py-16 lg:py-20 relative overflow-hidden">
         {/* Professional Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 right-20 w-96 h-96 bg-[#c38935]/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/[0.02] to-transparent"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-12 items-center">
-            <div className="md:col-span-1 lg:col-span-3 text-center md:text-left lg:text-left animate-slide-in-left">
-              <div className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4 md:mb-6 border border-white/30">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-12 items-center">
+            <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
+              <div className="inline-flex items-center px-2 md:px-4 py-1 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-2 md:mb-6 border border-white/30">
                 <span className="text-white font-semibold text-xs md:text-sm">
                   PROFESSIONAL EXCELLENCE
                 </span>
               </div>
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-3 md:mb-4 lg:mb-6 leading-tight text-white">
+              <h1 className="text-sm sm:text-lg md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
                 Transform Your Future with
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
                   {" "}
                   Premier Education
                 </span>
               </h1>
-              <div className="mb-4 md:mb-6">
-                <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white/90 leading-relaxed max-w-2xl mb-2 md:mb-3 lg:mb-4">
-                  Join Hi-Tech Institute of Engineering & Technology for
-                  industry-aligned programs in MBA, BBA, BCA, MCA & B.Tech with
-                  guaranteed placement support.
+              <div className="mb-2 md:mb-6">
+                <p className="text-xs sm:text-xs md:text-base lg:text-lg xl:text-xl text-white/90 leading-relaxed max-w-2xl mb-1 md:mb-3 lg:mb-4">
+                  Join Hi-Tech Institute for industry-aligned programs with guaranteed placement support.
                 </p>
-                <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl">
-                  <div className="flex items-center mr-2 md:mr-3">
+                <div className="inline-flex items-center px-2 md:px-6 py-1 md:py-3 rounded-lg md:rounded-xl">
+                  <div className="flex items-center mr-1 md:mr-3">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe8fe1239f4724767b509ddb3b4f8688e?format=webp&width=800"
                       alt="Institution Image"
-                      className="h-6 md:h-8 lg:h-10 w-auto rounded-md md:rounded-lg"
+                      className="h-4 md:h-8 lg:h-10 w-auto rounded-md md:rounded-lg"
                     />
                   </div>
-                  <span className="text-white font-bold text-sm md:text-base lg:text-lg">
+                  <span className="text-white font-bold text-xs md:text-base lg:text-lg">
                     Powered By Sunstone
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-2 md:gap-3 lg:gap-4">
+              <div className="flex flex-col gap-1 md:gap-3 lg:gap-4">
                 <a
                   href="https://sunstone.in/campuses/hi-tech-institute"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-xs sm:text-sm md:text-base rounded-md sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-2 sm:px-3 md:px-6 lg:px-8 py-1 sm:py-1.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-xs sm:text-xs md:text-base rounded-md sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   <span>Explore Programs</span>
-                  <ExternalLink className="ml-1 sm:ml-1.5 md:ml-2 h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5" />
+                  <ExternalLink className="ml-1 sm:ml-1 md:ml-2 h-3 w-3 sm:h-3 sm:w-3 md:h-5 md:w-5" />
                 </a>
                 <a
                   href="tel:+917065303030"
-                  className="inline-flex items-center justify-center px-4 sm:px-5 md:px-6 lg:px-8 py-2 sm:py-2.5 md:py-3 lg:py-4 bg-transparent border-2 border-white text-white font-bold text-xs sm:text-sm md:text-base rounded-md sm:rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center justify-center px-2 sm:px-3 md:px-6 lg:px-8 py-1 sm:py-1.5 md:py-3 lg:py-4 bg-transparent border border-white text-white font-bold text-xs sm:text-xs md:text-base rounded-md sm:rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
                 >
-                  <Phone className="mr-1 sm:mr-1.5 md:mr-2 h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5" />
+                  <Phone className="mr-1 sm:mr-1 md:mr-2 h-3 w-3 sm:h-3 sm:w-3 md:h-5 md:w-5" />
                   <span>Call Now</span>
                 </a>
               </div>
             </div>
-            <div className="md:col-span-1 lg:col-span-2 animate-slide-in-right">
-              <div className="relative max-w-xl mx-auto">
-                <div className="relative overflow-hidden rounded-xl shadow-lg bg-white p-2">
+            <div className="col-span-1 md:col-span-1 lg:col-span-2 animate-slide-in-right">
+              <div className="relative max-w-xs md:max-w-xl mx-auto">
+                <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg bg-white p-1 md:p-2">
                   {/* Carousel Container */}
                   <div className="relative">
-                    <div className="overflow-hidden rounded-lg">
+                    <div className="overflow-hidden rounded-md md:rounded-lg">
                       <div
                         className="flex transition-transform duration-500 ease-in-out"
                         style={{
@@ -529,27 +527,27 @@ const Index = () => {
                       </div>
                     </div>
 
-                    {/* Navigation Arrows */}
+                    {/* Navigation Arrows - Hidden on small mobile */}
                     <button
                       onClick={prevSlide}
-                      className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-all duration-200"
+                      className="hidden sm:flex absolute left-1 md:left-2 top-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 bg-black/50 hover:bg-black/70 rounded-full items-center justify-center text-white transition-all duration-200"
                     >
-                      <ChevronLeft className="h-4 w-4" />
+                      <ChevronLeft className="h-3 w-3 md:h-4 md:w-4" />
                     </button>
                     <button
                       onClick={nextSlide}
-                      className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-all duration-200"
+                      className="hidden sm:flex absolute right-1 md:right-2 top-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 bg-black/50 hover:bg-black/70 rounded-full items-center justify-center text-white transition-all duration-200"
                     >
-                      <ChevronRight className="h-4 w-4" />
+                      <ChevronRight className="h-3 w-3 md:h-4 md:w-4" />
                     </button>
 
                     {/* Dots Indicator */}
-                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2">
+                    <div className="absolute bottom-1 md:bottom-3 left-1/2 -translate-x-1/2 flex space-x-1 md:space-x-2">
                       {carouselImages.map((_, index) => (
                         <button
                           key={index}
                           onClick={() => setCurrentSlide(index)}
-                          className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                          className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-200 ${
                             index === currentSlide ? "bg-white" : "bg-white/50"
                           }`}
                         />
@@ -557,14 +555,14 @@ const Index = () => {
                     </div>
                   </div>
 
-                  {/* Caption */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-                      <div className="flex items-center space-x-2 mb-2">
-                        <div className="w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
+                  {/* Caption - Hidden on small mobile */}
+                  <div className="hidden md:block absolute bottom-2 md:bottom-4 left-2 md:left-4 right-2 md:right-4">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-2 md:p-4 shadow-lg">
+                      <div className="flex items-center space-x-2 mb-1 md:mb-2">
+                        <div className="w-4 h-4 md:w-6 md:h-6 bg-[#c38935] rounded-full flex items-center justify-center">
+                          <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full"></div>
                         </div>
-                        <p className="text-[#22336a] font-bold text-sm">
+                        <p className="text-[#22336a] font-bold text-xs md:text-sm">
                           {carouselImages[currentSlide].title}
                         </p>
                       </div>
@@ -2386,7 +2384,7 @@ const Index = () => {
                   question:
                     "What makes Sunstone different from other education providers?",
                   answer:
-                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n��� Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
+                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
                   category: "sunstone",
                 },
                 {
