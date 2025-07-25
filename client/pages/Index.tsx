@@ -1378,59 +1378,119 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Mobile Program Carousel */}
+          {/* Mobile: Simple Program Cards */}
           <div className="block md:hidden mb-8">
-            <div className="overflow-hidden">
-              <div className="flex space-x-4 animate-scroll-right-to-left">
-                {Object.entries(programs).map(([programName, programData], index) => (
+            <div className="grid grid-cols-1 gap-3">
+              {Object.entries(programs).map(([programName, programData], index) => (
+                <div key={programName} className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
+                  {/* Program Header Card */}
                   <div
-                    key={programName}
-                    className="flex-shrink-0 w-64 group relative cursor-pointer"
-                    onClick={() => setActiveTab(programName)}
+                    className={`bg-gradient-to-r ${programData.color} p-4 text-white cursor-pointer`}
+                    onClick={() => setExpandedMobileProgram(
+                      expandedMobileProgram === programName ? null : programName
+                    )}
                   >
-                    <div className={`bg-white rounded-xl p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 ${
-                      activeTab === programName ? 'ring-2 ring-[#22336a] bg-[#22336a]/5' : ''
-                    }`}>
-                      <div className={`w-full h-24 bg-gradient-to-r ${programData.color} rounded-lg p-3 text-white mb-3 relative overflow-hidden`}>
-                        <div className="absolute top-0 right-0 w-16 h-16 bg-white/10 rounded-full -translate-y-8 translate-x-8"></div>
-                        <div className="relative z-10">
-                          <div className="flex items-center mb-1">
-                            <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mr-2">
-                              <GraduationCap className="h-3 w-3 text-white" />
-                            </div>
-                            <div>
-                              <h3 className="text-sm font-bold">{programName}</h3>
-                              <p className="text-xs opacity-90">Program</p>
-                            </div>
-                          </div>
-                          <div className="grid grid-cols-2 gap-1 text-xs">
-                            <div className="bg-white/20 rounded-md p-1 text-center">
-                              <div className="font-bold text-xs">{programData.duration.split(' ')[0]}</div>
-                              <div className="opacity-80 text-xs">Duration</div>
-                            </div>
-                            <div className="bg-white/20 rounded-md p-1 text-center">
-                              <div className="font-bold text-xs">{programData.certifications.split(' ')[0]}</div>
-                              <div className="opacity-80 text-xs">Certs</div>
-                            </div>
-                          </div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                          <GraduationCap className="h-5 w-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold">{programName}</h3>
+                          <p className="text-sm opacity-90">{programData.duration}</p>
                         </div>
                       </div>
-                      <div className="text-center">
-                        <p className="text-xs text-gray-600 mb-2">
-                          {programData.certificationsList.length} specialized certifications
-                        </p>
-                        <button className={`w-full py-1.5 px-3 rounded-md font-semibold text-xs transition-all duration-300 ${
-                          activeTab === programName
-                            ? `bg-gradient-to-r ${programData.color} text-white`
-                            : 'bg-gray-100 text-[#22336a] hover:bg-gray-200'
-                        }`}>
-                          {activeTab === programName ? 'Selected' : 'View Details'}
-                        </button>
-                      </div>
+                      <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${
+                        expandedMobileProgram === programName ? 'rotate-180' : ''
+                      }`} />
                     </div>
                   </div>
-                ))}
-              </div>
+
+                  {/* Expandable Content */}
+                  {expandedMobileProgram === programName && (
+                    <div className="p-4 bg-white">
+                      {/* Quick Stats */}
+                      <div className="grid grid-cols-2 gap-3 mb-4">
+                        <div className="text-center p-3 bg-gray-50 rounded-lg">
+                          <div className="text-lg font-bold text-[#22336a]">
+                            {programData.certifications.split(' ')[0]}
+                          </div>
+                          <div className="text-xs text-gray-600">Certifications</div>
+                        </div>
+                        <div className="text-center p-3 bg-gray-50 rounded-lg">
+                          <div className="text-lg font-bold text-[#22336a]">
+                            {programData.projects.split(' ')[0]}
+                          </div>
+                          <div className="text-xs text-gray-600">Projects</div>
+                        </div>
+                      </div>
+
+                      {/* Tabs for Specifications and Eligibility */}
+                      <div className="border-b border-gray-200 mb-4">
+                        <div className="flex space-x-4">
+                          <button
+                            className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                              activeTab === 'specs'
+                                ? 'border-[#22336a] text-[#22336a]'
+                                : 'border-transparent text-gray-500'
+                            }`}
+                            onClick={() => setActiveTab('specs')}
+                          >
+                            Specifications
+                          </button>
+                          <button
+                            className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                              activeTab === 'eligibility'
+                                ? 'border-[#22336a] text-[#22336a]'
+                                : 'border-transparent text-gray-500'
+                            }`}
+                            onClick={() => setActiveTab('eligibility')}
+                          >
+                            Eligibility
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Tab Content */}
+                      {activeTab === 'specs' ? (
+                        <div className="space-y-2">
+                          <h4 className="font-semibold text-[#22336a] text-sm">Key Certifications:</h4>
+                          {programData.certificationsList.slice(0, 3).map((cert, certIndex) => (
+                            <div key={certIndex} className="flex items-start space-x-2 p-2 bg-gray-50 rounded-md">
+                              <div className="w-4 h-4 bg-[#c38935] rounded-full mt-0.5 flex-shrink-0"></div>
+                              <div>
+                                <p className="text-sm font-medium text-[#22336a]">{cert.name}</p>
+                                <p className="text-xs text-gray-600">{cert.careers}</p>
+                              </div>
+                            </div>
+                          ))}
+                          <p className="text-xs text-gray-500 mt-2">
+                            +{programData.certificationsList.length - 3} more specializations
+                          </p>
+                        </div>
+                      ) : (
+                        <div className="bg-gray-50 rounded-lg p-3">
+                          <h4 className="font-semibold text-[#22336a] text-sm mb-2">Eligibility Criteria:</h4>
+                          <p className="text-sm text-gray-700">{programData.eligibility}</p>
+                        </div>
+                      )}
+
+                      {/* Apply Button */}
+                      <div className="mt-4">
+                        <a
+                          href="https://sunstone.in/apply-now"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r ${programData.color} text-white font-bold text-sm rounded-lg transition-all duration-300 transform hover:scale-105`}
+                        >
+                          <span>Apply for {programName}</span>
+                          <ExternalLink className="ml-2 h-4 w-4" />
+                        </a>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
 
