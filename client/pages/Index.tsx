@@ -1381,120 +1381,134 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Mobile: Simple Program Cards */}
+          {/* Mobile: Program Selection Dropdown */}
           <div className="block md:hidden mb-8">
-            <div className="grid grid-cols-1 gap-3">
-              {Object.entries(programs).map(([programName, programData], index) => (
-                <div key={programName} className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-                  {/* Program Header Card */}
-                  <div
-                    className={`bg-gradient-to-r ${programData.color} p-4 text-white cursor-pointer`}
-                    onClick={() => setExpandedMobileProgram(
-                      expandedMobileProgram === programName ? null : programName
-                    )}
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                          <GraduationCap className="h-5 w-5 text-white" />
+            {/* Program Selector */}
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-[#22336a] mb-2">
+                Select Program to View Details:
+              </label>
+              <select
+                value={selectedMobileProgram || ""}
+                onChange={(e) => setSelectedMobileProgram(e.target.value || null)}
+                className="w-full p-3 border border-gray-300 rounded-lg text-[#22336a] font-medium focus:outline-none focus:ring-2 focus:ring-[#22336a] focus:border-transparent"
+              >
+                <option value="">Choose a program...</option>
+                {Object.keys(programs).map((programName) => (
+                  <option key={programName} value={programName}>
+                    {programName} Program
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Selected Program Details */}
+            {selectedMobileProgram && (
+              <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
+                {/* Program Header */}
+                <div className={`bg-gradient-to-r ${programs[selectedMobileProgram].color} p-4 text-white`}>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                      <GraduationCap className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold">{selectedMobileProgram}</h3>
+                      <p className="text-sm opacity-90">Program Details</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-4 bg-white">
+                  {/* Dropdown for Duration & Projects */}
+                  <div className="mb-4">
+                    <div className="bg-gray-50 rounded-lg p-3">
+                      <h4 className="font-semibold text-[#22336a] text-sm mb-2">Program Overview:</h4>
+                      <div className="space-y-2">
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-gray-600">Duration:</span>
+                          <span className="text-sm font-medium text-[#22336a]">{programs[selectedMobileProgram].duration}</span>
                         </div>
-                        <div>
-                          <h3 className="text-lg font-bold">{programName}</h3>
-                          <p className="text-sm opacity-90">{programData.duration}</p>
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-gray-600">Projects:</span>
+                          <span className="text-sm font-medium text-[#22336a]">{programs[selectedMobileProgram].projects}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-gray-600">Certifications:</span>
+                          <span className="text-sm font-medium text-[#22336a]">{programs[selectedMobileProgram].certifications}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-xs text-gray-600">Internships:</span>
+                          <span className="text-sm font-medium text-[#22336a]">{programs[selectedMobileProgram].internships}</span>
                         </div>
                       </div>
-                      <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${
-                        expandedMobileProgram === programName ? 'rotate-180' : ''
-                      }`} />
                     </div>
                   </div>
 
-                  {/* Expandable Content */}
-                  {expandedMobileProgram === programName && (
-                    <div className="p-4 bg-white">
-                      {/* Quick Stats */}
-                      <div className="grid grid-cols-2 gap-3 mb-4">
-                        <div className="text-center p-3 bg-gray-50 rounded-lg">
-                          <div className="text-lg font-bold text-[#22336a]">
-                            {programData.certifications.split(' ')[0]}
+                  {/* Tabs for Specifications and Eligibility */}
+                  <div className="border-b border-gray-200 mb-4">
+                    <div className="flex space-x-4">
+                      <button
+                        className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                          (mobileTabState[selectedMobileProgram] || 'specs') === 'specs'
+                            ? 'border-[#22336a] text-[#22336a]'
+                            : 'border-transparent text-gray-500'
+                        }`}
+                        onClick={() => setMobileTabState({...mobileTabState, [selectedMobileProgram]: 'specs'})}
+                      >
+                        Specifications
+                      </button>
+                      <button
+                        className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                          mobileTabState[selectedMobileProgram] === 'eligibility'
+                            ? 'border-[#22336a] text-[#22336a]'
+                            : 'border-transparent text-gray-500'
+                        }`}
+                        onClick={() => setMobileTabState({...mobileTabState, [selectedMobileProgram]: 'eligibility'})}
+                      >
+                        Eligibility
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Tab Content */}
+                  {(mobileTabState[selectedMobileProgram] || 'specs') === 'specs' ? (
+                    <div className="space-y-2">
+                      <h4 className="font-semibold text-[#22336a] text-sm">Key Certifications:</h4>
+                      {programs[selectedMobileProgram].certificationsList.slice(0, 3).map((cert, certIndex) => (
+                        <div key={certIndex} className="flex items-start space-x-2 p-2 bg-gray-50 rounded-md">
+                          <div className="w-4 h-4 bg-[#c38935] rounded-full mt-0.5 flex-shrink-0"></div>
+                          <div>
+                            <p className="text-sm font-medium text-[#22336a]">{cert.name}</p>
+                            <p className="text-xs text-gray-600">{cert.careers}</p>
                           </div>
-                          <div className="text-xs text-gray-600">Certifications</div>
                         </div>
-                        <div className="text-center p-3 bg-gray-50 rounded-lg">
-                          <div className="text-lg font-bold text-[#22336a]">
-                            {programData.projects.split(' ')[0]}
-                          </div>
-                          <div className="text-xs text-gray-600">Projects</div>
-                        </div>
-                      </div>
-
-                      {/* Tabs for Specifications and Eligibility */}
-                      <div className="border-b border-gray-200 mb-4">
-                        <div className="flex space-x-4">
-                          <button
-                            className={`py-2 px-1 border-b-2 font-medium text-sm ${
-                              (mobileTabState[programName] || 'specs') === 'specs'
-                                ? 'border-[#22336a] text-[#22336a]'
-                                : 'border-transparent text-gray-500'
-                            }`}
-                            onClick={() => setMobileTabState({...mobileTabState, [programName]: 'specs'})}
-                          >
-                            Specifications
-                          </button>
-                          <button
-                            className={`py-2 px-1 border-b-2 font-medium text-sm ${
-                              mobileTabState[programName] === 'eligibility'
-                                ? 'border-[#22336a] text-[#22336a]'
-                                : 'border-transparent text-gray-500'
-                            }`}
-                            onClick={() => setMobileTabState({...mobileTabState, [programName]: 'eligibility'})}
-                          >
-                            Eligibility
-                          </button>
-                        </div>
-                      </div>
-
-                      {/* Tab Content */}
-                      {(mobileTabState[programName] || 'specs') === 'specs' ? (
-                        <div className="space-y-2">
-                          <h4 className="font-semibold text-[#22336a] text-sm">Key Certifications:</h4>
-                          {programData.certificationsList.slice(0, 3).map((cert, certIndex) => (
-                            <div key={certIndex} className="flex items-start space-x-2 p-2 bg-gray-50 rounded-md">
-                              <div className="w-4 h-4 bg-[#c38935] rounded-full mt-0.5 flex-shrink-0"></div>
-                              <div>
-                                <p className="text-sm font-medium text-[#22336a]">{cert.name}</p>
-                                <p className="text-xs text-gray-600">{cert.careers}</p>
-                              </div>
-                            </div>
-                          ))}
-                          <p className="text-xs text-gray-500 mt-2">
-                            +{programData.certificationsList.length - 3} more specializations
-                          </p>
-                        </div>
-                      ) : (
-                        <div className="bg-gray-50 rounded-lg p-3">
-                          <h4 className="font-semibold text-[#22336a] text-sm mb-2">Eligibility Criteria:</h4>
-                          <p className="text-sm text-gray-700">{programData.eligibility}</p>
-                        </div>
-                      )}
-
-                      {/* Apply Button */}
-                      <div className="mt-4">
-                        <a
-                          href="https://sunstone.in/apply-now"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r ${programData.color} text-white font-bold text-sm rounded-lg transition-all duration-300 transform hover:scale-105`}
-                        >
-                          <span>Apply for {programName}</span>
-                          <ExternalLink className="ml-2 h-4 w-4" />
-                        </a>
-                      </div>
+                      ))}
+                      <p className="text-xs text-gray-500 mt-2">
+                        +{programs[selectedMobileProgram].certificationsList.length - 3} more specializations
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="bg-gray-50 rounded-lg p-3">
+                      <h4 className="font-semibold text-[#22336a] text-sm mb-2">Eligibility Criteria:</h4>
+                      <p className="text-sm text-gray-700">{programs[selectedMobileProgram].eligibility}</p>
                     </div>
                   )}
+
+                  {/* Apply Button */}
+                  <div className="mt-4">
+                    <a
+                      href="https://sunstone.in/apply-now"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r ${programs[selectedMobileProgram].color} text-white font-bold text-sm rounded-lg transition-all duration-300 transform hover:scale-105`}
+                    >
+                      <span>Apply for {selectedMobileProgram}</span>
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
+                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            )}
           </div>
 
           {/* Desktop Program Selector */}
