@@ -2948,7 +2948,7 @@ const Index = () => {
 
             {/* Contact */}
             <div>
-              <h3 className="text-base md:text-lg font-bold text-white mb-3 md:mb-4">Contact</h3>
+              <h3 className="text-sm md:text-base lg:text-lg font-bold text-white mb-2 md:mb-3 lg:mb-4">Contact</h3>
               <div className="space-y-2 md:space-y-3 text-xs md:text-sm">
                 <a
                   href="mailto:connect@sunstone.in"
