@@ -1469,131 +1469,62 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Horizontal Scrolling Logos */}
-          <div className="relative overflow-hidden bg-gray-50 rounded-xl py-8 mb-12">
-            <div className="flex space-x-8 animate-scroll">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800"
-                alt="Bosch"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800"
-                alt="HCL"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800"
-                alt="TCS"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800"
-                alt="Paytm"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800"
-                alt="Microsoft"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800"
-                alt="Genpact"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800"
-                alt="Bajaj Finserv"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800"
-                alt="Airtel"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800"
-                alt="IBM"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800"
-                alt="Infosys"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800"
-                alt="Hero"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800"
-                alt="Axis Bank"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
+          {/* Two-line Grid of Recruiters */}
+          <div className="space-y-8 mb-12">
+            {/* First line */}
+            <div className="flex justify-center items-center space-x-8 overflow-hidden">
+              {[
+                { name: "Bosch", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800" },
+                { name: "HCL", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800" },
+                { name: "TCS", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800" },
+                { name: "Paytm", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800" },
+                { name: "Microsoft", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800" },
+                { name: "Genpact", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800" }
+              ].map((recruiter) => (
+                <button
+                  key={recruiter.name}
+                  onClick={() => handleRecruiterClick(recruiter.name)}
+                  className={`transition-all duration-300 transform hover:scale-110 ${
+                    clickedRecruiters.includes(recruiter.name)
+                      ? 'filter-none'
+                      : 'filter grayscale'
+                  }`}
+                >
+                  <img
+                    src={recruiter.src}
+                    alt={recruiter.name}
+                    className="h-16 w-auto"
+                  />
+                </button>
+              ))}
+            </div>
 
-              {/* Duplicate for seamless loop */}
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800"
-                alt="Bosch"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800"
-                alt="HCL"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800"
-                alt="TCS"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800"
-                alt="Paytm"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800"
-                alt="Microsoft"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800"
-                alt="Genpact"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800"
-                alt="Bajaj Finserv"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800"
-                alt="Airtel"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800"
-                alt="IBM"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800"
-                alt="Infosys"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800"
-                alt="Hero"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800"
-                alt="Axis Bank"
-                className="h-16 w-auto opacity-70 hover:opacity-100 transition-opacity"
-              />
+            {/* Second line */}
+            <div className="flex justify-center items-center space-x-8 overflow-hidden">
+              {[
+                { name: "Bajaj Finserv", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800" },
+                { name: "Airtel", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800" },
+                { name: "IBM", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800" },
+                { name: "Infosys", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800" },
+                { name: "Hero", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800" },
+                { name: "Axis Bank", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800" }
+              ].map((recruiter) => (
+                <button
+                  key={recruiter.name}
+                  onClick={() => handleRecruiterClick(recruiter.name)}
+                  className={`transition-all duration-300 transform hover:scale-110 ${
+                    clickedRecruiters.includes(recruiter.name)
+                      ? 'filter-none'
+                      : 'filter grayscale'
+                  }`}
+                >
+                  <img
+                    src={recruiter.src}
+                    alt={recruiter.name}
+                    className="h-16 w-auto"
+                  />
+                </button>
+              ))}
             </div>
           </div>
 
