@@ -77,6 +77,14 @@ const Index = () => {
     );
   };
 
+  const handleRecruiterClick = (recruiterName: string) => {
+    setClickedRecruiters(prev =>
+      prev.includes(recruiterName)
+        ? prev.filter(name => name !== recruiterName)
+        : [...prev, recruiterName]
+    );
+  };
+
   const programs = {
     MBA: {
       duration: "2-year program",
