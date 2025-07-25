@@ -2123,7 +2123,12 @@ const Index = () => {
             <div className="relative z-10">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold mb-4">
-                  Industry Recognition
+                  <h3 style="text-align: center;">
+                    <strong>Career-Focused Learning Outcomes</strong>
+                  </h3>
+                  <p>
+                    <br />
+                  </p>
                 </h3>
                 <p className="text-xl opacity-90 max-w-3xl mx-auto">
                   Our achievements reflect our commitment to transforming lives
