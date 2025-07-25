@@ -1543,26 +1543,82 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Programs Section - All Blue Colors */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+      {/* Programs Section - Mobile Responsive */}
+      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#22336a]/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-4 md:mb-6">
               Programs Offered
             </h2>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-base lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Transform your career with industry-aligned programs designed by
               experts
             </p>
           </div>
 
-          {/* Program Selector - All Blue */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
+          {/* Mobile Program Carousel */}
+          <div className="block md:hidden mb-8">
+            <div className="overflow-hidden">
+              <div className="flex space-x-4 animate-scroll-right-to-left">
+                {Object.entries(programs).map(([programName, programData], index) => (
+                  <div
+                    key={programName}
+                    className="flex-shrink-0 w-80 group relative cursor-pointer"
+                    onClick={() => setActiveTab(programName)}
+                  >
+                    <div className={`bg-white rounded-2xl p-4 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
+                      activeTab === programName ? 'ring-2 ring-[#22336a] bg-[#22336a]/5' : ''
+                    }`}>
+                      <div className={`w-full h-32 bg-gradient-to-r ${programData.color} rounded-xl p-4 text-white mb-4 relative overflow-hidden`}>
+                        <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-10 translate-x-10"></div>
+                        <div className="relative z-10">
+                          <div className="flex items-center mb-2">
+                            <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-2">
+                              <GraduationCap className="h-5 w-5 text-white" />
+                            </div>
+                            <div>
+                              <h3 className="text-lg font-bold">{programName}</h3>
+                              <p className="text-xs opacity-90">Program</p>
+                            </div>
+                          </div>
+                          <div className="grid grid-cols-2 gap-2 text-xs">
+                            <div className="bg-white/20 rounded-lg p-2 text-center">
+                              <div className="font-bold">{programData.duration.split(' ')[0]}</div>
+                              <div className="opacity-80">Duration</div>
+                            </div>
+                            <div className="bg-white/20 rounded-lg p-2 text-center">
+                              <div className="font-bold">{programData.certifications.split(' ')[0]}</div>
+                              <div className="opacity-80">Certs</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-sm text-gray-600 mb-3">
+                          {programData.certificationsList.length} specialized certifications
+                        </p>
+                        <button className={`w-full py-2 px-4 rounded-lg font-semibold text-sm transition-all duration-300 ${
+                          activeTab === programName
+                            ? `bg-gradient-to-r ${programData.color} text-white`
+                            : 'bg-gray-100 text-[#22336a] hover:bg-gray-200'
+                        }`}>
+                          {activeTab === programName ? 'Selected' : 'View Details'}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Program Selector */}
+          <div className="hidden md:flex flex-wrap justify-center gap-3 md:gap-4 mb-12 md:mb-16">
             {Object.entries(programs).map(
               ([programName, programData], index) => (
                 <button
