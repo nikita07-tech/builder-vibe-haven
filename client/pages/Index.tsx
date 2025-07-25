@@ -443,8 +443,8 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Banner with Carousel */}
-      <section className="bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] text-white py-20 relative overflow-hidden">
+      {/* Hero Banner with Carousel - Mobile Responsive */}
+      <section className="bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] text-white py-12 md:py-16 lg:py-20 relative overflow-hidden">
         {/* Professional Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 right-20 w-96 h-96 bg-[#c38935]/10 rounded-full blur-3xl"></div>
