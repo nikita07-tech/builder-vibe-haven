@@ -2626,6 +2626,32 @@ const Index = () => {
               ))}
             </div>
 
+            {/* Know More Button */}
+            {!showMoreFAQs && (
+              <div className="text-center mt-6 md:mt-8">
+                <button
+                  onClick={() => setShowMoreFAQs(true)}
+                  className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base"
+                >
+                  <span>Know More</span>
+                  <ChevronDown className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                </button>
+              </div>
+            )}
+
+            {/* Show Less Button */}
+            {showMoreFAQs && (
+              <div className="text-center mt-6 md:mt-8">
+                <button
+                  onClick={() => setShowMoreFAQs(false)}
+                  className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gray-500 hover:bg-gray-600 text-white font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base"
+                >
+                  <span>Show Less</span>
+                  <ChevronDown className="ml-2 h-4 w-4 md:h-5 md:w-5 rotate-180" />
+                </button>
+              </div>
+            )}
+
             {/* CTA Section */}
             <div className="text-center mt-16">
               <div className="bg-[#22336a] rounded-3xl p-10 shadow-2xl relative overflow-hidden">
