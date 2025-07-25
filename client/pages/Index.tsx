@@ -1980,7 +1980,7 @@ const Index = () => {
                 </h3>
                 <p className="text-xl opacity-90 max-w-3xl mx-auto">
                   <p>
-                    <strong style="font-size: 20px;">
+                    <strong style={{fontSize: "20px"}}>
                       Our programs are designed to equip students with the
                       right skills, certifications, and opportunities to
                       succeed in today's job market.
