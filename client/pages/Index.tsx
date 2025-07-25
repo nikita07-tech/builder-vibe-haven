@@ -1368,48 +1368,79 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Smart Investment Hub */}
+      {/* Easy Fee Payment Banner */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-full blur-3xl animate-pulse"></div>
-          <div
-            className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-3xl animate-pulse"
-            style={{ animationDelay: "2s" }}
-          ></div>
-          <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-[#c38935] rounded-full animate-ping opacity-40 -translate-x-1/2 -translate-y-1/2"></div>
-          <div
-            className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-400 rounded-full animate-ping opacity-30"
-            style={{ animationDelay: "1s" }}
-          ></div>
-        </div>
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Enhanced Header */}
+          {/* Header */}
           <div className="text-center mb-16">
-            <div className="relative mb-8">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-[#c38935]/20 to-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
-              <div className="relative inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-xl border border-white/50 hover:scale-105 transition-all duration-500">
-                <TrendingUp className="h-6 w-6 text-[#22336a] mr-3 animate-bounce" />
-                <span className="text-[#22336a] font-bold text-lg tracking-wide">
-                  SMART INVESTMENT HUB
-                </span>
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-[#c38935] to-yellow-400 rounded-full animate-ping"></div>
-              </div>
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-6 leading-tight">
-              <span className="inline-block animate-slide-up">
-                Flexible Payment
+            <div className="inline-flex items-center px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full mb-8 shadow-lg border border-gray-200">
+              <span className="text-[#22336a] font-bold text-sm tracking-wide">
+                🏦 EASY FEE PAYMENT
               </span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold text-[#22336a] mb-6 leading-tight">
+              TAKE CHARGE OF YOUR
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-yellow-400 to-[#c38935] animate-gradient-shift">
-                Solutions
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-yellow-400">
+                EDUCATION
               </span>
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-fade-in">
-              Make quality education affordable with our innovative EMI options,
-              scholarship programs, and smart financial planning
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Make quality education affordable with our innovative EMI options, scholarship
+              programs, and smart financial assistance
             </p>
+          </div>
+
+          {/* Banner Card */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-[#c38935] to-[#d4a853] rounded-2xl p-8 text-white relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
+              <div className="relative z-10">
+                <div className="flex items-center mb-6">
+                  <div className="bg-white/20 px-4 py-2 rounded-full">
+                    <span className="text-white font-bold text-sm">EASY FEE PAYMENT</span>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                  Take charge of your education
+                </h3>
+                <p className="text-lg opacity-90 mb-8 max-w-2xl">
+                  Pay smart by choosing Sunstone. Pay the college fee and a nominal amount to unlock your dream job with
+                  Sunstone.
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center space-x-3 bg-white/20 rounded-xl p-4">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-[#c38935] text-sm">✓</span>
+                    </div>
+                    <span className="text-white font-medium">0-Cost EMI available</span>
+                  </div>
+                  <div className="flex items-center space-x-3 bg-white/20 rounded-xl p-4">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-[#c38935] text-sm">✓</span>
+                    </div>
+                    <span className="text-white font-medium">Up to 100% scholarship available</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="https://sunstone.in/apply-now"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 bg-white text-[#22336a] hover:bg-gray-100 font-bold rounded-lg transition-all duration-300 shadow-lg"
+                  >
+                    <span>Apply Now →</span>
+                  </a>
+                </div>
+
+                <p className="text-xs text-white/70 mt-6">
+                  *Terms & conditions apply
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Interactive Investment Cards */}
