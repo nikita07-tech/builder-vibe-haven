@@ -51,7 +51,7 @@ const Index = () => {
   const [showMoreFAQs, setShowMoreFAQs] = useState(false);
   const [selectedMobileProgram, setSelectedMobileProgram] = useState<
     string | null
-  >("MBA");
+  >(null);
   const [showAllCertifications, setShowAllCertifications] = useState<{
     [key: string]: boolean;
   }>({});
@@ -2826,7 +2826,7 @@ const Index = () => {
                 {
                   question: "Why should I choose Sunstone?",
                   answer:
-                    "• Training and development sessions by industry experts\n��� Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
+                    "��� Training and development sessions by industry experts\n��� Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
                   category: "sunstone",
                 },
                 {
