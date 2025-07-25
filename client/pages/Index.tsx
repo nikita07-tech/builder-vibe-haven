@@ -2864,29 +2864,29 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Simple Footer */}
+      {/* Simple Footer - Mobile Responsive */}
       <footer className="bg-[#22336a] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {/* About */}
-            <div className="md:col-span-2">
-              <h3 className="text-xl font-bold text-white mb-4">
+            <div className="sm:col-span-2 lg:col-span-2">
+              <h3 className="text-lg md:text-xl font-bold text-white mb-3 md:mb-4">
                 Sunstone Education
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-md">
+              <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-4 md:mb-6 max-w-md">
                 Hi-Tech Institute of Engineering & Technology, powered by
                 Sunstone. Transforming careers through quality education and
                 industry partnerships.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-3 md:space-x-4">
                 <a
                   href="https://www.facebook.com/sunstoneedu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-[#1877F2] hover:bg-[#1655C4] rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-8 h-8 md:w-10 md:h-10 bg-[#1877F2] hover:bg-[#1655C4] rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-4 h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2897,10 +2897,10 @@ const Index = () => {
                   href="https://in.linkedin.com/school/sunstone-/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-[#0A66C2] hover:bg-[#084C8C] rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-8 h-8 md:w-10 md:h-10 bg-[#0A66C2] hover:bg-[#084C8C] rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-4 h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2911,10 +2911,10 @@ const Index = () => {
                   href="https://www.youtube.com/@SunstoneIND"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-[#FF0000] hover:bg-[#CC0000] rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-8 h-8 md:w-10 md:h-10 bg-[#FF0000] hover:bg-[#CC0000] rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-4 h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2925,10 +2925,10 @@ const Index = () => {
                   href="https://www.instagram.com/sunstone.in/?hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#6B2A94] hover:via-[#DC1515] hover:to-[#E5642A] rounded-lg flex items-center justify-center transition-colors duration-300"
+                  className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#6B2A94] hover:via-[#DC1515] hover:to-[#E5642A] rounded-lg flex items-center justify-center transition-colors duration-300"
                 >
                   <svg
-                    className="w-5 h-5 text-white"
+                    className="w-4 h-4 md:w-5 md:h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -2940,8 +2940,8 @@ const Index = () => {
 
             {/* Programs */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-4">Programs</h3>
-              <ul className="space-y-2 text-sm">
+              <h3 className="text-base md:text-lg font-bold text-white mb-3 md:mb-4">Programs</h3>
+              <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm">
                 <li>
                   <a
                     href="#"
@@ -2987,51 +2987,51 @@ const Index = () => {
 
             {/* Contact */}
             <div>
-              <h3 className="text-lg font-bold text-white mb-4">Contact</h3>
-              <div className="space-y-3 text-sm">
+              <h3 className="text-base md:text-lg font-bold text-white mb-3 md:mb-4">Contact</h3>
+              <div className="space-y-2 md:space-y-3 text-xs md:text-sm">
                 <a
                   href="mailto:connect@sunstone.in"
                   className="flex items-center text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                 >
-                  <Mail className="h-4 w-4 mr-2" />
+                  <Mail className="h-3 w-3 md:h-4 md:w-4 mr-1.5 md:mr-2" />
                   connect@sunstone.in
                 </a>
                 <a
                   href="tel:+917065303030"
                   className="flex items-center text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                 >
-                  <Phone className="h-4 w-4 mr-2" />
+                  <Phone className="h-3 w-3 md:h-4 md:w-4 mr-1.5 md:mr-2" />
                   +91 7065-30-30-30
                 </a>
                 <a
                   href="https://sunstone.in/apply-now"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-[#c38935] hover:bg-[#d4a853] text-white text-sm font-semibold rounded-lg transition-colors duration-300 mt-4"
+                  className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-[#c38935] hover:bg-[#d4a853] text-white text-xs md:text-sm font-semibold rounded-lg transition-colors duration-300 mt-3 md:mt-4"
                 >
                   Apply Now
-                  <ExternalLink className="ml-2 h-4 w-4" />
+                  <ExternalLink className="ml-1.5 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Bottom */}
-          <div className="border-t border-white/20 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 sm:mb-0">
+          <div className="border-t border-white/20 mt-6 md:mt-8 pt-4 md:pt-6 flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-gray-400 text-xs md:text-sm mb-3 sm:mb-0">
               © 2025 Sunstone Education. All rights reserved.
             </p>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 md:space-x-4">
               <a
                 href="#"
-                className="text-gray-400 hover:text-[#c38935] text-sm transition-colors duration-300"
+                className="text-gray-400 hover:text-[#c38935] text-xs md:text-sm transition-colors duration-300"
               >
                 Privacy Policy
               </a>
               <span className="text-gray-600">•</span>
               <a
                 href="#"
-                className="text-gray-400 hover:text-[#c38935] text-sm transition-colors duration-300"
+                className="text-gray-400 hover:text-[#c38935] text-xs md:text-sm transition-colors duration-300"
               >
                 Terms
               </a>
@@ -3040,7 +3040,7 @@ const Index = () => {
                 href="https://sunstone.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#c38935] text-sm transition-colors duration-300"
+                className="text-gray-400 hover:text-[#c38935] text-xs md:text-sm transition-colors duration-300"
               >
                 sunstone.in
               </a>
