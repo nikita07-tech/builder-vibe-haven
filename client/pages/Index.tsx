@@ -1125,7 +1125,7 @@ const Index = () => {
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                  Placement Opportunity Program
+                  <p>POP</p>
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Access to 200+ guaranteed job opportunities with comprehensive
