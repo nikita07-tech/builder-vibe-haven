@@ -988,23 +988,23 @@ const Index = () => {
         </div>
       )}
 
-      {/* Professional Placement Guarantee Program */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      {/* Professional Placement Guarantee Program - Mobile Optimized */}
+      <section className="py-8 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 right-10 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Engaging Header with Animations */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-[#22336a]/10 rounded-full mb-6 animate-fade-in">
-              <Trophy className="h-5 w-5 text-[#22336a] mr-2 animate-pulse" />
-              <span className="text-[#22336a] font-semibold">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+          {/* Compact Header for Mobile */}
+          <div className="text-center mb-8 md:mb-16">
+            <div className="inline-flex items-center px-3 md:px-6 py-2 md:py-3 bg-[#22336a]/10 rounded-full mb-3 md:mb-6 animate-fade-in">
+              <Trophy className="h-4 w-4 md:h-5 md:w-5 text-[#22336a] mr-1 md:mr-2 animate-pulse" />
+              <span className="text-[#22336a] font-semibold text-xs md:text-base">
                 PLACEMENT OPPORTUNITY PROGRAM
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#22336a] mb-6 leading-tight animate-slide-up">
+            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight animate-slide-up">
               Placement
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] animate-gradient-shift">
                 {" "}
@@ -1019,11 +1019,10 @@ const Index = () => {
               className="max-w-4xl mx-auto animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              <p className="text-xl text-gray-700 leading-relaxed mb-4">
-                Comprehensive placement support with assured career guidance and
-                guaranteed success
+              <p className="text-sm md:text-xl text-gray-700 leading-relaxed mb-2 md:mb-4">
+                Comprehensive placement support with assured career guidance
               </p>
-              <div className="flex items-center justify-center space-x-8 text-sm text-gray-600">
+              <div className="hidden md:flex items-center justify-center space-x-8 text-sm text-gray-600">
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"></div>
                   <span>Career Opportunities</span>
@@ -1046,8 +1045,61 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Professional Grid Layout */}
-          <div className="grid lg:grid-cols-2 gap-16 mb-20">
+          {/* Mobile: Compact Cards Layout */}
+          <div className="block md:hidden mb-6">
+            <div className="space-y-3">
+              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Trophy className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-bold text-[#22336a] mb-1">
+                      200+ Placement Opportunities
+                    </h3>
+                    <p className="text-xs text-gray-600">
+                      Guaranteed access to extensive placement opportunities across leading companies
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <TrendingUp className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-bold text-[#22336a] mb-1">
+                      First Year Tuition Fee Back
+                    </h3>
+                    <p className="text-xs text-gray-600">
+                      We'll refund your first-year tuition fee if you don't receive promised opportunities
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Users className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-bold text-[#22336a] mb-1">
+                      Dedicated Career Support
+                    </h3>
+                    <p className="text-xs text-gray-600">
+                      Personal mentorship, interview preparation, and continuous guidance
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Professional Grid Layout */}
+          <div className="hidden md:grid lg:grid-cols-2 gap-16 mb-20">
             {/* Left Side - Key Guarantees */}
             <div className="space-y-8">
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 group">
@@ -1057,13 +1109,11 @@ const Index = () => {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-3">
-                      <p>200 +Placement Opportunities</p>
+                      200+ Placement Opportunities
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      <p>
-                        Guaranteed access to extensive placement opportunities
-                        across leading companies{" "}
-                      </p>
+                      Guaranteed access to extensive placement opportunities
+                      across leading companies
                     </p>
                   </div>
                 </div>
@@ -1106,49 +1156,40 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Professional CTA */}
+          {/* Compact CTA for Mobile */}
           <div className="text-center">
             <div className="max-w-2xl mx-auto">
-              <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-lg md:rounded-2xl p-4 md:p-8 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-4">
+                  <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-4">
                     Ready to Secure Your Future?
                   </h3>
-                  <p className="text-lg opacity-90 mb-6">
+                  <p className="text-sm md:text-lg opacity-90 mb-4 md:mb-6">
                     Join our placement guarantee program and take the first step
                     towards career success
                   </p>
-                  <div className="flex gap-4 justify-center">
+                  <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center">
                     <button
                       onClick={() => setShowPlacementPopup(true)}
-                      className="inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                      className="inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base"
                     >
                       <span>Learn More</span>
-                      <ChevronRight className="h-5 w-5 ml-2" />
+                      <ChevronRight className="h-4 w-4 md:h-5 md:w-5 ml-1 md:ml-2" />
                     </button>
                     <a
                       href="https://sunstone.in/apply-now"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-8 py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                      className="inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base"
                     >
                       <span>Apply Now</span>
-                      <ExternalLink className="h-5 w-5 ml-2" />
+                      <ExternalLink className="h-4 w-4 md:h-5 md:w-5 ml-1 md:ml-2" />
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Terms */}
-          <div className="text-center mt-8">
-            <p className="text-sm text-gray-500 max-w-3xl mx-auto leading-relaxed">
-              <p>
-                <br />
-              </p>
-            </p>
           </div>
         </div>
       </section>
