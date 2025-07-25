@@ -42,11 +42,19 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState("MBA");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [clickedRecruiters, setClickedRecruiters] = useState<string[]>([]);
-  const [expandedMobileProgram, setExpandedMobileProgram] = useState<string | null>(null);
-  const [mobileTabState, setMobileTabState] = useState<{[key: string]: 'specs' | 'eligibility'}>({});
+  const [expandedMobileProgram, setExpandedMobileProgram] = useState<
+    string | null
+  >(null);
+  const [mobileTabState, setMobileTabState] = useState<{
+    [key: string]: "specs" | "eligibility";
+  }>({});
   const [showMoreFAQs, setShowMoreFAQs] = useState(false);
-  const [selectedMobileProgram, setSelectedMobileProgram] = useState<string | null>(null);
-  const [showAllCertifications, setShowAllCertifications] = useState<{[key: string]: boolean}>({});
+  const [selectedMobileProgram, setSelectedMobileProgram] = useState<
+    string | null
+  >(null);
+  const [showAllCertifications, setShowAllCertifications] = useState<{
+    [key: string]: boolean;
+  }>({});
 
   // Carousel images
   const carouselImages = [
@@ -382,7 +390,9 @@ const Index = () => {
               </div>
               <div className="text-left">
                 <div className="text-xs md:text-sm font-bold">Apply Now</div>
-                <div className="text-xs opacity-90 hidden md:block">Sunstone Portal</div>
+                <div className="text-xs opacity-90 hidden md:block">
+                  Sunstone Portal
+                </div>
               </div>
             </div>
 
@@ -473,7 +483,8 @@ const Index = () => {
               </h1>
               <div className="mb-2 md:mb-6">
                 <p className="text-xs sm:text-xs md:text-base lg:text-lg xl:text-xl text-white/90 leading-relaxed max-w-2xl mb-1 md:mb-3 lg:mb-4">
-                  Join Hi-Tech Institute for industry-aligned programs with guaranteed placement support.
+                  Join Hi-Tech Institute for industry-aligned programs with
+                  guaranteed placement support.
                 </p>
                 <div className="inline-flex items-center px-2 md:px-6 py-1 md:py-3 rounded-lg md:rounded-xl">
                   <div className="flex items-center mr-1 md:mr-3">
@@ -590,7 +601,9 @@ const Index = () => {
             <div className="bg-[#c38935] text-white px-2 md:px-6 py-1.5 md:py-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xs md:text-lg lg:text-xl font-bold">Placement Highlights</h3>
+                  <h3 className="text-xs md:text-lg lg:text-xl font-bold">
+                    Placement Highlights
+                  </h3>
                   <p className="text-xs md:text-sm opacity-90">
                     MBA | MCA | BBA | BCA | B.Tech
                   </p>
@@ -605,19 +618,25 @@ const Index = () => {
                   <div className="text-sm md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
                     26 LPA
                   </div>
-                  <p className="text-xs md:text-sm text-gray-600">Highest Package</p>
+                  <p className="text-xs md:text-sm text-gray-600">
+                    Highest Package
+                  </p>
                 </div>
                 <div className="text-center">
                   <div className="text-sm md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
                     1200+
                   </div>
-                  <p className="text-xs md:text-sm text-gray-600">Top Recruiters</p>
+                  <p className="text-xs md:text-sm text-gray-600">
+                    Top Recruiters
+                  </p>
                 </div>
                 <div className="text-center">
                   <div className="text-sm md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
                     5000+
                   </div>
-                  <p className="text-xs md:text-sm text-gray-600">Students Placed</p>
+                  <p className="text-xs md:text-sm text-gray-600">
+                    Students Placed
+                  </p>
                 </div>
               </div>
 
@@ -625,7 +644,9 @@ const Index = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 md:gap-3 lg:gap-4 mb-1.5 md:mb-4">
                 <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
                   <div className="w-4 h-4 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xs md:text-sm">63%</span>
+                    <span className="text-white font-bold text-xs md:text-sm">
+                      63%
+                    </span>
                   </div>
                   <div>
                     <p className="font-semibold text-[#22336a] text-xs md:text-sm">
@@ -636,7 +657,9 @@ const Index = () => {
                 </div>
                 <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
                   <div className="w-4 h-4 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#22336a] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xs md:text-sm">7X</span>
+                    <span className="text-white font-bold text-xs md:text-sm">
+                      7X
+                    </span>
                   </div>
                   <div>
                     <p className="font-semibold text-[#22336a] text-xs md:text-sm">
@@ -656,7 +679,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
 
       <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
         <div className="absolute inset-0">
@@ -705,23 +727,23 @@ const Index = () => {
                   {
                     src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F634b6859a0a5475897251bed28fb9a48?format=webp&width=800",
                     title: "Excellence in Education",
-                    desc: "Recognized for outstanding educational services"
+                    desc: "Recognized for outstanding educational services",
                   },
                   {
                     src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F21c4bdaba70546e89b1432a5a71417d5?format=webp&width=800",
                     title: "Innovation Excellence",
-                    desc: "Leading innovation in educational technology"
+                    desc: "Leading innovation in educational technology",
                   },
                   {
                     src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F8a91f11dc8e04d358b985214fbcb8d95?format=webp&width=800",
                     title: "ASSOCHAM India",
-                    desc: "Excellence in Educational Innovation"
+                    desc: "Excellence in Educational Innovation",
                   },
                   {
                     src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800",
                     title: "IndiGlobal Education",
-                    desc: "Outstanding Academic Excellence"
-                  }
+                    desc: "Outstanding Academic Excellence",
+                  },
                 ].map((award, index) => (
                   <div key={index} className="flex-shrink-0 w-60">
                     <div className="bg-white rounded-2xl p-4 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
@@ -755,33 +777,33 @@ const Index = () => {
                 {
                   src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F634b6859a0a5475897251bed28fb9a48?format=webp&width=800",
                   title: "Excellence in Education",
-                  desc: "Recognized for outstanding educational services"
+                  desc: "Recognized for outstanding educational services",
                 },
                 {
                   src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F21c4bdaba70546e89b1432a5a71417d5?format=webp&width=800",
                   title: "Innovation Excellence",
-                  desc: "Leading innovation in educational technology"
+                  desc: "Leading innovation in educational technology",
                 },
                 {
                   src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2Ffb516054d41948ecafc7dad3868c1bea?format=webp&width=800",
                   title: "Quality Assurance",
-                  desc: "Commitment to quality education standards"
+                  desc: "Commitment to quality education standards",
                 },
                 {
                   src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F8a91f11dc8e04d358b985214fbcb8d95?format=webp&width=800",
                   title: "ASSOCHAM India",
-                  desc: "Excellence in Educational Innovation"
+                  desc: "Excellence in Educational Innovation",
                 },
                 {
                   src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800",
                   title: "IndiGlobal Education",
-                  desc: "Outstanding Academic Excellence"
+                  desc: "Outstanding Academic Excellence",
                 },
                 {
                   src: "https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fc50132f6b1ef47a481e34f16b5b1f8fa?format=webp&width=800",
                   title: "HolonIQ EdTech 100",
-                  desc: "Top EdTech Company 2022"
-                }
+                  desc: "Top EdTech Company 2022",
+                },
               ].map((award, index) => (
                 <div key={index} className="flex-shrink-0 w-80">
                   <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
@@ -808,8 +830,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-
 
       {/* Professional Placement Opportunity Program Popup */}
       {showPlacementPopup && (
@@ -1063,7 +1083,8 @@ const Index = () => {
                       200+ Placement Opportunities
                     </h3>
                     <p className="text-xs text-gray-600">
-                      Guaranteed access to extensive placement opportunities across leading companies
+                      Guaranteed access to extensive placement opportunities
+                      across leading companies
                     </p>
                   </div>
                 </div>
@@ -1079,7 +1100,8 @@ const Index = () => {
                       First Year Tuition Fee Back
                     </h3>
                     <p className="text-xs text-gray-600">
-                      We'll refund your first-year tuition fee if you don't receive promised opportunities
+                      We'll refund your first-year tuition fee if you don't
+                      receive promised opportunities
                     </p>
                   </div>
                 </div>
@@ -1095,7 +1117,8 @@ const Index = () => {
                       Dedicated Career Support
                     </h3>
                     <p className="text-xs text-gray-600">
-                      Personal mentorship, interview preparation, and continuous guidance
+                      Personal mentorship, interview preparation, and continuous
+                      guidance
                     </p>
                   </div>
                 </div>
@@ -1225,7 +1248,8 @@ const Index = () => {
                       Expert Sessions
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Session by industry experts and leading faculty from Fortune 500 companies
+                      Session by industry experts and leading faculty from
+                      Fortune 500 companies
                     </p>
                   </div>
                 </div>
@@ -1238,11 +1262,15 @@ const Index = () => {
                       Professional Portfolio
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Showcase verified skills and experience to increase hiring chances
+                      Showcase verified skills and experience to increase hiring
+                      chances
                     </p>
                   </div>
                 </div>
-                <div className="flex-shrink-0 w-72 group relative cursor-pointer" onClick={() => setShowPlacementPopup(true)}>
+                <div
+                  className="flex-shrink-0 w-72 group relative cursor-pointer"
+                  onClick={() => setShowPlacementPopup(true)}
+                >
                   <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                     <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 relative">
                       <TrendingUp className="h-6 w-6 text-white" />
@@ -1254,7 +1282,8 @@ const Index = () => {
                       POP
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Access to 200+ guaranteed job opportunities with comprehensive placement support
+                      Access to 200+ guaranteed job opportunities with
+                      comprehensive placement support
                     </p>
                   </div>
                 </div>
@@ -1267,7 +1296,8 @@ const Index = () => {
                       Certifications
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      In-demand advanced certifications to choose from various domains and enhance your career prospects
+                      In-demand advanced certifications to choose from various
+                      domains and enhance your career prospects
                     </p>
                   </div>
                 </div>
@@ -1334,8 +1364,8 @@ const Index = () => {
                   POP
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Access to 200+ guaranteed job opportunities with
-                  comprehensive placement support
+                  Access to 200+ guaranteed job opportunities with comprehensive
+                  placement support
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1398,15 +1428,19 @@ const Index = () => {
                 </label>
                 <select
                   value={selectedMobileProgram || ""}
-                  onChange={(e) => setSelectedMobileProgram(e.target.value || null)}
+                  onChange={(e) =>
+                    setSelectedMobileProgram(e.target.value || null)
+                  }
                   className="w-full p-3 border-2 border-[#22336a] rounded-lg text-[#22336a] font-medium focus:outline-none focus:ring-4 focus:ring-[#22336a]/20 focus:border-[#c38935] bg-white shadow-lg"
                 >
                   <option value="">Choose a program...</option>
-                  {Object.keys(programs).filter(programName => programName !== 'MBA').map((programName) => (
-                    <option key={programName} value={programName}>
-                      {programName} Program
-                    </option>
-                  ))}
+                  {Object.keys(programs)
+                    .filter((programName) => programName !== "MBA")
+                    .map((programName) => (
+                      <option key={programName} value={programName}>
+                        {programName} Program
+                      </option>
+                    ))}
                 </select>
 
                 {/* Helper text */}
@@ -1418,16 +1452,20 @@ const Index = () => {
             </div>
 
             {/* Selected Program Details */}
-            {selectedMobileProgram && selectedMobileProgram !== 'MBA' && (
+            {selectedMobileProgram && selectedMobileProgram !== "MBA" && (
               <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
                 {/* Program Header */}
-                <div className={`bg-gradient-to-r ${programs[selectedMobileProgram].color} p-4 text-white`}>
+                <div
+                  className={`bg-gradient-to-r ${programs[selectedMobileProgram].color} p-4 text-white`}
+                >
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
                       <GraduationCap className="h-5 w-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold">{selectedMobileProgram}</h3>
+                      <h3 className="text-lg font-bold">
+                        {selectedMobileProgram}
+                      </h3>
                       <p className="text-sm opacity-90">Program Details</p>
                     </div>
                   </div>
@@ -1437,23 +1475,41 @@ const Index = () => {
                   {/* Dropdown for Duration & Projects */}
                   <div className="mb-4">
                     <div className="bg-gray-50 rounded-lg p-3">
-                      <h4 className="font-semibold text-[#22336a] text-sm mb-2">Program Overview:</h4>
+                      <h4 className="font-semibold text-[#22336a] text-sm mb-2">
+                        Program Overview:
+                      </h4>
                       <div className="space-y-2">
                         <div className="flex justify-between items-center">
-                          <span className="text-xs text-gray-600">Duration:</span>
-                          <span className="text-sm font-medium text-[#22336a]">{programs[selectedMobileProgram].duration}</span>
+                          <span className="text-xs text-gray-600">
+                            Duration:
+                          </span>
+                          <span className="text-sm font-medium text-[#22336a]">
+                            {programs[selectedMobileProgram].duration}
+                          </span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-xs text-gray-600">Projects:</span>
-                          <span className="text-sm font-medium text-[#22336a]">{programs[selectedMobileProgram].projects}</span>
+                          <span className="text-xs text-gray-600">
+                            Projects:
+                          </span>
+                          <span className="text-sm font-medium text-[#22336a]">
+                            {programs[selectedMobileProgram].projects}
+                          </span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-xs text-gray-600">Certifications:</span>
-                          <span className="text-sm font-medium text-[#22336a]">{programs[selectedMobileProgram].certifications}</span>
+                          <span className="text-xs text-gray-600">
+                            Certifications:
+                          </span>
+                          <span className="text-sm font-medium text-[#22336a]">
+                            {programs[selectedMobileProgram].certifications}
+                          </span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-xs text-gray-600">Internships:</span>
-                          <span className="text-sm font-medium text-[#22336a]">{programs[selectedMobileProgram].internships}</span>
+                          <span className="text-xs text-gray-600">
+                            Internships:
+                          </span>
+                          <span className="text-sm font-medium text-[#22336a]">
+                            {programs[selectedMobileProgram].internships}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -1464,21 +1520,33 @@ const Index = () => {
                     <div className="flex space-x-4">
                       <button
                         className={`py-2 px-1 border-b-2 font-medium text-sm ${
-                          (mobileTabState[selectedMobileProgram] || 'specs') === 'specs'
-                            ? 'border-[#22336a] text-[#22336a]'
-                            : 'border-transparent text-gray-500'
+                          (mobileTabState[selectedMobileProgram] || "specs") ===
+                          "specs"
+                            ? "border-[#22336a] text-[#22336a]"
+                            : "border-transparent text-gray-500"
                         }`}
-                        onClick={() => setMobileTabState({...mobileTabState, [selectedMobileProgram]: 'specs'})}
+                        onClick={() =>
+                          setMobileTabState({
+                            ...mobileTabState,
+                            [selectedMobileProgram]: "specs",
+                          })
+                        }
                       >
                         Specifications
                       </button>
                       <button
                         className={`py-2 px-1 border-b-2 font-medium text-sm ${
-                          mobileTabState[selectedMobileProgram] === 'eligibility'
-                            ? 'border-[#22336a] text-[#22336a]'
-                            : 'border-transparent text-gray-500'
+                          mobileTabState[selectedMobileProgram] ===
+                          "eligibility"
+                            ? "border-[#22336a] text-[#22336a]"
+                            : "border-transparent text-gray-500"
                         }`}
-                        onClick={() => setMobileTabState({...mobileTabState, [selectedMobileProgram]: 'eligibility'})}
+                        onClick={() =>
+                          setMobileTabState({
+                            ...mobileTabState,
+                            [selectedMobileProgram]: "eligibility",
+                          })
+                        }
                       >
                         Eligibility
                       </button>
@@ -1486,29 +1554,48 @@ const Index = () => {
                   </div>
 
                   {/* Tab Content */}
-                  {(mobileTabState[selectedMobileProgram] || 'specs') === 'specs' ? (
+                  {(mobileTabState[selectedMobileProgram] || "specs") ===
+                  "specs" ? (
                     <div className="space-y-2">
-                      <h4 className="font-semibold text-[#22336a] text-sm">Key Certifications:</h4>
+                      <h4 className="font-semibold text-[#22336a] text-sm">
+                        Key Certifications:
+                      </h4>
                       {programs[selectedMobileProgram].certificationsList
-                        .slice(0, showAllCertifications[selectedMobileProgram] ? undefined : 3)
+                        .slice(
+                          0,
+                          showAllCertifications[selectedMobileProgram]
+                            ? undefined
+                            : 3,
+                        )
                         .map((cert, certIndex) => (
-                        <div key={certIndex} className="flex items-start space-x-2 p-2 bg-gray-50 rounded-md">
-                          <div className="w-4 h-4 bg-[#c38935] rounded-full mt-0.5 flex-shrink-0"></div>
-                          <div>
-                            <p className="text-sm font-medium text-[#22336a]">{cert.name}</p>
-                            <p className="text-xs text-gray-600">{cert.careers}</p>
+                          <div
+                            key={certIndex}
+                            className="flex items-start space-x-2 p-2 bg-gray-50 rounded-md"
+                          >
+                            <div className="w-4 h-4 bg-[#c38935] rounded-full mt-0.5 flex-shrink-0"></div>
+                            <div>
+                              <p className="text-sm font-medium text-[#22336a]">
+                                {cert.name}
+                              </p>
+                              <p className="text-xs text-gray-600">
+                                {cert.careers}
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ))}
 
                       {/* View More / View Less Button */}
-                      {programs[selectedMobileProgram].certificationsList.length > 3 && (
+                      {programs[selectedMobileProgram].certificationsList
+                        .length > 3 && (
                         <div className="text-center mt-3">
                           <button
-                            onClick={() => setShowAllCertifications({
-                              ...showAllCertifications,
-                              [selectedMobileProgram]: !showAllCertifications[selectedMobileProgram]
-                            })}
+                            onClick={() =>
+                              setShowAllCertifications({
+                                ...showAllCertifications,
+                                [selectedMobileProgram]:
+                                  !showAllCertifications[selectedMobileProgram],
+                              })
+                            }
                             className="inline-flex items-center px-4 py-2 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-medium rounded-lg transition-all duration-300 text-sm"
                           >
                             {showAllCertifications[selectedMobileProgram] ? (
@@ -1518,7 +1605,12 @@ const Index = () => {
                               </>
                             ) : (
                               <>
-                                <span>View More ({programs[selectedMobileProgram].certificationsList.length - 3} more)</span>
+                                <span>
+                                  View More (
+                                  {programs[selectedMobileProgram]
+                                    .certificationsList.length - 3}{" "}
+                                  more)
+                                </span>
                                 <ChevronDown className="ml-1 h-4 w-4" />
                               </>
                             )}
@@ -1528,8 +1620,12 @@ const Index = () => {
                     </div>
                   ) : (
                     <div className="bg-gray-50 rounded-lg p-3">
-                      <h4 className="font-semibold text-[#22336a] text-sm mb-2">Eligibility Criteria:</h4>
-                      <p className="text-sm text-gray-700">{programs[selectedMobileProgram].eligibility}</p>
+                      <h4 className="font-semibold text-[#22336a] text-sm mb-2">
+                        Eligibility Criteria:
+                      </h4>
+                      <p className="text-sm text-gray-700">
+                        {programs[selectedMobileProgram].eligibility}
+                      </p>
                     </div>
                   )}
 
@@ -1741,7 +1837,8 @@ const Index = () => {
               </span>
             </h2>
             <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Make quality education affordable with our innovative EMI options and scholarship programs
+              Make quality education affordable with our innovative EMI options
+              and scholarship programs
             </p>
           </div>
 
@@ -1769,7 +1866,9 @@ const Index = () => {
                 <div className="space-y-2 md:space-y-4 mb-4 md:mb-8">
                   <div className="flex items-center space-x-2 md:space-x-3 bg-white/20 rounded-lg md:rounded-xl p-2 md:p-4">
                     <div className="w-4 h-4 md:w-6 md:h-6 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-[#c38935] text-xs md:text-sm">✓</span>
+                      <span className="text-[#c38935] text-xs md:text-sm">
+                        ✓
+                      </span>
                     </div>
                     <span className="text-white font-medium text-sm md:text-base">
                       0-Cost EMI available
@@ -1777,7 +1876,9 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-2 md:space-x-3 bg-white/20 rounded-lg md:rounded-xl p-2 md:p-4">
                     <div className="w-4 h-4 md:w-6 md:h-6 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-[#c38935] text-xs md:text-sm">✓</span>
+                      <span className="text-[#c38935] text-xs md:text-sm">
+                        ✓
+                      </span>
                     </div>
                     <span className="text-white font-medium text-sm md:text-base">
                       Up to 100% scholarship available
@@ -2031,7 +2132,7 @@ const Index = () => {
                   desc: "Submit application online",
                   time: "5 minutes",
                   color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+                  icon: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z",
                 },
                 {
                   step: "2",
@@ -2039,7 +2140,7 @@ const Index = () => {
                   desc: "Expert guidance & evaluation",
                   time: "Expert Help",
                   color: "from-[#c38935] to-[#d4a853]",
-                  icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z",
                 },
                 {
                   step: "3",
@@ -2047,7 +2148,7 @@ const Index = () => {
                   desc: "Document verification",
                   time: "Secure",
                   color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z"
+                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
                 },
                 {
                   step: "4",
@@ -2055,23 +2156,35 @@ const Index = () => {
                   desc: "Begin your journey",
                   time: "Success",
                   color: "from-[#c38935] to-[#d4a853]",
-                  icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                }
+                  icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
+                },
               ].map((item, index) => (
                 <div key={index} className="group relative">
                   <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div className="flex items-center mb-2">
-                      <div className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}>
-                        <span className="text-white font-bold text-sm">{item.step}</span>
+                      <div
+                        className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
+                      >
+                        <span className="text-white font-bold text-sm">
+                          {item.step}
+                        </span>
                         <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#c38935] rounded-full flex items-center justify-center">
-                          <svg className="w-2 h-2 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <svg
+                            className="w-2 h-2 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
                             <path d={item.icon} />
                           </svg>
                         </div>
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xs font-bold text-[#22336a] mb-0.5">{item.title}</h3>
-                        <div className="text-xs text-[#c38935] font-semibold">{item.time}</div>
+                        <h3 className="text-xs font-bold text-[#22336a] mb-0.5">
+                          {item.title}
+                        </h3>
+                        <div className="text-xs text-[#c38935] font-semibold">
+                          {item.time}
+                        </div>
                       </div>
                     </div>
                     <p className="text-gray-600 text-xs leading-relaxed">
@@ -2269,8 +2382,6 @@ const Index = () => {
         </div>
       </section>
 
-
-
       {/* Enhanced Student Testimonials */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
         {/* Animated Background Elements */}
@@ -2322,33 +2433,43 @@ const Index = () => {
                     role: "MBA Graduate • Software Engineer",
                     company: "TCS",
                     initials: "RK",
-                    quote: "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
-                    color: "from-[#c38935] to-[#f4d03f]"
+                    quote:
+                      "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
+                    color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
                     name: "Priya Sharma",
                     role: "BCA Graduate • Full Stack Developer",
                     company: "Infosys",
                     initials: "PS",
-                    quote: "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
-                    color: "from-[#22336a] to-[#3b4d7a]"
+                    quote:
+                      "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
                     name: "Amit Joshi",
                     role: "B.Tech Graduate • Senior Developer",
                     company: "Wipro",
                     initials: "AJ",
-                    quote: "The advanced certifications and project-based learning methodology prepared me perfectly for the industry demands.",
-                    color: "from-[#c38935] to-[#f4d03f]"
-                  }
+                    quote:
+                      "The advanced certifications and project-based learning methodology prepared me perfectly for the industry demands.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
                 ].map((testimonial, index) => (
-                  <div key={index} className="flex-shrink-0 w-72 group relative">
+                  <div
+                    key={index}
+                    className="flex-shrink-0 w-72 group relative"
+                  >
                     <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4">
                       {/* Avatar and Info */}
                       <div className="flex items-center mb-4">
                         <div className="relative">
-                          <div className={`w-12 h-12 bg-gradient-to-br ${testimonial.color} rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300`}>
-                            <span className="text-white font-bold text-sm">{testimonial.initials}</span>
+                          <div
+                            className={`w-12 h-12 bg-gradient-to-br ${testimonial.color} rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300`}
+                          >
+                            <span className="text-white font-bold text-sm">
+                              {testimonial.initials}
+                            </span>
                           </div>
                           <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
                             <span className="text-white text-xs">✓</span>
@@ -2396,25 +2517,34 @@ const Index = () => {
                     role: "MBA Graduate • Software Engineer",
                     company: "TCS",
                     initials: "RK",
-                    quote: "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
-                    color: "from-[#c38935] to-[#f4d03f]"
+                    quote:
+                      "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
+                    color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
                     name: "Priya Sharma",
                     role: "BCA Graduate • Full Stack Developer",
                     company: "Infosys",
                     initials: "PS",
-                    quote: "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
-                    color: "from-[#22336a] to-[#3b4d7a]"
-                  }
+                    quote:
+                      "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
                 ].map((testimonial, index) => (
-                  <div key={`duplicate-${index}`} className="flex-shrink-0 w-72 group relative">
+                  <div
+                    key={`duplicate-${index}`}
+                    className="flex-shrink-0 w-72 group relative"
+                  >
                     <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4">
                       {/* Avatar and Info */}
                       <div className="flex items-center mb-4">
                         <div className="relative">
-                          <div className={`w-12 h-12 bg-gradient-to-br ${testimonial.color} rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300`}>
-                            <span className="text-white font-bold text-sm">{testimonial.initials}</span>
+                          <div
+                            className={`w-12 h-12 bg-gradient-to-br ${testimonial.color} rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300`}
+                          >
+                            <span className="text-white font-bold text-sm">
+                              {testimonial.initials}
+                            </span>
                           </div>
                           <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
                             <span className="text-white text-xs">✓</span>
@@ -2753,76 +2883,80 @@ const Index = () => {
                   category: "success",
                 },
               ]
-              .slice(0, showMoreFAQs ? undefined : 6) // Show first 6 by default
-              .map((faq, index) => (
-                <div key={index} className="group">
-                  <Collapsible>
-                    <CollapsibleTrigger className="w-full">
-                      <div className="p-3 md:p-6 rounded-lg md:rounded-xl transition-all duration-300 cursor-pointer bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#22336a]/30 hover:shadow-lg">
-                        <div className="flex items-center justify-between text-left">
-                          <div className="flex items-center space-x-2 md:space-x-4 flex-1">
-                            <div className="w-8 h-8 md:w-12 md:h-12 bg-[#22336a] rounded-lg md:rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                              <span className="text-white font-bold text-sm md:text-base">
-                                {index + 1}
-                              </span>
-                            </div>
-                            <div className="flex-1">
-                              <h3 className="text-sm md:text-lg font-bold text-[#22336a] group-hover:text-[#22336a] transition-colors duration-300">
-                                {faq.question}
-                              </h3>
-                              <div className="text-xs md:text-sm font-medium mt-1 text-[#22336a]/70">
-                                {faq.category === "sunstone"
-                                  ? "Sunstone"
-                                  : faq.category === "admission"
-                                    ? "Admission"
-                                    : faq.category === "fees"
-                                      ? "Fees"
-                                      : "Support"}
+                .slice(0, showMoreFAQs ? undefined : 6) // Show first 6 by default
+                .map((faq, index) => (
+                  <div key={index} className="group">
+                    <Collapsible>
+                      <CollapsibleTrigger className="w-full">
+                        <div className="p-3 md:p-6 rounded-lg md:rounded-xl transition-all duration-300 cursor-pointer bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#22336a]/30 hover:shadow-lg">
+                          <div className="flex items-center justify-between text-left">
+                            <div className="flex items-center space-x-2 md:space-x-4 flex-1">
+                              <div className="w-8 h-8 md:w-12 md:h-12 bg-[#22336a] rounded-lg md:rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                                <span className="text-white font-bold text-sm md:text-base">
+                                  {index + 1}
+                                </span>
+                              </div>
+                              <div className="flex-1">
+                                <h3 className="text-sm md:text-lg font-bold text-[#22336a] group-hover:text-[#22336a] transition-colors duration-300">
+                                  {faq.question}
+                                </h3>
+                                <div className="text-xs md:text-sm font-medium mt-1 text-[#22336a]/70">
+                                  {faq.category === "sunstone"
+                                    ? "Sunstone"
+                                    : faq.category === "admission"
+                                      ? "Admission"
+                                      : faq.category === "fees"
+                                        ? "Fees"
+                                        : "Support"}
+                                </div>
                               </div>
                             </div>
+                            <ChevronDown className="h-5 w-5 md:h-6 md:w-6 text-gray-600 group-hover:text-[#22336a] transform group-hover:rotate-180 transition-all duration-300" />
                           </div>
-                          <ChevronDown className="h-5 w-5 md:h-6 md:w-6 text-gray-600 group-hover:text-[#22336a] transform group-hover:rotate-180 transition-all duration-300" />
                         </div>
-                      </div>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent>
-                      <div className="px-3 md:px-6 pb-3 md:pb-6 -mt-2">
-                        <div className="pt-3 md:pt-6 border-t border-gray-200 bg-white rounded-lg md:rounded-xl p-3 md:p-6 ml-8 md:ml-16 shadow-sm">
-                          <div className="text-gray-700 leading-relaxed text-sm md:text-lg">
-                            {faq.answer.includes("•") ? (
-                              <div className="space-y-1 md:space-y-2">
-                                {faq.answer
-                                  .split("\n")
-                                  .map((point, pointIndex) => (
-                                    <div
-                                      key={pointIndex}
-                                      className="flex items-start space-x-2"
-                                    >
-                                      {point.startsWith("•") ? (
-                                        <>
-                                          <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
-                                            ���
-                                          </span>
+                      </CollapsibleTrigger>
+                      <CollapsibleContent>
+                        <div className="px-3 md:px-6 pb-3 md:pb-6 -mt-2">
+                          <div className="pt-3 md:pt-6 border-t border-gray-200 bg-white rounded-lg md:rounded-xl p-3 md:p-6 ml-8 md:ml-16 shadow-sm">
+                            <div className="text-gray-700 leading-relaxed text-sm md:text-lg">
+                              {faq.answer.includes("•") ? (
+                                <div className="space-y-1 md:space-y-2">
+                                  {faq.answer
+                                    .split("\n")
+                                    .map((point, pointIndex) => (
+                                      <div
+                                        key={pointIndex}
+                                        className="flex items-start space-x-2"
+                                      >
+                                        {point.startsWith("•") ? (
+                                          <>
+                                            <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
+                                              ���
+                                            </span>
+                                            <span className="text-sm md:text-base">
+                                              {point.substring(1).trim()}
+                                            </span>
+                                          </>
+                                        ) : (
                                           <span className="text-sm md:text-base">
-                                            {point.substring(1).trim()}
+                                            {point}
                                           </span>
-                                        </>
-                                      ) : (
-                                        <span className="text-sm md:text-base">{point}</span>
-                                      )}
-                                    </div>
-                                  ))}
-                              </div>
-                            ) : (
-                              <p className="text-sm md:text-base">{faq.answer}</p>
-                            )}
+                                        )}
+                                      </div>
+                                    ))}
+                                </div>
+                              ) : (
+                                <p className="text-sm md:text-base">
+                                  {faq.answer}
+                                </p>
+                              )}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </CollapsibleContent>
-                  </Collapsible>
-                </div>
-              ))}
+                      </CollapsibleContent>
+                    </Collapsible>
+                  </div>
+                ))}
             </div>
 
             {/* Know More Button */}
@@ -2965,7 +3099,9 @@ const Index = () => {
 
             {/* Programs */}
             <div>
-              <h3 className="text-xs md:text-base lg:text-lg font-bold text-white mb-0.5 md:mb-3 lg:mb-4">Programs</h3>
+              <h3 className="text-xs md:text-base lg:text-lg font-bold text-white mb-0.5 md:mb-3 lg:mb-4">
+                Programs
+              </h3>
               <ul className="space-y-0.5 md:space-y-2 text-xs md:text-sm">
                 <li>
                   <a
@@ -3012,7 +3148,9 @@ const Index = () => {
 
             {/* Contact */}
             <div>
-              <h3 className="text-xs md:text-base lg:text-lg font-bold text-white mb-0.5 md:mb-3 lg:mb-4">Contact</h3>
+              <h3 className="text-xs md:text-base lg:text-lg font-bold text-white mb-0.5 md:mb-3 lg:mb-4">
+                Contact
+              </h3>
               <div className="space-y-0.5 md:space-y-3 text-xs md:text-sm">
                 <a
                   href="mailto:connect@sunstone.in"
