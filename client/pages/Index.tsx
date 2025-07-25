@@ -44,6 +44,7 @@ const Index = () => {
   const [clickedRecruiters, setClickedRecruiters] = useState<string[]>([]);
   const [expandedMobileProgram, setExpandedMobileProgram] = useState<string | null>(null);
   const [mobileTabState, setMobileTabState] = useState<{[key: string]: 'specs' | 'eligibility'}>({});
+  const [showMoreFAQs, setShowMoreFAQs] = useState(false);
 
   // Carousel images
   const carouselImages = [
@@ -1722,7 +1723,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-2 md:space-x-3 bg-white/20 rounded-lg md:rounded-xl p-2 md:p-4">
                     <div className="w-4 h-4 md:w-6 md:h-6 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-[#c38935] text-xs md:text-sm">��</span>
+                      <span className="text-[#c38935] text-xs md:text-sm">✓</span>
                     </div>
                     <span className="text-white font-medium text-sm md:text-base">
                       Up to 100% scholarship available
