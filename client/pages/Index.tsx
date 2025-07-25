@@ -42,6 +42,7 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState("MBA");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [clickedRecruiters, setClickedRecruiters] = useState<string[]>([]);
+  const [expandedMobileProgram, setExpandedMobileProgram] = useState<string | null>(null);
 
   // Carousel images
   const carouselImages = [
