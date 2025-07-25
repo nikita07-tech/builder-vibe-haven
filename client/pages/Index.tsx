@@ -2553,23 +2553,25 @@ const Index = () => {
                     "Through dedicated placement officers, personalized career counseling, skill development workshops, professional portfolio building, continuous mentorship, and access to extensive alumni network. We maintain 95% placement rate with comprehensive career support.",
                   category: "success",
                 },
-              ].map((faq, index) => (
+              ]
+              .slice(0, showMoreFAQs ? undefined : 6) // Show first 6 by default
+              .map((faq, index) => (
                 <div key={index} className="group">
                   <Collapsible>
                     <CollapsibleTrigger className="w-full">
-                      <div className="p-6 rounded-xl transition-all duration-300 cursor-pointer bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#22336a]/30 hover:shadow-lg">
+                      <div className="p-3 md:p-6 rounded-lg md:rounded-xl transition-all duration-300 cursor-pointer bg-gray-50 hover:bg-white border border-gray-200 hover:border-[#22336a]/30 hover:shadow-lg">
                         <div className="flex items-center justify-between text-left">
-                          <div className="flex items-center space-x-4 flex-1">
-                            <div className="w-12 h-12 bg-[#22336a] rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                              <span className="text-white font-bold">
+                          <div className="flex items-center space-x-2 md:space-x-4 flex-1">
+                            <div className="w-8 h-8 md:w-12 md:h-12 bg-[#22336a] rounded-lg md:rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                              <span className="text-white font-bold text-sm md:text-base">
                                 {index + 1}
                               </span>
                             </div>
                             <div className="flex-1">
-                              <h3 className="text-lg font-bold text-[#22336a] group-hover:text-[#22336a] transition-colors duration-300">
+                              <h3 className="text-sm md:text-lg font-bold text-[#22336a] group-hover:text-[#22336a] transition-colors duration-300">
                                 {faq.question}
                               </h3>
-                              <div className="text-sm font-medium mt-1 text-[#22336a]/70">
+                              <div className="text-xs md:text-sm font-medium mt-1 text-[#22336a]/70">
                                 {faq.category === "sunstone"
                                   ? "Sunstone"
                                   : faq.category === "admission"
@@ -2580,16 +2582,16 @@ const Index = () => {
                               </div>
                             </div>
                           </div>
-                          <ChevronDown className="h-6 w-6 text-gray-600 group-hover:text-[#22336a] transform group-hover:rotate-180 transition-all duration-300" />
+                          <ChevronDown className="h-5 w-5 md:h-6 md:w-6 text-gray-600 group-hover:text-[#22336a] transform group-hover:rotate-180 transition-all duration-300" />
                         </div>
                       </div>
                     </CollapsibleTrigger>
                     <CollapsibleContent>
-                      <div className="px-6 pb-6 -mt-2">
-                        <div className="pt-6 border-t border-gray-200 bg-white rounded-xl p-6 ml-16 shadow-sm">
-                          <div className="text-gray-700 leading-relaxed text-lg">
+                      <div className="px-3 md:px-6 pb-3 md:pb-6 -mt-2">
+                        <div className="pt-3 md:pt-6 border-t border-gray-200 bg-white rounded-lg md:rounded-xl p-3 md:p-6 ml-8 md:ml-16 shadow-sm">
+                          <div className="text-gray-700 leading-relaxed text-sm md:text-lg">
                             {faq.answer.includes("•") ? (
-                              <div className="space-y-2">
+                              <div className="space-y-1 md:space-y-2">
                                 {faq.answer
                                   .split("\n")
                                   .map((point, pointIndex) => (
@@ -2599,21 +2601,21 @@ const Index = () => {
                                     >
                                       {point.startsWith("•") ? (
                                         <>
-                                          <span className="text-[#c38935] font-bold text-xl mt-0.5">
+                                          <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
                                             ���
                                           </span>
-                                          <span>
+                                          <span className="text-sm md:text-base">
                                             {point.substring(1).trim()}
                                           </span>
                                         </>
                                       ) : (
-                                        <span>{point}</span>
+                                        <span className="text-sm md:text-base">{point}</span>
                                       )}
                                     </div>
                                   ))}
                               </div>
                             ) : (
-                              <p>{faq.answer}</p>
+                              <p className="text-sm md:text-base">{faq.answer}</p>
                             )}
                           </div>
                         </div>
