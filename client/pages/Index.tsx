@@ -582,221 +582,71 @@ const Index = () => {
 
       {/* Placement Highlights - Moved right after Hero Banner */}
       <section className="py-6 md:py-8 lg:py-12 bg-[#22336a]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-4 md:mb-6">
-              Top Recruiters
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Join a network of 1,200+ leading companies that actively recruit
-              our graduates
-            </p>
-          </div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+            <div className="bg-[#c38935] text-white px-4 md:px-6 py-3 md:py-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-base md:text-lg lg:text-xl font-bold">Placement Highlights</h3>
+                  <p className="text-xs md:text-sm opacity-90">
+                    MBA | MCA | BBA | BCA | B.Tech
+                  </p>
+                </div>
+              </div>
+            </div>
 
-          {/* Mobile Carousel for Recruiters */}
-          <div className="block md:hidden mb-8">
-            <div className="overflow-hidden bg-gray-50 rounded-xl py-4">
-              <div className="flex space-x-8 animate-scroll-right-to-left whitespace-nowrap">
-                {[
-                  {
-                    name: "Bosch",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
-                  },
-                  {
-                    name: "HCL",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
-                  },
-                  {
-                    name: "TCS",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
-                  },
-                  {
-                    name: "Paytm",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
-                  },
-                  {
-                    name: "Microsoft",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800",
-                  },
-                  {
-                    name: "Genpact",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800",
-                  },
-                  {
-                    name: "Infosys",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
-                  },
-                  {
-                    name: "Airtel",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
-                  },
-                ].map((recruiter, index) => (
-                  <div
-                    key={`${recruiter.name}-${index}`}
-                    className="flex-shrink-0 transition-all duration-300 transform hover:scale-110 filter grayscale hover:filter-none"
-                  >
-                    <img
-                      src={recruiter.src}
-                      alt={recruiter.name}
-                      className="h-10 sm:h-12 w-auto"
-                    />
+            <div className="p-3 md:p-4 lg:p-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 lg:gap-6 mb-4 md:mb-6">
+                <div className="text-center">
+                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-2">
+                    26 LPA
                   </div>
-                ))}
+                  <p className="text-xs md:text-sm text-gray-600">Highest Package</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-2">
+                    1200+
+                  </div>
+                  <p className="text-xs md:text-sm text-gray-600">Top Recruiters</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-2">
+                    5000+
+                  </div>
+                  <p className="text-xs md:text-sm text-gray-600">Students Placed</p>
+                </div>
               </div>
-            </div>
-          </div>
 
-          {/* Desktop Two-line Animated Recruiters */}
-          <div className="hidden md:block space-y-6 mb-8">
-            {/* First line - Right to Left */}
-            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
-              <div className="flex space-x-12 animate-scroll-right-to-left whitespace-nowrap">
-                {[
-                  {
-                    name: "Bosch",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
-                  },
-                  {
-                    name: "HCL",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
-                  },
-                  {
-                    name: "TCS",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
-                  },
-                  {
-                    name: "Paytm",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
-                  },
-                  {
-                    name: "Microsoft",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800",
-                  },
-                  {
-                    name: "Genpact",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800",
-                  },
-                  // Duplicate for seamless loop
-                  {
-                    name: "Bosch",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
-                  },
-                  {
-                    name: "HCL",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
-                  },
-                ].map((recruiter, index) => (
-                  <button
-                    key={`${recruiter.name}-${index}`}
-                    onClick={() => handleRecruiterClick(recruiter.name)}
-                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
-                      clickedRecruiters.includes(recruiter.name)
-                        ? "filter-none"
-                        : "filter grayscale hover:filter-none"
-                    }`}
-                  >
-                    <img
-                      src={recruiter.src}
-                      alt={recruiter.name}
-                      className="h-16 w-auto"
-                    />
-                  </button>
-                ))}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 lg:gap-4 mb-3 md:mb-4">
+                <div className="bg-gray-50 rounded-lg p-2 md:p-3 lg:p-4 flex items-center space-x-2 md:space-x-3">
+                  <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-xs md:text-sm">63%</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#22336a] text-xs md:text-sm">
+                      63% Higher ROI
+                    </p>
+                    <p className="text-xs text-gray-600">vs private colleges</p>
+                  </div>
+                </div>
+                <div className="bg-gray-50 rounded-lg p-2 md:p-3 lg:p-4 flex items-center space-x-2 md:space-x-3">
+                  <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#22336a] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-xs md:text-sm">7X</span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#22336a] text-xs md:text-sm">
+                      7X More Companies
+                    </p>
+                    <p className="text-xs text-gray-600">vs institutes</p>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            {/* Second line - Left to Right */}
-            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
-              <div className="flex space-x-12 animate-scroll-left-to-right whitespace-nowrap">
-                {[
-                  {
-                    name: "Bajaj Finserv",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
-                  },
-                  {
-                    name: "Airtel",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
-                  },
-                  {
-                    name: "IBM",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
-                  },
-                  {
-                    name: "Infosys",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
-                  },
-                  {
-                    name: "Hero",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800",
-                  },
-                  {
-                    name: "Axis Bank",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800",
-                  },
-                  // Duplicate for seamless loop
-                  {
-                    name: "Bajaj Finserv",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
-                  },
-                  {
-                    name: "Airtel",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
-                  },
-                ].map((recruiter, index) => (
-                  <button
-                    key={`${recruiter.name}-${index}`}
-                    onClick={() => handleRecruiterClick(recruiter.name)}
-                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
-                      clickedRecruiters.includes(recruiter.name)
-                        ? "filter-none"
-                        : "filter grayscale hover:filter-none"
-                    }`}
-                  >
-                    <img
-                      src={recruiter.src}
-                      alt={recruiter.name}
-                      className="h-16 w-auto"
-                    />
-                  </button>
-                ))}
+              <div className="bg-gray-50 rounded-lg p-2 md:p-3 text-center">
+                <p className="text-xs md:text-sm text-gray-700">
+                  Placement report audited by B2K Analytics
+                </p>
               </div>
-            </div>
-          </div>
-
-          {/* Career Focus Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
-            <div className="text-center p-4 md:p-6 bg-white rounded-xl shadow-lg border border-gray-200">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
-                <Users className="h-6 w-6 md:h-8 md:w-8 text-white" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-[#22336a] mb-2">
-                Industry Connections
-              </h3>
-              <p className="text-sm md:text-base text-gray-600">
-                Strong network of leading companies across sectors
-              </p>
-            </div>
-            <div className="text-center p-4 md:p-6 bg-white rounded-xl shadow-lg border border-gray-200">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-[#22336a] rounded-full flex items-center justify-center">
-                <Trophy className="h-6 w-6 md:h-8 md:w-8 text-white" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-[#22336a] mb-2">
-                Career Growth
-              </h3>
-              <p className="text-sm md:text-base text-gray-600">
-                Excellent packages and growth opportunities
-              </p>
-            </div>
-            <div className="text-center p-4 md:p-6 bg-white rounded-xl shadow-lg border border-gray-200">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
-                <Target className="h-6 w-6 md:h-8 md:w-8 text-white" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold text-[#22336a] mb-2">
-                Success Stories
-              </h3>
-              <p className="text-sm md:text-base text-gray-600">
-                Proven track record of student achievements
-              </p>
             </div>
           </div>
         </div>
