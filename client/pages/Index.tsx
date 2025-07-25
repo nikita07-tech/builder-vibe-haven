@@ -1630,7 +1630,19 @@ const Index = () => {
                   {/* Apply Button */}
                   <div className="mt-4">
                     <a
-                      href="https://sunstone.in/apply-now"
+                      href={
+                        selectedMobileProgram === "MBA"
+                          ? "https://sunstone.in/campuses/hi-tech-institute/mba"
+                          : selectedMobileProgram === "BBA"
+                          ? "https://sunstone.in/campuses/hi-tech-institute/bba"
+                          : selectedMobileProgram === "BCA"
+                          ? "https://sunstone.in/campuses/hi-tech-institute/bca"
+                          : selectedMobileProgram === "MCA"
+                          ? "https://sunstone.in/campuses/hi-tech-institute/mca"
+                          : selectedMobileProgram === "B.Tech"
+                          ? "https://sunstone.in/campuses/hi-tech-institute/b-tech"
+                          : "https://sunstone.in/apply-now"
+                      }
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r ${programs[selectedMobileProgram].color} text-white font-bold text-sm rounded-lg transition-all duration-300 transform hover:scale-105`}
