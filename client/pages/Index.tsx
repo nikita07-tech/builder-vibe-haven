@@ -2131,8 +2131,13 @@ const Index = () => {
                   </p>
                 </h3>
                 <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                  Our achievements reflect our commitment to transforming lives
-                  through quality education
+                  <p>
+                    <strong style="font-size: 20px;">
+                      Our programs are designed to equip students with the
+                      right skills, certifications, and opportunities to
+                      succeed in today's job market.
+                    </strong>
+                  </p>
                 </p>
               </div>
 
