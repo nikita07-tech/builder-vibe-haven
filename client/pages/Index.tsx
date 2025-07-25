@@ -78,10 +78,10 @@ const Index = () => {
   };
 
   const handleRecruiterClick = (recruiterName: string) => {
-    setClickedRecruiters(prev =>
+    setClickedRecruiters((prev) =>
       prev.includes(recruiterName)
-        ? prev.filter(name => name !== recruiterName)
-        : [...prev, recruiterName]
+        ? prev.filter((name) => name !== recruiterName)
+        : [...prev, recruiterName],
     );
   };
 
@@ -955,8 +955,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-
-
           </div>
 
           {/* Professional CTA */}
@@ -1034,8 +1032,8 @@ const Index = () => {
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   <p>
-                    Session by industry experts and leading faculty from
-                    Fortune 500 companies
+                    Session by industry experts and leading faculty from Fortune
+                    500 companies
                   </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -1325,8 +1323,8 @@ const Index = () => {
               </span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Make quality education affordable with our innovative EMI options, scholarship
-              programs, and smart financial assistance
+              Make quality education affordable with our innovative EMI options,
+              scholarship programs, and smart financial assistance
             </p>
           </div>
 
@@ -1337,7 +1335,9 @@ const Index = () => {
               <div className="relative z-10">
                 <div className="flex items-center mb-6">
                   <div className="bg-white/20 px-4 py-2 rounded-full">
-                    <span className="text-white font-bold text-sm">EASY FEE PAYMENT</span>
+                    <span className="text-white font-bold text-sm">
+                      EASY FEE PAYMENT
+                    </span>
                   </div>
                 </div>
 
@@ -1345,8 +1345,8 @@ const Index = () => {
                   Take charge of your education
                 </h3>
                 <p className="text-lg opacity-90 mb-8 max-w-2xl">
-                  Pay smart by choosing Sunstone. Pay the college fee and a nominal amount to unlock your dream job with
-                  Sunstone.
+                  Pay smart by choosing Sunstone. Pay the college fee and a
+                  nominal amount to unlock your dream job with Sunstone.
                 </p>
 
                 <div className="space-y-4 mb-8">
@@ -1354,13 +1354,17 @@ const Index = () => {
                     <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
                       <span className="text-[#c38935] text-sm">✓</span>
                     </div>
-                    <span className="text-white font-medium">0-Cost EMI available</span>
+                    <span className="text-white font-medium">
+                      0-Cost EMI available
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3 bg-white/20 rounded-xl p-4">
                     <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
                       <span className="text-[#c38935] text-sm">✓</span>
                     </div>
-                    <span className="text-white font-medium">Up to 100% scholarship available</span>
+                    <span className="text-white font-medium">
+                      Up to 100% scholarship available
+                    </span>
                   </div>
                 </div>
 
@@ -1381,8 +1385,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-
-
         </div>
       </section>
 
@@ -1405,25 +1407,55 @@ const Index = () => {
             <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
               <div className="flex space-x-12 animate-scroll-right-to-left whitespace-nowrap">
                 {[
-                  { name: "Bosch", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800" },
-                  { name: "HCL", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800" },
-                  { name: "TCS", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800" },
-                  { name: "Paytm", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800" },
-                  { name: "Microsoft", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800" },
-                  { name: "Genpact", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800" },
+                  {
+                    name: "Bosch",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
+                  },
+                  {
+                    name: "HCL",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
+                  },
+                  {
+                    name: "TCS",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
+                  },
+                  {
+                    name: "Paytm",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
+                  },
+                  {
+                    name: "Microsoft",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800",
+                  },
+                  {
+                    name: "Genpact",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800",
+                  },
                   // Duplicate for seamless loop
-                  { name: "Bosch", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800" },
-                  { name: "HCL", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800" },
-                  { name: "TCS", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800" },
-                  { name: "Paytm", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800" }
+                  {
+                    name: "Bosch",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
+                  },
+                  {
+                    name: "HCL",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
+                  },
+                  {
+                    name: "TCS",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
+                  },
+                  {
+                    name: "Paytm",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
+                  },
                 ].map((recruiter, index) => (
                   <button
                     key={`${recruiter.name}-${index}`}
                     onClick={() => handleRecruiterClick(recruiter.name)}
                     className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
                       clickedRecruiters.includes(recruiter.name)
-                        ? 'filter-none'
-                        : 'filter grayscale hover:filter-none'
+                        ? "filter-none"
+                        : "filter grayscale hover:filter-none"
                     }`}
                   >
                     <img
@@ -1440,25 +1472,55 @@ const Index = () => {
             <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
               <div className="flex space-x-12 animate-scroll-left-to-right whitespace-nowrap">
                 {[
-                  { name: "Bajaj Finserv", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800" },
-                  { name: "Airtel", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800" },
-                  { name: "IBM", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800" },
-                  { name: "Infosys", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800" },
-                  { name: "Hero", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800" },
-                  { name: "Axis Bank", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800" },
+                  {
+                    name: "Bajaj Finserv",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
+                  },
+                  {
+                    name: "Airtel",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
+                  },
+                  {
+                    name: "IBM",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
+                  },
+                  {
+                    name: "Infosys",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
+                  },
+                  {
+                    name: "Hero",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800",
+                  },
+                  {
+                    name: "Axis Bank",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800",
+                  },
                   // Duplicate for seamless loop
-                  { name: "Bajaj Finserv", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800" },
-                  { name: "Airtel", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800" },
-                  { name: "IBM", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800" },
-                  { name: "Infosys", src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800" }
+                  {
+                    name: "Bajaj Finserv",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
+                  },
+                  {
+                    name: "Airtel",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
+                  },
+                  {
+                    name: "IBM",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
+                  },
+                  {
+                    name: "Infosys",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
+                  },
                 ].map((recruiter, index) => (
                   <button
                     key={`${recruiter.name}-${index}`}
                     onClick={() => handleRecruiterClick(recruiter.name)}
                     className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
                       clickedRecruiters.includes(recruiter.name)
-                        ? 'filter-none'
-                        : 'filter grayscale hover:filter-none'
+                        ? "filter-none"
+                        : "filter grayscale hover:filter-none"
                     }`}
                   >
                     <img
@@ -1914,7 +1976,7 @@ const Index = () => {
             <div className="relative z-10">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold mb-4">
-                  <h3 style={{textAlign: "center"}}>
+                  <h3 style={{ textAlign: "center" }}>
                     <strong>Career-Focused Learning Outcomes</strong>
                   </h3>
                   <p>
@@ -1923,10 +1985,10 @@ const Index = () => {
                 </h3>
                 <p className="text-xl opacity-90 max-w-3xl mx-auto">
                   <p>
-                    <strong style={{fontSize: "20px"}}>
-                      Our programs are designed to equip students with the
-                      right skills, certifications, and opportunities to
-                      succeed in today's job market.
+                    <strong style={{ fontSize: "20px" }}>
+                      Our programs are designed to equip students with the right
+                      skills, certifications, and opportunities to succeed in
+                      today's job market.
                     </strong>
                   </p>
                 </p>
@@ -1942,7 +2004,7 @@ const Index = () => {
                   </p>
                   <p className="text-sm opacity-70 mt-1">
                     <p>
-                      <strong style={{fontSize: "14px"}}>
+                      <strong style={{ fontSize: "14px" }}>
                         Future-ready skills for tomorrow's careers
                       </strong>
                     </p>
@@ -1957,7 +2019,7 @@ const Index = () => {
                   </p>
                   <p className="text-sm opacity-70 mt-1">
                     <p>
-                      <strong style={{fontSize: "14px"}}>
+                      <strong style={{ fontSize: "14px" }}>
                         &nbsp;Spanning tech, management &amp; more
                       </strong>
                     </p>
@@ -1972,7 +2034,7 @@ const Index = () => {
                   </p>
                   <p className="text-sm opacity-70 mt-1">
                     <p>
-                      <strong style={{fontSize: "14px"}}>
+                      <strong style={{ fontSize: "14px" }}>
                         &nbsp;Aligned with industry needs
                       </strong>
                     </p>
