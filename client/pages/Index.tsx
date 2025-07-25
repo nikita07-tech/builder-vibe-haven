@@ -1383,23 +1383,37 @@ const Index = () => {
 
           {/* Mobile: Program Selection Dropdown */}
           <div className="block md:hidden mb-8">
-            {/* Program Selector */}
-            <div className="mb-4">
-              <label className="block text-sm font-medium text-[#22336a] mb-2">
-                Select Program to View Details:
-              </label>
-              <select
-                value={selectedMobileProgram || ""}
-                onChange={(e) => setSelectedMobileProgram(e.target.value || null)}
-                className="w-full p-3 border border-gray-300 rounded-lg text-[#22336a] font-medium focus:outline-none focus:ring-2 focus:ring-[#22336a] focus:border-transparent"
-              >
-                <option value="">Choose a program...</option>
-                {Object.keys(programs).map((programName) => (
-                  <option key={programName} value={programName}>
-                    {programName} Program
-                  </option>
-                ))}
-              </select>
+            {/* Program Selector - Highlighted */}
+            <div className="mb-4 p-4 bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-xl border-2 border-[#22336a]/20 relative overflow-hidden">
+              {/* Highlight background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/5 via-[#c38935]/5 to-[#22336a]/5 animate-pulse"></div>
+
+              <div className="relative z-10">
+                <label className="flex items-center text-sm font-bold text-[#22336a] mb-3">
+                  <div className="w-5 h-5 bg-[#c38935] rounded-full flex items-center justify-center mr-2 animate-bounce">
+                    <span className="text-white text-xs font-bold">!</span>
+                  </div>
+                  Select Program to View Details:
+                </label>
+                <select
+                  value={selectedMobileProgram || ""}
+                  onChange={(e) => setSelectedMobileProgram(e.target.value || null)}
+                  className="w-full p-3 border-2 border-[#22336a] rounded-lg text-[#22336a] font-medium focus:outline-none focus:ring-4 focus:ring-[#22336a]/20 focus:border-[#c38935] bg-white shadow-lg"
+                >
+                  <option value="">Choose a program...</option>
+                  {Object.keys(programs).map((programName) => (
+                    <option key={programName} value={programName}>
+                      {programName} Program
+                    </option>
+                  ))}
+                </select>
+
+                {/* Helper text */}
+                <p className="text-xs text-[#c38935] font-medium mt-2 flex items-center">
+                  <span className="animate-pulse mr-1">👆</span>
+                  Tap to explore our programs
+                </p>
+              </div>
             </div>
 
             {/* Selected Program Details */}
