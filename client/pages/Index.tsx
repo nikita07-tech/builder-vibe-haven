@@ -454,52 +454,52 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-3 text-center lg:text-left animate-slide-in-left">
-              <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6 border border-white/30">
-                <span className="text-white font-semibold text-sm">
+              <div className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4 md:mb-6 border border-white/30">
+                <span className="text-white font-semibold text-xs md:text-sm">
                   PROFESSIONAL EXCELLENCE
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight text-white">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight text-white">
                 Transform Your Future with
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
                   {" "}
                   Premier Education
                 </span>
               </h1>
-              <div className="mb-6">
-                <p className="text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl mb-4">
+              <div className="mb-4 md:mb-6">
+                <p className="text-sm md:text-base lg:text-lg xl:text-xl text-white/90 leading-relaxed max-w-2xl mb-3 md:mb-4">
                   Join Hi-Tech Institute of Engineering & Technology for
                   industry-aligned programs in MBA, BBA, BCA, MCA & B.Tech with
                   guaranteed placement support.
                 </p>
-                <div className="inline-flex items-center px-6 py-3 rounded-xl">
-                  <div className="flex items-center mr-3">
+                <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 rounded-lg md:rounded-xl">
+                  <div className="flex items-center mr-2 md:mr-3">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe8fe1239f4724767b509ddb3b4f8688e?format=webp&width=800"
                       alt="Institution Image"
-                      className="h-10 w-auto rounded-lg"
+                      className="h-6 md:h-8 lg:h-10 w-auto rounded-md md:rounded-lg"
                     />
                   </div>
-                  <span className="text-white font-bold text-lg">
+                  <span className="text-white font-bold text-sm md:text-base lg:text-lg">
                     Powered By Sunstone
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
                 <a
                   href="https://sunstone.in/campuses/hi-tech-institute"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-sm md:text-base rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   <span>Explore Programs</span>
-                  <ExternalLink className="ml-2 h-5 w-5" />
+                  <ExternalLink className="ml-1.5 md:ml-2 h-4 w-4 md:h-5 md:w-5" />
                 </a>
                 <a
                   href="tel:+917065303030"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-transparent border-2 border-white text-white font-bold text-sm md:text-base rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
                 >
-                  <Phone className="mr-2 h-5 w-5" />
+                  <Phone className="mr-1.5 md:mr-2 h-4 w-4 md:h-5 md:w-5" />
                   <span>Call Now</span>
                 </a>
               </div>
