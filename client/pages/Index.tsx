@@ -453,7 +453,7 @@ const Index = () => {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-12 items-center">
-            <div className="lg:col-span-3 text-center lg:text-left animate-slide-in-left">
+            <div className="md:col-span-1 lg:col-span-3 text-center md:text-left lg:text-left animate-slide-in-left">
               <div className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4 md:mb-6 border border-white/30">
                 <span className="text-white font-semibold text-xs md:text-sm">
                   PROFESSIONAL EXCELLENCE
