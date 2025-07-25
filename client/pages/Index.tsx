@@ -1450,7 +1450,7 @@ const Index = () => {
             </div>
 
             {/* Selected Program Details */}
-            {selectedMobileProgram && selectedMobileProgram !== "MBA" && (
+            {selectedMobileProgram && (
               <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
                 {/* Program Header */}
                 <div
