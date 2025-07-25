@@ -1378,20 +1378,84 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Key Offerings - Updated with 4 items and enhanced popup */}
-      <section className="py-16 bg-white relative overflow-hidden">
+      {/* Key Offerings - Mobile Responsive with Carousel */}
+      <section className="py-12 md:py-16 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-4 md:mb-6">
               Key Offerings
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
               Discover what makes our programs exceptional and job-ready
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Mobile Carousel */}
+          <div className="block md:hidden mb-8">
+            <div className="overflow-hidden">
+              <div className="flex space-x-4 animate-scroll-right-to-left">
+                <div className="flex-shrink-0 w-72 group relative cursor-pointer">
+                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <BookOpen className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-[#22336a] mb-2">
+                      Expert Sessions
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Session by industry experts and leading faculty from Fortune 500 companies
+                    </p>
+                  </div>
+                </div>
+                <div className="flex-shrink-0 w-72 group relative cursor-pointer">
+                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Award className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-[#22336a] mb-2">
+                      Professional Portfolio
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Showcase verified skills and experience to increase hiring chances
+                    </p>
+                  </div>
+                </div>
+                <div className="flex-shrink-0 w-72 group relative cursor-pointer" onClick={() => setShowPlacementPopup(true)}>
+                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 relative">
+                      <TrendingUp className="h-6 w-6 text-white" />
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
+                        <span className="text-white text-xs font-bold">!</span>
+                      </div>
+                    </div>
+                    <h3 className="text-lg font-bold text-[#22336a] mb-2">
+                      POP
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Access to 200+ guaranteed job opportunities with comprehensive placement support
+                    </p>
+                  </div>
+                </div>
+                <div className="flex-shrink-0 w-72 group relative cursor-pointer">
+                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Zap className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-[#22336a] mb-2">
+                      Certifications
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      In-demand advanced certifications to choose from various domains and enhance your career prospects
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Grid */}
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {/* 1. Industry Expert Sessions */}
             <div
               className="group relative animate-fade-in-up"
