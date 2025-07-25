@@ -2178,36 +2178,36 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Enhanced CTA Section */}
+          {/* Enhanced CTA Section - Mobile Optimized */}
           <div className="text-center">
-            <div className="bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-3xl p-12 text-white relative overflow-hidden shadow-2xl">
+            <div className="bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-lg md:rounded-3xl p-4 md:p-12 text-white relative overflow-hidden shadow-2xl">
               <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16"></div>
               <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
 
               <div className="relative z-10">
-                <h3 className="text-4xl font-bold mb-4">
+                <h3 className="text-lg md:text-4xl font-bold mb-2 md:mb-4">
                   Ready to Transform Your Future?
                 </h3>
-                <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                <p className="text-sm md:text-xl mb-4 md:mb-8 opacity-90 max-w-2xl mx-auto">
                   Join thousands of successful graduates who chose excellence.
                   Your journey starts here.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-6 justify-center items-center">
                   <a
                     href="tel:+917065303030"
-                    className="group inline-flex items-center px-8 py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50"
+                    className="group inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-white text-[#22336a] font-bold rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50 text-sm md:text-base"
                   >
-                    <Phone className="h-5 w-5 mr-3 group-hover:animate-pulse" />
+                    <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3 group-hover:animate-pulse" />
                     <span>Call: +91 7065-30-30-30</span>
                   </a>
                   <a
                     href="https://sunstone.in/apply-now"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center px-8 py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    className="group inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm md:text-base"
                   >
-                    <ExternalLink className="h-5 w-5 mr-3" />
+                    <ExternalLink className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3" />
                     <span>Secure Your Spot Now</span>
                   </a>
                 </div>
