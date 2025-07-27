@@ -469,11 +469,6 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-12 items-center">
             <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
-              <div className="inline-flex items-center px-1 md:px-4 py-0.5 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-1 md:mb-6 border border-white/30">
-                <span className="text-white font-semibold text-xs md:text-sm">
-                  PROFESSIONAL EXCELLENCE
-                </span>
-              </div>
               <h1 className="text-sm sm:text-lg md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
                 Transform Your Future with
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
