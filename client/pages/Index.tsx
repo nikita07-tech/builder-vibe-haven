@@ -688,10 +688,10 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Two-line Animated Recruiters */}
-          <div className="space-y-8 mb-12">
+          {/* Two-line Animated Recruiters - Smaller on Mobile */}
+          <div className="space-y-4 md:space-y-8 mb-6 md:mb-12">
             {/* First line - Right to Left */}
-            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
+            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-3 md:py-6">
               <div className="flex space-x-12 animate-scroll-right-to-left whitespace-nowrap">
                 {[
                   {
