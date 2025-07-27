@@ -1501,45 +1501,45 @@ const Index = () => {
                     <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-100 animate-pulse"></div>
                   </div>
                 </div>
-                <div className="flex-shrink-0 w-80 group relative cursor-pointer animate-slide-in-left" style={{animationDelay: '0.3s'}}>
-                  <div className="bg-gradient-to-br from-white to-green-50/30 rounded-2xl p-6 shadow-2xl border border-green-200/50 hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 hover:scale-105">
-                    <div className="w-14 h-14 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
-                      <Zap className="h-7 w-7 text-white" />
+                <div className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left" style={{animationDelay: '0.3s'}}>
+                  <div className="bg-gradient-to-br from-white to-green-50/30 rounded-xl p-4 shadow-lg border border-green-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <Zap className="h-5 w-5 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Certifications
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed">
                       In-demand advanced certifications to choose from various
                       domains and enhance your career prospects
                     </p>
-                    <div className="absolute top-4 right-4 w-3 h-3 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
                   </div>
                 </div>
                 {/* Duplicate cards for seamless loop */}
-                <div className="flex-shrink-0 w-80 group relative cursor-pointer">
-                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-2xl p-6 shadow-2xl border border-blue-200/50 hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 hover:scale-105">
-                    <div className="w-14 h-14 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
-                      <BookOpen className="h-7 w-7 text-white" />
+                <div className="flex-shrink-0 w-64 group relative cursor-pointer">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <BookOpen className="h-5 w-5 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Expert Sessions
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed">
                       Session by industry experts and leading faculty from
                       Fortune 500 companies
                     </p>
                   </div>
                 </div>
-                <div className="flex-shrink-0 w-80 group relative cursor-pointer">
-                  <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-2xl p-6 shadow-2xl border border-orange-200/50 hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 hover:scale-105">
-                    <div className="w-14 h-14 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
-                      <Award className="h-7 w-7 text-white" />
+                <div className="flex-shrink-0 w-64 group relative cursor-pointer">
+                  <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <Award className="h-5 w-5 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Professional Portfolio
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed">
                       Showcase verified skills and experience to increase hiring
                       chances
                     </p>
