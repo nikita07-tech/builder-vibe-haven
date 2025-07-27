@@ -1250,46 +1250,75 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Mobile: Grid Layout */}
+          {/* Mobile: Horizontal Scrolling Layout */}
           <div className="block md:hidden mb-6">
-            <div className="grid grid-cols-1 gap-4">
-              <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Trophy className="h-6 w-6 text-white" />
+            <div className="overflow-hidden">
+              <div className="flex space-x-4 animate-scroll-left-to-right">
+                <div className="flex-shrink-0 w-72 bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Trophy className="h-7 w-7 text-white" />
+                  </div>
+                  <h3 className="text-base font-bold text-[#22336a] mb-3">
+                    200+ Placement Opportunities
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Guaranteed access to extensive placement opportunities across
+                    leading companies
+                  </p>
                 </div>
-                <h3 className="text-sm font-bold text-[#22336a] mb-2">
-                  200+ Placement Opportunities
-                </h3>
-                <p className="text-xs text-gray-600">
-                  Guaranteed access to extensive placement opportunities across
-                  leading companies
-                </p>
-              </div>
 
-              <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-3">
-                  <TrendingUp className="h-6 w-6 text-white" />
+                <div className="flex-shrink-0 w-72 bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="h-7 w-7 text-white" />
+                  </div>
+                  <h3 className="text-base font-bold text-[#22336a] mb-3">
+                    First Year Tuition Fee Back
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    We'll refund your first-year tuition fee if you don't receive
+                    promised opportunities
+                  </p>
                 </div>
-                <h3 className="text-sm font-bold text-[#22336a] mb-2">
-                  First Year Tuition Fee Back
-                </h3>
-                <p className="text-xs text-gray-600">
-                  We'll refund your first-year tuition fee if you don't receive
-                  promised opportunities
-                </p>
-              </div>
 
-              <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 text-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Users className="h-6 w-6 text-white" />
+                <div className="flex-shrink-0 w-72 bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="h-7 w-7 text-white" />
+                  </div>
+                  <h3 className="text-base font-bold text-[#22336a] mb-3">
+                    Dedicated Career Support
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Personal mentorship, interview preparation, and continuous
+                    guidance
+                  </p>
                 </div>
-                <h3 className="text-sm font-bold text-[#22336a] mb-2">
-                  Dedicated Career Support
-                </h3>
-                <p className="text-xs text-gray-600">
-                  Personal mentorship, interview preparation, and continuous
-                  guidance
-                </p>
+
+                {/* Duplicate for seamless loop */}
+                <div className="flex-shrink-0 w-72 bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Trophy className="h-7 w-7 text-white" />
+                  </div>
+                  <h3 className="text-base font-bold text-[#22336a] mb-3">
+                    200+ Placement Opportunities
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Guaranteed access to extensive placement opportunities across
+                    leading companies
+                  </p>
+                </div>
+
+                <div className="flex-shrink-0 w-72 bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="h-7 w-7 text-white" />
+                  </div>
+                  <h3 className="text-base font-bold text-[#22336a] mb-3">
+                    First Year Tuition Fee Back
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    We'll refund your first-year tuition fee if you don't receive
+                    promised opportunities
+                  </p>
+                </div>
               </div>
             </div>
           </div>
