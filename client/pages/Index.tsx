@@ -963,10 +963,10 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Mobile Awards Carousel */}
-          <div className="block md:hidden mb-12">
-            <div className="overflow-hidden bg-gray-50 rounded-xl py-6">
-              <div className="flex space-x-6 animate-scroll whitespace-nowrap">
+          {/* Mobile Awards Carousel - Smaller */}
+          <div className="block md:hidden mb-6">
+            <div className="overflow-hidden bg-gray-50 rounded-lg py-3">
+              <div className="flex space-x-4 animate-scroll whitespace-nowrap">
                 {[
                   {
                     src: "https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F634b6859a0a5475897251bed28fb9a48?format=webp&width=800",
