@@ -589,84 +589,84 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Placement Highlights - Smaller Mobile Version */}
-      <section className="py-3 md:py-8 lg:py-12 bg-[#22336a]">
+      {/* Placement Highlights - Much Smaller Mobile Version */}
+      <section className="py-2 md:py-8 lg:py-12 bg-[#22336a]">
         <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
           <div className="bg-white rounded-md md:rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
-            <div className="bg-[#c38935] text-white px-2 md:px-6 py-2 md:py-4">
+            <div className="bg-[#c38935] text-white px-2 md:px-6 py-1.5 md:py-4">
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-xs md:text-lg lg:text-xl font-bold mb-0 md:mb-0">
                     Placement Highlights
                   </h3>
-                  <p className="text-xs md:text-sm opacity-90">
+                  <p className="text-[10px] md:text-sm opacity-90">
                     MBA | MCA | BBA | BCA | B.Tech
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="p-2 md:p-4 lg:p-6">
+            <div className="p-1.5 md:p-4 lg:p-6">
               {/* Mobile: Smaller stats */}
-              <div className="grid grid-cols-3 sm:grid-cols-3 gap-2 md:gap-4 lg:gap-6 mb-2 md:mb-6">
+              <div className="grid grid-cols-3 sm:grid-cols-3 gap-1.5 md:gap-4 lg:gap-6 mb-1.5 md:mb-6">
                 <div className="text-center">
-                  <div className="text-sm md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
+                  <div className="text-xs md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
                     26 LPA
                   </div>
-                  <p className="text-xs md:text-sm text-gray-600">
+                  <p className="text-[10px] md:text-sm text-gray-600">
                     Highest Package
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="text-sm md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
+                  <div className="text-xs md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
                     1200+
                   </div>
-                  <p className="text-xs md:text-sm text-gray-600">
+                  <p className="text-[10px] md:text-sm text-gray-600">
                     Top Recruiters
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="text-sm md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
+                  <div className="text-xs md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
                     5000+
                   </div>
-                  <p className="text-xs md:text-sm text-gray-600">
+                  <p className="text-[10px] md:text-sm text-gray-600">
                     Students Placed
                   </p>
                 </div>
               </div>
 
               {/* Mobile: Smaller comparison cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-3 lg:gap-4 mb-2 md:mb-4">
-                <div className="bg-gray-50 rounded-md md:rounded-lg p-2 md:p-3 lg:p-4 flex items-center space-x-2 md:space-x-3">
-                  <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xs md:text-sm">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 md:gap-3 lg:gap-4 mb-1.5 md:mb-4">
+                <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
+                  <div className="w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-[10px] md:text-sm">
                       63%
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#22336a] text-xs md:text-sm">
+                    <p className="font-semibold text-[#22336a] text-[10px] md:text-sm">
                       63% Higher ROI
                     </p>
-                    <p className="text-xs text-gray-600">vs private colleges</p>
+                    <p className="text-[9px] md:text-xs text-gray-600">vs private colleges</p>
                   </div>
                 </div>
-                <div className="bg-gray-50 rounded-md md:rounded-lg p-2 md:p-3 lg:p-4 flex items-center space-x-2 md:space-x-3">
-                  <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#22336a] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xs md:text-sm">
+                <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
+                  <div className="w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#22336a] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-[10px] md:text-sm">
                       7X
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#22336a] text-xs md:text-sm">
+                    <p className="font-semibold text-[#22336a] text-[10px] md:text-sm">
                       7X More Companies
                     </p>
-                    <p className="text-xs text-gray-600">vs institutes</p>
+                    <p className="text-[9px] md:text-xs text-gray-600">vs institutes</p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-md md:rounded-lg p-2 md:p-3 text-center">
-                <p className="text-xs md:text-sm text-gray-700">
+              <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 text-center">
+                <p className="text-[10px] md:text-sm text-gray-700">
                   Placement report audited by B2K Analytics
                 </p>
               </div>
@@ -1257,23 +1257,23 @@ const Index = () => {
         </div>
       )}
 
-      {/* Professional Placement Guarantee Program - Mobile Optimized */}
-      <section className="py-8 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      {/* Professional Placement Guarantee Program - Much Smaller Mobile */}
+      <section className="py-4 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 right-10 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
-          {/* Compact Header for Mobile */}
-          <div className="text-center mb-8 md:mb-16">
-            <div className="inline-flex items-center px-3 md:px-6 py-2 md:py-3 bg-[#22336a]/10 rounded-full mb-3 md:mb-6">
-              <Trophy className="h-4 w-4 md:h-5 md:w-5 text-[#22336a] mr-1 md:mr-2" />
-              <span className="text-[#22336a] font-semibold text-xs md:text-base">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10">
+          {/* More Compact Header for Mobile */}
+          <div className="text-center mb-4 md:mb-16">
+            <div className="inline-flex items-center px-2 md:px-6 py-1 md:py-3 bg-[#22336a]/10 rounded-full mb-2 md:mb-6">
+              <Trophy className="h-3 w-3 md:h-5 md:w-5 text-[#22336a] mr-1 md:mr-2" />
+              <span className="text-[#22336a] font-semibold text-[10px] md:text-base">
                 PLACEMENT OPPORTUNITY PROGRAM
               </span>
             </div>
-            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight">
+            <h2 className="text-base sm:text-lg md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
               Placement
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
                 {" "}
@@ -1285,7 +1285,7 @@ const Index = () => {
               </span>
             </h2>
             <div className="max-w-4xl mx-auto">
-              <p className="text-sm md:text-xl text-gray-700 leading-relaxed mb-2 md:mb-4">
+              <p className="text-xs md:text-xl text-gray-700 leading-relaxed mb-1 md:mb-4">
                 Comprehensive placement support with assured career guidance
               </p>
               <div className="hidden md:flex items-center justify-center space-x-8 text-sm text-gray-600">
@@ -1305,44 +1305,44 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Mobile: Static Layout (No Animation) */}
-          <div className="block md:hidden mb-6">
+          {/* Mobile: Much Smaller Cards */}
+          <div className="block md:hidden mb-4">
             <div className="overflow-x-auto">
-              <div className="flex space-x-4">
-                <div className="flex-shrink-0 w-72 bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Trophy className="h-7 w-7 text-white" />
+              <div className="flex space-x-2">
+                <div className="flex-shrink-0 w-48 bg-white rounded-lg p-3 shadow-lg border border-gray-200 text-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-2">
+                    <Trophy className="h-4 w-4 text-white" />
                   </div>
-                  <h3 className="text-base font-bold text-[#22336a] mb-3">
+                  <h3 className="text-xs font-bold text-[#22336a] mb-1">
                     200+ Placement Opportunities
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-[10px] text-gray-600 leading-relaxed">
                     Guaranteed access to extensive placement opportunities across
                     leading companies
                   </p>
                 </div>
 
-                <div className="flex-shrink-0 w-72 bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="h-7 w-7 text-white" />
+                <div className="flex-shrink-0 w-48 bg-white rounded-lg p-3 shadow-lg border border-gray-200 text-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-2">
+                    <TrendingUp className="h-4 w-4 text-white" />
                   </div>
-                  <h3 className="text-base font-bold text-[#22336a] mb-3">
+                  <h3 className="text-xs font-bold text-[#22336a] mb-1">
                     First Year Tuition Fee Back
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-[10px] text-gray-600 leading-relaxed">
                     We'll refund your first-year tuition fee if you don't receive
                     promised opportunities
                   </p>
                 </div>
 
-                <div className="flex-shrink-0 w-72 bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-7 w-7 text-white" />
+                <div className="flex-shrink-0 w-48 bg-white rounded-lg p-3 shadow-lg border border-gray-200 text-center">
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-2">
+                    <Users className="h-4 w-4 text-white" />
                   </div>
-                  <h3 className="text-base font-bold text-[#22336a] mb-3">
+                  <h3 className="text-xs font-bold text-[#22336a] mb-1">
                     Dedicated Career Support
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-[10px] text-gray-600 leading-relaxed">
                     Personal mentorship, interview preparation, and continuous
                     guidance
                   </p>
@@ -1393,35 +1393,35 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Compact CTA for Mobile */}
+          {/* Much More Compact CTA for Mobile */}
           <div className="text-center">
             <div className="max-w-2xl mx-auto">
-              <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-lg md:rounded-2xl p-4 md:p-8 text-white relative overflow-hidden">
+              <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-lg md:rounded-2xl p-2 md:p-8 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
                 <div className="relative z-10">
-                  <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-4">
+                  <h3 className="text-sm md:text-2xl font-bold mb-1 md:mb-4">
                     Ready to Secure Your Future?
                   </h3>
-                  <p className="text-sm md:text-lg opacity-90 mb-4 md:mb-6">
+                  <p className="text-xs md:text-lg opacity-90 mb-2 md:mb-6">
                     Join our placement guarantee program and take the first step
                     towards career success
                   </p>
-                  <div className="flex flex-col md:flex-row gap-2 md:gap-4 justify-center">
+                  <div className="flex flex-col md:flex-row gap-1 md:gap-4 justify-center">
                     <button
                       onClick={() => setShowPlacementPopup(true)}
-                      className="inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base"
+                      className="inline-flex items-center px-3 md:px-8 py-1.5 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-xs md:text-base"
                     >
                       <span>Learn More</span>
-                      <ChevronRight className="h-4 w-4 md:h-5 md:w-5 ml-1 md:ml-2" />
+                      <ChevronRight className="h-3 w-3 md:h-5 md:w-5 ml-1 md:ml-2" />
                     </button>
                     <a
                       href="https://sunstone.in/apply-now"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base"
+                      className="inline-flex items-center px-3 md:px-8 py-1.5 md:py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-xs md:text-base"
                     >
                       <span>Apply Now</span>
-                      <ExternalLink className="h-4 w-4 md:h-5 md:w-5 ml-1 md:ml-2" />
+                      <ExternalLink className="h-3 w-3 md:h-5 md:w-5 ml-1 md:ml-2" />
                     </a>
                   </div>
                 </div>
@@ -2506,10 +2506,10 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Mobile Grid for Testimonials */}
+          {/* Mobile Horizontal Scrolling for Testimonials */}
           <div className="block md:hidden mb-8">
-            <div className="grid grid-cols-1 gap-4">
-              <div className="space-y-4">
+            <div className="overflow-hidden">
+              <div className="flex space-x-4 animate-scroll-left-to-right">
                 {[
                   {
                     name: "Rahul Kumar",
@@ -2538,10 +2538,29 @@ const Index = () => {
                       "The advanced certifications and project-based learning methodology prepared me perfectly for the industry demands.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
+                  // Duplicate for seamless loop
+                  {
+                    name: "Rahul Kumar",
+                    role: "MBA Graduate • Software Engineer",
+                    company: "TCS",
+                    initials: "RK",
+                    quote:
+                      "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Priya Sharma",
+                    role: "BCA Graduate • Full Stack Developer",
+                    company: "Infosys",
+                    initials: "PS",
+                    quote:
+                      "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
                 ].map((testimonial, index) => (
                   <div
                     key={index}
-                    className="group relative"
+                    className="flex-shrink-0 w-72 group relative"
                   >
                     <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4">
                       {/* Avatar and Info */}
