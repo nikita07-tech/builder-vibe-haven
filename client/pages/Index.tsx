@@ -2505,7 +2505,7 @@ const Index = () => {
                 {[
                   {
                     name: "Rahul Kumar",
-                    role: "MBA Graduate • Software Engineer",
+                    role: "MBA Graduate ��� Software Engineer",
                     company: "TCS",
                     initials: "RK",
                     quote:
@@ -2710,7 +2710,7 @@ const Index = () => {
 
             {/* Testimonial 3 */}
             <div
-              className="group relative animate-slide-up md:col-span-2 xl:col-span-1"
+              className="group relative animate-slide-up"
               style={{ animationDelay: "0.3s" }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
