@@ -1250,117 +1250,89 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Mobile: Compact Cards Layout */}
+          {/* Mobile: Grid Layout */}
           <div className="block md:hidden mb-6">
-            <div className="space-y-3">
-              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Trophy className="h-5 w-5 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-sm font-bold text-[#22336a] mb-1">
-                      200+ Placement Opportunities
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      Guaranteed access to extensive placement opportunities
-                      across leading companies
-                    </p>
-                  </div>
+            <div className="grid grid-cols-1 gap-4">
+              <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Trophy className="h-6 w-6 text-white" />
                 </div>
+                <h3 className="text-sm font-bold text-[#22336a] mb-2">
+                  200+ Placement Opportunities
+                </h3>
+                <p className="text-xs text-gray-600">
+                  Guaranteed access to extensive placement opportunities
+                  across leading companies
+                </p>
               </div>
 
-              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <TrendingUp className="h-5 w-5 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-sm font-bold text-[#22336a] mb-1">
-                      First Year Tuition Fee Back
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      We'll refund your first-year tuition fee if you don't
-                      receive promised opportunities
-                    </p>
-                  </div>
+              <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <TrendingUp className="h-6 w-6 text-white" />
                 </div>
+                <h3 className="text-sm font-bold text-[#22336a] mb-2">
+                  First Year Tuition Fee Back
+                </h3>
+                <p className="text-xs text-gray-600">
+                  We'll refund your first-year tuition fee if you don't
+                  receive promised opportunities
+                </p>
               </div>
 
-              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Users className="h-5 w-5 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-sm font-bold text-[#22336a] mb-1">
-                      Dedicated Career Support
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      Personal mentorship, interview preparation, and continuous
-                      guidance
-                    </p>
-                  </div>
+              <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Users className="h-6 w-6 text-white" />
                 </div>
+                <h3 className="text-sm font-bold text-[#22336a] mb-2">
+                  Dedicated Career Support
+                </h3>
+                <p className="text-xs text-gray-600">
+                  Personal mentorship, interview preparation, and continuous
+                  guidance
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Desktop: Professional Grid Layout */}
-          <div className="hidden md:grid lg:grid-cols-2 gap-16 mb-20">
-            {/* Left Side - Key Guarantees */}
-            <div className="space-y-8">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 group">
-                <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Trophy className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">
-                      200+ Placement Opportunities
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Guaranteed access to extensive placement opportunities
-                      across leading companies
-                    </p>
-                  </div>
-                </div>
+          {/* Desktop: 3-Column Grid Layout */}
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 text-center group">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Trophy className="h-8 w-8 text-white" />
               </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                200+ Placement Opportunities
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Guaranteed access to extensive placement opportunities
+                across leading companies
+              </p>
+            </div>
 
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 group">
-                <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <TrendingUp className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">
-                      First Year Tuition Fee Back
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      If you don't receive the promised placement opportunities,
-                      we'll refund your first-year tuition fee.
-                    </p>
-                  </div>
-                </div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 text-center group">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <TrendingUp className="h-8 w-8 text-white" />
               </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                First Year Tuition Fee Back
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                If you don't receive the promised placement opportunities,
+                we'll refund your first-year tuition fee.
+              </p>
+            </div>
 
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 group">
-                <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">
-                      Dedicated Career Support
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Personal mentorship, interview preparation, and continuous
-                      guidance from industry professionals throughout your
-                      journey.
-                    </p>
-                  </div>
-                </div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 text-center group">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Users className="h-8 w-8 text-white" />
               </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                Dedicated Career Support
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Personal mentorship, interview preparation, and continuous
+                guidance from industry professionals throughout your journey.
+              </p>
             </div>
           </div>
 
@@ -2837,7 +2809,7 @@ const Index = () => {
                   question:
                     "What makes Sunstone different from other education providers?",
                   answer:
-                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
+                    "• Industry-aligned curriculum designed with Fortune 500 companies\n�� Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
                   category: "sunstone",
                 },
                 {
