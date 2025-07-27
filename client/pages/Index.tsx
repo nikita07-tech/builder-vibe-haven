@@ -2506,10 +2506,10 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Mobile Carousel for Testimonials */}
+          {/* Mobile Grid for Testimonials */}
           <div className="block md:hidden mb-8">
-            <div className="overflow-hidden">
-              <div className="flex space-x-4 animate-scroll-right-to-left">
+            <div className="grid grid-cols-1 gap-4">
+              <div className="space-y-4">
                 {[
                   {
                     name: "Rahul Kumar",
