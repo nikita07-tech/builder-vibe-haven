@@ -2541,7 +2541,7 @@ const Index = () => {
                 ].map((testimonial, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-72 group relative"
+                    className="group relative"
                   >
                     <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4">
                       {/* Avatar and Info */}
