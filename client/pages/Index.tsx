@@ -1261,8 +1261,8 @@ const Index = () => {
                   200+ Placement Opportunities
                 </h3>
                 <p className="text-xs text-gray-600">
-                  Guaranteed access to extensive placement opportunities
-                  across leading companies
+                  Guaranteed access to extensive placement opportunities across
+                  leading companies
                 </p>
               </div>
 
@@ -1274,8 +1274,8 @@ const Index = () => {
                   First Year Tuition Fee Back
                 </h3>
                 <p className="text-xs text-gray-600">
-                  We'll refund your first-year tuition fee if you don't
-                  receive promised opportunities
+                  We'll refund your first-year tuition fee if you don't receive
+                  promised opportunities
                 </p>
               </div>
 
@@ -1304,8 +1304,8 @@ const Index = () => {
                 200+ Placement Opportunities
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Guaranteed access to extensive placement opportunities
-                across leading companies
+                Guaranteed access to extensive placement opportunities across
+                leading companies
               </p>
             </div>
 
@@ -1317,8 +1317,8 @@ const Index = () => {
                 First Year Tuition Fee Back
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                If you don't receive the promised placement opportunities,
-                we'll refund your first-year tuition fee.
+                If you don't receive the promised placement opportunities, we'll
+                refund your first-year tuition fee.
               </p>
             </div>
 
@@ -2079,8 +2079,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-
 
       {/* Enhanced Admission Process */}
       <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-orange-50 relative overflow-hidden">
