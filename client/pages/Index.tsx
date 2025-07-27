@@ -647,7 +647,9 @@ const Index = () => {
                     <p className="font-semibold text-[#22336a] text-[10px] md:text-sm">
                       63% Higher ROI
                     </p>
-                    <p className="text-[9px] md:text-xs text-gray-600">vs private colleges</p>
+                    <p className="text-[9px] md:text-xs text-gray-600">
+                      vs private colleges
+                    </p>
                   </div>
                 </div>
                 <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
@@ -660,7 +662,9 @@ const Index = () => {
                     <p className="font-semibold text-[#22336a] text-[10px] md:text-sm">
                       7X More Companies
                     </p>
-                    <p className="text-[9px] md:text-xs text-gray-600">vs institutes</p>
+                    <p className="text-[9px] md:text-xs text-gray-600">
+                      vs institutes
+                    </p>
                   </div>
                 </div>
               </div>
@@ -1308,7 +1312,10 @@ const Index = () => {
           {/* Mobile: Different Animation - Vertical Sliding Cards */}
           <div className="block md:hidden mb-4">
             <div className="space-y-2">
-              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left" style={{animationDelay: '0.1s'}}>
+              <div
+                className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left"
+                style={{ animationDelay: "0.1s" }}
+              >
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center flex-shrink-0">
                     <Trophy className="h-4 w-4 text-white" />
@@ -1318,13 +1325,17 @@ const Index = () => {
                       200+ Placement Opportunities
                     </h3>
                     <p className="text-[10px] text-gray-600 leading-relaxed">
-                      Guaranteed access to extensive placement opportunities across leading companies
+                      Guaranteed access to extensive placement opportunities
+                      across leading companies
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-right" style={{animationDelay: '0.2s'}}>
+              <div
+                className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-right"
+                style={{ animationDelay: "0.2s" }}
+              >
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center flex-shrink-0">
                     <TrendingUp className="h-4 w-4 text-white" />
@@ -1334,13 +1345,17 @@ const Index = () => {
                       First Year Tuition Fee Back
                     </h3>
                     <p className="text-[10px] text-gray-600 leading-relaxed">
-                      We'll refund your first-year tuition fee if you don't receive promised opportunities
+                      We'll refund your first-year tuition fee if you don't
+                      receive promised opportunities
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left" style={{animationDelay: '0.3s'}}>
+              <div
+                className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left"
+                style={{ animationDelay: "0.3s" }}
+              >
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center flex-shrink-0">
                     <Users className="h-4 w-4 text-white" />
@@ -1350,7 +1365,8 @@ const Index = () => {
                       Dedicated Career Support
                     </h3>
                     <p className="text-[10px] text-gray-600 leading-relaxed">
-                      Personal mentorship, interview preparation, and continuous guidance
+                      Personal mentorship, interview preparation, and continuous
+                      guidance
                     </p>
                   </div>
                 </div>
@@ -1470,7 +1486,10 @@ const Index = () => {
                     <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
                   </div>
                 </div>
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left" style={{animationDelay: '0.1s'}}>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.1s" }}
+                >
                   <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <Award className="h-5 w-5 text-white" />
@@ -1487,7 +1506,7 @@ const Index = () => {
                 </div>
                 <div
                   className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
-                  style={{animationDelay: '0.2s'}}
+                  style={{ animationDelay: "0.2s" }}
                   onClick={() => setShowPlacementPopup(true)}
                 >
                   <div className="bg-gradient-to-br from-white to-purple-50/30 rounded-xl p-4 shadow-lg border border-purple-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 relative overflow-hidden">
@@ -1508,7 +1527,10 @@ const Index = () => {
                     <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-100 animate-pulse"></div>
                   </div>
                 </div>
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left" style={{animationDelay: '0.3s'}}>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.3s" }}
+                >
                   <div className="bg-gradient-to-br from-white to-green-50/30 rounded-xl p-4 shadow-lg border border-green-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <Zap className="h-5 w-5 text-white" />
@@ -1662,8 +1684,6 @@ const Index = () => {
               experts
             </p>
           </div>
-
-
 
           {/* Mobile: Much Smaller Program Selection Dropdown */}
           <div className="block md:hidden mb-4">
