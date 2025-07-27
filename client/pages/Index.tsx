@@ -924,7 +924,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+      <section className="py-6 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
           <div
@@ -934,14 +934,14 @@ const Index = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 md:mb-16">
-            <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-[#c38935]/10 rounded-full mb-4 md:mb-6">
-              <Trophy className="h-4 w-4 md:h-5 md:w-5 text-[#c38935] mr-2" />
+          <div className="text-center mb-6 md:mb-16">
+            <div className="inline-flex items-center px-3 md:px-6 py-1 md:py-3 bg-[#c38935]/10 rounded-full mb-2 md:mb-6">
+              <Trophy className="h-3 w-3 md:h-5 md:w-5 text-[#c38935] mr-1 md:mr-2" />
               <span className="text-[#c38935] font-semibold text-xs md:text-sm">
                 AWARDS & RECOGNITION
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-4 md:mb-6 leading-tight">
+            <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
               Recognized
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
                 {" "}
@@ -956,7 +956,7 @@ const Index = () => {
               className="max-w-4xl mx-auto animate-fade-in"
               style={{ animationDelay: "0.3s" }}
             >
-              <p className="text-base md:text-xl text-gray-700 leading-relaxed mb-4">
+              <p className="text-xs md:text-xl text-gray-700 leading-relaxed mb-2 md:mb-4">
                 Our commitment to educational excellence has been recognized by
                 leading industry organizations
               </p>
