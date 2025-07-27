@@ -1387,16 +1387,85 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Mobile Carousel */}
+          {/* Mobile Enhanced Carousel */}
           <div className="block md:hidden mb-8">
-            <div className="overflow-hidden">
-              <div className="flex space-x-4 animate-scroll-right-to-left-fast">
-                <div className="flex-shrink-0 w-72 group relative cursor-pointer">
-                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <BookOpen className="h-6 w-6 text-white" />
+            <div className="overflow-hidden rounded-2xl">
+              <div className="flex space-x-6 animate-scroll-right-to-left">
+                <div className="flex-shrink-0 w-80 group relative cursor-pointer animate-slide-in-left">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-2xl p-6 shadow-2xl border border-blue-200/50 hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 hover:scale-105">
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <BookOpen className="h-7 w-7 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-[#22336a] mb-2">
+                    <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                      Expert Sessions
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Session by industry experts and leading faculty from
+                      Fortune 500 companies
+                    </p>
+                    <div className="absolute top-4 right-4 w-3 h-3 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                <div className="flex-shrink-0 w-80 group relative cursor-pointer animate-slide-in-left" style={{animationDelay: '0.1s'}}>
+                  <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-2xl p-6 shadow-2xl border border-orange-200/50 hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 hover:scale-105">
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <Award className="h-7 w-7 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                      Professional Portfolio
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Showcase verified skills and experience to increase hiring
+                      chances
+                    </p>
+                    <div className="absolute top-4 right-4 w-3 h-3 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-80 group relative cursor-pointer animate-slide-in-left"
+                  style={{animationDelay: '0.2s'}}
+                  onClick={() => setShowPlacementPopup(true)}
+                >
+                  <div className="bg-gradient-to-br from-white to-purple-50/30 rounded-2xl p-6 shadow-2xl border border-purple-200/50 hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 hover:scale-105 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full -translate-y-8 translate-x-8"></div>
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg relative z-10">
+                      <TrendingUp className="h-7 w-7 text-white" />
+                      <div className="absolute -top-2 -right-2 w-5 h-5 bg-[#c38935] rounded-full flex items-center justify-center animate-bounce">
+                        <span className="text-white text-xs font-bold">!</span>
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                      POP
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed relative z-10">
+                      Access to 200+ guaranteed job opportunities with
+                      comprehensive placement support
+                    </p>
+                    <div className="absolute top-4 right-4 w-3 h-3 bg-[#c38935] rounded-full opacity-100 animate-pulse"></div>
+                  </div>
+                </div>
+                <div className="flex-shrink-0 w-80 group relative cursor-pointer animate-slide-in-left" style={{animationDelay: '0.3s'}}>
+                  <div className="bg-gradient-to-br from-white to-green-50/30 rounded-2xl p-6 shadow-2xl border border-green-200/50 hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 hover:scale-105">
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <Zap className="h-7 w-7 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                      Certifications
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      In-demand advanced certifications to choose from various
+                      domains and enhance your career prospects
+                    </p>
+                    <div className="absolute top-4 right-4 w-3 h-3 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                {/* Duplicate cards for seamless loop */}
+                <div className="flex-shrink-0 w-80 group relative cursor-pointer">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-2xl p-6 shadow-2xl border border-blue-200/50 hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 hover:scale-105">
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <BookOpen className="h-7 w-7 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
                       Expert Sessions
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
@@ -1405,51 +1474,17 @@ const Index = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex-shrink-0 w-72 group relative cursor-pointer">
-                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <Award className="h-6 w-6 text-white" />
+                <div className="flex-shrink-0 w-80 group relative cursor-pointer">
+                  <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-2xl p-6 shadow-2xl border border-orange-200/50 hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 hover:scale-105">
+                    <div className="w-14 h-14 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <Award className="h-7 w-7 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-[#22336a] mb-2">
+                    <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
                       Professional Portfolio
                     </h3>
                     <p className="text-gray-600 text-sm leading-relaxed">
                       Showcase verified skills and experience to increase hiring
                       chances
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className="flex-shrink-0 w-72 group relative cursor-pointer"
-                  onClick={() => setShowPlacementPopup(true)}
-                >
-                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 relative">
-                      <TrendingUp className="h-6 w-6 text-white" />
-                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
-                        <span className="text-white text-xs font-bold">!</span>
-                      </div>
-                    </div>
-                    <h3 className="text-lg font-bold text-[#22336a] mb-2">
-                      POP
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      Access to 200+ guaranteed job opportunities with
-                      comprehensive placement support
-                    </p>
-                  </div>
-                </div>
-                <div className="flex-shrink-0 w-72 group relative cursor-pointer">
-                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <Zap className="h-6 w-6 text-white" />
-                    </div>
-                    <h3 className="text-lg font-bold text-[#22336a] mb-2">
-                      Certifications
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      In-demand advanced certifications to choose from various
-                      domains and enhance your career prospects
                     </p>
                   </div>
                 </div>
