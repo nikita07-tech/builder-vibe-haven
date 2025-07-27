@@ -1592,20 +1592,7 @@ const Index = () => {
             </p>
           </div>
 
-          {/* MBA Banner - ONLY FOR DESKTOP */}
-          <div className="hidden md:block mb-8">
-            <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-2xl p-6 text-white text-center relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-2">MBA Program - Premium Education</h3>
-                <p className="text-lg opacity-90 mb-4">Advanced certifications • Internships • Premium placement support</p>
-                <a href="https://sunstone.in/campuses/hi-tech-institute/mba" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-xl transition-all duration-300">
-                  <span>Explore MBA Program</span>
-                  <ExternalLink className="ml-2 h-5 w-5" />
-                </a>
-              </div>
-            </div>
-          </div>
+
 
           {/* Mobile: Program Selection Dropdown */}
           <div className="block md:hidden mb-8">
