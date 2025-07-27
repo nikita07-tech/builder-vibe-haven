@@ -428,13 +428,13 @@ const Index = () => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
                   alt="Hi-Tech Institute"
-                  className="h-4 sm:h-8 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                  className="h-3 sm:h-6 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
                 />
-                <div className="h-4 sm:h-8 md:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
+                <div className="h-3 sm:h-6 md:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-4 sm:h-8 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
+                  className="h-3 sm:h-6 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
                 />
               </div>
             </div>
@@ -450,7 +450,7 @@ const Index = () => {
                 href="tel:+917065303030"
                 className="flex items-center space-x-1 sm:space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-1 sm:px-3 md:px-4 py-0.5 sm:py-2 md:py-2.5 rounded-md md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
               >
-                <Phone className="h-2 w-2 sm:h-4 sm:w-4" />
+                <Phone className="h-2 w-2 sm:h-3 sm:w-3" />
                 <span className="text-xs sm:text-sm">+91 7065-30-30-30</span>
               </a>
             </div>
@@ -1305,47 +1305,54 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Mobile: Much Smaller Cards */}
+          {/* Mobile: Different Animation - Vertical Sliding Cards */}
           <div className="block md:hidden mb-4">
-            <div className="overflow-x-auto">
-              <div className="flex space-x-2">
-                <div className="flex-shrink-0 w-48 bg-white rounded-lg p-3 shadow-lg border border-gray-200 text-center">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-2">
+            <div className="space-y-2">
+              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left" style={{animationDelay: '0.1s'}}>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center flex-shrink-0">
                     <Trophy className="h-4 w-4 text-white" />
                   </div>
-                  <h3 className="text-xs font-bold text-[#22336a] mb-1">
-                    200+ Placement Opportunities
-                  </h3>
-                  <p className="text-[10px] text-gray-600 leading-relaxed">
-                    Guaranteed access to extensive placement opportunities across
-                    leading companies
-                  </p>
+                  <div className="flex-1">
+                    <h3 className="text-xs font-bold text-[#22336a] mb-1">
+                      200+ Placement Opportunities
+                    </h3>
+                    <p className="text-[10px] text-gray-600 leading-relaxed">
+                      Guaranteed access to extensive placement opportunities across leading companies
+                    </p>
+                  </div>
                 </div>
+              </div>
 
-                <div className="flex-shrink-0 w-48 bg-white rounded-lg p-3 shadow-lg border border-gray-200 text-center">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-2">
+              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-right" style={{animationDelay: '0.2s'}}>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center flex-shrink-0">
                     <TrendingUp className="h-4 w-4 text-white" />
                   </div>
-                  <h3 className="text-xs font-bold text-[#22336a] mb-1">
-                    First Year Tuition Fee Back
-                  </h3>
-                  <p className="text-[10px] text-gray-600 leading-relaxed">
-                    We'll refund your first-year tuition fee if you don't receive
-                    promised opportunities
-                  </p>
+                  <div className="flex-1">
+                    <h3 className="text-xs font-bold text-[#22336a] mb-1">
+                      First Year Tuition Fee Back
+                    </h3>
+                    <p className="text-[10px] text-gray-600 leading-relaxed">
+                      We'll refund your first-year tuition fee if you don't receive promised opportunities
+                    </p>
+                  </div>
                 </div>
+              </div>
 
-                <div className="flex-shrink-0 w-48 bg-white rounded-lg p-3 shadow-lg border border-gray-200 text-center">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-2">
+              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left" style={{animationDelay: '0.3s'}}>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center flex-shrink-0">
                     <Users className="h-4 w-4 text-white" />
                   </div>
-                  <h3 className="text-xs font-bold text-[#22336a] mb-1">
-                    Dedicated Career Support
-                  </h3>
-                  <p className="text-[10px] text-gray-600 leading-relaxed">
-                    Personal mentorship, interview preparation, and continuous
-                    guidance
-                  </p>
+                  <div className="flex-1">
+                    <h3 className="text-xs font-bold text-[#22336a] mb-1">
+                      Dedicated Career Support
+                    </h3>
+                    <p className="text-[10px] text-gray-600 leading-relaxed">
+                      Personal mentorship, interview preparation, and continuous guidance
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1638,19 +1645,19 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Programs Section - Mobile Responsive */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+      {/* Programs Section - Much Smaller Mobile */}
+      <section className="py-6 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#22336a]/5 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-4 md:mb-6">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-6 md:mb-16">
+            <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-2 md:mb-6">
               Programs Offered
             </h2>
-            <p className="text-sm md:text-base lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xs md:text-base lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Transform your career with industry-aligned programs designed by
               experts
             </p>
@@ -1658,17 +1665,17 @@ const Index = () => {
 
 
 
-          {/* Mobile: Program Selection Dropdown */}
-          <div className="block md:hidden mb-8">
+          {/* Mobile: Much Smaller Program Selection Dropdown */}
+          <div className="block md:hidden mb-4">
             {/* Program Selector - Highlighted */}
-            <div className="mb-4 p-4 bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-xl border-2 border-[#22336a]/20 relative overflow-hidden">
+            <div className="mb-2 p-2 bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-lg border border-[#22336a]/20 relative overflow-hidden">
               {/* Highlight background */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/5 via-[#c38935]/5 to-[#22336a]/5 animate-pulse"></div>
 
               <div className="relative z-10">
-                <label className="flex items-center text-sm font-bold text-[#22336a] mb-3">
-                  <div className="w-5 h-5 bg-[#c38935] rounded-full flex items-center justify-center mr-2 animate-bounce">
-                    <span className="text-white text-xs font-bold">!</span>
+                <label className="flex items-center text-xs font-bold text-[#22336a] mb-2">
+                  <div className="w-3 h-3 bg-[#c38935] rounded-full flex items-center justify-center mr-1 animate-bounce">
+                    <span className="text-white text-[8px] font-bold">!</span>
                   </div>
                   Select Program to View Details:
                 </label>
@@ -1677,7 +1684,7 @@ const Index = () => {
                   onChange={(e) =>
                     setSelectedMobileProgram(e.target.value || null)
                   }
-                  className="w-full p-3 border-2 border-[#22336a] rounded-lg text-[#22336a] font-medium focus:outline-none focus:ring-4 focus:ring-[#22336a]/20 focus:border-[#c38935] bg-white shadow-lg"
+                  className="w-full p-2 border border-[#22336a] rounded-md text-[#22336a] font-medium focus:outline-none focus:ring-2 focus:ring-[#22336a]/20 focus:border-[#c38935] bg-white shadow-sm text-sm"
                 >
                   <option value="">Choose a program...</option>
                   {Object.keys(programs).map((programName) => (
@@ -1688,70 +1695,70 @@ const Index = () => {
                 </select>
 
                 {/* Helper text */}
-                <p className="text-xs text-[#c38935] font-medium mt-2 flex items-center">
+                <p className="text-[10px] text-[#c38935] font-medium mt-1 flex items-center">
                   <span className="animate-pulse mr-1">👆</span>
                   Tap to explore our programs
                 </p>
               </div>
             </div>
 
-            {/* Selected Program Details */}
+            {/* Selected Program Details - Much Smaller */}
             {selectedMobileProgram && (
               <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
                 {/* Program Header */}
                 <div
-                  className={`bg-gradient-to-r ${programs[selectedMobileProgram].color} p-4 text-white`}
+                  className={`bg-gradient-to-r ${programs[selectedMobileProgram].color} p-2 text-white`}
                 >
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                      <GraduationCap className="h-5 w-5 text-white" />
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                      <GraduationCap className="h-3 w-3 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold">
+                      <h3 className="text-sm font-bold">
                         {selectedMobileProgram}
                       </h3>
-                      <p className="text-sm opacity-90">Program Details</p>
+                      <p className="text-xs opacity-90">Program Details</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-4 bg-white">
+                <div className="p-2 bg-white">
                   {/* Dropdown for Duration & Projects */}
-                  <div className="mb-4">
-                    <div className="bg-gray-50 rounded-lg p-3">
-                      <h4 className="font-semibold text-[#22336a] text-sm mb-2">
+                  <div className="mb-2">
+                    <div className="bg-gray-50 rounded-lg p-2">
+                      <h4 className="font-semibold text-[#22336a] text-xs mb-1">
                         Program Overview:
                       </h4>
-                      <div className="space-y-2">
+                      <div className="space-y-1">
                         <div className="flex justify-between items-center">
-                          <span className="text-xs text-gray-600">
+                          <span className="text-[10px] text-gray-600">
                             Duration:
                           </span>
-                          <span className="text-sm font-medium text-[#22336a]">
+                          <span className="text-xs font-medium text-[#22336a]">
                             {programs[selectedMobileProgram].duration}
                           </span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-xs text-gray-600">
+                          <span className="text-[10px] text-gray-600">
                             Projects:
                           </span>
-                          <span className="text-sm font-medium text-[#22336a]">
+                          <span className="text-xs font-medium text-[#22336a]">
                             {programs[selectedMobileProgram].projects}
                           </span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-xs text-gray-600">
+                          <span className="text-[10px] text-gray-600">
                             Certifications:
                           </span>
-                          <span className="text-sm font-medium text-[#22336a]">
+                          <span className="text-xs font-medium text-[#22336a]">
                             {programs[selectedMobileProgram].certifications}
                           </span>
                         </div>
                         <div className="flex justify-between items-center">
-                          <span className="text-xs text-gray-600">
+                          <span className="text-[10px] text-gray-600">
                             Internships:
                           </span>
-                          <span className="text-sm font-medium text-[#22336a]">
+                          <span className="text-xs font-medium text-[#22336a]">
                             {programs[selectedMobileProgram].internships}
                           </span>
                         </div>
@@ -1759,11 +1766,11 @@ const Index = () => {
                     </div>
                   </div>
 
-                  {/* Tabs for Specifications and Eligibility */}
-                  <div className="border-b border-gray-200 mb-4">
-                    <div className="flex space-x-4">
+                  {/* Tabs for Specifications and Eligibility - Smaller */}
+                  <div className="border-b border-gray-200 mb-2">
+                    <div className="flex space-x-2">
                       <button
-                        className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                        className={`py-1 px-1 border-b font-medium text-xs ${
                           (mobileTabState[selectedMobileProgram] || "specs") ===
                           "specs"
                             ? "border-[#22336a] text-[#22336a]"
@@ -1779,7 +1786,7 @@ const Index = () => {
                         Specifications
                       </button>
                       <button
-                        className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                        className={`py-1 px-1 border-b font-medium text-xs ${
                           mobileTabState[selectedMobileProgram] ===
                           "eligibility"
                             ? "border-[#22336a] text-[#22336a]"
@@ -1873,8 +1880,8 @@ const Index = () => {
                     </div>
                   )}
 
-                  {/* Apply Button */}
-                  <div className="mt-4">
+                  {/* Apply Button - Smaller */}
+                  <div className="mt-2">
                     <a
                       href={
                         selectedMobileProgram === "MBA"
@@ -1891,10 +1898,10 @@ const Index = () => {
                       }
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r ${programs[selectedMobileProgram].color} text-white font-bold text-sm rounded-lg transition-all duration-300 transform hover:scale-105`}
+                      className={`w-full inline-flex items-center justify-center px-2 py-2 bg-gradient-to-r ${programs[selectedMobileProgram].color} text-white font-bold text-xs rounded-lg transition-all duration-300 transform hover:scale-105`}
                     >
                       <span>Apply for {selectedMobileProgram}</span>
-                      <ExternalLink className="ml-2 h-4 w-4" />
+                      <ExternalLink className="ml-1 h-3 w-3" />
                     </a>
                   </div>
                 </div>
