@@ -675,14 +675,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Top Recruiters Section with Horizontal Scrolling */}
-      <section className="py-8 md:py-16 bg-white relative overflow-hidden">
+      {/* Top Recruiters Section with Horizontal Scrolling - Smaller on Mobile */}
+      <section className="py-4 md:py-16 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="text-center mb-6 md:mb-12">
-            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-3 md:mb-6">
+          <div className="text-center mb-4 md:mb-12">
+            <h2 className="text-base sm:text-lg md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-2 md:mb-6">
               Top Recruiters
             </h2>
-            <p className="text-sm md:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xs md:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Join a network of 1,200+ leading companies that actively recruit
               our graduates
             </p>
