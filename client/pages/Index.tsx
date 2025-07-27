@@ -989,19 +989,19 @@ const Index = () => {
                     desc: "Outstanding Academic Excellence",
                   },
                 ].map((award, index) => (
-                  <div key={index} className="flex-shrink-0 w-60">
-                    <div className="bg-white rounded-2xl p-4 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
-                      <div className="w-full h-32 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
+                  <div key={index} className="flex-shrink-0 w-48">
+                    <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105 relative">
+                      <div className="w-full h-20 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-lg overflow-hidden mb-2">
                         <img
                           src={award.src}
                           alt={award.title}
-                          className="w-full h-full object-contain p-2"
+                          className="w-full h-full object-contain p-1"
                         />
                       </div>
-                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
-                        <Trophy className="h-3 w-3 text-white" />
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#c38935] rounded-full flex items-center justify-center">
+                        <Trophy className="h-2 w-2 text-white" />
                       </div>
-                      <h3 className="text-xs font-bold text-[#22336a] mb-1 text-center">
+                      <h3 className="text-xs font-bold text-[#22336a] mb-0.5 text-center">
                         {award.title}
                       </h3>
                       <p className="text-gray-600 text-[10px] text-center">
