@@ -756,7 +756,7 @@ const Index = () => {
             </div>
 
             {/* Second line - Left to Right */}
-            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
+            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-3 md:py-6">
               <div className="flex space-x-12 animate-scroll-left-to-right whitespace-nowrap">
                 {[
                   {
@@ -2533,7 +2533,7 @@ const Index = () => {
                 {[
                   {
                     name: "Rahul Kumar",
-                    role: "MBA Graduate ��� Software Engineer",
+                    role: "MBA Graduate ����� Software Engineer",
                     company: "TCS",
                     initials: "RK",
                     quote:
