@@ -1864,8 +1864,8 @@ const Index = () => {
             )}
           </div>
 
-          {/* Program Content */}
-          <div className="relative">
+          {/* Program Content - Hidden on Mobile */}
+          <div className="relative hidden md:block">
             {Object.entries(programs).map(([programName, programData]) => (
               <div
                 key={programName}
