@@ -2955,7 +2955,7 @@ const Index = () => {
                                         {point.startsWith("•") ? (
                                           <>
                                             <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
-                                              ���
+                                              •
                                             </span>
                                             <span className="text-sm md:text-base">
                                               {point.substring(1).trim()}
