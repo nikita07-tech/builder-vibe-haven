@@ -2581,7 +2581,7 @@ const Index = () => {
           </div>
 
           {/* Desktop Testimonials Grid */}
-          <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+          <div className="hidden md:grid md:grid-cols-3 gap-8 mb-16">
             {/* Testimonial 1 */}
             <div
               className="group relative animate-slide-up"
