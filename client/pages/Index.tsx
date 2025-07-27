@@ -2990,7 +2990,15 @@ const Index = () => {
                                       ? "Admission"
                                       : faq.category === "fees"
                                         ? "Fees"
-                                        : "Support"}
+                                        : faq.category === "placement"
+                                          ? "Placement"
+                                          : faq.category === "industry"
+                                            ? "Industry"
+                                            : faq.category === "certifications"
+                                              ? "Certifications"
+                                              : faq.category === "success"
+                                                ? "Success"
+                                                : "Support"}
                                 </div>
                               </div>
                             </div>
