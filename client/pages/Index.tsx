@@ -1431,15 +1431,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Key Offerings - Mobile Responsive with Carousel */}
-      <section className="py-12 md:py-16 bg-white relative overflow-hidden">
+      {/* Key Offerings - Smaller Mobile Version */}
+      <section className="py-6 md:py-16 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-4 md:mb-6">
+          <div className="text-center mb-6 md:mb-16">
+            <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-2 md:mb-6">
               Key Offerings
             </h2>
-            <p className="text-sm md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
               Discover what makes our programs exceptional and job-ready
             </p>
           </div>
