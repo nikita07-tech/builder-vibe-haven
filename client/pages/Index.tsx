@@ -748,7 +748,7 @@ const Index = () => {
                     <img
                       src={recruiter.src}
                       alt={recruiter.name}
-                      className="h-10 md:h-16 w-auto"
+                      className="h-6 md:h-16 w-auto"
                     />
                   </button>
                 ))}
@@ -813,7 +813,7 @@ const Index = () => {
                     <img
                       src={recruiter.src}
                       alt={recruiter.name}
-                      className="h-10 md:h-16 w-auto"
+                      className="h-6 md:h-16 w-auto"
                     />
                   </button>
                 ))}
