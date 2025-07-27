@@ -1203,15 +1203,15 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           {/* Compact Header for Mobile */}
           <div className="text-center mb-8 md:mb-16">
-            <div className="inline-flex items-center px-3 md:px-6 py-2 md:py-3 bg-[#22336a]/10 rounded-full mb-3 md:mb-6 animate-fade-in">
-              <Trophy className="h-4 w-4 md:h-5 md:w-5 text-[#22336a] mr-1 md:mr-2 animate-pulse" />
+            <div className="inline-flex items-center px-3 md:px-6 py-2 md:py-3 bg-[#22336a]/10 rounded-full mb-3 md:mb-6">
+              <Trophy className="h-4 w-4 md:h-5 md:w-5 text-[#22336a] mr-1 md:mr-2" />
               <span className="text-[#22336a] font-semibold text-xs md:text-base">
                 PLACEMENT OPPORTUNITY PROGRAM
               </span>
             </div>
-            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight animate-slide-up">
+            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight">
               Placement
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] animate-gradient-shift">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
                 {" "}
                 Opportunity
               </span>
@@ -1220,40 +1220,31 @@ const Index = () => {
                 Program
               </span>
             </h2>
-            <div
-              className="max-w-4xl mx-auto animate-fade-in"
-              style={{ animationDelay: "0.3s" }}
-            >
+            <div className="max-w-4xl mx-auto">
               <p className="text-sm md:text-xl text-gray-700 leading-relaxed mb-2 md:mb-4">
                 Comprehensive placement support with assured career guidance
               </p>
               <div className="hidden md:flex items-center justify-center space-x-8 text-sm text-gray-600">
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-[#22336a] rounded-full"></div>
                   <span>Career Opportunities</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div
-                    className="w-3 h-3 bg-[#c38935] rounded-full animate-pulse"
-                    style={{ animationDelay: "0.5s" }}
-                  ></div>
+                  <div className="w-3 h-3 bg-[#c38935] rounded-full"></div>
                   <span>First Year Fee Back</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div
-                    className="w-3 h-3 bg-[#22336a] rounded-full animate-pulse"
-                    style={{ animationDelay: "1s" }}
-                  ></div>
+                  <div className="w-3 h-3 bg-[#22336a] rounded-full"></div>
                   <span>Expert Mentorship</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Mobile: Horizontal Scrolling Layout */}
+          {/* Mobile: Static Layout (No Animation) */}
           <div className="block md:hidden mb-6">
-            <div className="overflow-hidden">
-              <div className="flex space-x-4 animate-scroll-left-to-right">
+            <div className="overflow-x-auto">
+              <div className="flex space-x-4">
                 <div className="flex-shrink-0 w-72 bg-white rounded-xl p-6 shadow-lg border border-gray-200 text-center">
                   <div className="w-14 h-14 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4">
                     <Trophy className="h-7 w-7 text-white" />
