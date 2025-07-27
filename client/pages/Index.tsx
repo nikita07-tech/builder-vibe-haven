@@ -1804,11 +1804,11 @@ const Index = () => {
                     </div>
                   </div>
 
-                  {/* Tab Content */}
+                  {/* Tab Content - Smaller */}
                   {(mobileTabState[selectedMobileProgram] || "specs") ===
                   "specs" ? (
-                    <div className="space-y-2">
-                      <h4 className="font-semibold text-[#22336a] text-sm">
+                    <div className="space-y-1">
+                      <h4 className="font-semibold text-[#22336a] text-xs">
                         Key Certifications:
                       </h4>
                       {programs[selectedMobileProgram].certificationsList
@@ -1821,24 +1821,24 @@ const Index = () => {
                         .map((cert, certIndex) => (
                           <div
                             key={certIndex}
-                            className="flex items-start space-x-2 p-2 bg-gray-50 rounded-md"
+                            className="flex items-start space-x-1 p-1.5 bg-gray-50 rounded-md"
                           >
-                            <div className="w-4 h-4 bg-[#c38935] rounded-full mt-0.5 flex-shrink-0"></div>
+                            <div className="w-3 h-3 bg-[#c38935] rounded-full mt-0.5 flex-shrink-0"></div>
                             <div>
-                              <p className="text-sm font-medium text-[#22336a]">
+                              <p className="text-xs font-medium text-[#22336a]">
                                 {cert.name}
                               </p>
-                              <p className="text-xs text-gray-600">
+                              <p className="text-[10px] text-gray-600">
                                 {cert.careers}
                               </p>
                             </div>
                           </div>
                         ))}
 
-                      {/* View More / View Less Button */}
+                      {/* View More / View Less Button - Smaller */}
                       {programs[selectedMobileProgram].certificationsList
                         .length > 3 && (
-                        <div className="text-center mt-3">
+                        <div className="text-center mt-2">
                           <button
                             onClick={() =>
                               setShowAllCertifications({
@@ -1847,12 +1847,12 @@ const Index = () => {
                                   !showAllCertifications[selectedMobileProgram],
                               })
                             }
-                            className="inline-flex items-center px-4 py-2 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-medium rounded-lg transition-all duration-300 text-sm"
+                            className="inline-flex items-center px-2 py-1 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-medium rounded-md transition-all duration-300 text-xs"
                           >
                             {showAllCertifications[selectedMobileProgram] ? (
                               <>
                                 <span>View Less</span>
-                                <ChevronDown className="ml-1 h-4 w-4 rotate-180" />
+                                <ChevronDown className="ml-1 h-3 w-3 rotate-180" />
                               </>
                             ) : (
                               <>
@@ -1862,7 +1862,7 @@ const Index = () => {
                                     .certificationsList.length - 3}{" "}
                                   more)
                                 </span>
-                                <ChevronDown className="ml-1 h-4 w-4" />
+                                <ChevronDown className="ml-1 h-3 w-3" />
                               </>
                             )}
                           </button>
@@ -1870,11 +1870,11 @@ const Index = () => {
                       )}
                     </div>
                   ) : (
-                    <div className="bg-gray-50 rounded-lg p-3">
-                      <h4 className="font-semibold text-[#22336a] text-sm mb-2">
+                    <div className="bg-gray-50 rounded-lg p-2">
+                      <h4 className="font-semibold text-[#22336a] text-xs mb-1">
                         Eligibility Criteria:
                       </h4>
-                      <p className="text-sm text-gray-700">
+                      <p className="text-xs text-gray-700">
                         {programs[selectedMobileProgram].eligibility}
                       </p>
                     </div>
