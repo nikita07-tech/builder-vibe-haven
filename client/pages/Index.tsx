@@ -1463,42 +1463,42 @@ const Index = () => {
                     <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
                   </div>
                 </div>
-                <div className="flex-shrink-0 w-80 group relative cursor-pointer animate-slide-in-left" style={{animationDelay: '0.1s'}}>
-                  <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-2xl p-6 shadow-2xl border border-orange-200/50 hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 hover:scale-105">
-                    <div className="w-14 h-14 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
-                      <Award className="h-7 w-7 text-white" />
+                <div className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left" style={{animationDelay: '0.1s'}}>
+                  <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <Award className="h-5 w-5 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Professional Portfolio
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed">
                       Showcase verified skills and experience to increase hiring
                       chances
                     </p>
-                    <div className="absolute top-4 right-4 w-3 h-3 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
                   </div>
                 </div>
                 <div
-                  className="flex-shrink-0 w-80 group relative cursor-pointer animate-slide-in-left"
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
                   style={{animationDelay: '0.2s'}}
                   onClick={() => setShowPlacementPopup(true)}
                 >
-                  <div className="bg-gradient-to-br from-white to-purple-50/30 rounded-2xl p-6 shadow-2xl border border-purple-200/50 hover:shadow-3xl transition-all duration-700 hover:-translate-y-3 hover:scale-105 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full -translate-y-8 translate-x-8"></div>
-                    <div className="w-14 h-14 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg relative z-10">
-                      <TrendingUp className="h-7 w-7 text-white" />
-                      <div className="absolute -top-2 -right-2 w-5 h-5 bg-[#c38935] rounded-full flex items-center justify-center animate-bounce">
+                  <div className="bg-gradient-to-br from-white to-purple-50/30 rounded-xl p-4 shadow-lg border border-purple-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full -translate-y-6 translate-x-6"></div>
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg relative z-10">
+                      <TrendingUp className="h-5 w-5 text-white" />
+                      <div className="absolute -top-1 -right-1 w-4 h-4 bg-[#c38935] rounded-full flex items-center justify-center animate-bounce">
                         <span className="text-white text-xs font-bold">!</span>
                       </div>
                     </div>
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       POP
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed relative z-10">
+                    <p className="text-gray-600 text-xs leading-relaxed relative z-10">
                       Access to 200+ guaranteed job opportunities with
                       comprehensive placement support
                     </p>
-                    <div className="absolute top-4 right-4 w-3 h-3 bg-[#c38935] rounded-full opacity-100 animate-pulse"></div>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-100 animate-pulse"></div>
                   </div>
                 </div>
                 <div className="flex-shrink-0 w-80 group relative cursor-pointer animate-slide-in-left" style={{animationDelay: '0.3s'}}>
