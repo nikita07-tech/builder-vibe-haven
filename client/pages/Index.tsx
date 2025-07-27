@@ -2843,7 +2843,7 @@ const Index = () => {
                 {
                   question: "What is Sunstone's placement opportunity program?",
                   answer:
-                    "Our placement opportunity program guarantees comprehensive career support and placement opportunities. If you don't receive the promised opportunities, we offer first year tuition fee back. The program includes dedicated placement officers, guaranteed interviews, and continuous career guidance.",
+                    "Our placement opportunity program guarantees comprehensive career support and placement opportunities. If you don't receive the promised opportunities, we offer first year tuition fee back.",
                   category: "placement",
                 },
                 {
