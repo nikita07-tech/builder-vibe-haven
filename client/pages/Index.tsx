@@ -469,11 +469,6 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-12 items-center">
             <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
-              <div className="inline-flex items-center px-1 md:px-4 py-0.5 md:py-2 bg-white/20 backdrop-blur-sm rounded-full mb-1 md:mb-6 border border-white/30">
-                <span className="text-white font-semibold text-xs md:text-sm">
-                  PROFESSIONAL EXCELLENCE
-                </span>
-              </div>
               <h1 className="text-sm sm:text-lg md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
                 Transform Your Future with
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
@@ -675,6 +670,191 @@ const Index = () => {
                   Placement report audited by B2K Analytics
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Top Recruiters Section with Horizontal Scrolling */}
+      <section className="py-8 md:py-16 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-3 md:mb-6">
+              Top Recruiters
+            </h2>
+            <p className="text-sm md:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Join a network of 1,200+ leading companies that actively recruit
+              our graduates
+            </p>
+          </div>
+
+          {/* Two-line Animated Recruiters */}
+          <div className="space-y-8 mb-12">
+            {/* First line - Right to Left */}
+            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
+              <div className="flex space-x-12 animate-scroll-right-to-left whitespace-nowrap">
+                {[
+                  {
+                    name: "Bosch",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
+                  },
+                  {
+                    name: "HCL",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
+                  },
+                  {
+                    name: "TCS",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
+                  },
+                  {
+                    name: "Paytm",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
+                  },
+                  {
+                    name: "Microsoft",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800",
+                  },
+                  {
+                    name: "Genpact",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800",
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    name: "Bosch",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
+                  },
+                  {
+                    name: "HCL",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
+                  },
+                  {
+                    name: "TCS",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
+                  },
+                  {
+                    name: "Paytm",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
+                  },
+                ].map((recruiter, index) => (
+                  <button
+                    key={`${recruiter.name}-${index}`}
+                    onClick={() => handleRecruiterClick(recruiter.name)}
+                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
+                      clickedRecruiters.includes(recruiter.name)
+                        ? "filter-none"
+                        : "filter grayscale hover:filter-none"
+                    }`}
+                  >
+                    <img
+                      src={recruiter.src}
+                      alt={recruiter.name}
+                      className="h-10 md:h-16 w-auto"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Second line - Left to Right */}
+            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
+              <div className="flex space-x-12 animate-scroll-left-to-right whitespace-nowrap">
+                {[
+                  {
+                    name: "Bajaj Finserv",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
+                  },
+                  {
+                    name: "Airtel",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
+                  },
+                  {
+                    name: "IBM",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
+                  },
+                  {
+                    name: "Infosys",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
+                  },
+                  {
+                    name: "Hero",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800",
+                  },
+                  {
+                    name: "Axis Bank",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800",
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    name: "Bajaj Finserv",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
+                  },
+                  {
+                    name: "Airtel",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
+                  },
+                  {
+                    name: "IBM",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
+                  },
+                  {
+                    name: "Infosys",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
+                  },
+                ].map((recruiter, index) => (
+                  <button
+                    key={`${recruiter.name}-${index}`}
+                    onClick={() => handleRecruiterClick(recruiter.name)}
+                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
+                      clickedRecruiters.includes(recruiter.name)
+                        ? "filter-none"
+                        : "filter grayscale hover:filter-none"
+                    }`}
+                  >
+                    <img
+                      src={recruiter.src}
+                      alt={recruiter.name}
+                      className="h-10 md:h-16 w-auto"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Career Focus Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 lg:gap-8">
+            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
+              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
+                <Users className="h-5 w-5 md:h-8 md:w-8 text-white" />
+              </div>
+              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
+                Industry Connections
+              </h3>
+              <p className="text-xs md:text-base text-gray-600">
+                Strong network of leading companies across sectors
+              </p>
+            </div>
+            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
+              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#22336a] rounded-full flex items-center justify-center">
+                <Trophy className="h-5 w-5 md:h-8 md:w-8 text-white" />
+              </div>
+              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
+                Career Growth
+              </h3>
+              <p className="text-xs md:text-base text-gray-600">
+                Excellent packages and growth opportunities
+              </p>
+            </div>
+            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
+              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
+                <Target className="h-5 w-5 md:h-8 md:w-8 text-white" />
+              </div>
+              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
+                Success Stories
+              </h3>
+              <p className="text-xs md:text-base text-gray-600">
+                Proven track record of student achievements
+              </p>
             </div>
           </div>
         </div>
@@ -1070,117 +1250,89 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Mobile: Compact Cards Layout */}
+          {/* Mobile: Grid Layout */}
           <div className="block md:hidden mb-6">
-            <div className="space-y-3">
-              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Trophy className="h-5 w-5 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-sm font-bold text-[#22336a] mb-1">
-                      200+ Placement Opportunities
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      Guaranteed access to extensive placement opportunities
-                      across leading companies
-                    </p>
-                  </div>
+            <div className="grid grid-cols-1 gap-4">
+              <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Trophy className="h-6 w-6 text-white" />
                 </div>
+                <h3 className="text-sm font-bold text-[#22336a] mb-2">
+                  200+ Placement Opportunities
+                </h3>
+                <p className="text-xs text-gray-600">
+                  Guaranteed access to extensive placement opportunities across
+                  leading companies
+                </p>
               </div>
 
-              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <TrendingUp className="h-5 w-5 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-sm font-bold text-[#22336a] mb-1">
-                      First Year Tuition Fee Back
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      We'll refund your first-year tuition fee if you don't
-                      receive promised opportunities
-                    </p>
-                  </div>
+              <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <TrendingUp className="h-6 w-6 text-white" />
                 </div>
+                <h3 className="text-sm font-bold text-[#22336a] mb-2">
+                  First Year Tuition Fee Back
+                </h3>
+                <p className="text-xs text-gray-600">
+                  We'll refund your first-year tuition fee if you don't receive
+                  promised opportunities
+                </p>
               </div>
 
-              <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Users className="h-5 w-5 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-sm font-bold text-[#22336a] mb-1">
-                      Dedicated Career Support
-                    </h3>
-                    <p className="text-xs text-gray-600">
-                      Personal mentorship, interview preparation, and continuous
-                      guidance
-                    </p>
-                  </div>
+              <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Users className="h-6 w-6 text-white" />
                 </div>
+                <h3 className="text-sm font-bold text-[#22336a] mb-2">
+                  Dedicated Career Support
+                </h3>
+                <p className="text-xs text-gray-600">
+                  Personal mentorship, interview preparation, and continuous
+                  guidance
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Desktop: Professional Grid Layout */}
-          <div className="hidden md:grid lg:grid-cols-2 gap-16 mb-20">
-            {/* Left Side - Key Guarantees */}
-            <div className="space-y-8">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 group">
-                <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Trophy className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">
-                      200+ Placement Opportunities
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Guaranteed access to extensive placement opportunities
-                      across leading companies
-                    </p>
-                  </div>
-                </div>
+          {/* Desktop: 3-Column Grid Layout */}
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 text-center group">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Trophy className="h-8 w-8 text-white" />
               </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                200+ Placement Opportunities
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Guaranteed access to extensive placement opportunities across
+                leading companies
+              </p>
+            </div>
 
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 group">
-                <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <TrendingUp className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">
-                      First Year Tuition Fee Back
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      If you don't receive the promised placement opportunities,
-                      we'll refund your first-year tuition fee.
-                    </p>
-                  </div>
-                </div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 text-center group">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <TrendingUp className="h-8 w-8 text-white" />
               </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                First Year Tuition Fee Back
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                If you don't receive the promised placement opportunities, we'll
+                refund your first-year tuition fee.
+              </p>
+            </div>
 
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 group">
-                <div className="flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="h-8 w-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-3">
-                      Dedicated Career Support
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Personal mentorship, interview preparation, and continuous
-                      guidance from industry professionals throughout your
-                      journey.
-                    </p>
-                  </div>
-                </div>
+            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 text-center group">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Users className="h-8 w-8 text-white" />
               </div>
+              <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                Dedicated Career Support
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Personal mentorship, interview preparation, and continuous
+                guidance from industry professionals throughout your journey.
+              </p>
             </div>
           </div>
 
@@ -1928,191 +2080,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Top Recruiters Section with Horizontal Scrolling */}
-      <section className="py-8 md:py-16 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="text-center mb-6 md:mb-12">
-            <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-3 md:mb-6">
-              Top Recruiters
-            </h2>
-            <p className="text-sm md:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Join a network of 1,200+ leading companies that actively recruit
-              our graduates
-            </p>
-          </div>
-
-          {/* Two-line Animated Recruiters */}
-          <div className="space-y-8 mb-12">
-            {/* First line - Right to Left */}
-            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
-              <div className="flex space-x-12 animate-scroll-right-to-left whitespace-nowrap">
-                {[
-                  {
-                    name: "Bosch",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
-                  },
-                  {
-                    name: "HCL",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
-                  },
-                  {
-                    name: "TCS",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
-                  },
-                  {
-                    name: "Paytm",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
-                  },
-                  {
-                    name: "Microsoft",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800",
-                  },
-                  {
-                    name: "Genpact",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800",
-                  },
-                  // Duplicate for seamless loop
-                  {
-                    name: "Bosch",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
-                  },
-                  {
-                    name: "HCL",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
-                  },
-                  {
-                    name: "TCS",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
-                  },
-                  {
-                    name: "Paytm",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
-                  },
-                ].map((recruiter, index) => (
-                  <button
-                    key={`${recruiter.name}-${index}`}
-                    onClick={() => handleRecruiterClick(recruiter.name)}
-                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
-                      clickedRecruiters.includes(recruiter.name)
-                        ? "filter-none"
-                        : "filter grayscale hover:filter-none"
-                    }`}
-                  >
-                    <img
-                      src={recruiter.src}
-                      alt={recruiter.name}
-                      className="h-10 md:h-16 w-auto"
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Second line - Left to Right */}
-            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-6">
-              <div className="flex space-x-12 animate-scroll-left-to-right whitespace-nowrap">
-                {[
-                  {
-                    name: "Bajaj Finserv",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
-                  },
-                  {
-                    name: "Airtel",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
-                  },
-                  {
-                    name: "IBM",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
-                  },
-                  {
-                    name: "Infosys",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
-                  },
-                  {
-                    name: "Hero",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800",
-                  },
-                  {
-                    name: "Axis Bank",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800",
-                  },
-                  // Duplicate for seamless loop
-                  {
-                    name: "Bajaj Finserv",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
-                  },
-                  {
-                    name: "Airtel",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
-                  },
-                  {
-                    name: "IBM",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
-                  },
-                  {
-                    name: "Infosys",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
-                  },
-                ].map((recruiter, index) => (
-                  <button
-                    key={`${recruiter.name}-${index}`}
-                    onClick={() => handleRecruiterClick(recruiter.name)}
-                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
-                      clickedRecruiters.includes(recruiter.name)
-                        ? "filter-none"
-                        : "filter grayscale hover:filter-none"
-                    }`}
-                  >
-                    <img
-                      src={recruiter.src}
-                      alt={recruiter.name}
-                      className="h-10 md:h-16 w-auto"
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Career Focus Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 lg:gap-8">
-            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
-              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
-                <Users className="h-5 w-5 md:h-8 md:w-8 text-white" />
-              </div>
-              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
-                Industry Connections
-              </h3>
-              <p className="text-xs md:text-base text-gray-600">
-                Strong network of leading companies across sectors
-              </p>
-            </div>
-            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
-              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#22336a] rounded-full flex items-center justify-center">
-                <Trophy className="h-5 w-5 md:h-8 md:w-8 text-white" />
-              </div>
-              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
-                Career Growth
-              </h3>
-              <p className="text-xs md:text-base text-gray-600">
-                Excellent packages and growth opportunities
-              </p>
-            </div>
-            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
-              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
-                <Target className="h-5 w-5 md:h-8 md:w-8 text-white" />
-              </div>
-              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
-                Success Stories
-              </h3>
-              <p className="text-xs md:text-base text-gray-600">
-                Proven track record of student achievements
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Enhanced Admission Process */}
       <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-orange-50 relative overflow-hidden">
         <div className="absolute inset-0">
@@ -2536,7 +2503,7 @@ const Index = () => {
                 {[
                   {
                     name: "Rahul Kumar",
-                    role: "MBA Graduate • Software Engineer",
+                    role: "MBA Graduate ��� Software Engineer",
                     company: "TCS",
                     initials: "RK",
                     quote:
@@ -2612,7 +2579,7 @@ const Index = () => {
           </div>
 
           {/* Desktop Testimonials Grid */}
-          <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+          <div className="hidden md:grid md:grid-cols-3 gap-8 mb-16">
             {/* Testimonial 1 */}
             <div
               className="group relative animate-slide-up"
@@ -2741,7 +2708,7 @@ const Index = () => {
 
             {/* Testimonial 3 */}
             <div
-              className="group relative animate-slide-up md:col-span-2 xl:col-span-1"
+              className="group relative animate-slide-up"
               style={{ animationDelay: "0.3s" }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
@@ -2840,7 +2807,7 @@ const Index = () => {
                   question:
                     "What makes Sunstone different from other education providers?",
                   answer:
-                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
+                    "• Industry-aligned curriculum designed with Fortune 500 companies\n�� Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
                   category: "sunstone",
                 },
                 {
@@ -2953,7 +2920,7 @@ const Index = () => {
                                         {point.startsWith("•") ? (
                                           <>
                                             <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
-                                              ���
+                                              •
                                             </span>
                                             <span className="text-sm md:text-base">
                                               {point.substring(1).trim()}
