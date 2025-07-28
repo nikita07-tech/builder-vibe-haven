@@ -1432,19 +1432,19 @@ const Index = () => {
                   <div className="flex flex-col md:flex-row gap-1 md:gap-4 justify-center">
                     <button
                       onClick={() => setShowPlacementPopup(true)}
-                      className="inline-flex items-center px-3 md:px-8 py-1.5 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-xs md:text-base"
+                      className="inline-flex items-center px-2 md:px-8 py-1 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-md md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-[10px] md:text-base"
                     >
                       <span>Learn More</span>
-                      <ChevronRight className="h-3 w-3 md:h-5 md:w-5 ml-1 md:ml-2" />
+                      <ChevronRight className="h-2 w-2 md:h-5 md:w-5 ml-0.5 md:ml-2" />
                     </button>
                     <a
                       href="https://sunstone.in/apply-now"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-3 md:px-8 py-1.5 md:py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-xs md:text-base"
+                      className="inline-flex items-center px-2 md:px-8 py-1 md:py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-md md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-[10px] md:text-base"
                     >
                       <span>Apply Now</span>
-                      <ExternalLink className="h-3 w-3 md:h-5 md:w-5 ml-1 md:ml-2" />
+                      <ExternalLink className="h-2 w-2 md:h-5 md:w-5 ml-0.5 md:ml-2" />
                     </a>
                   </div>
                 </div>
