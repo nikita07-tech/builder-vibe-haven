@@ -1585,7 +1585,7 @@ const Index = () => {
           </div>
 
           {/* Desktop Grid */}
-          <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
             {/* 1. Industry Expert Sessions */}
             <div
               className="group relative animate-fade-in-up"
