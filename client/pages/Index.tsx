@@ -2281,7 +2281,8 @@ const Index = () => {
                       <div
                         className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
                       >
-                        <span className="text-white font-bold text-sm">
+                        <ChevronRight className="w-3 h-3 text-white/30 absolute" />
+                        <span className="text-white font-bold text-sm relative z-10">
                           {item.step}
                         </span>
                         <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#c38935] rounded-full flex items-center justify-center">
