@@ -375,13 +375,13 @@ const Index = () => {
             href="https://sunstone.in/apply-now"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-auto px-3 md:px-6 py-2 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-lg md:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
+            className="relative flex items-center justify-center w-auto px-2 md:px-6 py-1 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-md md:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
           >
             {/* Button Content */}
-            <div className="flex items-center space-x-2 md:space-x-3">
-              <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-md md:rounded-lg flex items-center justify-center">
+            <div className="flex items-center space-x-1 md:space-x-3">
+              <div className="w-4 h-4 md:w-8 md:h-8 bg-white/20 rounded-sm md:rounded-lg flex items-center justify-center">
                 <svg
-                  className="w-3 h-3 md:w-5 md:h-5 text-white"
+                  className="w-2 h-2 md:w-5 md:h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -389,7 +389,9 @@ const Index = () => {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="text-xs md:text-sm font-bold">Apply Now</div>
+                <div className="text-[10px] md:text-sm font-bold">
+                  Apply Now
+                </div>
                 <div className="text-xs opacity-90 hidden md:block">
                   Sunstone Portal
                 </div>
@@ -413,8 +415,10 @@ const Index = () => {
           </div>
 
           {/* Notification Badge */}
-          <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-4 h-4 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
-            <span className="text-white text-xs font-bold">!</span>
+          <div className="absolute -top-0.5 -right-0.5 md:-top-2 md:-right-2 w-3 h-3 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
+            <span className="text-white text-[8px] md:text-xs font-bold">
+              !
+            </span>
           </div>
         </div>
       </div>
@@ -448,10 +452,12 @@ const Index = () => {
               </a>
               <a
                 href="tel:+917065303030"
-                className="flex items-center space-x-1 sm:space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-1 sm:px-3 md:px-4 py-0.5 sm:py-2 md:py-2.5 rounded-md md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
+                className="flex items-center space-x-1 sm:space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-1 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-2.5 rounded-sm md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
               >
                 <Phone className="h-2 w-2 sm:h-3 sm:w-3" />
-                <span className="text-xs sm:text-sm">+91 7065-30-30-30</span>
+                <span className="text-[10px] sm:text-sm">
+                  +91 7065-30-30-30
+                </span>
               </a>
             </div>
           </div>
@@ -499,16 +505,16 @@ const Index = () => {
                   href="https://sunstone.in/campuses/hi-tech-institute"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-2 sm:px-3 md:px-6 lg:px-8 py-1 sm:py-1.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-xs sm:text-xs md:text-base rounded-md sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-1.5 sm:px-3 md:px-6 lg:px-8 py-0.5 sm:py-1.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-[10px] sm:text-xs md:text-base rounded-sm sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   <span>Explore Programs</span>
-                  <ExternalLink className="ml-1 sm:ml-1 md:ml-2 h-3 w-3 sm:h-3 sm:w-3 md:h-5 md:w-5" />
+                  <ExternalLink className="ml-0.5 sm:ml-1 md:ml-2 h-2 w-2 sm:h-3 sm:w-3 md:h-5 md:w-5" />
                 </a>
                 <a
                   href="tel:+917065303030"
-                  className="inline-flex items-center justify-center px-2 sm:px-3 md:px-6 lg:px-8 py-1 sm:py-1.5 md:py-3 lg:py-4 bg-transparent border border-white text-white font-bold text-xs sm:text-xs md:text-base rounded-md sm:rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center justify-center px-1.5 sm:px-3 md:px-6 lg:px-8 py-0.5 sm:py-1.5 md:py-3 lg:py-4 bg-transparent border border-white text-white font-bold text-[10px] sm:text-xs md:text-base rounded-sm sm:rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
                 >
-                  <Phone className="mr-1 sm:mr-1 md:mr-2 h-3 w-3 sm:h-3 sm:w-3 md:h-5 md:w-5" />
+                  <Phone className="mr-0.5 sm:mr-1 md:mr-2 h-2 w-2 sm:h-3 sm:w-3 md:h-5 md:w-5" />
                   <span>Call Now</span>
                 </a>
               </div>
@@ -1081,111 +1087,115 @@ const Index = () => {
 
       {/* Professional Placement Opportunity Program Popup */}
       {showPlacementPopup && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-5xl w-full mx-4 relative shadow-2xl max-h-[90vh] overflow-y-auto animate-scaleIn">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4">
+          <div className="bg-white rounded-lg md:rounded-2xl max-w-sm md:max-w-5xl w-full mx-2 md:mx-4 relative shadow-2xl max-h-[95vh] md:max-h-[90vh] overflow-y-auto animate-scaleIn">
             <button
               onClick={() => setShowPlacementPopup(false)}
-              className="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-300 z-10 group"
+              className="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-10 md:h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-300 z-10 group"
             >
-              <X className="h-5 w-5 text-gray-600 group-hover:text-gray-800 transition-colors" />
+              <X className="h-3 w-3 md:h-5 md:w-5 text-gray-600 group-hover:text-gray-800 transition-colors" />
             </button>
 
-            <div className="p-8">
+            <div className="p-3 md:p-8">
               {/* Professional Header */}
-              <div className="text-center mb-8">
-                <div className="inline-flex items-center px-4 py-2 bg-[#22336a]/10 rounded-full mb-4">
-                  <Award className="h-4 w-4 text-[#22336a] mr-2" />
-                  <span className="text-[#22336a] font-semibold text-sm">
+              <div className="text-center mb-3 md:mb-8">
+                <div className="inline-flex items-center px-2 py-1 md:px-4 md:py-2 bg-[#22336a]/10 rounded-full mb-2 md:mb-4">
+                  <Award className="h-2 w-2 md:h-4 md:w-4 text-[#22336a] mr-1 md:mr-2" />
+                  <span className="text-[#22336a] font-semibold text-[10px] md:text-sm">
                     PLACEMENT OPPORTUNITY PROGRAM
                   </span>
                 </div>
-                <h3 className="text-3xl font-bold text-[#22336a] mb-4">
+                <h3 className="text-sm md:text-3xl font-bold text-[#22336a] mb-2 md:mb-4">
                   Comprehensive Career Success Program
                 </h3>
-                <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                <p className="text-gray-600 text-xs md:text-lg max-w-2xl mx-auto">
                   Industry-leading placement program with guaranteed
                   opportunities and comprehensive support system
                 </p>
               </div>
 
               {/* Key Metrics Grid */}
-              <div className="grid md:grid-cols-4 gap-6 mb-8">
-                <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mb-3 md:mb-8">
+                <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl hover:bg-gray-100 transition-colors duration-300">
+                  <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
                     200+
                   </div>
-                  <p className="text-gray-600 font-medium">
+                  <p className="text-gray-600 font-medium text-[10px] md:text-base">
                     Guaranteed Opportunities
                   </p>
                 </div>
-                <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl hover:bg-gray-100 transition-colors duration-300">
+                  <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
                     100%
                   </div>
-                  <p className="text-gray-600 font-medium">
+                  <p className="text-gray-600 font-medium text-[10px] md:text-base">
                     First Year Tuition Fee Back
                   </p>
                 </div>
-                <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl hover:bg-gray-100 transition-colors duration-300">
+                  <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
                     1200+
                   </div>
-                  <p className="text-gray-600 font-medium">Partner Companies</p>
+                  <p className="text-gray-600 font-medium text-[10px] md:text-base">
+                    Partner Companies
+                  </p>
                 </div>
-                <div className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors duration-300">
-                  <div className="text-3xl font-bold text-[#22336a] mb-2">
+                <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl hover:bg-gray-100 transition-colors duration-300">
+                  <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
                     26 LPA
                   </div>
-                  <p className="text-gray-600 font-medium">Highest Package</p>
+                  <p className="text-gray-600 font-medium text-[10px] md:text-base">
+                    Highest Package
+                  </p>
                 </div>
               </div>
 
               {/* Program Features */}
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8 mb-3 md:mb-8">
                 <div>
-                  <h4 className="text-xl font-bold text-[#22336a] mb-4">
+                  <h4 className="text-xs md:text-xl font-bold text-[#22336a] mb-2 md:mb-4">
                     Program Highlights
                   </h4>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
+                  <div className="space-y-2 md:space-y-3">
+                    <div className="flex items-start space-x-2 md:space-x-3">
+                      <div className="w-4 h-4 md:w-6 md:h-6 bg-[#22336a] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 md:mt-0">
                         <svg
-                          className="w-3 h-3 text-white"
+                          className="w-2 h-2 md:w-3 md:h-3 text-white"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
                           <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                         </svg>
                       </div>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-[10px] md:text-base">
                         Guaranteed interview opportunities with top companies
                       </p>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
+                    <div className="flex items-start space-x-2 md:space-x-3">
+                      <div className="w-4 h-4 md:w-6 md:h-6 bg-[#22336a] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 md:mt-0">
                         <svg
-                          className="w-3 h-3 text-white"
+                          className="w-2 h-2 md:w-3 md:h-3 text-white"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
                           <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                         </svg>
                       </div>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-[10px] md:text-base">
                         Comprehensive skill development workshops
                       </p>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-6 h-6 bg-[#22336a] rounded-full flex items-center justify-center">
+                    <div className="flex items-start space-x-2 md:space-x-3">
+                      <div className="w-4 h-4 md:w-6 md:h-6 bg-[#22336a] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 md:mt-0">
                         <svg
-                          className="w-3 h-3 text-white"
+                          className="w-2 h-2 md:w-3 md:h-3 text-white"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
                           <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                         </svg>
                       </div>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-[10px] md:text-base">
                         Professional portfolio development
                       </p>
                     </div>
@@ -1193,34 +1203,38 @@ const Index = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-xl font-bold text-[#22336a] mb-4">
+                  <h4 className="text-xs md:text-xl font-bold text-[#22336a] mb-2 md:mb-4">
                     Success Metrics
                   </h4>
-                  <div className="space-y-4">
-                    <div className="p-4 bg-[#22336a]/5 rounded-lg">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-gray-700 font-medium">
+                  <div className="space-y-2 md:space-y-4">
+                    <div className="p-2 md:p-4 bg-[#22336a]/5 rounded-lg">
+                      <div className="flex justify-between items-center mb-1 md:mb-2">
+                        <span className="text-gray-700 font-medium text-[10px] md:text-base">
                           Placement Rate
                         </span>
-                        <span className="text-[#22336a] font-bold">95%</span>
+                        <span className="text-[#22336a] font-bold text-xs md:text-base">
+                          95%
+                        </span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="w-full bg-gray-200 rounded-full h-1 md:h-2">
                         <div
-                          className="bg-[#22336a] h-2 rounded-full"
+                          className="bg-[#22336a] h-1 md:h-2 rounded-full"
                           style={{ width: "95%" }}
                         ></div>
                       </div>
                     </div>
-                    <div className="p-4 bg-[#c38935]/5 rounded-lg">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-gray-700 font-medium">
+                    <div className="p-2 md:p-4 bg-[#c38935]/5 rounded-lg">
+                      <div className="flex justify-between items-center mb-1 md:mb-2">
+                        <span className="text-gray-700 font-medium text-[10px] md:text-base">
                           Student Satisfaction
                         </span>
-                        <span className="text-[#22336a] font-bold">98%</span>
+                        <span className="text-[#22336a] font-bold text-xs md:text-base">
+                          98%
+                        </span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="w-full bg-gray-200 rounded-full h-1 md:h-2">
                         <div
-                          className="bg-[#c38935] h-2 rounded-full"
+                          className="bg-[#c38935] h-1 md:h-2 rounded-full"
                           style={{ width: "98%" }}
                         ></div>
                       </div>
@@ -1230,28 +1244,28 @@ const Index = () => {
               </div>
 
               {/* Terms and CTA */}
-              <div className="border-t border-gray-200 pt-6">
-                <p className="text-sm text-gray-500 text-center mb-6 max-w-3xl mx-auto">
+              <div className="border-t border-gray-200 pt-3 md:pt-6">
+                <p className="text-[10px] md:text-sm text-gray-500 text-center mb-3 md:mb-6 max-w-3xl mx-auto">
                   Terms and conditions apply. Placement guarantee subject to
                   program completion, maintaining minimum academic standards,
                   and active participation in placement activities. Full terms
                   available upon enrollment.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col gap-2 md:gap-4 md:flex-row justify-center">
                   <a
                     href="https://sunstone.in/apply-now"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-8 py-3 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center justify-center px-4 py-2 md:px-8 md:py-3 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl text-xs md:text-base"
                   >
                     <span>Apply Now</span>
-                    <ExternalLink className="ml-2 h-4 w-4" />
+                    <ExternalLink className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
                   </a>
                   <a
                     href="tel:+917065303030"
-                    className="inline-flex items-center justify-center px-8 py-3 bg-white border-2 border-[#22336a] text-[#22336a] font-bold rounded-lg hover:bg-[#22336a] hover:text-white transition-all duration-300"
+                    className="inline-flex items-center justify-center px-4 py-2 md:px-8 md:py-3 bg-white border-2 border-[#22336a] text-[#22336a] font-bold rounded-lg hover:bg-[#22336a] hover:text-white transition-all duration-300 text-xs md:text-base"
                   >
-                    <Phone className="mr-2 h-4 w-4" />
+                    <Phone className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4" />
                     <span>Call for Details</span>
                   </a>
                 </div>
@@ -1432,19 +1446,19 @@ const Index = () => {
                   <div className="flex flex-col md:flex-row gap-1 md:gap-4 justify-center">
                     <button
                       onClick={() => setShowPlacementPopup(true)}
-                      className="inline-flex items-center px-3 md:px-8 py-1.5 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-xs md:text-base"
+                      className="inline-flex items-center px-2 md:px-8 py-1 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-md md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-[10px] md:text-base"
                     >
                       <span>Learn More</span>
-                      <ChevronRight className="h-3 w-3 md:h-5 md:w-5 ml-1 md:ml-2" />
+                      <ChevronRight className="h-2 w-2 md:h-5 md:w-5 ml-0.5 md:ml-2" />
                     </button>
                     <a
                       href="https://sunstone.in/apply-now"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-3 md:px-8 py-1.5 md:py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-xs md:text-base"
+                      className="inline-flex items-center px-2 md:px-8 py-1 md:py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-md md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-[10px] md:text-base"
                     >
                       <span>Apply Now</span>
-                      <ExternalLink className="h-3 w-3 md:h-5 md:w-5 ml-1 md:ml-2" />
+                      <ExternalLink className="h-2 w-2 md:h-5 md:w-5 ml-0.5 md:ml-2" />
                     </a>
                   </div>
                 </div>
