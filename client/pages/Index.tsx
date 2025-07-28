@@ -935,7 +935,7 @@ const Index = () => {
           ></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-6 md:mb-16">
             <div className="inline-flex items-center px-3 md:px-6 py-1 md:py-3 bg-[#c38935]/10 rounded-full mb-2 md:mb-6">
               <Trophy className="h-3 w-3 md:h-5 md:w-5 text-[#c38935] mr-1 md:mr-2" />
