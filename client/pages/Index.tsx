@@ -2450,6 +2450,41 @@ const Index = () => {
                         fill="currentColor"
                         viewBox="0 0 24 24"
                       >
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                      Document Verification
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Quick verification of your academic credentials and eligibility confirmation
+                    </p>
+                    <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
+                      <Award className="h-4 w-4 mr-1" />
+                      Secure Process
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 5 */}
+              <div className="group relative">
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
+                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
+                      <span className="text-white font-bold text-2xl relative z-10">4</span>
+                    </div>
+                    <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
+                    {/* Icon Background */}
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                       </svg>
                     </div>
