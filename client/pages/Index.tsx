@@ -2233,7 +2233,7 @@ const Index = () => {
               </span>
             </h2>
             <p className="text-sm md:text-base lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Four streamlined steps to unlock your potential and transform your
+              Five streamlined steps to unlock your potential and transform your
               career
             </p>
           </div>
