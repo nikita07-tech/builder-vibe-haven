@@ -2328,7 +2328,7 @@ const Index = () => {
             {/* Connecting Line */}
             <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] opacity-30"></div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 mb-12 md:mb-16">
               {/* Step 1 */}
               <div className="group relative">
                 <div className="flex flex-col items-center text-center">
@@ -2589,7 +2589,7 @@ const Index = () => {
                   // Duplicate for seamless loop
                   {
                     name: "Rahul Kumar",
-                    role: "MBA Graduate • Software Engineer",
+                    role: "MBA Graduate ��� Software Engineer",
                     company: "TCS",
                     initials: "RK",
                     quote:
@@ -3275,7 +3275,7 @@ const Index = () => {
           {/* Bottom */}
           <div className="border-t border-white/20 mt-1 md:mt-8 pt-1 md:pt-6 flex flex-col sm:flex-row justify-between items-center">
             <p className="text-gray-400 text-xs md:text-sm mb-1 sm:mb-0">
-              © 2025 Sunstone Education. All rights reserved.
+              �� 2025 Sunstone Education. All rights reserved.
             </p>
             <div className="flex items-center space-x-1 md:space-x-4">
               <a
