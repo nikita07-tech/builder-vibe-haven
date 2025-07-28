@@ -966,7 +966,7 @@ const Index = () => {
           </div>
 
           {/* Mobile Awards Carousel - Smaller */}
-          <div className="block md:hidden mb-6">
+          <div className="block md:hidden mb-6 mx-2">
             <div className="overflow-hidden bg-gray-50 rounded-lg py-3">
               <div className="flex space-x-4 animate-scroll whitespace-nowrap">
                 {[
