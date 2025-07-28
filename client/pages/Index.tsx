@@ -752,7 +752,7 @@ const Index = () => {
                     className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
                       clickedRecruiters.includes(recruiter.name)
                         ? "filter-none"
-                        : "filter grayscale hover:filter-none"
+                        : ""
                     }`}
                   >
                     <img
@@ -817,7 +817,7 @@ const Index = () => {
                     className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
                       clickedRecruiters.includes(recruiter.name)
                         ? "filter-none"
-                        : "filter grayscale hover:filter-none"
+                        : ""
                     }`}
                   >
                     <img
