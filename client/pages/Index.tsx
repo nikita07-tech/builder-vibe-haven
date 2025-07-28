@@ -2324,7 +2324,8 @@ const Index = () => {
                 <div className="flex flex-col items-center text-center">
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <span className="text-white font-bold text-2xl">1</span>
+                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
+                      <span className="text-white font-bold text-2xl relative z-10">1</span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2879,7 +2880,7 @@ const Index = () => {
                   question:
                     "What makes Sunstone different from other education providers?",
                   answer:
-                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
+                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n�� Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
                   category: "sunstone",
                 },
                 {
