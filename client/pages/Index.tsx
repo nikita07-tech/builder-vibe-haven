@@ -378,10 +378,10 @@ const Index = () => {
             className="relative flex items-center justify-center w-auto px-2 md:px-6 py-1 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-md md:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
           >
             {/* Button Content */}
-            <div className="flex items-center space-x-2 md:space-x-3">
-              <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-md md:rounded-lg flex items-center justify-center">
+            <div className="flex items-center space-x-1 md:space-x-3">
+              <div className="w-4 h-4 md:w-8 md:h-8 bg-white/20 rounded-sm md:rounded-lg flex items-center justify-center">
                 <svg
-                  className="w-3 h-3 md:w-5 md:h-5 text-white"
+                  className="w-2 h-2 md:w-5 md:h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -389,7 +389,7 @@ const Index = () => {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="text-xs md:text-sm font-bold">Apply Now</div>
+                <div className="text-[10px] md:text-sm font-bold">Apply Now</div>
                 <div className="text-xs opacity-90 hidden md:block">
                   Sunstone Portal
                 </div>
