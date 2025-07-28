@@ -1130,7 +1130,7 @@ const Index = () => {
                   <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
                     1200+
                   </div>
-                  <p className="text-gray-600 font-medium text-[10px] md:text-base">Total Recruiters</p>
+                  <p className="text-gray-600 font-medium text-[10px] md:text-base">Partner Companies</p>
                 </div>
                 <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl hover:bg-gray-100 transition-colors duration-300">
                   <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
