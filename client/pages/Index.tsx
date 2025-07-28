@@ -389,7 +389,9 @@ const Index = () => {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="text-[10px] md:text-sm font-bold">Apply Now</div>
+                <div className="text-[10px] md:text-sm font-bold">
+                  Apply Now
+                </div>
                 <div className="text-xs opacity-90 hidden md:block">
                   Sunstone Portal
                 </div>
@@ -414,7 +416,9 @@ const Index = () => {
 
           {/* Notification Badge */}
           <div className="absolute -top-0.5 -right-0.5 md:-top-2 md:-right-2 w-3 h-3 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
-            <span className="text-white text-[8px] md:text-xs font-bold">!</span>
+            <span className="text-white text-[8px] md:text-xs font-bold">
+              !
+            </span>
           </div>
         </div>
       </div>
@@ -451,7 +455,9 @@ const Index = () => {
                 className="flex items-center space-x-1 sm:space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-1 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-2.5 rounded-sm md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
               >
                 <Phone className="h-2 w-2 sm:h-3 sm:w-3" />
-                <span className="text-[10px] sm:text-sm">+91 7065-30-30-30</span>
+                <span className="text-[10px] sm:text-sm">
+                  +91 7065-30-30-30
+                </span>
               </a>
             </div>
           </div>
@@ -1130,13 +1136,17 @@ const Index = () => {
                   <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
                     1200+
                   </div>
-                  <p className="text-gray-600 font-medium text-[10px] md:text-base">Partner Companies</p>
+                  <p className="text-gray-600 font-medium text-[10px] md:text-base">
+                    Partner Companies
+                  </p>
                 </div>
                 <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl hover:bg-gray-100 transition-colors duration-300">
                   <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
                     26 LPA
                   </div>
-                  <p className="text-gray-600 font-medium text-[10px] md:text-base">Highest Package</p>
+                  <p className="text-gray-600 font-medium text-[10px] md:text-base">
+                    Highest Package
+                  </p>
                 </div>
               </div>
 
@@ -1202,7 +1212,9 @@ const Index = () => {
                         <span className="text-gray-700 font-medium text-[10px] md:text-base">
                           Placement Rate
                         </span>
-                        <span className="text-[#22336a] font-bold text-xs md:text-base">95%</span>
+                        <span className="text-[#22336a] font-bold text-xs md:text-base">
+                          95%
+                        </span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-1 md:h-2">
                         <div
@@ -1216,7 +1228,9 @@ const Index = () => {
                         <span className="text-gray-700 font-medium text-[10px] md:text-base">
                           Student Satisfaction
                         </span>
-                        <span className="text-[#22336a] font-bold text-xs md:text-base">98%</span>
+                        <span className="text-[#22336a] font-bold text-xs md:text-base">
+                          98%
+                        </span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-1 md:h-2">
                         <div
