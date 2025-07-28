@@ -2386,15 +2386,14 @@ const Index = () => {
                   </div>
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-4">
-                      Assessment & Counseling
+                      Aptitude Test
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Personalized evaluation and expert guidance to find your
-                      perfect program match
+                      Quick aptitude assessment to evaluate your academic readiness and potential
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Users className="h-4 w-4 mr-1" />
-                      Expert Guidance
+                      <Clock className="h-4 w-4 mr-1" />
+                      30 minutes
                     </div>
                   </div>
                 </div>
@@ -2589,7 +2588,7 @@ const Index = () => {
                   // Duplicate for seamless loop
                   {
                     name: "Rahul Kumar",
-                    role: "MBA Graduate ��� Software Engineer",
+                    role: "MBA Graduate • Software Engineer",
                     company: "TCS",
                     initials: "RK",
                     quote:
@@ -3275,7 +3274,7 @@ const Index = () => {
           {/* Bottom */}
           <div className="border-t border-white/20 mt-1 md:mt-8 pt-1 md:pt-6 flex flex-col sm:flex-row justify-between items-center">
             <p className="text-gray-400 text-xs md:text-sm mb-1 sm:mb-0">
-              �� 2025 Sunstone Education. All rights reserved.
+              © 2025 Sunstone Education. All rights reserved.
             </p>
             <div className="flex items-center space-x-1 md:space-x-4">
               <a
