@@ -749,11 +749,7 @@ const Index = () => {
                   <button
                     key={`${recruiter.name}-${index}`}
                     onClick={() => handleRecruiterClick(recruiter.name)}
-                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
-                      clickedRecruiters.includes(recruiter.name)
-                        ? "filter-none"
-                        : "filter grayscale hover:filter-none"
-                    }`}
+                    className="flex-shrink-0 transition-all duration-300 transform hover:scale-110"
                   >
                     <img
                       src={recruiter.src}
@@ -814,11 +810,7 @@ const Index = () => {
                   <button
                     key={`${recruiter.name}-${index}`}
                     onClick={() => handleRecruiterClick(recruiter.name)}
-                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
-                      clickedRecruiters.includes(recruiter.name)
-                        ? "filter-none"
-                        : "filter grayscale hover:filter-none"
-                    }`}
+                    className="flex-shrink-0 transition-all duration-300 transform hover:scale-110"
                   >
                     <img
                       src={recruiter.src}
@@ -943,7 +935,7 @@ const Index = () => {
           ></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-6 md:mb-16">
             <div className="inline-flex items-center px-3 md:px-6 py-1 md:py-3 bg-[#c38935]/10 rounded-full mb-2 md:mb-6">
               <Trophy className="h-3 w-3 md:h-5 md:w-5 text-[#c38935] mr-1 md:mr-2" />
@@ -974,7 +966,7 @@ const Index = () => {
           </div>
 
           {/* Mobile Awards Carousel - Smaller */}
-          <div className="block md:hidden mb-6">
+          <div className="block md:hidden mb-6 mx-2">
             <div className="overflow-hidden bg-gray-50 rounded-lg py-3">
               <div className="flex space-x-4 animate-scroll whitespace-nowrap">
                 {[
@@ -1593,20 +1585,20 @@ const Index = () => {
           </div>
 
           {/* Desktop Grid */}
-          <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
             {/* 1. Industry Expert Sessions */}
             <div
               className="group relative animate-fade-in-up"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
                 <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
                   <BookOpen className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
                 <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
                   Expert Sessions
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
                   Session by industry experts and leading faculty from Fortune
                   500 companies
                 </p>
@@ -1619,14 +1611,14 @@ const Index = () => {
               className="group relative animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
-              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
                 <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Award className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
                 <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
                   Professional Portfolio
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
                   Showcase verified skills and experience to increase hiring
                   chances
                 </p>
@@ -1650,7 +1642,7 @@ const Index = () => {
                 <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
                   POP
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
                   Access to 200+ guaranteed job opportunities with comprehensive
                   placement support
                 </p>
@@ -1663,14 +1655,14 @@ const Index = () => {
               className="group relative animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
             >
-              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
                 <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
                 <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
                   Certifications
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
                   In-demand advanced certifications to choose from various
                   domains and enhance your career prospects
                 </p>
@@ -2241,14 +2233,14 @@ const Index = () => {
               </span>
             </h2>
             <p className="text-sm md:text-base lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Four streamlined steps to unlock your potential and transform your
+              Five streamlined steps to unlock your potential and transform your
               career
             </p>
           </div>
 
           {/* Mobile Grid for Journey Steps - All Visible at Once */}
           <div className="block md:hidden mb-8">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3" style={{gridTemplateRows: "repeat(3, 1fr)"}}>
               {[
                 {
                   step: "1",
@@ -2260,26 +2252,34 @@ const Index = () => {
                 },
                 {
                   step: "2",
-                  title: "Assessment",
-                  desc: "Expert guidance & evaluation",
-                  time: "Expert Help",
+                  title: "Aptitude Test",
+                  desc: "Quick aptitude assessment",
+                  time: "30 minutes",
                   color: "from-[#c38935] to-[#d4a853]",
                   icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z",
                 },
                 {
                   step: "3",
-                  title: "Verification",
-                  desc: "Document verification",
-                  time: "Secure",
+                  title: "Screening & Interview",
+                  desc: "PG candidates interview only",
+                  time: "PG Only",
                   color: "from-[#22336a] to-[#3b4d7a]",
                   icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
                 },
                 {
                   step: "4",
+                  title: "Verification",
+                  desc: "Document verification",
+                  time: "Secure",
+                  color: "from-[#c38935] to-[#d4a853]",
+                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
+                },
+                {
+                  step: "5",
                   title: "Welcome!",
                   desc: "Begin your journey",
                   time: "Success",
-                  color: "from-[#c38935] to-[#d4a853]",
+                  color: "from-[#22336a] to-[#3b4d7a]",
                   icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
                 },
               ].map((item, index) => (
@@ -2289,7 +2289,8 @@ const Index = () => {
                       <div
                         className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
                       >
-                        <span className="text-white font-bold text-sm">
+                        <ChevronRight className="w-3 h-3 text-white/30 absolute" />
+                        <span className="text-white font-bold text-sm relative z-10">
                           {item.step}
                         </span>
                         <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#c38935] rounded-full flex items-center justify-center">
@@ -2325,13 +2326,14 @@ const Index = () => {
             {/* Connecting Line */}
             <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] opacity-30"></div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 mb-12 md:mb-16">
               {/* Step 1 */}
               <div className="group relative">
                 <div className="flex flex-col items-center text-center">
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <span className="text-white font-bold text-2xl">1</span>
+                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
+                      <span className="text-white font-bold text-2xl relative z-10">1</span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2365,7 +2367,8 @@ const Index = () => {
                 <div className="flex flex-col items-center text-center">
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <span className="text-white font-bold text-2xl">2</span>
+                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
+                      <span className="text-white font-bold text-2xl relative z-10">2</span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2381,15 +2384,14 @@ const Index = () => {
                   </div>
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-4">
-                      Assessment & Counseling
+                      Aptitude Test
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Personalized evaluation and expert guidance to find your
-                      perfect program match
+                      Quick aptitude assessment to evaluate your academic readiness and potential
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Users className="h-4 w-4 mr-1" />
-                      Expert Guidance
+                      <Clock className="h-4 w-4 mr-1" />
+                      30 minutes
                     </div>
                   </div>
                 </div>
@@ -2400,7 +2402,8 @@ const Index = () => {
                 <div className="flex flex-col items-center text-center">
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <span className="text-white font-bold text-2xl">3</span>
+                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
+                      <span className="text-white font-bold text-2xl relative z-10">3</span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2416,15 +2419,14 @@ const Index = () => {
                   </div>
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-4">
-                      Document Verification
+                      Screening & Interview
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Quick verification of your academic credentials and
-                      eligibility confirmation
+                      Personal interview and evaluation process for PG candidates only
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Award className="h-4 w-4 mr-1" />
-                      Secure Process
+                      <Users className="h-4 w-4 mr-1" />
+                      PG Candidates Only
                     </div>
                   </div>
                 </div>
@@ -2435,9 +2437,45 @@ const Index = () => {
                 <div className="flex flex-col items-center text-center">
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <span className="text-white font-bold text-2xl">4</span>
+                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
+                      <span className="text-white font-bold text-2xl relative z-10">4</span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
+                    {/* Icon Background */}
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
+                      <svg
+                        className="w-4 h-4 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
+                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                      Document Verification
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Quick verification of your academic credentials and eligibility confirmation
+                    </p>
+                    <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
+                      <Award className="h-4 w-4 mr-1" />
+                      Secure Process
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 5 */}
+              <div className="group relative">
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
+                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
+                      <span className="text-white font-bold text-2xl relative z-10">5</span>
+                    </div>
+                    <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
                       <svg
@@ -2449,7 +2487,7 @@ const Index = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-4">
                       Welcome Aboard!
                     </h3>
