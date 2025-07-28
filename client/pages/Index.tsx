@@ -2240,7 +2240,9 @@ const Index = () => {
 
           {/* Mobile Grid for Journey Steps - All Visible at Once */}
           <div className="block md:hidden mb-8">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3"
+                style="grid-template-rows: repeat(3, 1fr)"
+            >
               {[
                 {
                   step: "1",
