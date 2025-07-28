@@ -1137,7 +1137,7 @@ const Index = () => {
                     1200+
                   </div>
                   <p className="text-gray-600 font-medium text-[10px] md:text-base">
-                    Partner Companies
+                    1200+ Recruiters
                   </p>
                 </div>
                 <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl hover:bg-gray-100 transition-colors duration-300">
