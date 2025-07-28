@@ -2431,7 +2431,8 @@ const Index = () => {
                 <div className="flex flex-col items-center text-center">
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <span className="text-white font-bold text-2xl">4</span>
+                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
+                      <span className="text-white font-bold text-2xl relative z-10">4</span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
