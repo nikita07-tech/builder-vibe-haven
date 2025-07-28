@@ -1100,7 +1100,7 @@ const Index = () => {
                   </span>
                 </div>
                 <h3 className="text-sm md:text-3xl font-bold text-[#22336a] mb-2 md:mb-4">
-                  Career Success Program with Placement Opportunity Program
+                  Comprehensive Career Success Program
                 </h3>
                 <p className="text-gray-600 text-xs md:text-lg max-w-2xl mx-auto">
                   Industry-leading placement program with guaranteed
