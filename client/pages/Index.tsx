@@ -2260,9 +2260,9 @@ const Index = () => {
                 },
                 {
                   step: "3",
-                  title: "Verification",
-                  desc: "Document verification",
-                  time: "Secure",
+                  title: "Screening & Interview",
+                  desc: "PG candidates interview only",
+                  time: "PG Only",
                   color: "from-[#22336a] to-[#3b4d7a]",
                   icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
                 },
