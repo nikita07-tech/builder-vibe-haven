@@ -2270,10 +2270,18 @@ const Index = () => {
                 },
                 {
                   step: "4",
+                  title: "Verification",
+                  desc: "Document verification",
+                  time: "Secure",
+                  color: "from-[#c38935] to-[#d4a853]",
+                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
+                },
+                {
+                  step: "5",
                   title: "Welcome!",
                   desc: "Begin your journey",
                   time: "Success",
-                  color: "from-[#c38935] to-[#d4a853]",
+                  color: "from-[#22336a] to-[#3b4d7a]",
                   icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
                 },
               ].map((item, index) => (
