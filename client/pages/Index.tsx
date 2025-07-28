@@ -2421,15 +2421,14 @@ const Index = () => {
                   </div>
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-4">
-                      Document Verification
+                      Screening & Interview
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Quick verification of your academic credentials and
-                      eligibility confirmation
+                      Personal interview and evaluation process for PG candidates only
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Award className="h-4 w-4 mr-1" />
-                      Secure Process
+                      <Users className="h-4 w-4 mr-1" />
+                      PG Candidates Only
                     </div>
                   </div>
                 </div>
