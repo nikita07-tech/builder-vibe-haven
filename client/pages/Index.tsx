@@ -2726,12 +2726,12 @@ const Index = () => {
 
             {/* Testimonial 2 */}
             <div
-              className="group relative animate-slide-up"
+              className="group relative animate-slide-up h-full"
               style={{ animationDelay: "0.2s" }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#22336a] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105">
-                <CardContent className="p-8">
+              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#22336a] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 h-full flex flex-col">
+                <CardContent className="p-8 flex-1 flex flex-col justify-between">
                   <div className="flex items-center mb-6">
                     <div className="relative">
                       <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
