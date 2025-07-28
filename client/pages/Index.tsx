@@ -448,10 +448,10 @@ const Index = () => {
               </a>
               <a
                 href="tel:+917065303030"
-                className="flex items-center space-x-1 sm:space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-1 sm:px-3 md:px-4 py-0.5 sm:py-2 md:py-2.5 rounded-md md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
+                className="flex items-center space-x-1 sm:space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-1 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-2.5 rounded-sm md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
               >
                 <Phone className="h-2 w-2 sm:h-3 sm:w-3" />
-                <span className="text-xs sm:text-sm">+91 7065-30-30-30</span>
+                <span className="text-[10px] sm:text-sm">+91 7065-30-30-30</span>
               </a>
             </div>
           </div>
