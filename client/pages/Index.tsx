@@ -1618,7 +1618,7 @@ const Index = () => {
                 <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
                   Professional Portfolio
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
                   Showcase verified skills and experience to increase hiring
                   chances
                 </p>
@@ -2999,7 +2999,7 @@ const Index = () => {
                                         {point.startsWith("•") ? (
                                           <>
                                             <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
-                                              ���
+                                              •
                                             </span>
                                             <span className="text-sm md:text-base">
                                               {point.substring(1).trim()}
