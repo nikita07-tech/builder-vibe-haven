@@ -413,8 +413,8 @@ const Index = () => {
           </div>
 
           {/* Notification Badge */}
-          <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-4 h-4 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
-            <span className="text-white text-xs font-bold">!</span>
+          <div className="absolute -top-0.5 -right-0.5 md:-top-2 md:-right-2 w-3 h-3 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
+            <span className="text-white text-[8px] md:text-xs font-bold">!</span>
           </div>
         </div>
       </div>
