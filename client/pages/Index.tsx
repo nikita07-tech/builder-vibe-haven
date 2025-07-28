@@ -749,11 +749,7 @@ const Index = () => {
                   <button
                     key={`${recruiter.name}-${index}`}
                     onClick={() => handleRecruiterClick(recruiter.name)}
-                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
-                      clickedRecruiters.includes(recruiter.name)
-                        ? "filter-none"
-                        : ""
-                    }`}
+                    className="flex-shrink-0 transition-all duration-300 transform hover:scale-110"
                   >
                     <img
                       src={recruiter.src}
@@ -814,11 +810,7 @@ const Index = () => {
                   <button
                     key={`${recruiter.name}-${index}`}
                     onClick={() => handleRecruiterClick(recruiter.name)}
-                    className={`flex-shrink-0 transition-all duration-300 transform hover:scale-110 ${
-                      clickedRecruiters.includes(recruiter.name)
-                        ? "filter-none"
-                        : ""
-                    }`}
+                    className="flex-shrink-0 transition-all duration-300 transform hover:scale-110"
                   >
                     <img
                       src={recruiter.src}
