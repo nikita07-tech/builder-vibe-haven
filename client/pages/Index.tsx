@@ -2477,7 +2477,7 @@ const Index = () => {
                       <ChevronRight className="w-8 h-8 text-white/20 absolute" />
                       <span className="text-white font-bold text-2xl relative z-10">5</span>
                     </div>
-                    <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
+                    <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
                       <svg
