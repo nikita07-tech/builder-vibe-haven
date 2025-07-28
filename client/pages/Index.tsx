@@ -1662,7 +1662,7 @@ const Index = () => {
                 <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
                   Certifications
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
                   In-demand advanced certifications to choose from various
                   domains and enhance your career prospects
                 </p>
