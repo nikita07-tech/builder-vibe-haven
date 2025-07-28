@@ -1137,7 +1137,7 @@ const Index = () => {
                     1200+
                   </div>
                   <p className="text-gray-600 font-medium text-[10px] md:text-base">
-                    1200+ Recruiters
+                    Top Recruiters
                   </p>
                 </div>
                 <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl hover:bg-gray-100 transition-colors duration-300">
@@ -3181,7 +3181,9 @@ const Index = () => {
               <ul className="space-y-0.5 md:space-y-2 text-xs md:text-sm">
                 <li>
                   <a
-                    href="#"
+                    href="https://sunstone.in/mba"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                   >
                     MBA Program
@@ -3189,7 +3191,9 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://sunstone.in/bba"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                   >
                     BBA Program
@@ -3197,7 +3201,9 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://sunstone.in/bca"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                   >
                     BCA Program
@@ -3205,7 +3211,9 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://sunstone.in/mca"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                   >
                     MCA Program
@@ -3213,7 +3221,9 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://sunstone.in/btech"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                   >
                     B.Tech Program
