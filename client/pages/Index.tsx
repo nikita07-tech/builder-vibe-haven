@@ -1137,7 +1137,7 @@ const Index = () => {
                     1200+
                   </div>
                   <p className="text-gray-600 font-medium text-[10px] md:text-base">
-                    1200+ Recruiters
+                    Top Recruiters
                   </p>
                 </div>
                 <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl hover:bg-gray-100 transition-colors duration-300">
@@ -2563,7 +2563,7 @@ const Index = () => {
                   },
                   {
                     name: "Priya Sharma",
-                    role: "BCA Graduate • Full Stack Developer",
+                    role: "BCA Graduate �� Full Stack Developer",
                     company: "Infosys",
                     initials: "PS",
                     quote:
@@ -2658,15 +2658,15 @@ const Index = () => {
           </div>
 
           {/* Desktop Testimonials Grid */}
-          <div className="hidden md:grid md:grid-cols-3 gap-8 mb-16">
+          <div className="hidden md:grid md:grid-cols-3 gap-8 mb-16 items-stretch">
             {/* Testimonial 1 */}
             <div
-              className="group relative animate-slide-up"
+              className="group relative animate-slide-up h-full"
               style={{ animationDelay: "0.1s" }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105">
-                <CardContent className="p-8">
+              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 h-full flex flex-col">
+                <CardContent className="p-8 flex-1 flex flex-col justify-between">
                   {/* Avatar and Info */}
                   <div className="flex items-center mb-6">
                     <div className="relative">
@@ -2726,12 +2726,12 @@ const Index = () => {
 
             {/* Testimonial 2 */}
             <div
-              className="group relative animate-slide-up"
+              className="group relative animate-slide-up h-full"
               style={{ animationDelay: "0.2s" }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#22336a] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105">
-                <CardContent className="p-8">
+              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#22336a] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 h-full flex flex-col">
+                <CardContent className="p-8 flex-1 flex flex-col justify-between">
                   <div className="flex items-center mb-6">
                     <div className="relative">
                       <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -2787,12 +2787,12 @@ const Index = () => {
 
             {/* Testimonial 3 */}
             <div
-              className="group relative animate-slide-up"
+              className="group relative animate-slide-up h-full"
               style={{ animationDelay: "0.3s" }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105">
-                <CardContent className="p-8">
+              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 h-full flex flex-col">
+                <CardContent className="p-8 flex-1 flex flex-col justify-between">
                   <div className="flex items-center mb-6">
                     <div className="relative">
                       <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
@@ -3181,7 +3181,9 @@ const Index = () => {
               <ul className="space-y-0.5 md:space-y-2 text-xs md:text-sm">
                 <li>
                   <a
-                    href="#"
+                    href="https://sunstone.in/mba"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                   >
                     MBA Program
@@ -3189,7 +3191,9 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://sunstone.in/bba"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                   >
                     BBA Program
@@ -3197,7 +3201,9 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://sunstone.in/bca"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                   >
                     BCA Program
@@ -3205,7 +3211,9 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://sunstone.in/mca"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                   >
                     MCA Program
@@ -3213,7 +3221,9 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://sunstone.in/btech"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#c38935] transition-colors duration-300"
                   >
                     B.Tech Program
