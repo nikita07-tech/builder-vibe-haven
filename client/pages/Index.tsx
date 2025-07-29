@@ -1444,7 +1444,7 @@ const Index = () => {
               </span>
             </h2>
             <div className="max-w-4xl mx-auto text-gray-700 text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
-              <p>WHAT WE PROMISE ﻿TO ALL STUDENTS </p>
+              <p>WHAT WE PROMISE TO ALL STUDENTS </p>
             </div>
           </div>
 
@@ -3054,8 +3054,8 @@ const Index = () => {
                     <div className="relative">
                       <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
                         <img
-                          src="https://images.unsplash.com/photo-1494790108755-2616b612b3a7?w=150&h=150&fit=crop&crop=face"
-                          alt="Priya Sharma"
+                          src="https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800"
+                          alt="Balram Jat"
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -3065,13 +3065,13 @@ const Index = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#22336a] transition-colors duration-300">
-                        Priya Sharma
+                        Balram Jat
                       </h4>
                       <p className="text-sm text-gray-600">
-                        BCA Graduate • Full Stack Developer
+                        BCA Graduate
                       </p>
                       <p className="text-xs text-[#c38935] font-semibold">
-                        Infosys • Batch 2022
+                        JNU • 2024-2027
                       </p>
                     </div>
                   </div>
