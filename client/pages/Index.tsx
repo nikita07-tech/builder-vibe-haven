@@ -1938,6 +1938,55 @@ const Index = () => {
                     </div>
                   )}
 
+                  {/* Corporate Partners Section - Mobile */}
+                  <div className="mt-3 p-2 bg-gradient-to-r from-[#c38935]/10 to-[#22336a]/10 rounded-lg border border-[#c38935]/20">
+                    <div className="text-center mb-2">
+                      <h5 className="text-xs font-bold text-[#22336a] mb-1 flex items-center justify-center">
+                        <svg className="h-3 w-3 mr-1 text-[#c38935]" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Corporate Partners
+                      </h5>
+                    </div>
+
+                    <div className="grid grid-cols-3 gap-2 mb-2">
+                      <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
+                        <div className="w-full h-4 mb-1 rounded bg-gray-50 flex items-center justify-center">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2F07e4a38f73674b24b0edef76ca4585d5?format=webp&width=800"
+                            alt="TCS ION"
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <p className="text-[9px] font-bold text-[#22336a]">TCS ION</p>
+                      </div>
+                      <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
+                        <div className="w-full h-4 mb-1 rounded bg-gray-50 flex items-center justify-center">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Facd3859729a3443b919174d00f2d05f3?format=webp&width=800"
+                            alt="AU Finance"
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <p className="text-[9px] font-bold text-[#22336a]">AU Finance</p>
+                      </div>
+                      <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
+                        <div className="w-full h-4 mb-1 rounded bg-gray-50 flex items-center justify-center">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2F4054e5c1b7654fd4999a448e8e1a89d9?format=webp&width=800"
+                            alt="NSDC"
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <p className="text-[9px] font-bold text-[#22336a]">NSDC</p>
+                      </div>
+                    </div>
+
+                    <p className="text-[9px] text-center text-[#22336a]/70">
+                      Industry-ready training with corporate backing
+                    </p>
+                  </div>
+
                   {/* Apply Button - Smaller */}
                   <div className="mt-2">
                     <a
