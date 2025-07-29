@@ -1824,6 +1824,19 @@ const Index = () => {
                           </div>
                         ))}
 
+                      {/* Academic Partners Section */}
+                      <div className="mt-3 p-2 bg-blue-50 rounded-md border border-blue-200">
+                        <h5 className="text-xs font-bold text-[#22336a] mb-1">Academic Knowledge Partners</h5>
+                        <div className="flex flex-wrap gap-1 mb-2">
+                          <span className="px-2 py-0.5 bg-white text-[10px] font-medium text-[#22336a] rounded-full border border-gray-300">TCS Ion</span>
+                          <span className="px-2 py-0.5 bg-white text-[10px] font-medium text-[#22336a] rounded-full border border-gray-300">AU Finance Bank</span>
+                        </div>
+                        <h5 className="text-xs font-bold text-[#22336a] mb-1">Entrepreneurial Academic Partners</h5>
+                        <div className="flex flex-wrap gap-1">
+                          <span className="px-2 py-0.5 bg-white text-[10px] font-medium text-[#22336a] rounded-full border border-gray-300">NSDC</span>
+                        </div>
+                      </div>
+
                       {/* View More / View Less Button - Smaller */}
                       {programs[selectedMobileProgram].certificationsList
                         .length > 3 && (
@@ -2818,7 +2831,7 @@ const Index = () => {
                         />
                       </div>
                       <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                        <span className="text-white text-xs">✓</span>
+                        <span className="text-white text-xs">���</span>
                       </div>
                     </div>
                     <div>
@@ -3026,7 +3039,7 @@ const Index = () => {
                                         {point.startsWith("•") ? (
                                           <>
                                             <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
-                                              •
+                                              ��
                                             </span>
                                             <span className="text-sm md:text-base">
                                               {point.substring(1).trim()}
