@@ -250,10 +250,10 @@ const Index = () => {
     },
     "B.Tech": {
       duration: "4-year program",
-      certifications: "2 specializations",
+      certifications: "5 certifications",
       internships: "10+ months of Internships",
       projects: "8 capstone projects",
-      specializations: "2 core specializations",
+      specializations: "5 new-age certifications",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
