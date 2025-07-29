@@ -1316,7 +1316,7 @@ const Index = () => {
                   <div className="mb-3 space-y-2">
                     <div className="bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-lg p-3">
                       <p className="text-[10px] md:text-xs text-gray-700 font-medium mb-2">
-                        🎯 <strong>What is SAT?</strong> Sunstone Admission Test - Your gateway to excellence!
+                        <strong>What is SAT?</strong> Sunstone Admission Test - Your gateway to excellence!
                       </p>
                       <p className="text-[10px] md:text-xs text-gray-600 leading-relaxed">
                         A comprehensive aptitude and reasoning assessment designed to evaluate your academic potential and unlock scholarships up to <span className="font-bold text-[#c38935]">100% of tuition fees</span>.
