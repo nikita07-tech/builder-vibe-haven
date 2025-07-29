@@ -2575,7 +2575,9 @@ const Index = () => {
                     name: "Amit Joshi",
                     role: "B.Tech Graduate • Senior Developer",
                     company: "Wipro",
+                    batch: "Batch 2021",
                     initials: "AJ",
+                    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
                     quote:
                       "The specialized curriculum and project-based learning methodology prepared me perfectly for the industry demands.",
                     color: "from-[#c38935] to-[#f4d03f]",
