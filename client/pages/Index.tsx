@@ -297,7 +297,7 @@ const Index = () => {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="text-[10px] md:text-sm font-bold">
+                <div className="text-xs md:text-sm font-bold">
                   Apply Now
                 </div>
                 <div className="text-xs opacity-90 hidden md:block">
