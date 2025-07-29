@@ -2677,8 +2677,12 @@ const Index = () => {
                   {/* Avatar and Info */}
                   <div className="flex items-center mb-6">
                     <div className="relative">
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <span className="text-white font-bold text-lg">RK</span>
+                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
+                        <img
+                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+                          alt="Rahul Kumar"
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
                         <span className="text-white text-xs">✓</span>
@@ -2692,7 +2696,7 @@ const Index = () => {
                         MBA Graduate • Software Engineer
                       </p>
                       <p className="text-xs text-[#c38935] font-semibold">
-                        TCS
+                        TCS • Batch 2023
                       </p>
                     </div>
                   </div>
