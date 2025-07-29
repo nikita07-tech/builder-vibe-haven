@@ -1271,7 +1271,7 @@ const Index = () => {
                 {/* Bright Minds Scholarship - Enhanced Design */}
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-r from-[#c38935] to-[#22336a] rounded-xl md:rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="relative bg-white border-2 border-gray-200 hover:border-[#c38935] rounded-xl md:rounded-2xl p-6 md:p-8 overflow-hidden transform group-hover:scale-105 transition-all duration-500 shadow-xl">
+                  <div className="relative bg-white border-2 border-gray-200 hover:border-[#c38935] rounded-xl md:rounded-2xl p-4 md:p-8 overflow-hidden transform group-hover:scale-105 transition-all duration-500 shadow-xl">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
 
                     <div className="relative z-10">
