@@ -2594,7 +2594,9 @@ const Index = () => {
                     name: "Priya Sharma",
                     role: "BCA Graduate • Full Stack Developer",
                     company: "Infosys",
+                    batch: "Batch 2022",
                     initials: "PS",
+                    image: "https://images.unsplash.com/photo-1494790108755-2616b612b3a7?w=150&h=150&fit=crop&crop=face",
                     quote:
                       "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
                     color: "from-[#22336a] to-[#3b4d7a]",
@@ -2683,7 +2685,7 @@ const Index = () => {
                         Rahul Kumar
                       </h4>
                       <p className="text-sm text-gray-600">
-                        MBA Graduate ��� Software Engineer
+                        MBA Graduate • Software Engineer
                       </p>
                       <p className="text-xs text-[#c38935] font-semibold">
                         TCS
