@@ -2064,7 +2064,7 @@ const Index = () => {
                             {programData.certifications}
                           </div>
                           <div className="text-xs opacity-80">
-                            Specializations
+                            Certifications
                           </div>
                         </div>
                         <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
@@ -2712,7 +2712,7 @@ const Index = () => {
                 {[
                   {
                     name: "Rahul Kumar",
-                    role: "MBA Graduate • Software Engineer",
+                    role: "MBA Graduate �� Software Engineer",
                     company: "TCS",
                     batch: "Batch 2023",
                     initials: "RK",
