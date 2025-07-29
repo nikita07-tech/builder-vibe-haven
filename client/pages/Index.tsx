@@ -102,10 +102,10 @@ const Index = () => {
   const programs = {
     MBA: {
       duration: "2-year program",
-      certifications: "10 certifications",
+      certifications: "6 specializations",
       internships: "6+ months of internships/projects",
       projects: "4 capstone projects",
-      specializations: "10 advanced certifications",
+      specializations: "6 specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
@@ -142,10 +142,10 @@ const Index = () => {
     },
     BBA: {
       duration: "3-year program",
-      certifications: "10 certifications",
+      certifications: "6 specializations",
       internships: "8+ months of internships/projects",
       projects: "6 capstone projects",
-      specializations: "10 advanced certifications",
+      specializations: "6 specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
@@ -182,10 +182,10 @@ const Index = () => {
     },
     BCA: {
       duration: "3-year program",
-      certifications: "10 certifications",
+      certifications: "6 specializations",
       internships: "8+ months of internships/projects",
       projects: "3 capstone projects",
-      specializations: "10 advanced certifications",
+      specializations: "6 specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
@@ -218,10 +218,10 @@ const Index = () => {
     },
     MCA: {
       duration: "2-year program",
-      certifications: "10 certifications",
+      certifications: "5 specializations",
       internships: "6+ months of internships/projects",
       projects: "2 capstone projects",
-      specializations: "10 advanced certifications",
+      specializations: "5 specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
@@ -250,10 +250,10 @@ const Index = () => {
     },
     "B.Tech": {
       duration: "4-year program",
-      certifications: "10 certifications",
+      certifications: "2 specializations",
       internships: "10+ months of Internships",
       projects: "4 capstone projects",
-      specializations: "10 advanced certifications",
+      specializations: "2 specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
