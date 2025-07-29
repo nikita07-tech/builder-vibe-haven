@@ -1824,19 +1824,6 @@ const Index = () => {
                           </div>
                         ))}
 
-                      {/* Academic Partners Section */}
-                      <div className="mt-3 p-2 bg-blue-50 rounded-md border border-blue-200">
-                        <h5 className="text-xs font-bold text-[#22336a] mb-1">Academic Knowledge Partners</h5>
-                        <div className="flex flex-wrap gap-1 mb-2">
-                          <span className="px-2 py-0.5 bg-white text-[10px] font-medium text-[#22336a] rounded-full border border-gray-300">TCS Ion</span>
-                          <span className="px-2 py-0.5 bg-white text-[10px] font-medium text-[#22336a] rounded-full border border-gray-300">AU Finance Bank</span>
-                        </div>
-                        <h5 className="text-xs font-bold text-[#22336a] mb-1">Entrepreneurial Academic Partners</h5>
-                        <div className="flex flex-wrap gap-1">
-                          <span className="px-2 py-0.5 bg-white text-[10px] font-medium text-[#22336a] rounded-full border border-gray-300">NSDC</span>
-                        </div>
-                      </div>
-
                       {/* View More / View Less Button - Smaller */}
                       {programs[selectedMobileProgram].certificationsList
                         .length > 3 && (
@@ -2917,7 +2904,7 @@ const Index = () => {
                 {
                   question: "Why should I choose Sunstone?",
                   answer:
-                    "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n��� Comprehensive placement support and career guidance\n• Access to pan-India student community",
+                    "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
                   category: "sunstone",
                 },
                 {
