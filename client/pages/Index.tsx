@@ -55,6 +55,7 @@ const Index = () => {
   const [showAllCertifications, setShowAllCertifications] = useState<{
     [key: string]: boolean;
   }>({});
+  const [showScholarshipPopup, setShowScholarshipPopup] = useState(false);
 
   // Carousel images
   const carouselImages = [
@@ -101,56 +102,37 @@ const Index = () => {
   const programs = {
     MBA: {
       duration: "2-year program",
-      certifications: "10 advanced certifications",
+      certifications: "6 specializations",
       internships: "6+ months of internships/projects",
       projects: "4 capstone projects",
-      specializations: "6 new-age specializations",
+      specializations: "6 specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
-          name: "Data Analytics & Business Intelligence",
+          name: "Marketing Management",
           careers:
-            "Data Analyst, Business Intelligence Analyst, Data Scientist",
+            "Marketing Manager, Brand Manager, Digital Marketing Specialist",
         },
         {
-          name: "Logistics & Supply Chain Management",
+          name: "IT, Analytics & Research",
+          careers: "Business Analyst, Data Scientist, Research Analyst",
+        },
+        {
+          name: "Human Resource Management",
           careers:
-            "Supply Chain Manager, Logistics Coordinator, Procurement Manager",
+            "HR Manager, Talent Acquisition Manager, HR Business Partner",
         },
         {
-          name: "Sales Leadership",
-          careers:
-            "Sales Manager, Business Development Manager, Key Account Manager",
+          name: "Finance Management",
+          careers: "Finance Manager, Investment Analyst, Financial Planner",
         },
         {
-          name: "Digital Marketing",
-          careers:
-            "Social Media Manager, SEO Manager, Performance Marketing Specialist",
+          name: "Operations Management",
+          careers: "Operations Manager, Supply Chain Manager, Process Manager",
         },
         {
-          name: "Financial Modelling & Valuation",
-          careers:
-            "Financial Analyst, Investment Banker, Equity Research Analyst",
-        },
-        {
-          name: "Project Management",
-          careers: "Project Manager, Operations Manager, Program Manager",
-        },
-        {
-          name: "Product Management",
-          careers: "Product Manager, UX Strategist, Market Research Analyst",
-        },
-        {
-          name: "Entrepreneurship Fundamentals",
-          careers: "Startup Founder, Business Consultant, Venture Analyst",
-        },
-        {
-          name: "Human Resource & Talent Analytics",
-          careers: "HR Analyst, Talent Acquisition Manager",
-        },
-        {
-          name: "Trading and Investment",
-          careers: "Stock Trader, Investment Analyst, Portfolio Manager",
+          name: "Retail Sales Management",
+          careers: "Retail Manager, Sales Manager, Store Operations Manager",
         },
       ],
       eligibility:
@@ -158,56 +140,38 @@ const Index = () => {
     },
     BBA: {
       duration: "3-year program",
-      certifications: "10 advanced certifications",
+      certifications: "6 specializations",
       internships: "8+ months of internships/projects",
       projects: "6 capstone projects",
-      specializations: "6 new-age specializations",
+      specializations: "6 specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
-          name: "Data Analytics & Business Intelligence",
+          name: "IT & Business Analytics",
           careers:
-            "Data Analyst, Business Intelligence Analyst, Data Scientist",
-        },
-        {
-          name: "Logistics & Supply Chain Management",
-          careers:
-            "Supply Chain Manager, Logistics Coordinator, Procurement Manager",
-        },
-        {
-          name: "Sales Leadership",
-          careers:
-            "Sales Manager, Business Development Manager, Key Account Manager",
-        },
-        {
-          name: "Digital Marketing",
-          careers:
-            "Social Media Manager, SEO Manager, Performance Marketing Specialist",
-        },
-        {
-          name: "Financial Modelling & Valuation",
-          careers:
-            "Financial Analyst, Investment Banker, Equity Research Analyst",
-        },
-        {
-          name: "Project Management",
-          careers: "Project Manager, Operations Manager, Program Manager",
-        },
-        {
-          name: "Product Management",
-          careers: "Product Manager, UX Strategist, Market Research Analyst",
-        },
-        {
-          name: "Entrepreneurship Fundamentals",
-          careers: "Startup Founder, Business Consultant, Venture Analyst",
+            "Big Data Analyst, Data Visualization Specialist, Business Intelligence Analyst",
         },
         {
           name: "Human Resource & Talent Analytics",
-          careers: "HR Analyst, Talent Acquisition Manager",
+          careers:
+            "HR Data Analyst, Talent Acquisition Specialist, Workforce Planning Manager",
         },
         {
-          name: "Trading and Investment",
-          careers: "Stock Trader, Investment Analyst, Portfolio Manager",
+          name: "Marketing Management",
+          careers: "Marketing Manager, Brand Manager, Campaign Strategist",
+        },
+        {
+          name: "Retail Sales Management",
+          careers: "Retail Manager, Sales Executive, Store Operations Manager",
+        },
+        {
+          name: "Operations Management",
+          careers:
+            "Operations Manager, Production Manager, Logistics Coordinator",
+        },
+        {
+          name: "Banking, Financial Services and Insurance (BFSI)",
+          careers: "Banking Officer, Financial Advisor, Insurance Specialist",
         },
       ],
       eligibility:
@@ -215,48 +179,39 @@ const Index = () => {
     },
     BCA: {
       duration: "3-year program",
-      certifications: "10 advanced certifications",
+      certifications: "6 specializations",
       internships: "8+ months of internships/projects",
-      projects: "6 capstone projects",
-      specializations: "6 new-age specializations",
+      projects: "3 capstone projects",
+      specializations: "6 specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
-          name: "Programming Foundation",
-          careers: "Software Developer, Web Developer",
+          name: "Cloud Computing",
+          careers: "Cloud Engineer, DevOps Engineer, Cloud Architect",
         },
         {
-          name: "Full Stack Development",
-          careers: "Full Stack Developer, Backend Developer",
+          name: "Cyber Security & Forensics",
+          careers:
+            "Cybersecurity Analyst, Ethical Hacker, Digital Forensics Specialist",
         },
         {
-          name: "Advanced DSA & Competitive Coding",
-          careers: "Software Engineer, Algorithm Engineer",
+          name: "Blockchain",
+          careers:
+            "Blockchain Developer, Cryptocurrency Analyst, Smart Contract Developer",
+        },
+        {
+          name: "Machine Learning & AI",
+          careers: "ML Engineer, AI Developer, Data Scientist",
         },
         {
           name: "Data Science & Analytics",
-          careers: "Data Analyst, Business Intelligence Analyst",
+          careers:
+            "Data Analyst, Business Intelligence Analyst, Data Visualization Expert",
         },
         {
-          name: "AI for Everyone",
-          careers: "AI Consultant, Automation Specialist",
-        },
-        {
-          name: "AI & Machine Learning",
-          careers: "Machine Learning Engineer, AI Researcher",
-        },
-        { name: "Cloud Computing", careers: "Cloud Engineer, DevOps Engineer" },
-        {
-          name: "Cybersecurity & Forensics",
-          careers: "Cybersecurity Analyst, Ethical Hacker",
-        },
-        {
-          name: "Mobile App Development",
-          careers: "Mobile App Developer, Android/iOS Developer",
-        },
-        {
-          name: "Robotics and IoT Automation",
-          careers: "Robotics Engineer, IoT Developer",
+          name: "Full Stack Development",
+          careers:
+            "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
         },
       ],
       eligibility:
@@ -264,48 +219,34 @@ const Index = () => {
     },
     MCA: {
       duration: "2-year program",
-      certifications: "10 advanced certifications",
+      certifications: "5 specializations",
       internships: "6+ months of internships/projects",
-      projects: "6 capstone projects",
-      specializations: "6 new-age specializations",
+      projects: "2 capstone projects",
+      specializations: "5 specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
-          name: "Programming Foundation",
-          careers: "Software Developer, Web Developer",
-        },
-        {
           name: "Full Stack Development",
-          careers: "Full Stack Developer, Backend Developer",
+          careers:
+            "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
         },
         {
-          name: "Advanced DSA & Competitive Coding",
-          careers: "Software Engineer, Algorithm Engineer",
+          name: "Machine Learning & AI",
+          careers: "ML Engineer, AI Developer, Data Scientist",
         },
         {
-          name: "Data Science & Analytics",
-          careers: "Data Analyst, Business Intelligence Analyst",
+          name: "Data Science",
+          careers:
+            "Data Scientist, Data Analyst, Business Intelligence Specialist",
         },
         {
-          name: "AI for Everyone",
-          careers: "AI Consultant, Automation Specialist",
+          name: "Cloud Computing",
+          careers: "Cloud Engineer, DevOps Engineer, Cloud Solutions Architect",
         },
         {
-          name: "AI & Machine Learning",
-          careers: "Machine Learning Engineer, AI Researcher",
-        },
-        { name: "Cloud Computing", careers: "Cloud Engineer, DevOps Engineer" },
-        {
-          name: "Cybersecurity & Forensics",
-          careers: "Cybersecurity Analyst, Ethical Hacker",
-        },
-        {
-          name: "Mobile App Development",
-          careers: "Mobile App Developer, Android/iOS Developer",
-        },
-        {
-          name: "Robotics and IoT Automation",
-          careers: "Robotics Engineer, IoT Developer",
+          name: "Cyber Security",
+          careers:
+            "Cybersecurity Analyst, Security Engineer, Information Security Specialist",
         },
       ],
       eligibility:
@@ -313,48 +254,19 @@ const Index = () => {
     },
     "B.Tech": {
       duration: "4-year program",
-      certifications: "10 advanced certifications",
+      certifications: "2 specializations",
       internships: "10+ months of Internships",
-      projects: "8 capstone projects",
-      specializations: "6 new-age specializations",
+      projects: "4 capstone projects",
+      specializations: "2 specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
-          name: "Programming Foundation",
-          careers: "Software Developer, Web Developer",
+          name: "Computer Science Engineering",
+          careers: "Software Engineer, System Analyst, Application Developer",
         },
         {
-          name: "Full Stack Development",
-          careers: "Full Stack Developer, Backend Developer",
-        },
-        {
-          name: "Advanced DSA & Competitive Coding",
-          careers: "Software Engineer, Algorithm Engineer",
-        },
-        {
-          name: "Data Science & Analytics",
-          careers: "Data Analyst, Business Intelligence Analyst",
-        },
-        {
-          name: "AI for Everyone",
-          careers: "AI Consultant, Automation Specialist",
-        },
-        {
-          name: "AI & Machine Learning",
-          careers: "Machine Learning Engineer, AI Researcher",
-        },
-        { name: "Cloud Computing", careers: "Cloud Engineer, DevOps Engineer" },
-        {
-          name: "Cybersecurity & Forensics",
-          careers: "Cybersecurity Analyst, Ethical Hacker",
-        },
-        {
-          name: "Mobile App Development",
-          careers: "Mobile App Developer, Android/iOS Developer",
-        },
-        {
-          name: "Robotics and IoT Automation",
-          careers: "Robotics Engineer, IoT Developer",
+          name: "Information Technology",
+          careers: "IT Specialist, Business Analyst, Project Manager",
         },
       ],
       eligibility:
@@ -375,7 +287,7 @@ const Index = () => {
             href="https://sunstone.in/apply-now"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-auto px-2 md:px-6 py-1 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-md md:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
+            className="relative flex items-center justify-center w-auto px-3 md:px-6 py-2 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-md md:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
           >
             {/* Button Content */}
             <div className="flex items-center space-x-1 md:space-x-3">
@@ -389,9 +301,7 @@ const Index = () => {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="text-[10px] md:text-sm font-bold">
-                  Apply Now
-                </div>
+                <div className="text-xs md:text-sm font-bold">Apply Now</div>
                 <div className="text-xs opacity-90 hidden md:block">
                   Sunstone Portal
                 </div>
@@ -676,8 +586,9 @@ const Index = () => {
               </div>
 
               <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 text-center">
-                <p className="text-[10px] md:text-sm text-gray-700">
-                  Placement report audited by B2K Analytics
+                <p className="text-[9px] md:text-sm">
+                  Placement report audited by B2K Analytics Official Auditor for
+                  IIM Ahemdabad
                 </p>
               </div>
             </div>
@@ -1267,6 +1178,218 @@ const Index = () => {
         </div>
       )}
 
+      {/* Scholarship Popup */}
+      {showScholarshipPopup && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-4">
+          <div className="bg-white rounded-lg md:rounded-2xl max-w-[280px] md:max-w-3xl w-full mx-2 md:mx-4 relative shadow-2xl max-h-[85vh] md:max-h-[85vh] overflow-y-auto animate-scaleIn">
+            <button
+              onClick={() => setShowScholarshipPopup(false)}
+              className="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-10 md:h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-300 z-10 group"
+            >
+              <X className="h-3 w-3 md:h-5 md:w-5 text-gray-600 group-hover:text-gray-800 transition-colors" />
+            </button>
+
+            <div className="p-3 md:p-6">
+              {/* Ultra Creative Header with Enhanced Animation */}
+              <div className="text-center mb-3 md:mb-6 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/10 via-[#c38935]/10 to-[#22336a]/10 rounded-3xl animate-pulse"></div>
+                <div className="absolute top-0 left-1/2 w-32 h-32 bg-[#c38935]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-16 animate-float"></div>
+                <div
+                  className="absolute bottom-0 right-0 w-24 h-24 bg-[#22336a]/20 rounded-full blur-2xl translate-x-12 translate-y-12 animate-float"
+                  style={{ animationDelay: "2s" }}
+                ></div>
+
+                <div className="relative z-10 p-6 md:p-8">
+                  <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#c38935] rounded-full mb-6 animate-bounce-subtle shadow-2xl">
+                    <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-full flex items-center justify-center mr-3 animate-spin-slow">
+                      <Trophy className="h-3 w-3 md:h-4 md:w-4 text-white" />
+                    </div>
+                    <span className="text-white font-bold text-xs md:text-base tracking-wide">
+                      SCHOLARSHIP PROGRAMS
+                    </span>
+                    <div className="w-2 h-2 bg-white rounded-full ml-3 animate-ping"></div>
+                  </div>
+
+                  <div className="mb-4">
+                    <h3 className="text-lg md:text-3xl lg:text-4xl font-bold mb-3">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] animate-gradient-text">
+                        Transform Your Dreams
+                      </span>
+                      <br />
+                      <span className="text-[#22336a] animate-pulse-glow">
+                        Into Reality
+                      </span>
+                    </h3>
+                    <div className="w-32 h-1 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mx-auto mb-4 animate-scale-in"></div>
+                  </div>
+
+                  <p className="text-gray-600 text-sm md:text-xl max-w-3xl mx-auto leading-relaxed">
+                    Unlock your potential with our{" "}
+                    <span className="font-bold text-[#c38935]">
+                      innovative scholarship programs
+                    </span>{" "}
+                    designed to make quality education accessible to every
+                    ambitious student
+                  </p>
+                </div>
+              </div>
+
+              {/* Creative Scholarship Cards */}
+              <div className="space-y-3 md:space-y-6 mb-3 md:mb-6">
+                {/* SAT Scholarship - Enhanced Design */}
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-xl md:rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                  <div className="relative bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-xl md:rounded-2xl p-4 md:p-8 text-white overflow-hidden transform group-hover:scale-105 transition-all duration-500">
+                    <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-white/10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-700"></div>
+                    <div className="absolute bottom-0 left-0 w-24 h-24 md:w-36 md:h-36 bg-[#c38935]/20 rounded-full translate-y-12 -translate-x-12 group-hover:scale-110 transition-transform duration-700"></div>
+
+                    <div className="relative z-10">
+                      <div className="flex items-center mb-4 md:mb-6">
+                        <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-500 shadow-lg">
+                          <Trophy className="h-6 w-6 md:h-8 md:w-8 text-white" />
+                        </div>
+                        <div>
+                          <h4 className="text-lg md:text-2xl font-bold">
+                            SAT Scholarship
+                          </h4>
+                          <p className="text-sm md:text-base opacity-90">
+                            Sunstone Admission Test
+                          </p>
+                        </div>
+                      </div>
+
+                      <p className="text-sm md:text-base mb-6 opacity-90 leading-relaxed">
+                        Assessment covers general aptitude, logical reasoning,
+                        verbal ability, and psychometric evaluation for
+                        comprehensive scholarship eligibility.
+                      </p>
+
+                      <button
+                        onClick={() => {
+                          setShowScholarshipPopup(false);
+                          window.open(
+                            "https://sunstone.in/apply-now",
+                            "_blank",
+                          );
+                        }}
+                        className="w-full bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white font-bold py-3 md:py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base group"
+                      >
+                        <span className="flex items-center justify-center">
+                          Apply for SAT Scholarship
+                          <svg
+                            className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bright Minds Scholarship - Enhanced Design */}
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#c38935] to-[#22336a] rounded-xl md:rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                  <div className="relative bg-white border-2 border-gray-200 hover:border-[#c38935] rounded-xl md:rounded-2xl p-4 md:p-8 overflow-hidden transform group-hover:scale-105 transition-all duration-500 shadow-xl">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+
+                    <div className="relative z-10">
+                      <div className="text-center mb-6">
+                        <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-6 transition-transform duration-500">
+                          <svg
+                            className="w-8 h-8 md:w-10 md:h-10 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                          </svg>
+                        </div>
+                        <h4 className="text-lg md:text-2xl font-bold text-[#22336a] mb-2">
+                          Bright Minds Scholarship
+                        </h4>
+                        <p className="text-sm md:text-base text-gray-600">
+                          Merit-based Excellence Program
+                        </p>
+                      </div>
+
+                      <div className="bg-gradient-to-r from-[#22336a]/5 to-[#c38935]/5 rounded-xl p-4 md:p-6 mb-6 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-xl"></div>
+                        <div className="relative z-10">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fb7f8a9de29d34140ac2cc4ccf5225774?format=webp&width=800"
+                            alt="Bright Minds Scholarship"
+                            className="w-full h-32 md:h-48 lg:h-56 object-contain rounded-lg group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div className="absolute top-2 right-2 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
+                          <svg
+                            className="w-3 h-3 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                          </svg>
+                        </div>
+                      </div>
+
+                      <button
+                        onClick={() => {
+                          setShowScholarshipPopup(false);
+                          window.open(
+                            "https://sunstone.in/apply-now",
+                            "_blank",
+                          );
+                        }}
+                        className="w-full bg-gradient-to-r from-[#22336a] to-[#2d4a7b] hover:from-[#2d4a7b] hover:to-[#22336a] text-white font-bold py-3 md:py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base group"
+                      >
+                        <span className="flex items-center justify-center">
+                          Apply for Bright Minds
+                          <svg
+                            className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Enhanced CTA Section */}
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#c38935] rounded-xl md:rounded-2xl p-6 md:p-8 text-white relative overflow-hidden shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-white/5"></div>
+                  <div className="relative z-10">
+                    <h4 className="text-lg md:text-2xl font-bold mb-3 md:mb-4">
+                      Ready to Start Your Journey?
+                    </h4>
+                    <p className="text-sm md:text-base mb-6 opacity-90 max-w-md mx-auto">
+                      Take the first step towards your dream career with our
+                      scholarship programs
+                    </p>
+                    <button
+                      onClick={() => {
+                        setShowScholarshipPopup(false);
+                        window.open("https://sunstone.in/apply-now", "_blank");
+                      }}
+                      className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50 text-sm md:text-base group"
+                    >
+                      <span>Apply Now</span>
+                      <ExternalLink className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Professional Placement Guarantee Program - Much Smaller Mobile */}
       <section className="py-4 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute inset-0">
@@ -1280,7 +1403,7 @@ const Index = () => {
             <div className="inline-flex items-center px-2 md:px-6 py-1 md:py-3 bg-[#22336a]/10 rounded-full mb-2 md:mb-6">
               <Trophy className="h-3 w-3 md:h-5 md:w-5 text-[#22336a] mr-1 md:mr-2" />
               <span className="text-[#22336a] font-semibold text-[10px] md:text-base">
-                PLACEMENT OPPORTUNITY PROGRAM
+                <p>POP</p>
               </span>
             </div>
             <h2 className="text-base sm:text-lg md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
@@ -1294,24 +1417,8 @@ const Index = () => {
                 Program
               </span>
             </h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xs md:text-xl text-gray-700 leading-relaxed mb-1 md:mb-4">
-                Comprehensive placement support with assured career guidance
-              </p>
-              <div className="hidden md:flex items-center justify-center space-x-8 text-sm text-gray-600">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-[#22336a] rounded-full"></div>
-                  <span>Career Opportunities</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-[#c38935] rounded-full"></div>
-                  <span>First Year Fee Back</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-[#22336a] rounded-full"></div>
-                  <span>Expert Mentorship</span>
-                </div>
-              </div>
+            <div className="max-w-4xl mx-auto text-gray-700 text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
+              <p>WHAT WE PROMISE ﻿TO ALL STUDENTS </p>
             </div>
           </div>
 
@@ -1421,42 +1528,6 @@ const Index = () => {
               </p>
             </div>
           </div>
-
-          {/* Much More Compact CTA for Mobile */}
-          <div className="text-center">
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-lg md:rounded-2xl p-2 md:p-8 text-white relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
-                <div className="relative z-10">
-                  <h3 className="text-sm md:text-2xl font-bold mb-1 md:mb-4">
-                    Ready to Secure Your Future?
-                  </h3>
-                  <p className="text-xs md:text-lg opacity-90 mb-2 md:mb-6">
-                    Join our placement guarantee program and take the first step
-                    towards career success
-                  </p>
-                  <div className="flex flex-col md:flex-row gap-1 md:gap-4 justify-center">
-                    <button
-                      onClick={() => setShowPlacementPopup(true)}
-                      className="inline-flex items-center px-2 md:px-8 py-1 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-md md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-[10px] md:text-base"
-                    >
-                      <span>Learn More</span>
-                      <ChevronRight className="h-2 w-2 md:h-5 md:w-5 ml-0.5 md:ml-2" />
-                    </button>
-                    <a
-                      href="https://sunstone.in/apply-now"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-2 md:px-8 py-1 md:py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-md md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-[10px] md:text-base"
-                    >
-                      <span>Apply Now</span>
-                      <ExternalLink className="h-2 w-2 md:h-5 md:w-5 ml-0.5 md:ml-2" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -1466,7 +1537,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-6 md:mb-16">
             <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-2 md:mb-6">
-              Key Offerings
+              <p>Key Offerings By Sunstone</p>
             </h2>
             <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
               Discover what makes our programs exceptional and job-ready
@@ -1542,11 +1613,11 @@ const Index = () => {
                       <Zap className="h-5 w-5 text-white" />
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
-                      Certifications
+                      Specializations
                     </h3>
                     <p className="text-gray-600 text-xs leading-relaxed">
-                      In-demand advanced certifications to choose from various
-                      domains and enhance your career prospects
+                      Choose from industry-focused specializations designed to
+                      boost your career prospects
                     </p>
                     <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
                   </div>
@@ -1660,11 +1731,11 @@ const Index = () => {
                   <Zap className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
                 <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
-                  Certifications
+                  Specializations
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
-                  In-demand advanced certifications to choose from various
-                  domains and enhance your career prospects
+                  Choose from industry-focused specializations designed to boost
+                  your career prospects
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1774,7 +1845,7 @@ const Index = () => {
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-[10px] text-gray-600">
-                            Certifications:
+                            Specializations:
                           </span>
                           <span className="text-xs font-medium text-[#22336a]">
                             {programs[selectedMobileProgram].certifications}
@@ -1835,7 +1906,7 @@ const Index = () => {
                   "specs" ? (
                     <div className="space-y-1">
                       <h4 className="font-semibold text-[#22336a] text-xs">
-                        Key Certifications:
+                        Key Specializations:
                       </h4>
                       {programs[selectedMobileProgram].certificationsList
                         .slice(
@@ -1905,6 +1976,65 @@ const Index = () => {
                       </p>
                     </div>
                   )}
+
+                  {/* Corporate Partners Section - Mobile */}
+                  <div className="mt-3 p-2 bg-gradient-to-r from-[#c38935]/10 to-[#22336a]/10 rounded-lg border border-[#c38935]/20">
+                    <div className="text-center mb-2">
+                      <h5 className="text-xs font-bold text-[#22336a] mb-1 flex items-center justify-center">
+                        <svg
+                          className="h-3 w-3 mr-1 text-[#c38935]"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg>
+                        Corporate Partners
+                      </h5>
+                    </div>
+
+                    <div className="grid grid-cols-3 gap-2 mb-2">
+                      <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
+                        <div className="w-full h-4 mb-1 rounded bg-gray-50 flex items-center justify-center">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2F07e4a38f73674b24b0edef76ca4585d5?format=webp&width=800"
+                            alt="TCS ION"
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <p className="text-[9px] font-bold text-[#22336a]">
+                          TCS ION
+                        </p>
+                      </div>
+                      <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
+                        <div className="w-full h-4 mb-1 rounded bg-gray-50 flex items-center justify-center">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Facd3859729a3443b919174d00f2d05f3?format=webp&width=800"
+                            alt="AU Finance"
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <p className="text-[9px] font-bold text-[#22336a]">
+                          AU Finance
+                        </p>
+                      </div>
+                      <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
+                        <div className="w-full h-4 mb-1 rounded bg-gray-50 flex items-center justify-center">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2F4054e5c1b7654fd4999a448e8e1a89d9?format=webp&width=800"
+                            alt="NSDC"
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <p className="text-[9px] font-bold text-[#22336a]">
+                          NSDC
+                        </p>
+                      </div>
+                    </div>
+
+                    <p className="text-[9px] text-center text-[#22336a]/70">
+                      Industry-ready training with corporate backing
+                    </p>
+                  </div>
 
                   {/* Apply Button - Smaller */}
                   <div className="mt-2">
@@ -2010,7 +2140,7 @@ const Index = () => {
                             {programData.certifications}
                           </div>
                           <div className="text-xs opacity-80">
-                            Certifications
+                            Specializations
                           </div>
                         </div>
                         <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
@@ -2047,7 +2177,7 @@ const Index = () => {
                       <div className="lg:col-span-2">
                         <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-[#22336a] mb-4 md:mb-6 flex items-center">
                           <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mr-2 text-[#c38935]" />
-                          Advanced Certifications
+                          Specializations
                         </h4>
                         <div className="grid gap-3 md:gap-4">
                           {programData.certificationsList
@@ -2075,7 +2205,7 @@ const Index = () => {
                         </div>
                       </div>
 
-                      {/* Eligibility - Mobile Responsive */}
+                      {/* Eligibility & Corporate Tie-ups - Mobile Responsive */}
                       <div>
                         <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-[#22336a] mb-4 md:mb-6 flex items-center">
                           <Award className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mr-2 text-[#c38935]" />
@@ -2085,6 +2215,88 @@ const Index = () => {
                           <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                             {programData.eligibility}
                           </p>
+                        </div>
+
+                        {/* Corporate Tie-ups Section */}
+                        <div className="mt-6 md:mt-8 p-4 md:p-6 bg-gradient-to-br from-[#c38935]/10 to-[#22336a]/10 rounded-lg md:rounded-xl border border-[#c38935]/20 relative overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/5 via-[#c38935]/5 to-[#22336a]/5 animate-pulse opacity-30"></div>
+                          <div className="relative z-10">
+                            <div className="text-center mb-4">
+                              <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mb-2 animate-bounce-subtle">
+                                <svg
+                                  className="h-3 w-3 md:h-4 md:w-4 mr-1 text-white"
+                                  fill="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                </svg>
+                                <span className="text-white font-bold text-xs">
+                                  CORPORATE PARTNERS
+                                </span>
+                              </div>
+                              <h5 className="text-sm md:text-lg font-bold text-[#22336a] mb-1">
+                                Secure Your Future
+                              </h5>
+                              <p className="text-xs md:text-sm text-[#22336a] font-medium mb-3">
+                                Industry-backed programs with exclusive tie-ups
+                              </p>
+                            </div>
+
+                            <div className="grid grid-cols-3 gap-2 md:gap-4 mb-4">
+                              <div className="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                                <div className="w-full h-8 md:h-12 lg:h-16 mb-2 md:mb-3 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
+                                  <img
+                                    src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2F07e4a38f73674b24b0edef76ca4585d5?format=webp&width=800"
+                                    alt="TCS ION"
+                                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                                  />
+                                </div>
+                                <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                                  TCS ION
+                                </p>
+                                <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                              </div>
+                              <div className="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                                <div className="w-full h-8 md:h-12 lg:h-16 mb-2 md:mb-3 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
+                                  <img
+                                    src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Facd3859729a3443b919174d00f2d05f3?format=webp&width=800"
+                                    alt="AU Small Finance Bank"
+                                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                                  />
+                                </div>
+                                <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                                  AU Finance
+                                </p>
+                                <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                              </div>
+                              <div className="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                                <div className="w-full h-8 md:h-12 lg:h-16 mb-2 md:mb-3 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
+                                  <img
+                                    src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2F4054e5c1b7654fd4999a448e8e1a89d9?format=webp&width=800"
+                                    alt="NSDC"
+                                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                                  />
+                                </div>
+                                <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                                  NSDC
+                                </p>
+                                <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                              </div>
+                            </div>
+
+                            <div className="bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-lg p-3 text-center">
+                              <p className="text-xs text-[#22336a] font-semibold flex items-center justify-center">
+                                <svg
+                                  className="h-3 w-3 mr-1 text-[#c38935]"
+                                  fill="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                Industry-ready training with corporate backing
+                              </p>
+                            </div>
+                          </div>
                         </div>
 
                         <div className="mt-4 md:mt-6">
@@ -2188,14 +2400,14 @@ const Index = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
-                  <a
-                    href="https://sunstone.in/apply-now"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => setShowScholarshipPopup(true)}
                     className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-white text-[#22336a] hover:bg-gray-100 font-bold rounded-lg transition-all duration-300 shadow-lg text-sm md:text-base"
                   >
-                    <span>Apply Now →</span>
-                  </a>
+                    <span>
+                      <p>Check Scholarship options →</p>
+                    </span>
+                  </button>
                 </div>
 
                 <p className="text-xs text-white/70 mt-3 md:mt-6">
@@ -2238,9 +2450,12 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Mobile Grid for Journey Steps - All Visible at Once */}
+          {/* Mobile Grid for Journey Steps - All Visible at Once with Equal Heights */}
           <div className="block md:hidden mb-8">
-            <div className="grid grid-cols-2 gap-3" style={{gridTemplateRows: "repeat(3, 1fr)"}}>
+            <div
+              className="grid grid-cols-2 gap-3"
+              style={{ display: "grid", gridTemplateRows: "1fr 1fr 1fr" }}
+            >
               {[
                 {
                   step: "1",
@@ -2284,7 +2499,7 @@ const Index = () => {
                 },
               ].map((item, index) => (
                 <div key={index} className="group relative">
-                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
                     <div className="flex items-center mb-2">
                       <div
                         className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
@@ -2312,7 +2527,7 @@ const Index = () => {
                         </div>
                       </div>
                     </div>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       {item.desc}
                     </p>
                   </div>
@@ -2333,7 +2548,9 @@ const Index = () => {
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
                       <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">1</span>
+                      <span className="text-white font-bold text-2xl relative z-10">
+                        1
+                      </span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2368,7 +2585,9 @@ const Index = () => {
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
                       <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">2</span>
+                      <span className="text-white font-bold text-2xl relative z-10">
+                        2
+                      </span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2387,7 +2606,8 @@ const Index = () => {
                       Aptitude Test
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Quick aptitude assessment to evaluate your academic readiness and potential
+                      Quick aptitude assessment to evaluate your academic
+                      readiness and potential
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Clock className="h-4 w-4 mr-1" />
@@ -2403,7 +2623,9 @@ const Index = () => {
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
                       <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">3</span>
+                      <span className="text-white font-bold text-2xl relative z-10">
+                        3
+                      </span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2422,7 +2644,8 @@ const Index = () => {
                       Screening & Interview
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Personal interview and evaluation process for PG candidates only
+                      Personal interview and evaluation process for PG
+                      candidates only
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Users className="h-4 w-4 mr-1" />
@@ -2438,7 +2661,9 @@ const Index = () => {
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
                       <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">4</span>
+                      <span className="text-white font-bold text-2xl relative z-10">
+                        4
+                      </span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2457,7 +2682,8 @@ const Index = () => {
                       Document Verification
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Quick verification of your academic credentials and eligibility confirmation
+                      Quick verification of your academic credentials and
+                      eligibility confirmation
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Award className="h-4 w-4 mr-1" />
@@ -2473,7 +2699,9 @@ const Index = () => {
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
                       <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">5</span>
+                      <span className="text-white font-bold text-2xl relative z-10">
+                        5
+                      </span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2526,7 +2754,9 @@ const Index = () => {
                     className="group inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-white text-[#22336a] font-bold rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50 text-sm md:text-base"
                   >
                     <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3 group-hover:animate-pulse" />
-                    <span>Call: +91 7065-30-30-30</span>
+                    <span>
+                      <p>Call Us Now</p>
+                    </span>
                   </a>
                   <a
                     href="https://sunstone.in/apply-now"
@@ -2594,7 +2824,10 @@ const Index = () => {
                     name: "Rahul Kumar",
                     role: "MBA Graduate • Software Engineer",
                     company: "TCS",
+                    batch: "Batch 2023",
                     initials: "RK",
+                    image:
+                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
                     quote:
                       "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
                     color: "from-[#c38935] to-[#f4d03f]",
@@ -2610,11 +2843,14 @@ const Index = () => {
                   },
                   {
                     name: "Amit Joshi",
-                    role: "B.Tech Graduate • Senior Developer",
+                    role: "B.Tech Graduate �� Senior Developer",
                     company: "Wipro",
+                    batch: "Batch 2021",
                     initials: "AJ",
+                    image:
+                      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
                     quote:
-                      "The advanced certifications and project-based learning methodology prepared me perfectly for the industry demands.",
+                      "The specialized curriculum and project-based learning methodology prepared me perfectly for the industry demands.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   // Duplicate for seamless loop
@@ -2622,7 +2858,10 @@ const Index = () => {
                     name: "Rahul Kumar",
                     role: "MBA Graduate • Software Engineer",
                     company: "TCS",
+                    batch: "Batch 2023",
                     initials: "RK",
+                    image:
+                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
                     quote:
                       "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
                     color: "from-[#c38935] to-[#f4d03f]",
@@ -2631,7 +2870,10 @@ const Index = () => {
                     name: "Priya Sharma",
                     role: "BCA Graduate • Full Stack Developer",
                     company: "Infosys",
+                    batch: "Batch 2022",
                     initials: "PS",
+                    image:
+                      "https://images.unsplash.com/photo-1494790108755-2616b612b3a7?w=150&h=150&fit=crop&crop=face",
                     quote:
                       "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
                     color: "from-[#22336a] to-[#3b4d7a]",
@@ -2645,12 +2887,12 @@ const Index = () => {
                       {/* Avatar and Info */}
                       <div className="flex items-center mb-4">
                         <div className="relative">
-                          <div
-                            className={`w-12 h-12 bg-gradient-to-br ${testimonial.color} rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300`}
-                          >
-                            <span className="text-white font-bold text-sm">
-                              {testimonial.initials}
-                            </span>
+                          <div className="w-12 h-12 rounded-full overflow-hidden mr-3 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
+                            <img
+                              src={testimonial.image}
+                              alt={testimonial.name}
+                              className="w-full h-full object-cover"
+                            />
                           </div>
                           <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
                             <span className="text-white text-xs">✓</span>
@@ -2664,7 +2906,7 @@ const Index = () => {
                             {testimonial.role}
                           </p>
                           <p className="text-xs text-[#c38935] font-semibold">
-                            {testimonial.company}
+                            {testimonial.company} • {testimonial.batch}
                           </p>
                         </div>
                       </div>
@@ -2708,8 +2950,12 @@ const Index = () => {
                   {/* Avatar and Info */}
                   <div className="flex items-center mb-6">
                     <div className="relative">
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <span className="text-white font-bold text-lg">RK</span>
+                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
+                        <img
+                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+                          alt="Rahul Kumar"
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
                         <span className="text-white text-xs">✓</span>
@@ -2720,10 +2966,10 @@ const Index = () => {
                         Rahul Kumar
                       </h4>
                       <p className="text-sm text-gray-600">
-                        MBA Graduate • Software Engineer
+                        MBA Graduate �� Software Engineer
                       </p>
                       <p className="text-xs text-[#c38935] font-semibold">
-                        TCS
+                        TCS • Batch 2023
                       </p>
                     </div>
                   </div>
@@ -2772,8 +3018,12 @@ const Index = () => {
                 <CardContent className="p-8 flex-1 flex flex-col justify-between">
                   <div className="flex items-center mb-6">
                     <div className="relative">
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <span className="text-white font-bold text-lg">PS</span>
+                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
+                        <img
+                          src="https://images.unsplash.com/photo-1494790108755-2616b612b3a7?w=150&h=150&fit=crop&crop=face"
+                          alt="Priya Sharma"
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
                         <span className="text-white text-xs">✓</span>
@@ -2787,7 +3037,7 @@ const Index = () => {
                         BCA Graduate • Full Stack Developer
                       </p>
                       <p className="text-xs text-[#c38935] font-semibold">
-                        Infosys
+                        Infosys • Batch 2022
                       </p>
                     </div>
                   </div>
@@ -2833,11 +3083,15 @@ const Index = () => {
                 <CardContent className="p-8 flex-1 flex flex-col justify-between">
                   <div className="flex items-center mb-6">
                     <div className="relative">
-                      <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                        <span className="text-white font-bold text-lg">AJ</span>
+                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
+                        <img
+                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+                          alt="Amit Joshi"
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                        <span className="text-white text-xs">✓</span>
+                        <span className="text-white text-xs">���</span>
                       </div>
                     </div>
                     <div>
@@ -2848,7 +3102,7 @@ const Index = () => {
                         B.Tech Graduate • Senior Developer
                       </p>
                       <p className="text-xs text-[#c38935] font-semibold">
-                        Wipro
+                        Wipro • Batch 2021
                       </p>
                     </div>
                   </div>
@@ -2868,7 +3122,7 @@ const Index = () => {
                       "
                     </span>
                     <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
-                      The advanced certifications and project-based learning
+                      The specialized curriculum and project-based learning
                       methodology prepared me perfectly for the industry
                       demands. The quality of education and career support
                       exceeded my expectations in every way.
@@ -2976,10 +3230,10 @@ const Index = () => {
                 },
                 {
                   question:
-                    "What certifications and skills will I gain through Sunstone programs?",
+                    "What specializations and skills will I gain through Sunstone programs?",
                   answer:
-                    "Students receive 10+ advanced certifications in emerging technologies like AI/ML, Data Science, Digital Marketing, Cloud Computing, and more. These industry-recognized certifications enhance your employability and career prospects significantly.",
-                  category: "certifications",
+                    "Students can choose from industry-focused specializations in emerging fields like AI/ML, Data Science, Cloud Computing, Cybersecurity, Marketing Management, and more. These specialized programs enhance your employability and career prospects significantly.",
+                  category: "specializations",
                 },
                 {
                   question:
@@ -3017,8 +3271,8 @@ const Index = () => {
                                           ? "Placement"
                                           : faq.category === "industry"
                                             ? "Industry"
-                                            : faq.category === "certifications"
-                                              ? "Certifications"
+                                            : faq.category === "specializations"
+                                              ? "Specializations"
                                               : faq.category === "success"
                                                 ? "Success"
                                                 : "Support"}
@@ -3045,7 +3299,7 @@ const Index = () => {
                                         {point.startsWith("•") ? (
                                           <>
                                             <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
-                                              •
+                                              ����
                                             </span>
                                             <span className="text-sm md:text-base">
                                               {point.substring(1).trim()}
@@ -3153,6 +3407,20 @@ const Index = () => {
               </p>
               <div className="flex space-x-1 md:space-x-3 lg:space-x-4">
                 <a
+                  href="https://www.instagram.com/sunstone.in/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#6B2A94] hover:via-[#DC1515] hover:to-[#E5642A] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
+                >
+                  <svg
+                    className="w-2 h-2 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+                <a
                   href="https://www.facebook.com/sunstoneedu"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -3192,20 +3460,6 @@ const Index = () => {
                     viewBox="0 0 24 24"
                   >
                     <path d="M23.498 6.186a2.998 2.998 0 0 0-2.108-2.085C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.39.555A2.998 2.998 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.998 2.998 0 0 0 2.108 2.085c1.885.555 9.39.555 9.39.555s7.505 0 9.39-.555a2.998 2.998 0 0 0 2.108-2.085C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                  </svg>
-                </a>
-                <a
-                  href="https://www.instagram.com/sunstone.in/?hl=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:from-[#6B2A94] hover:via-[#DC1515] hover:to-[#E5642A] rounded-md md:rounded-lg flex items-center justify-center transition-colors duration-300"
-                >
-                  <svg
-                    className="w-2 h-2 sm:w-4 sm:h-4 md:w-5 md:h-5 text-white"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
                 </a>
               </div>
@@ -3698,6 +3952,19 @@ const Index = () => {
 
         .animate-glow-pulse {
           animation: glow-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scale-in {
+          0% {
+            transform: scaleX(0);
+          }
+          100% {
+            transform: scaleX(1);
+          }
+        }
+
+        .animate-scale-in {
+          animation: scale-in 1s ease-out 0.5s both;
         }
       `}</style>
     </div>
