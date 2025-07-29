@@ -2587,7 +2587,9 @@ const Index = () => {
                     name: "Rahul Kumar",
                     role: "MBA Graduate • Software Engineer",
                     company: "TCS",
+                    batch: "Batch 2023",
                     initials: "RK",
+                    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
                     quote:
                       "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
                     color: "from-[#c38935] to-[#f4d03f]",
