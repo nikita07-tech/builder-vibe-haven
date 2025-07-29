@@ -1220,8 +1220,7 @@ const Index = () => {
                     </div>
                   </div>
                   <p className="text-[10px] md:text-xs text-gray-600 mb-3">
-                    Aptitude & reasoning assessment for comprehensive
-                    scholarship eligibility.
+                    SAT (Sunstone Admission Test) is a comprehensive aptitude and reasoning assessment designed to evaluate your academic potential. Based on your performance, you become eligible for merit-based scholarships up to 100% of tuition fees. The test covers logical reasoning, quantitative aptitude, and English comprehension.
                   </p>
                   <button
                     onClick={() => {
@@ -1262,8 +1261,7 @@ const Index = () => {
                   </div>
 
                   <p className="text-[10px] md:text-xs text-gray-600 mb-3">
-                    Merit-based program recognizing academic excellence and
-                    potential.
+                    Bright Minds Scholarship is awarded to students who have demonstrated exceptional academic performance in their previous studies. This merit-based scholarship recognizes outstanding students with excellent grades and provides financial support ranging from 25% to 75% of tuition fees based on academic achievements.
                   </p>
                   <button
                     onClick={() => {
