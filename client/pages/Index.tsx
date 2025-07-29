@@ -115,8 +115,7 @@ const Index = () => {
         },
         {
           name: "IT, Analytics & Research",
-          careers:
-            "Business Analyst, Data Scientist, Research Analyst",
+          careers: "Business Analyst, Data Scientist, Research Analyst",
         },
         {
           name: "Human Resource Management",
@@ -125,8 +124,7 @@ const Index = () => {
         },
         {
           name: "Finance Management",
-          careers:
-            "Finance Manager, Investment Analyst, Financial Planner",
+          careers: "Finance Manager, Investment Analyst, Financial Planner",
         },
         {
           name: "Operations Management",
@@ -160,17 +158,16 @@ const Index = () => {
         },
         {
           name: "Marketing Management",
-          careers:
-            "Marketing Manager, Brand Manager, Campaign Strategist",
+          careers: "Marketing Manager, Brand Manager, Campaign Strategist",
         },
         {
           name: "Retail Sales Management",
-          careers:
-            "Retail Manager, Sales Executive, Store Operations Manager",
+          careers: "Retail Manager, Sales Executive, Store Operations Manager",
         },
         {
           name: "Operations Management",
-          careers: "Operations Manager, Production Manager, Logistics Coordinator",
+          careers:
+            "Operations Manager, Production Manager, Logistics Coordinator",
         },
         {
           name: "Banking, Financial Services and Insurance (BFSI)",
@@ -194,11 +191,13 @@ const Index = () => {
         },
         {
           name: "Cyber Security & Forensics",
-          careers: "Cybersecurity Analyst, Ethical Hacker, Digital Forensics Specialist",
+          careers:
+            "Cybersecurity Analyst, Ethical Hacker, Digital Forensics Specialist",
         },
         {
           name: "Blockchain",
-          careers: "Blockchain Developer, Cryptocurrency Analyst, Smart Contract Developer",
+          careers:
+            "Blockchain Developer, Cryptocurrency Analyst, Smart Contract Developer",
         },
         {
           name: "Machine Learning & AI",
@@ -206,11 +205,13 @@ const Index = () => {
         },
         {
           name: "Data Science & Analytics",
-          careers: "Data Analyst, Business Intelligence Analyst, Data Visualization Expert",
+          careers:
+            "Data Analyst, Business Intelligence Analyst, Data Visualization Expert",
         },
         {
           name: "Full Stack Development",
-          careers: "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
+          careers:
+            "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
         },
       ],
       eligibility:
@@ -226,7 +227,8 @@ const Index = () => {
       certificationsList: [
         {
           name: "Full Stack Development",
-          careers: "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
+          careers:
+            "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
         },
         {
           name: "Machine Learning & AI",
@@ -234,7 +236,8 @@ const Index = () => {
         },
         {
           name: "Data Science",
-          careers: "Data Scientist, Data Analyst, Business Intelligence Specialist",
+          careers:
+            "Data Scientist, Data Analyst, Business Intelligence Specialist",
         },
         {
           name: "Cloud Computing",
@@ -242,7 +245,8 @@ const Index = () => {
         },
         {
           name: "Cyber Security",
-          careers: "Cybersecurity Analyst, Security Engineer, Information Security Specialist",
+          careers:
+            "Cybersecurity Analyst, Security Engineer, Information Security Specialist",
         },
       ],
       eligibility:
@@ -297,9 +301,7 @@ const Index = () => {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="text-xs md:text-sm font-bold">
-                  Apply Now
-                </div>
+                <div className="text-xs md:text-sm font-bold">Apply Now</div>
                 <div className="text-xs opacity-90 hidden md:block">
                   Sunstone Portal
                 </div>
@@ -585,8 +587,8 @@ const Index = () => {
 
               <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 text-center">
                 <p className="text-[9px] md:text-sm">
-                  Placement report audited by B2K Analytics Official Auditor
-                  for IIM Ahemdabad
+                  Placement report audited by B2K Analytics Official Auditor for
+                  IIM Ahemdabad
                 </p>
               </div>
             </div>
@@ -1192,14 +1194,19 @@ const Index = () => {
               <div className="text-center mb-3 md:mb-6 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/10 via-[#c38935]/10 to-[#22336a]/10 rounded-3xl animate-pulse"></div>
                 <div className="absolute top-0 left-1/2 w-32 h-32 bg-[#c38935]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-16 animate-float"></div>
-                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#22336a]/20 rounded-full blur-2xl translate-x-12 translate-y-12 animate-float" style={{animationDelay: '2s'}}></div>
+                <div
+                  className="absolute bottom-0 right-0 w-24 h-24 bg-[#22336a]/20 rounded-full blur-2xl translate-x-12 translate-y-12 animate-float"
+                  style={{ animationDelay: "2s" }}
+                ></div>
 
                 <div className="relative z-10 p-6 md:p-8">
                   <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#c38935] rounded-full mb-6 animate-bounce-subtle shadow-2xl">
                     <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-full flex items-center justify-center mr-3 animate-spin-slow">
                       <Trophy className="h-3 w-3 md:h-4 md:w-4 text-white" />
                     </div>
-                    <span className="text-white font-bold text-xs md:text-base tracking-wide">SCHOLARSHIP PROGRAMS</span>
+                    <span className="text-white font-bold text-xs md:text-base tracking-wide">
+                      SCHOLARSHIP PROGRAMS
+                    </span>
                     <div className="w-2 h-2 bg-white rounded-full ml-3 animate-ping"></div>
                   </div>
 
@@ -1217,10 +1224,13 @@ const Index = () => {
                   </div>
 
                   <p className="text-gray-600 text-sm md:text-xl max-w-3xl mx-auto leading-relaxed">
-                    Unlock your potential with our <span className="font-bold text-[#c38935]">innovative scholarship programs</span> designed to make quality education accessible to every ambitious student
+                    Unlock your potential with our{" "}
+                    <span className="font-bold text-[#c38935]">
+                      innovative scholarship programs
+                    </span>{" "}
+                    designed to make quality education accessible to every
+                    ambitious student
                   </p>
-
-
                 </div>
               </div>
 
@@ -1239,28 +1249,39 @@ const Index = () => {
                           <Trophy className="h-6 w-6 md:h-8 md:w-8 text-white" />
                         </div>
                         <div>
-                          <h4 className="text-lg md:text-2xl font-bold">SAT Scholarship</h4>
-                          <p className="text-sm md:text-base opacity-90">Sunstone Admission Test</p>
+                          <h4 className="text-lg md:text-2xl font-bold">
+                            SAT Scholarship
+                          </h4>
+                          <p className="text-sm md:text-base opacity-90">
+                            Sunstone Admission Test
+                          </p>
                         </div>
                       </div>
 
-
-
                       <p className="text-sm md:text-base mb-6 opacity-90 leading-relaxed">
-                        Assessment covers general aptitude, logical reasoning, verbal ability, and psychometric evaluation for comprehensive scholarship eligibility.
+                        Assessment covers general aptitude, logical reasoning,
+                        verbal ability, and psychometric evaluation for
+                        comprehensive scholarship eligibility.
                       </p>
 
                       <button
                         onClick={() => {
                           setShowScholarshipPopup(false);
-                          window.open('https://sunstone.in/apply-now', '_blank');
+                          window.open(
+                            "https://sunstone.in/apply-now",
+                            "_blank",
+                          );
                         }}
                         className="w-full bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white font-bold py-3 md:py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base group"
                       >
                         <span className="flex items-center justify-center">
                           Apply for SAT Scholarship
-                          <svg className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                          <svg
+                            className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
                           </svg>
                         </span>
                       </button>
@@ -1277,12 +1298,20 @@ const Index = () => {
                     <div className="relative z-10">
                       <div className="text-center mb-6">
                         <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-6 transition-transform duration-500">
-                          <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                          <svg
+                            className="w-8 h-8 md:w-10 md:h-10 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                           </svg>
                         </div>
-                        <h4 className="text-lg md:text-2xl font-bold text-[#22336a] mb-2">Bright Minds Scholarship</h4>
-                        <p className="text-sm md:text-base text-gray-600">Merit-based Excellence Program</p>
+                        <h4 className="text-lg md:text-2xl font-bold text-[#22336a] mb-2">
+                          Bright Minds Scholarship
+                        </h4>
+                        <p className="text-sm md:text-base text-gray-600">
+                          Merit-based Excellence Program
+                        </p>
                       </div>
 
                       <div className="bg-gradient-to-r from-[#22336a]/5 to-[#c38935]/5 rounded-xl p-4 md:p-6 mb-6 relative overflow-hidden">
@@ -1295,8 +1324,12 @@ const Index = () => {
                           />
                         </div>
                         <div className="absolute top-2 right-2 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
-                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                          <svg
+                            className="w-3 h-3 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                           </svg>
                         </div>
                       </div>
@@ -1304,14 +1337,21 @@ const Index = () => {
                       <button
                         onClick={() => {
                           setShowScholarshipPopup(false);
-                          window.open('https://sunstone.in/apply-now', '_blank');
+                          window.open(
+                            "https://sunstone.in/apply-now",
+                            "_blank",
+                          );
                         }}
                         className="w-full bg-gradient-to-r from-[#22336a] to-[#2d4a7b] hover:from-[#2d4a7b] hover:to-[#22336a] text-white font-bold py-3 md:py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base group"
                       >
                         <span className="flex items-center justify-center">
                           Apply for Bright Minds
-                          <svg className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                          <svg
+                            className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
                           </svg>
                         </span>
                       </button>
@@ -1329,12 +1369,13 @@ const Index = () => {
                       Ready to Start Your Journey?
                     </h4>
                     <p className="text-sm md:text-base mb-6 opacity-90 max-w-md mx-auto">
-                      Take the first step towards your dream career with our scholarship programs
+                      Take the first step towards your dream career with our
+                      scholarship programs
                     </p>
                     <button
                       onClick={() => {
                         setShowScholarshipPopup(false);
-                        window.open('https://sunstone.in/apply-now', '_blank');
+                        window.open("https://sunstone.in/apply-now", "_blank");
                       }}
                       className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50 text-sm md:text-base group"
                     >
@@ -1487,8 +1528,6 @@ const Index = () => {
               </p>
             </div>
           </div>
-
-
         </div>
       </section>
 
@@ -1695,8 +1734,8 @@ const Index = () => {
                   Specializations
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
-                  Choose from industry-focused specializations designed to
-                  boost your career prospects
+                  Choose from industry-focused specializations designed to boost
+                  your career prospects
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1942,8 +1981,12 @@ const Index = () => {
                   <div className="mt-3 p-2 bg-gradient-to-r from-[#c38935]/10 to-[#22336a]/10 rounded-lg border border-[#c38935]/20">
                     <div className="text-center mb-2">
                       <h5 className="text-xs font-bold text-[#22336a] mb-1 flex items-center justify-center">
-                        <svg className="h-3 w-3 mr-1 text-[#c38935]" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        <svg
+                          className="h-3 w-3 mr-1 text-[#c38935]"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                         </svg>
                         Corporate Partners
                       </h5>
@@ -1958,7 +2001,9 @@ const Index = () => {
                             className="w-full h-full object-contain"
                           />
                         </div>
-                        <p className="text-[9px] font-bold text-[#22336a]">TCS ION</p>
+                        <p className="text-[9px] font-bold text-[#22336a]">
+                          TCS ION
+                        </p>
                       </div>
                       <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
                         <div className="w-full h-4 mb-1 rounded bg-gray-50 flex items-center justify-center">
@@ -1968,7 +2013,9 @@ const Index = () => {
                             className="w-full h-full object-contain"
                           />
                         </div>
-                        <p className="text-[9px] font-bold text-[#22336a]">AU Finance</p>
+                        <p className="text-[9px] font-bold text-[#22336a]">
+                          AU Finance
+                        </p>
                       </div>
                       <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
                         <div className="w-full h-4 mb-1 rounded bg-gray-50 flex items-center justify-center">
@@ -1978,7 +2025,9 @@ const Index = () => {
                             className="w-full h-full object-contain"
                           />
                         </div>
-                        <p className="text-[9px] font-bold text-[#22336a]">NSDC</p>
+                        <p className="text-[9px] font-bold text-[#22336a]">
+                          NSDC
+                        </p>
                       </div>
                     </div>
 
@@ -2174,10 +2223,16 @@ const Index = () => {
                           <div className="relative z-10">
                             <div className="text-center mb-4">
                               <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mb-2 animate-bounce-subtle">
-                                <svg className="h-3 w-3 md:h-4 md:w-4 mr-1 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                <svg
+                                  className="h-3 w-3 md:h-4 md:w-4 mr-1 text-white"
+                                  fill="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                                 </svg>
-                                <span className="text-white font-bold text-xs">CORPORATE PARTNERS</span>
+                                <span className="text-white font-bold text-xs">
+                                  CORPORATE PARTNERS
+                                </span>
                               </div>
                               <h5 className="text-sm md:text-lg font-bold text-[#22336a] mb-1">
                                 Secure Your Future
@@ -2196,7 +2251,9 @@ const Index = () => {
                                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                                   />
                                 </div>
-                                <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">TCS ION</p>
+                                <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                                  TCS ION
+                                </p>
                                 <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                               </div>
                               <div className="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
@@ -2207,7 +2264,9 @@ const Index = () => {
                                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                                   />
                                 </div>
-                                <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">AU Finance</p>
+                                <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                                  AU Finance
+                                </p>
                                 <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                               </div>
                               <div className="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
@@ -2218,15 +2277,21 @@ const Index = () => {
                                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                                   />
                                 </div>
-                                <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">NSDC</p>
+                                <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                                  NSDC
+                                </p>
                                 <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                               </div>
                             </div>
 
                             <div className="bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-lg p-3 text-center">
                               <p className="text-xs text-[#22336a] font-semibold flex items-center justify-center">
-                                <svg className="h-3 w-3 mr-1 text-[#c38935]" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                <svg
+                                  className="h-3 w-3 mr-1 text-[#c38935]"
+                                  fill="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                                 </svg>
                                 Industry-ready training with corporate backing
                               </p>
@@ -2266,8 +2331,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-
 
       {/* Easy Fee Payment Banner - Mobile Optimized */}
       <section className="py-6 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
@@ -2341,7 +2404,9 @@ const Index = () => {
                     onClick={() => setShowScholarshipPopup(true)}
                     className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-white text-[#22336a] hover:bg-gray-100 font-bold rounded-lg transition-all duration-300 shadow-lg text-sm md:text-base"
                   >
-                    <span><p>Check Scholarship options →</p></span>
+                    <span>
+                      <p>Check Scholarship options →</p>
+                    </span>
                   </button>
                 </div>
 
@@ -2387,7 +2452,10 @@ const Index = () => {
 
           {/* Mobile Grid for Journey Steps - All Visible at Once with Equal Heights */}
           <div className="block md:hidden mb-8">
-            <div className="grid grid-cols-2 gap-3" style={{display: 'grid', gridTemplateRows: '1fr 1fr 1fr'}}>
+            <div
+              className="grid grid-cols-2 gap-3"
+              style={{ display: "grid", gridTemplateRows: "1fr 1fr 1fr" }}
+            >
               {[
                 {
                   step: "1",
@@ -2480,7 +2548,9 @@ const Index = () => {
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
                       <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">1</span>
+                      <span className="text-white font-bold text-2xl relative z-10">
+                        1
+                      </span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2515,7 +2585,9 @@ const Index = () => {
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
                       <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">2</span>
+                      <span className="text-white font-bold text-2xl relative z-10">
+                        2
+                      </span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2534,7 +2606,8 @@ const Index = () => {
                       Aptitude Test
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Quick aptitude assessment to evaluate your academic readiness and potential
+                      Quick aptitude assessment to evaluate your academic
+                      readiness and potential
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Clock className="h-4 w-4 mr-1" />
@@ -2550,7 +2623,9 @@ const Index = () => {
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
                       <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">3</span>
+                      <span className="text-white font-bold text-2xl relative z-10">
+                        3
+                      </span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2569,7 +2644,8 @@ const Index = () => {
                       Screening & Interview
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Personal interview and evaluation process for PG candidates only
+                      Personal interview and evaluation process for PG
+                      candidates only
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Users className="h-4 w-4 mr-1" />
@@ -2585,7 +2661,9 @@ const Index = () => {
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
                       <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">4</span>
+                      <span className="text-white font-bold text-2xl relative z-10">
+                        4
+                      </span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2604,7 +2682,8 @@ const Index = () => {
                       Document Verification
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      Quick verification of your academic credentials and eligibility confirmation
+                      Quick verification of your academic credentials and
+                      eligibility confirmation
                     </p>
                     <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Award className="h-4 w-4 mr-1" />
@@ -2620,7 +2699,9 @@ const Index = () => {
                   <div className="relative mb-8">
                     <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
                       <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">5</span>
+                      <span className="text-white font-bold text-2xl relative z-10">
+                        5
+                      </span>
                     </div>
                     <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
                     {/* Icon Background */}
@@ -2673,7 +2754,9 @@ const Index = () => {
                     className="group inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-white text-[#22336a] font-bold rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50 text-sm md:text-base"
                   >
                     <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3 group-hover:animate-pulse" />
-                    <span><p>Call Us Now</p></span>
+                    <span>
+                      <p>Call Us Now</p>
+                    </span>
                   </a>
                   <a
                     href="https://sunstone.in/apply-now"
@@ -2743,7 +2826,8 @@ const Index = () => {
                     company: "TCS",
                     batch: "Batch 2023",
                     initials: "RK",
-                    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+                    image:
+                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
                     quote:
                       "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
                     color: "from-[#c38935] to-[#f4d03f]",
@@ -2763,7 +2847,8 @@ const Index = () => {
                     company: "Wipro",
                     batch: "Batch 2021",
                     initials: "AJ",
-                    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+                    image:
+                      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
                     quote:
                       "The specialized curriculum and project-based learning methodology prepared me perfectly for the industry demands.",
                     color: "from-[#c38935] to-[#f4d03f]",
@@ -2775,7 +2860,8 @@ const Index = () => {
                     company: "TCS",
                     batch: "Batch 2023",
                     initials: "RK",
-                    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+                    image:
+                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
                     quote:
                       "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
                     color: "from-[#c38935] to-[#f4d03f]",
@@ -2786,7 +2872,8 @@ const Index = () => {
                     company: "Infosys",
                     batch: "Batch 2022",
                     initials: "PS",
-                    image: "https://images.unsplash.com/photo-1494790108755-2616b612b3a7?w=150&h=150&fit=crop&crop=face",
+                    image:
+                      "https://images.unsplash.com/photo-1494790108755-2616b612b3a7?w=150&h=150&fit=crop&crop=face",
                     quote:
                       "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
                     color: "from-[#22336a] to-[#3b4d7a]",
