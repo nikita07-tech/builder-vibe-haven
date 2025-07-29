@@ -1180,8 +1180,8 @@ const Index = () => {
 
       {/* Scholarship Popup */}
       {showScholarshipPopup && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-md md:max-w-lg w-full relative shadow-2xl max-h-[85vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-3 md:p-4">
+          <div className="bg-white rounded-2xl max-w-[300px] md:max-w-lg w-full relative shadow-2xl max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => setShowScholarshipPopup(false)}
               className="absolute top-4 right-4 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-200 z-20 group"
@@ -1189,16 +1189,16 @@ const Index = () => {
               <X className="h-4 w-4 text-gray-600 group-hover:text-gray-800" />
             </button>
 
-            <div className="p-6">
+            <div className="p-4 md:p-6">
               {/* Clean Professional Header */}
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Trophy className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#22336a] mb-2">
+                <h3 className="text-xl md:text-2xl font-bold text-[#22336a] mb-2">
                   Scholarship Opportunities
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-xs md:text-sm">
                   Unlock your potential with financial support
                 </p>
               </div>
@@ -1206,23 +1206,23 @@ const Index = () => {
               {/* Scholarship Options */}
               <div className="space-y-4 mb-6">
                 {/* SAT Scholarship */}
-                <div className="border border-gray-200 rounded-xl p-4 hover:border-[#c38935] transition-all duration-200">
+                <div className="border border-gray-200 rounded-xl p-3 md:p-4 hover:border-[#c38935] transition-all duration-200">
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-lg flex items-center justify-center mr-3">
-                        <Trophy className="h-5 w-5 text-white" />
+                      <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-lg flex items-center justify-center mr-2 md:mr-3">
+                        <Trophy className="h-4 w-4 md:h-5 md:w-5 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-[#22336a] text-sm">
+                        <h4 className="font-bold text-[#22336a] text-xs md:text-sm">
                           SAT Scholarship
                         </h4>
-                        <p className="text-xs text-gray-600">
+                        <p className="text-[10px] md:text-xs text-gray-600">
                           Sunstone Admission Test
                         </p>
                       </div>
                     </div>
                   </div>
-                  <p className="text-xs text-gray-600 mb-3">
+                  <p className="text-[10px] md:text-xs text-gray-600 mb-3">
                     Aptitude & reasoning assessment for comprehensive scholarship eligibility.
                   </p>
                   <button
@@ -1230,30 +1230,40 @@ const Index = () => {
                       setShowScholarshipPopup(false);
                       window.open("https://sunstone.in/apply-now", "_blank");
                     }}
-                    className="w-full bg-gradient-to-r from-[#22336a] to-[#c38935] text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 hover:shadow-lg text-sm"
+                    className="w-full bg-gradient-to-r from-[#22336a] to-[#c38935] text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 hover:shadow-lg text-xs md:text-sm"
                   >
                     Apply for SAT
                   </button>
                 </div>
 
                 {/* Bright Minds Scholarship */}
-                <div className="border border-gray-200 rounded-xl p-4 hover:border-[#c38935] transition-all duration-200">
+                <div className="border border-gray-200 rounded-xl p-3 md:p-4 hover:border-[#c38935] transition-all duration-200">
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-r from-[#c38935] to-[#22336a] rounded-lg flex items-center justify-center mr-3">
-                        <Star className="h-5 w-5 text-white" />
+                      <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-r from-[#c38935] to-[#22336a] rounded-lg flex items-center justify-center mr-2 md:mr-3">
+                        <Star className="h-4 w-4 md:h-5 md:w-5 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-[#22336a] text-sm">
+                        <h4 className="font-bold text-[#22336a] text-xs md:text-sm">
                           Bright Minds Scholarship
                         </h4>
-                        <p className="text-xs text-gray-600">
+                        <p className="text-[10px] md:text-xs text-gray-600">
                           Merit-based Excellence
                         </p>
                       </div>
                     </div>
                   </div>
-                  <p className="text-xs text-gray-600 mb-3">
+
+                  {/* Bright Minds Image */}
+                  <div className="mb-3">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fb7f8a9de29d34140ac2cc4ccf5225774?format=webp&width=400"
+                      alt="Bright Minds Scholarship"
+                      className="w-full h-20 md:h-24 object-contain rounded-lg"
+                    />
+                  </div>
+
+                  <p className="text-[10px] md:text-xs text-gray-600 mb-3">
                     Merit-based program recognizing academic excellence and potential.
                   </p>
                   <button
@@ -1261,7 +1271,7 @@ const Index = () => {
                       setShowScholarshipPopup(false);
                       window.open("https://sunstone.in/apply-now", "_blank");
                     }}
-                    className="w-full bg-gradient-to-r from-[#c38935] to-[#22336a] text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 hover:shadow-lg text-sm"
+                    className="w-full bg-gradient-to-r from-[#c38935] to-[#22336a] text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 hover:shadow-lg text-xs md:text-sm"
                   >
                     Apply for Bright Minds
                   </button>
@@ -1270,11 +1280,11 @@ const Index = () => {
 
               {/* Call to Action */}
               <div className="text-center">
-                <div className="bg-gray-50 rounded-xl p-4">
-                  <h4 className="font-bold text-[#22336a] mb-2">
+                <div className="bg-gray-50 rounded-xl p-3 md:p-4">
+                  <h4 className="font-bold text-[#22336a] mb-2 text-sm md:text-base">
                     Ready to Start?
                   </h4>
-                  <p className="text-xs text-gray-600 mb-4">
+                  <p className="text-[10px] md:text-xs text-gray-600 mb-3 md:mb-4">
                     Take the first step towards your dream career
                   </p>
                   <button
@@ -1282,10 +1292,10 @@ const Index = () => {
                       setShowScholarshipPopup(false);
                       window.open("https://sunstone.in/apply-now", "_blank");
                     }}
-                    className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-[#22336a] to-[#c38935] text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200 text-sm group"
+                    className="inline-flex items-center px-4 md:px-6 py-2 bg-gradient-to-r from-[#22336a] to-[#c38935] text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200 text-xs md:text-sm group"
                   >
                     <span>Apply Now</span>
-                    <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                    <ExternalLink className="ml-2 h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
                 </div>
               </div>
