@@ -1379,13 +1379,13 @@ const Index = () => {
                     <div className="flex items-center justify-between bg-yellow-50 rounded-lg p-2">
                       <div className="flex items-center space-x-2">
                         <div className="w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
-                          <span className="text-white text-xs font-bold">🏆</span>
+                          <span className="text-white text-xs font-bold">M</span>
                         </div>
                         <span className="text-[10px] md:text-xs font-medium text-gray-700">Merit-Based</span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                          <span className="text-white text-xs font-bold">💰</span>
+                          <span className="text-white text-xs font-bold">%</span>
                         </div>
                         <span className="text-[10px] md:text-xs font-medium text-gray-700">Up to 75% Off</span>
                       </div>
