@@ -2914,6 +2914,37 @@ const Index = () => {
                     quote: "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
+                  // Duplicate for seamless loop
+                  {
+                    name: "Jaya Tiwari",
+                    role: "BCA Graduate",
+                    company: "SRMU",
+                    batch: "2022-2025",
+                    initials: "JT",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
+                    quote: "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Balram Jat",
+                    role: "BCA Graduate",
+                    company: "JNU",
+                    batch: "2024-2027",
+                    initials: "BJ",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
+                    quote: "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  {
+                    name: "Pulkit Singh",
+                    role: "MBA Graduate • Dhanguard 10 LPA",
+                    company: "GDG",
+                    batch: "22-24",
+                    initials: "PS",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
+                    quote: "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
                 ].map((testimonial, index) => (
                   <div
                     key={index}
