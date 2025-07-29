@@ -2614,12 +2614,12 @@ const Index = () => {
                       {/* Avatar and Info */}
                       <div className="flex items-center mb-4">
                         <div className="relative">
-                          <div
-                            className={`w-12 h-12 bg-gradient-to-br ${testimonial.color} rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300`}
-                          >
-                            <span className="text-white font-bold text-sm">
-                              {testimonial.initials}
-                            </span>
+                          <div className="w-12 h-12 rounded-full overflow-hidden mr-3 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
+                            <img
+                              src={testimonial.image}
+                              alt={testimonial.name}
+                              className="w-full h-full object-cover"
+                            />
                           </div>
                           <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
                             <span className="text-white text-xs">✓</span>
@@ -2633,7 +2633,7 @@ const Index = () => {
                             {testimonial.role}
                           </p>
                           <p className="text-xs text-[#c38935] font-semibold">
-                            {testimonial.company}
+                            {testimonial.company} • {testimonial.batch}
                           </p>
                         </div>
                       </div>
