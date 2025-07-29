@@ -102,10 +102,10 @@ const Index = () => {
   const programs = {
     MBA: {
       duration: "2-year program",
-      certifications: "6 certifications",
+      certifications: "10 certifications",
       internships: "6+ months of internships/projects",
       projects: "4 capstone projects",
-      specializations: "6 new-age certifications",
+      specializations: "10 advanced certifications",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
@@ -142,10 +142,10 @@ const Index = () => {
     },
     BBA: {
       duration: "3-year program",
-      certifications: "6 certifications",
+      certifications: "10 certifications",
       internships: "8+ months of internships/projects",
       projects: "6 capstone projects",
-      specializations: "6 new-age certifications",
+      specializations: "10 advanced certifications",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
@@ -182,10 +182,10 @@ const Index = () => {
     },
     BCA: {
       duration: "3-year program",
-      certifications: "6 certifications",
+      certifications: "10 certifications",
       internships: "8+ months of internships/projects",
-      projects: "6 capstone projects",
-      specializations: "6 new-age certifications",
+      projects: "3 capstone projects",
+      specializations: "10 advanced certifications",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
@@ -218,10 +218,10 @@ const Index = () => {
     },
     MCA: {
       duration: "2-year program",
-      certifications: "5 certifications",
+      certifications: "10 certifications",
       internships: "6+ months of internships/projects",
-      projects: "6 capstone projects",
-      specializations: "5 new-age certifications",
+      projects: "2 capstone projects",
+      specializations: "10 advanced certifications",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
@@ -250,10 +250,10 @@ const Index = () => {
     },
     "B.Tech": {
       duration: "4-year program",
-      certifications: "5 certifications",
+      certifications: "10 certifications",
       internships: "10+ months of Internships",
-      projects: "8 capstone projects",
-      specializations: "5 new-age certifications",
+      projects: "4 capstone projects",
+      specializations: "10 advanced certifications",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
@@ -3163,7 +3163,7 @@ const Index = () => {
                                         {point.startsWith("•") ? (
                                           <>
                                             <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
-                                              ��
+                                              ����
                                             </span>
                                             <span className="text-sm md:text-base">
                                               {point.substring(1).trim()}
