@@ -2988,8 +2988,8 @@ const Index = () => {
                     <div className="relative">
                       <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
                         <img
-                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-                          alt="Rahul Kumar"
+                          src="https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800"
+                          alt="Jaya Tiwari"
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -2999,13 +2999,13 @@ const Index = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#c38935] transition-colors duration-300">
-                        Rahul Kumar
+                        Jaya Tiwari
                       </h4>
                       <p className="text-sm text-gray-600">
-                        MBA Graduate �� Software Engineer
+                        BCA Graduate
                       </p>
                       <p className="text-xs text-[#c38935] font-semibold">
-                        TCS • Batch 2023
+                        SRMU • 2022-2025
                       </p>
                     </div>
                   </div>
