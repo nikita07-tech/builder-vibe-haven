@@ -984,25 +984,24 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Sunstone Philosophy Section */}
-      <section className="py-8 md:py-20 bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] relative overflow-hidden">
+      {/* Sunstone Philosophy Section - Mobile Optimized */}
+      <section className="py-6 md:py-12 bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 right-10 w-72 h-72 bg-[#c38935]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-transparent via-[#c38935]/5 to-transparent rounded-full"></div>
+          <div className="absolute top-5 right-5 w-32 h-32 md:w-72 md:h-72 bg-[#c38935]/10 rounded-full blur-2xl md:blur-3xl"></div>
+          <div className="absolute bottom-5 left-5 w-40 h-40 md:w-96 md:h-96 bg-white/5 rounded-full blur-2xl md:blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+        <div className="max-w-6xl mx-auto px-3 md:px-6 relative z-10">
           {/* Header */}
-          <div className="text-center mb-12 md:mb-16">
-            <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-white/10 backdrop-blur-sm rounded-full mb-4 md:mb-6">
-              <Star className="h-4 w-4 md:h-5 md:w-5 text-[#c38935] mr-2" />
-              <span className="text-white font-semibold text-sm md:text-base">
+          <div className="text-center mb-6 md:mb-10">
+            <div className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-white/10 backdrop-blur-sm rounded-full mb-3 md:mb-4">
+              <Star className="h-3 w-3 md:h-4 md:w-4 text-[#c38935] mr-1.5 md:mr-2" />
+              <span className="text-white font-semibold text-xs md:text-sm">
                 THE SUNSTONE PHILOSOPHY
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
+            <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 leading-tight">
               Learn from the
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
                 {" "}Best{" "}
@@ -1012,25 +1011,25 @@ const Index = () => {
                 Experience the Real World
               </span>
             </h2>
-            <p className="text-sm md:text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xs md:text-base text-white/80 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">
               The Sunstone Philosophy helps you learn from the best and provide a hands-on experience so your education is not just limited to theory
             </p>
           </div>
 
           {/* Philosophy Points */}
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {/* Point 1 */}
             <div className="group relative">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl md:rounded-3xl p-6 md:p-8 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-500 transform hover:-translate-y-2">
-                <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-2xl md:rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Users className="h-8 w-8 md:h-10 md:w-10 text-white" />
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl md:rounded-2xl p-4 md:p-6 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-xl md:rounded-2xl mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <Users className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-[#c38935] mb-2">01</div>
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
+                  <div className="text-lg md:text-2xl font-bold text-[#c38935] mb-2">01</div>
+                  <h3 className="text-sm md:text-lg font-bold text-white mb-3">
                     Learn from Recruiters
                   </h3>
-                  <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                  <p className="text-white/80 leading-relaxed text-xs md:text-sm">
                     CEOs, CTOs, and COOs of Fortune 500 companies and start-ups with years of recruitment experience
                   </p>
                 </div>
@@ -1039,16 +1038,16 @@ const Index = () => {
 
             {/* Point 2 */}
             <div className="group relative">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl md:rounded-3xl p-6 md:p-8 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-500 transform hover:-translate-y-2">
-                <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#f4d03f] to-[#c38935] rounded-2xl md:rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Briefcase className="h-8 w-8 md:h-10 md:w-10 text-white" />
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl md:rounded-2xl p-4 md:p-6 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#f4d03f] to-[#c38935] rounded-xl md:rounded-2xl mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <Briefcase className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-[#c38935] mb-2">02</div>
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
+                  <div className="text-lg md:text-2xl font-bold text-[#c38935] mb-2">02</div>
+                  <h3 className="text-sm md:text-lg font-bold text-white mb-3">
                     Practice in the Real World
                   </h3>
-                  <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                  <p className="text-white/80 leading-relaxed text-xs md:text-sm">
                     Gain hands-on experience with internships & real-life projects to be job-ready from Day 1
                   </p>
                 </div>
@@ -1057,16 +1056,16 @@ const Index = () => {
 
             {/* Point 3 */}
             <div className="group relative">
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl md:rounded-3xl p-6 md:p-8 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-500 transform hover:-translate-y-2">
-                <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-2xl md:rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Award className="h-8 w-8 md:h-10 md:w-10 text-white" />
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl md:rounded-2xl p-4 md:p-6 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-xl md:rounded-2xl mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <Award className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-[#c38935] mb-2">03</div>
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
+                  <div className="text-lg md:text-2xl font-bold text-[#c38935] mb-2">03</div>
+                  <h3 className="text-sm md:text-lg font-bold text-white mb-3">
                     Create Your Portfolio
                   </h3>
-                  <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                  <p className="text-white/80 leading-relaxed text-xs md:text-sm">
                     Showcase your verified skills and experience with a professional portfolio
                   </p>
                 </div>
