@@ -1370,7 +1370,7 @@ const Index = () => {
                   <div className="mb-3 space-y-2">
                     <div className="bg-gradient-to-r from-[#c38935]/10 to-yellow-100 rounded-lg p-3">
                       <p className="text-[10px] md:text-xs text-gray-700 font-medium mb-2">
-                        ⭐ <strong>Bright Minds Recognition:</strong> Celebrating Academic Excellence!
+                        <strong>Bright Minds Recognition:</strong> Celebrating Academic Excellence!
                       </p>
                       <p className="text-[10px] md:text-xs text-gray-600 leading-relaxed">
                         Awarded to students with exceptional academic performance. Get financial support ranging from <span className="font-bold text-[#c38935]">25% to 75%</span> of tuition fees based on your academic achievements.
