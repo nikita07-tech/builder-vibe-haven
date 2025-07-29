@@ -854,7 +854,7 @@ const Index = () => {
                 AWARDS & RECOGNITION
               </span>
             </div>
-            <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
+            <h2 className="text-base sm:text-lg md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
               Recognized
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
                 {" "}
