@@ -2269,10 +2269,10 @@ const Index = () => {
                                 </span>
                               </div>
                               <h5 className="text-sm md:text-lg font-bold text-[#22336a] mb-1">
-                                Secure Your Future
+                                Secure your future with our corporate tie-ups
                               </h5>
                               <p className="text-xs md:text-sm text-[#22336a] font-medium mb-3">
-                                Industry-backed programs with exclusive tie-ups
+                                Boost your career with our corporate-backed programs and industry-ready training modules.
                               </p>
                             </div>
 
