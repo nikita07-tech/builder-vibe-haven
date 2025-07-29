@@ -182,10 +182,10 @@ const Index = () => {
     },
     BCA: {
       duration: "3-year program",
-      certifications: "6 specializations",
+      certifications: "6 certifications",
       internships: "8+ months of internships/projects",
       projects: "6 capstone projects",
-      specializations: "6 new-age specializations",
+      specializations: "6 new-age certifications",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
