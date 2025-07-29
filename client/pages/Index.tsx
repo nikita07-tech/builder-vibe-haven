@@ -2452,10 +2452,7 @@ const Index = () => {
 
           {/* Mobile Grid for Journey Steps - All Visible at Once with Equal Heights */}
           <div className="block md:hidden mb-8">
-            <div
-              className="grid grid-cols-2 gap-3"
-              style={{ display: "grid", gridTemplateRows: "1fr 1fr 1fr" }}
-            >
+            <div className="grid grid-cols-2 gap-3 grid-rows-3">
               {[
                 {
                   step: "1",
@@ -2499,7 +2496,7 @@ const Index = () => {
                 },
               ].map((item, index) => (
                 <div key={index} className="group relative">
-                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
+                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col justify-between min-h-[120px]">
                     <div className="flex items-center mb-2">
                       <div
                         className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
