@@ -1203,7 +1203,7 @@ const Index = () => {
                     <div className="w-2 h-2 bg-white rounded-full ml-3 animate-ping"></div>
                   </div>
 
-                  <div className="mb-6">
+                  <div className="mb-4">
                     <h3 className="text-lg md:text-3xl lg:text-4xl font-bold mb-3">
                       <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] animate-gradient-text">
                         Transform Your Dreams
