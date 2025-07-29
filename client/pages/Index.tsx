@@ -1180,16 +1180,16 @@ const Index = () => {
 
       {/* Scholarship Popup */}
       {showScholarshipPopup && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-4">
-          <div className="bg-white rounded-lg md:rounded-2xl max-w-[280px] md:max-w-3xl w-full mx-2 md:mx-4 relative shadow-2xl max-h-[85vh] md:max-h-[85vh] overflow-y-auto animate-scaleIn">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4">
+          <div className="bg-white rounded-lg md:rounded-2xl max-w-[320px] md:max-w-3xl w-full mx-2 md:mx-4 relative shadow-2xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto animate-scaleIn">
             <button
               onClick={() => setShowScholarshipPopup(false)}
-              className="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-10 md:h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-300 z-10 group"
+              className="absolute top-2 right-2 md:top-4 md:right-4 w-8 h-8 md:w-10 md:h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-300 z-20 group cursor-pointer"
             >
-              <X className="h-3 w-3 md:h-5 md:w-5 text-gray-600 group-hover:text-gray-800 transition-colors" />
+              <X className="h-4 w-4 md:h-5 md:w-5 text-gray-600 group-hover:text-gray-800 transition-colors" />
             </button>
 
-            <div className="p-3 md:p-6">
+            <div className="p-4 md:p-6">
               {/* Ultra Creative Header with Enhanced Animation */}
               <div className="text-center mb-3 md:mb-6 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/10 via-[#c38935]/10 to-[#22336a]/10 rounded-3xl animate-pulse"></div>
