@@ -3027,9 +3027,7 @@ const Index = () => {
                       "
                     </span>
                     <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
-                      The industry exposure and practical learning approach gave
-                      me exactly what I needed to excel in my career. The
-                      placement support was exceptional, and I landed my dream
+                      Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.
                       job with a fantastic package!
                     </p>
                   </div>
