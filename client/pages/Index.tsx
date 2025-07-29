@@ -2036,19 +2036,6 @@ const Index = () => {
                               </div>
                             ))}
                         </div>
-
-                        {/* Academic Partners Section - Desktop */}
-                        <div className="mt-6 p-4 md:p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg md:rounded-xl border border-blue-200">
-                          <h5 className="text-base md:text-lg font-bold text-[#22336a] mb-3 md:mb-4">Academic Knowledge Partners</h5>
-                          <div className="flex flex-wrap gap-2 md:gap-3 mb-4">
-                            <span className="px-3 py-1 md:px-4 md:py-2 bg-white text-xs md:text-sm font-medium text-[#22336a] rounded-full border border-gray-300 shadow-sm">TCS Ion</span>
-                            <span className="px-3 py-1 md:px-4 md:py-2 bg-white text-xs md:text-sm font-medium text-[#22336a] rounded-full border border-gray-300 shadow-sm">AU Finance Bank</span>
-                          </div>
-                          <h5 className="text-base md:text-lg font-bold text-[#22336a] mb-3">Entrepreneurial Academic Partners</h5>
-                          <div className="flex flex-wrap gap-2 md:gap-3">
-                            <span className="px-3 py-1 md:px-4 md:py-2 bg-white text-xs md:text-sm font-medium text-[#22336a] rounded-full border border-gray-300 shadow-sm">NSDC</span>
-                          </div>
-                        </div>
                       </div>
 
                       {/* Eligibility - Mobile Responsive */}
