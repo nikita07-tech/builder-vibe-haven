@@ -55,6 +55,7 @@ const Index = () => {
   const [showAllCertifications, setShowAllCertifications] = useState<{
     [key: string]: boolean;
   }>({});
+  const [showScholarshipPopup, setShowScholarshipPopup] = useState(false);
 
   // Carousel images
   const carouselImages = [
