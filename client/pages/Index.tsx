@@ -1222,15 +1222,7 @@ const Index = () => {
                   <p className="text-[10px] md:text-xs text-gray-600 mb-3">
                     SAT (Sunstone Admission Test) is a comprehensive aptitude and reasoning assessment designed to evaluate your academic potential. Based on your performance, you become eligible for merit-based scholarships up to 100% of tuition fees. The test covers logical reasoning, quantitative aptitude, and English comprehension.
                   </p>
-                  <button
-                    onClick={() => {
-                      setShowScholarshipPopup(false);
-                      window.open("https://sunstone.in/apply-now", "_blank");
-                    }}
-                    className="w-full bg-gradient-to-r from-[#22336a] to-[#c38935] text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 hover:shadow-lg text-xs md:text-sm"
-                  >
-                    Apply for SAT
-                  </button>
+
                 </div>
 
                 {/* Bright Minds Scholarship */}
@@ -1263,15 +1255,7 @@ const Index = () => {
                   <p className="text-[10px] md:text-xs text-gray-600 mb-3">
                     Bright Minds Scholarship is awarded to students who have demonstrated exceptional academic performance in their previous studies. This merit-based scholarship recognizes outstanding students with excellent grades and provides financial support ranging from 25% to 75% of tuition fees based on academic achievements.
                   </p>
-                  <button
-                    onClick={() => {
-                      setShowScholarshipPopup(false);
-                      window.open("https://sunstone.in/apply-now", "_blank");
-                    }}
-                    className="w-full bg-gradient-to-r from-[#c38935] to-[#22336a] text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 hover:shadow-lg text-xs md:text-sm"
-                  >
-                    Apply for Bright Minds
-                  </button>
+
                 </div>
               </div>
 
