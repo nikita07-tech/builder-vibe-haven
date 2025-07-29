@@ -2022,8 +2022,11 @@ const Index = () => {
                         >
                           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                         </svg>
-                        Corporate Partners
+                        Secure your future with our corporate tie-ups
                       </h5>
+                      <p className="text-[10px] text-[#22336a] text-center mb-2">
+                        Boost your career with our corporate-backed programs and industry-ready training modules.
+                      </p>
                     </div>
 
                     <div className="grid grid-cols-3 gap-2 mb-2">
