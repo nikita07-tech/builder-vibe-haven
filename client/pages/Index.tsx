@@ -218,10 +218,10 @@ const Index = () => {
     },
     MCA: {
       duration: "2-year program",
-      certifications: "5 specializations",
+      certifications: "5 certifications",
       internships: "6+ months of internships/projects",
       projects: "6 capstone projects",
-      specializations: "5 new-age specializations",
+      specializations: "5 new-age certifications",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
