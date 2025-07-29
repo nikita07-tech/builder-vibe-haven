@@ -1367,9 +1367,30 @@ const Index = () => {
                     />
                   </div>
 
-                  <p className="text-[10px] md:text-xs text-gray-600 mb-3">
-                    Bright Minds Scholarship is awarded to students who have demonstrated exceptional academic performance in their previous studies. This merit-based scholarship recognizes outstanding students with excellent grades and provides financial support ranging from 25% to 75% of tuition fees based on academic achievements.
-                  </p>
+                  <div className="mb-3 space-y-2">
+                    <div className="bg-gradient-to-r from-[#c38935]/10 to-yellow-100 rounded-lg p-3">
+                      <p className="text-[10px] md:text-xs text-gray-700 font-medium mb-2">
+                        ⭐ <strong>Bright Minds Recognition:</strong> Celebrating Academic Excellence!
+                      </p>
+                      <p className="text-[10px] md:text-xs text-gray-600 leading-relaxed">
+                        Awarded to students with exceptional academic performance. Get financial support ranging from <span className="font-bold text-[#c38935]">25% to 75%</span> of tuition fees based on your academic achievements.
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between bg-yellow-50 rounded-lg p-2">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">🏆</span>
+                        </div>
+                        <span className="text-[10px] md:text-xs font-medium text-gray-700">Merit-Based</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">💰</span>
+                        </div>
+                        <span className="text-[10px] md:text-xs font-medium text-gray-700">Up to 75% Off</span>
+                      </div>
+                    </div>
+                  </div>
 
                 </div>
               </div>
