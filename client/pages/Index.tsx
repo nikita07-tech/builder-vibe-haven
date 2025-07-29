@@ -3116,24 +3116,24 @@ const Index = () => {
                     <div className="relative">
                       <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
                         <img
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-                          alt="Amit Joshi"
+                          src="https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800"
+                          alt="Pulkit Singh"
                           className="w-full h-full object-cover"
                         />
                       </div>
                       <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                        <span className="text-white text-xs">����</span>
+                        <span className="text-white text-xs">✓</span>
                       </div>
                     </div>
                     <div>
                       <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#c38935] transition-colors duration-300">
-                        Amit Joshi
+                        Pulkit Singh
                       </h4>
                       <p className="text-sm text-gray-600">
-                        B.Tech Graduate • Senior Developer
+                        MBA Graduate • Dhanguard 10 LPA
                       </p>
                       <p className="text-xs text-[#c38935] font-semibold">
-                        Wipro • Batch 2021
+                        GDG • 22-24
                       </p>
                     </div>
                   </div>
