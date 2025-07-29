@@ -1769,7 +1769,7 @@ const Index = () => {
                   "specs" ? (
                     <div className="space-y-1">
                       <h4 className="font-semibold text-[#22336a] text-xs">
-                        Key Certifications:
+                        Key Specializations:
                       </h4>
                       {programs[selectedMobileProgram].certificationsList
                         .slice(
