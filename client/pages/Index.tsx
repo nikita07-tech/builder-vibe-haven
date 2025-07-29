@@ -102,7 +102,7 @@ const Index = () => {
   const programs = {
     MBA: {
       duration: "2-year program",
-      certifications: "6 specializations",
+      certifications: "10 certifications",
       internships: "6+ months of internships/projects",
       projects: "4 capstone projects",
       specializations: "6 specializations",
@@ -140,7 +140,7 @@ const Index = () => {
     },
     BBA: {
       duration: "3-year program",
-      certifications: "6 specializations",
+      certifications: "10 certifications",
       internships: "8+ months of internships/projects",
       projects: "6 capstone projects",
       specializations: "6 specializations",
@@ -179,7 +179,7 @@ const Index = () => {
     },
     BCA: {
       duration: "3-year program",
-      certifications: "6 specializations",
+      certifications: "10 certifications",
       internships: "8+ months of internships/projects",
       projects: "3 capstone projects",
       specializations: "6 specializations",
@@ -219,7 +219,7 @@ const Index = () => {
     },
     MCA: {
       duration: "2-year program",
-      certifications: "5 specializations",
+      certifications: "10 certifications",
       internships: "6+ months of internships/projects",
       projects: "2 capstone projects",
       specializations: "5 specializations",
@@ -254,7 +254,7 @@ const Index = () => {
     },
     "B.Tech": {
       duration: "4-year program",
-      certifications: "2 specializations",
+      certifications: "10 certifications",
       internships: "10+ months of Internships",
       projects: "4 capstone projects",
       specializations: "2 specializations",
