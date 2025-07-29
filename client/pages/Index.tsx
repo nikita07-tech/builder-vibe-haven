@@ -1229,7 +1229,7 @@ const Index = () => {
                 {/* SAT Scholarship - Enhanced Design */}
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-xl md:rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="relative bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-xl md:rounded-2xl p-6 md:p-8 text-white overflow-hidden transform group-hover:scale-105 transition-all duration-500">
+                  <div className="relative bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-xl md:rounded-2xl p-4 md:p-8 text-white overflow-hidden transform group-hover:scale-105 transition-all duration-500">
                     <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-white/10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-700"></div>
                     <div className="absolute bottom-0 left-0 w-24 h-24 md:w-36 md:h-36 bg-[#c38935]/20 rounded-full translate-y-12 -translate-x-12 group-hover:scale-110 transition-transform duration-700"></div>
 
