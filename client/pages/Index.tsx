@@ -3839,6 +3839,19 @@ const Index = () => {
         .animate-glow-pulse {
           animation: glow-pulse 2s ease-in-out infinite;
         }
+
+        @keyframes scale-in {
+          0% {
+            transform: scaleX(0);
+          }
+          100% {
+            transform: scaleX(1);
+          }
+        }
+
+        .animate-scale-in {
+          animation: scale-in 1s ease-out 0.5s both;
+        }
       `}</style>
     </div>
   );
