@@ -2834,10 +2834,10 @@ const Index = () => {
                 },
                 {
                   question:
-                    "What certifications and skills will I gain through Sunstone programs?",
+                    "What specializations and skills will I gain through Sunstone programs?",
                   answer:
-                    "Students receive 10+ advanced certifications in emerging technologies like AI/ML, Data Science, Digital Marketing, Cloud Computing, and more. These industry-recognized certifications enhance your employability and career prospects significantly.",
-                  category: "certifications",
+                    "Students can choose from industry-focused specializations in emerging fields like AI/ML, Data Science, Cloud Computing, Cybersecurity, Marketing Management, and more. These specialized programs enhance your employability and career prospects significantly.",
+                  category: "specializations",
                 },
                 {
                   question:
@@ -2891,7 +2891,7 @@ const Index = () => {
                         <div className="px-3 md:px-6 pb-3 md:pb-6 -mt-2">
                           <div className="pt-3 md:pt-6 border-t border-gray-200 bg-white rounded-lg md:rounded-xl p-3 md:p-6 ml-8 md:ml-16 shadow-sm">
                             <div className="text-gray-700 leading-relaxed text-sm md:text-lg">
-                              {faq.answer.includes("��") ? (
+                              {faq.answer.includes("•") ? (
                                 <div className="space-y-1 md:space-y-2">
                                   {faq.answer
                                     .split("\n")
