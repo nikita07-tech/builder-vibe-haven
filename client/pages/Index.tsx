@@ -2140,7 +2140,7 @@ const Index = () => {
                             {programData.certifications}
                           </div>
                           <div className="text-xs opacity-80">
-                            Specializations
+                            Certifications
                           </div>
                         </div>
                         <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
@@ -2177,7 +2177,7 @@ const Index = () => {
                       <div className="lg:col-span-2">
                         <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-[#22336a] mb-4 md:mb-6 flex items-center">
                           <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mr-2 text-[#c38935]" />
-                          Specializations
+                          Certifications
                         </h4>
                         <div className="grid gap-3 md:gap-4">
                           {programData.certificationsList
