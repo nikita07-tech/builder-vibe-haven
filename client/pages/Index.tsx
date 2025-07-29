@@ -141,56 +141,39 @@ const Index = () => {
     },
     BBA: {
       duration: "3-year program",
-      certifications: "10 advanced certifications",
+      certifications: "6 specializations",
       internships: "8+ months of internships/projects",
       projects: "6 capstone projects",
       specializations: "6 new-age specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
-          name: "Data Analytics & Business Intelligence",
+          name: "IT & Business Analytics",
           careers:
-            "Data Analyst, Business Intelligence Analyst, Data Scientist",
-        },
-        {
-          name: "Logistics & Supply Chain Management",
-          careers:
-            "Supply Chain Manager, Logistics Coordinator, Procurement Manager",
-        },
-        {
-          name: "Sales Leadership",
-          careers:
-            "Sales Manager, Business Development Manager, Key Account Manager",
-        },
-        {
-          name: "Digital Marketing",
-          careers:
-            "Social Media Manager, SEO Manager, Performance Marketing Specialist",
-        },
-        {
-          name: "Financial Modelling & Valuation",
-          careers:
-            "Financial Analyst, Investment Banker, Equity Research Analyst",
-        },
-        {
-          name: "Project Management",
-          careers: "Project Manager, Operations Manager, Program Manager",
-        },
-        {
-          name: "Product Management",
-          careers: "Product Manager, UX Strategist, Market Research Analyst",
-        },
-        {
-          name: "Entrepreneurship Fundamentals",
-          careers: "Startup Founder, Business Consultant, Venture Analyst",
+            "Big Data Analyst, Data Visualization Specialist, Business Intelligence Analyst",
         },
         {
           name: "Human Resource & Talent Analytics",
-          careers: "HR Analyst, Talent Acquisition Manager",
+          careers:
+            "HR Data Analyst, Talent Acquisition Specialist, Workforce Planning Manager",
         },
         {
-          name: "Trading and Investment",
-          careers: "Stock Trader, Investment Analyst, Portfolio Manager",
+          name: "Marketing Management",
+          careers:
+            "Marketing Manager, Brand Manager, Campaign Strategist",
+        },
+        {
+          name: "Retail Sales Management",
+          careers:
+            "Retail Manager, Sales Executive, Store Operations Manager",
+        },
+        {
+          name: "Operations Management",
+          careers: "Operations Manager, Production Manager, Logistics Coordinator",
+        },
+        {
+          name: "Banking, Financial Services and Insurance (BFSI)",
+          careers: "Banking Officer, Financial Advisor, Insurance Specialist",
         },
       ],
       eligibility:
@@ -198,48 +181,35 @@ const Index = () => {
     },
     BCA: {
       duration: "3-year program",
-      certifications: "10 advanced certifications",
+      certifications: "6 specializations",
       internships: "8+ months of internships/projects",
       projects: "6 capstone projects",
       specializations: "6 new-age specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
-          name: "Programming Foundation",
-          careers: "Software Developer, Web Developer",
+          name: "Cloud Computing",
+          careers: "Cloud Engineer, DevOps Engineer, Cloud Architect",
         },
         {
-          name: "Full Stack Development",
-          careers: "Full Stack Developer, Backend Developer",
+          name: "Cyber Security & Forensics",
+          careers: "Cybersecurity Analyst, Ethical Hacker, Digital Forensics Specialist",
         },
         {
-          name: "Advanced DSA & Competitive Coding",
-          careers: "Software Engineer, Algorithm Engineer",
+          name: "Blockchain",
+          careers: "Blockchain Developer, Cryptocurrency Analyst, Smart Contract Developer",
+        },
+        {
+          name: "Machine Learning & AI",
+          careers: "ML Engineer, AI Developer, Data Scientist",
         },
         {
           name: "Data Science & Analytics",
-          careers: "Data Analyst, Business Intelligence Analyst",
+          careers: "Data Analyst, Business Intelligence Analyst, Data Visualization Expert",
         },
         {
-          name: "AI for Everyone",
-          careers: "AI Consultant, Automation Specialist",
-        },
-        {
-          name: "AI & Machine Learning",
-          careers: "Machine Learning Engineer, AI Researcher",
-        },
-        { name: "Cloud Computing", careers: "Cloud Engineer, DevOps Engineer" },
-        {
-          name: "Cybersecurity & Forensics",
-          careers: "Cybersecurity Analyst, Ethical Hacker",
-        },
-        {
-          name: "Mobile App Development",
-          careers: "Mobile App Developer, Android/iOS Developer",
-        },
-        {
-          name: "Robotics and IoT Automation",
-          careers: "Robotics Engineer, IoT Developer",
+          name: "Full Stack Development",
+          careers: "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
         },
       ],
       eligibility:
@@ -247,48 +217,31 @@ const Index = () => {
     },
     MCA: {
       duration: "2-year program",
-      certifications: "10 advanced certifications",
+      certifications: "5 specializations",
       internships: "6+ months of internships/projects",
       projects: "6 capstone projects",
-      specializations: "6 new-age specializations",
+      specializations: "5 new-age specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
-          name: "Programming Foundation",
-          careers: "Software Developer, Web Developer",
-        },
-        {
           name: "Full Stack Development",
-          careers: "Full Stack Developer, Backend Developer",
+          careers: "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
         },
         {
-          name: "Advanced DSA & Competitive Coding",
-          careers: "Software Engineer, Algorithm Engineer",
+          name: "Machine Learning & AI",
+          careers: "ML Engineer, AI Developer, Data Scientist",
         },
         {
-          name: "Data Science & Analytics",
-          careers: "Data Analyst, Business Intelligence Analyst",
+          name: "Data Science",
+          careers: "Data Scientist, Data Analyst, Business Intelligence Specialist",
         },
         {
-          name: "AI for Everyone",
-          careers: "AI Consultant, Automation Specialist",
+          name: "Cloud Computing",
+          careers: "Cloud Engineer, DevOps Engineer, Cloud Solutions Architect",
         },
         {
-          name: "AI & Machine Learning",
-          careers: "Machine Learning Engineer, AI Researcher",
-        },
-        { name: "Cloud Computing", careers: "Cloud Engineer, DevOps Engineer" },
-        {
-          name: "Cybersecurity & Forensics",
-          careers: "Cybersecurity Analyst, Ethical Hacker",
-        },
-        {
-          name: "Mobile App Development",
-          careers: "Mobile App Developer, Android/iOS Developer",
-        },
-        {
-          name: "Robotics and IoT Automation",
-          careers: "Robotics Engineer, IoT Developer",
+          name: "Cyber Security",
+          careers: "Cybersecurity Analyst, Security Engineer, Information Security Specialist",
         },
       ],
       eligibility:
@@ -296,48 +249,19 @@ const Index = () => {
     },
     "B.Tech": {
       duration: "4-year program",
-      certifications: "10 advanced certifications",
+      certifications: "2 specializations",
       internships: "10+ months of Internships",
       projects: "8 capstone projects",
-      specializations: "6 new-age specializations",
+      specializations: "2 core specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
-          name: "Programming Foundation",
-          careers: "Software Developer, Web Developer",
+          name: "Computer Science Engineering",
+          careers: "Software Engineer, System Analyst, Application Developer",
         },
         {
-          name: "Full Stack Development",
-          careers: "Full Stack Developer, Backend Developer",
-        },
-        {
-          name: "Advanced DSA & Competitive Coding",
-          careers: "Software Engineer, Algorithm Engineer",
-        },
-        {
-          name: "Data Science & Analytics",
-          careers: "Data Analyst, Business Intelligence Analyst",
-        },
-        {
-          name: "AI for Everyone",
-          careers: "AI Consultant, Automation Specialist",
-        },
-        {
-          name: "AI & Machine Learning",
-          careers: "Machine Learning Engineer, AI Researcher",
-        },
-        { name: "Cloud Computing", careers: "Cloud Engineer, DevOps Engineer" },
-        {
-          name: "Cybersecurity & Forensics",
-          careers: "Cybersecurity Analyst, Ethical Hacker",
-        },
-        {
-          name: "Mobile App Development",
-          careers: "Mobile App Developer, Android/iOS Developer",
-        },
-        {
-          name: "Robotics and IoT Automation",
-          careers: "Robotics Engineer, IoT Developer",
+          name: "Information Technology",
+          careers: "IT Specialist, Business Analyst, Project Manager",
         },
       ],
       eligibility:
