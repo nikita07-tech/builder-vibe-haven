@@ -2472,7 +2472,7 @@ const Index = () => {
                     company: "Wipro",
                     initials: "AJ",
                     quote:
-                      "The advanced certifications and project-based learning methodology prepared me perfectly for the industry demands.",
+                      "The specialized curriculum and project-based learning methodology prepared me perfectly for the industry demands.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   // Duplicate for seamless loop
