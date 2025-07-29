@@ -175,7 +175,7 @@ const Index = () => {
         },
       ],
       eligibility:
-        "50% marks in class 10 & 12 from a recognised board of education.",
+        "12th - 45% marks (40% in reserved category).",
     },
     BCA: {
       duration: "3-year program",
@@ -215,7 +215,7 @@ const Index = () => {
         },
       ],
       eligibility:
-        "Passed Class 12th from a recognized board of education. Must have studied at least one of these subjects: Computer Science, Information Technology, Informatics Practices, Mathematics, Business Mathematics, or Statistics.",
+        "12th - 45% marks (40% in reserved category).",
     },
     MCA: {
       duration: "2-year program",
@@ -3180,7 +3180,7 @@ const Index = () => {
                   question:
                     "What makes Sunstone different from other education providers?",
                   answer:
-                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
+                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n��� Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
                   category: "sunstone",
                 },
                 {
