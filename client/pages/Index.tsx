@@ -1176,6 +1176,110 @@ const Index = () => {
         </div>
       )}
 
+      {/* Scholarship Popup */}
+      {showScholarshipPopup && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4">
+          <div className="bg-white rounded-lg md:rounded-2xl max-w-sm md:max-w-4xl w-full mx-2 md:mx-4 relative shadow-2xl max-h-[95vh] md:max-h-[90vh] overflow-y-auto animate-scaleIn">
+            <button
+              onClick={() => setShowScholarshipPopup(false)}
+              className="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-10 md:h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-300 z-10 group"
+            >
+              <X className="h-3 w-3 md:h-5 md:w-5 text-gray-600 group-hover:text-gray-800 transition-colors" />
+            </button>
+
+            <div className="p-3 md:p-8">
+              {/* Header */}
+              <div className="text-center mb-4 md:mb-8">
+                <h3 className="text-lg md:text-3xl font-bold text-[#22336a] mb-2 md:mb-4">
+                  Scholarship Opportunities
+                </h3>
+                <p className="text-gray-600 text-sm md:text-lg">
+                  Choose from our scholarship programs to make quality education affordable
+                </p>
+              </div>
+
+              {/* Scholarship Options Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
+                {/* SAT Scholarship */}
+                <div className="bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-lg md:rounded-xl p-4 md:p-6 text-white relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-10 translate-x-10"></div>
+                  <div className="relative z-10">
+                    <div className="flex items-center mb-3 md:mb-4">
+                      <div className="w-8 h-8 md:w-12 md:h-12 bg-[#c38935] rounded-full flex items-center justify-center mr-3">
+                        <Trophy className="h-4 w-4 md:h-6 md:w-6 text-white" />
+                      </div>
+                      <h4 className="text-sm md:text-xl font-bold">SAT - Sunstone Admission Test</h4>
+                    </div>
+                    <p className="text-xs md:text-sm mb-3 md:mb-4 opacity-90">
+                      Aptitude test for admissions and scholarship opportunities. Assesses general aptitude, logical reasoning, verbal ability, and psychometric profile.
+                    </p>
+                    <div className="bg-white/20 rounded-lg p-2 md:p-3 mb-3 md:mb-4">
+                      <p className="text-xs md:text-sm font-semibold">Scholarship: Up to 80% of program fee</p>
+                    </div>
+                    <button
+                      onClick={() => {
+                        setShowScholarshipPopup(false);
+                        window.open('https://sunstone.in/apply-now', '_blank');
+                      }}
+                      className="w-full bg-[#c38935] hover:bg-[#d4a853] text-white font-bold py-2 md:py-3 px-4 rounded-lg transition-all duration-300 text-xs md:text-sm"
+                    >
+                      Apply for SAT
+                    </button>
+                  </div>
+                </div>
+
+                {/* Bright Minds Scholarship */}
+                <div className="bg-white border-2 border-gray-200 rounded-lg md:rounded-xl p-4 md:p-6 relative overflow-hidden hover:border-[#c38935] transition-all duration-300">
+                  <div className="text-center">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fb7f8a9de29d34140ac2cc4ccf5225774?format=webp&width=800"
+                      alt="Bright Minds Scholarship"
+                      className="w-full h-32 md:h-48 object-contain rounded-lg mb-3 md:mb-4"
+                    />
+                    <button
+                      onClick={() => {
+                        setShowScholarshipPopup(false);
+                        window.open('https://sunstone.in/apply-now', '_blank');
+                      }}
+                      className="w-full bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold py-2 md:py-3 px-4 rounded-lg transition-all duration-300 text-xs md:text-sm"
+                    >
+                      Apply for Bright Minds Scholarship
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Academic Partners Section */}
+              <div className="bg-gray-50 rounded-lg md:rounded-xl p-4 md:p-6 mb-4 md:mb-6">
+                <h4 className="text-sm md:text-lg font-bold text-[#22336a] mb-2 md:mb-3">Academic Knowledge Partners</h4>
+                <div className="flex flex-wrap gap-2 md:gap-3 mb-3 md:mb-4">
+                  <span className="bg-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium text-[#22336a] border border-gray-200">TCS Ion</span>
+                  <span className="bg-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium text-[#22336a] border border-gray-200">AU Finance Bank</span>
+                </div>
+                <h4 className="text-sm md:text-lg font-bold text-[#22336a] mb-2 md:mb-3">Entrepreneurial Academic Partners</h4>
+                <div className="flex flex-wrap gap-2 md:gap-3">
+                  <span className="bg-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-medium text-[#22336a] border border-gray-200">NSDC</span>
+                </div>
+              </div>
+
+              {/* Apply Now CTA */}
+              <div className="text-center">
+                <button
+                  onClick={() => {
+                    setShowScholarshipPopup(false);
+                    window.open('https://sunstone.in/apply-now', '_blank');
+                  }}
+                  className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white font-bold rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm md:text-base"
+                >
+                  <span>Apply Now</span>
+                  <ExternalLink className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Professional Placement Guarantee Program - Much Smaller Mobile */}
       <section className="py-4 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute inset-0">
