@@ -2875,8 +2875,8 @@ const Index = () => {
                                           ? "Placement"
                                           : faq.category === "industry"
                                             ? "Industry"
-                                            : faq.category === "certifications"
-                                              ? "Certifications"
+                                            : faq.category === "specializations"
+                                              ? "Specializations"
                                               : faq.category === "success"
                                                 ? "Success"
                                                 : "Support"}
