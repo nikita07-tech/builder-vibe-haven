@@ -19,6 +19,7 @@ import {
   BookOpen,
   Zap,
   ChevronLeft,
+  ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -174,8 +175,7 @@ const Index = () => {
           careers: "Banking Officer, Financial Advisor, Insurance Specialist",
         },
       ],
-      eligibility:
-        "50% marks in class 10 & 12 from a recognised board of education.",
+      eligibility: "12th - 45% marks (40% in reserved category).",
     },
     BCA: {
       duration: "3-year program",
@@ -214,8 +214,7 @@ const Index = () => {
             "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
         },
       ],
-      eligibility:
-        "Passed Class 12th from a recognized board of education. Must have studied at least one of these subjects: Computer Science, Information Technology, Informatics Practices, Mathematics, Business Mathematics, or Statistics.",
+      eligibility: "12th - 45% marks (40% in reserved category).",
     },
     MCA: {
       duration: "2-year program",
@@ -270,7 +269,7 @@ const Index = () => {
         },
       ],
       eligibility:
-        "Passed Class 10+2 with Physics, Mathematics, Chemistry, Computer Science, or Biology. For Agriculture Engineering, Agriculture stream students must have at least 45% marks (40% for reserved category) in these subjects combined.",
+        "12th - 45% (40% in reserved category) Compulsory subjects: Physics, Mathematics and Chemistry.",
     },
   };
 
@@ -417,7 +416,7 @@ const Index = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-1.5 sm:px-3 md:px-6 lg:px-8 py-0.5 sm:py-1.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-[10px] sm:text-xs md:text-base rounded-sm sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
-                  <span>Explore Programs</span>
+                  <span>Explore Programs with Sunstone</span>
                   <ExternalLink className="ml-0.5 sm:ml-1 md:ml-2 h-2 w-2 sm:h-3 sm:w-3 md:h-5 md:w-5" />
                 </a>
                 <a
@@ -848,12 +847,6 @@ const Index = () => {
 
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-6 md:mb-16">
-            <div className="inline-flex items-center px-3 md:px-6 py-1 md:py-3 bg-[#c38935]/10 rounded-full mb-2 md:mb-6">
-              <Trophy className="h-3 w-3 md:h-5 md:w-5 text-[#c38935] mr-1 md:mr-2" />
-              <span className="text-[#c38935] font-semibold text-xs md:text-sm">
-                AWARDS & RECOGNITION
-              </span>
-            </div>
             <h2 className="text-base sm:text-lg md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
               Recognized
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
@@ -983,6 +976,109 @@ const Index = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sunstone Philosophy Section - Mobile Optimized */}
+      <section className="py-6 md:py-12 bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-5 right-5 w-32 h-32 md:w-72 md:h-72 bg-[#c38935]/10 rounded-full blur-2xl md:blur-3xl"></div>
+          <div className="absolute bottom-5 left-5 w-40 h-40 md:w-96 md:h-96 bg-white/5 rounded-full blur-2xl md:blur-3xl"></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto px-3 md:px-6 relative z-10">
+          {/* Header */}
+          <div className="text-center mb-6 md:mb-10">
+            <div className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-white/10 backdrop-blur-sm rounded-full mb-3 md:mb-4">
+              <Star className="h-3 w-3 md:h-4 md:w-4 text-[#c38935] mr-1.5 md:mr-2" />
+              <span className="text-white font-semibold text-xs md:text-sm">
+                THE SUNSTONE PHILOSOPHY
+              </span>
+            </div>
+            <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 leading-tight">
+              Learn from the
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
+                {" "}
+                Best{" "}
+              </span>
+              <br />
+              <span className="text-white/90">
+                <p>Experience in the Real World</p>
+              </span>
+            </h2>
+            <p className="text-xs md:text-base text-white/80 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">
+              The Sunstone Philosophy helps you learn from the best and provide
+              a hands-on experience so your education is not just limited to
+              theory
+            </p>
+          </div>
+
+          {/* Philosophy Points */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            {/* Point 1 */}
+            <div className="group relative">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl md:rounded-2xl p-4 md:p-6 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-xl md:rounded-2xl mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <Users className="h-6 w-6 md:h-8 md:w-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <div className="text-lg md:text-2xl font-bold text-[#c38935] mb-2">
+                    01
+                  </div>
+                  <h3 className="text-sm md:text-lg font-bold text-white mb-3">
+                    Learn from Recruiters
+                  </h3>
+                  <p className="text-white/80 leading-relaxed text-xs md:text-sm">
+                    CEOs, CTOs, and COOs of Fortune 500 companies and start-ups
+                    with years of recruitment experience
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Point 2 */}
+            <div className="group relative">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl md:rounded-2xl p-4 md:p-6 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#f4d03f] to-[#c38935] rounded-xl md:rounded-2xl mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <Briefcase className="h-6 w-6 md:h-8 md:w-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <div className="text-lg md:text-2xl font-bold text-[#c38935] mb-2">
+                    02
+                  </div>
+                  <h3 className="text-sm md:text-lg font-bold text-white mb-3">
+                    Practice in the Real World
+                  </h3>
+                  <p className="text-white/80 leading-relaxed text-xs md:text-sm">
+                    Gain hands-on experience with internships & real-life
+                    projects to be job-ready from Day 1
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Point 3 */}
+            <div className="group relative">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl md:rounded-2xl p-4 md:p-6 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-xl md:rounded-2xl mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <Award className="h-6 w-6 md:h-8 md:w-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <div className="text-lg md:text-2xl font-bold text-[#c38935] mb-2">
+                    03
+                  </div>
+                  <h3 className="text-sm md:text-lg font-bold text-white mb-3">
+                    Create Your Portfolio
+                  </h3>
+                  <p className="text-white/80 leading-relaxed text-xs md:text-sm">
+                    Showcase your verified skills and experience with a
+                    professional portfolio
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1182,7 +1278,7 @@ const Index = () => {
       {showScholarshipPopup && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end justify-center md:items-center md:justify-center">
           <div
-            className={`bg-white rounded-t-2xl md:rounded-2xl w-full md:max-w-lg md:w-full relative shadow-2xl max-h-[85vh] md:max-h-[90vh] overflow-y-auto transform transition-all duration-300 ease-out ${showScholarshipPopup ? "translate-y-0" : "translate-y-full"}`}
+            className={`bg-white rounded-t-2xl md:rounded-2xl w-full max-w-sm md:max-w-lg md:w-full relative shadow-2xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto transform transition-all duration-300 ease-out ${showScholarshipPopup ? "translate-y-0" : "translate-y-full"}`}
           >
             <button
               onClick={() => setShowScholarshipPopup(false)}
@@ -1191,7 +1287,7 @@ const Index = () => {
               <X className="h-4 w-4 text-gray-600 group-hover:text-gray-800" />
             </button>
 
-            <div className="p-4 md:p-6">
+            <div className="p-3 md:p-6">
               {/* Clean Professional Header */}
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -1224,19 +1320,49 @@ const Index = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="text-[10px] md:text-xs text-gray-600 mb-3">
-                    Aptitude & reasoning assessment for comprehensive
-                    scholarship eligibility.
-                  </p>
-                  <button
-                    onClick={() => {
-                      setShowScholarshipPopup(false);
-                      window.open("https://sunstone.in/apply-now", "_blank");
-                    }}
-                    className="w-full bg-gradient-to-r from-[#22336a] to-[#c38935] text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 hover:shadow-lg text-xs md:text-sm"
-                  >
-                    Apply for SAT
-                  </button>
+                  <div className="mb-3 space-y-2">
+                    <div className="bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-lg p-3">
+                      <p className="text-[10px] md:text-xs text-gray-700 font-medium mb-2">
+                        <strong>What is SAT?</strong> Sunstone Admission Test -
+                        Your gateway to excellence!
+                      </p>
+                      <p className="text-[10px] md:text-xs text-gray-600 leading-relaxed">
+                        A comprehensive aptitude and reasoning assessment
+                        designed to evaluate your academic potential and unlock
+                        scholarships up to{" "}
+                        <span className="font-bold text-[#c38935]">
+                          100% of tuition fees
+                        </span>
+                        .
+                      </p>
+                    </div>
+                    <div className="grid grid-cols-3 gap-2 text-center">
+                      <div className="bg-blue-50 rounded-lg p-2">
+                        <div className="text-xs font-bold text-[#22336a]">
+                          LR
+                        </div>
+                        <div className="text-[9px] md:text-[10px] text-gray-600">
+                          Logical Reasoning
+                        </div>
+                      </div>
+                      <div className="bg-green-50 rounded-lg p-2">
+                        <div className="text-xs font-bold text-[#22336a]">
+                          QA
+                        </div>
+                        <div className="text-[9px] md:text-[10px] text-gray-600">
+                          Quantitative Aptitude
+                        </div>
+                      </div>
+                      <div className="bg-purple-50 rounded-lg p-2">
+                        <div className="text-xs font-bold text-[#22336a]">
+                          EC
+                        </div>
+                        <div className="text-[9px] md:text-[10px] text-gray-600">
+                          English Comprehension
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Bright Minds Scholarship */}
@@ -1266,19 +1392,44 @@ const Index = () => {
                     />
                   </div>
 
-                  <p className="text-[10px] md:text-xs text-gray-600 mb-3">
-                    Merit-based program recognizing academic excellence and
-                    potential.
-                  </p>
-                  <button
-                    onClick={() => {
-                      setShowScholarshipPopup(false);
-                      window.open("https://sunstone.in/apply-now", "_blank");
-                    }}
-                    className="w-full bg-gradient-to-r from-[#c38935] to-[#22336a] text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 hover:shadow-lg text-xs md:text-sm"
-                  >
-                    Apply for Bright Minds
-                  </button>
+                  <div className="mb-3 space-y-2">
+                    <div className="bg-gradient-to-r from-[#c38935]/10 to-yellow-100 rounded-lg p-3">
+                      <p className="text-[10px] md:text-xs text-gray-700 font-medium mb-2">
+                        <strong>Bright Minds Recognition:</strong> Celebrating
+                        Academic Excellence!
+                      </p>
+                      <p className="text-[10px] md:text-xs text-gray-600 leading-relaxed">
+                        Awarded to students with exceptional academic
+                        performance. Get financial support ranging from{" "}
+                        <span className="font-bold text-[#c38935]">
+                          25% to 75%
+                        </span>{" "}
+                        of tuition fees based on your academic achievements.
+                      </p>
+                    </div>
+                    <div className="flex items-center justify-between bg-yellow-50 rounded-lg p-2">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">
+                            M
+                          </span>
+                        </div>
+                        <span className="text-[10px] md:text-xs font-medium text-gray-700">
+                          Merit-Based
+                        </span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-bold">
+                            %
+                          </span>
+                        </div>
+                        <span className="text-[10px] md:text-xs font-medium text-gray-700">
+                          Up to 75% Off
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -1318,12 +1469,6 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10">
           {/* More Compact Header for Mobile */}
           <div className="text-center mb-4 md:mb-16">
-            <div className="inline-flex items-center px-2 md:px-6 py-1 md:py-3 bg-[#22336a]/10 rounded-full mb-2 md:mb-6">
-              <Trophy className="h-3 w-3 md:h-5 md:w-5 text-[#22336a] mr-1 md:mr-2" />
-              <span className="text-[#22336a] font-semibold text-[10px] md:text-base">
-                <p>POP</p>
-              </span>
-            </div>
             <h2 className="text-base sm:text-lg md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
               Placement
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
@@ -1332,7 +1477,7 @@ const Index = () => {
               </span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
-                Program
+                Program (POP)
               </span>
             </h2>
             <div className="max-w-4xl mx-auto text-gray-700 text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
@@ -1755,15 +1900,15 @@ const Index = () => {
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-[10px] text-gray-600">
-                            Projects:
+                            Specializations:
                           </span>
                           <span className="text-xs font-medium text-[#22336a]">
-                            {programs[selectedMobileProgram].projects}
+                            {programs[selectedMobileProgram].specializations}
                           </span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-[10px] text-gray-600">
-                            Specializations:
+                            Certifications:
                           </span>
                           <span className="text-xs font-medium text-[#22336a]">
                             {programs[selectedMobileProgram].certifications}
@@ -1771,10 +1916,18 @@ const Index = () => {
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-[10px] text-gray-600">
-                            Internships:
+                            Experience:
                           </span>
                           <span className="text-xs font-medium text-[#22336a]">
                             {programs[selectedMobileProgram].internships}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-[10px] text-gray-600">
+                            Projects:
+                          </span>
+                          <span className="text-xs font-medium text-[#22336a]">
+                            {programs[selectedMobileProgram].projects}
                           </span>
                         </div>
                       </div>
@@ -1906,8 +2059,12 @@ const Index = () => {
                         >
                           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                         </svg>
-                        Corporate Partners
+                        Secure your future with our corporate tie-ups
                       </h5>
+                      <p className="text-[10px] text-[#22336a] text-center mb-2">
+                        Boost your career with our corporate-backed programs and
+                        industry-ready training modules.
+                      </p>
                     </div>
 
                     <div className="grid grid-cols-3 gap-2 mb-2">
@@ -2053,6 +2210,15 @@ const Index = () => {
                           <div className="text-xs opacity-80">Duration</div>
                         </div>
                         <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
+                          <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
+                          <div className="font-bold text-xs md:text-sm">
+                            {programData.specializations}
+                          </div>
+                          <div className="text-xs opacity-80">
+                            Specializations
+                          </div>
+                        </div>
+                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
                           <Award className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
                           <div className="font-bold text-xs md:text-sm">
                             {programData.certifications}
@@ -2074,15 +2240,6 @@ const Index = () => {
                             {programData.projects}
                           </div>
                           <div className="text-xs opacity-80">Projects</div>
-                        </div>
-                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm col-span-2 md:col-span-1">
-                          <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
-                          <div className="font-bold text-xs md:text-sm">
-                            {programData.specializations}
-                          </div>
-                          <div className="text-xs opacity-80">
-                            Specializations
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -2153,10 +2310,11 @@ const Index = () => {
                                 </span>
                               </div>
                               <h5 className="text-sm md:text-lg font-bold text-[#22336a] mb-1">
-                                Secure Your Future
+                                Secure your future with our corporate tie-ups
                               </h5>
                               <p className="text-xs md:text-sm text-[#22336a] font-medium mb-3">
-                                Industry-backed programs with exclusive tie-ups
+                                Boost your career with our corporate-backed
+                                programs and industry-ready training modules.
                               </p>
                             </div>
 
@@ -2370,7 +2528,7 @@ const Index = () => {
 
           {/* Mobile Grid for Journey Steps - All Visible at Once with Equal Heights */}
           <div className="block md:hidden mb-8">
-            <div className="grid grid-cols-2 gap-3 grid-rows-3">
+            <div className="grid grid-cols-2 gap-4 grid-rows-3">
               {[
                 {
                   step: "1",
@@ -2414,7 +2572,7 @@ const Index = () => {
                 },
               ].map((item, index) => (
                 <div key={index} className="group relative">
-                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col justify-between min-h-[130px] max-h-[130px]">
+                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[150px] flex flex-col justify-between">
                     <div className="flex items-center mb-2">
                       <div
                         className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
@@ -2456,7 +2614,7 @@ const Index = () => {
             {/* Connecting Line */}
             <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] opacity-30"></div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 mb-12 md:mb-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8 mb-12 md:mb-16 items-start">
               {/* Step 1 */}
               <div className="group relative">
                 <div className="flex flex-col items-center text-center">
@@ -2479,15 +2637,15 @@ const Index = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
+                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
                       Apply Online
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
                       Submit your application through our user-friendly online
                       portal with guided steps
                     </p>
-                    <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
+                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Clock className="h-4 w-4 mr-1" />5 minutes
                     </div>
                   </div>
@@ -2516,15 +2674,15 @@ const Index = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
+                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
                       Aptitude Test
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
                       Quick aptitude assessment to evaluate your academic
                       readiness and potential
                     </p>
-                    <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
+                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Clock className="h-4 w-4 mr-1" />
                       30 minutes
                     </div>
@@ -2554,15 +2712,15 @@ const Index = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
+                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
                       Screening & Interview
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
                       Personal interview and evaluation process for PG
                       candidates only
                     </p>
-                    <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
+                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Users className="h-4 w-4 mr-1" />
                       PG Candidates Only
                     </div>
@@ -2592,15 +2750,15 @@ const Index = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
+                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
                       Document Verification
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
                       Quick verification of your academic credentials and
                       eligibility confirmation
                     </p>
-                    <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
+                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Award className="h-4 w-4 mr-1" />
                       Secure Process
                     </div>
@@ -2630,15 +2788,15 @@ const Index = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
+                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
                       Welcome Aboard!
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
                       Secure your seat and begin your transformational
                       educational journey with us
                     </p>
-                    <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
+                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Trophy className="h-4 w-4 mr-1" />
                       Success Begins
                     </div>
@@ -2733,70 +2891,124 @@ const Index = () => {
           {/* Mobile Horizontal Scrolling for Testimonials */}
           <div className="block md:hidden mb-8">
             <div className="overflow-hidden">
-              <div className="flex space-x-4 animate-scroll-left-to-right">
+              <div
+                className="flex space-x-4 animate-scroll-left-to-right"
+                style={{ width: "max-content" }}
+              >
                 {[
                   {
-                    name: "Rahul Kumar",
-                    role: "MBA Graduate • Software Engineer",
-                    company: "TCS",
-                    batch: "Batch 2023",
-                    initials: "RK",
+                    name: "Jaya Tiwari",
+                    role: "BCA Graduate",
+                    company: "SRMU",
+                    batch: "2022-2025",
+                    initials: "JT",
                     image:
-                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
                     quote:
-                      "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
+                      "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
-                    name: "Priya Sharma",
-                    role: "BCA Graduate �� Full Stack Developer",
-                    company: "Infosys",
-                    initials: "PS",
+                    name: "Balram Jat",
+                    role: "BCA Graduate",
+                    company: "JNU",
+                    batch: "2024-2027",
+                    initials: "BJ",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
                     quote:
-                      "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
+                      "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
-                    name: "Amit Joshi",
-                    role: "B.Tech Graduate �� Senior Developer",
-                    company: "Wipro",
-                    batch: "Batch 2021",
-                    initials: "AJ",
+                    name: "Pulkit Singh",
+                    role: "MBA Graduate • Dhanguard 10 LPA",
+                    company: "GDG",
+                    batch: "22-24",
+                    initials: "PS",
                     image:
-                      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
                     quote:
-                      "The specialized curriculum and project-based learning methodology prepared me perfectly for the industry demands.",
+                      "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
                     color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Devraj Tripathi",
+                    role: "B.Tech Graduate",
+                    company: "SRMU",
+                    batch: "2022-2026",
+                    initials: "DT",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fa7ba926fb7cf4a0ca861082351ba12b9?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a game-changer for me! The hands-on learning, expert faculty, and supportive environment have boosted my skills and confidence. It's more than just an institution—it's a community that nurtures success.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  {
+                    name: "Aman Kesarwani",
+                    role: "B.Tech Graduate",
+                    company: "VGUJ",
+                    batch: "2023-2027",
+                    initials: "AK",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                    quote:
+                      "My journey at Vivekananda Global University with Sunstone has been amazing! From top-notch faculty and well-structured classes to exciting club activities and sports events, every day is enriching. Grateful for the opportunities and vibrant campus life!",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Anushka Pandey",
+                    role: "BBA Graduate",
+                    company: "SAGE Indore",
+                    batch: "2023-2026",
+                    initials: "AP",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   // Duplicate for seamless loop
                   {
-                    name: "Rahul Kumar",
-                    role: "MBA Graduate • Software Engineer",
-                    company: "TCS",
-                    batch: "Batch 2023",
-                    initials: "RK",
+                    name: "Jaya Tiwari",
+                    role: "BCA Graduate",
+                    company: "SRMU",
+                    batch: "2022-2025",
+                    initials: "JT",
                     image:
-                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
                     quote:
-                      "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
+                      "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
-                    name: "Priya Sharma",
-                    role: "BCA Graduate • Full Stack Developer",
-                    company: "Infosys",
-                    batch: "Batch 2022",
+                    name: "Balram Jat",
+                    role: "BCA Graduate",
+                    company: "JNU",
+                    batch: "2024-2027",
+                    initials: "BJ",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
+                    quote:
+                      "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  {
+                    name: "Pulkit Singh",
+                    role: "MBA Graduate • Dhanguard 10 LPA",
+                    company: "GDG",
+                    batch: "22-24",
                     initials: "PS",
                     image:
-                      "https://images.unsplash.com/photo-1494790108755-2616b612b3a7?w=150&h=150&fit=crop&crop=face",
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
                     quote:
-                      "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
-                    color: "from-[#22336a] to-[#3b4d7a]",
+                      "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
+                    color: "from-[#c38935] to-[#f4d03f]",
                   },
                 ].map((testimonial, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 w-72 group relative"
+                    className="flex-shrink-0 w-80 group relative"
                   >
                     <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4">
                       {/* Avatar and Info */}
@@ -2814,7 +3026,7 @@ const Index = () => {
                           </div>
                         </div>
                         <div>
-                          <h4 className="font-bold text-[#22336a] text-sm group-hover:text-[#c38935] transition-colors duration-300">
+                          <h4 className="font-bold text-[#22336a] text-base group-hover:text-[#c38935] transition-colors duration-300">
                             {testimonial.name}
                           </h4>
                           <p className="text-xs text-gray-600">
@@ -2853,204 +3065,176 @@ const Index = () => {
           </div>
 
           {/* Desktop Testimonials Grid */}
-          <div className="hidden md:grid md:grid-cols-3 gap-8 mb-16 items-stretch">
-            {/* Testimonial 1 */}
-            <div
-              className="group relative animate-slide-up h-full"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 h-full flex flex-col">
-                <CardContent className="p-8 flex-1 flex flex-col justify-between">
-                  {/* Avatar and Info */}
-                  <div className="flex items-center mb-6">
-                    <div className="relative">
-                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
-                        <img
-                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-                          alt="Rahul Kumar"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                        <span className="text-white text-xs">✓</span>
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#c38935] transition-colors duration-300">
-                        Rahul Kumar
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        MBA Graduate �� Software Engineer
-                      </p>
-                      <p className="text-xs text-[#c38935] font-semibold">
-                        TCS • Batch 2023
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Animated Rating */}
-                  <div className="flex mb-4 space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-5 w-5 text-yellow-400 fill-current transform transition-all duration-300 hover:scale-125`}
-                        style={{ animationDelay: `${i * 0.1}s` }}
-                      />
-                    ))}
-                  </div>
-
-                  {/* Quote */}
-                  <div className="relative">
-                    <span className="text-4xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
-                      "
-                    </span>
-                    <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
-                      The industry exposure and practical learning approach gave
-                      me exactly what I needed to excel in my career. The
-                      placement support was exceptional, and I landed my dream
-                      job with a fantastic package!
-                    </p>
-                  </div>
-
-                  {/* Floating Particles */}
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+          {/* Desktop Testimonials - Horizontal Scrolling */}
+          <div className="hidden md:block mb-16">
+            <div className="overflow-hidden">
+              <div className="flex space-x-6 animate-scroll-left-to-right">
+                {[
+                  {
+                    name: "Jaya Tiwari",
+                    role: "BCA Graduate",
+                    company: "SRMU",
+                    batch: "2022-2025",
+                    initials: "JT",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Balram Jat",
+                    role: "BCA Graduate",
+                    company: "JNU",
+                    batch: "2024-2027",
+                    initials: "BJ",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
+                    quote:
+                      "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  {
+                    name: "Pulkit Singh",
+                    role: "MBA Graduate • Dhanguard 10 LPA",
+                    company: "GDG",
+                    batch: "22-24",
+                    initials: "PS",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
+                    quote:
+                      "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Devraj Tripathi",
+                    role: "B.Tech Graduate",
+                    company: "SRMU",
+                    batch: "2022-2026",
+                    initials: "DT",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fa7ba926fb7cf4a0ca861082351ba12b9?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a game-changer for me! The hands-on learning, expert faculty, and supportive environment have boosted my skills and confidence. It's more than just an institution—it's a community that nurtures success.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  {
+                    name: "Aman Kesarwani",
+                    role: "B.Tech Graduate",
+                    company: "VGUJ",
+                    batch: "2023-2027",
+                    initials: "AK",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                    quote:
+                      "My journey at Vivekananda Global University with Sunstone has been amazing! From top-notch faculty and well-structured classes to exciting club activities and sports events, every day is enriching. Grateful for the opportunities and vibrant campus life!",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Anushka Pandey",
+                    role: "BBA Graduate",
+                    company: "SAGE Indore",
+                    batch: "2023-2026",
+                    initials: "AP",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    name: "Jaya Tiwari",
+                    role: "BCA Graduate",
+                    company: "SRMU",
+                    batch: "2022-2025",
+                    initials: "JT",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Balram Jat",
+                    role: "BCA Graduate",
+                    company: "JNU",
+                    batch: "2024-2027",
+                    initials: "BJ",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
+                    quote:
+                      "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  {
+                    name: "Pulkit Singh",
+                    role: "MBA Graduate • Dhanguard 10 LPA",
+                    company: "GDG",
+                    batch: "22-24",
+                    initials: "PS",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
+                    quote:
+                      "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                ].map((testimonial, index) => (
                   <div
-                    className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"
-                    style={{ animationDelay: "0.3s" }}
-                  ></div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div
-              className="group relative animate-slide-up h-full"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#22336a] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 h-full flex flex-col">
-                <CardContent className="p-8 flex-1 flex flex-col justify-between">
-                  <div className="flex items-center mb-6">
-                    <div className="relative">
-                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
-                        <img
-                          src="https://images.unsplash.com/photo-1494790108755-2616b612b3a7?w=150&h=150&fit=crop&crop=face"
-                          alt="Priya Sharma"
-                          className="w-full h-full object-cover"
-                        />
+                    key={index}
+                    className="flex-shrink-0 w-80 group relative"
+                  >
+                    <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-3xl p-6 h-full flex flex-col">
+                      {/* Avatar and Info */}
+                      <div className="flex items-center mb-6">
+                        <div className="relative">
+                          <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
+                            <img
+                              src={testimonial.image}
+                              alt={testimonial.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                            <span className="text-white text-xs">✓</span>
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-[#22336a] text-xl group-hover:text-[#c38935] transition-colors duration-300">
+                            {testimonial.name}
+                          </h4>
+                          <p className="text-sm text-gray-600">
+                            {testimonial.role}
+                          </p>
+                          <p className="text-xs text-[#c38935] font-semibold">
+                            {testimonial.company} • {testimonial.batch}
+                          </p>
+                        </div>
                       </div>
-                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                        <span className="text-white text-xs">✓</span>
+
+                      {/* Rating */}
+                      <div className="flex mb-4 space-x-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-5 w-5 text-yellow-400 fill-current"
+                          />
+                        ))}
                       </div>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#22336a] transition-colors duration-300">
-                        Priya Sharma
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        BCA Graduate • Full Stack Developer
-                      </p>
-                      <p className="text-xs text-[#c38935] font-semibold">
-                        Infosys • Batch 2022
-                      </p>
-                    </div>
-                  </div>
 
-                  <div className="flex mb-4 space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-5 w-5 text-yellow-400 fill-current transform transition-all duration-300 hover:scale-125`}
-                        style={{ animationDelay: `${i * 0.1}s` }}
-                      />
-                    ))}
-                  </div>
-
-                  <div className="relative">
-                    <span className="text-4xl text-[#22336a]/20 font-serif absolute -top-2 -left-2">
-                      "
-                    </span>
-                    <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
-                      The practical approach and industry connections helped me
-                      develop real skills that matter in today's tech landscape.
-                      The comprehensive curriculum and expert guidance prepared
-                      me perfectly for professional challenges.
-                    </p>
-                  </div>
-
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
-                  <div
-                    className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"
-                    style={{ animationDelay: "0.3s" }}
-                  ></div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div
-              className="group relative animate-slide-up h-full"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 h-full flex flex-col">
-                <CardContent className="p-8 flex-1 flex flex-col justify-between">
-                  <div className="flex items-center mb-6">
-                    <div className="relative">
-                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
-                        <img
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-                          alt="Amit Joshi"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                        <span className="text-white text-xs">���</span>
+                      {/* Quote */}
+                      <div className="relative flex-1">
+                        <span className="text-4xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
+                          "
+                        </span>
+                        <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
+                          {testimonial.quote}
+                        </p>
                       </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#c38935] transition-colors duration-300">
-                        Amit Joshi
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        B.Tech Graduate • Senior Developer
-                      </p>
-                      <p className="text-xs text-[#c38935] font-semibold">
-                        Wipro • Batch 2021
-                      </p>
-                    </div>
                   </div>
-
-                  <div className="flex mb-4 space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-5 w-5 text-yellow-400 fill-current transform transition-all duration-300 hover:scale-125`}
-                        style={{ animationDelay: `${i * 0.1}s` }}
-                      />
-                    ))}
-                  </div>
-
-                  <div className="relative">
-                    <span className="text-4xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
-                      "
-                    </span>
-                    <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
-                      The specialized curriculum and project-based learning
-                      methodology prepared me perfectly for the industry
-                      demands. The quality of education and career support
-                      exceeded my expectations in every way.
-                    </p>
-                  </div>
-
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
-                  <div
-                    className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"
-                    style={{ animationDelay: "0.3s" }}
-                  ></div>
-                </CardContent>
-              </Card>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -3079,7 +3263,7 @@ const Index = () => {
                 {
                   question: "Why should I choose Sunstone?",
                   answer:
-                    "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
+                    "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n�� Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
                   category: "sunstone",
                 },
                 {
@@ -3214,7 +3398,7 @@ const Index = () => {
                                         {point.startsWith("•") ? (
                                           <>
                                             <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
-                                              �����
+                                              •
                                             </span>
                                             <span className="text-sm md:text-base">
                                               {point.substring(1).trim()}
