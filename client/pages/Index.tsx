@@ -270,7 +270,7 @@ const Index = () => {
         },
       ],
       eligibility:
-        "Passed Class 10+2 with Physics, Mathematics, Chemistry, Computer Science, or Biology. For Agriculture Engineering, Agriculture stream students must have at least 45% marks (40% for reserved category) in these subjects combined.",
+        "12th - 45% (40% in reserved category) Compulsory subjects: Physics, Mathematics and Chemistry.",
     },
   };
 
