@@ -1400,11 +1400,11 @@ const Index = () => {
                       <Zap className="h-5 w-5 text-white" />
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
-                      Certifications
+                      Specializations
                     </h3>
                     <p className="text-gray-600 text-xs leading-relaxed">
-                      In-demand advanced certifications to choose from various
-                      domains and enhance your career prospects
+                      Choose from industry-focused specializations designed to
+                      boost your career prospects
                     </p>
                     <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
                   </div>
@@ -1518,11 +1518,11 @@ const Index = () => {
                   <Zap className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
                 </div>
                 <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
-                  Certifications
+                  Specializations
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
-                  In-demand advanced certifications to choose from various
-                  domains and enhance your career prospects
+                  Choose from industry-focused specializations designed to
+                  boost your career prospects
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1632,7 +1632,7 @@ const Index = () => {
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-[10px] text-gray-600">
-                            Certifications:
+                            Specializations:
                           </span>
                           <span className="text-xs font-medium text-[#22336a]">
                             {programs[selectedMobileProgram].certifications}
@@ -1868,7 +1868,7 @@ const Index = () => {
                             {programData.certifications}
                           </div>
                           <div className="text-xs opacity-80">
-                            Certifications
+                            Specializations
                           </div>
                         </div>
                         <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
@@ -2891,7 +2891,7 @@ const Index = () => {
                         <div className="px-3 md:px-6 pb-3 md:pb-6 -mt-2">
                           <div className="pt-3 md:pt-6 border-t border-gray-200 bg-white rounded-lg md:rounded-xl p-3 md:p-6 ml-8 md:ml-16 shadow-sm">
                             <div className="text-gray-700 leading-relaxed text-sm md:text-lg">
-                              {faq.answer.includes("•") ? (
+                              {faq.answer.includes("��") ? (
                                 <div className="space-y-1 md:space-y-2">
                                   {faq.answer
                                     .split("\n")
