@@ -1313,9 +1313,30 @@ const Index = () => {
                       </div>
                     </div>
                   </div>
-                  <p className="text-[10px] md:text-xs text-gray-600 mb-3">
-                    SAT (Sunstone Admission Test) is a comprehensive aptitude and reasoning assessment designed to evaluate your academic potential. Based on your performance, you become eligible for merit-based scholarships up to 100% of tuition fees. The test covers logical reasoning, quantitative aptitude, and English comprehension.
-                  </p>
+                  <div className="mb-3 space-y-2">
+                    <div className="bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-lg p-3">
+                      <p className="text-[10px] md:text-xs text-gray-700 font-medium mb-2">
+                        🎯 <strong>What is SAT?</strong> Sunstone Admission Test - Your gateway to excellence!
+                      </p>
+                      <p className="text-[10px] md:text-xs text-gray-600 leading-relaxed">
+                        A comprehensive aptitude and reasoning assessment designed to evaluate your academic potential and unlock scholarships up to <span className="font-bold text-[#c38935]">100% of tuition fees</span>.
+                      </p>
+                    </div>
+                    <div className="grid grid-cols-3 gap-2 text-center">
+                      <div className="bg-blue-50 rounded-lg p-2">
+                        <div className="text-xs font-bold text-[#22336a]">🧠</div>
+                        <div className="text-[9px] md:text-[10px] text-gray-600">Logical Reasoning</div>
+                      </div>
+                      <div className="bg-green-50 rounded-lg p-2">
+                        <div className="text-xs font-bold text-[#22336a]">📊</div>
+                        <div className="text-[9px] md:text-[10px] text-gray-600">Quantitative Aptitude</div>
+                      </div>
+                      <div className="bg-purple-50 rounded-lg p-2">
+                        <div className="text-xs font-bold text-[#22336a]">📝</div>
+                        <div className="text-[9px] md:text-[10px] text-gray-600">English Comprehension</div>
+                      </div>
+                    </div>
+                  </div>
 
                 </div>
 
