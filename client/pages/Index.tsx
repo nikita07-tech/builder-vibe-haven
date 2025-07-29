@@ -2244,8 +2244,8 @@ const Index = () => {
                   icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
                 },
               ].map((item, index) => (
-                <div key={index} className="group relative">
-                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div key={index} className="group relative h-full">
+                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
                     <div className="flex items-center mb-2">
                       <div
                         className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
