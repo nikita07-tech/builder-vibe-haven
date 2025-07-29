@@ -2047,14 +2047,12 @@ const Index = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-2 md:gap-4">
-                  <a
-                    href="https://sunstone.in/apply-now"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() => setShowScholarshipPopup(true)}
                     className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-white text-[#22336a] hover:bg-gray-100 font-bold rounded-lg transition-all duration-300 shadow-lg text-sm md:text-base"
                   >
                     <span><p>Check Scholarship options →</p></span>
-                  </a>
+                  </button>
                 </div>
 
                 <p className="text-xs text-white/70 mt-3 md:mt-6">
