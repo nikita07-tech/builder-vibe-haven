@@ -2479,7 +2479,7 @@ const Index = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full h-[180px] flex flex-col justify-between">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-4">
                       Apply Online
                     </h3>
@@ -2516,7 +2516,7 @@ const Index = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full h-[180px] flex flex-col justify-between">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-4">
                       Aptitude Test
                     </h3>
@@ -2554,7 +2554,7 @@ const Index = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full">
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full h-[180px] flex flex-col justify-between">
                     <h3 className="text-2xl font-bold text-[#22336a] mb-4">
                       Screening & Interview
                     </h3>
