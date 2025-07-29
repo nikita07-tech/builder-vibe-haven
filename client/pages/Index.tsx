@@ -1074,18 +1074,7 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="text-center mt-12 md:mt-16">
-            <div className="inline-flex flex-col md:flex-row items-center gap-4 md:gap-6">
-              <button className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] text-white font-bold rounded-xl md:rounded-2xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 text-sm md:text-base group">
-                <span>Experience Our Philosophy</span>
-                <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </button>
-              <div className="text-white/60 text-xs md:text-sm">
-                ✨ Join 50,000+ students who chose excellence
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 
