@@ -2852,7 +2852,7 @@ const Index = () => {
           {/* Mobile Horizontal Scrolling for Testimonials */}
           <div className="block md:hidden mb-8">
             <div className="overflow-hidden">
-              <div className="flex space-x-4 animate-scroll-left-to-right">
+              <div className="flex space-x-4 animate-scroll-left-to-right" style={{ width: 'max-content' }}>
                 {[
                   {
                     name: "Jaya Tiwari",
