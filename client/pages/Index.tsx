@@ -283,7 +283,7 @@ const Index = () => {
             href="https://sunstone.in/apply-now"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-auto px-2 md:px-6 py-1 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-md md:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
+            className="relative flex items-center justify-center w-auto px-3 md:px-6 py-2 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-md md:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
           >
             {/* Button Content */}
             <div className="flex items-center space-x-1 md:space-x-3">
