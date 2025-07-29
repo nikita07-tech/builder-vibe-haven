@@ -584,7 +584,7 @@ const Index = () => {
               </div>
 
               <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 text-center">
-                <p>
+                <p className="text-[9px] md:text-sm">
                   Placement report audited by B2K Analytics Official Auditor
                   for IIM Ahemdabad
                 </p>
