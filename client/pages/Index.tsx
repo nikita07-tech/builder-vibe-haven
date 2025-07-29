@@ -2083,6 +2083,151 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Corporate Tie-ups & Academic Partners Section */}
+      <section className="py-8 md:py-16 bg-gradient-to-br from-indigo-50 via-white to-purple-50 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-br from-[#22336a]/10 to-[#c38935]/10 rounded-full blur-3xl animate-float"></div>
+          <div
+            className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
+          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Header Section */}
+          <div className="text-center mb-8 md:mb-16 animate-slide-up">
+            <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-[#22336a]/10 to-purple-500/10 rounded-full mb-4 md:mb-6 animate-fade-in">
+              <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-[#22336a] to-purple-600 rounded-full flex items-center justify-center mr-3 animate-spin-slow">
+                <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <span className="text-[#22336a] font-bold text-sm md:text-base tracking-wide">
+                CORPORATE TIE-UPS
+              </span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-4 md:mb-6 leading-tight">
+              Secure Your Future with Our
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-[#c38935] to-indigo-600">
+                {" "}Corporate Tie-ups
+              </span>
+            </h2>
+
+            <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
+              Boost your career with our corporate-backed programs and industry-ready training modules.
+            </p>
+          </div>
+
+          {/* Academic Knowledge Partners */}
+          <div className="mb-12 md:mb-16">
+            <div className="text-center mb-8 md:mb-12">
+              <h3 className="text-xl md:text-3xl font-bold text-[#22336a] mb-4 animate-slide-in-left">
+                Academic Knowledge Partners
+              </h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mx-auto animate-scale-in"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {/* TCS Ion */}
+              <div
+                className="group relative bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-fade-in-up"
+                style={{ animationDelay: "0.1s" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+                    </svg>
+                  </div>
+                  <h4 className="text-lg md:text-xl font-bold text-[#22336a] mb-2 md:mb-3 group-hover:text-purple-600 transition-colors duration-300">
+                    TCS Ion
+                  </h4>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    Industry-leading technology training and certification programs for cutting-edge skills development.
+                  </p>
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-blue-500 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+                </div>
+              </div>
+
+              {/* AU Finance Bank */}
+              <div
+                className="group relative bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-fade-in-up"
+                style={{ animationDelay: "0.2s" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-orange-600 to-red-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  </div>
+                  <h4 className="text-lg md:text-xl font-bold text-[#22336a] mb-2 md:mb-3 group-hover:text-orange-600 transition-colors duration-300">
+                    AU Finance Bank
+                  </h4>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    Comprehensive financial services training and banking sector expertise for finance professionals.
+                  </p>
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+                </div>
+              </div>
+
+              {/* NSDC */}
+              <div
+                className="group relative bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 animate-fade-in-up"
+                style={{ animationDelay: "0.3s" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg className="w-8 h-8 md:w-10 md:h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                  </div>
+                  <h4 className="text-lg md:text-xl font-bold text-[#22336a] mb-2 md:mb-3 group-hover:text-green-600 transition-colors duration-300">
+                    NSDC
+                  </h4>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    National Skill Development Corporation programs for entrepreneurship and skill enhancement initiatives.
+                  </p>
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-green-500 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center animate-slide-up" style={{ animationDelay: "0.5s" }}>
+            <div className="bg-gradient-to-r from-[#22336a] via-purple-600 to-[#c38935] rounded-2xl md:rounded-3xl p-6 md:p-12 text-white relative overflow-hidden shadow-2xl">
+              <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 md:w-36 md:h-36 bg-white/10 rounded-full translate-y-12 -translate-x-12"></div>
+              <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+
+              <div className="relative z-10">
+                <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4">
+                  Ready to Partner with Industry Leaders?
+                </h3>
+                <p className="text-base md:text-lg mb-6 md:mb-8 opacity-90 max-w-2xl mx-auto">
+                  Join our corporate-backed programs and unlock exclusive opportunities with our industry partners.
+                </p>
+                <button
+                  onClick={() => window.open('https://sunstone.in/apply-now', '_blank')}
+                  className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50 text-sm md:text-base group"
+                >
+                  <span>Explore Programs</span>
+                  <svg className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Easy Fee Payment Banner - Mobile Optimized */}
       <section className="py-6 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
@@ -2693,7 +2838,7 @@ const Index = () => {
                         Rahul Kumar
                       </h4>
                       <p className="text-sm text-gray-600">
-                        MBA Graduate • Software Engineer
+                        MBA Graduate �� Software Engineer
                       </p>
                       <p className="text-xs text-[#c38935] font-semibold">
                         TCS • Batch 2023
