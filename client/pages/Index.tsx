@@ -2414,7 +2414,7 @@ const Index = () => {
                 },
               ].map((item, index) => (
                 <div key={index} className="group relative">
-                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col justify-between min-h-[130px] max-h-[130px]">
+                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[140px] flex flex-col justify-between">
                     <div className="flex items-center mb-2">
                       <div
                         className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
@@ -3214,7 +3214,7 @@ const Index = () => {
                                         {point.startsWith("•") ? (
                                           <>
                                             <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
-                                              �����
+                                              ������
                                             </span>
                                             <span className="text-sm md:text-base">
                                               {point.substring(1).trim()}
