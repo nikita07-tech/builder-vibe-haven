@@ -848,12 +848,7 @@ const Index = () => {
 
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-6 md:mb-16">
-            <div className="inline-flex items-center px-3 md:px-6 py-1 md:py-3 bg-[#c38935]/10 rounded-full mb-2 md:mb-6">
-              <Trophy className="h-3 w-3 md:h-5 md:w-5 text-[#c38935] mr-1 md:mr-2" />
-              <span className="text-[#c38935] font-semibold text-xs md:text-sm">
-                AWARDS & RECOGNITION
-              </span>
-            </div>
+
             <h2 className="text-base sm:text-lg md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
               Recognized
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
@@ -1318,12 +1313,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10">
           {/* More Compact Header for Mobile */}
           <div className="text-center mb-4 md:mb-16">
-            <div className="inline-flex items-center px-2 md:px-6 py-1 md:py-3 bg-[#22336a]/10 rounded-full mb-2 md:mb-6">
-              <Trophy className="h-3 w-3 md:h-5 md:w-5 text-[#22336a] mr-1 md:mr-2" />
-              <span className="text-[#22336a] font-semibold text-[10px] md:text-base">
-                <p>POP</p>
-              </span>
-            </div>
+
             <h2 className="text-base sm:text-lg md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
               Placement
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
@@ -1332,7 +1322,7 @@ const Index = () => {
               </span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
-                Program
+                Program (POP)
               </span>
             </h2>
             <div className="max-w-4xl mx-auto text-gray-700 text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
@@ -3006,7 +2996,7 @@ const Index = () => {
                         />
                       </div>
                       <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                        <span className="text-white text-xs">���</span>
+                        <span className="text-white text-xs">����</span>
                       </div>
                     </div>
                     <div>
