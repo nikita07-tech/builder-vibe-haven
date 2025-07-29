@@ -102,10 +102,10 @@ const Index = () => {
   const programs = {
     MBA: {
       duration: "2-year program",
-      certifications: "6 specializations",
+      certifications: "6 certifications",
       internships: "6+ months of internships/projects",
       projects: "4 capstone projects",
-      specializations: "6 new-age specializations",
+      specializations: "6 new-age certifications",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
