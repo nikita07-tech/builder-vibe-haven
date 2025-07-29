@@ -917,7 +917,7 @@ const Index = () => {
                       <h3 className="text-xs font-bold text-[#22336a] mb-0.5 text-center">
                         {award.title}
                       </h3>
-                      <p className="text-gray-600 text-[10px] text-center">
+                      <p className="text-gray-600 text-[10px] text-center hidden">
                         {award.desc}
                       </p>
                     </div>
@@ -1178,10 +1178,10 @@ const Index = () => {
         </div>
       )}
 
-      {/* Scholarship Popup */}
+      {/* Scholarship Popup - Slide Up Modal */}
       {showScholarshipPopup && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-3 md:p-4">
-          <div className="bg-white rounded-2xl max-w-[300px] md:max-w-lg w-full relative shadow-2xl max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end justify-center md:items-center md:justify-center">
+          <div className={`bg-white rounded-t-2xl md:rounded-2xl w-full md:max-w-lg md:w-full relative shadow-2xl max-h-[85vh] md:max-h-[90vh] overflow-y-auto transform transition-all duration-300 ease-out ${showScholarshipPopup ? 'translate-y-0' : 'translate-y-full'}`}>
             <button
               onClick={() => setShowScholarshipPopup(false)}
               className="absolute top-4 right-4 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-200 z-20 group"
