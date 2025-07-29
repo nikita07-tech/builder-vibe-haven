@@ -676,8 +676,9 @@ const Index = () => {
               </div>
 
               <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 text-center">
-                <p className="text-[10px] md:text-sm text-gray-700">
-                  Placement report audited by B2K Analytics
+                <p>
+                  Placement report audited by B2K Analytics Official Auditor
+                  for IIM Ahemdabad
                 </p>
               </div>
             </div>
@@ -1280,7 +1281,7 @@ const Index = () => {
             <div className="inline-flex items-center px-2 md:px-6 py-1 md:py-3 bg-[#22336a]/10 rounded-full mb-2 md:mb-6">
               <Trophy className="h-3 w-3 md:h-5 md:w-5 text-[#22336a] mr-1 md:mr-2" />
               <span className="text-[#22336a] font-semibold text-[10px] md:text-base">
-                PLACEMENT OPPORTUNITY PROGRAM
+                <p>POP</p>
               </span>
             </div>
             <h2 className="text-base sm:text-lg md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
@@ -1294,24 +1295,8 @@ const Index = () => {
                 Program
               </span>
             </h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-xs md:text-xl text-gray-700 leading-relaxed mb-1 md:mb-4">
-                Comprehensive placement support with assured career guidance
-              </p>
-              <div className="hidden md:flex items-center justify-center space-x-8 text-sm text-gray-600">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-[#22336a] rounded-full"></div>
-                  <span>Career Opportunities</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-[#c38935] rounded-full"></div>
-                  <span>First Year Fee Back</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-[#22336a] rounded-full"></div>
-                  <span>Expert Mentorship</span>
-                </div>
-              </div>
+            <div className="max-w-4xl mx-auto text-gray-700 text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
+              <p>WHAT WE PROMISE ﻿TO ALL STUDENTS </p>
             </div>
           </div>
 
@@ -1422,41 +1407,7 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Much More Compact CTA for Mobile */}
-          <div className="text-center">
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-gradient-to-r from-[#22336a] to-[#2d4a7b] rounded-lg md:rounded-2xl p-2 md:p-8 text-white relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 translate-x-16"></div>
-                <div className="relative z-10">
-                  <h3 className="text-sm md:text-2xl font-bold mb-1 md:mb-4">
-                    Ready to Secure Your Future?
-                  </h3>
-                  <p className="text-xs md:text-lg opacity-90 mb-2 md:mb-6">
-                    Join our placement guarantee program and take the first step
-                    towards career success
-                  </p>
-                  <div className="flex flex-col md:flex-row gap-1 md:gap-4 justify-center">
-                    <button
-                      onClick={() => setShowPlacementPopup(true)}
-                      className="inline-flex items-center px-2 md:px-8 py-1 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-md md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-[10px] md:text-base"
-                    >
-                      <span>Learn More</span>
-                      <ChevronRight className="h-2 w-2 md:h-5 md:w-5 ml-0.5 md:ml-2" />
-                    </button>
-                    <a
-                      href="https://sunstone.in/apply-now"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-2 md:px-8 py-1 md:py-4 bg-white border-2 border-white text-[#22336a] hover:bg-gray-50 font-bold rounded-md md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-[10px] md:text-base"
-                    >
-                      <span>Apply Now</span>
-                      <ExternalLink className="h-2 w-2 md:h-5 md:w-5 ml-0.5 md:ml-2" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -1466,7 +1417,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-6 md:mb-16">
             <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-2 md:mb-6">
-              Key Offerings
+              <p>Key Offerings By Sunstone</p>
             </h2>
             <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
               Discover what makes our programs exceptional and job-ready
@@ -2194,7 +2145,7 @@ const Index = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-white text-[#22336a] hover:bg-gray-100 font-bold rounded-lg transition-all duration-300 shadow-lg text-sm md:text-base"
                   >
-                    <span>Apply Now →</span>
+                    <span><p>Check Scholarship options →</p></span>
                   </a>
                 </div>
 
@@ -2526,7 +2477,7 @@ const Index = () => {
                     className="group inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-white text-[#22336a] font-bold rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50 text-sm md:text-base"
                   >
                     <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3 group-hover:animate-pulse" />
-                    <span>Call: +91 7065-30-30-30</span>
+                    <span><p>Call Us Now</p></span>
                   </a>
                   <a
                     href="https://sunstone.in/apply-now"
