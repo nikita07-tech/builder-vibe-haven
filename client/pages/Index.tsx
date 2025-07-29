@@ -1187,7 +1187,7 @@ const Index = () => {
               <X className="h-3 w-3 md:h-5 md:w-5 text-gray-600 group-hover:text-gray-800 transition-colors" />
             </button>
 
-            <div className="p-3 md:p-8">
+            <div className="p-4 md:p-6">
               {/* Ultra Creative Header with Enhanced Animation */}
               <div className="text-center mb-8 md:mb-12 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/10 via-[#c38935]/10 to-[#22336a]/10 rounded-3xl animate-pulse"></div>
