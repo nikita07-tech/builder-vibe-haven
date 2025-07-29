@@ -1008,7 +1008,7 @@ const Index = () => {
               </span>
               <br />
               <span className="text-white/90">
-                Experience the Real World
+                <p>Experience in the Real World</p>
               </span>
             </h2>
             <p className="text-xs md:text-base text-white/80 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">
