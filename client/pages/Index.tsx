@@ -2575,7 +2575,7 @@ const Index = () => {
             {/* Connecting Line */}
             <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] opacity-30"></div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 mb-12 md:mb-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8 mb-12 md:mb-16 items-start">
               {/* Step 1 */}
               <div className="group relative">
                 <div className="flex flex-col items-center text-center">
