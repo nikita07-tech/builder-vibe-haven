@@ -175,8 +175,7 @@ const Index = () => {
           careers: "Banking Officer, Financial Advisor, Insurance Specialist",
         },
       ],
-      eligibility:
-        "12th - 45% marks (40% in reserved category).",
+      eligibility: "12th - 45% marks (40% in reserved category).",
     },
     BCA: {
       duration: "3-year program",
@@ -215,8 +214,7 @@ const Index = () => {
             "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
         },
       ],
-      eligibility:
-        "12th - 45% marks (40% in reserved category).",
+      eligibility: "12th - 45% marks (40% in reserved category).",
     },
     MCA: {
       duration: "2-year program",
@@ -849,7 +847,6 @@ const Index = () => {
 
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-6 md:mb-16">
-
             <h2 className="text-base sm:text-lg md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
               Recognized
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
@@ -1004,7 +1001,8 @@ const Index = () => {
             <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 leading-tight">
               Learn from the
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
-                {" "}Best{" "}
+                {" "}
+                Best{" "}
               </span>
               <br />
               <span className="text-white/90">
@@ -1012,7 +1010,9 @@ const Index = () => {
               </span>
             </h2>
             <p className="text-xs md:text-base text-white/80 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">
-              The Sunstone Philosophy helps you learn from the best and provide a hands-on experience so your education is not just limited to theory
+              The Sunstone Philosophy helps you learn from the best and provide
+              a hands-on experience so your education is not just limited to
+              theory
             </p>
           </div>
 
@@ -1025,12 +1025,15 @@ const Index = () => {
                   <Users className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <div className="text-lg md:text-2xl font-bold text-[#c38935] mb-2">01</div>
+                  <div className="text-lg md:text-2xl font-bold text-[#c38935] mb-2">
+                    01
+                  </div>
                   <h3 className="text-sm md:text-lg font-bold text-white mb-3">
                     Learn from Recruiters
                   </h3>
                   <p className="text-white/80 leading-relaxed text-xs md:text-sm">
-                    CEOs, CTOs, and COOs of Fortune 500 companies and start-ups with years of recruitment experience
+                    CEOs, CTOs, and COOs of Fortune 500 companies and start-ups
+                    with years of recruitment experience
                   </p>
                 </div>
               </div>
@@ -1043,12 +1046,15 @@ const Index = () => {
                   <Briefcase className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <div className="text-lg md:text-2xl font-bold text-[#c38935] mb-2">02</div>
+                  <div className="text-lg md:text-2xl font-bold text-[#c38935] mb-2">
+                    02
+                  </div>
                   <h3 className="text-sm md:text-lg font-bold text-white mb-3">
                     Practice in the Real World
                   </h3>
                   <p className="text-white/80 leading-relaxed text-xs md:text-sm">
-                    Gain hands-on experience with internships & real-life projects to be job-ready from Day 1
+                    Gain hands-on experience with internships & real-life
+                    projects to be job-ready from Day 1
                   </p>
                 </div>
               </div>
@@ -1061,19 +1067,20 @@ const Index = () => {
                   <Award className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <div className="text-lg md:text-2xl font-bold text-[#c38935] mb-2">03</div>
+                  <div className="text-lg md:text-2xl font-bold text-[#c38935] mb-2">
+                    03
+                  </div>
                   <h3 className="text-sm md:text-lg font-bold text-white mb-3">
                     Create Your Portfolio
                   </h3>
                   <p className="text-white/80 leading-relaxed text-xs md:text-sm">
-                    Showcase your verified skills and experience with a professional portfolio
+                    Showcase your verified skills and experience with a
+                    professional portfolio
                   </p>
                 </div>
               </div>
             </div>
           </div>
-
-
         </div>
       </section>
 
@@ -1316,28 +1323,46 @@ const Index = () => {
                   <div className="mb-3 space-y-2">
                     <div className="bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-lg p-3">
                       <p className="text-[10px] md:text-xs text-gray-700 font-medium mb-2">
-                        <strong>What is SAT?</strong> Sunstone Admission Test - Your gateway to excellence!
+                        <strong>What is SAT?</strong> Sunstone Admission Test -
+                        Your gateway to excellence!
                       </p>
                       <p className="text-[10px] md:text-xs text-gray-600 leading-relaxed">
-                        A comprehensive aptitude and reasoning assessment designed to evaluate your academic potential and unlock scholarships up to <span className="font-bold text-[#c38935]">100% of tuition fees</span>.
+                        A comprehensive aptitude and reasoning assessment
+                        designed to evaluate your academic potential and unlock
+                        scholarships up to{" "}
+                        <span className="font-bold text-[#c38935]">
+                          100% of tuition fees
+                        </span>
+                        .
                       </p>
                     </div>
                     <div className="grid grid-cols-3 gap-2 text-center">
                       <div className="bg-blue-50 rounded-lg p-2">
-                        <div className="text-xs font-bold text-[#22336a]">LR</div>
-                        <div className="text-[9px] md:text-[10px] text-gray-600">Logical Reasoning</div>
+                        <div className="text-xs font-bold text-[#22336a]">
+                          LR
+                        </div>
+                        <div className="text-[9px] md:text-[10px] text-gray-600">
+                          Logical Reasoning
+                        </div>
                       </div>
                       <div className="bg-green-50 rounded-lg p-2">
-                        <div className="text-xs font-bold text-[#22336a]">QA</div>
-                        <div className="text-[9px] md:text-[10px] text-gray-600">Quantitative Aptitude</div>
+                        <div className="text-xs font-bold text-[#22336a]">
+                          QA
+                        </div>
+                        <div className="text-[9px] md:text-[10px] text-gray-600">
+                          Quantitative Aptitude
+                        </div>
                       </div>
                       <div className="bg-purple-50 rounded-lg p-2">
-                        <div className="text-xs font-bold text-[#22336a]">EC</div>
-                        <div className="text-[9px] md:text-[10px] text-gray-600">English Comprehension</div>
+                        <div className="text-xs font-bold text-[#22336a]">
+                          EC
+                        </div>
+                        <div className="text-[9px] md:text-[10px] text-gray-600">
+                          English Comprehension
+                        </div>
                       </div>
                     </div>
                   </div>
-
                 </div>
 
                 {/* Bright Minds Scholarship */}
@@ -1370,28 +1395,41 @@ const Index = () => {
                   <div className="mb-3 space-y-2">
                     <div className="bg-gradient-to-r from-[#c38935]/10 to-yellow-100 rounded-lg p-3">
                       <p className="text-[10px] md:text-xs text-gray-700 font-medium mb-2">
-                        <strong>Bright Minds Recognition:</strong> Celebrating Academic Excellence!
+                        <strong>Bright Minds Recognition:</strong> Celebrating
+                        Academic Excellence!
                       </p>
                       <p className="text-[10px] md:text-xs text-gray-600 leading-relaxed">
-                        Awarded to students with exceptional academic performance. Get financial support ranging from <span className="font-bold text-[#c38935]">25% to 75%</span> of tuition fees based on your academic achievements.
+                        Awarded to students with exceptional academic
+                        performance. Get financial support ranging from{" "}
+                        <span className="font-bold text-[#c38935]">
+                          25% to 75%
+                        </span>{" "}
+                        of tuition fees based on your academic achievements.
                       </p>
                     </div>
                     <div className="flex items-center justify-between bg-yellow-50 rounded-lg p-2">
                       <div className="flex items-center space-x-2">
                         <div className="w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center">
-                          <span className="text-white text-xs font-bold">M</span>
+                          <span className="text-white text-xs font-bold">
+                            M
+                          </span>
                         </div>
-                        <span className="text-[10px] md:text-xs font-medium text-gray-700">Merit-Based</span>
+                        <span className="text-[10px] md:text-xs font-medium text-gray-700">
+                          Merit-Based
+                        </span>
                       </div>
                       <div className="flex items-center space-x-2">
                         <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                          <span className="text-white text-xs font-bold">%</span>
+                          <span className="text-white text-xs font-bold">
+                            %
+                          </span>
                         </div>
-                        <span className="text-[10px] md:text-xs font-medium text-gray-700">Up to 75% Off</span>
+                        <span className="text-[10px] md:text-xs font-medium text-gray-700">
+                          Up to 75% Off
+                        </span>
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
 
@@ -1431,7 +1469,6 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10">
           {/* More Compact Header for Mobile */}
           <div className="text-center mb-4 md:mb-16">
-
             <h2 className="text-base sm:text-lg md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
               Placement
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
@@ -2025,7 +2062,8 @@ const Index = () => {
                         Secure your future with our corporate tie-ups
                       </h5>
                       <p className="text-[10px] text-[#22336a] text-center mb-2">
-                        Boost your career with our corporate-backed programs and industry-ready training modules.
+                        Boost your career with our corporate-backed programs and
+                        industry-ready training modules.
                       </p>
                     </div>
 
@@ -2275,7 +2313,8 @@ const Index = () => {
                                 Secure your future with our corporate tie-ups
                               </h5>
                               <p className="text-xs md:text-sm text-[#22336a] font-medium mb-3">
-                                Boost your career with our corporate-backed programs and industry-ready training modules.
+                                Boost your career with our corporate-backed
+                                programs and industry-ready training modules.
                               </p>
                             </div>
 
@@ -2852,7 +2891,10 @@ const Index = () => {
           {/* Mobile Horizontal Scrolling for Testimonials */}
           <div className="block md:hidden mb-8">
             <div className="overflow-hidden">
-              <div className="flex space-x-4 animate-scroll-left-to-right" style={{ width: 'max-content' }}>
+              <div
+                className="flex space-x-4 animate-scroll-left-to-right"
+                style={{ width: "max-content" }}
+              >
                 {[
                   {
                     name: "Jaya Tiwari",
@@ -2860,8 +2902,10 @@ const Index = () => {
                     company: "SRMU",
                     batch: "2022-2025",
                     initials: "JT",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
-                    quote: "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
@@ -2870,8 +2914,10 @@ const Index = () => {
                     company: "JNU",
                     batch: "2024-2027",
                     initials: "BJ",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
-                    quote: "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
+                    quote:
+                      "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
@@ -2880,8 +2926,10 @@ const Index = () => {
                     company: "GDG",
                     batch: "22-24",
                     initials: "PS",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
-                    quote: "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
+                    quote:
+                      "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
@@ -2890,8 +2938,10 @@ const Index = () => {
                     company: "SRMU",
                     batch: "2022-2026",
                     initials: "DT",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fa7ba926fb7cf4a0ca861082351ba12b9?format=webp&width=800",
-                    quote: "Sunstone has been a game-changer for me! The hands-on learning, expert faculty, and supportive environment have boosted my skills and confidence. It's more than just an institution—it's a community that nurtures success.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fa7ba926fb7cf4a0ca861082351ba12b9?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a game-changer for me! The hands-on learning, expert faculty, and supportive environment have boosted my skills and confidence. It's more than just an institution—it's a community that nurtures success.",
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
@@ -2900,8 +2950,10 @@ const Index = () => {
                     company: "VGUJ",
                     batch: "2023-2027",
                     initials: "AK",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
-                    quote: "My journey at Vivekananda Global University with Sunstone has been amazing! From top-notch faculty and well-structured classes to exciting club activities and sports events, every day is enriching. Grateful for the opportunities and vibrant campus life!",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                    quote:
+                      "My journey at Vivekananda Global University with Sunstone has been amazing! From top-notch faculty and well-structured classes to exciting club activities and sports events, every day is enriching. Grateful for the opportunities and vibrant campus life!",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
@@ -2910,8 +2962,10 @@ const Index = () => {
                     company: "SAGE Indore",
                     batch: "2023-2026",
                     initials: "AP",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
-                    quote: "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   // Duplicate for seamless loop
@@ -2921,8 +2975,10 @@ const Index = () => {
                     company: "SRMU",
                     batch: "2022-2025",
                     initials: "JT",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
-                    quote: "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
@@ -2931,8 +2987,10 @@ const Index = () => {
                     company: "JNU",
                     batch: "2024-2027",
                     initials: "BJ",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
-                    quote: "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
+                    quote:
+                      "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
@@ -2941,8 +2999,10 @@ const Index = () => {
                     company: "GDG",
                     batch: "22-24",
                     initials: "PS",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
-                    quote: "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
+                    quote:
+                      "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                 ].map((testimonial, index) => (
@@ -3016,8 +3076,10 @@ const Index = () => {
                     company: "SRMU",
                     batch: "2022-2025",
                     initials: "JT",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
-                    quote: "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
@@ -3026,8 +3088,10 @@ const Index = () => {
                     company: "JNU",
                     batch: "2024-2027",
                     initials: "BJ",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
-                    quote: "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
+                    quote:
+                      "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
@@ -3036,8 +3100,10 @@ const Index = () => {
                     company: "GDG",
                     batch: "22-24",
                     initials: "PS",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
-                    quote: "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
+                    quote:
+                      "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
@@ -3046,8 +3112,10 @@ const Index = () => {
                     company: "SRMU",
                     batch: "2022-2026",
                     initials: "DT",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fa7ba926fb7cf4a0ca861082351ba12b9?format=webp&width=800",
-                    quote: "Sunstone has been a game-changer for me! The hands-on learning, expert faculty, and supportive environment have boosted my skills and confidence. It's more than just an institution—it's a community that nurtures success.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fa7ba926fb7cf4a0ca861082351ba12b9?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a game-changer for me! The hands-on learning, expert faculty, and supportive environment have boosted my skills and confidence. It's more than just an institution—it's a community that nurtures success.",
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
@@ -3056,8 +3124,10 @@ const Index = () => {
                     company: "VGUJ",
                     batch: "2023-2027",
                     initials: "AK",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
-                    quote: "My journey at Vivekananda Global University with Sunstone has been amazing! From top-notch faculty and well-structured classes to exciting club activities and sports events, every day is enriching. Grateful for the opportunities and vibrant campus life!",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                    quote:
+                      "My journey at Vivekananda Global University with Sunstone has been amazing! From top-notch faculty and well-structured classes to exciting club activities and sports events, every day is enriching. Grateful for the opportunities and vibrant campus life!",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
@@ -3066,8 +3136,10 @@ const Index = () => {
                     company: "SAGE Indore",
                     batch: "2023-2026",
                     initials: "AP",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
-                    quote: "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   // Duplicate for seamless loop
@@ -3077,8 +3149,10 @@ const Index = () => {
                     company: "SRMU",
                     batch: "2022-2025",
                     initials: "JT",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
-                    quote: "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
+                    quote:
+                      "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
@@ -3087,8 +3161,10 @@ const Index = () => {
                     company: "JNU",
                     batch: "2024-2027",
                     initials: "BJ",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
-                    quote: "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
+                    quote:
+                      "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
@@ -3097,8 +3173,10 @@ const Index = () => {
                     company: "GDG",
                     batch: "22-24",
                     initials: "PS",
-                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
-                    quote: "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
+                    image:
+                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
+                    quote:
+                      "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                 ].map((testimonial, index) => (
