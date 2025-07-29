@@ -101,56 +101,39 @@ const Index = () => {
   const programs = {
     MBA: {
       duration: "2-year program",
-      certifications: "10 advanced certifications",
+      certifications: "6 specializations",
       internships: "6+ months of internships/projects",
       projects: "4 capstone projects",
       specializations: "6 new-age specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
-          name: "Data Analytics & Business Intelligence",
+          name: "Marketing Management",
           careers:
-            "Data Analyst, Business Intelligence Analyst, Data Scientist",
+            "Marketing Manager, Brand Manager, Digital Marketing Specialist",
         },
         {
-          name: "Logistics & Supply Chain Management",
+          name: "IT, Analytics & Research",
           careers:
-            "Supply Chain Manager, Logistics Coordinator, Procurement Manager",
+            "Business Analyst, Data Scientist, Research Analyst",
         },
         {
-          name: "Sales Leadership",
+          name: "Human Resource Management",
           careers:
-            "Sales Manager, Business Development Manager, Key Account Manager",
+            "HR Manager, Talent Acquisition Manager, HR Business Partner",
         },
         {
-          name: "Digital Marketing",
+          name: "Finance Management",
           careers:
-            "Social Media Manager, SEO Manager, Performance Marketing Specialist",
+            "Finance Manager, Investment Analyst, Financial Planner",
         },
         {
-          name: "Financial Modelling & Valuation",
-          careers:
-            "Financial Analyst, Investment Banker, Equity Research Analyst",
+          name: "Operations Management",
+          careers: "Operations Manager, Supply Chain Manager, Process Manager",
         },
         {
-          name: "Project Management",
-          careers: "Project Manager, Operations Manager, Program Manager",
-        },
-        {
-          name: "Product Management",
-          careers: "Product Manager, UX Strategist, Market Research Analyst",
-        },
-        {
-          name: "Entrepreneurship Fundamentals",
-          careers: "Startup Founder, Business Consultant, Venture Analyst",
-        },
-        {
-          name: "Human Resource & Talent Analytics",
-          careers: "HR Analyst, Talent Acquisition Manager",
-        },
-        {
-          name: "Trading and Investment",
-          careers: "Stock Trader, Investment Analyst, Portfolio Manager",
+          name: "Retail Sales Management",
+          careers: "Retail Manager, Sales Manager, Store Operations Manager",
         },
       ],
       eligibility:
