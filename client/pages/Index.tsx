@@ -1182,7 +1182,7 @@ const Index = () => {
       {showScholarshipPopup && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end justify-center md:items-center md:justify-center">
           <div
-            className={`bg-white rounded-t-2xl md:rounded-2xl w-full md:max-w-lg md:w-full relative shadow-2xl max-h-[85vh] md:max-h-[90vh] overflow-y-auto transform transition-all duration-300 ease-out ${showScholarshipPopup ? "translate-y-0" : "translate-y-full"}`}
+            className={`bg-white rounded-t-2xl md:rounded-2xl w-full max-w-sm md:max-w-lg md:w-full relative shadow-2xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto transform transition-all duration-300 ease-out ${showScholarshipPopup ? "translate-y-0" : "translate-y-full"}`}
           >
             <button
               onClick={() => setShowScholarshipPopup(false)}
