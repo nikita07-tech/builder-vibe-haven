@@ -1199,7 +1199,7 @@ const Index = () => {
                     <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-full flex items-center justify-center mr-3 animate-spin-slow">
                       <Trophy className="h-3 w-3 md:h-4 md:w-4 text-white" />
                     </div>
-                    <span className="text-white font-bold text-sm md:text-base tracking-wide">SCHOLARSHIP PROGRAMS</span>
+                    <span className="text-white font-bold text-xs md:text-base tracking-wide">SCHOLARSHIP PROGRAMS</span>
                     <div className="w-2 h-2 bg-white rounded-full ml-3 animate-ping"></div>
                   </div>
 
