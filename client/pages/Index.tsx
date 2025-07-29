@@ -1191,7 +1191,7 @@ const Index = () => {
               <X className="h-4 w-4 text-gray-600 group-hover:text-gray-800" />
             </button>
 
-            <div className="p-4 md:p-6">
+            <div className="p-3 md:p-6">
               {/* Clean Professional Header */}
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl flex items-center justify-center mx-auto mb-4">
