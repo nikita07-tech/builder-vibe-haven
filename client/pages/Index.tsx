@@ -1180,209 +1180,113 @@ const Index = () => {
 
       {/* Scholarship Popup */}
       {showScholarshipPopup && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4">
-          <div className="bg-white rounded-lg md:rounded-2xl max-w-[320px] md:max-w-3xl w-full mx-2 md:mx-4 relative shadow-2xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto animate-scaleIn">
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl max-w-md md:max-w-lg w-full relative shadow-2xl max-h-[85vh] overflow-y-auto">
             <button
               onClick={() => setShowScholarshipPopup(false)}
-              className="absolute top-2 right-2 md:top-4 md:right-4 w-8 h-8 md:w-10 md:h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-300 z-20 group cursor-pointer"
+              className="absolute top-4 right-4 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-200 z-20 group"
             >
-              <X className="h-4 w-4 md:h-5 md:w-5 text-gray-600 group-hover:text-gray-800 transition-colors" />
+              <X className="h-4 w-4 text-gray-600 group-hover:text-gray-800" />
             </button>
 
-            <div className="p-4 md:p-6">
-              {/* Ultra Creative Header with Enhanced Animation */}
-              <div className="text-center mb-3 md:mb-6 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/10 via-[#c38935]/10 to-[#22336a]/10 rounded-3xl animate-pulse"></div>
-                <div className="absolute top-0 left-1/2 w-32 h-32 bg-[#c38935]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-16 animate-float"></div>
-                <div
-                  className="absolute bottom-0 right-0 w-24 h-24 bg-[#22336a]/20 rounded-full blur-2xl translate-x-12 translate-y-12 animate-float"
-                  style={{ animationDelay: "2s" }}
-                ></div>
-
-                <div className="relative z-10 p-6 md:p-8">
-                  <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#c38935] rounded-full mb-6 animate-bounce-subtle shadow-2xl">
-                    <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-full flex items-center justify-center mr-3 animate-spin-slow">
-                      <Trophy className="h-3 w-3 md:h-4 md:w-4 text-white" />
-                    </div>
-                    <span className="text-white font-bold text-xs md:text-base tracking-wide">
-                      SCHOLARSHIP PROGRAMS
-                    </span>
-                    <div className="w-2 h-2 bg-white rounded-full ml-3 animate-ping"></div>
-                  </div>
-
-                  <div className="mb-4">
-                    <h3 className="text-lg md:text-3xl lg:text-4xl font-bold mb-3">
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] animate-gradient-text">
-                        Transform Your Dreams
-                      </span>
-                      <br />
-                      <span className="text-[#22336a] animate-pulse-glow">
-                        Into Reality
-                      </span>
-                    </h3>
-                    <div className="w-32 h-1 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mx-auto mb-4 animate-scale-in"></div>
-                  </div>
-
-                  <p className="text-gray-600 text-sm md:text-xl max-w-3xl mx-auto leading-relaxed">
-                    Unlock your potential with our{" "}
-                    <span className="font-bold text-[#c38935]">
-                      innovative scholarship programs
-                    </span>{" "}
-                    designed to make quality education accessible to every
-                    ambitious student
-                  </p>
+            <div className="p-6">
+              {/* Clean Professional Header */}
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Trophy className="h-8 w-8 text-white" />
                 </div>
+                <h3 className="text-2xl font-bold text-[#22336a] mb-2">
+                  Scholarship Opportunities
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  Unlock your potential with financial support
+                </p>
               </div>
 
-              {/* Creative Scholarship Cards */}
-              <div className="space-y-3 md:space-y-6 mb-3 md:mb-6">
-                {/* SAT Scholarship - Enhanced Design */}
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-xl md:rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="relative bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-xl md:rounded-2xl p-4 md:p-8 text-white overflow-hidden transform group-hover:scale-105 transition-all duration-500">
-                    <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-white/10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-700"></div>
-                    <div className="absolute bottom-0 left-0 w-24 h-24 md:w-36 md:h-36 bg-[#c38935]/20 rounded-full translate-y-12 -translate-x-12 group-hover:scale-110 transition-transform duration-700"></div>
-
-                    <div className="relative z-10">
-                      <div className="flex items-center mb-4 md:mb-6">
-                        <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mr-4 group-hover:rotate-12 transition-transform duration-500 shadow-lg">
-                          <Trophy className="h-6 w-6 md:h-8 md:w-8 text-white" />
-                        </div>
-                        <div>
-                          <h4 className="text-lg md:text-2xl font-bold">
-                            SAT Scholarship
-                          </h4>
-                          <p className="text-sm md:text-base opacity-90">
-                            Sunstone Admission Test
-                          </p>
-                        </div>
+              {/* Scholarship Options */}
+              <div className="space-y-4 mb-6">
+                {/* SAT Scholarship */}
+                <div className="border border-gray-200 rounded-xl p-4 hover:border-[#c38935] transition-all duration-200">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-lg flex items-center justify-center mr-3">
+                        <Trophy className="h-5 w-5 text-white" />
                       </div>
-
-                      <p className="text-sm md:text-base mb-6 opacity-90 leading-relaxed">
-                        Assessment covers general aptitude, logical reasoning,
-                        verbal ability, and psychometric evaluation for
-                        comprehensive scholarship eligibility.
-                      </p>
-
-                      <button
-                        onClick={() => {
-                          setShowScholarshipPopup(false);
-                          window.open(
-                            "https://sunstone.in/apply-now",
-                            "_blank",
-                          );
-                        }}
-                        className="w-full bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white font-bold py-3 md:py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base group"
-                      >
-                        <span className="flex items-center justify-center">
-                          Apply for SAT Scholarship
-                          <svg
-                            className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
-                          </svg>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bright Minds Scholarship - Enhanced Design */}
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#c38935] to-[#22336a] rounded-xl md:rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                  <div className="relative bg-white border-2 border-gray-200 hover:border-[#c38935] rounded-xl md:rounded-2xl p-4 md:p-8 overflow-hidden transform group-hover:scale-105 transition-all duration-500 shadow-xl">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
-
-                    <div className="relative z-10">
-                      <div className="text-center mb-6">
-                        <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-6 transition-transform duration-500">
-                          <svg
-                            className="w-8 h-8 md:w-10 md:h-10 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                          </svg>
-                        </div>
-                        <h4 className="text-lg md:text-2xl font-bold text-[#22336a] mb-2">
-                          Bright Minds Scholarship
+                      <div>
+                        <h4 className="font-bold text-[#22336a] text-sm">
+                          SAT Scholarship
                         </h4>
-                        <p className="text-sm md:text-base text-gray-600">
-                          Merit-based Excellence Program
+                        <p className="text-xs text-gray-600">
+                          Sunstone Admission Test
                         </p>
                       </div>
-
-                      <div className="bg-gradient-to-r from-[#22336a]/5 to-[#c38935]/5 rounded-xl p-4 md:p-6 mb-6 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-xl"></div>
-                        <div className="relative z-10">
-                          <img
-                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fb7f8a9de29d34140ac2cc4ccf5225774?format=webp&width=800"
-                            alt="Bright Minds Scholarship"
-                            className="w-full h-32 md:h-48 lg:h-56 object-contain rounded-lg group-hover:scale-105 transition-transform duration-500"
-                          />
-                        </div>
-                        <div className="absolute top-2 right-2 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
-                          <svg
-                            className="w-3 h-3 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                          </svg>
-                        </div>
-                      </div>
-
-                      <button
-                        onClick={() => {
-                          setShowScholarshipPopup(false);
-                          window.open(
-                            "https://sunstone.in/apply-now",
-                            "_blank",
-                          );
-                        }}
-                        className="w-full bg-gradient-to-r from-[#22336a] to-[#2d4a7b] hover:from-[#2d4a7b] hover:to-[#22336a] text-white font-bold py-3 md:py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base group"
-                      >
-                        <span className="flex items-center justify-center">
-                          Apply for Bright Minds
-                          <svg
-                            className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
-                          </svg>
-                        </span>
-                      </button>
                     </div>
                   </div>
+                  <p className="text-xs text-gray-600 mb-3">
+                    Aptitude & reasoning assessment for comprehensive scholarship eligibility.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setShowScholarshipPopup(false);
+                      window.open("https://sunstone.in/apply-now", "_blank");
+                    }}
+                    className="w-full bg-gradient-to-r from-[#22336a] to-[#c38935] text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 hover:shadow-lg text-sm"
+                  >
+                    Apply for SAT
+                  </button>
+                </div>
+
+                {/* Bright Minds Scholarship */}
+                <div className="border border-gray-200 rounded-xl p-4 hover:border-[#c38935] transition-all duration-200">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-gradient-to-r from-[#c38935] to-[#22336a] rounded-lg flex items-center justify-center mr-3">
+                        <Star className="h-5 w-5 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-[#22336a] text-sm">
+                          Bright Minds Scholarship
+                        </h4>
+                        <p className="text-xs text-gray-600">
+                          Merit-based Excellence
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-xs text-gray-600 mb-3">
+                    Merit-based program recognizing academic excellence and potential.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setShowScholarshipPopup(false);
+                      window.open("https://sunstone.in/apply-now", "_blank");
+                    }}
+                    className="w-full bg-gradient-to-r from-[#c38935] to-[#22336a] text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 hover:shadow-lg text-sm"
+                  >
+                    Apply for Bright Minds
+                  </button>
                 </div>
               </div>
 
-              {/* Enhanced CTA Section */}
+              {/* Call to Action */}
               <div className="text-center">
-                <div className="bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#c38935] rounded-xl md:rounded-2xl p-6 md:p-8 text-white relative overflow-hidden shadow-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-white/5"></div>
-                  <div className="relative z-10">
-                    <h4 className="text-lg md:text-2xl font-bold mb-3 md:mb-4">
-                      Ready to Start Your Journey?
-                    </h4>
-                    <p className="text-sm md:text-base mb-6 opacity-90 max-w-md mx-auto">
-                      Take the first step towards your dream career with our
-                      scholarship programs
-                    </p>
-                    <button
-                      onClick={() => {
-                        setShowScholarshipPopup(false);
-                        window.open("https://sunstone.in/apply-now", "_blank");
-                      }}
-                      className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50 text-sm md:text-base group"
-                    >
-                      <span>Apply Now</span>
-                      <ExternalLink className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-300" />
-                    </button>
-                  </div>
+                <div className="bg-gray-50 rounded-xl p-4">
+                  <h4 className="font-bold text-[#22336a] mb-2">
+                    Ready to Start?
+                  </h4>
+                  <p className="text-xs text-gray-600 mb-4">
+                    Take the first step towards your dream career
+                  </p>
+                  <button
+                    onClick={() => {
+                      setShowScholarshipPopup(false);
+                      window.open("https://sunstone.in/apply-now", "_blank");
+                    }}
+                    className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-[#22336a] to-[#c38935] text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200 text-sm group"
+                  >
+                    <span>Apply Now</span>
+                    <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -3296,7 +3200,7 @@ const Index = () => {
                                         {point.startsWith("•") ? (
                                           <>
                                             <span className="text-[#c38935] font-bold text-lg md:text-xl mt-0.5">
-                                              ����
+                                              �����
                                             </span>
                                             <span className="text-sm md:text-base">
                                               {point.substring(1).trim()}
