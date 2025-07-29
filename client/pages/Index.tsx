@@ -1189,7 +1189,7 @@ const Index = () => {
 
             <div className="p-4 md:p-6">
               {/* Ultra Creative Header with Enhanced Animation */}
-              <div className="text-center mb-8 md:mb-12 relative overflow-hidden">
+              <div className="text-center mb-4 md:mb-8 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/10 via-[#c38935]/10 to-[#22336a]/10 rounded-3xl animate-pulse"></div>
                 <div className="absolute top-0 left-1/2 w-32 h-32 bg-[#c38935]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-16 animate-float"></div>
                 <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#22336a]/20 rounded-full blur-2xl translate-x-12 translate-y-12 animate-float" style={{animationDelay: '2s'}}></div>
