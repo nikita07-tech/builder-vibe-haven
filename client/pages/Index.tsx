@@ -1981,7 +1981,7 @@ const Index = () => {
                       <div className="lg:col-span-2">
                         <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-[#22336a] mb-4 md:mb-6 flex items-center">
                           <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mr-2 text-[#c38935]" />
-                          Advanced Certifications
+                          Specializations
                         </h4>
                         <div className="grid gap-3 md:gap-4">
                           {programData.certificationsList
