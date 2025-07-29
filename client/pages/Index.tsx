@@ -1244,16 +1244,7 @@ const Index = () => {
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-4 md:gap-6 mb-6">
-                        <div className="bg-white/20 rounded-lg p-3 md:p-4 backdrop-blur-sm">
-                          <p className="text-2xl md:text-3xl font-bold text-[#c38935]">Up to 80%</p>
-                          <p className="text-xs md:text-sm opacity-90">Program Fee Covered</p>
-                        </div>
-                        <div className="bg-white/20 rounded-lg p-3 md:p-4 backdrop-blur-sm">
-                          <p className="text-2xl md:text-3xl font-bold text-[#c38935]">30 Min</p>
-                          <p className="text-xs md:text-sm opacity-90">Assessment Test</p>
-                        </div>
-                      </div>
+
 
                       <p className="text-sm md:text-base mb-6 opacity-90 leading-relaxed">
                         Assessment covers general aptitude, logical reasoning, verbal ability, and psychometric evaluation for comprehensive scholarship eligibility.
