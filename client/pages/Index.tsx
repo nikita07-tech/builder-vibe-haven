@@ -2114,7 +2114,7 @@ const Index = () => {
                             {programData.specializations}
                           </div>
                           <div className="text-xs opacity-80">
-                            Certifications
+                            Specializations
                           </div>
                         </div>
                       </div>
@@ -2759,7 +2759,7 @@ const Index = () => {
                   },
                   {
                     name: "Amit Joshi",
-                    role: "B.Tech Graduate • Senior Developer",
+                    role: "B.Tech Graduate �� Senior Developer",
                     company: "Wipro",
                     batch: "Batch 2021",
                     initials: "AJ",
