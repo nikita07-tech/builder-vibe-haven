@@ -2974,196 +2974,158 @@ const Index = () => {
           </div>
 
           {/* Desktop Testimonials Grid */}
-          <div className="hidden md:grid md:grid-cols-3 gap-8 mb-16 items-stretch">
-            {/* Testimonial 1 */}
-            <div
-              className="group relative animate-slide-up h-full"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 h-full flex flex-col">
-                <CardContent className="p-8 flex-1 flex flex-col justify-between">
-                  {/* Avatar and Info */}
-                  <div className="flex items-center mb-6">
-                    <div className="relative">
-                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
-                        <img
-                          src="https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800"
-                          alt="Jaya Tiwari"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                        <span className="text-white text-xs">✓</span>
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#c38935] transition-colors duration-300">
-                        Jaya Tiwari
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        BCA Graduate
-                      </p>
-                      <p className="text-xs text-[#c38935] font-semibold">
-                        SRMU • 2022-2025
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Animated Rating */}
-                  <div className="flex mb-4 space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-5 w-5 text-yellow-400 fill-current transform transition-all duration-300 hover:scale-125`}
-                        style={{ animationDelay: `${i * 0.1}s` }}
-                      />
-                    ))}
-                  </div>
-
-                  {/* Quote */}
-                  <div className="relative">
-                    <span className="text-4xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
-                      "
-                    </span>
-                    <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
-                      Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.
-                      job with a fantastic package!
-                    </p>
-                  </div>
-
-                  {/* Floating Particles */}
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
+          {/* Desktop Testimonials - Horizontal Scrolling */}
+          <div className="hidden md:block mb-16">
+            <div className="overflow-hidden">
+              <div className="flex space-x-6 animate-scroll-left-to-right">
+                {[
+                  {
+                    name: "Jaya Tiwari",
+                    role: "BCA Graduate",
+                    company: "SRMU",
+                    batch: "2022-2025",
+                    initials: "JT",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
+                    quote: "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Balram Jat",
+                    role: "BCA Graduate",
+                    company: "JNU",
+                    batch: "2024-2027",
+                    initials: "BJ",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
+                    quote: "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  {
+                    name: "Pulkit Singh",
+                    role: "MBA Graduate • Dhanguard 10 LPA",
+                    company: "GDG",
+                    batch: "22-24",
+                    initials: "PS",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
+                    quote: "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Devraj Tripathi",
+                    role: "B.Tech Graduate",
+                    company: "SRMU",
+                    batch: "2022-2026",
+                    initials: "DT",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fa7ba926fb7cf4a0ca861082351ba12b9?format=webp&width=800",
+                    quote: "Sunstone has been a game-changer for me! The hands-on learning, expert faculty, and supportive environment have boosted my skills and confidence. It's more than just an institution—it's a community that nurtures success.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  {
+                    name: "Aman Kesarwani",
+                    role: "B.Tech Graduate",
+                    company: "VGUJ",
+                    batch: "2023-2027",
+                    initials: "AK",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                    quote: "My journey at Vivekananda Global University with Sunstone has been amazing! From top-notch faculty and well-structured classes to exciting club activities and sports events, every day is enriching. Grateful for the opportunities and vibrant campus life!",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Anushka Pandey",
+                    role: "BBA Graduate",
+                    company: "SAGE Indore",
+                    batch: "2023-2026",
+                    initials: "AP",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                    quote: "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    name: "Jaya Tiwari",
+                    role: "BCA Graduate",
+                    company: "SRMU",
+                    batch: "2022-2025",
+                    initials: "JT",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
+                    quote: "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Balram Jat",
+                    role: "BCA Graduate",
+                    company: "JNU",
+                    batch: "2024-2027",
+                    initials: "BJ",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
+                    quote: "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  {
+                    name: "Pulkit Singh",
+                    role: "MBA Graduate • Dhanguard 10 LPA",
+                    company: "GDG",
+                    batch: "22-24",
+                    initials: "PS",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
+                    quote: "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                ].map((testimonial, index) => (
                   <div
-                    className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"
-                    style={{ animationDelay: "0.3s" }}
-                  ></div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div
-              className="group relative animate-slide-up h-full"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#22336a] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 h-full flex flex-col">
-                <CardContent className="p-8 flex-1 flex flex-col justify-between">
-                  <div className="flex items-center mb-6">
-                    <div className="relative">
-                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
-                        <img
-                          src="https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800"
-                          alt="Balram Jat"
-                          className="w-full h-full object-cover"
-                        />
+                    key={index}
+                    className="flex-shrink-0 w-80 group relative"
+                  >
+                    <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-3xl p-6 h-full flex flex-col">
+                      {/* Avatar and Info */}
+                      <div className="flex items-center mb-6">
+                        <div className="relative">
+                          <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
+                            <img
+                              src={testimonial.image}
+                              alt={testimonial.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                            <span className="text-white text-xs">✓</span>
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#c38935] transition-colors duration-300">
+                            {testimonial.name}
+                          </h4>
+                          <p className="text-sm text-gray-600">
+                            {testimonial.role}
+                          </p>
+                          <p className="text-xs text-[#c38935] font-semibold">
+                            {testimonial.company} • {testimonial.batch}
+                          </p>
+                        </div>
                       </div>
-                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                        <span className="text-white text-xs">✓</span>
+
+                      {/* Rating */}
+                      <div className="flex mb-4 space-x-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-5 w-5 text-yellow-400 fill-current"
+                          />
+                        ))}
                       </div>
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#22336a] transition-colors duration-300">
-                        Balram Jat
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        BCA Graduate
-                      </p>
-                      <p className="text-xs text-[#c38935] font-semibold">
-                        JNU • 2024-2027
-                      </p>
-                    </div>
-                  </div>
 
-                  <div className="flex mb-4 space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-5 w-5 text-yellow-400 fill-current transform transition-all duration-300 hover:scale-125`}
-                        style={{ animationDelay: `${i * 0.1}s` }}
-                      />
-                    ))}
-                  </div>
-
-                  <div className="relative">
-                    <span className="text-4xl text-[#22336a]/20 font-serif absolute -top-2 -left-2">
-                      "
-                    </span>
-                    <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
-                      The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.
-                    </p>
-                  </div>
-
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
-                  <div
-                    className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"
-                    style={{ animationDelay: "0.3s" }}
-                  ></div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div
-              className="group relative animate-slide-up h-full"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <Card className="relative bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 h-full flex flex-col">
-                <CardContent className="p-8 flex-1 flex flex-col justify-between">
-                  <div className="flex items-center mb-6">
-                    <div className="relative">
-                      <div className="w-16 h-16 rounded-full overflow-hidden mr-4 group-hover:scale-110 transition-transform duration-300 border-2 border-gray-200">
-                        <img
-                          src="https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800"
-                          alt="Pulkit Singh"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                        <span className="text-white text-xs">✓</span>
+                      {/* Quote */}
+                      <div className="relative flex-1">
+                        <span className="text-4xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
+                          "
+                        </span>
+                        <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
+                          {testimonial.quote}
+                        </p>
                       </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-[#22336a] text-lg group-hover:text-[#c38935] transition-colors duration-300">
-                        Pulkit Singh
-                      </h4>
-                      <p className="text-sm text-gray-600">
-                        MBA Graduate • Dhanguard 10 LPA
-                      </p>
-                      <p className="text-xs text-[#c38935] font-semibold">
-                        GDG • 22-24
-                      </p>
-                    </div>
                   </div>
-
-                  <div className="flex mb-4 space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className={`h-5 w-5 text-yellow-400 fill-current transform transition-all duration-300 hover:scale-125`}
-                        style={{ animationDelay: `${i * 0.1}s` }}
-                      />
-                    ))}
-                  </div>
-
-                  <div className="relative">
-                    <span className="text-4xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
-                      "
-                    </span>
-                    <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
-                      I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.
-                    </p>
-                  </div>
-
-                  <div className="absolute top-4 right-4 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
-                  <div
-                    className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"
-                    style={{ animationDelay: "0.3s" }}
-                  ></div>
-                </CardContent>
-              </Card>
+                ))}
+              </div>
             </div>
           </div>
         </div>
