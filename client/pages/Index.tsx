@@ -2273,7 +2273,7 @@ const Index = () => {
                         </div>
                       </div>
                     </div>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       {item.desc}
                     </p>
                   </div>
