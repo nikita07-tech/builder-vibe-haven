@@ -1225,7 +1225,7 @@ const Index = () => {
               </div>
 
               {/* Creative Scholarship Cards */}
-              <div className="space-y-4 md:space-y-6 mb-4 md:mb-6">
+              <div className="space-y-3 md:space-y-6 mb-3 md:mb-6">
                 {/* SAT Scholarship - Enhanced Design */}
                 <div className="relative group">
                   <div className="absolute inset-0 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-xl md:rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
