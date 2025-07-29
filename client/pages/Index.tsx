@@ -1745,15 +1745,15 @@ const Index = () => {
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-[10px] text-gray-600">
-                            Projects:
+                            Specializations:
                           </span>
                           <span className="text-xs font-medium text-[#22336a]">
-                            {programs[selectedMobileProgram].projects}
+                            {programs[selectedMobileProgram].specializations}
                           </span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-[10px] text-gray-600">
-                            Specializations:
+                            Certifications:
                           </span>
                           <span className="text-xs font-medium text-[#22336a]">
                             {programs[selectedMobileProgram].certifications}
@@ -1761,10 +1761,18 @@ const Index = () => {
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-[10px] text-gray-600">
-                            Internships:
+                            Experience:
                           </span>
                           <span className="text-xs font-medium text-[#22336a]">
                             {programs[selectedMobileProgram].internships}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-[10px] text-gray-600">
+                            Projects:
+                          </span>
+                          <span className="text-xs font-medium text-[#22336a]">
+                            {programs[selectedMobileProgram].projects}
                           </span>
                         </div>
                       </div>
