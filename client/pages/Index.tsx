@@ -1178,8 +1178,8 @@ const Index = () => {
 
       {/* Scholarship Popup */}
       {showScholarshipPopup && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4">
-          <div className="bg-white rounded-lg md:rounded-2xl max-w-sm md:max-w-4xl w-full mx-2 md:mx-4 relative shadow-2xl max-h-[95vh] md:max-h-[90vh] overflow-y-auto animate-scaleIn">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 md:p-4">
+          <div className="bg-white rounded-lg md:rounded-2xl max-w-xs md:max-w-3xl w-full mx-4 md:mx-4 relative shadow-2xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto animate-scaleIn">
             <button
               onClick={() => setShowScholarshipPopup(false)}
               className="absolute top-2 right-2 md:top-4 md:right-4 w-6 h-6 md:w-10 md:h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-300 z-10 group"
