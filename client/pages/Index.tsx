@@ -1188,24 +1188,52 @@ const Index = () => {
             </button>
 
             <div className="p-3 md:p-8">
-              {/* Creative Header with Animation */}
-              <div className="text-center mb-6 md:mb-8 relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/5 via-[#c38935]/5 to-[#22336a]/5 rounded-2xl animate-pulse"></div>
-                <div className="relative z-10 p-4 md:p-6">
-                  <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mb-4 animate-bounce">
-                    <Trophy className="h-4 w-4 md:h-6 md:w-6 text-white mr-2" />
-                    <span className="text-white font-bold text-xs md:text-sm tracking-wide">SCHOLARSHIP PROGRAMS</span>
+              {/* Ultra Creative Header with Enhanced Animation */}
+              <div className="text-center mb-8 md:mb-12 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/10 via-[#c38935]/10 to-[#22336a]/10 rounded-3xl animate-pulse"></div>
+                <div className="absolute top-0 left-1/2 w-32 h-32 bg-[#c38935]/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-16 animate-float"></div>
+                <div className="absolute bottom-0 right-0 w-24 h-24 bg-[#22336a]/20 rounded-full blur-2xl translate-x-12 translate-y-12 animate-float" style={{animationDelay: '2s'}}></div>
+
+                <div className="relative z-10 p-6 md:p-8">
+                  <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#c38935] rounded-full mb-6 animate-bounce-subtle shadow-2xl">
+                    <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-full flex items-center justify-center mr-3 animate-spin-slow">
+                      <Trophy className="h-3 w-3 md:h-4 md:w-4 text-white" />
+                    </div>
+                    <span className="text-white font-bold text-sm md:text-base tracking-wide">SCHOLARSHIP PROGRAMS</span>
+                    <div className="w-2 h-2 bg-white rounded-full ml-3 animate-ping"></div>
                   </div>
-                  <h3 className="text-xl md:text-4xl font-bold text-[#22336a] mb-3 md:mb-4">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#c38935]">
-                      Transform Your Dreams
-                    </span>
-                    <br />
-                    <span className="text-[#22336a]">Into Reality</span>
-                  </h3>
-                  <p className="text-gray-600 text-sm md:text-lg max-w-2xl mx-auto">
-                    Make quality education affordable with our innovative scholarship programs
+
+                  <div className="mb-6">
+                    <h3 className="text-2xl md:text-5xl lg:text-6xl font-bold mb-4">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] animate-gradient-text">
+                        Transform Your Dreams
+                      </span>
+                      <br />
+                      <span className="text-[#22336a] animate-pulse-glow">
+                        Into Reality
+                      </span>
+                    </h3>
+                    <div className="w-32 h-1 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mx-auto mb-4 animate-scale-in"></div>
+                  </div>
+
+                  <p className="text-gray-600 text-base md:text-xl max-w-3xl mx-auto leading-relaxed">
+                    Unlock your potential with our <span className="font-bold text-[#c38935]">innovative scholarship programs</span> designed to make quality education accessible to every ambitious student
                   </p>
+
+                  <div className="grid grid-cols-3 gap-4 md:gap-6 mt-6 max-w-md mx-auto">
+                    <div className="text-center p-3 bg-white/50 rounded-xl backdrop-blur-sm">
+                      <p className="text-lg md:text-2xl font-bold text-[#22336a]">80%</p>
+                      <p className="text-xs text-gray-600">Max Coverage</p>
+                    </div>
+                    <div className="text-center p-3 bg-white/50 rounded-xl backdrop-blur-sm">
+                      <p className="text-lg md:text-2xl font-bold text-[#c38935]">2</p>
+                      <p className="text-xs text-gray-600">Programs</p>
+                    </div>
+                    <div className="text-center p-3 bg-white/50 rounded-xl backdrop-blur-sm">
+                      <p className="text-lg md:text-2xl font-bold text-[#22336a]">100%</p>
+                      <p className="text-xs text-gray-600">Merit Based</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -1279,12 +1307,20 @@ const Index = () => {
                         <p className="text-sm md:text-base text-gray-600">Merit-based Excellence Program</p>
                       </div>
 
-                      <div className="bg-gradient-to-r from-[#22336a]/5 to-[#c38935]/5 rounded-xl p-4 md:p-6 mb-6">
-                        <img
-                          src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fb7f8a9de29d34140ac2cc4ccf5225774?format=webp&width=800"
-                          alt="Bright Minds Scholarship"
-                          className="w-full h-24 md:h-32 object-contain rounded-lg"
-                        />
+                      <div className="bg-gradient-to-r from-[#22336a]/5 to-[#c38935]/5 rounded-xl p-4 md:p-6 mb-6 relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-xl"></div>
+                        <div className="relative z-10">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fb7f8a9de29d34140ac2cc4ccf5225774?format=webp&width=800"
+                            alt="Bright Minds Scholarship"
+                            className="w-full h-32 md:h-48 lg:h-56 object-contain rounded-lg group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        <div className="absolute top-2 right-2 w-6 h-6 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse">
+                          <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                          </svg>
+                        </div>
                       </div>
 
                       <button
@@ -2106,49 +2142,69 @@ const Index = () => {
                         </div>
 
                         {/* Corporate Tie-ups Section */}
-                        <div className="mt-6 md:mt-8 p-4 md:p-6 bg-gradient-to-br from-[#c38935]/10 to-[#22336a]/10 rounded-lg md:rounded-xl border border-[#c38935]/20">
-                          <div className="text-center mb-4">
-                            <h5 className="text-sm md:text-lg font-bold text-[#22336a] mb-2 flex items-center justify-center">
-                              <svg className="h-4 w-4 md:h-5 md:w-5 mr-2 text-[#c38935]" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                              </svg>
-                              Corporate Partners
-                            </h5>
-                            <p className="text-xs md:text-sm text-[#22336a] font-medium mb-3">
-                              Secure your future with our corporate tie-ups
-                            </p>
-                          </div>
+                        <div className="mt-6 md:mt-8 p-4 md:p-6 bg-gradient-to-br from-[#c38935]/10 to-[#22336a]/10 rounded-lg md:rounded-xl border border-[#c38935]/20 relative overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-r from-[#22336a]/5 via-[#c38935]/5 to-[#22336a]/5 animate-pulse opacity-30"></div>
+                          <div className="relative z-10">
+                            <div className="text-center mb-4">
+                              <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mb-2 animate-bounce-subtle">
+                                <svg className="h-3 w-3 md:h-4 md:w-4 mr-1 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                                <span className="text-white font-bold text-xs">CORPORATE PARTNERS</span>
+                              </div>
+                              <h5 className="text-sm md:text-lg font-bold text-[#22336a] mb-1">
+                                Secure Your Future
+                              </h5>
+                              <p className="text-xs md:text-sm text-[#22336a] font-medium mb-3">
+                                Industry-backed programs with exclusive tie-ups
+                              </p>
+                            </div>
 
-                          <div className="grid grid-cols-3 gap-2 md:gap-3 mb-4">
-                            <div className="bg-white p-2 md:p-3 rounded-lg shadow-sm border border-gray-100 text-center group hover:shadow-md transition-all duration-300">
-                              <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-lg flex items-center justify-center mx-auto mb-1 md:mb-2 group-hover:scale-110 transition-transform duration-300">
-                                <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-                                </svg>
+                            <div className="grid grid-cols-3 gap-2 md:gap-4 mb-4">
+                              <div className="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                                <div className="w-full h-8 md:h-12 lg:h-16 mb-2 md:mb-3 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
+                                  <img
+                                    src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2F07e4a38f73674b24b0edef76ca4585d5?format=webp&width=800"
+                                    alt="TCS ION"
+                                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                                  />
+                                </div>
+                                <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">TCS ION</p>
+                                <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                               </div>
-                              <p className="text-xs font-bold text-[#22336a]">TCS Ion</p>
+                              <div className="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                                <div className="w-full h-8 md:h-12 lg:h-16 mb-2 md:mb-3 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
+                                  <img
+                                    src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Facd3859729a3443b919174d00f2d05f3?format=webp&width=800"
+                                    alt="AU Small Finance Bank"
+                                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                                  />
+                                </div>
+                                <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">AU Finance</p>
+                                <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                              </div>
+                              <div className="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
+                                <div className="w-full h-8 md:h-12 lg:h-16 mb-2 md:mb-3 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
+                                  <img
+                                    src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2F4054e5c1b7654fd4999a448e8e1a89d9?format=webp&width=800"
+                                    alt="NSDC"
+                                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                                  />
+                                </div>
+                                <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">NSDC</p>
+                                <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                              </div>
                             </div>
-                            <div className="bg-white p-2 md:p-3 rounded-lg shadow-sm border border-gray-100 text-center group hover:shadow-md transition-all duration-300">
-                              <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-lg flex items-center justify-center mx-auto mb-1 md:mb-2 group-hover:scale-110 transition-transform duration-300">
-                                <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+
+                            <div className="bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 rounded-lg p-3 text-center">
+                              <p className="text-xs text-[#22336a] font-semibold flex items-center justify-center">
+                                <svg className="h-3 w-3 mr-1 text-[#c38935]" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                                 </svg>
-                              </div>
-                              <p className="text-xs font-bold text-[#22336a]">AU Finance</p>
-                            </div>
-                            <div className="bg-white p-2 md:p-3 rounded-lg shadow-sm border border-gray-100 text-center group hover:shadow-md transition-all duration-300">
-                              <div className="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-lg flex items-center justify-center mx-auto mb-1 md:mb-2 group-hover:scale-110 transition-transform duration-300">
-                                <svg className="w-3 h-3 md:w-4 md:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                                </svg>
-                              </div>
-                              <p className="text-xs font-bold text-[#22336a]">NSDC</p>
+                                Industry-ready training with corporate backing
+                              </p>
                             </div>
                           </div>
-
-                          <p className="text-xs text-center text-[#22336a]/70 mb-3">
-                            Industry-ready training with corporate backing
-                          </p>
                         </div>
 
                         <div className="mt-4 md:mt-6">
@@ -2304,7 +2360,7 @@ const Index = () => {
 
           {/* Mobile Grid for Journey Steps - All Visible at Once with Equal Heights */}
           <div className="block md:hidden mb-8">
-            <div className="grid grid-cols-2 gap-3 auto-rows-fr">
+            <div className="grid grid-cols-2 gap-3" style={{display: 'grid', gridTemplateRows: '1fr 1fr 1fr'}}>
               {[
                 {
                   step: "1",
