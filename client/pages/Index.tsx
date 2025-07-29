@@ -2935,7 +2935,7 @@ const Index = () => {
                           </div>
                         </div>
                         <div>
-                          <h4 className="font-bold text-[#22336a] text-sm group-hover:text-[#c38935] transition-colors duration-300">
+                          <h4 className="font-bold text-[#22336a] text-base group-hover:text-[#c38935] transition-colors duration-300">
                             {testimonial.name}
                           </h4>
                           <p className="text-xs text-gray-600">
