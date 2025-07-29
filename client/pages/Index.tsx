@@ -2043,6 +2043,15 @@ const Index = () => {
                           <div className="text-xs opacity-80">Duration</div>
                         </div>
                         <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
+                          <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
+                          <div className="font-bold text-xs md:text-sm">
+                            {programData.specializations}
+                          </div>
+                          <div className="text-xs opacity-80">
+                            Specializations
+                          </div>
+                        </div>
+                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
                           <Award className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
                           <div className="font-bold text-xs md:text-sm">
                             {programData.certifications}
@@ -2064,15 +2073,6 @@ const Index = () => {
                             {programData.projects}
                           </div>
                           <div className="text-xs opacity-80">Projects</div>
-                        </div>
-                        <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm col-span-2 md:col-span-1">
-                          <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
-                          <div className="font-bold text-xs md:text-sm">
-                            {programData.specializations}
-                          </div>
-                          <div className="text-xs opacity-80">
-                            Specializations
-                          </div>
                         </div>
                       </div>
                     </div>
