@@ -1220,20 +1220,7 @@ const Index = () => {
                     Unlock your potential with our <span className="font-bold text-[#c38935]">innovative scholarship programs</span> designed to make quality education accessible to every ambitious student
                   </p>
 
-                  <div className="grid grid-cols-3 gap-4 md:gap-6 mt-6 max-w-md mx-auto">
-                    <div className="text-center p-3 bg-white/50 rounded-xl backdrop-blur-sm">
-                      <p className="text-lg md:text-2xl font-bold text-[#22336a]">80%</p>
-                      <p className="text-xs text-gray-600">Max Coverage</p>
-                    </div>
-                    <div className="text-center p-3 bg-white/50 rounded-xl backdrop-blur-sm">
-                      <p className="text-lg md:text-2xl font-bold text-[#c38935]">2</p>
-                      <p className="text-xs text-gray-600">Programs</p>
-                    </div>
-                    <div className="text-center p-3 bg-white/50 rounded-xl backdrop-blur-sm">
-                      <p className="text-lg md:text-2xl font-bold text-[#22336a]">100%</p>
-                      <p className="text-xs text-gray-600">Merit Based</p>
-                    </div>
-                  </div>
+
                 </div>
               </div>
 
