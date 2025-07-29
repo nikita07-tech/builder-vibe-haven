@@ -2711,15 +2711,15 @@ const Index = () => {
                       </svg>
                     </div>
                   </div>
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full h-[180px] flex flex-col justify-between">
-                    <h3 className="text-2xl font-bold text-[#22336a] mb-4">
+                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
+                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
                       Document Verification
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
                       Quick verification of your academic credentials and
                       eligibility confirmation
                     </p>
-                    <div className="mt-4 flex items-center justify-center text-[#c38935] text-sm font-semibold">
+                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
                       <Award className="h-4 w-4 mr-1" />
                       Secure Process
                     </div>
