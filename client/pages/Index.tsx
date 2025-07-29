@@ -3153,10 +3153,7 @@ const Index = () => {
                       "
                     </span>
                     <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
-                      The specialized curriculum and project-based learning
-                      methodology prepared me perfectly for the industry
-                      demands. The quality of education and career support
-                      exceeded my expectations in every way.
+                      I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.
                     </p>
                   </div>
 
