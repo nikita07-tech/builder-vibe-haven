@@ -206,7 +206,7 @@
   }
 
   .animate-scroll-left-to-right {
-    animation: scrollLeftToRight 30s linear infinite;
+    animation: scrollLeftToRight 25s linear infinite;
   }
 
   /* Hover effects */
