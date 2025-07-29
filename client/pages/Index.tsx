@@ -1216,7 +1216,7 @@ const Index = () => {
                     <div className="w-32 h-1 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mx-auto mb-4 animate-scale-in"></div>
                   </div>
 
-                  <p className="text-gray-600 text-base md:text-xl max-w-3xl mx-auto leading-relaxed">
+                  <p className="text-gray-600 text-sm md:text-xl max-w-3xl mx-auto leading-relaxed">
                     Unlock your potential with our <span className="font-bold text-[#c38935]">innovative scholarship programs</span> designed to make quality education accessible to every ambitious student
                   </p>
 
