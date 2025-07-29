@@ -1444,7 +1444,7 @@ const Index = () => {
               </span>
             </h2>
             <div className="max-w-4xl mx-auto text-gray-700 text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
-              <p>WHAT WE PROMISE TO ALL STUDENTS </p>
+              <p>WHAT WE PROMISE ﻿TO ALL STUDENTS </p>
             </div>
           </div>
 
@@ -3091,10 +3091,7 @@ const Index = () => {
                       "
                     </span>
                     <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
-                      The practical approach and industry connections helped me
-                      develop real skills that matter in today's tech landscape.
-                      The comprehensive curriculum and expert guidance prepared
-                      me perfectly for professional challenges.
+                      The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.
                     </p>
                   </div>
 
