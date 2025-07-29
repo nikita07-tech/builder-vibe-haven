@@ -2726,7 +2726,7 @@ const Index = () => {
                       "
                     </span>
                     <p className="text-gray-700 text-sm italic leading-relaxed pl-6">
-                      The advanced certifications and project-based learning
+                      The specialized curriculum and project-based learning
                       methodology prepared me perfectly for the industry
                       demands. The quality of education and career support
                       exceeded my expectations in every way.
