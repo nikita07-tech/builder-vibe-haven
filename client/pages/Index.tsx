@@ -2716,61 +2716,63 @@ const Index = () => {
               <div className="flex space-x-4 animate-scroll-left-to-right">
                 {[
                   {
-                    name: "Rahul Kumar",
-                    role: "MBA Graduate • Software Engineer",
-                    company: "TCS",
-                    batch: "Batch 2023",
-                    initials: "RK",
-                    image:
-                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-                    quote:
-                      "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
+                    name: "Jaya Tiwari",
+                    role: "BCA Graduate",
+                    company: "SRMU",
+                    batch: "2022-2025",
+                    initials: "JT",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800",
+                    quote: "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
                     color: "from-[#c38935] to-[#f4d03f]",
                   },
                   {
-                    name: "Priya Sharma",
-                    role: "BCA Graduate �� Full Stack Developer",
-                    company: "Infosys",
-                    initials: "PS",
-                    quote:
-                      "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
+                    name: "Balram Jat",
+                    role: "BCA Graduate",
+                    company: "JNU",
+                    batch: "2024-2027",
+                    initials: "BJ",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800",
+                    quote: "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
-                    name: "Amit Joshi",
-                    role: "B.Tech Graduate �� Senior Developer",
-                    company: "Wipro",
-                    batch: "Batch 2021",
-                    initials: "AJ",
-                    image:
-                      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-                    quote:
-                      "The specialized curriculum and project-based learning methodology prepared me perfectly for the industry demands.",
-                    color: "from-[#c38935] to-[#f4d03f]",
-                  },
-                  // Duplicate for seamless loop
-                  {
-                    name: "Rahul Kumar",
-                    role: "MBA Graduate • Software Engineer",
-                    company: "TCS",
-                    batch: "Batch 2023",
-                    initials: "RK",
-                    image:
-                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-                    quote:
-                      "The industry exposure and practical learning approach gave me exactly what I needed to excel in my career. The placement support was exceptional!",
-                    color: "from-[#c38935] to-[#f4d03f]",
-                  },
-                  {
-                    name: "Priya Sharma",
-                    role: "BCA Graduate • Full Stack Developer",
-                    company: "Infosys",
-                    batch: "Batch 2022",
+                    name: "Pulkit Singh",
+                    role: "MBA Graduate • Dhanguard 10 LPA",
+                    company: "GDG",
+                    batch: "22-24",
                     initials: "PS",
-                    image:
-                      "https://images.unsplash.com/photo-1494790108755-2616b612b3a7?w=150&h=150&fit=crop&crop=face",
-                    quote:
-                      "The practical approach and industry connections helped me develop real skills that matter in today's tech landscape.",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800",
+                    quote: "I am immensely grateful to Sunstone for the incredible international placement opportunity. The unwavering support, exceptional faculty, and comprehensive curriculum played a pivotal role in shaping my career. Sunstone's commitment to excellence and its robust placement cell ensured I was well-prepared to meet global standards.",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Devraj Tripathi",
+                    role: "B.Tech Graduate",
+                    company: "SRMU",
+                    batch: "2022-2026",
+                    initials: "DT",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fa7ba926fb7cf4a0ca861082351ba12b9?format=webp&width=800",
+                    quote: "Sunstone has been a game-changer for me! The hands-on learning, expert faculty, and supportive environment have boosted my skills and confidence. It's more than just an institution—it's a community that nurtures success.",
+                    color: "from-[#22336a] to-[#3b4d7a]",
+                  },
+                  {
+                    name: "Aman Kesarwani",
+                    role: "B.Tech Graduate",
+                    company: "VGUJ",
+                    batch: "2023-2027",
+                    initials: "AK",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                    quote: "My journey at Vivekananda Global University with Sunstone has been amazing! From top-notch faculty and well-structured classes to exciting club activities and sports events, every day is enriching. Grateful for the opportunities and vibrant campus life!",
+                    color: "from-[#c38935] to-[#f4d03f]",
+                  },
+                  {
+                    name: "Anushka Pandey",
+                    role: "BBA Graduate",
+                    company: "SAGE Indore",
+                    batch: "2023-2026",
+                    initials: "AP",
+                    image: "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                    quote: "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                 ].map((testimonial, index) => (
