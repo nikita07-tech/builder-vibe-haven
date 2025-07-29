@@ -983,6 +983,111 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Sunstone Philosophy Section */}
+      <section className="py-8 md:py-20 bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-10 w-72 h-72 bg-[#c38935]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-transparent via-[#c38935]/5 to-transparent rounded-full"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+          {/* Header */}
+          <div className="text-center mb-12 md:mb-16">
+            <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-white/10 backdrop-blur-sm rounded-full mb-4 md:mb-6">
+              <Star className="h-4 w-4 md:h-5 md:w-5 text-[#c38935] mr-2" />
+              <span className="text-white font-semibold text-sm md:text-base">
+                THE SUNSTONE PHILOSOPHY
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
+              Learn from the
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
+                {" "}Best{" "}
+              </span>
+              <br />
+              <span className="text-white/90">
+                Experience the Real World
+              </span>
+            </h2>
+            <p className="text-sm md:text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
+              The Sunstone Philosophy helps you learn from the best and provide a hands-on experience so your education is not just limited to theory
+            </p>
+          </div>
+
+          {/* Philosophy Points */}
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {/* Point 1 */}
+            <div className="group relative">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl md:rounded-3xl p-6 md:p-8 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-500 transform hover:-translate-y-2">
+                <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-2xl md:rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="h-8 w-8 md:h-10 md:w-10 text-white" />
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-[#c38935] mb-2">01</div>
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
+                    Learn from Recruiters
+                  </h3>
+                  <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                    CEOs, CTOs, and COOs of Fortune 500 companies and start-ups with years of recruitment experience
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Point 2 */}
+            <div className="group relative">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl md:rounded-3xl p-6 md:p-8 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-500 transform hover:-translate-y-2">
+                <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#f4d03f] to-[#c38935] rounded-2xl md:rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Briefcase className="h-8 w-8 md:h-10 md:w-10 text-white" />
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-[#c38935] mb-2">02</div>
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
+                    Practice in the Real World
+                  </h3>
+                  <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                    Gain hands-on experience with internships & real-life projects to be job-ready from Day 1
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Point 3 */}
+            <div className="group relative">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl md:rounded-3xl p-6 md:p-8 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-500 transform hover:-translate-y-2">
+                <div className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-2xl md:rounded-3xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Award className="h-8 w-8 md:h-10 md:w-10 text-white" />
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-[#c38935] mb-2">03</div>
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
+                    Create Your Portfolio
+                  </h3>
+                  <p className="text-white/80 leading-relaxed text-sm md:text-base">
+                    Showcase your verified skills and experience with a professional portfolio
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-12 md:mt-16">
+            <div className="inline-flex flex-col md:flex-row items-center gap-4 md:gap-6">
+              <button className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] text-white font-bold rounded-xl md:rounded-2xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 text-sm md:text-base group">
+                <span>Experience Our Philosophy</span>
+                <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform duration-200" />
+              </button>
+              <div className="text-white/60 text-xs md:text-sm">
+                ✨ Join 50,000+ students who chose excellence
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Professional Placement Opportunity Program Popup */}
       {showPlacementPopup && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-2 md:p-4">
