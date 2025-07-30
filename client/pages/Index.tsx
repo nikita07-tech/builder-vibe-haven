@@ -1004,8 +1004,8 @@ const Index = () => {
             <p className="text-xs md:text-base text-white/80 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">
               <p>
                 {" "}
-                helps you learn from the best and provide a hands-on
-                experience so your education is not just limited to theory
+                helps you learn from the best and provide a hands-on experience
+                so your education is not just limited to theory
               </p>
             </p>
           </div>
