@@ -992,27 +992,21 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-3 md:px-6 relative z-10">
           {/* Header */}
           <div className="text-center mb-6 md:mb-10">
-            <div className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-white/10 backdrop-blur-sm rounded-full mb-3 md:mb-4">
-              <Star className="h-3 w-3 md:h-4 md:w-4 text-[#c38935] mr-1.5 md:mr-2" />
-              <span className="text-white font-semibold text-xs md:text-sm">
-                THE SUNSTONE PHILOSOPHY
-              </span>
-            </div>
             <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 leading-tight">
-              Learn from the
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
-                {" "}
-                Best{" "}
+                <p>THE SUNSTONE PHILOSPHY</p>
               </span>
               <br />
-              <span className="text-white/90">
-                <p>Experience in the Real World</p>
+              <span className="color: rgba(255, 255, 255, 0.9)">
+                <p>THE SUNSTONE PHILOSPHY</p>
               </span>
             </h2>
             <p className="text-xs md:text-base text-white/80 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">
-              The Sunstone Philosophy helps you learn from the best and provide
-              a hands-on experience so your education is not just limited to
-              theory
+              <p>
+                {" "}
+                helps you learn from the best and provide a hands-on
+                experience so your education is not just limited to theory
+              </p>
             </p>
           </div>
 
