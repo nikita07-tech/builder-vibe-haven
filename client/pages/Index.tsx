@@ -1474,7 +1474,7 @@ const Index = () => {
                 Program (POP)
               </span>
             </h2>
-            <div className="max-w-4xl mx-auto text-gray-700 text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
+            <div className="max-w-4xl mx-auto text-gray-700 text-sm md:text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
               <p>WHAT WE PROMISE ﻿TO ALL STUDENTS </p>
             </div>
           </div>
