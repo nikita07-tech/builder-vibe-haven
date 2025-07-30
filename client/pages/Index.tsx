@@ -992,27 +992,21 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-3 md:px-6 relative z-10">
           {/* Header */}
           <div className="text-center mb-6 md:mb-10">
-            <div className="inline-flex items-center px-3 md:px-4 py-1.5 md:py-2 bg-white/10 backdrop-blur-sm rounded-full mb-3 md:mb-4">
-              <Star className="h-3 w-3 md:h-4 md:w-4 text-[#c38935] mr-1.5 md:mr-2" />
-              <span className="text-white font-semibold text-xs md:text-sm">
-                THE SUNSTONE PHILOSOPHY
-              </span>
-            </div>
             <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 leading-tight">
-              Learn from the
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
-                {" "}
-                Best{" "}
+                <p>THE SUNSTONE PHILOSOPHY</p>
               </span>
               <br />
-              <span className="text-white/90">
-                <p>Experience in the Real World</p>
+              <span className="color: rgba(255, 255, 255, 0.9)">
+                <p>THE SUNSTONE PHILOSOPHY</p>
               </span>
             </h2>
             <p className="text-xs md:text-base text-white/80 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">
-              The Sunstone Philosophy helps you learn from the best and provide
-              a hands-on experience so your education is not just limited to
-              theory
+              <p>
+                {" "}
+                helps you learn from the best and provide a hands-on experience
+                so your education is not just limited to theory
+              </p>
             </p>
           </div>
 
@@ -1480,7 +1474,7 @@ const Index = () => {
                 Program (POP)
               </span>
             </h2>
-            <div className="max-w-4xl mx-auto text-gray-700 text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
+            <div className="max-w-4xl mx-auto text-gray-700 text-sm md:text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
               <p>WHAT WE PROMISE ﻿TO ALL STUDENTS </p>
             </div>
           </div>
@@ -2945,13 +2939,13 @@ const Index = () => {
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
-                    name: "Aman Kesarwani",
+                    name: "Anushka Pandey",
                     role: "B.Tech Graduate",
                     company: "VGUJ",
                     batch: "2023-2027",
                     initials: "AK",
                     image:
-                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                      "https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fbecc2c7c23e24b2f90c3461a02b10f03?format=webp&width=800",
                     quote:
                       "My journey at Vivekananda Global University with Sunstone has been amazing! From top-notch faculty and well-structured classes to exciting club activities and sports events, every day is enriching. Grateful for the opportunities and vibrant campus life!",
                     color: "from-[#c38935] to-[#f4d03f]",
@@ -2963,7 +2957,7 @@ const Index = () => {
                     batch: "2023-2026",
                     initials: "AP",
                     image:
-                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                      "https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fbecc2c7c23e24b2f90c3461a02b10f03?format=webp&width=800",
                     quote:
                       "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
@@ -3119,13 +3113,13 @@ const Index = () => {
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
-                    name: "Aman Kesarwani",
+                    name: "Anushka Pandey",
                     role: "B.Tech Graduate",
                     company: "VGUJ",
                     batch: "2023-2027",
                     initials: "AK",
                     image:
-                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                      "https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fbecc2c7c23e24b2f90c3461a02b10f03?format=webp&width=800",
                     quote:
                       "My journey at Vivekananda Global University with Sunstone has been amazing! From top-notch faculty and well-structured classes to exciting club activities and sports events, every day is enriching. Grateful for the opportunities and vibrant campus life!",
                     color: "from-[#c38935] to-[#f4d03f]",
@@ -3137,7 +3131,7 @@ const Index = () => {
                     batch: "2023-2026",
                     initials: "AP",
                     image:
-                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                      "https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fbecc2c7c23e24b2f90c3461a02b10f03?format=webp&width=800",
                     quote:
                       "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
