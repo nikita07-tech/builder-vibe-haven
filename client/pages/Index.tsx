@@ -2945,7 +2945,7 @@ const Index = () => {
                     batch: "2023-2027",
                     initials: "AK",
                     image:
-                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                      "https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fbecc2c7c23e24b2f90c3461a02b10f03?format=webp&width=800",
                     quote:
                       "My journey at Vivekananda Global University with Sunstone has been amazing! From top-notch faculty and well-structured classes to exciting club activities and sports events, every day is enriching. Grateful for the opportunities and vibrant campus life!",
                     color: "from-[#c38935] to-[#f4d03f]",
@@ -2957,7 +2957,7 @@ const Index = () => {
                     batch: "2023-2026",
                     initials: "AP",
                     image:
-                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                      "https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fbecc2c7c23e24b2f90c3461a02b10f03?format=webp&width=800",
                     quote:
                       "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
@@ -3119,7 +3119,7 @@ const Index = () => {
                     batch: "2023-2027",
                     initials: "AK",
                     image:
-                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                      "https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fbecc2c7c23e24b2f90c3461a02b10f03?format=webp&width=800",
                     quote:
                       "My journey at Vivekananda Global University with Sunstone has been amazing! From top-notch faculty and well-structured classes to exciting club activities and sports events, every day is enriching. Grateful for the opportunities and vibrant campus life!",
                     color: "from-[#c38935] to-[#f4d03f]",
@@ -3131,7 +3131,7 @@ const Index = () => {
                     batch: "2023-2026",
                     initials: "AP",
                     image:
-                      "https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fbc62dcd346de442b9cf69c9fc1fe60c4?format=webp&width=800",
+                      "https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fbecc2c7c23e24b2f90c3461a02b10f03?format=webp&width=800",
                     quote:
                       "Sunstone has been a transformative experience for me. The faculty is incredibly knowledgeable and makes each class both engaging and insightful. What really sets Sunstone apart is the vibrant campus life, events and activities that go beyond academics and add so much to the overall learning journey.",
                     color: "from-[#22336a] to-[#3b4d7a]",
