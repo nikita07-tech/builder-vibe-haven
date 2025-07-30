@@ -2939,7 +2939,7 @@ const Index = () => {
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
-                    name: "Aman Kesarwani",
+                    name: "Anushka Pandey",
                     role: "B.Tech Graduate",
                     company: "VGUJ",
                     batch: "2023-2027",
@@ -3113,7 +3113,7 @@ const Index = () => {
                     color: "from-[#22336a] to-[#3b4d7a]",
                   },
                   {
-                    name: "Aman Kesarwani",
+                    name: "Anushka Pandey",
                     role: "B.Tech Graduate",
                     company: "VGUJ",
                     batch: "2023-2027",
