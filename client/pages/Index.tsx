@@ -994,11 +994,11 @@ const Index = () => {
           <div className="text-center mb-6 md:mb-10">
             <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
-                <p>THE SUNSTONE PHILOSPHY</p>
+                <p>THE SUNSTONE PHILOSOPHY</p>
               </span>
               <br />
               <span className="color: rgba(255, 255, 255, 0.9)">
-                <p>THE SUNSTONE PHILOSPHY</p>
+                <p>THE SUNSTONE PHILOSOPHY</p>
               </span>
             </h2>
             <p className="text-xs md:text-base text-white/80 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">
