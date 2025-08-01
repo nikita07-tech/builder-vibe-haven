@@ -269,7 +269,7 @@ const Index = () => {
         },
       ],
       eligibility:
-        "12th - 45% (40% in reserved category) Compulsory subjects: Physics, Mathematics and Chemistry.",
+        "Candidates must have secured a minimum of 60% aggregate marks in Class 12th from a recognized board (55% for SC/ST/OBC candidates). Compulsory subjects: Physics, Mathematics and Chemistry with minimum 50% marks in each subject.",
     },
   };
 
