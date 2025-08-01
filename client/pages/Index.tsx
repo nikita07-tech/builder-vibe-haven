@@ -175,7 +175,7 @@ const Index = () => {
           careers: "Banking Officer, Financial Advisor, Insurance Specialist",
         },
       ],
-      eligibility: "Candidates must have secured a minimum of 50% aggregate marks in Class 12th from a recognized board (45% for SC/ST/OBC candidates). No specific subject requirements.",
+      eligibility: "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). No specific subject requirements.",
     },
     BCA: {
       duration: "3-year program",
@@ -214,7 +214,7 @@ const Index = () => {
             "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
         },
       ],
-      eligibility: "Candidates must have secured a minimum of 50% aggregate marks in Class 12th from a recognized board (45% for SC/ST/OBC candidates). Mathematics as a compulsory subject is preferred.",
+      eligibility: "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Mathematics as a compulsory subject is preferred.",
     },
     MCA: {
       duration: "2-year program",
@@ -269,7 +269,7 @@ const Index = () => {
         },
       ],
       eligibility:
-        "Candidates must have secured a minimum of 60% aggregate marks in Class 12th from a recognized board (55% for SC/ST/OBC candidates). Compulsory subjects: Physics, Mathematics and Chemistry with minimum 50% marks in each subject.",
+        "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Compulsory subjects: Physics, Mathematics and Chemistry.",
     },
   };
 
