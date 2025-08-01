@@ -214,7 +214,7 @@ const Index = () => {
             "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
         },
       ],
-      eligibility: "12th - 45% marks (40% in reserved category).",
+      eligibility: "Candidates must have secured a minimum of 50% aggregate marks in Class 12th from a recognized board (45% for SC/ST/OBC candidates). Mathematics as a compulsory subject is preferred.",
     },
     MCA: {
       duration: "2-year program",
