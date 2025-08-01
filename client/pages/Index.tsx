@@ -175,7 +175,7 @@ const Index = () => {
           careers: "Banking Officer, Financial Advisor, Insurance Specialist",
         },
       ],
-      eligibility: "12th - 45% marks (40% in reserved category).",
+      eligibility: "Candidates must have secured a minimum of 50% aggregate marks in Class 12th from a recognized board (45% for SC/ST/OBC candidates). No specific subject requirements.",
     },
     BCA: {
       duration: "3-year program",
