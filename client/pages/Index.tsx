@@ -175,7 +175,8 @@ const Index = () => {
           careers: "Banking Officer, Financial Advisor, Insurance Specialist",
         },
       ],
-      eligibility: "12th - 45% marks (40% in reserved category).",
+      eligibility:
+        "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). No specific subject requirements.",
     },
     BCA: {
       duration: "3-year program",
@@ -214,7 +215,8 @@ const Index = () => {
             "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
         },
       ],
-      eligibility: "12th - 45% marks (40% in reserved category).",
+      eligibility:
+        "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Mathematics as a compulsory subject is preferred.",
     },
     MCA: {
       duration: "2-year program",
@@ -269,7 +271,7 @@ const Index = () => {
         },
       ],
       eligibility:
-        "12th - 45% (40% in reserved category) Compulsory subjects: Physics, Mathematics and Chemistry.",
+        "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Compulsory subjects: Physics, Mathematics and Chemistry.",
     },
   };
 
@@ -3257,7 +3259,7 @@ const Index = () => {
                 {
                   question: "Why should I choose Sunstone?",
                   answer:
-                    "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n�� Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
+                    "• Training and development sessions by industry experts\n• Hands-on capstone projects every semester\n• Professional portfolio development\n• Expert faculty from premier institutions\n• Comprehensive placement support and career guidance\n• Access to pan-India student community",
                   category: "sunstone",
                 },
                 {
