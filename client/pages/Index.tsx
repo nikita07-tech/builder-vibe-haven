@@ -2563,7 +2563,10 @@ const Index = () => {
                   icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
                 },
               ].map((item, index) => (
-                <div key={index} className={`group relative ${index === 4 ? 'col-span-2' : ''}`}>
+                <div
+                  key={index}
+                  className={`group relative ${index === 4 ? "col-span-2" : ""}`}
+                >
                   <div className="bg-white rounded-lg p-2.5 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[120px] flex flex-col justify-between">
                     <div className="flex items-center mb-1.5">
                       <div
@@ -3012,7 +3015,6 @@ const Index = () => {
                               className="w-full h-full object-cover"
                             />
                           </div>
-
                         </div>
                         <div>
                           <h4 className="font-bold text-[#22336a] text-base group-hover:text-[#c38935] transition-colors duration-300">
@@ -3184,7 +3186,6 @@ const Index = () => {
                               className="w-full h-full object-cover"
                             />
                           </div>
-
                         </div>
                         <div>
                           <h4 className="font-bold text-[#22336a] text-xl group-hover:text-[#c38935] transition-colors duration-300">
