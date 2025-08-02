@@ -2540,30 +2540,30 @@ const Index = () => {
                 },
                 {
                   step: "3",
-                  title: "Interview",
-                  desc: "PG candidates interview only",
-                  time: "PG Only",
-                  color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
-                },
-                {
-                  step: "4",
-                  title: "Verification",
-                  desc: "Document verification",
-                  time: "Secure",
-                  color: "from-[#c38935] to-[#d4a853]",
-                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
-                },
-                {
-                  step: "5",
                   title: "Welcome!",
                   desc: "Begin your journey",
                   time: "Success",
                   color: "from-[#22336a] to-[#3b4d7a]",
                   icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
                 },
+                {
+                  step: "4",
+                  title: "Interview",
+                  desc: "PG candidates interview only",
+                  time: "PG Only",
+                  color: "from-[#c38935] to-[#d4a853]",
+                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
+                },
+                {
+                  step: "5",
+                  title: "Verification",
+                  desc: "Document verification",
+                  time: "Secure",
+                  color: "from-[#22336a] to-[#3b4d7a]",
+                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
+                },
               ].map((item, index) => (
-                <div key={index} className={`group relative ${index === 4 ? 'col-span-2' : ''}`}>
+                <div key={index} className={`group relative ${index === 2 ? 'col-span-2' : ''}`}>
                   <div className="bg-white rounded-lg p-2.5 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[120px] flex flex-col justify-between">
                     <div className="flex items-center mb-1.5">
                       <div
@@ -3001,7 +3001,7 @@ const Index = () => {
                     key={index}
                     className="flex-shrink-0 w-80 group relative"
                   >
-                    <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4">
+                    <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4 h-[300px] flex flex-col">
                       {/* Avatar and Info */}
                       <div className="flex items-center mb-4">
                         <div className="relative">
@@ -3038,11 +3038,11 @@ const Index = () => {
                       </div>
 
                       {/* Quote */}
-                      <div className="relative">
+                      <div className="relative flex-1">
                         <span className="text-3xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
                           "
                         </span>
-                        <p className="text-gray-700 text-xs italic leading-relaxed pl-4">
+                        <p className="text-gray-700 text-xs italic leading-relaxed pl-4 overflow-hidden">
                           {testimonial.quote}
                         </p>
                       </div>
