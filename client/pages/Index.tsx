@@ -2522,9 +2522,9 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Mobile Grid for Journey Steps - All Visible at Once with Equal Heights */}
+          {/* Mobile Compact Journey Steps - All Equal Height */}
           <div className="block md:hidden mb-8">
-            <div className="grid grid-cols-2 gap-4 grid-rows-3">
+            <div className="grid grid-cols-2 gap-3">
               {[
                 {
                   step: "1",
@@ -2544,7 +2544,7 @@ const Index = () => {
                 },
                 {
                   step: "3",
-                  title: "Screening & Interview",
+                  title: "Interview",
                   desc: "PG candidates interview only",
                   time: "PG Only",
                   color: "from-[#22336a] to-[#3b4d7a]",
@@ -2567,19 +2567,18 @@ const Index = () => {
                   icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
                 },
               ].map((item, index) => (
-                <div key={index} className="group relative">
-                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[150px] flex flex-col justify-between">
-                    <div className="flex items-center mb-2">
+                <div key={index} className={`group relative ${index === 4 ? 'col-span-2' : ''}`}>
+                  <div className="bg-white rounded-lg p-2.5 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[120px] flex flex-col justify-between">
+                    <div className="flex items-center mb-1.5">
                       <div
-                        className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
+                        className={`w-6 h-6 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
                       >
-                        <ChevronRight className="w-3 h-3 text-white/30 absolute" />
-                        <span className="text-white font-bold text-sm relative z-10">
+                        <span className="text-white font-bold text-xs relative z-10">
                           {item.step}
                         </span>
-                        <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#c38935] rounded-full flex items-center justify-center">
+                        <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-[#c38935] rounded-full flex items-center justify-center">
                           <svg
-                            className="w-2 h-2 text-white"
+                            className="w-1.5 h-1.5 text-white"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                           >
@@ -2591,12 +2590,12 @@ const Index = () => {
                         <h3 className="text-xs font-bold text-[#22336a] mb-0.5">
                           {item.title}
                         </h3>
-                        <div className="text-xs text-[#c38935] font-semibold">
+                        <div className="text-[10px] text-[#c38935] font-semibold">
                           {item.time}
                         </div>
                       </div>
                     </div>
-                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                    <p className="text-gray-600 text-[10px] leading-relaxed flex-grow">
                       {item.desc}
                     </p>
                   </div>
