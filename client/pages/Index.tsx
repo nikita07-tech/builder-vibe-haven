@@ -376,7 +376,7 @@ const Index = () => {
       </header>
 
       {/* Hero Banner with Carousel - Mobile Optimized */}
-      <section className="bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] text-white py-4 md:py-16 lg:py-20 relative overflow-hidden">
+      <section className="bg-[#22336a] text-white py-4 md:py-16 lg:py-20 relative overflow-hidden">
         {/* Professional Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 right-20 w-96 h-96 bg-[#c38935]/10 rounded-full blur-3xl"></div>
@@ -3017,9 +3017,7 @@ const Index = () => {
                               className="w-full h-full object-cover"
                             />
                           </div>
-                          <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                            <span className="text-white text-xs">✓</span>
-                          </div>
+
                         </div>
                         <div>
                           <h4 className="font-bold text-[#22336a] text-base group-hover:text-[#c38935] transition-colors duration-300">
@@ -3191,9 +3189,7 @@ const Index = () => {
                               className="w-full h-full object-cover"
                             />
                           </div>
-                          <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                            <span className="text-white text-xs">✓</span>
-                          </div>
+
                         </div>
                         <div>
                           <h4 className="font-bold text-[#22336a] text-xl group-hover:text-[#c38935] transition-colors duration-300">
