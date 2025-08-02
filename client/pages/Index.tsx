@@ -376,7 +376,7 @@ const Index = () => {
       </header>
 
       {/* Hero Banner with Carousel - Mobile Optimized */}
-      <section className="bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] text-white py-4 md:py-16 lg:py-20 relative overflow-hidden">
+      <section className="bg-[#22336a] text-white py-4 md:py-16 lg:py-20 relative overflow-hidden">
         {/* Professional Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 right-20 w-96 h-96 bg-[#c38935]/10 rounded-full blur-3xl"></div>
@@ -416,10 +416,10 @@ const Index = () => {
                   href="https://sunstone.in/campuses/hi-tech-institute"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-1.5 sm:px-3 md:px-6 lg:px-8 py-0.5 sm:py-1.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-[10px] sm:text-xs md:text-base rounded-sm sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-2 sm:px-3 md:px-6 lg:px-8 py-1 sm:py-1.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-xs sm:text-xs md:text-base rounded-md sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto"
                 >
                   <span>Explore Programs with Sunstone</span>
-                  <ExternalLink className="ml-0.5 sm:ml-1 md:ml-2 h-2 w-2 sm:h-3 sm:w-3 md:h-5 md:w-5" />
+                  <ExternalLink className="ml-1 sm:ml-1 md:ml-2 h-3 w-3 sm:h-3 sm:w-3 md:h-5 md:w-5" />
                 </a>
                 <a
                   href="tel:+917065303030"
@@ -958,7 +958,7 @@ const Index = () => {
                 },
               ].map((award, index) => (
                 <div key={index} className="flex-shrink-0 w-80">
-                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative h-[280px] flex flex-col">
                     <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
                       <img
                         src={award.src}
@@ -969,12 +969,14 @@ const Index = () => {
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
                       <Trophy className="h-4 w-4 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
-                      {award.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm text-center">
-                      {award.desc}
-                    </p>
+                    <div className="flex-1 flex flex-col justify-between">
+                      <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                        {award.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm text-center">
+                        {award.desc}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -1094,14 +1096,8 @@ const Index = () => {
             <div className="p-3 md:p-8">
               {/* Professional Header */}
               <div className="text-center mb-3 md:mb-8">
-                <div className="inline-flex items-center px-2 py-1 md:px-4 md:py-2 bg-[#22336a]/10 rounded-full mb-2 md:mb-4">
-                  <Award className="h-2 w-2 md:h-4 md:w-4 text-[#22336a] mr-1 md:mr-2" />
-                  <span className="text-[#22336a] font-semibold text-[10px] md:text-sm">
-                    PLACEMENT OPPORTUNITY PROGRAM
-                  </span>
-                </div>
                 <h3 className="text-sm md:text-3xl font-bold text-[#22336a] mb-2 md:mb-4">
-                  Comprehensive Career Success Program
+                  Placement Opportunity Program
                 </h3>
                 <p className="text-gray-600 text-xs md:text-lg max-w-2xl mx-auto">
                   Industry-leading placement program with guaranteed
@@ -2522,9 +2518,9 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Mobile Grid for Journey Steps - All Visible at Once with Equal Heights */}
+          {/* Mobile Compact Journey Steps - All Equal Height */}
           <div className="block md:hidden mb-8">
-            <div className="grid grid-cols-2 gap-4 grid-rows-3">
+            <div className="grid grid-cols-2 gap-3">
               {[
                 {
                   step: "1",
@@ -2544,7 +2540,7 @@ const Index = () => {
                 },
                 {
                   step: "3",
-                  title: "Screening & Interview",
+                  title: "Interview",
                   desc: "PG candidates interview only",
                   time: "PG Only",
                   color: "from-[#22336a] to-[#3b4d7a]",
@@ -2567,19 +2563,21 @@ const Index = () => {
                   icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
                 },
               ].map((item, index) => (
-                <div key={index} className="group relative">
-                  <div className="bg-white rounded-lg p-3 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[150px] flex flex-col justify-between">
-                    <div className="flex items-center mb-2">
+                <div
+                  key={index}
+                  className={`group relative ${index === 4 ? "col-span-2" : ""}`}
+                >
+                  <div className="bg-white rounded-lg p-2.5 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[120px] flex flex-col justify-between">
+                    <div className="flex items-center mb-1.5">
                       <div
-                        className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
+                        className={`w-6 h-6 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
                       >
-                        <ChevronRight className="w-3 h-3 text-white/30 absolute" />
-                        <span className="text-white font-bold text-sm relative z-10">
+                        <span className="text-white font-bold text-xs relative z-10">
                           {item.step}
                         </span>
-                        <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#c38935] rounded-full flex items-center justify-center">
+                        <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-[#c38935] rounded-full flex items-center justify-center">
                           <svg
-                            className="w-2 h-2 text-white"
+                            className="w-1.5 h-1.5 text-white"
                             fill="currentColor"
                             viewBox="0 0 24 24"
                           >
@@ -2591,12 +2589,12 @@ const Index = () => {
                         <h3 className="text-xs font-bold text-[#22336a] mb-0.5">
                           {item.title}
                         </h3>
-                        <div className="text-xs text-[#c38935] font-semibold">
+                        <div className="text-[10px] text-[#c38935] font-semibold">
                           {item.time}
                         </div>
                       </div>
                     </div>
-                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                    <p className="text-gray-600 text-[10px] leading-relaxed flex-grow">
                       {item.desc}
                     </p>
                   </div>
@@ -3006,7 +3004,7 @@ const Index = () => {
                     key={index}
                     className="flex-shrink-0 w-80 group relative"
                   >
-                    <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4">
+                    <div className="bg-white/80 backdrop-blur-sm border-2 border-gray-200 hover:border-[#c38935] hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 rounded-2xl p-4 h-[300px] flex flex-col">
                       {/* Avatar and Info */}
                       <div className="flex items-center mb-4">
                         <div className="relative">
@@ -3016,9 +3014,6 @@ const Index = () => {
                               alt={testimonial.name}
                               className="w-full h-full object-cover"
                             />
-                          </div>
-                          <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                            <span className="text-white text-xs">✓</span>
                           </div>
                         </div>
                         <div>
@@ -3045,11 +3040,11 @@ const Index = () => {
                       </div>
 
                       {/* Quote */}
-                      <div className="relative">
+                      <div className="relative flex-1">
                         <span className="text-3xl text-[#c38935]/20 font-serif absolute -top-2 -left-2">
                           "
                         </span>
-                        <p className="text-gray-700 text-xs italic leading-relaxed pl-4">
+                        <p className="text-gray-700 text-xs italic leading-relaxed pl-4 overflow-hidden">
                           {testimonial.quote}
                         </p>
                       </div>
@@ -3190,9 +3185,6 @@ const Index = () => {
                               alt={testimonial.name}
                               className="w-full h-full object-cover"
                             />
-                          </div>
-                          <div className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                            <span className="text-white text-xs">✓</span>
                           </div>
                         </div>
                         <div>
