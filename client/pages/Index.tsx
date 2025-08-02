@@ -958,7 +958,7 @@ const Index = () => {
                 },
               ].map((award, index) => (
                 <div key={index} className="flex-shrink-0 w-80">
-                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative">
+                  <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 relative h-[280px] flex flex-col">
                     <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden mb-4">
                       <img
                         src={award.src}
@@ -969,12 +969,14 @@ const Index = () => {
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
                       <Trophy className="h-4 w-4 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
-                      {award.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm text-center">
-                      {award.desc}
-                    </p>
+                    <div className="flex-1 flex flex-col justify-between">
+                      <h3 className="text-lg font-bold text-[#22336a] mb-2 text-center">
+                        {award.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm text-center">
+                        {award.desc}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -1094,14 +1096,8 @@ const Index = () => {
             <div className="p-3 md:p-8">
               {/* Professional Header */}
               <div className="text-center mb-3 md:mb-8">
-                <div className="inline-flex items-center px-2 py-1 md:px-4 md:py-2 bg-[#22336a]/10 rounded-full mb-2 md:mb-4">
-                  <Award className="h-2 w-2 md:h-4 md:w-4 text-[#22336a] mr-1 md:mr-2" />
-                  <span className="text-[#22336a] font-semibold text-[10px] md:text-sm">
-                    PLACEMENT OPPORTUNITY PROGRAM
-                  </span>
-                </div>
                 <h3 className="text-sm md:text-3xl font-bold text-[#22336a] mb-2 md:mb-4">
-                  Comprehensive Career Success Program
+                  Placement Opportunity Program
                 </h3>
                 <p className="text-gray-600 text-xs md:text-lg max-w-2xl mx-auto">
                   Industry-leading placement program with guaranteed
