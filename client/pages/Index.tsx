@@ -416,10 +416,10 @@ const Index = () => {
                   href="https://sunstone.in/campuses/hi-tech-institute"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-1.5 sm:px-3 md:px-6 lg:px-8 py-0.5 sm:py-1.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-[10px] sm:text-xs md:text-base rounded-sm sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-2 sm:px-3 md:px-6 lg:px-8 py-1 sm:py-1.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-xs sm:text-xs md:text-base rounded-md sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto"
                 >
                   <span>Explore Programs with Sunstone</span>
-                  <ExternalLink className="ml-0.5 sm:ml-1 md:ml-2 h-2 w-2 sm:h-3 sm:w-3 md:h-5 md:w-5" />
+                  <ExternalLink className="ml-1 sm:ml-1 md:ml-2 h-3 w-3 sm:h-3 sm:w-3 md:h-5 md:w-5" />
                 </a>
                 <a
                   href="tel:+917065303030"
