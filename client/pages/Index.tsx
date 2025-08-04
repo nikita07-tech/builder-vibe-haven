@@ -1825,6 +1825,9 @@ const Index = () => {
                       media-id="fn93dowpt4"
                       aspect="1.7777777777777777"
                       className="w-full h-full"
+                      autoplay="true"
+                      muted="true"
+                      loop="true"
                     ></wistia-player>
                   </div>
 
