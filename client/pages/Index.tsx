@@ -1765,8 +1765,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Campus Amenities with Wistia Video & Horizontal Scrolling */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+      {/* Compact Enhanced Campus Experience */}
+      <section className="py-8 md:py-12 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
         {/* Enhanced Background Animation */}
         <div className="absolute inset-0">
           {/* Floating geometric shapes */}
