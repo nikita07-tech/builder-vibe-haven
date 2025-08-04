@@ -730,14 +730,14 @@ const Index = () => {
                 </div>
 
                 {/* Enhanced Info Panel */}
-                <div className="p-6 md:p-8 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-lg border-t border-white/10">
+                <div className="p-6 md:p-8 bg-gradient-to-r from-white/80 to-white/90 backdrop-blur-lg border-t border-gray-200">
                   <div className="flex flex-col md:flex-row md:items-center justify-between">
                     <div className="mb-4 md:mb-0">
-                      <h3 className="text-white font-bold text-lg md:text-2xl mb-2 group-hover:text-[#f4d03f] transition-colors duration-300">
+                      <h3 className="text-[#22336a] font-bold text-lg md:text-2xl mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                         Hi-Tech Institute - Where Dreams Become Reality ✨
                       </h3>
-                      <p className="text-white/80 text-sm md:text-base">
-                        Immerse yourself in our world-class programs: <span className="text-[#c38935] font-semibold">MBA</span> • <span className="text-[#f4d03f] font-semibold">BBA</span> • <span className="text-[#c38935] font-semibold">BCA</span> • <span className="text-[#f4d03f] font-semibold">MCA</span> • <span className="text-[#c38935] font-semibold">B.Tech</span>
+                      <p className="text-gray-700 text-sm md:text-base">
+                        Immerse yourself in our world-class programs: <span className="text-[#c38935] font-semibold">MBA</span> • <span className="text-[#22336a] font-semibold">BBA</span> • <span className="text-[#c38935] font-semibold">BCA</span> • <span className="text-[#22336a] font-semibold">MCA</span> • <span className="text-[#c38935] font-semibold">B.Tech</span>
                       </p>
                     </div>
 
@@ -748,7 +748,7 @@ const Index = () => {
                         <span>Take Virtual Tour</span>
                         <ChevronRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
                       </button>
-                      <button className="px-6 py-3 bg-white/20 hover:bg-white/30 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-white/30 flex items-center justify-center">
+                      <button className="px-6 py-3 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-[#22336a] flex items-center justify-center">
                         <span className="mr-2">📞</span>
                         <span>Schedule Visit</span>
                       </button>
