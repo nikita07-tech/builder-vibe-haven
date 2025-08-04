@@ -737,7 +737,7 @@ const Index = () => {
                         Hi-Tech Institute - Where Dreams Become Reality ✨
                       </h3>
                       <p className="text-gray-700 text-sm md:text-base">
-                        Immerse yourself in our world-class programs: <span className="text-[#c38935] font-semibold">MBA</span> • <span className="text-[#22336a] font-semibold">BBA</span> • <span className="text-[#c38935] font-semibold">BCA</span> • <span className="text-[#22336a] font-semibold">MCA</span> • <span className="text-[#c38935] font-semibold">B.Tech</span>
+                        Immerse yourself in our world-class programs: <span className="text-[#c38935] font-semibold">MBA</span> • <span className="text-[#22336a] font-semibold">BBA</span> • <span className="text-[#c38935] font-semibold">BCA</span> ��� <span className="text-[#22336a] font-semibold">MCA</span> • <span className="text-[#c38935] font-semibold">B.Tech</span>
                       </p>
                     </div>
 
@@ -1891,25 +1891,11 @@ const Index = () => {
                   </div>
                 </div>
 
-                {/* Enhanced Video Info Panel */}
-                <div className="absolute -bottom-8 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl border border-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-y-4 group-hover:translate-y-0 pointer-events-none">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-bold text-[#22336a] text-sm flex items-center">
-                      <div className="w-6 h-6 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-full mr-2 flex items-center justify-center animate-spin" style={{animationDuration: "3s"}}>
-                        <span className="text-white text-xs">🏫</span>
-                      </div>
-                      Immersive Campus Experience
-                    </h3>
-                    <div className="flex space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-1 h-1 bg-[#c38935] rounded-full animate-pulse" style={{animationDelay: `${i * 0.1}s`}}></div>
-                      ))}
-                    </div>
-                  </div>
-                  <p className="text-gray-600 text-xs mb-2">Take a virtual tour of our state-of-the-art facilities and vibrant campus life</p>
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-[#c38935] font-semibold">🎯 Auto-playing for seamless experience</span>
-                    <span className="text-gray-500">👁️ 12.5K+ views today</span>
+                {/* Compact Video Info */}
+                <div className="absolute -bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 pointer-events-none">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[#22336a] font-bold text-xs">🎬 Live Campus Tour</span>
+                    <span className="text-[#c38935] font-semibold text-xs">Auto-playing</span>
                   </div>
                 </div>
               </div>
