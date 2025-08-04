@@ -589,20 +589,29 @@ const Index = () => {
         <div className="absolute inset-0">
           {/* Multiple floating orbs with different animations */}
           <div className="absolute top-10 left-10 w-32 h-32 bg-[#c38935]/10 rounded-full blur-2xl animate-float"></div>
-          <div className="absolute top-40 right-20 w-48 h-48 bg-[#22336a]/8 rounded-full blur-3xl animate-float" style={{animationDelay: "1s"}}></div>
-          <div className="absolute bottom-20 left-1/4 w-64 h-64 bg-[#f4d03f]/8 rounded-full blur-3xl animate-float" style={{animationDelay: "2s"}}></div>
-          <div className="absolute bottom-40 right-10 w-40 h-40 bg-[#c38935]/12 rounded-full blur-2xl animate-float" style={{animationDelay: "3s"}}></div>
+          <div
+            className="absolute top-40 right-20 w-48 h-48 bg-[#22336a]/8 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className="absolute bottom-20 left-1/4 w-64 h-64 bg-[#f4d03f]/8 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "2s" }}
+          ></div>
+          <div
+            className="absolute bottom-40 right-10 w-40 h-40 bg-[#c38935]/12 rounded-full blur-2xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
 
           {/* Animated Geometric Shapes */}
           {[...Array(15)].map((_, i) => (
             <div
               key={i}
-              className={`absolute w-4 h-4 ${i % 3 === 0 ? 'bg-[#c38935]/20' : i % 3 === 1 ? 'bg-[#22336a]/20' : 'bg-[#f4d03f]/20'} rounded-full animate-float`}
+              className={`absolute w-4 h-4 ${i % 3 === 0 ? "bg-[#c38935]/20" : i % 3 === 1 ? "bg-[#22336a]/20" : "bg-[#f4d03f]/20"} rounded-full animate-float`}
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${4 + Math.random() * 3}s`
+                animationDuration: `${4 + Math.random() * 3}s`,
               }}
             ></div>
           ))}
@@ -611,7 +620,11 @@ const Index = () => {
           <div className="absolute inset-0 opacity-3">
             <div className="grid grid-cols-12 h-full">
               {[...Array(12)].map((_, i) => (
-                <div key={i} className="border-r border-[#22336a]/20 animate-pulse" style={{animationDelay: `${i * 0.1}s`}}></div>
+                <div
+                  key={i}
+                  className="border-r border-[#22336a]/20 animate-pulse"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                ></div>
               ))}
             </div>
           </div>
@@ -629,38 +642,73 @@ const Index = () => {
               <span className="text-white font-semibold text-sm md:text-base tracking-wide">
                 🎬 IMMERSIVE CAMPUS EXPERIENCE
               </span>
-              <div className="w-3 h-3 bg-[#f4d03f] rounded-full ml-3 animate-pulse" style={{animationDelay: "0.5s"}}></div>
+              <div
+                className="w-3 h-3 bg-[#f4d03f] rounded-full ml-3 animate-pulse"
+                style={{ animationDelay: "0.5s" }}
+              ></div>
             </div>
 
             {/* Animated Title */}
             <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
-              <span className="inline-block animate-slide-in-left text-[#22336a]">Experience</span>{" "}
-              <span className="inline-block animate-slide-in-right text-[#22336a]">Our</span>
+              <span className="inline-block animate-slide-in-left text-[#22336a]">
+                Experience
+              </span>{" "}
+              <span className="inline-block animate-slide-in-right text-[#22336a]">
+                Our
+              </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-text inline-block animate-scale-in" style={{animationDelay: "0.3s"}}>
+              <span
+                className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-text inline-block animate-scale-in"
+                style={{ animationDelay: "0.3s" }}
+              >
                 Vibrant Campus Life
               </span>
             </h2>
 
             <div className="max-w-4xl mx-auto">
-              <p className="text-sm md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-6" style={{animationDelay: "0.5s"}}>
-                Step into a world where education meets innovation, creativity, and community.
-                Watch our students thrive in an environment designed for excellence.
+              <p
+                className="text-sm md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-6"
+                style={{ animationDelay: "0.5s" }}
+              >
+                Step into a world where education meets innovation, creativity,
+                and community. Watch our students thrive in an environment
+                designed for excellence.
               </p>
 
               {/* Animated Stats */}
-              <div className="grid grid-cols-3 gap-4 md:gap-8 mb-8 animate-fade-in-up" style={{animationDelay: "0.7s"}}>
+              <div
+                className="grid grid-cols-3 gap-4 md:gap-8 mb-8 animate-fade-in-up"
+                style={{ animationDelay: "0.7s" }}
+              >
                 <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
-                  <div className="text-2xl md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up">5000+</div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">Happy Students</div>
+                  <div className="text-2xl md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up">
+                    5000+
+                  </div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                    Happy Students
+                  </div>
                 </div>
                 <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
-                  <div className="text-2xl md:text-4xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up" style={{animationDelay: "0.2s"}}>50+</div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">Campus Facilities</div>
+                  <div
+                    className="text-2xl md:text-4xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
+                    style={{ animationDelay: "0.2s" }}
+                  >
+                    50+
+                  </div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                    Campus Facilities
+                  </div>
                 </div>
                 <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
-                  <div className="text-2xl md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up" style={{animationDelay: "0.4s"}}>24/7</div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">Learning Support</div>
+                  <div
+                    className="text-2xl md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
+                    style={{ animationDelay: "0.4s" }}
+                  >
+                    24/7
+                  </div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                    Learning Support
+                  </div>
                 </div>
               </div>
             </div>
@@ -668,7 +716,10 @@ const Index = () => {
 
           {/* Ultra-Enhanced Video Container */}
           <div className="max-w-6xl mx-auto">
-            <div className="relative group animate-scale-in" style={{animationDelay: "0.9s"}}>
+            <div
+              className="relative group animate-scale-in"
+              style={{ animationDelay: "0.9s" }}
+            >
               {/* Outer Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#c38935]/20 via-[#22336a]/15 to-[#c38935]/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700 scale-105"></div>
 
@@ -694,12 +745,16 @@ const Index = () => {
                       {/* Live Indicator */}
                       <div className="flex items-center bg-red-500/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
                         <div className="w-2 h-2 bg-red-300 rounded-full mr-2 animate-pulse"></div>
-                        <span className="text-white text-xs font-semibold">LIVE CAMPUS</span>
+                        <span className="text-white text-xs font-semibold">
+                          LIVE CAMPUS
+                        </span>
                       </div>
 
                       {/* View Counter */}
                       <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
-                        <span className="text-gray-800 text-xs font-semibold">👁️ 15.2K views</span>
+                        <span className="text-gray-800 text-xs font-semibold">
+                          👁️ 15.2K views
+                        </span>
                       </div>
                     </div>
 
@@ -708,8 +763,12 @@ const Index = () => {
                       <div className="flex justify-between items-end">
                         {/* Programs Showcase */}
                         <div className="space-y-2">
-                          {['MBA', 'BCA', 'B.Tech'].map((program, i) => (
-                            <div key={program} className="bg-[#c38935]/90 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs font-semibold animate-slide-in-left shadow-lg" style={{animationDelay: `${i * 0.2}s`}}>
+                          {["MBA", "BCA", "B.Tech"].map((program, i) => (
+                            <div
+                              key={program}
+                              className="bg-[#c38935]/90 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs font-semibold animate-slide-in-left shadow-lg"
+                              style={{ animationDelay: `${i * 0.2}s` }}
+                            >
                               {program}
                             </div>
                           ))}
@@ -719,10 +778,15 @@ const Index = () => {
                         <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-xl text-center animate-fade-in shadow-lg">
                           <div className="flex items-center justify-center mb-1">
                             {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-3 h-3 text-yellow-400 fill-current" />
+                              <Star
+                                key={i}
+                                className="w-3 h-3 text-yellow-400 fill-current"
+                              />
                             ))}
                           </div>
-                          <div className="text-gray-800 text-xs font-semibold">4.9/5 Student Rating</div>
+                          <div className="text-gray-800 text-xs font-semibold">
+                            4.9/5 Student Rating
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -737,7 +801,26 @@ const Index = () => {
                         Hi-Tech Institute - Where Dreams Become Reality ✨
                       </h3>
                       <p className="text-gray-700 text-sm md:text-base">
-                        Immerse yourself in our world-class programs: <span className="text-[#c38935] font-semibold">MBA</span> • <span className="text-[#22336a] font-semibold">BBA</span> • <span className="text-[#c38935] font-semibold">BCA</span> • <span className="text-[#22336a] font-semibold">MCA</span> • <span className="text-[#c38935] font-semibold">B.Tech</span>
+                        Immerse yourself in our world-class programs:{" "}
+                        <span className="text-[#c38935] font-semibold">
+                          MBA
+                        </span>{" "}
+                        •{" "}
+                        <span className="text-[#22336a] font-semibold">
+                          BBA
+                        </span>{" "}
+                        •{" "}
+                        <span className="text-[#c38935] font-semibold">
+                          BCA
+                        </span>{" "}
+                        •{" "}
+                        <span className="text-[#22336a] font-semibold">
+                          MCA
+                        </span>{" "}
+                        •{" "}
+                        <span className="text-[#c38935] font-semibold">
+                          B.Tech
+                        </span>
                       </p>
                     </div>
 
@@ -760,15 +843,37 @@ const Index = () => {
           </div>
 
           {/* Floating Action Cards */}
-          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up" style={{animationDelay: "1.2s"}}>
+          <div
+            className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up"
+            style={{ animationDelay: "1.2s" }}
+          >
             {[
-              { icon: "🌟", title: "Excellence", desc: "Award-winning education quality" },
-              { icon: "🚀", title: "Innovation", desc: "Cutting-edge learning methods" },
-              { icon: "🤝", title: "Community", desc: "Vibrant student networks" }
+              {
+                icon: "🌟",
+                title: "Excellence",
+                desc: "Award-winning education quality",
+              },
+              {
+                icon: "🚀",
+                title: "Innovation",
+                desc: "Cutting-edge learning methods",
+              },
+              {
+                icon: "🤝",
+                title: "Community",
+                desc: "Vibrant student networks",
+              },
             ].map((item, i) => (
-              <div key={i} className="bg-white/70 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 hover:border-[#c38935]/50 transition-all duration-500 hover:-translate-y-2 hover:scale-105 group shadow-lg hover:shadow-xl">
-                <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">{item.icon}</div>
-                <h4 className="text-[#22336a] font-bold text-lg mb-2 group-hover:text-[#c38935] transition-colors duration-300">{item.title}</h4>
+              <div
+                key={i}
+                className="bg-white/70 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 hover:border-[#c38935]/50 transition-all duration-500 hover:-translate-y-2 hover:scale-105 group shadow-lg hover:shadow-xl"
+              >
+                <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">
+                  {item.icon}
+                </div>
+                <h4 className="text-[#22336a] font-bold text-lg mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                  {item.title}
+                </h4>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
             ))}
@@ -1778,7 +1883,7 @@ const Index = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${4 + Math.random() * 4}s`
+                animationDuration: `${4 + Math.random() * 4}s`,
               }}
             >
               {i % 4 === 0 && (
@@ -1799,13 +1904,22 @@ const Index = () => {
           {/* Animated gradient waves */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#c38935] to-transparent top-1/4 animate-slide-in-right"></div>
-            <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#22336a] to-transparent top-2/4 animate-slide-in-left" style={{animationDelay: "1s"}}></div>
-            <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#f4d03f] to-transparent top-3/4 animate-slide-in-right" style={{animationDelay: "2s"}}></div>
+            <div
+              className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#22336a] to-transparent top-2/4 animate-slide-in-left"
+              style={{ animationDelay: "1s" }}
+            ></div>
+            <div
+              className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#f4d03f] to-transparent top-3/4 animate-slide-in-right"
+              style={{ animationDelay: "2s" }}
+            ></div>
           </div>
 
           {/* Large floating orbs with enhanced animation */}
           <div className="absolute top-20 left-20 w-32 h-32 bg-[#c38935]/10 rounded-full blur-2xl animate-pulse-glow"></div>
-          <div className="absolute bottom-20 right-20 w-40 h-40 bg-[#22336a]/10 rounded-full blur-3xl animate-float" style={{animationDelay: "2s"}}></div>
+          <div
+            className="absolute bottom-20 right-20 w-40 h-40 bg-[#22336a]/10 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "2s" }}
+          ></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#f4d03f]/5 rounded-full blur-3xl animate-gradient-shift"></div>
         </div>
 
@@ -1817,7 +1931,10 @@ const Index = () => {
               <span className="text-white font-bold text-xs md:text-sm tracking-wide">
                 🎬 EXPERIENCE CAMPUS LIFE
               </span>
-              <div className="w-2 h-2 bg-white/30 rounded-full ml-2 animate-pulse group-hover:animate-bounce" style={{animationDelay: "0.5s"}}></div>
+              <div
+                className="w-2 h-2 bg-white/30 rounded-full ml-2 animate-pulse group-hover:animate-bounce"
+                style={{ animationDelay: "0.5s" }}
+              ></div>
             </div>
 
             {/* Compact animated title */}
@@ -1828,24 +1945,36 @@ const Index = () => {
             </h2>
 
             {/* Compact stats row */}
-            <div className="flex justify-center items-center gap-6 md:gap-8 mb-4 animate-fade-in" style={{animationDelay: "0.3s"}}>
+            <div
+              className="flex justify-center items-center gap-6 md:gap-8 mb-4 animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
               <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-gray-200/50">
                 <div className="w-2 h-2 bg-[#c38935] rounded-full mr-2 animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">50+ Facilities</span>
+                <span className="text-sm font-medium text-gray-700">
+                  50+ Facilities
+                </span>
               </div>
               <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-gray-200/50">
                 <div className="w-2 h-2 bg-[#22336a] rounded-full mr-2 animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">24/7 Access</span>
+                <span className="text-sm font-medium text-gray-700">
+                  24/7 Access
+                </span>
               </div>
               <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-gray-200/50">
                 <div className="w-2 h-2 bg-[#f4d03f] rounded-full mr-2 animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">Premium Experience</span>
+                <span className="text-sm font-medium text-gray-700">
+                  Premium Experience
+                </span>
               </div>
             </div>
           </div>
 
           {/* Compact Video Section */}
-          <div className="max-w-3xl mx-auto mb-8 md:mb-10 animate-scale-in" style={{animationDelay: "0.5s"}}>
+          <div
+            className="max-w-3xl mx-auto mb-8 md:mb-10 animate-scale-in"
+            style={{ animationDelay: "0.5s" }}
+          >
             <div className="relative group">
               <div className="relative bg-gradient-to-br from-[#22336a] to-[#c38935] rounded-2xl p-2 shadow-xl group-hover:scale-105 transition-all duration-500">
                 <div className="bg-white rounded-xl overflow-hidden aspect-video relative">
@@ -1884,7 +2013,7 @@ const Index = () => {
                           left: `${20 + i * 30}%`,
                           top: `${30 + i * 20}%`,
                           animationDelay: `${i * 0.5}s`,
-                          transitionDelay: `${i * 0.2}s`
+                          transitionDelay: `${i * 0.2}s`,
                         }}
                       ></div>
                     ))}
@@ -1894,8 +2023,12 @@ const Index = () => {
                 {/* Compact Video Info */}
                 <div className="absolute -bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 pointer-events-none">
                   <div className="flex items-center justify-between">
-                    <span className="text-[#22336a] font-bold text-xs">🎬 Live Campus Tour</span>
-                    <span className="text-[#c38935] font-semibold text-xs">Auto-playing</span>
+                    <span className="text-[#22336a] font-bold text-xs">
+                      🎬 Live Campus Tour
+                    </span>
+                    <span className="text-[#c38935] font-semibold text-xs">
+                      Auto-playing
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1905,7 +2038,9 @@ const Index = () => {
           {/* Compact Amenities - First Row */}
           <div className="mb-6">
             <div className="flex items-center mb-3">
-              <h3 className="text-lg md:text-xl font-bold text-[#22336a] mr-3">Learning Spaces</h3>
+              <h3 className="text-lg md:text-xl font-bold text-[#22336a] mr-3">
+                Learning Spaces
+              </h3>
               <div className="flex-1 h-px bg-gradient-to-r from-[#c38935] to-transparent"></div>
             </div>
 
@@ -1914,59 +2049,68 @@ const Index = () => {
                 {[
                   {
                     title: "Creative Studio",
-                    image: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=400&h=300&fit=crop",
                     icon: "🎨",
-                    desc: "Design and innovation workspace"
+                    desc: "Design and innovation workspace",
                   },
                   {
                     title: "Study Lounge",
-                    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
                     icon: "📚",
-                    desc: "Quiet collaborative learning zones"
+                    desc: "Quiet collaborative learning zones",
                   },
                   {
                     title: "Digital Lab",
-                    image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop",
                     icon: "💻",
-                    desc: "High-tech computer laboratories"
+                    desc: "High-tech computer laboratories",
                   },
                   {
                     title: "Maker Space",
-                    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
                     icon: "🔧",
-                    desc: "Hands-on prototyping workshop"
+                    desc: "Hands-on prototyping workshop",
                   },
                   {
                     title: "Research Center",
-                    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
                     icon: "🔬",
-                    desc: "Advanced research facilities"
+                    desc: "Advanced research facilities",
                   },
                   {
                     title: "Presentation Hall",
-                    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop",
                     icon: "🎤",
-                    desc: "Modern auditorium spaces"
+                    desc: "Modern auditorium spaces",
                   },
                   // Duplicate for seamless loop
                   {
                     title: "Creative Studio",
-                    image: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=400&h=300&fit=crop",
                     icon: "🎨",
-                    desc: "Design and innovation workspace"
+                    desc: "Design and innovation workspace",
                   },
                   {
                     title: "Study Lounge",
-                    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
                     icon: "📚",
-                    desc: "Quiet collaborative learning zones"
+                    desc: "Quiet collaborative learning zones",
                   },
                   {
                     title: "Digital Lab",
-                    image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop",
                     icon: "💻",
-                    desc: "High-tech computer laboratories"
-                  }
+                    desc: "High-tech computer laboratories",
+                  },
                 ].map((amenity, index) => (
                   <div key={index} className="flex-shrink-0 w-64 group">
                     <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105">
@@ -2006,7 +2150,9 @@ const Index = () => {
           {/* Horizontal Scrolling Amenities - Second Row */}
           <div className="mb-12">
             <div className="flex items-center mb-4">
-              <h3 className="text-xl md:text-2xl font-bold text-[#22336a] mr-4">Life & Wellness</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-[#22336a] mr-4">
+                Life & Wellness
+              </h3>
               <div className="flex-1 h-px bg-gradient-to-r from-[#c38935] to-transparent"></div>
             </div>
 
@@ -2015,59 +2161,68 @@ const Index = () => {
                 {[
                   {
                     title: "Fitness Center",
-                    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
                     icon: "🏋️",
-                    desc: "State-of-the-art gym facilities"
+                    desc: "State-of-the-art gym facilities",
                   },
                   {
                     title: "Dining Hall",
-                    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
                     icon: "🍽️",
-                    desc: "Gourmet dining experiences"
+                    desc: "Gourmet dining experiences",
                   },
                   {
                     title: "Recreation Zone",
-                    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
                     icon: "🎯",
-                    desc: "Gaming and entertainment area"
+                    desc: "Gaming and entertainment area",
                   },
                   {
                     title: "Wellness Center",
-                    image: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=400&h=300&fit=crop",
                     icon: "🧘",
-                    desc: "Meditation and relaxation space"
+                    desc: "Meditation and relaxation space",
                   },
                   {
                     title: "Sports Complex",
-                    image: "https://images.unsplash.com/photo-1544824439-68bdb70bdfc3?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1544824439-68bdb70bdfc3?w=400&h=300&fit=crop",
                     icon: "⚽",
-                    desc: "Multi-sport playing fields"
+                    desc: "Multi-sport playing fields",
                   },
                   {
                     title: "Student Lounge",
-                    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
                     icon: "☕",
-                    desc: "Social gathering spaces"
+                    desc: "Social gathering spaces",
                   },
                   // Duplicate for seamless loop
                   {
                     title: "Fitness Center",
-                    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
                     icon: "🏋️",
-                    desc: "State-of-the-art gym facilities"
+                    desc: "State-of-the-art gym facilities",
                   },
                   {
                     title: "Dining Hall",
-                    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
                     icon: "🍽️",
-                    desc: "Gourmet dining experiences"
+                    desc: "Gourmet dining experiences",
                   },
                   {
                     title: "Recreation Zone",
-                    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
+                    image:
+                      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
                     icon: "🎯",
-                    desc: "Gaming and entertainment area"
-                  }
+                    desc: "Gaming and entertainment area",
+                  },
                 ].map((amenity, index) => (
                   <div key={index} className="flex-shrink-0 w-80 group">
                     <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
@@ -2111,7 +2266,8 @@ const Index = () => {
                 <h3 className="text-white font-bold text-lg md:text-xl mb-3">
                   Ready to Experience
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
-                    {" "}Campus Life?
+                    {" "}
+                    Campus Life?
                   </span>
                 </h3>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -2151,7 +2307,7 @@ const Index = () => {
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                   animationDelay: `${Math.random() * 2}s`,
-                  animationDuration: `${2 + Math.random() * 2}s`
+                  animationDuration: `${2 + Math.random() * 2}s`,
                 }}
               ></div>
             ))}
@@ -2168,7 +2324,10 @@ const Index = () => {
               <span className="text-white font-bold text-sm tracking-wide">
                 🚀 NEW-AGE EDUCATION THAT SECURES FUTURES
               </span>
-              <div className="w-2 h-2 bg-white rounded-full ml-2 animate-pulse group-hover:animate-bounce" style={{animationDelay: "0.5s"}}></div>
+              <div
+                className="w-2 h-2 bg-white rounded-full ml-2 animate-pulse group-hover:animate-bounce"
+                style={{ animationDelay: "0.5s" }}
+              ></div>
             </div>
 
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
@@ -2186,39 +2345,45 @@ const Index = () => {
                 title: "Curriculum for Jobs of 2030",
                 desc: "Future-focused learning paths designed for tomorrow's careers",
                 color: "from-[#c38935]/20 to-[#f4d03f]/20",
-                hoverColor: "hover:from-[#c38935]/30 hover:to-[#f4d03f]/30"
+                hoverColor: "hover:from-[#c38935]/30 hover:to-[#f4d03f]/30",
               },
               {
                 icon: "👨‍💼",
                 title: "Corporate Leaders Turned Educators",
                 desc: "Learn directly from industry veterans and Fortune 500 executives",
                 color: "from-[#22336a]/20 to-[#c38935]/20",
-                hoverColor: "hover:from-[#22336a]/30 hover:to-[#c38935]/30"
+                hoverColor: "hover:from-[#22336a]/30 hover:to-[#c38935]/30",
               },
               {
                 icon: "🚀",
                 title: "Build Your First Startup",
                 desc: "Comprehensive entrepreneurship programs with real business incubation",
                 color: "from-[#f4d03f]/20 to-[#c38935]/20",
-                hoverColor: "hover:from-[#f4d03f]/30 hover:to-[#c38935]/30"
+                hoverColor: "hover:from-[#f4d03f]/30 hover:to-[#c38935]/30",
               },
               {
                 icon: "📚",
                 title: "Practical Learning Over Theory",
                 desc: "Hands-on experience with live projects and industry collaborations",
                 color: "from-[#c38935]/20 to-[#22336a]/20",
-                hoverColor: "hover:from-[#c38935]/30 hover:to-[#22336a]/30"
-              }
+                hoverColor: "hover:from-[#c38935]/30 hover:to-[#22336a]/30",
+              },
             ].map((feature, index) => (
               <div
                 key={index}
                 className={`bg-gradient-to-br ${feature.color} ${feature.hoverColor} backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20 hover:border-white/40 transition-all duration-500 group cursor-pointer transform hover:scale-105 hover:-translate-y-2 animate-fade-in-up shadow-lg hover:shadow-xl`}
-                style={{animationDelay: `${index * 0.1}s`}}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl mb-3 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">{feature.icon}</div>
-                  <h4 className="text-white font-bold text-sm md:text-base mb-2 group-hover:text-[#f4d03f] transition-colors duration-300">{feature.title}</h4>
-                  <p className="text-white/80 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors duration-300">{feature.desc}</p>
+                  <div className="text-3xl md:text-4xl mb-3 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
+                    {feature.icon}
+                  </div>
+                  <h4 className="text-white font-bold text-sm md:text-base mb-2 group-hover:text-[#f4d03f] transition-colors duration-300">
+                    {feature.title}
+                  </h4>
+                  <p className="text-white/80 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
+                    {feature.desc}
+                  </p>
                 </div>
 
                 {/* Interactive pulse dot */}
@@ -2231,20 +2396,29 @@ const Index = () => {
           </div>
 
           {/* Compact Stats & CTA Row */}
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 animate-fade-in-up" style={{animationDelay: "0.5s"}}>
+          <div
+            className="flex flex-col lg:flex-row items-center justify-between gap-6 animate-fade-in-up"
+            style={{ animationDelay: "0.5s" }}
+          >
             {/* Quick Stats */}
             <div className="flex items-center gap-6 md:gap-8">
               {[
                 { number: "5000+", label: "Students Placed", icon: "👨‍🎓" },
                 { number: "1200+", label: "Partners", icon: "🤝" },
-                { number: "26 LPA", label: "Highest Package", icon: "💰" }
+                { number: "26 LPA", label: "Highest Package", icon: "💰" },
               ].map((stat, index) => (
                 <div key={index} className="text-center group cursor-pointer">
                   <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
-                    <span className="text-xl mr-2 group-hover:animate-bounce">{stat.icon}</span>
+                    <span className="text-xl mr-2 group-hover:animate-bounce">
+                      {stat.icon}
+                    </span>
                     <div>
-                      <div className="text-lg md:text-xl font-bold text-[#f4d03f] group-hover:scale-110 transition-transform duration-300">{stat.number}</div>
-                      <div className="text-white/80 text-xs font-medium">{stat.label}</div>
+                      <div className="text-lg md:text-xl font-bold text-[#f4d03f] group-hover:scale-110 transition-transform duration-300">
+                        {stat.number}
+                      </div>
+                      <div className="text-white/80 text-xs font-medium">
+                        {stat.label}
+                      </div>
                     </div>
                   </div>
                 </div>

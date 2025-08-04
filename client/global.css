@@ -437,7 +437,8 @@
 }
 
 @keyframes gradientText {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -458,12 +459,15 @@
 }
 
 @keyframes glowPulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(195, 137, 53, 0.4);
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 40px rgba(195, 137, 53, 0.8), 0 0 60px rgba(34, 51, 106, 0.4);
+    box-shadow:
+      0 0 40px rgba(195, 137, 53, 0.8),
+      0 0 60px rgba(34, 51, 106, 0.4);
     transform: scale(1.02);
   }
 }
