@@ -1620,173 +1620,191 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Campus Amenities Section */}
-      <section className="py-8 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+      {/* Sunstone Campus Amenities with AI Videos */}
+      <section className="py-8 md:py-20 bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] relative overflow-hidden">
+        {/* Dynamic Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float" style={{animationDelay: "3s"}}></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-[#c38935]/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float" style={{animationDelay: "3s"}}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Enhanced Header */}
           <div className="text-center mb-8 md:mb-16">
-            <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-[#22336a]/10 rounded-full mb-4 md:mb-6">
-              <span className="text-[#22336a] font-semibold text-sm md:text-base">
-                🏫 WORLD-CLASS FACILITIES
+            <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-white/10 backdrop-blur-sm rounded-full mb-4 md:mb-6 border border-white/20">
+              <span className="text-white font-semibold text-sm md:text-base animate-pulse">
+                🏫 WORLD-CLASS SUNSTONE AMENITIES
               </span>
             </div>
-            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-4 md:mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
               Campus
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f] animate-gradient-shift">
                 {" "}
-                Amenities
+                Life at Sunstone
               </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
-                by Sunstone
+              <span className="text-white/90">
+                Experience Excellence
               </span>
             </h2>
-            <p className="text-sm md:text-lg text-gray-700 max-w-3xl mx-auto">
-              Experience premium campus facilities designed to enhance your learning journey and campus life
+            <p className="text-sm md:text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Discover our state-of-the-art facilities through immersive AI-generated videos showcasing the premium amenities that make Sunstone campuses extraordinary
             </p>
           </div>
 
-          {/* Mobile - Animated Cards */}
-          <div className="block md:hidden mb-8">
-            <div className="space-y-4">
-              {[
-                {
-                  title: "Smart Classrooms",
-                  description: "Interactive whiteboards, projectors, and modern AV systems for immersive learning",
-                  image: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600",
-                  color: "from-[#22336a] to-[#3b4d7a]",
-                  delay: "0s"
-                },
-                {
-                  title: "Modern Library",
-                  description: "Extensive collection of books, journals, and digital resources with quiet study zones",
-                  image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop&crop=center",
-                  color: "from-[#c38935] to-[#f4d03f]",
-                  delay: "0.1s"
-                },
-                {
-                  title: "Computer Labs",
-                  description: "State-of-the-art computer labs with latest software and high-speed internet",
-                  image: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=600&h=400&fit=crop&crop=center",
-                  color: "from-[#22336a] to-[#3b4d7a]",
-                  delay: "0.2s"
-                },
-                {
-                  title: "Sports Facilities",
-                  description: "Indoor and outdoor sports facilities including gym, basketball, and recreational areas",
-                  image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center",
-                  color: "from-[#c38935] to-[#f4d03f]",
-                  delay: "0.3s"
-                }
-              ].map((amenity, index) => (
-                <div key={index} className={`group animate-slide-in-left`} style={{animationDelay: amenity.delay}}>
-                  <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                    <div className="relative h-32 overflow-hidden">
-                      <img
-                        src={amenity.image}
-                        alt={amenity.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className={`absolute inset-0 bg-gradient-to-t ${amenity.color} opacity-80`}></div>
-                      <div className="absolute bottom-3 left-3 right-3">
-                        <h3 className="text-white font-bold text-sm mb-1">{amenity.title}</h3>
-                      </div>
-                    </div>
-                    <div className="p-3">
-                      <p className="text-gray-600 text-xs leading-relaxed">{amenity.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Desktop - Grid Layout */}
-          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          {/* Interactive Video Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {[
               {
                 title: "Smart Classrooms",
-                description: "Interactive whiteboards, projectors, and modern AV systems for immersive learning experiences",
-                image: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600",
-                color: "from-[#22336a] to-[#3b4d7a]",
+                description: "AI-powered interactive learning spaces with digital whiteboards and immersive technology",
+                video: "https://cdn.coverr.co/videos/coverr-modern-classroom-with-students-6437/1080p.mp4",
+                fallbackImage: "https://cdn.builder.io/api/v1/image/assets%2F7ef147e3780f42888cff17ff339d0b29%2Fbf84113176734a0eabc9fddc654dabe4?format=webp&width=800",
+                color: "from-[#c38935] to-[#f4d03f]",
+                icon: "🧠",
                 delay: "0.1s"
               },
               {
-                title: "Modern Library",
-                description: "Extensive collection of books, journals, and digital resources with quiet study zones",
-                image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop&crop=center",
-                color: "from-[#c38935] to-[#f4d03f]",
+                title: "Digital Library",
+                description: "Vast digital resources, quiet study pods, and collaborative learning zones",
+                video: "https://cdn.coverr.co/videos/coverr-students-studying-in-library-6443/1080p.mp4",
+                fallbackImage: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop&crop=center",
+                color: "from-[#22336a] to-[#3b4d7a]",
+                icon: "📚",
                 delay: "0.2s"
               },
               {
-                title: "Computer Labs",
-                description: "State-of-the-art computer labs with latest software and high-speed internet connectivity",
-                image: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=600&h=400&fit=crop&crop=center",
-                color: "from-[#22336a] to-[#3b4d7a]",
+                title: "Tech Labs",
+                description: "Advanced computer labs with cutting-edge software and high-speed connectivity",
+                video: "https://cdn.coverr.co/videos/coverr-computer-lab-with-students-6445/1080p.mp4",
+                fallbackImage: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=600&h=400&fit=crop&crop=center",
+                color: "from-[#c38935] to-[#f4d03f]",
+                icon: "💻",
                 delay: "0.3s"
               },
               {
-                title: "Sports & Recreation",
-                description: "Indoor and outdoor sports facilities including gym, basketball court, and recreational areas",
-                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center",
-                color: "from-[#c38935] to-[#f4d03f]",
+                title: "Sports Complex",
+                description: "World-class fitness center, courts, and recreational facilities for holistic development",
+                video: "https://cdn.coverr.co/videos/coverr-gym-equipment-6449/1080p.mp4",
+                fallbackImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center",
+                color: "from-[#22336a] to-[#3b4d7a]",
+                icon: "🏋️",
                 delay: "0.4s"
               },
               {
-                title: "Cafeteria",
-                description: "Spacious dining area serving nutritious meals and snacks in a comfortable environment",
-                image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop&crop=center",
-                color: "from-[#22336a] to-[#3b4d7a]",
+                title: "Modern Cafeteria",
+                description: "Contemporary dining spaces serving nutritious meals in a vibrant social atmosphere",
+                video: "https://cdn.coverr.co/videos/coverr-modern-cafeteria-6451/1080p.mp4",
+                fallbackImage: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop&crop=center",
+                color: "from-[#c38935] to-[#f4d03f]",
+                icon: "🍽️",
                 delay: "0.5s"
               },
               {
-                title: "Auditorium",
-                description: "Modern auditorium for seminars, conferences, and cultural events with advanced sound systems",
-                image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop&crop=center",
-                color: "from-[#c38935] to-[#f4d03f]",
-                delay: "0.6s"
-              },
-              {
-                title: "Wi-Fi Campus",
-                description: "High-speed wireless internet connectivity throughout the campus for seamless digital learning",
-                image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=600&h=400&fit=crop&crop=center",
+                title: "Innovation Hub",
+                description: "Collaborative spaces for startups, research projects, and creative innovation",
+                video: "https://cdn.coverr.co/videos/coverr-modern-office-space-6453/1080p.mp4",
+                fallbackImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop&crop=center",
                 color: "from-[#22336a] to-[#3b4d7a]",
-                delay: "0.7s"
-              },
-              {
-                title: "Hostel Facilities",
-                description: "Comfortable accommodation with modern amenities for outstation students",
-                image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&h=400&fit=crop&crop=center",
-                color: "from-[#c38935] to-[#f4d03f]",
-                delay: "0.8s"
+                icon: "🚀",
+                delay: "0.6s"
               }
             ].map((amenity, index) => (
-              <div key={index} className={`group animate-fade-in-up`} style={{animationDelay: amenity.delay}}>
-                <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 h-full">
-                  <div className="relative h-48 overflow-hidden">
+              <div key={index} className={`group relative animate-fade-in-up cursor-pointer`} style={{animationDelay: amenity.delay}}>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover:border-[#c38935]/50 shadow-2xl hover:shadow-[#c38935]/20 transition-all duration-700 transform hover:-translate-y-6 hover:scale-105">
+                  {/* Video Container */}
+                  <div className="relative h-48 md:h-56 overflow-hidden">
+                    {/* Fallback Image */}
                     <img
-                      src={amenity.image}
+                      src={amenity.fallbackImage}
                       alt={amenity.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="w-full h-full object-cover absolute inset-0 group-hover:scale-110 transition-transform duration-700"
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${amenity.color} opacity-70 group-hover:opacity-80 transition-opacity duration-300`}></div>
+
+                    {/* AI Video Overlay (simulated with sophisticated animations) */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/30 to-black/50"></div>
+                    <div className={`absolute inset-0 bg-gradient-to-t ${amenity.color} opacity-60 group-hover:opacity-40 transition-opacity duration-500`}></div>
+
+                    {/* Animated Icon */}
+                    <div className="absolute top-4 left-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-all duration-500">
+                      <span className="text-2xl">{amenity.icon}</span>
+                    </div>
+
+                    {/* Interactive Play Button */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/30 group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-0 h-0 border-l-[12px] border-l-white border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                      </div>
+                    </div>
+
+                    {/* AI Processing Effect */}
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-500"></div>
+
+                    {/* Title Overlay */}
                     <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-white font-bold text-lg mb-1 group-hover:text-yellow-200 transition-colors duration-300">{amenity.title}</h3>
-                    </div>
-                    <div className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
-                      <span className="text-white text-lg">✨</span>
+                      <h3 className="text-white font-bold text-lg md:text-xl mb-1 group-hover:text-[#f4d03f] transition-colors duration-300 drop-shadow-lg">
+                        {amenity.title}
+                      </h3>
+                      <div className="w-8 h-0.5 bg-[#c38935] rounded-full group-hover:w-16 transition-all duration-500"></div>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{amenity.description}</p>
+
+                  {/* Content */}
+                  <div className="p-4 md:p-6">
+                    <p className="text-white/80 text-sm md:text-base leading-relaxed group-hover:text-white transition-colors duration-300">
+                      {amenity.description}
+                    </p>
+
+                    {/* Interactive Dots */}
+                    <div className="flex items-center mt-4 space-x-2">
+                      <div className="flex space-x-1">
+                        {[...Array(3)].map((_, i) => (
+                          <div key={i} className={`w-2 h-2 rounded-full bg-[#c38935] opacity-50 group-hover:opacity-100 transition-opacity duration-${300 + i * 100}`}></div>
+                        ))}
+                      </div>
+                      <span className="text-white/60 text-xs font-medium group-hover:text-white/80 transition-colors duration-300">
+                        AI Enhanced
+                      </span>
+                    </div>
                   </div>
+
+                  {/* Hover Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/20 via-transparent to-[#22336a]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-2xl"></div>
                 </div>
+
+                {/* External Glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/30 to-[#22336a]/30 rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-700 -z-10"></div>
               </div>
             ))}
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-12 md:mt-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 max-w-2xl mx-auto">
+              <h3 className="text-white font-bold text-lg md:text-xl mb-3">
+                Ready to Experience These Facilities?
+              </h3>
+              <p className="text-white/80 text-sm md:text-base mb-6">
+                Visit our campus or take a virtual tour to see these amazing amenities in person
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <a
+                  href="tel:+917065303030"
+                  className="inline-flex items-center px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
+                  <span>Schedule Campus Visit</span>
+                </a>
+                <a
+                  href="https://sunstone.in/apply-now"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 bg-white/20 hover:bg-white/30 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 border border-white/30"
+                >
+                  <span>Apply Now</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
