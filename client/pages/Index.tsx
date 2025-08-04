@@ -387,29 +387,15 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-12 items-center">
             <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
               <h1 className="text-sm sm:text-lg md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
-                Transform Your Future with
+                <span>Unlock Your Potential with</span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
                   {" "}
-                  Premier Education
+                  World-Class Education
                 </span>
               </h1>
-              <div className="mb-2 md:mb-6">
-                <p className="text-xs sm:text-xs md:text-base lg:text-lg xl:text-xl text-white/90 leading-relaxed max-w-2xl mb-1 md:mb-3 lg:mb-4">
-                  Join Hi-Tech Institute for industry-aligned programs with
-                  guaranteed placement support.
-                </p>
-                <div className="inline-flex items-center px-2 md:px-6 py-1 md:py-3 rounded-lg md:rounded-xl">
-                  <div className="flex items-center mr-1 md:mr-3">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe8fe1239f4724767b509ddb3b4f8688e?format=webp&width=800"
-                      alt="Institution Image"
-                      className="h-4 md:h-8 lg:h-10 w-auto rounded-md md:rounded-lg"
-                    />
-                  </div>
-                  <span className="text-white font-bold text-xs md:text-base lg:text-lg">
-                    Powered By Sunstone
-                  </span>
-                </div>
+              <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3">
+                Join Hi-Tech Institute for industry-aligned programs with
+                guaranteed placement support.
               </div>
               <div className="flex flex-col gap-1 md:gap-3 lg:gap-4">
                 <a
@@ -593,6 +579,304 @@ const Index = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ultra-Enhanced Video Experience Section */}
+      <section className="py-12 md:py-24 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+        {/* Advanced Animated Background */}
+        <div className="absolute inset-0">
+          {/* Multiple floating orbs with different animations */}
+          <div className="absolute top-10 left-10 w-32 h-32 bg-[#c38935]/10 rounded-full blur-2xl animate-float"></div>
+          <div
+            className="absolute top-40 right-20 w-48 h-48 bg-[#22336a]/8 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className="absolute bottom-20 left-1/4 w-64 h-64 bg-[#f4d03f]/8 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "2s" }}
+          ></div>
+          <div
+            className="absolute bottom-40 right-10 w-40 h-40 bg-[#c38935]/12 rounded-full blur-2xl animate-float"
+            style={{ animationDelay: "3s" }}
+          ></div>
+
+          {/* Animated Geometric Shapes */}
+          {[...Array(15)].map((_, i) => (
+            <div
+              key={i}
+              className={`absolute w-4 h-4 ${i % 3 === 0 ? "bg-[#c38935]/20" : i % 3 === 1 ? "bg-[#22336a]/20" : "bg-[#f4d03f]/20"} rounded-full animate-float`}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${4 + Math.random() * 3}s`,
+              }}
+            ></div>
+          ))}
+
+          {/* Animated Grid Lines */}
+          <div className="absolute inset-0 opacity-3">
+            <div className="grid grid-cols-12 h-full">
+              {[...Array(12)].map((_, i) => (
+                <div
+                  key={i}
+                  className="border-r border-[#22336a]/20 animate-pulse"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                ></div>
+              ))}
+            </div>
+          </div>
+
+          {/* Flowing Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#c38935]/3 to-transparent animate-gradient-flow"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Enhanced Animated Header */}
+          <div className="text-center mb-8 md:mb-16">
+            {/* Floating Badge */}
+            <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a] to-[#c38935] backdrop-blur-lg rounded-full mb-6 md:mb-8 border border-white/20 shadow-2xl group hover:scale-105 transition-all duration-500 animate-bounce-in">
+              <div className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></div>
+              <span className="text-white font-semibold text-sm md:text-base tracking-wide">
+                🎬 IMMERSIVE CAMPUS EXPERIENCE
+              </span>
+              <div
+                className="w-3 h-3 bg-[#f4d03f] rounded-full ml-3 animate-pulse"
+                style={{ animationDelay: "0.5s" }}
+              ></div>
+            </div>
+
+            {/* Animated Title */}
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
+              <span className="inline-block animate-slide-in-left text-[#22336a]">
+                Experience
+              </span>{" "}
+              <span className="inline-block animate-slide-in-right text-[#22336a]">
+                Our
+              </span>
+              <br />
+              <span
+                className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-text inline-block animate-scale-in"
+                style={{ animationDelay: "0.3s" }}
+              >
+                Vibrant Campus Life
+              </span>
+            </h2>
+
+            <div className="max-w-4xl mx-auto">
+              <p
+                className="text-sm md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-6"
+                style={{ animationDelay: "0.5s" }}
+              >
+                Step into a world where education meets innovation, creativity,
+                and community. Watch our students thrive in an environment
+                designed for excellence.
+              </p>
+
+              {/* Animated Stats */}
+              <div
+                className="grid grid-cols-3 gap-4 md:gap-8 mb-8 animate-fade-in-up"
+                style={{ animationDelay: "0.7s" }}
+              >
+                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                  <div className="text-2xl md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up">
+                    5000+
+                  </div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                    Happy Students
+                  </div>
+                </div>
+                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                  <div
+                    className="text-2xl md:text-4xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
+                    style={{ animationDelay: "0.2s" }}
+                  >
+                    50+
+                  </div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                    Campus Facilities
+                  </div>
+                </div>
+                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                  <div
+                    className="text-2xl md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
+                    style={{ animationDelay: "0.4s" }}
+                  >
+                    24/7
+                  </div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                    Learning Support
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Ultra-Enhanced Video Container */}
+          <div className="max-w-6xl mx-auto">
+            <div
+              className="relative group animate-scale-in"
+              style={{ animationDelay: "0.9s" }}
+            >
+              {/* Outer Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#c38935]/20 via-[#22336a]/15 to-[#c38935]/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700 scale-105"></div>
+
+              {/* Main Video Container */}
+              <div className="relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden border-2 border-[#c38935]/30 shadow-2xl group-hover:border-[#c38935]/60 transition-all duration-700 group-hover:scale-105 group-hover:-translate-y-4">
+                {/* Animated Border Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] opacity-0 group-hover:opacity-30 transition-opacity duration-700 animate-border-flow"></div>
+
+                {/* Video Frame */}
+                <div className="aspect-video relative p-2 md:p-4">
+                  <div className="relative rounded-2xl overflow-hidden h-full shadow-inner">
+                    <iframe
+                      src="https://www.youtube.com/embed/2CNUyGRAyVU?autoplay=1&mute=1&loop=1&playlist=2CNUyGRAyVU&controls=1&modestbranding=1&rel=0"
+                      title="Hi-Tech Institute Campus Life - Experience Excellence"
+                      className="w-full h-full group-hover:scale-105 transition-transform duration-700"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+
+                    {/* Interactive Overlay Elements */}
+                    <div className="absolute top-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                      {/* Live Indicator */}
+                      <div className="flex items-center bg-red-500/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
+                        <div className="w-2 h-2 bg-red-300 rounded-full mr-2 animate-pulse"></div>
+                        <span className="text-white text-xs font-semibold">
+                          LIVE CAMPUS
+                        </span>
+                      </div>
+
+                      {/* View Counter */}
+                      <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
+                        <span className="text-gray-800 text-xs font-semibold">
+                          👁️ 15.2K views
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Bottom Floating Elements */}
+                    <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                      <div className="flex justify-between items-end">
+                        {/* Programs Showcase */}
+                        <div className="space-y-2">
+                          {["MBA", "BCA", "B.Tech"].map((program, i) => (
+                            <div
+                              key={program}
+                              className="bg-[#c38935]/90 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs font-semibold animate-slide-in-left shadow-lg"
+                              style={{ animationDelay: `${i * 0.2}s` }}
+                            >
+                              {program}
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Rating Display */}
+                        <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-xl text-center animate-fade-in shadow-lg">
+                          <div className="flex items-center justify-center mb-1">
+                            {[...Array(5)].map((_, i) => (
+                              <Star
+                                key={i}
+                                className="w-3 h-3 text-yellow-400 fill-current"
+                              />
+                            ))}
+                          </div>
+                          <div className="text-gray-800 text-xs font-semibold">
+                            4.9/5 Student Rating
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Enhanced Info Panel */}
+                <div className="p-6 md:p-8 bg-gradient-to-r from-white/80 to-white/90 backdrop-blur-lg border-t border-gray-200">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between">
+                    <div className="mb-4 md:mb-0">
+                      <h3 className="text-[#22336a] font-bold text-lg md:text-2xl mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                        Hi-Tech Institute - Where Dreams Become Reality ✨
+                      </h3>
+                      <p className="text-gray-700 text-sm md:text-base">
+                        Immerse yourself in our world-class programs:{" "}
+                        <span className="text-[#c38935] font-semibold">
+                          MBA
+                        </span>{" "}
+                        •{" "}
+                        <span className="text-[#22336a] font-semibold">
+                          BBA
+                        </span>{" "}
+                        •{" "}
+                        <span className="text-[#c38935] font-semibold">
+                          BCA
+                        </span>{" "}
+                        •{" "}
+                        <span className="text-[#22336a] font-semibold">
+                          MCA
+                        </span>{" "}
+                        •{" "}
+                        <span className="text-[#c38935] font-semibold">
+                          B.Tech
+                        </span>
+                      </p>
+                    </div>
+
+                    {/* Interactive CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <button className="px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group/btn">
+                        <span className="mr-2">🎯</span>
+                        <span>Take Virtual Tour</span>
+                        <ChevronRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                      </button>
+                      <button className="px-6 py-3 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-[#22336a] flex items-center justify-center">
+                        <span className="mr-2">📞</span>
+                        <span>Schedule Visit</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Floating Action Cards */}
+          <div
+            className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up"
+            style={{ animationDelay: "1.2s" }}
+          >
+            {[
+              {
+                icon: "🌟",
+                title: "Excellence",
+                desc: "Award-winning education quality",
+              },
+              {
+                icon: "🚀",
+                title: "Innovation",
+                desc: "Cutting-edge learning methods",
+              },
+              {
+                icon: "🤝",
+                title: "Community",
+                desc: "Vibrant student networks",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white/70 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 hover:border-[#c38935]/50 transition-all duration-500 hover:-translate-y-2 hover:scale-105 group shadow-lg hover:shadow-xl"
+              >
+                <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">
+                  {item.icon}
+                </div>
+                <h4 className="text-[#22336a] font-bold text-lg mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                  {item.title}
+                </h4>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -1581,6 +1865,584 @@ const Index = () => {
                 Personal mentorship, interview preparation, and continuous
                 guidance from industry professionals throughout your journey.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Compact Enhanced Campus Experience */}
+      <section className="py-8 md:py-12 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+        {/* Enhanced Background Animation */}
+        <div className="absolute inset-0">
+          {/* Floating geometric shapes */}
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className={`absolute animate-float opacity-30 hover:opacity-60 transition-opacity duration-700`}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${4 + Math.random() * 4}s`,
+              }}
+            >
+              {i % 4 === 0 && (
+                <div className="w-3 h-3 bg-[#c38935]/20 rounded-full animate-pulse"></div>
+              )}
+              {i % 4 === 1 && (
+                <div className="w-4 h-1 bg-[#22336a]/20 rounded-full rotate-45"></div>
+              )}
+              {i % 4 === 2 && (
+                <div className="w-2 h-4 bg-[#f4d03f]/20 rounded-full rotate-12"></div>
+              )}
+              {i % 4 === 3 && (
+                <div className="w-3 h-3 border border-[#c38935]/20 rounded-sm rotate-45"></div>
+              )}
+            </div>
+          ))}
+
+          {/* Animated gradient waves */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#c38935] to-transparent top-1/4 animate-slide-in-right"></div>
+            <div
+              className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#22336a] to-transparent top-2/4 animate-slide-in-left"
+              style={{ animationDelay: "1s" }}
+            ></div>
+            <div
+              className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#f4d03f] to-transparent top-3/4 animate-slide-in-right"
+              style={{ animationDelay: "2s" }}
+            ></div>
+          </div>
+
+          {/* Large floating orbs with enhanced animation */}
+          <div className="absolute top-20 left-20 w-32 h-32 bg-[#c38935]/10 rounded-full blur-2xl animate-pulse-glow"></div>
+          <div
+            className="absolute bottom-20 right-20 w-40 h-40 bg-[#22336a]/10 rounded-full blur-3xl animate-float"
+            style={{ animationDelay: "2s" }}
+          ></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#f4d03f]/5 rounded-full blur-3xl animate-gradient-shift"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Compact Enhanced Header */}
+          <div className="text-center mb-6 md:mb-8 animate-fade-in">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mb-4 shadow-lg hover:shadow-xl transition-all duration-500 group animate-bounce-subtle hover:scale-105">
+              <div className="w-2 h-2 bg-white/30 rounded-full mr-2 animate-pulse group-hover:animate-bounce"></div>
+              <span className="text-white font-bold text-xs md:text-sm tracking-wide">
+                🎬 EXPERIENCE CAMPUS LIFE
+              </span>
+              <div
+                className="w-2 h-2 bg-white/30 rounded-full ml-2 animate-pulse group-hover:animate-bounce"
+                style={{ animationDelay: "0.5s" }}
+              ></div>
+            </div>
+
+            {/* Compact animated title */}
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#22336a] mb-3 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-shift">
+                Live Campus Experience
+              </span>
+            </h2>
+
+            {/* Compact stats row */}
+            <div
+              className="flex justify-center items-center gap-6 md:gap-8 mb-4 animate-fade-in"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-gray-200/50">
+                <div className="w-2 h-2 bg-[#c38935] rounded-full mr-2 animate-pulse"></div>
+                <span className="text-sm font-medium text-gray-700">
+                  50+ Facilities
+                </span>
+              </div>
+              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-gray-200/50">
+                <div className="w-2 h-2 bg-[#22336a] rounded-full mr-2 animate-pulse"></div>
+                <span className="text-sm font-medium text-gray-700">
+                  24/7 Access
+                </span>
+              </div>
+              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-gray-200/50">
+                <div className="w-2 h-2 bg-[#f4d03f] rounded-full mr-2 animate-pulse"></div>
+                <span className="text-sm font-medium text-gray-700">
+                  Premium Experience
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Compact Video Section */}
+          <div
+            className="max-w-3xl mx-auto mb-8 md:mb-10 animate-scale-in"
+            style={{ animationDelay: "0.5s" }}
+          >
+            <div className="relative group">
+              <div className="relative bg-gradient-to-br from-[#22336a] to-[#c38935] rounded-2xl p-2 shadow-xl group-hover:scale-105 transition-all duration-500">
+                <div className="bg-white rounded-xl overflow-hidden aspect-video relative">
+                  {/* YouTube Player with Autoplay */}
+                  <div className="w-full h-full relative">
+                    <iframe
+                      src="https://www.youtube.com/embed/CTqsYPeW2vE?autoplay=1&mute=1&loop=1&playlist=CTqsYPeW2vE&controls=1&modestbranding=1&rel=0&showinfo=0"
+                      title="Hi-Tech Institute Campus Life - Immersive Experience"
+                      className="w-full h-full group-hover:scale-105 transition-transform duration-700"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+
+                  {/* Enhanced Video Overlay Elements */}
+                  <div className="absolute top-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none">
+                    <div className="px-3 py-1 bg-red-500/90 backdrop-blur-sm rounded-full text-white text-xs font-bold animate-pulse shadow-lg border border-red-400/30">
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-red-300 rounded-full mr-2 animate-ping"></div>
+                        🔴 LIVE CAMPUS TOUR
+                      </div>
+                    </div>
+                    <div className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-gray-800 text-xs font-semibold shadow-lg border border-gray-200">
+                      🎬 Interactive Experience
+                    </div>
+                  </div>
+
+                  {/* Floating interaction hints */}
+                  <div className="absolute inset-0 pointer-events-none">
+                    {[...Array(3)].map((_, i) => (
+                      <div
+                        key={i}
+                        className={`absolute w-4 h-4 bg-white/20 rounded-full opacity-0 group-hover:opacity-60 transition-all duration-1000 animate-float`}
+                        style={{
+                          left: `${20 + i * 30}%`,
+                          top: `${30 + i * 20}%`,
+                          animationDelay: `${i * 0.5}s`,
+                          transitionDelay: `${i * 0.2}s`,
+                        }}
+                      ></div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Compact Video Info */}
+                <div className="absolute -bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 pointer-events-none">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[#22336a] font-bold text-xs">
+                      🎬 Live Campus Tour
+                    </span>
+                    <span className="text-[#c38935] font-semibold text-xs">
+                      Auto-playing
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Compact Amenities - First Row */}
+          <div className="mb-6">
+            <div className="flex items-center mb-3">
+              <h3 className="text-lg md:text-xl font-bold text-[#22336a] mr-3">
+                Learning Spaces
+              </h3>
+              <div className="flex-1 h-px bg-gradient-to-r from-[#c38935] to-transparent"></div>
+            </div>
+
+            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-4">
+              <div className="flex space-x-4 animate-scroll-right-to-left whitespace-nowrap">
+                {[
+                  {
+                    title: "Creative Studio",
+                    image:
+                      "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=400&h=300&fit=crop",
+                    icon: "🎨",
+                    desc: "Design and innovation workspace",
+                  },
+                  {
+                    title: "Study Lounge",
+                    image:
+                      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
+                    icon: "📚",
+                    desc: "Quiet collaborative learning zones",
+                  },
+                  {
+                    title: "Digital Lab",
+                    image:
+                      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop",
+                    icon: "💻",
+                    desc: "High-tech computer laboratories",
+                  },
+                  {
+                    title: "Maker Space",
+                    image:
+                      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
+                    icon: "🔧",
+                    desc: "Hands-on prototyping workshop",
+                  },
+                  {
+                    title: "Research Center",
+                    image:
+                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+                    icon: "🔬",
+                    desc: "Advanced research facilities",
+                  },
+                  {
+                    title: "Presentation Hall",
+                    image:
+                      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop",
+                    icon: "🎤",
+                    desc: "Modern auditorium spaces",
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    title: "Creative Studio",
+                    image:
+                      "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=400&h=300&fit=crop",
+                    icon: "🎨",
+                    desc: "Design and innovation workspace",
+                  },
+                  {
+                    title: "Study Lounge",
+                    image:
+                      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
+                    icon: "📚",
+                    desc: "Quiet collaborative learning zones",
+                  },
+                  {
+                    title: "Digital Lab",
+                    image:
+                      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop",
+                    icon: "💻",
+                    desc: "High-tech computer laboratories",
+                  },
+                ].map((amenity, index) => (
+                  <div key={index} className="flex-shrink-0 w-64 group">
+                    <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105">
+                      <div className="relative h-36 overflow-hidden">
+                        <img
+                          src={amenity.image}
+                          alt={amenity.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#22336a]/70 to-transparent group-hover:from-[#c38935]/70 transition-colors duration-500"></div>
+
+                        {/* Icon */}
+                        <div className="absolute top-4 left-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
+                          <span className="text-2xl">{amenity.icon}</span>
+                        </div>
+
+                        {/* Live Badge */}
+                        <div className="absolute top-4 right-4 px-2 py-1 bg-red-500/90 rounded-full text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse">
+                          ● LIVE
+                        </div>
+
+                        {/* Title */}
+                        <div className="absolute bottom-4 left-4 right-4 text-white">
+                          <h4 className="font-bold text-lg mb-1 group-hover:text-[#f4d03f] transition-colors duration-300">
+                            {amenity.title}
+                          </h4>
+                          <p className="text-xs opacity-90">{amenity.desc}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Horizontal Scrolling Amenities - Second Row */}
+          <div className="mb-12">
+            <div className="flex items-center mb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-[#22336a] mr-4">
+                Life & Wellness
+              </h3>
+              <div className="flex-1 h-px bg-gradient-to-r from-[#c38935] to-transparent"></div>
+            </div>
+
+            <div className="relative overflow-hidden bg-gray-50 rounded-2xl py-6">
+              <div className="flex space-x-6 animate-scroll-left-to-right whitespace-nowrap">
+                {[
+                  {
+                    title: "Fitness Center",
+                    image:
+                      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+                    icon: "🏋️",
+                    desc: "State-of-the-art gym facilities",
+                  },
+                  {
+                    title: "Dining Hall",
+                    image:
+                      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
+                    icon: "🍽️",
+                    desc: "Gourmet dining experiences",
+                  },
+                  {
+                    title: "Recreation Zone",
+                    image:
+                      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
+                    icon: "🎯",
+                    desc: "Gaming and entertainment area",
+                  },
+                  {
+                    title: "Wellness Center",
+                    image:
+                      "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=400&h=300&fit=crop",
+                    icon: "🧘",
+                    desc: "Meditation and relaxation space",
+                  },
+                  {
+                    title: "Sports Complex",
+                    image:
+                      "https://images.unsplash.com/photo-1544824439-68bdb70bdfc3?w=400&h=300&fit=crop",
+                    icon: "⚽",
+                    desc: "Multi-sport playing fields",
+                  },
+                  {
+                    title: "Student Lounge",
+                    image:
+                      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
+                    icon: "☕",
+                    desc: "Social gathering spaces",
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    title: "Fitness Center",
+                    image:
+                      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+                    icon: "🏋️",
+                    desc: "State-of-the-art gym facilities",
+                  },
+                  {
+                    title: "Dining Hall",
+                    image:
+                      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
+                    icon: "🍽️",
+                    desc: "Gourmet dining experiences",
+                  },
+                  {
+                    title: "Recreation Zone",
+                    image:
+                      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
+                    icon: "🎯",
+                    desc: "Gaming and entertainment area",
+                  },
+                ].map((amenity, index) => (
+                  <div key={index} className="flex-shrink-0 w-80 group">
+                    <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
+                      <div className="relative h-48 overflow-hidden">
+                        <img
+                          src={amenity.image}
+                          alt={amenity.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#c38935]/70 to-transparent group-hover:from-[#22336a]/70 transition-colors duration-500"></div>
+
+                        {/* Icon */}
+                        <div className="absolute top-4 left-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
+                          <span className="text-2xl">{amenity.icon}</span>
+                        </div>
+
+                        {/* Live Badge */}
+                        <div className="absolute top-4 right-4 px-2 py-1 bg-red-500/90 rounded-full text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse">
+                          ● LIVE
+                        </div>
+
+                        {/* Title */}
+                        <div className="absolute bottom-4 left-4 right-4 text-white">
+                          <h4 className="font-bold text-lg mb-1 group-hover:text-[#f4d03f] transition-colors duration-300">
+                            {amenity.title}
+                          </h4>
+                          <p className="text-xs opacity-90">{amenity.desc}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Compact CTA */}
+          <div className="text-center animate-fade-in-up">
+            <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-6 max-w-3xl mx-auto shadow-xl relative overflow-hidden">
+              <div className="relative z-10">
+                <h3 className="text-white font-bold text-lg md:text-xl mb-3">
+                  Ready to Experience
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
+                    {" "}
+                    Campus Life?
+                  </span>
+                </h3>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <a
+                    href="tel:+917065303030"
+                    className="group px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  >
+                    <span className="mr-2">📞</span>
+                    <span>Schedule Visit</span>
+                  </a>
+                  <a
+                    href="https://sunstone.in/apply-now"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group px-6 py-3 bg-white/20 hover:bg-white/30 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 border border-white/30 flex items-center justify-center"
+                  >
+                    <span className="mr-2">🚀</span>
+                    <span>Apply Now</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Compact Sunstone New Age Education Section */}
+      <section className="py-8 md:py-12 bg-gradient-to-r from-[#22336a] to-[#2d4a7b] relative overflow-hidden">
+        {/* Compact Background Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 opacity-20">
+            {[...Array(8)].map((_, i) => (
+              <div
+                key={i}
+                className={`absolute w-1 h-1 bg-[#c38935] rounded-full animate-float`}
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 2}s`,
+                  animationDuration: `${2 + Math.random() * 2}s`,
+                }}
+              ></div>
+            ))}
+          </div>
+          <div className="absolute top-10 left-10 w-32 h-32 bg-[#c38935]/20 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#f4d03f]/15 rounded-full blur-2xl animate-float"></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Compact Header */}
+          <div className="text-center mb-8 animate-fade-in">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-full mb-4 shadow-lg hover:shadow-xl transition-all duration-500 group animate-bounce-subtle">
+              <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse group-hover:animate-bounce"></div>
+              <span className="text-white font-bold text-sm tracking-wide">
+                🚀 NEW-AGE EDUCATION THAT SECURES FUTURES
+              </span>
+              <div
+                className="w-2 h-2 bg-white rounded-full ml-2 animate-pulse group-hover:animate-bounce"
+                style={{ animationDelay: "0.5s" }}
+              ></div>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-shift">
+                23 Years of Excellence in Education
+              </span>
+            </h2>
+          </div>
+
+          {/* Interactive 4 Key Points Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+            {[
+              {
+                icon: "💼",
+                title: "Curriculum for Jobs of 2030",
+                desc: "Future-focused learning paths designed for tomorrow's careers",
+                color: "from-[#c38935]/20 to-[#f4d03f]/20",
+                hoverColor: "hover:from-[#c38935]/30 hover:to-[#f4d03f]/30",
+              },
+              {
+                icon: "👨‍💼",
+                title: "Corporate Leaders Turned Educators",
+                desc: "Learn directly from industry veterans and Fortune 500 executives",
+                color: "from-[#22336a]/20 to-[#c38935]/20",
+                hoverColor: "hover:from-[#22336a]/30 hover:to-[#c38935]/30",
+              },
+              {
+                icon: "🚀",
+                title: "Build Your First Startup",
+                desc: "Comprehensive entrepreneurship programs with real business incubation",
+                color: "from-[#f4d03f]/20 to-[#c38935]/20",
+                hoverColor: "hover:from-[#f4d03f]/30 hover:to-[#c38935]/30",
+              },
+              {
+                icon: "📚",
+                title: "Practical Learning Over Theory",
+                desc: "Hands-on experience with live projects and industry collaborations",
+                color: "from-[#c38935]/20 to-[#22336a]/20",
+                hoverColor: "hover:from-[#c38935]/30 hover:to-[#22336a]/30",
+              },
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className={`bg-gradient-to-br ${feature.color} ${feature.hoverColor} backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20 hover:border-white/40 transition-all duration-500 group cursor-pointer transform hover:scale-105 hover:-translate-y-2 animate-fade-in-up shadow-lg hover:shadow-xl`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl mb-3 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
+                    {feature.icon}
+                  </div>
+                  <h4 className="text-white font-bold text-sm md:text-base mb-2 group-hover:text-[#f4d03f] transition-colors duration-300">
+                    {feature.title}
+                  </h4>
+                  <p className="text-white/80 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
+                    {feature.desc}
+                  </p>
+                </div>
+
+                {/* Interactive pulse dot */}
+                <div className="absolute top-2 right-2 w-2 h-2 bg-[#f4d03f] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+
+                {/* Bottom accent line */}
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-[#c38935] to-[#f4d03f] group-hover:w-full transition-all duration-500 rounded-full"></div>
+              </div>
+            ))}
+          </div>
+
+          {/* Compact Stats & CTA Row */}
+          <div
+            className="flex flex-col lg:flex-row items-center justify-between gap-6 animate-fade-in-up"
+            style={{ animationDelay: "0.5s" }}
+          >
+            {/* Quick Stats */}
+            <div className="flex items-center gap-6 md:gap-8">
+              {[
+                { number: "5000+", label: "Students Placed", icon: "👨‍🎓" },
+                { number: "1200+", label: "Partners", icon: "🤝" },
+                { number: "26 LPA", label: "Highest Package", icon: "💰" },
+              ].map((stat, index) => (
+                <div key={index} className="text-center group cursor-pointer">
+                  <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
+                    <span className="text-xl mr-2 group-hover:animate-bounce">
+                      {stat.icon}
+                    </span>
+                    <div>
+                      <div className="text-lg md:text-xl font-bold text-[#f4d03f] group-hover:scale-110 transition-transform duration-300">
+                        {stat.number}
+                      </div>
+                      <div className="text-white/80 text-xs font-medium">
+                        {stat.label}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Compact CTA Buttons */}
+            <div className="flex gap-3">
+              <a
+                href="https://sunstone.in/apply-now"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#c38935] to-[#f4d03f] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+              >
+                <span>Explore Programs</span>
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </a>
+              <a
+                href="tel:+917065303030"
+                className="group inline-flex items-center px-6 py-3 bg-white/20 hover:bg-white/30 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-white/30"
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                <span>Call Now</span>
+              </a>
             </div>
           </div>
         </div>
@@ -3087,7 +3949,7 @@ const Index = () => {
                   },
                   {
                     name: "Pulkit Singh",
-                    role: "MBA Graduate • Dhanguard 10 LPA",
+                    role: "MBA Graduate �� Dhanguard 10 LPA",
                     company: "GDG",
                     batch: "22-24",
                     initials: "PS",
