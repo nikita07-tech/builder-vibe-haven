@@ -732,11 +732,11 @@ const Index = () => {
                 <div className="aspect-video relative p-2 md:p-4">
                   <div className="relative rounded-2xl overflow-hidden h-full shadow-inner">
                     <iframe
-                      src="https://www.youtube.com/embed/2CNUyGRAyVU?autoplay=1&mute=1&loop=1&playlist=2CNUyGRAyVU&controls=1&modestbranding=1&rel=0"
+                      src="https://drive.google.com/file/d/1hXpL0TTl6W3-qMLidqYtXgetdAf7bZkt/preview"
                       title="Hi-Tech Institute Campus Life - Experience Excellence"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
                       frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allow="autoplay"
                       allowFullScreen
                     ></iframe>
 
@@ -1978,14 +1978,14 @@ const Index = () => {
             <div className="relative group">
               <div className="relative bg-gradient-to-br from-[#22336a] to-[#c38935] rounded-2xl p-2 shadow-xl group-hover:scale-105 transition-all duration-500">
                 <div className="bg-white rounded-xl overflow-hidden aspect-video relative">
-                  {/* YouTube Player with Autoplay */}
+                  {/* Google Drive Video Player */}
                   <div className="w-full h-full relative">
                     <iframe
-                      src="https://www.youtube.com/embed/CTqsYPeW2vE?autoplay=1&mute=1&loop=1&playlist=CTqsYPeW2vE&controls=1&modestbranding=1&rel=0&showinfo=0"
+                      src="https://drive.google.com/file/d/1hXpL0TTl6W3-qMLidqYtXgetdAf7bZkt/preview"
                       title="Hi-Tech Institute Campus Life - Immersive Experience"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
                       frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allow="autoplay"
                       allowFullScreen
                     ></iframe>
                   </div>
@@ -2035,230 +2035,6 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Compact Amenities - First Row */}
-          <div className="mb-6">
-            <div className="flex items-center mb-3">
-              <h3 className="text-lg md:text-xl font-bold text-[#22336a] mr-3">
-                Learning Spaces
-              </h3>
-              <div className="flex-1 h-px bg-gradient-to-r from-[#c38935] to-transparent"></div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-4">
-              <div className="flex space-x-4 animate-scroll-right-to-left whitespace-nowrap">
-                {[
-                  {
-                    title: "Creative Studio",
-                    image:
-                      "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=400&h=300&fit=crop",
-                    icon: "🎨",
-                    desc: "Design and innovation workspace",
-                  },
-                  {
-                    title: "Study Lounge",
-                    image:
-                      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
-                    icon: "📚",
-                    desc: "Quiet collaborative learning zones",
-                  },
-                  {
-                    title: "Digital Lab",
-                    image:
-                      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop",
-                    icon: "💻",
-                    desc: "High-tech computer laboratories",
-                  },
-                  {
-                    title: "Maker Space",
-                    image:
-                      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
-                    icon: "🔧",
-                    desc: "Hands-on prototyping workshop",
-                  },
-                  {
-                    title: "Research Center",
-                    image:
-                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
-                    icon: "🔬",
-                    desc: "Advanced research facilities",
-                  },
-                  {
-                    title: "Presentation Hall",
-                    image:
-                      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop",
-                    icon: "🎤",
-                    desc: "Modern auditorium spaces",
-                  },
-                  // Duplicate for seamless loop
-                  {
-                    title: "Creative Studio",
-                    image:
-                      "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=400&h=300&fit=crop",
-                    icon: "🎨",
-                    desc: "Design and innovation workspace",
-                  },
-                  {
-                    title: "Study Lounge",
-                    image:
-                      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
-                    icon: "📚",
-                    desc: "Quiet collaborative learning zones",
-                  },
-                  {
-                    title: "Digital Lab",
-                    image:
-                      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop",
-                    icon: "💻",
-                    desc: "High-tech computer laboratories",
-                  },
-                ].map((amenity, index) => (
-                  <div key={index} className="flex-shrink-0 w-64 group">
-                    <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105">
-                      <div className="relative h-36 overflow-hidden">
-                        <img
-                          src={amenity.image}
-                          alt={amenity.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#22336a]/70 to-transparent group-hover:from-[#c38935]/70 transition-colors duration-500"></div>
-
-                        {/* Icon */}
-                        <div className="absolute top-4 left-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
-                          <span className="text-2xl">{amenity.icon}</span>
-                        </div>
-
-                        {/* Live Badge */}
-                        <div className="absolute top-4 right-4 px-2 py-1 bg-red-500/90 rounded-full text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse">
-                          ● LIVE
-                        </div>
-
-                        {/* Title */}
-                        <div className="absolute bottom-4 left-4 right-4 text-white">
-                          <h4 className="font-bold text-lg mb-1 group-hover:text-[#f4d03f] transition-colors duration-300">
-                            {amenity.title}
-                          </h4>
-                          <p className="text-xs opacity-90">{amenity.desc}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Horizontal Scrolling Amenities - Second Row */}
-          <div className="mb-12">
-            <div className="flex items-center mb-4">
-              <h3 className="text-xl md:text-2xl font-bold text-[#22336a] mr-4">
-                Life & Wellness
-              </h3>
-              <div className="flex-1 h-px bg-gradient-to-r from-[#c38935] to-transparent"></div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gray-50 rounded-2xl py-6">
-              <div className="flex space-x-6 animate-scroll-left-to-right whitespace-nowrap">
-                {[
-                  {
-                    title: "Fitness Center",
-                    image:
-                      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-                    icon: "🏋️",
-                    desc: "State-of-the-art gym facilities",
-                  },
-                  {
-                    title: "Dining Hall",
-                    image:
-                      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
-                    icon: "🍽️",
-                    desc: "Gourmet dining experiences",
-                  },
-                  {
-                    title: "Recreation Zone",
-                    image:
-                      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
-                    icon: "🎯",
-                    desc: "Gaming and entertainment area",
-                  },
-                  {
-                    title: "Wellness Center",
-                    image:
-                      "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=400&h=300&fit=crop",
-                    icon: "🧘",
-                    desc: "Meditation and relaxation space",
-                  },
-                  {
-                    title: "Sports Complex",
-                    image:
-                      "https://images.unsplash.com/photo-1544824439-68bdb70bdfc3?w=400&h=300&fit=crop",
-                    icon: "⚽",
-                    desc: "Multi-sport playing fields",
-                  },
-                  {
-                    title: "Student Lounge",
-                    image:
-                      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
-                    icon: "☕",
-                    desc: "Social gathering spaces",
-                  },
-                  // Duplicate for seamless loop
-                  {
-                    title: "Fitness Center",
-                    image:
-                      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-                    icon: "🏋️",
-                    desc: "State-of-the-art gym facilities",
-                  },
-                  {
-                    title: "Dining Hall",
-                    image:
-                      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
-                    icon: "🍽️",
-                    desc: "Gourmet dining experiences",
-                  },
-                  {
-                    title: "Recreation Zone",
-                    image:
-                      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
-                    icon: "🎯",
-                    desc: "Gaming and entertainment area",
-                  },
-                ].map((amenity, index) => (
-                  <div key={index} className="flex-shrink-0 w-80 group">
-                    <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
-                      <div className="relative h-48 overflow-hidden">
-                        <img
-                          src={amenity.image}
-                          alt={amenity.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#c38935]/70 to-transparent group-hover:from-[#22336a]/70 transition-colors duration-500"></div>
-
-                        {/* Icon */}
-                        <div className="absolute top-4 left-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
-                          <span className="text-2xl">{amenity.icon}</span>
-                        </div>
-
-                        {/* Live Badge */}
-                        <div className="absolute top-4 right-4 px-2 py-1 bg-red-500/90 rounded-full text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse">
-                          ● LIVE
-                        </div>
-
-                        {/* Title */}
-                        <div className="absolute bottom-4 left-4 right-4 text-white">
-                          <h4 className="font-bold text-lg mb-1 group-hover:text-[#f4d03f] transition-colors duration-300">
-                            {amenity.title}
-                          </h4>
-                          <p className="text-xs opacity-90">{amenity.desc}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
           {/* Compact CTA */}
           <div className="text-center animate-fade-in-up">
             <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-6 max-w-3xl mx-auto shadow-xl relative overflow-hidden">
@@ -2294,155 +2070,241 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Compact Sunstone New Age Education Section */}
-      <section className="py-8 md:py-12 bg-gradient-to-r from-[#22336a] to-[#2d4a7b] relative overflow-hidden">
-        {/* Compact Background Effects */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-20">
-            {[...Array(8)].map((_, i) => (
-              <div
-                key={i}
-                className={`absolute w-1 h-1 bg-[#c38935] rounded-full animate-float`}
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 2}s`,
-                  animationDuration: `${2 + Math.random() * 2}s`,
-                }}
-              ></div>
-            ))}
-          </div>
-          <div className="absolute top-10 left-10 w-32 h-32 bg-[#c38935]/20 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-40 h-40 bg-[#f4d03f]/15 rounded-full blur-2xl animate-float"></div>
-        </div>
-
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Compact Header */}
-          <div className="text-center mb-8 animate-fade-in">
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-full mb-4 shadow-lg hover:shadow-xl transition-all duration-500 group animate-bounce-subtle">
-              <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse group-hover:animate-bounce"></div>
-              <span className="text-white font-bold text-sm tracking-wide">
-                🚀 NEW-AGE EDUCATION THAT SECURES FUTURES
-              </span>
-              <div
-                className="w-2 h-2 bg-white rounded-full ml-2 animate-pulse group-hover:animate-bounce"
-                style={{ animationDelay: "0.5s" }}
-              ></div>
-            </div>
-
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-shift">
-                23 Years of Excellence in Education
-              </span>
+      {/* New Age Education Section - Key Offerings Layout */}
+      <section className="py-6 md:py-16 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-6 md:mb-16">
+            <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-2 md:mb-6">
+              New Age Education That Secures Futures
             </h2>
+            <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+              Discover 23 years of excellence in future-ready education
+            </p>
           </div>
 
-          {/* Interactive 4 Key Points Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
-            {[
-              {
-                icon: "💼",
-                title: "Curriculum for Jobs of 2030",
-                desc: "Future-focused learning paths designed for tomorrow's careers",
-                color: "from-[#c38935]/20 to-[#f4d03f]/20",
-                hoverColor: "hover:from-[#c38935]/30 hover:to-[#f4d03f]/30",
-              },
-              {
-                icon: "👨‍💼",
-                title: "Corporate Leaders Turned Educators",
-                desc: "Learn directly from industry veterans and Fortune 500 executives",
-                color: "from-[#22336a]/20 to-[#c38935]/20",
-                hoverColor: "hover:from-[#22336a]/30 hover:to-[#c38935]/30",
-              },
-              {
-                icon: "🚀",
-                title: "Build Your First Startup",
-                desc: "Comprehensive entrepreneurship programs with real business incubation",
-                color: "from-[#f4d03f]/20 to-[#c38935]/20",
-                hoverColor: "hover:from-[#f4d03f]/30 hover:to-[#c38935]/30",
-              },
-              {
-                icon: "📚",
-                title: "Practical Learning Over Theory",
-                desc: "Hands-on experience with live projects and industry collaborations",
-                color: "from-[#c38935]/20 to-[#22336a]/20",
-                hoverColor: "hover:from-[#c38935]/30 hover:to-[#22336a]/30",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className={`bg-gradient-to-br ${feature.color} ${feature.hoverColor} backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/20 hover:border-white/40 transition-all duration-500 group cursor-pointer transform hover:scale-105 hover:-translate-y-2 animate-fade-in-up shadow-lg hover:shadow-xl`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl mb-3 group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
-                    {feature.icon}
-                  </div>
-                  <h4 className="text-white font-bold text-sm md:text-base mb-2 group-hover:text-[#f4d03f] transition-colors duration-300">
-                    {feature.title}
-                  </h4>
-                  <p className="text-white/80 text-xs md:text-sm leading-relaxed group-hover:text-white transition-colors duration-300">
-                    {feature.desc}
-                  </p>
-                </div>
-
-                {/* Interactive pulse dot */}
-                <div className="absolute top-2 right-2 w-2 h-2 bg-[#f4d03f] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
-
-                {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-[#c38935] to-[#f4d03f] group-hover:w-full transition-all duration-500 rounded-full"></div>
-              </div>
-            ))}
-          </div>
-
-          {/* Compact Stats & CTA Row */}
-          <div
-            className="flex flex-col lg:flex-row items-center justify-between gap-6 animate-fade-in-up"
-            style={{ animationDelay: "0.5s" }}
-          >
-            {/* Quick Stats */}
-            <div className="flex items-center gap-6 md:gap-8">
-              {[
-                { number: "5000+", label: "Students Placed", icon: "👨‍🎓" },
-                { number: "1200+", label: "Partners", icon: "🤝" },
-                { number: "26 LPA", label: "Highest Package", icon: "💰" },
-              ].map((stat, index) => (
-                <div key={index} className="text-center group cursor-pointer">
-                  <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
-                    <span className="text-xl mr-2 group-hover:animate-bounce">
-                      {stat.icon}
-                    </span>
-                    <div>
-                      <div className="text-lg md:text-xl font-bold text-[#f4d03f] group-hover:scale-110 transition-transform duration-300">
-                        {stat.number}
-                      </div>
-                      <div className="text-white/80 text-xs font-medium">
-                        {stat.label}
-                      </div>
+          {/* Mobile Enhanced Carousel - Smaller */}
+          <div className="block md:hidden mb-4">
+            <div className="overflow-hidden rounded-xl">
+              <div className="flex space-x-4 animate-scroll-right-to-left">
+                <div className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">💼</span>
                     </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Curriculum for Jobs of 2030
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed">
+                      Future-focused learning paths designed for tomorrow's
+                      careers
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
                   </div>
                 </div>
-              ))}
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.1s" }}
+                >
+                  <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">👨‍💼</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Corporate Leaders Turned Educators
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed">
+                      Learn directly from industry veterans and Fortune 500
+                      executives
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.2s" }}
+                >
+                  <div className="bg-gradient-to-br from-white to-purple-50/30 rounded-xl p-4 shadow-lg border border-purple-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full -translate-y-6 translate-x-6"></div>
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg relative z-10">
+                      <span className="text-white text-lg">🚀</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Build Your First Startup
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed relative z-10">
+                      Comprehensive entrepreneurship programs with real business
+                      incubation
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-100 animate-pulse"></div>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.3s" }}
+                >
+                  <div className="bg-gradient-to-br from-white to-green-50/30 rounded-xl p-4 shadow-lg border border-green-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">⚡</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      NextGen Tech Tools
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed">
+                      Advanced technologies and AI-powered learning platforms
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.4s" }}
+                >
+                  <div className="bg-gradient-to-br from-white to-red-50/30 rounded-xl p-4 shadow-lg border border-red-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">📚</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Practical Learning Over Theory
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed">
+                      Hands-on experience with live projects and industry
+                      collaborations
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                {/* Duplicate cards for seamless loop */}
+                <div className="flex-shrink-0 w-64 group relative cursor-pointer">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">💼</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Curriculum for Jobs of 2030
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed">
+                      Future-focused learning paths designed for tomorrow's
+                      careers
+                    </p>
+                  </div>
+                </div>
+                <div className="flex-shrink-0 w-64 group relative cursor-pointer">
+                  <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">👨‍💼</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Corporate Leaders Turned Educators
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed">
+                      Learn directly from industry veterans and Fortune 500
+                      executives
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Grid */}
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 items-stretch">
+            {/* 1. Curriculum for Jobs of 2030 */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">💼</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  Curriculum for Jobs of 2030
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  Future-focused learning paths designed for tomorrow's careers
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
             </div>
 
-            {/* Compact CTA Buttons */}
-            <div className="flex gap-3">
-              <a
-                href="https://sunstone.in/apply-now"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#c38935] to-[#f4d03f] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-              >
-                <span>Explore Programs</span>
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
-              <a
-                href="tel:+917065303030"
-                className="group inline-flex items-center px-6 py-3 bg-white/20 hover:bg-white/30 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-white/30"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                <span>Call Now</span>
-              </a>
+            {/* 2. Corporate Leaders Turned Educators */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">👨‍💼</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  Corporate Leaders Turned Educators
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  Learn directly from industry veterans and Fortune 500
+                  executives
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* 3. Build Your First Startup */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">🚀</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  Build Your First Startup
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  Comprehensive entrepreneurship programs with real business
+                  incubation
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* 4. NextGen Tech Tools */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.4s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">⚡</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  NextGen Tech Tools
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  Advanced technologies and AI-powered learning platforms
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* 5. Practical Learning Over Theory */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.5s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">📚</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  Practical Learning Over Theory
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  Hands-on experience with live projects and industry
+                  collaborations
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
             </div>
           </div>
         </div>
