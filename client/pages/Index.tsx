@@ -1968,9 +1968,9 @@ const Index = () => {
                     desc: "High-tech computer laboratories"
                   }
                 ].map((amenity, index) => (
-                  <div key={index} className="flex-shrink-0 w-80 group">
-                    <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
-                      <div className="relative h-48 overflow-hidden">
+                  <div key={index} className="flex-shrink-0 w-64 group">
+                    <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105">
+                      <div className="relative h-36 overflow-hidden">
                         <img
                           src={amenity.image}
                           alt={amenity.title}
