@@ -1860,11 +1860,17 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Featured Wistia Video Section */}
-          <div className="max-w-4xl mx-auto mb-12 md:mb-16 animate-scale-in">
+          {/* Enhanced Featured Wistia Video Section */}
+          <div className="max-w-4xl mx-auto mb-12 md:mb-16 animate-scale-in" style={{animationDelay: "0.8s"}}>
             <div className="relative group">
-              <div className="relative bg-gradient-to-br from-[#22336a] to-[#c38935] rounded-3xl p-3 shadow-2xl group-hover:scale-105 transition-transform duration-700">
-                <div className="bg-white rounded-2xl overflow-hidden aspect-video relative">
+              {/* Animated glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#c38935]/30 via-[#22336a]/20 to-[#c38935]/30 rounded-3xl blur-xl opacity-60 group-hover:opacity-90 transition-opacity duration-700 animate-pulse-glow"></div>
+
+              <div className="relative bg-gradient-to-br from-[#22336a] to-[#c38935] rounded-3xl p-3 shadow-2xl group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-700 border-2 border-white/20">
+                {/* Animated border effect */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] opacity-0 group-hover:opacity-40 transition-opacity duration-700 animate-gradient-shift bg-[length:200%]" style={{padding: "2px"}}></div>
+
+                <div className="bg-white rounded-2xl overflow-hidden aspect-video relative group-hover:shadow-inner transition-all duration-700">
                   {/* New Wistia Player */}
                   <div className="w-full h-full relative">
                     <script src="https://fast.wistia.com/player.js" async></script>
