@@ -2035,8 +2035,6 @@ const Index = () => {
             </div>
           </div>
 
-
-
           {/* Compact CTA */}
           <div className="text-center animate-fade-in-up">
             <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-6 max-w-3xl mx-auto shadow-xl relative overflow-hidden">
@@ -2098,7 +2096,8 @@ const Index = () => {
                       Curriculum for Jobs of 2030
                     </h3>
                     <p className="text-gray-600 text-xs leading-relaxed">
-                      Future-focused learning paths designed for tomorrow's careers
+                      Future-focused learning paths designed for tomorrow's
+                      careers
                     </p>
                     <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
                   </div>
@@ -2115,7 +2114,8 @@ const Index = () => {
                       Corporate Leaders Turned Educators
                     </h3>
                     <p className="text-gray-600 text-xs leading-relaxed">
-                      Learn directly from industry veterans and Fortune 500 executives
+                      Learn directly from industry veterans and Fortune 500
+                      executives
                     </p>
                     <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
                   </div>
@@ -2133,7 +2133,8 @@ const Index = () => {
                       Build Your First Startup
                     </h3>
                     <p className="text-gray-600 text-xs leading-relaxed relative z-10">
-                      Comprehensive entrepreneurship programs with real business incubation
+                      Comprehensive entrepreneurship programs with real business
+                      incubation
                     </p>
                     <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-100 animate-pulse"></div>
                   </div>
@@ -2167,7 +2168,8 @@ const Index = () => {
                       Practical Learning Over Theory
                     </h3>
                     <p className="text-gray-600 text-xs leading-relaxed">
-                      Hands-on experience with live projects and industry collaborations
+                      Hands-on experience with live projects and industry
+                      collaborations
                     </p>
                     <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
                   </div>
@@ -2182,7 +2184,8 @@ const Index = () => {
                       Curriculum for Jobs of 2030
                     </h3>
                     <p className="text-gray-600 text-xs leading-relaxed">
-                      Future-focused learning paths designed for tomorrow's careers
+                      Future-focused learning paths designed for tomorrow's
+                      careers
                     </p>
                   </div>
                 </div>
@@ -2195,7 +2198,8 @@ const Index = () => {
                       Corporate Leaders Turned Educators
                     </h3>
                     <p className="text-gray-600 text-xs leading-relaxed">
-                      Learn directly from industry veterans and Fortune 500 executives
+                      Learn directly from industry veterans and Fortune 500
+                      executives
                     </p>
                   </div>
                 </div>
@@ -2237,7 +2241,8 @@ const Index = () => {
                   Corporate Leaders Turned Educators
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
-                  Learn directly from industry veterans and Fortune 500 executives
+                  Learn directly from industry veterans and Fortune 500
+                  executives
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -2256,7 +2261,8 @@ const Index = () => {
                   Build Your First Startup
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
-                  Comprehensive entrepreneurship programs with real business incubation
+                  Comprehensive entrepreneurship programs with real business
+                  incubation
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -2294,7 +2300,8 @@ const Index = () => {
                   Practical Learning Over Theory
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
-                  Hands-on experience with live projects and industry collaborations
+                  Hands-on experience with live projects and industry
+                  collaborations
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
