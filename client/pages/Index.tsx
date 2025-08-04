@@ -2138,6 +2138,149 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Sunstone New Age Education Section */}
+      <section className="py-12 md:py-20 bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] relative overflow-hidden">
+        {/* Enhanced Background Effects */}
+        <div className="absolute inset-0">
+          {/* Animated geometric patterns */}
+          <div className="absolute inset-0 opacity-10">
+            {[...Array(15)].map((_, i) => (
+              <div
+                key={i}
+                className={`absolute w-1 h-1 bg-[#c38935] rounded-full animate-float`}
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  animationDuration: `${3 + Math.random() * 2}s`
+                }}
+              ></div>
+            ))}
+          </div>
+
+          {/* Gradient orbs */}
+          <div className="absolute top-20 left-20 w-48 h-48 bg-[#c38935]/20 rounded-full blur-3xl animate-pulse-glow"></div>
+          <div className="absolute bottom-20 right-20 w-64 h-64 bg-[#f4d03f]/15 rounded-full blur-3xl animate-float" style={{animationDelay: "2s"}}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+
+            {/* Content Section */}
+            <div className="animate-slide-in-left">
+              {/* Header Badge */}
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-full mb-6 shadow-lg animate-bounce-subtle">
+                <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
+                <span className="text-white font-bold text-sm tracking-wide">
+                  🚀 FUTURE-READY EDUCATION
+                </span>
+              </div>
+
+              {/* Main Title */}
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                <span className="text-white">New-Age Education</span>
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-shift">
+                  That Secures Futures
+                </span>
+              </h2>
+
+              {/* Experience Badge */}
+              <div className="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-xl px-4 py-2 mb-6 border border-white/20">
+                <Trophy className="w-5 h-5 text-[#f4d03f] mr-2" />
+                <span className="text-white font-semibold">23 Years of Excellence in Education</span>
+              </div>
+
+              {/* Key Features Grid */}
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                {[
+                  { icon: "💼", title: "Curriculum for Jobs of 2030", desc: "Future-focused learning paths" },
+                  { icon: "👨‍💼", title: "Corporate Leaders Turned Educators", desc: "Learn from industry experts" },
+                  { icon: "🚀", title: "Build Your First Startup", desc: "Entrepreneurship programs" },
+                  { icon: "🔧", title: "NextGen Tech Tools", desc: "Cutting-edge technology" },
+                  { icon: "📚", title: "Practical Learning Over Theory", desc: "Hands-on experience focus" }
+                ].map((feature, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 group animate-fade-in-up"
+                    style={{animationDelay: `${index * 0.1}s`}}
+                  >
+                    <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
+                    <h4 className="text-white font-bold text-sm mb-1">{feature.title}</h4>
+                    <p className="text-white/70 text-xs">{feature.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://sunstone.in/apply-now"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[#c38935] to-[#f4d03f] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                >
+                  <span>Explore Programs</span>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                </a>
+                <a
+                  href="tel:+917065303030"
+                  className="group inline-flex items-center justify-center px-6 py-3 bg-white/20 hover:bg-white/30 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-white/30"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  <span>Call Now</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Image Section */}
+            <div className="lg:order-1 animate-slide-in-right">
+              <div className="relative group">
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#c38935]/30 to-[#f4d03f]/30 rounded-2xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+
+                {/* Main image container */}
+                <div className="relative bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-2xl p-2 shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                  <div className="bg-white rounded-xl overflow-hidden">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F7ef147e3780f42888cff17ff339d0b29%2Ff23883c6a7054d088ecefce60b516d79?format=webp&width=800"
+                      alt="Sunstone New Age Education"
+                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                </div>
+
+                {/* Floating elements */}
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#f4d03f] rounded-full flex items-center justify-center animate-bounce shadow-lg">
+                  <span className="text-white font-bold text-sm">🌟</span>
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-[#c38935] rounded-full flex items-center justify-center animate-pulse shadow-lg">
+                  <GraduationCap className="w-6 h-6 text-white" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Stats Bar */}
+          <div className="mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in-up" style={{animationDelay: "0.8s"}}>
+            {[
+              { number: "5000+", label: "Students Placed", icon: "👨‍🎓" },
+              { number: "1200+", label: "Corporate Partners", icon: "🤝" },
+              { number: "26 LPA", label: "Highest Package", icon: "💰" },
+              { number: "95%", label: "Placement Rate", icon: "📈" }
+            ].map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 group-hover:scale-105">
+                  <div className="text-2xl mb-2 group-hover:animate-bounce">{stat.icon}</div>
+                  <div className="text-2xl md:text-3xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300">{stat.number}</div>
+                  <div className="text-white/80 text-sm font-medium">{stat.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Key Offerings - Smaller Mobile Version */}
       <section className="py-6 md:py-16 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
