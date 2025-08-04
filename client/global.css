@@ -209,6 +209,26 @@
     animation: scrollLeftToRight 25s linear infinite;
   }
 
+  .animate-bounce-in {
+    animation: bounceIn 0.8s ease-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .animate-gradient-text {
+    animation: gradientText 3s ease-in-out infinite;
+  }
+
+  .animate-border-flow {
+    animation: borderFlow 2s linear infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite;
+  }
+
   /* Hover effects */
   .hover-lift {
     transition:
