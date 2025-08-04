@@ -692,14 +692,14 @@ const Index = () => {
                     {/* Interactive Overlay Elements */}
                     <div className="absolute top-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                       {/* Live Indicator */}
-                      <div className="flex items-center bg-red-500/80 backdrop-blur-sm px-3 py-1 rounded-full">
+                      <div className="flex items-center bg-red-500/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
                         <div className="w-2 h-2 bg-red-300 rounded-full mr-2 animate-pulse"></div>
                         <span className="text-white text-xs font-semibold">LIVE CAMPUS</span>
                       </div>
 
                       {/* View Counter */}
-                      <div className="bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full">
-                        <span className="text-white text-xs">👁️ 15.2K views</span>
+                      <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
+                        <span className="text-gray-800 text-xs font-semibold">👁️ 15.2K views</span>
                       </div>
                     </div>
 
@@ -709,20 +709,20 @@ const Index = () => {
                         {/* Programs Showcase */}
                         <div className="space-y-2">
                           {['MBA', 'BCA', 'B.Tech'].map((program, i) => (
-                            <div key={program} className="bg-[#c38935]/80 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs font-semibold animate-slide-in-left" style={{animationDelay: `${i * 0.2}s`}}>
+                            <div key={program} className="bg-[#c38935]/90 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs font-semibold animate-slide-in-left shadow-lg" style={{animationDelay: `${i * 0.2}s`}}>
                               {program}
                             </div>
                           ))}
                         </div>
 
                         {/* Rating Display */}
-                        <div className="bg-black/60 backdrop-blur-sm px-4 py-2 rounded-xl text-center animate-fade-in">
+                        <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-xl text-center animate-fade-in shadow-lg">
                           <div className="flex items-center justify-center mb-1">
                             {[...Array(5)].map((_, i) => (
                               <Star key={i} className="w-3 h-3 text-yellow-400 fill-current" />
                             ))}
                           </div>
-                          <div className="text-white text-xs">4.9/5 Student Rating</div>
+                          <div className="text-gray-800 text-xs font-semibold">4.9/5 Student Rating</div>
                         </div>
                       </div>
                     </div>
