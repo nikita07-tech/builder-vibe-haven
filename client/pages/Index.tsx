@@ -1871,28 +1871,16 @@ const Index = () => {
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] opacity-0 group-hover:opacity-40 transition-opacity duration-700 animate-gradient-shift bg-[length:200%]" style={{padding: "2px"}}></div>
 
                 <div className="bg-white rounded-2xl overflow-hidden aspect-video relative group-hover:shadow-inner transition-all duration-700">
-                  {/* New Wistia Player */}
+                  {/* YouTube Player with Autoplay */}
                   <div className="w-full h-full relative">
-                    <script src="https://fast.wistia.com/player.js" async></script>
-                    <script src="https://fast.wistia.com/embed/fn93dowpt4.js" async type="module"></script>
-                    <style dangerouslySetInnerHTML={{
-                      __html: `
-                        wistia-player[media-id='fn93dowpt4']:not(:defined) {
-                          background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/fn93dowpt4/swatch');
-                          display: block;
-                          filter: blur(5px);
-                          padding-top:56.25%;
-                        }
-                      `
-                    }} />
-                    <wistia-player
-                      media-id="fn93dowpt4"
-                      aspect="1.7777777777777777"
-                      className="w-full h-full"
-                      autoplay="true"
-                      muted="true"
-                      loop="true"
-                    ></wistia-player>
+                    <iframe
+                      src="https://www.youtube.com/embed/CTqsYPeW2vE?autoplay=1&mute=1&loop=1&playlist=CTqsYPeW2vE&controls=1&modestbranding=1&rel=0&showinfo=0"
+                      title="Hi-Tech Institute Campus Life - Immersive Experience"
+                      className="w-full h-full group-hover:scale-105 transition-transform duration-700"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
                   </div>
 
                   {/* Enhanced Video Overlay Elements */}
