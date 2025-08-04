@@ -624,8 +624,8 @@ const Index = () => {
           {/* Enhanced Animated Header */}
           <div className="text-center mb-8 md:mb-16">
             {/* Floating Badge */}
-            <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-white/5 backdrop-blur-lg rounded-full mb-6 md:mb-8 border border-[#c38935]/30 shadow-2xl group hover:bg-white/10 transition-all duration-500 animate-bounce-in">
-              <div className="w-3 h-3 bg-[#c38935] rounded-full mr-3 animate-pulse"></div>
+            <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a] to-[#c38935] backdrop-blur-lg rounded-full mb-6 md:mb-8 border border-white/20 shadow-2xl group hover:scale-105 transition-all duration-500 animate-bounce-in">
+              <div className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></div>
               <span className="text-white font-semibold text-sm md:text-base tracking-wide">
                 🎬 IMMERSIVE CAMPUS EXPERIENCE
               </span>
@@ -634,8 +634,8 @@ const Index = () => {
 
             {/* Animated Title */}
             <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
-              <span className="inline-block animate-slide-in-left text-white">Experience</span>{" "}
-              <span className="inline-block animate-slide-in-right text-white">Our</span>
+              <span className="inline-block animate-slide-in-left text-[#22336a]">Experience</span>{" "}
+              <span className="inline-block animate-slide-in-right text-[#22336a]">Our</span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-text inline-block animate-scale-in" style={{animationDelay: "0.3s"}}>
                 Vibrant Campus Life
@@ -643,7 +643,7 @@ const Index = () => {
             </h2>
 
             <div className="max-w-4xl mx-auto">
-              <p className="text-sm md:text-xl text-white/80 leading-relaxed animate-fade-in-up mb-6" style={{animationDelay: "0.5s"}}>
+              <p className="text-sm md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-6" style={{animationDelay: "0.5s"}}>
                 Step into a world where education meets innovation, creativity, and community.
                 Watch our students thrive in an environment designed for excellence.
               </p>
