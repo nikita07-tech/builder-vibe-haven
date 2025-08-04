@@ -584,7 +584,7 @@ const Index = () => {
       </section>
 
       {/* Ultra-Enhanced Video Experience Section */}
-      <section className="py-12 md:py-24 bg-gradient-to-br from-[#0a0e27] via-[#22336a] to-[#1a2951] relative overflow-hidden">
+      <section className="py-12 md:py-24 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
         {/* Advanced Animated Background */}
         <div className="absolute inset-0">
           {/* Multiple floating orbs with different animations */}
