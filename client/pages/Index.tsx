@@ -1810,22 +1810,54 @@ const Index = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Header */}
-          <div className="text-center mb-8 md:mb-12">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mb-6 shadow-lg animate-bounce-in">
-              <span className="text-white font-bold text-sm md:text-base">
-                🏆 CAMPUS LIFE EXPERIENCE
+          {/* Enhanced Header with Dynamic Effects */}
+          <div className="text-center mb-8 md:mb-12 animate-fade-in">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mb-6 shadow-lg hover:shadow-2xl transition-all duration-500 group animate-bounce-subtle hover:scale-105">
+              <div className="w-3 h-3 bg-white/30 rounded-full mr-3 animate-pulse group-hover:animate-bounce"></div>
+              <span className="text-white font-bold text-sm md:text-base tracking-wide">
+                🏆 IMMERSIVE CAMPUS EXPERIENCE
               </span>
+              <div className="w-3 h-3 bg-white/30 rounded-full ml-3 animate-pulse group-hover:animate-bounce" style={{animationDelay: "0.5s"}}></div>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#22336a] mb-4">
-              Discover Our
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
-                {" "}Campus Amenities
+
+            {/* Animated title with staggered effect */}
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#22336a] mb-4 leading-tight">
+              <span className="inline-block animate-slide-in-left">Discover</span>{" "}
+              <span className="inline-block animate-slide-in-right" style={{animationDelay: "0.2s"}}>Our</span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-shift inline-block animate-scale-in" style={{animationDelay: "0.4s"}}>
+                Campus Amenities
               </span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Experience world-class facilities designed for your academic excellence and personal growth
-            </p>
+
+            {/* Enhanced description with interactive stats */}
+            <div className="max-w-3xl mx-auto animate-fade-in" style={{animationDelay: "0.6s"}}>
+              <p className="text-lg text-gray-700 mb-6">
+                Experience world-class facilities designed for your academic excellence and personal growth
+              </p>
+
+              {/* Interactive stats with hover effects */}
+              <div className="grid grid-cols-3 gap-4 md:gap-8 mb-6">
+                <div className="group cursor-pointer">
+                  <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-[#c38935]/30">
+                    <div className="text-2xl md:text-3xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300">50+</div>
+                    <div className="text-sm text-gray-600 font-medium">Premium Facilities</div>
+                  </div>
+                </div>
+                <div className="group cursor-pointer">
+                  <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-[#22336a]/30">
+                    <div className="text-2xl md:text-3xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300">24/7</div>
+                    <div className="text-sm text-gray-600 font-medium">Access Available</div>
+                  </div>
+                </div>
+                <div className="group cursor-pointer">
+                  <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-[#f4d03f]/30">
+                    <div className="text-2xl md:text-3xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300">100%</div>
+                    <div className="text-sm text-gray-600 font-medium">Student Satisfaction</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Featured Wistia Video Section */}
