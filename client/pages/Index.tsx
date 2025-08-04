@@ -766,10 +766,10 @@ const Index = () => {
               { icon: "🚀", title: "Innovation", desc: "Cutting-edge learning methods" },
               { icon: "🤝", title: "Community", desc: "Vibrant student networks" }
             ].map((item, i) => (
-              <div key={i} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-[#c38935]/50 transition-all duration-500 hover:-translate-y-2 hover:scale-105 group">
+              <div key={i} className="bg-white/70 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 hover:border-[#c38935]/50 transition-all duration-500 hover:-translate-y-2 hover:scale-105 group shadow-lg hover:shadow-xl">
                 <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">{item.icon}</div>
-                <h4 className="text-white font-bold text-lg mb-2 group-hover:text-[#c38935] transition-colors duration-300">{item.title}</h4>
-                <p className="text-white/70 text-sm">{item.desc}</p>
+                <h4 className="text-[#22336a] font-bold text-lg mb-2 group-hover:text-[#c38935] transition-colors duration-300">{item.title}</h4>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
