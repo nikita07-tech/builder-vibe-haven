@@ -1925,10 +1925,26 @@ const Index = () => {
                   </div>
                 </div>
 
-                {/* Video Info Panel */}
-                <div className="absolute -bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl border border-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 pointer-events-none">
-                  <h3 className="font-bold text-[#22336a] text-sm mb-1">🏫 Immersive Campus Experience</h3>
-                  <p className="text-gray-600 text-xs">Take a virtual tour of our state-of-the-art facilities and vibrant campus life</p>
+                {/* Enhanced Video Info Panel */}
+                <div className="absolute -bottom-8 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl border border-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-700 transform translate-y-4 group-hover:translate-y-0 pointer-events-none">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-bold text-[#22336a] text-sm flex items-center">
+                      <div className="w-6 h-6 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-full mr-2 flex items-center justify-center animate-spin" style={{animationDuration: "3s"}}>
+                        <span className="text-white text-xs">🏫</span>
+                      </div>
+                      Immersive Campus Experience
+                    </h3>
+                    <div className="flex space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <div key={i} className="w-1 h-1 bg-[#c38935] rounded-full animate-pulse" style={{animationDelay: `${i * 0.1}s`}}></div>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="text-gray-600 text-xs mb-2">Take a virtual tour of our state-of-the-art facilities and vibrant campus life</p>
+                  <div className="flex justify-between items-center text-xs">
+                    <span className="text-[#c38935] font-semibold">🎯 Auto-playing for seamless experience</span>
+                    <span className="text-gray-500">👁️ 12.5K+ views today</span>
+                  </div>
                 </div>
               </div>
             </div>
