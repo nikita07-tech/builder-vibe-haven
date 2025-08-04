@@ -387,29 +387,15 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-12 items-center">
             <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
               <h1 className="text-sm sm:text-lg md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
-                Transform Your Future with
+                <span>Unlock Your Potential with</span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
                   {" "}
-                  Premier Education
+                  World-Class Education
                 </span>
               </h1>
-              <div className="mb-2 md:mb-6">
-                <p className="text-xs sm:text-xs md:text-base lg:text-lg xl:text-xl text-white/90 leading-relaxed max-w-2xl mb-1 md:mb-3 lg:mb-4">
-                  Join Hi-Tech Institute for industry-aligned programs with
-                  guaranteed placement support.
-                </p>
-                <div className="inline-flex items-center px-2 md:px-6 py-1 md:py-3 rounded-lg md:rounded-xl">
-                  <div className="flex items-center mr-1 md:mr-3">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe8fe1239f4724767b509ddb3b4f8688e?format=webp&width=800"
-                      alt="Institution Image"
-                      className="h-4 md:h-8 lg:h-10 w-auto rounded-md md:rounded-lg"
-                    />
-                  </div>
-                  <span className="text-white font-bold text-xs md:text-base lg:text-lg">
-                    Powered By Sunstone
-                  </span>
-                </div>
+              <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3">
+                Join Hi-Tech Institute for industry-aligned programs with
+                guaranteed placement support.
               </div>
               <div className="flex flex-col gap-1 md:gap-3 lg:gap-4">
                 <a
@@ -590,6 +576,54 @@ const Index = () => {
                 <p className="text-[9px] md:text-sm">
                   Placement report audited by B2K Analytics Official Auditor for
                   IIM Ahemdabad
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-6 md:py-16 bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-20 w-96 h-96 bg-[#c38935]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-6">
+              Experience Our
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
+                {" "}
+                Campus Life
+              </span>
+            </h2>
+            <p className="text-xs md:text-lg text-white/80 max-w-3xl mx-auto">
+              Get a glimpse of our vibrant campus, state-of-the-art facilities, and dynamic learning environment
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-2xl bg-black/20 backdrop-blur-sm border border-white/10">
+              <div className="aspect-video relative">
+                <iframe
+                  src="https://www.youtube.com/embed/2CNUyGRAyVU?autoplay=1&mute=1&loop=1&playlist=2CNUyGRAyVU&controls=1&modestbranding=1&rel=0"
+                  title="Hi-Tech Institute Campus Life"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+              </div>
+
+              <div className="p-4 md:p-6 bg-white/10 backdrop-blur-sm">
+                <h3 className="text-white font-bold text-sm md:text-lg mb-2">
+                  Hi-Tech Institute - Where Dreams Take Flight
+                </h3>
+                <p className="text-white/80 text-xs md:text-sm">
+                  Discover our programs: MBA • BBA • BCA • MCA • B.Tech - All designed for industry success with guaranteed placement support
                 </p>
               </div>
             </div>
@@ -1582,6 +1616,177 @@ const Index = () => {
                 guidance from industry professionals throughout your journey.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Campus Amenities Section */}
+      <section className="py-8 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float" style={{animationDelay: "3s"}}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-8 md:mb-16">
+            <div className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-[#22336a]/10 rounded-full mb-4 md:mb-6">
+              <span className="text-[#22336a] font-semibold text-sm md:text-base">
+                🏫 WORLD-CLASS FACILITIES
+              </span>
+            </div>
+            <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-4 md:mb-6">
+              Campus
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
+                {" "}
+                Amenities
+              </span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
+                by Sunstone
+              </span>
+            </h2>
+            <p className="text-sm md:text-lg text-gray-700 max-w-3xl mx-auto">
+              Experience premium campus facilities designed to enhance your learning journey and campus life
+            </p>
+          </div>
+
+          {/* Mobile - Animated Cards */}
+          <div className="block md:hidden mb-8">
+            <div className="space-y-4">
+              {[
+                {
+                  title: "Smart Classrooms",
+                  description: "Interactive whiteboards, projectors, and modern AV systems for immersive learning",
+                  image: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600",
+                  color: "from-[#22336a] to-[#3b4d7a]",
+                  delay: "0s"
+                },
+                {
+                  title: "Modern Library",
+                  description: "Extensive collection of books, journals, and digital resources with quiet study zones",
+                  image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop&crop=center",
+                  color: "from-[#c38935] to-[#f4d03f]",
+                  delay: "0.1s"
+                },
+                {
+                  title: "Computer Labs",
+                  description: "State-of-the-art computer labs with latest software and high-speed internet",
+                  image: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=600&h=400&fit=crop&crop=center",
+                  color: "from-[#22336a] to-[#3b4d7a]",
+                  delay: "0.2s"
+                },
+                {
+                  title: "Sports Facilities",
+                  description: "Indoor and outdoor sports facilities including gym, basketball, and recreational areas",
+                  image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center",
+                  color: "from-[#c38935] to-[#f4d03f]",
+                  delay: "0.3s"
+                }
+              ].map((amenity, index) => (
+                <div key={index} className={`group animate-slide-in-left`} style={{animationDelay: amenity.delay}}>
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                    <div className="relative h-32 overflow-hidden">
+                      <img
+                        src={amenity.image}
+                        alt={amenity.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-t ${amenity.color} opacity-80`}></div>
+                      <div className="absolute bottom-3 left-3 right-3">
+                        <h3 className="text-white font-bold text-sm mb-1">{amenity.title}</h3>
+                      </div>
+                    </div>
+                    <div className="p-3">
+                      <p className="text-gray-600 text-xs leading-relaxed">{amenity.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop - Grid Layout */}
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {[
+              {
+                title: "Smart Classrooms",
+                description: "Interactive whiteboards, projectors, and modern AV systems for immersive learning experiences",
+                image: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600",
+                color: "from-[#22336a] to-[#3b4d7a]",
+                delay: "0.1s"
+              },
+              {
+                title: "Modern Library",
+                description: "Extensive collection of books, journals, and digital resources with quiet study zones",
+                image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop&crop=center",
+                color: "from-[#c38935] to-[#f4d03f]",
+                delay: "0.2s"
+              },
+              {
+                title: "Computer Labs",
+                description: "State-of-the-art computer labs with latest software and high-speed internet connectivity",
+                image: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=600&h=400&fit=crop&crop=center",
+                color: "from-[#22336a] to-[#3b4d7a]",
+                delay: "0.3s"
+              },
+              {
+                title: "Sports & Recreation",
+                description: "Indoor and outdoor sports facilities including gym, basketball court, and recreational areas",
+                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center",
+                color: "from-[#c38935] to-[#f4d03f]",
+                delay: "0.4s"
+              },
+              {
+                title: "Cafeteria",
+                description: "Spacious dining area serving nutritious meals and snacks in a comfortable environment",
+                image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop&crop=center",
+                color: "from-[#22336a] to-[#3b4d7a]",
+                delay: "0.5s"
+              },
+              {
+                title: "Auditorium",
+                description: "Modern auditorium for seminars, conferences, and cultural events with advanced sound systems",
+                image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop&crop=center",
+                color: "from-[#c38935] to-[#f4d03f]",
+                delay: "0.6s"
+              },
+              {
+                title: "Wi-Fi Campus",
+                description: "High-speed wireless internet connectivity throughout the campus for seamless digital learning",
+                image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=600&h=400&fit=crop&crop=center",
+                color: "from-[#22336a] to-[#3b4d7a]",
+                delay: "0.7s"
+              },
+              {
+                title: "Hostel Facilities",
+                description: "Comfortable accommodation with modern amenities for outstation students",
+                image: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&h=400&fit=crop&crop=center",
+                color: "from-[#c38935] to-[#f4d03f]",
+                delay: "0.8s"
+              }
+            ].map((amenity, index) => (
+              <div key={index} className={`group animate-fade-in-up`} style={{animationDelay: amenity.delay}}>
+                <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 h-full">
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={amenity.image}
+                      alt={amenity.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-t ${amenity.color} opacity-70 group-hover:opacity-80 transition-opacity duration-300`}></div>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <h3 className="text-white font-bold text-lg mb-1 group-hover:text-yellow-200 transition-colors duration-300">{amenity.title}</h3>
+                    </div>
+                    <div className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+                      <span className="text-white text-lg">✨</span>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{amenity.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
