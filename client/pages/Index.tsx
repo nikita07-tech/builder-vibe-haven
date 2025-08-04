@@ -1909,8 +1909,8 @@ const Index = () => {
               <div className="flex-1 h-px bg-gradient-to-r from-[#c38935] to-transparent"></div>
             </div>
 
-            <div className="relative overflow-hidden bg-gray-50 rounded-2xl py-6">
-              <div className="flex space-x-6 animate-scroll-right-to-left whitespace-nowrap">
+            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-4">
+              <div className="flex space-x-4 animate-scroll-right-to-left whitespace-nowrap">
                 {[
                   {
                     title: "Creative Studio",
@@ -3650,7 +3650,7 @@ const Index = () => {
                   },
                   {
                     name: "Pulkit Singh",
-                    role: "MBA Graduate • Dhanguard 10 LPA",
+                    role: "MBA Graduate �� Dhanguard 10 LPA",
                     company: "GDG",
                     batch: "22-24",
                     initials: "PS",
