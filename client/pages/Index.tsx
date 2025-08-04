@@ -1765,190 +1765,330 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Compact Campus Amenities with Wistia Video Integration */}
+      {/* Campus Amenities with Wistia Video & Horizontal Scrolling */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
         {/* Subtle Background Animation */}
         <div className="absolute inset-0">
-          {[...Array(8)].map((_, i) => (
+          {[...Array(12)].map((_, i) => (
             <div
               key={i}
-              className={`absolute w-3 h-3 ${i % 2 === 0 ? 'bg-[#c38935]/10' : 'bg-[#22336a]/10'} rounded-full animate-float`}
+              className={`absolute w-2 h-2 ${i % 3 === 0 ? 'bg-[#c38935]/15' : i % 3 === 1 ? 'bg-[#22336a]/15' : 'bg-[#f4d03f]/15'} rounded-full animate-float`}
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${4 + Math.random() * 2}s`
+                animationDelay: `${Math.random() * 4}s`,
+                animationDuration: `${3 + Math.random() * 3}s`
               }}
             ></div>
           ))}
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Compact Header */}
+          {/* Header */}
           <div className="text-center mb-8 md:mb-12">
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mb-6 shadow-lg animate-bounce-in">
               <span className="text-white font-bold text-sm md:text-base">
-                🏆 PREMIUM CAMPUS AMENITIES
+                🏆 CAMPUS LIFE EXPERIENCE
               </span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#22336a] mb-4">
-              World-Class
+              Discover Our
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
-                {" "}Campus Facilities
+                {" "}Campus Amenities
               </span>
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Experience excellence through our state-of-the-art amenities designed for your success
+              Experience world-class facilities designed for your academic excellence and personal growth
             </p>
           </div>
 
-          {/* Main Content Grid with Wistia Video Integration */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12">
-            {/* Featured Video Section */}
-            <div className="relative group animate-slide-in-left">
+          {/* Featured Wistia Video Section */}
+          <div className="max-w-4xl mx-auto mb-12 md:mb-16 animate-scale-in">
+            <div className="relative group">
               <div className="relative bg-gradient-to-br from-[#22336a] to-[#c38935] rounded-3xl p-3 shadow-2xl group-hover:scale-105 transition-transform duration-700">
                 <div className="bg-white rounded-2xl overflow-hidden aspect-video relative">
-                  {/* Wistia Video Integration */}
-                  <iframe
-                    src="https://typeform-product.wistia.com/medias/fn93dowpt4?searchQueryId=264706f553716c7b971a13eedf3b11b9"
-                    title="Campus Amenities Tour - Sunstone Experience"
-                    className="w-full h-full"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                  {/* New Wistia Player */}
+                  <div className="w-full h-full relative">
+                    <script src="https://fast.wistia.com/player.js" async></script>
+                    <script src="https://fast.wistia.com/embed/fn93dowpt4.js" async type="module"></script>
+                    <style dangerouslySetInnerHTML={{
+                      __html: `
+                        wistia-player[media-id='fn93dowpt4']:not(:defined) {
+                          background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/fn93dowpt4/swatch');
+                          display: block;
+                          filter: blur(5px);
+                          padding-top:56.25%;
+                        }
+                      `
+                    }} />
+                    <wistia-player
+                      media-id="fn93dowpt4"
+                      aspect="1.7777777777777777"
+                      className="w-full h-full"
+                    ></wistia-player>
+                  </div>
 
                   {/* Video Overlay Elements */}
-                  <div className="absolute top-4 left-4 px-3 py-1 bg-red-500/90 rounded-full text-white text-xs font-bold animate-pulse">
-                    🔴 CAMPUS TOUR
-                  </div>
-                  <div className="absolute top-4 right-4 px-3 py-1 bg-white/90 rounded-full text-gray-800 text-xs font-semibold">
-                    🎬 Interactive Tour
+                  <div className="absolute top-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                    <div className="px-3 py-1 bg-red-500/90 rounded-full text-white text-xs font-bold animate-pulse">
+                      🔴 LIVE CAMPUS TOUR
+                    </div>
+                    <div className="px-3 py-1 bg-white/90 rounded-full text-gray-800 text-xs font-semibold">
+                      🎬 Interactive Experience
+                    </div>
                   </div>
                 </div>
 
                 {/* Video Info Panel */}
-                <div className="absolute -bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl border border-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
-                  <h3 className="font-bold text-[#22336a] text-sm mb-1">🏫 Virtual Campus Experience</h3>
-                  <p className="text-gray-600 text-xs">Take an immersive tour of our world-class facilities</p>
+                <div className="absolute -bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl border border-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 pointer-events-none">
+                  <h3 className="font-bold text-[#22336a] text-sm mb-1">🏫 Immersive Campus Experience</h3>
+                  <p className="text-gray-600 text-xs">Take a virtual tour of our state-of-the-art facilities and vibrant campus life</p>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Amenities Overview */}
-            <div className="space-y-6 animate-slide-in-right">
-              <div className="inline-flex items-center px-4 py-2 bg-[#c38935]/10 rounded-full">
-                <span className="text-[#c38935] font-bold text-sm">✨ FEATURED AMENITIES</span>
-              </div>
-              <h3 className="text-2xl md:text-4xl font-bold text-[#22336a] leading-tight">
-                Premium Learning
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
-                  {" "}Environment
-                </span>
-              </h3>
-              <p className="text-gray-700 leading-relaxed">
-                Discover our comprehensive range of modern facilities designed to enhance your educational journey and campus life experience.
-              </p>
+          {/* Horizontal Scrolling Amenities - First Row */}
+          <div className="mb-8">
+            <div className="flex items-center mb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-[#22336a] mr-4">Learning Spaces</h3>
+              <div className="flex-1 h-px bg-gradient-to-r from-[#c38935] to-transparent"></div>
+            </div>
 
-              {/* Quick Amenities Grid */}
-              <div className="grid grid-cols-2 gap-4">
+            <div className="relative overflow-hidden bg-gray-50 rounded-2xl py-6">
+              <div className="flex space-x-6 animate-scroll-right-to-left whitespace-nowrap">
                 {[
-                  { icon: "🧠", title: "Smart Classrooms", desc: "AI-powered learning spaces" },
-                  { icon: "📚", title: "Digital Library", desc: "24/7 knowledge access" },
-                  { icon: "💻", title: "Tech Labs", desc: "Cutting-edge equipment" },
-                  { icon: "🏋️", title: "Fitness Center", desc: "Wellness & sports facilities" }
-                ].map((item, i) => (
-                  <div key={i} className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-gray-200 hover:border-[#c38935]/50 transition-all duration-300 hover:scale-105 group/item">
-                    <div className="text-2xl mb-2 group-hover/item:scale-125 transition-transform duration-300">{item.icon}</div>
-                    <h4 className="font-bold text-[#22336a] text-sm mb-1 group-hover/item:text-[#c38935] transition-colors duration-300">{item.title}</h4>
-                    <p className="text-gray-600 text-xs">{item.desc}</p>
+                  {
+                    title: "Creative Studio",
+                    image: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=400&h=300&fit=crop",
+                    icon: "🎨",
+                    desc: "Design and innovation workspace"
+                  },
+                  {
+                    title: "Study Lounge",
+                    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
+                    icon: "📚",
+                    desc: "Quiet collaborative learning zones"
+                  },
+                  {
+                    title: "Digital Lab",
+                    image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop",
+                    icon: "💻",
+                    desc: "High-tech computer laboratories"
+                  },
+                  {
+                    title: "Maker Space",
+                    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
+                    icon: "🔧",
+                    desc: "Hands-on prototyping workshop"
+                  },
+                  {
+                    title: "Research Center",
+                    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+                    icon: "🔬",
+                    desc: "Advanced research facilities"
+                  },
+                  {
+                    title: "Presentation Hall",
+                    image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop",
+                    icon: "🎤",
+                    desc: "Modern auditorium spaces"
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    title: "Creative Studio",
+                    image: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=400&h=300&fit=crop",
+                    icon: "🎨",
+                    desc: "Design and innovation workspace"
+                  },
+                  {
+                    title: "Study Lounge",
+                    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
+                    icon: "📚",
+                    desc: "Quiet collaborative learning zones"
+                  },
+                  {
+                    title: "Digital Lab",
+                    image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop",
+                    icon: "💻",
+                    desc: "High-tech computer laboratories"
+                  }
+                ].map((amenity, index) => (
+                  <div key={index} className="flex-shrink-0 w-80 group">
+                    <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
+                      <div className="relative h-48 overflow-hidden">
+                        <img
+                          src={amenity.image}
+                          alt={amenity.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#22336a]/70 to-transparent group-hover:from-[#c38935]/70 transition-colors duration-500"></div>
+
+                        {/* Icon */}
+                        <div className="absolute top-4 left-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
+                          <span className="text-2xl">{amenity.icon}</span>
+                        </div>
+
+                        {/* Live Badge */}
+                        <div className="absolute top-4 right-4 px-2 py-1 bg-red-500/90 rounded-full text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse">
+                          ● LIVE
+                        </div>
+
+                        {/* Title */}
+                        <div className="absolute bottom-4 left-4 right-4 text-white">
+                          <h4 className="font-bold text-lg mb-1 group-hover:text-[#f4d03f] transition-colors duration-300">
+                            {amenity.title}
+                          </h4>
+                          <p className="text-xs opacity-90">{amenity.desc}</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Compact Amenities Showcase */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Innovation Labs",
-                image: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=600&h=400&fit=crop",
-                icon: "🔬",
-                color: "from-[#22336a] to-[#3b4d7a]"
-              },
-              {
-                title: "Study Spaces",
-                image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop",
-                icon: "📖",
-                color: "from-[#c38935] to-[#f4d03f]"
-              },
-              {
-                title: "Dining Hall",
-                image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop",
-                icon: "🍽️",
-                color: "from-[#22336a] to-[#3b4d7a]"
-              },
-              {
-                title: "Recreation Zone",
-                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop",
-                icon: "🎯",
-                color: "from-[#c38935] to-[#f4d03f]"
-              }
-            ].map((amenity, index) => (
-              <div key={index} className="group relative animate-fade-in-up" style={{animationDelay: `${index * 0.1}s`}}>
-                <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-500 hover:-translate-y-3 hover:scale-105">
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={amenity.image}
-                      alt={amenity.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${amenity.color} opacity-70 group-hover:opacity-50 transition-opacity duration-500`}></div>
+          {/* Horizontal Scrolling Amenities - Second Row */}
+          <div className="mb-12">
+            <div className="flex items-center mb-4">
+              <h3 className="text-xl md:text-2xl font-bold text-[#22336a] mr-4">Life & Wellness</h3>
+              <div className="flex-1 h-px bg-gradient-to-r from-[#c38935] to-transparent"></div>
+            </div>
 
-                    {/* Icon */}
-                    <div className="absolute top-4 left-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-125 transition-transform duration-500">
-                      <span className="text-2xl">{amenity.icon}</span>
-                    </div>
+            <div className="relative overflow-hidden bg-gray-50 rounded-2xl py-6">
+              <div className="flex space-x-6 animate-scroll-left-to-right whitespace-nowrap">
+                {[
+                  {
+                    title: "Fitness Center",
+                    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+                    icon: "🏋️",
+                    desc: "State-of-the-art gym facilities"
+                  },
+                  {
+                    title: "Dining Hall",
+                    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
+                    icon: "🍽️",
+                    desc: "Gourmet dining experiences"
+                  },
+                  {
+                    title: "Recreation Zone",
+                    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
+                    icon: "🎯",
+                    desc: "Gaming and entertainment area"
+                  },
+                  {
+                    title: "Wellness Center",
+                    image: "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=400&h=300&fit=crop",
+                    icon: "🧘",
+                    desc: "Meditation and relaxation space"
+                  },
+                  {
+                    title: "Sports Complex",
+                    image: "https://images.unsplash.com/photo-1544824439-68bdb70bdfc3?w=400&h=300&fit=crop",
+                    icon: "⚽",
+                    desc: "Multi-sport playing fields"
+                  },
+                  {
+                    title: "Student Lounge",
+                    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
+                    icon: "☕",
+                    desc: "Social gathering spaces"
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    title: "Fitness Center",
+                    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+                    icon: "🏋️",
+                    desc: "State-of-the-art gym facilities"
+                  },
+                  {
+                    title: "Dining Hall",
+                    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
+                    icon: "🍽️",
+                    desc: "Gourmet dining experiences"
+                  },
+                  {
+                    title: "Recreation Zone",
+                    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
+                    icon: "🎯",
+                    desc: "Gaming and entertainment area"
+                  }
+                ].map((amenity, index) => (
+                  <div key={index} className="flex-shrink-0 w-80 group">
+                    <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
+                      <div className="relative h-48 overflow-hidden">
+                        <img
+                          src={amenity.image}
+                          alt={amenity.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#c38935]/70 to-transparent group-hover:from-[#22336a]/70 transition-colors duration-500"></div>
 
-                    {/* Title */}
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <h3 className="text-white font-bold text-lg group-hover:text-[#f4d03f] transition-colors duration-300">
-                        {amenity.title}
-                      </h3>
+                        {/* Icon */}
+                        <div className="absolute top-4 left-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
+                          <span className="text-2xl">{amenity.icon}</span>
+                        </div>
+
+                        {/* Live Badge */}
+                        <div className="absolute top-4 right-4 px-2 py-1 bg-red-500/90 rounded-full text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse">
+                          ● LIVE
+                        </div>
+
+                        {/* Title */}
+                        <div className="absolute bottom-4 left-4 right-4 text-white">
+                          <h4 className="font-bold text-lg mb-1 group-hover:text-[#f4d03f] transition-colors duration-300">
+                            {amenity.title}
+                          </h4>
+                          <p className="text-xs opacity-90">{amenity.desc}</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
 
-          {/* Compact CTA */}
-          <div className="text-center mt-12 animate-fade-in-up" style={{animationDelay: "0.5s"}}>
-            <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-6 md:p-8 max-w-3xl mx-auto">
-              <h3 className="text-white font-bold text-xl md:text-2xl mb-3">
-                Experience Our Campus Life! 🌟
-              </h3>
-              <p className="text-white/90 mb-6">
-                Schedule your personalized tour and discover these amazing facilities
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <a
-                  href="tel:+917065303030"
-                  className="px-6 py-3 bg-white text-[#22336a] font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center"
-                >
-                  <span className="mr-2">📞</span>
-                  <span>Schedule Visit</span>
-                </a>
-                <a
-                  href="https://sunstone.in/apply-now"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-white/20 hover:bg-white/30 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 border border-white/30 flex items-center justify-center"
-                >
-                  <span className="mr-2">🚀</span>
-                  <span>Apply Now</span>
-                </a>
+          {/* Enhanced CTA */}
+          <div className="text-center animate-fade-in-up">
+            <div className="bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-3xl p-8 md:p-12 max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,white_1px,transparent_1px)] bg-[length:40px_40px]"></div>
+              </div>
+
+              <div className="relative z-10">
+                <h3 className="text-white font-bold text-2xl md:text-3xl mb-4">
+                  Ready to Experience
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
+                    {" "}Campus Life?
+                  </span>
+                </h3>
+                <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                  Schedule your personalized tour and discover these incredible facilities that will shape your future
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="tel:+917065303030"
+                    className="group px-8 py-4 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center"
+                  >
+                    <span className="mr-3">📞</span>
+                    <span>Schedule Campus Visit</span>
+                    <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </a>
+                  <a
+                    href="https://sunstone.in/apply-now"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-white/30 flex items-center justify-center"
+                  >
+                    <span className="mr-3">🚀</span>
+                    <span>Apply Now</span>
+                    <ExternalLink className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform duration-300" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
