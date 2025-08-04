@@ -737,7 +737,7 @@ const Index = () => {
                         Hi-Tech Institute - Where Dreams Become Reality ✨
                       </h3>
                       <p className="text-gray-700 text-sm md:text-base">
-                        Immerse yourself in our world-class programs: <span className="text-[#c38935] font-semibold">MBA</span> • <span className="text-[#22336a] font-semibold">BBA</span> • <span className="text-[#c38935] font-semibold">BCA</span> ��� <span className="text-[#22336a] font-semibold">MCA</span> • <span className="text-[#c38935] font-semibold">B.Tech</span>
+                        Immerse yourself in our world-class programs: <span className="text-[#c38935] font-semibold">MBA</span> • <span className="text-[#22336a] font-semibold">BBA</span> • <span className="text-[#c38935] font-semibold">BCA</span> • <span className="text-[#22336a] font-semibold">MCA</span> • <span className="text-[#c38935] font-semibold">B.Tech</span>
                       </p>
                     </div>
 
@@ -1902,10 +1902,10 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Horizontal Scrolling Amenities - First Row */}
-          <div className="mb-8">
-            <div className="flex items-center mb-4">
-              <h3 className="text-xl md:text-2xl font-bold text-[#22336a] mr-4">Learning Spaces</h3>
+          {/* Compact Amenities - First Row */}
+          <div className="mb-6">
+            <div className="flex items-center mb-3">
+              <h3 className="text-lg md:text-xl font-bold text-[#22336a] mr-3">Learning Spaces</h3>
               <div className="flex-1 h-px bg-gradient-to-r from-[#c38935] to-transparent"></div>
             </div>
 
