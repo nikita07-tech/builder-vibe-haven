@@ -650,17 +650,17 @@ const Index = () => {
 
               {/* Animated Stats */}
               <div className="grid grid-cols-3 gap-4 md:gap-8 mb-8 animate-fade-in-up" style={{animationDelay: "0.7s"}}>
-                <div className="text-center group">
+                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
                   <div className="text-2xl md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up">5000+</div>
-                  <div className="text-xs md:text-sm text-white/70">Happy Students</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Happy Students</div>
                 </div>
-                <div className="text-center group">
-                  <div className="text-2xl md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up" style={{animationDelay: "0.2s"}}>50+</div>
-                  <div className="text-xs md:text-sm text-white/70">Campus Facilities</div>
+                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                  <div className="text-2xl md:text-4xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up" style={{animationDelay: "0.2s"}}>50+</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Campus Facilities</div>
                 </div>
-                <div className="text-center group">
-                  <div className="text-2xl md:text-4xl font-bold text-white mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up" style={{animationDelay: "0.4s"}}>24/7</div>
-                  <div className="text-xs md:text-sm text-white/70">Learning Support</div>
+                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                  <div className="text-2xl md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up" style={{animationDelay: "0.4s"}}>24/7</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Learning Support</div>
                 </div>
               </div>
             </div>
