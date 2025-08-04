@@ -732,11 +732,11 @@ const Index = () => {
                 <div className="aspect-video relative p-2 md:p-4">
                   <div className="relative rounded-2xl overflow-hidden h-full shadow-inner">
                     <iframe
-                      src="https://www.youtube.com/embed/2CNUyGRAyVU?autoplay=1&mute=1&loop=1&playlist=2CNUyGRAyVU&controls=1&modestbranding=1&rel=0"
+                      src="https://drive.google.com/file/d/1hXpL0TTl6W3-qMLidqYtXgetdAf7bZkt/preview"
                       title="Hi-Tech Institute Campus Life - Experience Excellence"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
                       frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allow="autoplay"
                       allowFullScreen
                     ></iframe>
 
@@ -1978,14 +1978,14 @@ const Index = () => {
             <div className="relative group">
               <div className="relative bg-gradient-to-br from-[#22336a] to-[#c38935] rounded-2xl p-2 shadow-xl group-hover:scale-105 transition-all duration-500">
                 <div className="bg-white rounded-xl overflow-hidden aspect-video relative">
-                  {/* YouTube Player with Autoplay */}
+                  {/* Google Drive Video Player */}
                   <div className="w-full h-full relative">
                     <iframe
-                      src="https://www.youtube.com/embed/CTqsYPeW2vE?autoplay=1&mute=1&loop=1&playlist=CTqsYPeW2vE&controls=1&modestbranding=1&rel=0&showinfo=0"
+                      src="https://drive.google.com/file/d/1hXpL0TTl6W3-qMLidqYtXgetdAf7bZkt/preview"
                       title="Hi-Tech Institute Campus Life - Immersive Experience"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
                       frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allow="autoplay"
                       allowFullScreen
                     ></iframe>
                   </div>
@@ -2035,229 +2035,7 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Compact Amenities - First Row */}
-          <div className="mb-6">
-            <div className="flex items-center mb-3">
-              <h3 className="text-lg md:text-xl font-bold text-[#22336a] mr-3">
-                Learning Spaces
-              </h3>
-              <div className="flex-1 h-px bg-gradient-to-r from-[#c38935] to-transparent"></div>
-            </div>
 
-            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-4">
-              <div className="flex space-x-4 animate-scroll-right-to-left whitespace-nowrap">
-                {[
-                  {
-                    title: "Creative Studio",
-                    image:
-                      "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=400&h=300&fit=crop",
-                    icon: "🎨",
-                    desc: "Design and innovation workspace",
-                  },
-                  {
-                    title: "Study Lounge",
-                    image:
-                      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
-                    icon: "📚",
-                    desc: "Quiet collaborative learning zones",
-                  },
-                  {
-                    title: "Digital Lab",
-                    image:
-                      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop",
-                    icon: "💻",
-                    desc: "High-tech computer laboratories",
-                  },
-                  {
-                    title: "Maker Space",
-                    image:
-                      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
-                    icon: "🔧",
-                    desc: "Hands-on prototyping workshop",
-                  },
-                  {
-                    title: "Research Center",
-                    image:
-                      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
-                    icon: "🔬",
-                    desc: "Advanced research facilities",
-                  },
-                  {
-                    title: "Presentation Hall",
-                    image:
-                      "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop",
-                    icon: "🎤",
-                    desc: "Modern auditorium spaces",
-                  },
-                  // Duplicate for seamless loop
-                  {
-                    title: "Creative Studio",
-                    image:
-                      "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?w=400&h=300&fit=crop",
-                    icon: "🎨",
-                    desc: "Design and innovation workspace",
-                  },
-                  {
-                    title: "Study Lounge",
-                    image:
-                      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop",
-                    icon: "📚",
-                    desc: "Quiet collaborative learning zones",
-                  },
-                  {
-                    title: "Digital Lab",
-                    image:
-                      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=400&h=300&fit=crop",
-                    icon: "💻",
-                    desc: "High-tech computer laboratories",
-                  },
-                ].map((amenity, index) => (
-                  <div key={index} className="flex-shrink-0 w-64 group">
-                    <div className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105">
-                      <div className="relative h-36 overflow-hidden">
-                        <img
-                          src={amenity.image}
-                          alt={amenity.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#22336a]/70 to-transparent group-hover:from-[#c38935]/70 transition-colors duration-500"></div>
-
-                        {/* Icon */}
-                        <div className="absolute top-4 left-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
-                          <span className="text-2xl">{amenity.icon}</span>
-                        </div>
-
-                        {/* Live Badge */}
-                        <div className="absolute top-4 right-4 px-2 py-1 bg-red-500/90 rounded-full text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse">
-                          ● LIVE
-                        </div>
-
-                        {/* Title */}
-                        <div className="absolute bottom-4 left-4 right-4 text-white">
-                          <h4 className="font-bold text-lg mb-1 group-hover:text-[#f4d03f] transition-colors duration-300">
-                            {amenity.title}
-                          </h4>
-                          <p className="text-xs opacity-90">{amenity.desc}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Horizontal Scrolling Amenities - Second Row */}
-          <div className="mb-12">
-            <div className="flex items-center mb-4">
-              <h3 className="text-xl md:text-2xl font-bold text-[#22336a] mr-4">
-                Life & Wellness
-              </h3>
-              <div className="flex-1 h-px bg-gradient-to-r from-[#c38935] to-transparent"></div>
-            </div>
-
-            <div className="relative overflow-hidden bg-gray-50 rounded-2xl py-6">
-              <div className="flex space-x-6 animate-scroll-left-to-right whitespace-nowrap">
-                {[
-                  {
-                    title: "Fitness Center",
-                    image:
-                      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-                    icon: "🏋️",
-                    desc: "State-of-the-art gym facilities",
-                  },
-                  {
-                    title: "Dining Hall",
-                    image:
-                      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
-                    icon: "🍽️",
-                    desc: "Gourmet dining experiences",
-                  },
-                  {
-                    title: "Recreation Zone",
-                    image:
-                      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
-                    icon: "🎯",
-                    desc: "Gaming and entertainment area",
-                  },
-                  {
-                    title: "Wellness Center",
-                    image:
-                      "https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=400&h=300&fit=crop",
-                    icon: "🧘",
-                    desc: "Meditation and relaxation space",
-                  },
-                  {
-                    title: "Sports Complex",
-                    image:
-                      "https://images.unsplash.com/photo-1544824439-68bdb70bdfc3?w=400&h=300&fit=crop",
-                    icon: "⚽",
-                    desc: "Multi-sport playing fields",
-                  },
-                  {
-                    title: "Student Lounge",
-                    image:
-                      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop",
-                    icon: "☕",
-                    desc: "Social gathering spaces",
-                  },
-                  // Duplicate for seamless loop
-                  {
-                    title: "Fitness Center",
-                    image:
-                      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
-                    icon: "🏋️",
-                    desc: "State-of-the-art gym facilities",
-                  },
-                  {
-                    title: "Dining Hall",
-                    image:
-                      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop",
-                    icon: "🍽️",
-                    desc: "Gourmet dining experiences",
-                  },
-                  {
-                    title: "Recreation Zone",
-                    image:
-                      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop",
-                    icon: "🎯",
-                    desc: "Gaming and entertainment area",
-                  },
-                ].map((amenity, index) => (
-                  <div key={index} className="flex-shrink-0 w-80 group">
-                    <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
-                      <div className="relative h-48 overflow-hidden">
-                        <img
-                          src={amenity.image}
-                          alt={amenity.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#c38935]/70 to-transparent group-hover:from-[#22336a]/70 transition-colors duration-500"></div>
-
-                        {/* Icon */}
-                        <div className="absolute top-4 left-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-transform duration-500">
-                          <span className="text-2xl">{amenity.icon}</span>
-                        </div>
-
-                        {/* Live Badge */}
-                        <div className="absolute top-4 right-4 px-2 py-1 bg-red-500/90 rounded-full text-white text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse">
-                          ● LIVE
-                        </div>
-
-                        {/* Title */}
-                        <div className="absolute bottom-4 left-4 right-4 text-white">
-                          <h4 className="font-bold text-lg mb-1 group-hover:text-[#f4d03f] transition-colors duration-300">
-                            {amenity.title}
-                          </h4>
-                          <p className="text-xs opacity-90">{amenity.desc}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
 
           {/* Compact CTA */}
           <div className="text-center animate-fade-in-up">
