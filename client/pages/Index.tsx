@@ -1895,14 +1895,33 @@ const Index = () => {
                     ></wistia-player>
                   </div>
 
-                  {/* Video Overlay Elements */}
-                  <div className="absolute top-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                    <div className="px-3 py-1 bg-red-500/90 rounded-full text-white text-xs font-bold animate-pulse">
-                      🔴 LIVE CAMPUS TOUR
+                  {/* Enhanced Video Overlay Elements */}
+                  <div className="absolute top-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none">
+                    <div className="px-3 py-1 bg-red-500/90 backdrop-blur-sm rounded-full text-white text-xs font-bold animate-pulse shadow-lg border border-red-400/30">
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-red-300 rounded-full mr-2 animate-ping"></div>
+                        🔴 LIVE CAMPUS TOUR
+                      </div>
                     </div>
-                    <div className="px-3 py-1 bg-white/90 rounded-full text-gray-800 text-xs font-semibold">
+                    <div className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-gray-800 text-xs font-semibold shadow-lg border border-gray-200">
                       🎬 Interactive Experience
                     </div>
+                  </div>
+
+                  {/* Floating interaction hints */}
+                  <div className="absolute inset-0 pointer-events-none">
+                    {[...Array(3)].map((_, i) => (
+                      <div
+                        key={i}
+                        className={`absolute w-4 h-4 bg-white/20 rounded-full opacity-0 group-hover:opacity-60 transition-all duration-1000 animate-float`}
+                        style={{
+                          left: `${20 + i * 30}%`,
+                          top: `${30 + i * 20}%`,
+                          animationDelay: `${i * 0.5}s`,
+                          transitionDelay: `${i * 0.2}s`
+                        }}
+                      ></div>
+                    ))}
                   </div>
                 </div>
 
