@@ -1810,52 +1810,36 @@ const Index = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Enhanced Header with Dynamic Effects */}
-          <div className="text-center mb-8 md:mb-12 animate-fade-in">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mb-6 shadow-lg hover:shadow-2xl transition-all duration-500 group animate-bounce-subtle hover:scale-105">
-              <div className="w-3 h-3 bg-white/30 rounded-full mr-3 animate-pulse group-hover:animate-bounce"></div>
-              <span className="text-white font-bold text-sm md:text-base tracking-wide">
-                🏆 IMMERSIVE CAMPUS EXPERIENCE
+          {/* Compact Enhanced Header */}
+          <div className="text-center mb-6 md:mb-8 animate-fade-in">
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mb-4 shadow-lg hover:shadow-xl transition-all duration-500 group animate-bounce-subtle hover:scale-105">
+              <div className="w-2 h-2 bg-white/30 rounded-full mr-2 animate-pulse group-hover:animate-bounce"></div>
+              <span className="text-white font-bold text-xs md:text-sm tracking-wide">
+                🎬 EXPERIENCE CAMPUS LIFE
               </span>
-              <div className="w-3 h-3 bg-white/30 rounded-full ml-3 animate-pulse group-hover:animate-bounce" style={{animationDelay: "0.5s"}}></div>
+              <div className="w-2 h-2 bg-white/30 rounded-full ml-2 animate-pulse group-hover:animate-bounce" style={{animationDelay: "0.5s"}}></div>
             </div>
 
-            {/* Animated title with staggered effect */}
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#22336a] mb-4 leading-tight">
-              <span className="inline-block animate-slide-in-left">Discover</span>{" "}
-              <span className="inline-block animate-slide-in-right" style={{animationDelay: "0.2s"}}>Our</span>
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-shift inline-block animate-scale-in" style={{animationDelay: "0.4s"}}>
-                Campus Amenities
+            {/* Compact animated title */}
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#22336a] mb-3 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-shift">
+                Live Campus Experience
               </span>
             </h2>
 
-            {/* Enhanced description with interactive stats */}
-            <div className="max-w-3xl mx-auto animate-fade-in" style={{animationDelay: "0.6s"}}>
-              <p className="text-lg text-gray-700 mb-6">
-                Experience world-class facilities designed for your academic excellence and personal growth
-              </p>
-
-              {/* Interactive stats with hover effects */}
-              <div className="grid grid-cols-3 gap-4 md:gap-8 mb-6">
-                <div className="group cursor-pointer">
-                  <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-[#c38935]/30">
-                    <div className="text-2xl md:text-3xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300">50+</div>
-                    <div className="text-sm text-gray-600 font-medium">Premium Facilities</div>
-                  </div>
-                </div>
-                <div className="group cursor-pointer">
-                  <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-[#22336a]/30">
-                    <div className="text-2xl md:text-3xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300">24/7</div>
-                    <div className="text-sm text-gray-600 font-medium">Access Available</div>
-                  </div>
-                </div>
-                <div className="group cursor-pointer">
-                  <div className="bg-white/70 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-[#f4d03f]/30">
-                    <div className="text-2xl md:text-3xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300">100%</div>
-                    <div className="text-sm text-gray-600 font-medium">Student Satisfaction</div>
-                  </div>
-                </div>
+            {/* Compact stats row */}
+            <div className="flex justify-center items-center gap-6 md:gap-8 mb-4 animate-fade-in" style={{animationDelay: "0.3s"}}>
+              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-gray-200/50">
+                <div className="w-2 h-2 bg-[#c38935] rounded-full mr-2 animate-pulse"></div>
+                <span className="text-sm font-medium text-gray-700">50+ Facilities</span>
+              </div>
+              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-gray-200/50">
+                <div className="w-2 h-2 bg-[#22336a] rounded-full mr-2 animate-pulse"></div>
+                <span className="text-sm font-medium text-gray-700">24/7 Access</span>
+              </div>
+              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-gray-200/50">
+                <div className="w-2 h-2 bg-[#f4d03f] rounded-full mr-2 animate-pulse"></div>
+                <span className="text-sm font-medium text-gray-700">Premium Experience</span>
               </div>
             </div>
           </div>
