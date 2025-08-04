@@ -1767,20 +1767,46 @@ const Index = () => {
 
       {/* Campus Amenities with Wistia Video & Horizontal Scrolling */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
-        {/* Subtle Background Animation */}
+        {/* Enhanced Background Animation */}
         <div className="absolute inset-0">
-          {[...Array(12)].map((_, i) => (
+          {/* Floating geometric shapes */}
+          {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className={`absolute w-2 h-2 ${i % 3 === 0 ? 'bg-[#c38935]/15' : i % 3 === 1 ? 'bg-[#22336a]/15' : 'bg-[#f4d03f]/15'} rounded-full animate-float`}
+              className={`absolute animate-float opacity-30 hover:opacity-60 transition-opacity duration-700`}
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 4}s`,
-                animationDuration: `${3 + Math.random() * 3}s`
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${4 + Math.random() * 4}s`
               }}
-            ></div>
+            >
+              {i % 4 === 0 && (
+                <div className="w-3 h-3 bg-[#c38935]/20 rounded-full animate-pulse"></div>
+              )}
+              {i % 4 === 1 && (
+                <div className="w-4 h-1 bg-[#22336a]/20 rounded-full rotate-45"></div>
+              )}
+              {i % 4 === 2 && (
+                <div className="w-2 h-4 bg-[#f4d03f]/20 rounded-full rotate-12"></div>
+              )}
+              {i % 4 === 3 && (
+                <div className="w-3 h-3 border border-[#c38935]/20 rounded-sm rotate-45"></div>
+              )}
+            </div>
           ))}
+
+          {/* Animated gradient waves */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#c38935] to-transparent top-1/4 animate-slide-in-right"></div>
+            <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#22336a] to-transparent top-2/4 animate-slide-in-left" style={{animationDelay: "1s"}}></div>
+            <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#f4d03f] to-transparent top-3/4 animate-slide-in-right" style={{animationDelay: "2s"}}></div>
+          </div>
+
+          {/* Large floating orbs with enhanced animation */}
+          <div className="absolute top-20 left-20 w-32 h-32 bg-[#c38935]/10 rounded-full blur-2xl animate-pulse-glow"></div>
+          <div className="absolute bottom-20 right-20 w-40 h-40 bg-[#22336a]/10 rounded-full blur-3xl animate-float" style={{animationDelay: "2s"}}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#f4d03f]/5 rounded-full blur-3xl animate-gradient-shift"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
