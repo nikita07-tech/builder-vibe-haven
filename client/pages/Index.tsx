@@ -2104,43 +2104,32 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Enhanced CTA */}
+          {/* Compact CTA */}
           <div className="text-center animate-fade-in-up">
-            <div className="bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-3xl p-8 md:p-12 max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,white_1px,transparent_1px)] bg-[length:40px_40px]"></div>
-              </div>
-
+            <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-6 max-w-3xl mx-auto shadow-xl relative overflow-hidden">
               <div className="relative z-10">
-                <h3 className="text-white font-bold text-2xl md:text-3xl mb-4">
+                <h3 className="text-white font-bold text-lg md:text-xl mb-3">
                   Ready to Experience
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
                     {" "}Campus Life?
                   </span>
                 </h3>
-                <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-                  Schedule your personalized tour and discover these incredible facilities that will shape your future
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <a
                     href="tel:+917065303030"
-                    className="group px-8 py-4 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center"
+                    className="group px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                   >
-                    <span className="mr-3">📞</span>
-                    <span>Schedule Campus Visit</span>
-                    <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <span className="mr-2">📞</span>
+                    <span>Schedule Visit</span>
                   </a>
                   <a
                     href="https://sunstone.in/apply-now"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group px-8 py-4 bg-white/20 hover:bg-white/30 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-white/30 flex items-center justify-center"
+                    className="group px-6 py-3 bg-white/20 hover:bg-white/30 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 border border-white/30 flex items-center justify-center"
                   >
-                    <span className="mr-3">🚀</span>
+                    <span className="mr-2">🚀</span>
                     <span>Apply Now</span>
-                    <ExternalLink className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform duration-300" />
                   </a>
                 </div>
               </div>
