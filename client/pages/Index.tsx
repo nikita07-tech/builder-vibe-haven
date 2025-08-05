@@ -1083,42 +1083,7 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Desktop Grid */}
-          <div className="hidden md:grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 lg:gap-8">
-            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
-              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
-                <Users className="h-5 w-5 md:h-8 md:w-8 text-white" />
-              </div>
-              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
-                Industry Connections
-              </h3>
-              <p className="text-xs md:text-base text-gray-600">
-                Strong network of leading companies across sectors
-              </p>
-            </div>
-            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
-              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#22336a] rounded-full flex items-center justify-center">
-                <Trophy className="h-5 w-5 md:h-8 md:w-8 text-white" />
-              </div>
-              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
-                Career Growth
-              </h3>
-              <p className="text-xs md:text-base text-gray-600">
-                Excellent packages and growth opportunities
-              </p>
-            </div>
-            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
-              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
-                <Target className="h-5 w-5 md:h-8 md:w-8 text-white" />
-              </div>
-              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
-                Success Stories
-              </h3>
-              <p className="text-xs md:text-base text-gray-600">
-                Proven track record of student achievements
-              </p>
-            </div>
-          </div>
+
         </div>
       </section>
 
