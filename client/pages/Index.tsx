@@ -732,11 +732,11 @@ const Index = () => {
                 <div className="aspect-video relative p-2 md:p-4">
                   <div className="relative rounded-2xl overflow-hidden h-full shadow-inner">
                     <iframe
-                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview?autoplay=1"
+                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview?autoplay=1&mute=1&loop=1"
                       title="Hi-Tech Institute Campus Life - Experience Excellence"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
                       frameBorder="0"
-                      allow="autoplay"
+                      allow="autoplay; encrypted-media; fullscreen"
                       allowFullScreen
                     ></iframe>
 
