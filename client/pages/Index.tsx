@@ -732,7 +732,7 @@ const Index = () => {
                 <div className="aspect-video relative p-2 md:p-4">
                   <div className="relative rounded-2xl overflow-hidden h-full shadow-inner">
                     <iframe
-                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview"
+                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview?autoplay=1"
                       title="Hi-Tech Institute Campus Life - Experience Excellence"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
                       frameBorder="0"
@@ -1981,7 +1981,7 @@ const Index = () => {
                   {/* Google Drive Video Player */}
                   <div className="w-full h-full relative">
                     <iframe
-                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview"
+                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview?autoplay=1"
                       title="Hi-Tech Institute Campus Life - Immersive Experience"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
                       frameBorder="0"
@@ -2090,7 +2090,7 @@ const Index = () => {
                 <div className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left">
                   <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
-                      <span className="text-white text-lg">💼</span>
+                      <span className="text-white text-lg">��</span>
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Curriculum for Jobs of 2030
