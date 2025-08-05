@@ -658,7 +658,7 @@ const Index = () => {
               </span>
               <br />
               <span
-                className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-text inline-block animate-scale-in"
+                className="text-[#22336a] inline-block animate-scale-in"
                 style={{ animationDelay: "0.3s" }}
               >
                 Vibrant Campus Life
@@ -732,12 +732,13 @@ const Index = () => {
                 <div className="aspect-video relative p-2 md:p-4">
                   <div className="relative rounded-2xl overflow-hidden h-full shadow-inner">
                     <iframe
-                      src="https://drive.google.com/file/d/1hXpL0TTl6W3-qMLidqYtXgetdAf7bZkt/preview"
+                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview"
                       title="Hi-Tech Institute Campus Life - Experience Excellence"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
                       frameBorder="0"
-                      allow="autoplay"
+                      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
                       allowFullScreen
+                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                     ></iframe>
 
                     {/* Interactive Overlay Elements */}
@@ -1080,43 +1081,6 @@ const Index = () => {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Desktop Grid */}
-          <div className="hidden md:grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 lg:gap-8">
-            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
-              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
-                <Users className="h-5 w-5 md:h-8 md:w-8 text-white" />
-              </div>
-              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
-                Industry Connections
-              </h3>
-              <p className="text-xs md:text-base text-gray-600">
-                Strong network of leading companies across sectors
-              </p>
-            </div>
-            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
-              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#22336a] rounded-full flex items-center justify-center">
-                <Trophy className="h-5 w-5 md:h-8 md:w-8 text-white" />
-              </div>
-              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
-                Career Growth
-              </h3>
-              <p className="text-xs md:text-base text-gray-600">
-                Excellent packages and growth opportunities
-              </p>
-            </div>
-            <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-xl shadow-lg border border-gray-200">
-              <div className="w-10 h-10 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 bg-[#c38935] rounded-full flex items-center justify-center">
-                <Target className="h-5 w-5 md:h-8 md:w-8 text-white" />
-              </div>
-              <h3 className="text-sm md:text-xl font-bold text-[#22336a] mb-1 md:mb-2">
-                Success Stories
-              </h3>
-              <p className="text-xs md:text-base text-gray-600">
-                Proven track record of student achievements
-              </p>
             </div>
           </div>
         </div>
@@ -1981,12 +1945,13 @@ const Index = () => {
                   {/* Google Drive Video Player */}
                   <div className="w-full h-full relative">
                     <iframe
-                      src="https://drive.google.com/file/d/1hXpL0TTl6W3-qMLidqYtXgetdAf7bZkt/preview"
+                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview"
                       title="Hi-Tech Institute Campus Life - Immersive Experience"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
                       frameBorder="0"
-                      allow="autoplay"
+                      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
                       allowFullScreen
+                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                     ></iframe>
                   </div>
 
@@ -2090,7 +2055,7 @@ const Index = () => {
                 <div className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left">
                   <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
-                      <span className="text-white text-lg">💼</span>
+                      <span className="text-white text-lg">��</span>
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Curriculum for Jobs of 2030
