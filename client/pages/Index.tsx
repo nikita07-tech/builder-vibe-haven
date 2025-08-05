@@ -1947,12 +1947,13 @@ const Index = () => {
                   {/* Google Drive Video Player */}
                   <div className="w-full h-full relative">
                     <iframe
-                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview?autoplay=1&mute=1&loop=1"
+                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview"
                       title="Hi-Tech Institute Campus Life - Immersive Experience"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
                       frameBorder="0"
-                      allow="autoplay; encrypted-media; fullscreen"
+                      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
                       allowFullScreen
+                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
                     ></iframe>
                   </div>
 
