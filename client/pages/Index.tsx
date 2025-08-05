@@ -658,7 +658,7 @@ const Index = () => {
               </span>
               <br />
               <span
-                className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-text inline-block animate-scale-in"
+                className="text-[#22336a] inline-block animate-scale-in"
                 style={{ animationDelay: "0.3s" }}
               >
                 Vibrant Campus Life
