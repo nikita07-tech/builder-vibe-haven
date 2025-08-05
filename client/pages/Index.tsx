@@ -732,7 +732,7 @@ const Index = () => {
                 <div className="aspect-video relative p-2 md:p-4">
                   <div className="relative rounded-2xl overflow-hidden h-full shadow-inner">
                     <iframe
-                      src="https://drive.google.com/file/d/1hXpL0TTl6W3-qMLidqYtXgetdAf7bZkt/preview"
+                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview"
                       title="Hi-Tech Institute Campus Life - Experience Excellence"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
                       frameBorder="0"
@@ -1981,7 +1981,7 @@ const Index = () => {
                   {/* Google Drive Video Player */}
                   <div className="w-full h-full relative">
                     <iframe
-                      src="https://drive.google.com/file/d/1hXpL0TTl6W3-qMLidqYtXgetdAf7bZkt/preview"
+                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview"
                       title="Hi-Tech Institute Campus Life - Immersive Experience"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
                       frameBorder="0"
