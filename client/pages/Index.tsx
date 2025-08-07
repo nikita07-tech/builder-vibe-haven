@@ -639,7 +639,7 @@ const Index = () => {
             <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a] to-[#c38935] backdrop-blur-lg rounded-full mb-6 md:mb-8 border border-white/20 shadow-2xl group hover:scale-105 transition-all duration-500 animate-bounce-in">
               <div className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></div>
               <span className="text-white font-semibold text-sm md:text-base tracking-wide">
-                🎬 IMMERSIVE CAMPUS EXPERIENCE
+                �� IMMERSIVE CAMPUS EXPERIENCE
               </span>
               <div
                 className="w-3 h-3 bg-[#f4d03f] rounded-full ml-3 animate-pulse"
@@ -1720,7 +1720,7 @@ const Index = () => {
               </span>
             </h2>
             <div className="max-w-4xl mx-auto text-gray-700 text-sm md:text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
-              <p>WHAT WE PROMISE ��TO ALL STUDENTS </p>
+              <p>WHAT WE PROMISE ﻿TO ALL STUDENTS </p>
             </div>
           </div>
 
@@ -2706,7 +2706,6 @@ const Index = () => {
                           <div className="font-bold text-xs md:text-sm">
                             {programData.duration}
                           </div>
-                          <div className="text-xs opacity-80">Duration</div>
                         </div>
                         <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
                           <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
