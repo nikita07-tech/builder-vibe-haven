@@ -582,8 +582,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Ultra-Enhanced Video Experience Section */}
-      <section className="py-12 md:py-24 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+      {/* Ultra-Enhanced Video Experience Section - Mobile Optimized */}
+      <section className="py-6 md:py-24 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
         {/* Advanced Animated Background */}
         <div className="absolute inset-0">
           {/* Multiple floating orbs with different animations */}
@@ -635,8 +635,8 @@ const Index = () => {
               ></div>
             </div>
 
-            {/* Animated Title */}
-            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
+            {/* Animated Title - Mobile Optimized */}
+            <h2 className="text-xl sm:text-2xl md:text-5xl lg:text-7xl font-bold mb-3 md:mb-8 leading-tight">
               <span className="inline-block animate-slide-in-left text-[#22336a]">
                 Experience
               </span>{" "}
@@ -654,7 +654,7 @@ const Index = () => {
 
             <div className="max-w-4xl mx-auto">
               <p
-                className="text-sm md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-6"
+                className="text-xs md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-4 md:mb-6"
                 style={{ animationDelay: "0.5s" }}
               >
                 Step into a world where education meets innovation, creativity,
@@ -662,38 +662,38 @@ const Index = () => {
                 designed for excellence.
               </p>
 
-              {/* Animated Stats */}
+              {/* Animated Stats - Mobile Optimized */}
               <div
-                className="grid grid-cols-3 gap-4 md:gap-8 mb-8 animate-fade-in-up"
+                className="grid grid-cols-3 gap-2 md:gap-8 mb-4 md:mb-8 animate-fade-in-up"
                 style={{ animationDelay: "0.7s" }}
               >
-                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
-                  <div className="text-2xl md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up">
+                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                  <div className="text-lg md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up">
                     <p>20000+</p>
                   </div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                  <div className="text-[10px] md:text-sm text-gray-600 font-medium">
                     Happy Students
                   </div>
                 </div>
-                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
                   <div
-                    className="text-2xl md:text-4xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
+                    className="text-lg md:text-4xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
                     style={{ animationDelay: "0.2s" }}
                   >
                     50+
                   </div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                  <div className="text-[10px] md:text-sm text-gray-600 font-medium">
                     Campus Facilities
                   </div>
                 </div>
-                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
                   <div
-                    className="text-2xl md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
+                    className="text-lg md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
                     style={{ animationDelay: "0.4s" }}
                   >
                     24/7
                   </div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                  <div className="text-[10px] md:text-sm text-gray-600 font-medium">
                     Learning Support
                   </div>
                 </div>
