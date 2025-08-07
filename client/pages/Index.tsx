@@ -1846,7 +1846,7 @@ const Index = () => {
               New Age Education That Secures Futures
             </h2>
             <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
-              <h2 style="text-align: center;">
+              <h2 style={{textAlign: "center"}}>
                 <strong>
                   Transform your career with industry-integrated programs
                   designed by corporate leaders, featuring cutting-edge
