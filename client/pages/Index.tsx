@@ -2468,8 +2468,10 @@ const Index = () => {
                   POP
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
-                  Access to 200+ guaranteed job opportunities with comprehensive
-                  placement support
+                  <p>
+                    Access to 200+ assured job opportunities with
+                    comprehensive placement support
+                  </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -3106,7 +3108,7 @@ const Index = () => {
           <div className="text-center mb-4 md:mb-16">
             <div className="inline-flex items-center px-3 md:px-6 py-1.5 md:py-3 bg-white/80 backdrop-blur-sm rounded-full mb-3 md:mb-8 shadow-lg border border-gray-200">
               <span className="text-[#22336a] font-bold text-xs md:text-sm tracking-wide">
-                🏦 EASY FEE PAYMENT
+                �� EASY FEE PAYMENT
               </span>
             </div>
             <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight">
