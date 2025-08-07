@@ -1625,7 +1625,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Curriculum for Jobs of 2030
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Future-focused learning paths designed for tomorrow's
                       careers
                     </p>
@@ -1643,7 +1643,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Corporate Leaders Turned Educators
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Learn directly from industry veterans and Fortune 500
                       executives
                     </p>
@@ -1680,7 +1680,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       NextGen Tech Tools
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Advanced technologies and AI-powered learning platforms
                     </p>
                     <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
@@ -1697,7 +1697,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Practical Learning Over Theory
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Hands-on experience with live projects and industry
                       collaborations
                     </p>
@@ -1713,7 +1713,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Curriculum for Jobs of 2030
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Future-focused learning paths designed for tomorrow's
                       careers
                     </p>
@@ -1727,7 +1727,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Corporate Leaders Turned Educators
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Learn directly from industry veterans and Fortune 500
                       executives
                     </p>
@@ -1868,7 +1868,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Expert Sessions
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Session by industry experts and leading faculty from
                       Fortune 500 companies
                     </p>
@@ -1886,7 +1886,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Professional Portfolio
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Showcase verified skills and experience to increase hiring
                       chances
                     </p>
@@ -1927,7 +1927,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Specializations
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Choose from industry-focused specializations designed to
                       boost your career prospects
                     </p>
@@ -1943,7 +1943,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Expert Sessions
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Session by industry experts and leading faculty from
                       Fortune 500 companies
                     </p>
@@ -1957,7 +1957,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Professional Portfolio
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Showcase verified skills and experience to increase hiring
                       chances
                     </p>
