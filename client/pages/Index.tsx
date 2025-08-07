@@ -131,10 +131,6 @@ const Index = () => {
           name: "Operations Management",
           careers: "Operations Manager, Supply Chain Manager, Process Manager",
         },
-        {
-          name: "Retail Sales Management",
-          careers: "Retail Manager, Sales Manager, Store Operations Manager",
-        },
       ],
       eligibility:
         "50% marks in graduation from a recognised university (45% for reserved category).",
