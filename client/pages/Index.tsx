@@ -106,7 +106,7 @@ const Index = () => {
       certifications: "10 certifications",
       internships: "6+ months of internships/projects",
       projects: "4 capstone projects",
-      specializations: "6 specializations",
+      specializations: "5 specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
