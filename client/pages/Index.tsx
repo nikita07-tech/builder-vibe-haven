@@ -842,42 +842,6 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Floating Action Cards */}
-          <div
-            className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up"
-            style={{ animationDelay: "1.2s" }}
-          >
-            {[
-              {
-                icon: "🌟",
-                title: "Excellence",
-                desc: "Award-winning education quality",
-              },
-              {
-                icon: "🚀",
-                title: "Innovation",
-                desc: "Cutting-edge learning methods",
-              },
-              {
-                icon: "🤝",
-                title: "Community",
-                desc: "Vibrant student networks",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white/70 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 hover:border-[#c38935]/50 transition-all duration-500 hover:-translate-y-2 hover:scale-105 group shadow-lg hover:shadow-xl"
-              >
-                <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">
-                  {item.icon}
-                </div>
-                <h4 className="text-[#22336a] font-bold text-lg mb-2 group-hover:text-[#c38935] transition-colors duration-300">
-                  {item.title}
-                </h4>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
