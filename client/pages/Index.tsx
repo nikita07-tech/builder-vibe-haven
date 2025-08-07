@@ -941,8 +941,8 @@ const Index = () => {
                     src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
                   },
                   {
-                    name: "IBM",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
+                    name: "Patanjali",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe052011a718f4d058d742475abbab609?format=webp&width=800",
                   },
                   {
                     name: "Infosys",
@@ -966,8 +966,8 @@ const Index = () => {
                     src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
                   },
                   {
-                    name: "IBM",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
+                    name: "Patanjali",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe052011a718f4d058d742475abbab609?format=webp&width=800",
                   },
                   {
                     name: "Infosys",
