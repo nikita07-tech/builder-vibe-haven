@@ -106,7 +106,7 @@ const Index = () => {
       certifications: "10 certifications",
       internships: "6+ months of internships/projects",
       projects: "4 capstone projects",
-      specializations: "6 specializations",
+      specializations: "5 specializations",
       color: "from-[#22336a] to-[#3b4d7a]",
       certificationsList: [
         {
@@ -130,10 +130,6 @@ const Index = () => {
         {
           name: "Operations Management",
           careers: "Operations Manager, Supply Chain Manager, Process Manager",
-        },
-        {
-          name: "Retail Sales Management",
-          careers: "Retail Manager, Sales Manager, Store Operations Manager",
         },
       ],
       eligibility:
@@ -388,14 +384,15 @@ const Index = () => {
             <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
               <h1 className="text-sm sm:text-lg md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
                 <span>Unlock Your Potential with</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
-                  {" "}
-                  World-Class Education
+                <span className="text-[#c38935] bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
+                  <p>Premium Education</p>
                 </span>
               </h1>
               <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3">
-                Join Hi-Tech Institute for industry-aligned programs with
-                guaranteed placement support.
+                <p>
+                  Join Hi-Tech Institute for industry-aligned programs with
+                  assured placement support.
+                </p>
               </div>
               <div className="flex flex-col gap-1 md:gap-3 lg:gap-4">
                 <a
@@ -566,7 +563,7 @@ const Index = () => {
                       7X More Companies
                     </p>
                     <p className="text-[9px] md:text-xs text-gray-600">
-                      vs institutes
+                      <p>vs top private institutions</p>
                     </p>
                   </div>
                 </div>
@@ -574,8 +571,10 @@ const Index = () => {
 
               <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 text-center">
                 <p className="text-[9px] md:text-sm">
-                  Placement report audited by B2K Analytics Official Auditor for
-                  IIM Ahemdabad
+                  <p>
+                    Placement Report Audited &amp; Verified by B2K Analytics,
+                    Official Auditor for IIM Ahemdabad
+                  </p>
                 </p>
               </div>
             </div>
@@ -682,7 +681,7 @@ const Index = () => {
               >
                 <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
                   <div className="text-2xl md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up">
-                    5000+
+                    <p>20000+</p>
                   </div>
                   <div className="text-xs md:text-sm text-gray-600 font-medium">
                     Happy Students
@@ -1721,7 +1720,7 @@ const Index = () => {
               </span>
             </h2>
             <div className="max-w-4xl mx-auto text-gray-700 text-sm md:text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
-              <p>WHAT WE PROMISE ﻿TO ALL STUDENTS </p>
+              <p>WHAT WE PROMISE TO ALL STUDENTS</p>
             </div>
           </div>
 
@@ -1800,8 +1799,11 @@ const Index = () => {
                 200+ Placement Opportunities
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Guaranteed access to extensive placement opportunities across
-                leading companies
+                <p>
+                  {" "}
+                  Access to extensive placement opportunities across leading
+                  companies.
+                </p>
               </p>
             </div>
 
@@ -1834,207 +1836,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Compact Enhanced Campus Experience */}
-      <section className="py-8 md:py-12 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
-        {/* Enhanced Background Animation */}
-        <div className="absolute inset-0">
-          {/* Floating geometric shapes */}
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className={`absolute animate-float opacity-30 hover:opacity-60 transition-opacity duration-700`}
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${4 + Math.random() * 4}s`,
-              }}
-            >
-              {i % 4 === 0 && (
-                <div className="w-3 h-3 bg-[#c38935]/20 rounded-full animate-pulse"></div>
-              )}
-              {i % 4 === 1 && (
-                <div className="w-4 h-1 bg-[#22336a]/20 rounded-full rotate-45"></div>
-              )}
-              {i % 4 === 2 && (
-                <div className="w-2 h-4 bg-[#f4d03f]/20 rounded-full rotate-12"></div>
-              )}
-              {i % 4 === 3 && (
-                <div className="w-3 h-3 border border-[#c38935]/20 rounded-sm rotate-45"></div>
-              )}
-            </div>
-          ))}
-
-          {/* Animated gradient waves */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#c38935] to-transparent top-1/4 animate-slide-in-right"></div>
-            <div
-              className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#22336a] to-transparent top-2/4 animate-slide-in-left"
-              style={{ animationDelay: "1s" }}
-            ></div>
-            <div
-              className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#f4d03f] to-transparent top-3/4 animate-slide-in-right"
-              style={{ animationDelay: "2s" }}
-            ></div>
-          </div>
-
-          {/* Large floating orbs with enhanced animation */}
-          <div className="absolute top-20 left-20 w-32 h-32 bg-[#c38935]/10 rounded-full blur-2xl animate-pulse-glow"></div>
-          <div
-            className="absolute bottom-20 right-20 w-40 h-40 bg-[#22336a]/10 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "2s" }}
-          ></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#f4d03f]/5 rounded-full blur-3xl animate-gradient-shift"></div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Compact Enhanced Header */}
-          <div className="text-center mb-6 md:mb-8 animate-fade-in">
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-full mb-4 shadow-lg hover:shadow-xl transition-all duration-500 group animate-bounce-subtle hover:scale-105">
-              <div className="w-2 h-2 bg-white/30 rounded-full mr-2 animate-pulse group-hover:animate-bounce"></div>
-              <span className="text-white font-bold text-xs md:text-sm tracking-wide">
-                🎬 EXPERIENCE CAMPUS LIFE
-              </span>
-              <div
-                className="w-2 h-2 bg-white/30 rounded-full ml-2 animate-pulse group-hover:animate-bounce"
-                style={{ animationDelay: "0.5s" }}
-              ></div>
-            </div>
-
-            {/* Compact animated title */}
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#22336a] mb-3 leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] bg-[length:200%] animate-gradient-shift">
-                Live Campus Experience
-              </span>
-            </h2>
-
-            {/* Compact stats row */}
-            <div
-              className="flex justify-center items-center gap-6 md:gap-8 mb-4 animate-fade-in"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-gray-200/50">
-                <div className="w-2 h-2 bg-[#c38935] rounded-full mr-2 animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">
-                  50+ Facilities
-                </span>
-              </div>
-              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-gray-200/50">
-                <div className="w-2 h-2 bg-[#22336a] rounded-full mr-2 animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">
-                  24/7 Access
-                </span>
-              </div>
-              <div className="flex items-center bg-white/60 backdrop-blur-sm rounded-lg px-3 py-2 shadow-md border border-gray-200/50">
-                <div className="w-2 h-2 bg-[#f4d03f] rounded-full mr-2 animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">
-                  Premium Experience
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Compact Video Section */}
-          <div
-            className="max-w-3xl mx-auto mb-8 md:mb-10 animate-scale-in"
-            style={{ animationDelay: "0.5s" }}
-          >
-            <div className="relative group">
-              <div className="relative bg-gradient-to-br from-[#22336a] to-[#c38935] rounded-2xl p-2 shadow-xl group-hover:scale-105 transition-all duration-500">
-                <div className="bg-white rounded-xl overflow-hidden aspect-video relative">
-                  {/* Google Drive Video Player */}
-                  <div className="w-full h-full relative">
-                    <iframe
-                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview"
-                      title="Hi-Tech Institute Campus Life - Immersive Experience"
-                      className="w-full h-full group-hover:scale-105 transition-transform duration-700"
-                      frameBorder="0"
-                      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                      allowFullScreen
-                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                    ></iframe>
-                  </div>
-
-                  {/* Enhanced Video Overlay Elements */}
-                  <div className="absolute top-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-all duration-500 pointer-events-none">
-                    <div className="px-3 py-1 bg-red-500/90 backdrop-blur-sm rounded-full text-white text-xs font-bold animate-pulse shadow-lg border border-red-400/30">
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 bg-red-300 rounded-full mr-2 animate-ping"></div>
-                        🔴 LIVE CAMPUS TOUR
-                      </div>
-                    </div>
-                    <div className="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-gray-800 text-xs font-semibold shadow-lg border border-gray-200">
-                      🎬 Interactive Experience
-                    </div>
-                  </div>
-
-                  {/* Floating interaction hints */}
-                  <div className="absolute inset-0 pointer-events-none">
-                    {[...Array(3)].map((_, i) => (
-                      <div
-                        key={i}
-                        className={`absolute w-4 h-4 bg-white/20 rounded-full opacity-0 group-hover:opacity-60 transition-all duration-1000 animate-float`}
-                        style={{
-                          left: `${20 + i * 30}%`,
-                          top: `${30 + i * 20}%`,
-                          animationDelay: `${i * 0.5}s`,
-                          transitionDelay: `${i * 0.2}s`,
-                        }}
-                      ></div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Compact Video Info */}
-                <div className="absolute -bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-200 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 pointer-events-none">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#22336a] font-bold text-xs">
-                      🎬 Live Campus Tour
-                    </span>
-                    <span className="text-[#c38935] font-semibold text-xs">
-                      Auto-playing
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Compact CTA */}
-          <div className="text-center animate-fade-in-up">
-            <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-6 max-w-3xl mx-auto shadow-xl relative overflow-hidden">
-              <div className="relative z-10">
-                <h3 className="text-white font-bold text-lg md:text-xl mb-3">
-                  Ready to Experience
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
-                    {" "}
-                    Campus Life?
-                  </span>
-                </h3>
-                <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <a
-                    href="tel:+917065303030"
-                    className="group px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-                  >
-                    <span className="mr-2">📞</span>
-                    <span>Schedule Visit</span>
-                  </a>
-                  <a
-                    href="https://sunstone.in/apply-now"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group px-6 py-3 bg-white/20 hover:bg-white/30 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 border border-white/30 flex items-center justify-center"
-                  >
-                    <span className="mr-2">🚀</span>
-                    <span>Apply Now</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* New Age Education Section - Key Offerings Layout */}
       <section className="py-6 md:py-16 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
@@ -2044,7 +1845,17 @@ const Index = () => {
               New Age Education That Secures Futures
             </h2>
             <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
-              Discover 23 years of excellence in future-ready education
+              <h2 style={{ textAlign: "center" }}>
+                <strong>
+                  Transform your career with industry-integrated programs
+                  designed by corporate leaders, featuring cutting-edge
+                  curriculum, practical learning experiences, and guaranteed
+                  placement support.
+                </strong>
+              </h2>
+              <p>
+                <br />
+              </p>
             </p>
           </div>
 
@@ -2206,8 +2017,10 @@ const Index = () => {
                   Corporate Leaders Turned Educators
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
-                  Learn directly from industry veterans and Fortune 500
-                  executives
+                  <p>
+                    Learn directly from corporate leaders with real world
+                    experience
+                  </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -2265,8 +2078,9 @@ const Index = () => {
                   Practical Learning Over Theory
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
-                  Hands-on experience with live projects and industry
-                  collaborations
+                  <p>
+                    Hands-on experience with live projects and industry visits
+                  </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -2458,8 +2272,10 @@ const Index = () => {
                   POP
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
-                  Access to 200+ guaranteed job opportunities with comprehensive
-                  placement support
+                  <p>
+                    Access to 200+ assured job opportunities with comprehensive
+                    placement support
+                  </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -2888,15 +2704,11 @@ const Index = () => {
                           <div className="font-bold text-xs md:text-sm">
                             {programData.duration}
                           </div>
-                          <div className="text-xs opacity-80">Duration</div>
                         </div>
                         <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
                           <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
                           <div className="font-bold text-xs md:text-sm">
                             {programData.specializations}
-                          </div>
-                          <div className="text-xs opacity-80">
-                            Specializations
                           </div>
                         </div>
                         <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
@@ -2904,23 +2716,18 @@ const Index = () => {
                           <div className="font-bold text-xs md:text-sm">
                             {programData.certifications}
                           </div>
-                          <div className="text-xs opacity-80">
-                            Certifications
-                          </div>
                         </div>
                         <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
                           <Briefcase className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
                           <div className="font-bold text-xs md:text-sm">
                             {programData.internships}
                           </div>
-                          <div className="text-xs opacity-80">Experience</div>
                         </div>
                         <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
                           <Target className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
                           <div className="font-bold text-xs md:text-sm">
                             {programData.projects}
                           </div>
-                          <div className="text-xs opacity-80">Projects</div>
                         </div>
                       </div>
                     </div>
@@ -3954,7 +3761,7 @@ const Index = () => {
                   question:
                     "What makes Sunstone different from other education providers?",
                   answer:
-                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
+                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n��� First year tuition fee back guarantee",
                   category: "sunstone",
                 },
                 {
