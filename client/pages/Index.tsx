@@ -393,8 +393,10 @@ const Index = () => {
                 </span>
               </h1>
               <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3">
-                Join Hi-Tech Institute for industry-aligned programs with
-                guaranteed placement support.
+                <p>
+                  Join Hi-Tech Institute for industry-aligned programs with
+                  assured placement support.
+                </p>
               </div>
               <div className="flex flex-col gap-1 md:gap-3 lg:gap-4">
                 <a
