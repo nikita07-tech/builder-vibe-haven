@@ -1347,8 +1347,7 @@ const Index = () => {
                   Placement Opportunity Program
                 </h3>
                 <p className="text-gray-600 text-xs md:text-lg max-w-2xl mx-auto">
-                  Industry-leading placement program with guaranteed
-                  opportunities and comprehensive support system
+                  An industry-aligned placement program with dedicated support, focused on outcomes that matter.
                 </p>
               </div>
 
@@ -1359,7 +1358,7 @@ const Index = () => {
                     200+
                   </div>
                   <p className="text-gray-600 font-medium text-[10px] md:text-base">
-                    Guaranteed Opportunities
+                    Assured Opportunities
                   </p>
                 </div>
                 <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl hover:bg-gray-100 transition-colors duration-300">
@@ -2318,7 +2317,7 @@ const Index = () => {
             </h2>
             <p className="text-xs md:text-base lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Transform your career with industry-aligned programs designed by
-              experts
+              experts - 6 new age specialisations and 10 in demand certifications
             </p>
           </div>
 
@@ -2568,25 +2567,25 @@ const Index = () => {
                       <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
                         <div className="w-full h-4 mb-1 rounded bg-gray-50 flex items-center justify-center">
                           <img
-                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2F07e4a38f73674b24b0edef76ca4585d5?format=webp&width=800"
-                            alt="TCS ION"
+                            src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fa8d35565f43f4565b0770d25d2fbd9be?format=webp&width=800"
+                            alt="CII"
                             className="w-full h-full object-contain"
                           />
                         </div>
                         <p className="text-[9px] font-bold text-[#22336a]">
-                          TCS ION
+                          CII
                         </p>
                       </div>
                       <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
                         <div className="w-full h-4 mb-1 rounded bg-gray-50 flex items-center justify-center">
                           <img
-                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Facd3859729a3443b919174d00f2d05f3?format=webp&width=800"
-                            alt="AU Finance"
+                            src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F624e38c9bf5940b9832b351b519c4e7c?format=webp&width=800"
+                            alt="ASSOCHAM"
                             className="w-full h-full object-contain"
                           />
                         </div>
                         <p className="text-[9px] font-bold text-[#22336a]">
-                          AU Finance
+                          ASSOCHAM
                         </p>
                       </div>
                       <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
@@ -2810,26 +2809,26 @@ const Index = () => {
                               <div className="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
                                 <div className="w-full h-8 md:h-12 lg:h-16 mb-2 md:mb-3 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
                                   <img
-                                    src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2F07e4a38f73674b24b0edef76ca4585d5?format=webp&width=800"
-                                    alt="TCS ION"
+                                    src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fa8d35565f43f4565b0770d25d2fbd9be?format=webp&width=800"
+                                    alt="CII"
                                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                                   />
                                 </div>
                                 <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
-                                  TCS ION
+                                  CII
                                 </p>
                                 <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                               </div>
                               <div className="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
                                 <div className="w-full h-8 md:h-12 lg:h-16 mb-2 md:mb-3 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
                                   <img
-                                    src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Facd3859729a3443b919174d00f2d05f3?format=webp&width=800"
-                                    alt="AU Small Finance Bank"
+                                    src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F624e38c9bf5940b9832b351b519c4e7c?format=webp&width=800"
+                                    alt="ASSOCHAM"
                                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                                   />
                                 </div>
                                 <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
-                                  AU Finance
+                                  ASSOCHAM
                                 </p>
                                 <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                               </div>
