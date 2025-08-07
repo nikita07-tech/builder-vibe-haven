@@ -2506,7 +2506,7 @@ const Index = () => {
                       <div className="lg:col-span-2">
                         <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-[#22336a] mb-4 md:mb-6 flex items-center">
                           <Star className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mr-2 text-[#c38935]" />
-                          In Demand Certifications
+                          Specialisations
                         </h4>
                         <div className="grid gap-3 md:gap-4">
                           {programData.certificationsList
@@ -2678,7 +2678,7 @@ const Index = () => {
           {/* Two-line Animated Recruiters - Smaller on Mobile */}
           <div className="space-y-4 md:space-y-8 mb-6 md:mb-12">
             {/* First line - Right to Left */}
-            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-3 md:py-6">
+            <div className="relative overflow-hidden bg-white rounded-xl py-3 md:py-6">
               <div className="flex space-x-12 animate-scroll-right-to-left whitespace-nowrap">
                 {[
                   {
@@ -2739,13 +2739,10 @@ const Index = () => {
             </div>
 
             {/* Second line - Left to Right */}
-            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-3 md:py-6">
+            <div className="relative overflow-hidden bg-white rounded-xl py-3 md:py-6">
               <div className="flex space-x-12 animate-scroll-left-to-right whitespace-nowrap">
                 {[
-                  {
-                    name: "Patanjali",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe052011a718f4d058d742475abbab609?format=webp&width=800",
-                  },
+
                   {
                     name: "Coca-Cola",
                     src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Ffc21c2e8539e40b6909b38115f246610?format=webp&width=800",
@@ -2767,10 +2764,7 @@ const Index = () => {
                     src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800",
                   },
                   // Duplicate for seamless loop
-                  {
-                    name: "Patanjali",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe052011a718f4d058d742475abbab609?format=webp&width=800",
-                  },
+
                   {
                     name: "Coca-Cola",
                     src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Ffc21c2e8539e40b6909b38115f246610?format=webp&width=800",
