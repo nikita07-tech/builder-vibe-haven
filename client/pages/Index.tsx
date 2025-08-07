@@ -1617,7 +1617,7 @@ const Index = () => {
           <div className="block md:hidden mb-4">
             <div className="overflow-hidden rounded-xl">
               <div className="flex space-x-4 animate-scroll-right-to-left">
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer animate-slide-in-left">
                   <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <span className="text-white text-lg">��</span>
@@ -1705,7 +1705,7 @@ const Index = () => {
                   </div>
                 </div>
                 {/* Duplicate cards for seamless loop */}
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
                   <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <span className="text-white text-lg">💼</span>
@@ -1719,7 +1719,7 @@ const Index = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
                   <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <span className="text-white text-lg">👨‍💼</span>
@@ -1860,7 +1860,7 @@ const Index = () => {
           <div className="block md:hidden mb-4">
             <div className="overflow-hidden rounded-xl">
               <div className="flex space-x-4 animate-scroll-right-to-left">
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer animate-slide-in-left">
                   <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <BookOpen className="h-5 w-5 text-white" />
@@ -1935,7 +1935,7 @@ const Index = () => {
                   </div>
                 </div>
                 {/* Duplicate cards for seamless loop */}
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
                   <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <BookOpen className="h-5 w-5 text-white" />
@@ -1949,7 +1949,7 @@ const Index = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
                   <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <Award className="h-5 w-5 text-white" />
