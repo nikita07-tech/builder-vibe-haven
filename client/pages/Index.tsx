@@ -582,8 +582,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Ultra-Enhanced Video Experience Section */}
-      <section className="py-12 md:py-24 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+      {/* Ultra-Enhanced Video Experience Section - Mobile Optimized */}
+      <section className="py-6 md:py-24 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
         {/* Advanced Animated Background */}
         <div className="absolute inset-0">
           {/* Multiple floating orbs with different animations */}
@@ -615,19 +615,6 @@ const Index = () => {
             ></div>
           ))}
 
-          {/* Animated Grid Lines */}
-          <div className="absolute inset-0 opacity-3">
-            <div className="grid grid-cols-12 h-full">
-              {[...Array(12)].map((_, i) => (
-                <div
-                  key={i}
-                  className="border-r border-[#22336a]/20 animate-pulse"
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                ></div>
-              ))}
-            </div>
-          </div>
-
           {/* Flowing Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#c38935]/3 to-transparent animate-gradient-flow"></div>
         </div>
@@ -647,8 +634,8 @@ const Index = () => {
               ></div>
             </div>
 
-            {/* Animated Title */}
-            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
+            {/* Animated Title - Mobile Optimized */}
+            <h2 className="text-xl sm:text-2xl md:text-5xl lg:text-7xl font-bold mb-3 md:mb-8 leading-tight">
               <span className="inline-block animate-slide-in-left text-[#22336a]">
                 Experience
               </span>{" "}
@@ -666,7 +653,7 @@ const Index = () => {
 
             <div className="max-w-4xl mx-auto">
               <p
-                className="text-sm md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-6"
+                className="text-xs md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-4 md:mb-6"
                 style={{ animationDelay: "0.5s" }}
               >
                 Step into a world where education meets innovation, creativity,
@@ -674,38 +661,38 @@ const Index = () => {
                 designed for excellence.
               </p>
 
-              {/* Animated Stats */}
+              {/* Animated Stats - Mobile Optimized */}
               <div
-                className="grid grid-cols-3 gap-4 md:gap-8 mb-8 animate-fade-in-up"
+                className="grid grid-cols-3 gap-2 md:gap-8 mb-4 md:mb-8 animate-fade-in-up"
                 style={{ animationDelay: "0.7s" }}
               >
-                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
-                  <div className="text-2xl md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up">
+                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                  <div className="text-lg md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up">
                     <p>20000+</p>
                   </div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                  <div className="text-[10px] md:text-sm text-gray-600 font-medium">
                     Happy Students
                   </div>
                 </div>
-                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
                   <div
-                    className="text-2xl md:text-4xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
+                    className="text-lg md:text-4xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
                     style={{ animationDelay: "0.2s" }}
                   >
                     50+
                   </div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                  <div className="text-[10px] md:text-sm text-gray-600 font-medium">
                     Campus Facilities
                   </div>
                 </div>
-                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                <div className="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
                   <div
-                    className="text-2xl md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
+                    className="text-lg md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
                     style={{ animationDelay: "0.4s" }}
                   >
                     24/7
                   </div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">
+                  <div className="text-[10px] md:text-sm text-gray-600 font-medium">
                     Learning Support
                   </div>
                 </div>
@@ -713,17 +700,17 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Ultra-Enhanced Video Container */}
-          <div className="max-w-6xl mx-auto">
+          {/* Ultra-Enhanced Video Container - Mobile Optimized */}
+          <div className="max-w-4xl md:max-w-6xl mx-auto px-2 md:px-0">
             <div
               className="relative group animate-scale-in"
               style={{ animationDelay: "0.9s" }}
             >
               {/* Outer Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#c38935]/20 via-[#22336a]/15 to-[#c38935]/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700 scale-105"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#c38935]/20 via-[#22336a]/15 to-[#c38935]/20 rounded-xl md:rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700 scale-105"></div>
 
               {/* Main Video Container */}
-              <div className="relative bg-white/70 backdrop-blur-xl rounded-3xl overflow-hidden border-2 border-[#c38935]/30 shadow-2xl group-hover:border-[#c38935]/60 transition-all duration-700 group-hover:scale-105 group-hover:-translate-y-4">
+              <div className="relative bg-white/70 backdrop-blur-xl rounded-xl md:rounded-3xl overflow-hidden border border-[#c38935]/30 md:border-2 shadow-2xl group-hover:border-[#c38935]/60 transition-all duration-700 group-hover:scale-105 group-hover:-translate-y-4">
                 {/* Animated Border Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] opacity-0 group-hover:opacity-30 transition-opacity duration-700 animate-border-flow"></div>
 
@@ -826,266 +813,32 @@ const Index = () => {
 
                     {/* Interactive CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <button className="px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group/btn">
-                        <span className="mr-2">🎯</span>
+                      <a
+                        href="https://sunstone.in/all-campuses-program"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group/btn"
+                      >
                         <span>Take Virtual Tour</span>
                         <ChevronRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                      </button>
-                      <button className="px-6 py-3 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-[#22336a] flex items-center justify-center">
+                      </a>
+                      <a
+                        href="tel:+919069069069"
+                        className="px-6 py-3 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-[#22336a] flex items-center justify-center"
+                      >
                         <span className="mr-2">📞</span>
                         <span>Schedule Visit</span>
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Floating Action Cards */}
-          <div
-            className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up"
-            style={{ animationDelay: "1.2s" }}
-          >
-            {[
-              {
-                icon: "🌟",
-                title: "Excellence",
-                desc: "Award-winning education quality",
-              },
-              {
-                icon: "🚀",
-                title: "Innovation",
-                desc: "Cutting-edge learning methods",
-              },
-              {
-                icon: "🤝",
-                title: "Community",
-                desc: "Vibrant student networks",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-white/70 backdrop-blur-lg rounded-2xl p-6 border border-gray-200 hover:border-[#c38935]/50 transition-all duration-500 hover:-translate-y-2 hover:scale-105 group shadow-lg hover:shadow-xl"
-              >
-                <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">
-                  {item.icon}
-                </div>
-                <h4 className="text-[#22336a] font-bold text-lg mb-2 group-hover:text-[#c38935] transition-colors duration-300">
-                  {item.title}
-                </h4>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Top Recruiters Section with Horizontal Scrolling - Smaller on Mobile */}
-      <section className="py-4 md:py-16 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="text-center mb-4 md:mb-12">
-            <h2 className="text-base sm:text-lg md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-2 md:mb-6">
-              Top Recruiters
-            </h2>
-            <p className="text-xs md:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Join a network of 1,200+ leading companies that actively recruit
-              our graduates
-            </p>
-          </div>
-
-          {/* Two-line Animated Recruiters - Smaller on Mobile */}
-          <div className="space-y-4 md:space-y-8 mb-6 md:mb-12">
-            {/* First line - Right to Left */}
-            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-3 md:py-6">
-              <div className="flex space-x-12 animate-scroll-right-to-left whitespace-nowrap">
-                {[
-                  {
-                    name: "Bosch",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
-                  },
-                  {
-                    name: "HCL",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
-                  },
-                  {
-                    name: "TCS",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
-                  },
-                  {
-                    name: "Paytm",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
-                  },
-                  {
-                    name: "Microsoft",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800",
-                  },
-                  {
-                    name: "Genpact",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800",
-                  },
-                  // Duplicate for seamless loop
-                  {
-                    name: "Bosch",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
-                  },
-                  {
-                    name: "HCL",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
-                  },
-                  {
-                    name: "TCS",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
-                  },
-                  {
-                    name: "Paytm",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F57b8a745820649d0ab29f1d4f1ed2a72?format=webp&width=800",
-                  },
-                ].map((recruiter, index) => (
-                  <button
-                    key={`${recruiter.name}-${index}`}
-                    onClick={() => handleRecruiterClick(recruiter.name)}
-                    className="flex-shrink-0 transition-all duration-300 transform hover:scale-110"
-                  >
-                    <img
-                      src={recruiter.src}
-                      alt={recruiter.name}
-                      className="h-6 md:h-16 w-auto"
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Second line - Left to Right */}
-            <div className="relative overflow-hidden bg-gray-50 rounded-xl py-3 md:py-6">
-              <div className="flex space-x-12 animate-scroll-left-to-right whitespace-nowrap">
-                {[
-                  {
-                    name: "Bajaj Finserv",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
-                  },
-                  {
-                    name: "Airtel",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
-                  },
-                  {
-                    name: "IBM",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
-                  },
-                  {
-                    name: "Infosys",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
-                  },
-                  {
-                    name: "Hero",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Feee378591ebf4593b8dd2c2712b5decc?format=webp&width=800",
-                  },
-                  {
-                    name: "Axis Bank",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800",
-                  },
-                  // Duplicate for seamless loop
-                  {
-                    name: "Bajaj Finserv",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4d9300d8327941faafdb8cd488bc7f8d?format=webp&width=800",
-                  },
-                  {
-                    name: "Airtel",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4bfc49d6ff70493a9403549ca28088d8?format=webp&width=800",
-                  },
-                  {
-                    name: "IBM",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Ffa7d6e6553d34b0384a61c351cf47df1?format=webp&width=800",
-                  },
-                  {
-                    name: "Infosys",
-                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F82d69b53737c422781c8efc025af31c9?format=webp&width=800",
-                  },
-                ].map((recruiter, index) => (
-                  <button
-                    key={`${recruiter.name}-${index}`}
-                    onClick={() => handleRecruiterClick(recruiter.name)}
-                    className="flex-shrink-0 transition-all duration-300 transform hover:scale-110"
-                  >
-                    <img
-                      src={recruiter.src}
-                      alt={recruiter.name}
-                      className="h-6 md:h-16 w-auto"
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Career Focus Section - Mobile Scrolling */}
-          <div className="block md:hidden mb-8">
-            <div className="overflow-hidden">
-              <div className="flex space-x-4 animate-scroll-left-to-right">
-                <div className="flex-shrink-0 w-64 text-center p-4 bg-white rounded-lg shadow-lg border border-gray-200">
-                  <div className="w-10 h-10 mx-auto mb-2 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <Users className="h-5 w-5 text-white" />
-                  </div>
-                  <h3 className="text-sm font-bold text-[#22336a] mb-1">
-                    Industry Connections
-                  </h3>
-                  <p className="text-xs text-gray-600">
-                    Strong network of leading companies across sectors
-                  </p>
-                </div>
-                <div className="flex-shrink-0 w-64 text-center p-4 bg-white rounded-lg shadow-lg border border-gray-200">
-                  <div className="w-10 h-10 mx-auto mb-2 bg-[#22336a] rounded-full flex items-center justify-center">
-                    <Trophy className="h-5 w-5 text-white" />
-                  </div>
-                  <h3 className="text-sm font-bold text-[#22336a] mb-1">
-                    Career Growth
-                  </h3>
-                  <p className="text-xs text-gray-600">
-                    Excellent packages and growth opportunities
-                  </p>
-                </div>
-                <div className="flex-shrink-0 w-64 text-center p-4 bg-white rounded-lg shadow-lg border border-gray-200">
-                  <div className="w-10 h-10 mx-auto mb-2 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <Target className="h-5 w-5 text-white" />
-                  </div>
-                  <h3 className="text-sm font-bold text-[#22336a] mb-1">
-                    Success Stories
-                  </h3>
-                  <p className="text-xs text-gray-600">
-                    Proven track record of student achievements
-                  </p>
-                </div>
-                {/* Duplicate for seamless loop */}
-                <div className="flex-shrink-0 w-64 text-center p-4 bg-white rounded-lg shadow-lg border border-gray-200">
-                  <div className="w-10 h-10 mx-auto mb-2 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <Users className="h-5 w-5 text-white" />
-                  </div>
-                  <h3 className="text-sm font-bold text-[#22336a] mb-1">
-                    Industry Connections
-                  </h3>
-                  <p className="text-xs text-gray-600">
-                    Strong network of leading companies across sectors
-                  </p>
-                </div>
-                <div className="flex-shrink-0 w-64 text-center p-4 bg-white rounded-lg shadow-lg border border-gray-200">
-                  <div className="w-10 h-10 mx-auto mb-2 bg-[#22336a] rounded-full flex items-center justify-center">
-                    <Trophy className="h-5 w-5 text-white" />
-                  </div>
-                  <h3 className="text-sm font-bold text-[#22336a] mb-1">
-                    Career Growth
-                  </h3>
-                  <p className="text-xs text-gray-600">
-                    Excellent packages and growth opportunities
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-6 md:py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
+      <section className="py-6 md:py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
           <div
@@ -1347,8 +1100,8 @@ const Index = () => {
                   Placement Opportunity Program
                 </h3>
                 <p className="text-gray-600 text-xs md:text-lg max-w-2xl mx-auto">
-                  Industry-leading placement program with guaranteed
-                  opportunities and comprehensive support system
+                  An industry-aligned placement program with dedicated support,
+                  focused on outcomes that matter.
                 </p>
               </div>
 
@@ -1359,7 +1112,7 @@ const Index = () => {
                     200+
                   </div>
                   <p className="text-gray-600 font-medium text-[10px] md:text-base">
-                    Guaranteed Opportunities
+                    Assured Opportunities
                   </p>
                 </div>
                 <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl hover:bg-gray-100 transition-colors duration-300">
@@ -1863,15 +1616,15 @@ const Index = () => {
           <div className="block md:hidden mb-4">
             <div className="overflow-hidden rounded-xl">
               <div className="flex space-x-4 animate-scroll-right-to-left">
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left">
-                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer animate-slide-in-left">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 h-full flex flex-col">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <span className="text-white text-lg">��</span>
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Curriculum for Jobs of 2030
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Future-focused learning paths designed for tomorrow's
                       careers
                     </p>
@@ -1889,7 +1642,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Corporate Leaders Turned Educators
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Learn directly from industry veterans and Fortune 500
                       executives
                     </p>
@@ -1926,7 +1679,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       NextGen Tech Tools
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Advanced technologies and AI-powered learning platforms
                     </p>
                     <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
@@ -1943,7 +1696,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Practical Learning Over Theory
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Hands-on experience with live projects and industry
                       collaborations
                     </p>
@@ -1951,21 +1704,21 @@ const Index = () => {
                   </div>
                 </div>
                 {/* Duplicate cards for seamless loop */}
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer">
-                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 h-full flex flex-col">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <span className="text-white text-lg">💼</span>
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Curriculum for Jobs of 2030
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Future-focused learning paths designed for tomorrow's
                       careers
                     </p>
                   </div>
                 </div>
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
                   <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <span className="text-white text-lg">👨‍💼</span>
@@ -1973,7 +1726,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Corporate Leaders Turned Educators
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Learn directly from industry veterans and Fortune 500
                       executives
                     </p>
@@ -2106,15 +1859,15 @@ const Index = () => {
           <div className="block md:hidden mb-4">
             <div className="overflow-hidden rounded-xl">
               <div className="flex space-x-4 animate-scroll-right-to-left">
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left">
-                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer animate-slide-in-left">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 h-full flex flex-col">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <BookOpen className="h-5 w-5 text-white" />
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Expert Sessions
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Session by industry experts and leading faculty from
                       Fortune 500 companies
                     </p>
@@ -2132,7 +1885,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Professional Portfolio
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Showcase verified skills and experience to increase hiring
                       chances
                     </p>
@@ -2173,7 +1926,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Specializations
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Choose from industry-focused specializations designed to
                       boost your career prospects
                     </p>
@@ -2181,21 +1934,21 @@ const Index = () => {
                   </div>
                 </div>
                 {/* Duplicate cards for seamless loop */}
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer">
-                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 h-full flex flex-col">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <BookOpen className="h-5 w-5 text-white" />
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Expert Sessions
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Session by industry experts and leading faculty from
                       Fortune 500 companies
                     </p>
                   </div>
                 </div>
-                <div className="flex-shrink-0 w-64 group relative cursor-pointer">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
                   <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
                       <Award className="h-5 w-5 text-white" />
@@ -2203,7 +1956,7 @@ const Index = () => {
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Professional Portfolio
                     </h3>
-                    <p className="text-gray-600 text-xs leading-relaxed">
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
                       Showcase verified skills and experience to increase hiring
                       chances
                     </p>
@@ -2474,7 +2227,7 @@ const Index = () => {
                   "specs" ? (
                     <div className="space-y-1">
                       <h4 className="font-semibold text-[#22336a] text-xs">
-                        Key Specializations:
+                        New Age Specialisations:
                       </h4>
                       {programs[selectedMobileProgram].certificationsList
                         .slice(
@@ -2568,25 +2321,25 @@ const Index = () => {
                       <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
                         <div className="w-full h-4 mb-1 rounded bg-gray-50 flex items-center justify-center">
                           <img
-                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2F07e4a38f73674b24b0edef76ca4585d5?format=webp&width=800"
-                            alt="TCS ION"
+                            src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fa8d35565f43f4565b0770d25d2fbd9be?format=webp&width=800"
+                            alt="CII"
                             className="w-full h-full object-contain"
                           />
                         </div>
                         <p className="text-[9px] font-bold text-[#22336a]">
-                          TCS ION
+                          CII
                         </p>
                       </div>
                       <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
                         <div className="w-full h-4 mb-1 rounded bg-gray-50 flex items-center justify-center">
                           <img
-                            src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Facd3859729a3443b919174d00f2d05f3?format=webp&width=800"
-                            alt="AU Finance"
+                            src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F624e38c9bf5940b9832b351b519c4e7c?format=webp&width=800"
+                            alt="ASSOCHAM"
                             className="w-full h-full object-contain"
                           />
                         </div>
                         <p className="text-[9px] font-bold text-[#22336a]">
-                          AU Finance
+                          ASSOCHAM
                         </p>
                       </div>
                       <div className="bg-white p-1.5 rounded-md shadow-sm border border-gray-100 text-center">
@@ -2810,26 +2563,26 @@ const Index = () => {
                               <div className="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
                                 <div className="w-full h-8 md:h-12 lg:h-16 mb-2 md:mb-3 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
                                   <img
-                                    src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2F07e4a38f73674b24b0edef76ca4585d5?format=webp&width=800"
-                                    alt="TCS ION"
+                                    src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fa8d35565f43f4565b0770d25d2fbd9be?format=webp&width=800"
+                                    alt="CII"
                                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                                   />
                                 </div>
                                 <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
-                                  TCS ION
+                                  CII
                                 </p>
                                 <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                               </div>
                               <div className="bg-white p-2 md:p-4 rounded-xl shadow-lg border border-gray-100 text-center group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105">
                                 <div className="w-full h-8 md:h-12 lg:h-16 mb-2 md:mb-3 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center group-hover:bg-gray-100 transition-colors duration-300">
                                   <img
-                                    src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Facd3859729a3443b919174d00f2d05f3?format=webp&width=800"
-                                    alt="AU Small Finance Bank"
+                                    src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F624e38c9bf5940b9832b351b519c4e7c?format=webp&width=800"
+                                    alt="ASSOCHAM"
                                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                                   />
                                 </div>
                                 <p className="text-xs font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
-                                  AU Finance
+                                  ASSOCHAM
                                 </p>
                                 <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#c38935] to-transparent mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                               </div>
@@ -2892,6 +2645,203 @@ const Index = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Top Recruiters Section with Horizontal Scrolling - Smaller on Mobile */}
+      <section className="py-4 md:py-16 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="text-center mb-4 md:mb-12">
+            <h2 className="text-base sm:text-lg md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-2 md:mb-6">
+              Top Recruiters
+            </h2>
+            <p className="text-xs md:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              Join a network of 1,200+ leading companies that actively recruit
+              our graduates
+            </p>
+          </div>
+
+          {/* Two-line Animated Recruiters - Smaller on Mobile */}
+          <div className="space-y-4 md:space-y-8 mb-6 md:mb-12">
+            {/* First line - Right to Left */}
+            <div className="relative overflow-hidden bg-white rounded-xl py-3 md:py-6">
+              <div className="flex space-x-12 animate-scroll-right-to-left whitespace-nowrap">
+                {[
+                  {
+                    name: "Bosch",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
+                  },
+                  {
+                    name: "HCL",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
+                  },
+                  {
+                    name: "TCS",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
+                  },
+                  {
+                    name: "Blinkit",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F8f3145bc06174b1bbf7d4ad1fa6f0faf?format=webp&width=800",
+                  },
+                  {
+                    name: "Microsoft",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800",
+                  },
+                  {
+                    name: "Genpact",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800",
+                  },
+                  // Duplicate for seamless loop
+                  {
+                    name: "Bosch",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800",
+                  },
+                  {
+                    name: "HCL",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800",
+                  },
+                  {
+                    name: "TCS",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800",
+                  },
+                  {
+                    name: "Blinkit",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F8f3145bc06174b1bbf7d4ad1fa6f0faf?format=webp&width=800",
+                  },
+                ].map((recruiter, index) => (
+                  <button
+                    key={`${recruiter.name}-${index}`}
+                    onClick={() => handleRecruiterClick(recruiter.name)}
+                    className="flex-shrink-0 transition-all duration-300 transform hover:scale-110"
+                  >
+                    <img
+                      src={recruiter.src}
+                      alt={recruiter.name}
+                      className="h-6 md:h-16 w-auto"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Second line - Left to Right */}
+            <div className="relative overflow-hidden bg-white rounded-xl py-3 md:py-6">
+              <div className="flex space-x-12 animate-scroll-left-to-right whitespace-nowrap">
+                {[
+                  {
+                    name: "Coca-Cola",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Ffc21c2e8539e40b6909b38115f246610?format=webp&width=800",
+                  },
+                  {
+                    name: "ICICI Bank",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F70db68b8eaf9481eb512d034fe8026b7?format=webp&width=800",
+                  },
+                  {
+                    name: "Swiggy",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe51e97fd236549a2b5daead5818a3225?format=webp&width=800",
+                  },
+                  {
+                    name: "Zomato",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F0e1927dc15ff427fa408f03a82ff8201?format=webp&width=800",
+                  },
+                  {
+                    name: "Axis Bank",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800",
+                  },
+                  // Duplicate for seamless loop
+
+                  {
+                    name: "Coca-Cola",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Ffc21c2e8539e40b6909b38115f246610?format=webp&width=800",
+                  },
+                  {
+                    name: "ICICI Bank",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F70db68b8eaf9481eb512d034fe8026b7?format=webp&width=800",
+                  },
+                  {
+                    name: "Swiggy",
+                    src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe51e97fd236549a2b5daead5818a3225?format=webp&width=800",
+                  },
+                ].map((recruiter, index) => (
+                  <button
+                    key={`${recruiter.name}-${index}`}
+                    onClick={() => handleRecruiterClick(recruiter.name)}
+                    className="flex-shrink-0 transition-all duration-300 transform hover:scale-110"
+                  >
+                    <img
+                      src={recruiter.src}
+                      alt={recruiter.name}
+                      className="h-6 md:h-16 w-auto"
+                    />
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Career Focus Section - Mobile Scrolling */}
+          <div className="block md:hidden mb-8">
+            <div className="overflow-hidden">
+              <div className="flex space-x-4 animate-scroll-left-to-right">
+                <div className="flex-shrink-0 w-64 text-center p-4 bg-white rounded-lg shadow-lg border border-gray-200">
+                  <div className="w-10 h-10 mx-auto mb-2 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <Users className="h-5 w-5 text-white" />
+                  </div>
+                  <h3 className="text-sm font-bold text-[#22336a] mb-1">
+                    Industry Connections
+                  </h3>
+                  <p className="text-xs text-gray-600">
+                    Strong network of leading companies across sectors
+                  </p>
+                </div>
+                <div className="flex-shrink-0 w-64 text-center p-4 bg-white rounded-lg shadow-lg border border-gray-200">
+                  <div className="w-10 h-10 mx-auto mb-2 bg-[#22336a] rounded-full flex items-center justify-center">
+                    <Trophy className="h-5 w-5 text-white" />
+                  </div>
+                  <h3 className="text-sm font-bold text-[#22336a] mb-1">
+                    Career Growth
+                  </h3>
+                  <p className="text-xs text-gray-600">
+                    Excellent packages and growth opportunities
+                  </p>
+                </div>
+                <div className="flex-shrink-0 w-64 text-center p-4 bg-white rounded-lg shadow-lg border border-gray-200">
+                  <div className="w-10 h-10 mx-auto mb-2 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <Target className="h-5 w-5 text-white" />
+                  </div>
+                  <h3 className="text-sm font-bold text-[#22336a] mb-1">
+                    Success Stories
+                  </h3>
+                  <p className="text-xs text-gray-600">
+                    Proven track record of student achievements
+                  </p>
+                </div>
+                {/* Duplicate for seamless loop */}
+                <div className="flex-shrink-0 w-64 text-center p-4 bg-white rounded-lg shadow-lg border border-gray-200">
+                  <div className="w-10 h-10 mx-auto mb-2 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <Users className="h-5 w-5 text-white" />
+                  </div>
+                  <h3 className="text-sm font-bold text-[#22336a] mb-1">
+                    Industry Connections
+                  </h3>
+                  <p className="text-xs text-gray-600">
+                    Strong network of leading companies across sectors
+                  </p>
+                </div>
+                <div className="flex-shrink-0 w-64 text-center p-4 bg-white rounded-lg shadow-lg border border-gray-200">
+                  <div className="w-10 h-10 mx-auto mb-2 bg-[#22336a] rounded-full flex items-center justify-center">
+                    <Trophy className="h-5 w-5 text-white" />
+                  </div>
+                  <h3 className="text-sm font-bold text-[#22336a] mb-1">
+                    Career Growth
+                  </h3>
+                  <p className="text-xs text-gray-600">
+                    Excellent packages and growth opportunities
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -3761,7 +3711,7 @@ const Index = () => {
                   question:
                     "What makes Sunstone different from other education providers?",
                   answer:
-                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n��� First year tuition fee back guarantee",
+                    "• Industry-aligned curriculum designed with Fortune 500 companies\n• Assured placement opportunities\n• Real-world projects and internships\n• Dedicated placement officer for each student\n• Expert mentorship from IIM/IIT faculty\n• Advanced certifications in emerging technologies\n• First year tuition fee back guarantee",
                   category: "sunstone",
                 },
                 {
