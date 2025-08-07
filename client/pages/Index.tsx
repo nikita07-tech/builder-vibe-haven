@@ -2288,7 +2288,7 @@ const Index = () => {
             </h2>
             <p className="text-xs md:text-base lg:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Transform your career with industry-aligned programs designed by
-              experts - 6 new age specialisations and 10 in demand certifications
+              experts
             </p>
           </div>
 
