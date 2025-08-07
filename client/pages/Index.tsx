@@ -2730,7 +2730,6 @@ const Index = () => {
                           <div className="font-bold text-xs md:text-sm">
                             {programData.projects}
                           </div>
-                          <div className="text-xs opacity-80">Projects</div>
                         </div>
                       </div>
                     </div>
