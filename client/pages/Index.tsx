@@ -2273,8 +2273,10 @@ const Index = () => {
                   Practical Learning Over Theory
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
-                  Hands-on experience with live projects and industry
-                  collaborations
+                  <p>
+                    Hands-on experience with live projects and industry
+                    visits
+                  </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
