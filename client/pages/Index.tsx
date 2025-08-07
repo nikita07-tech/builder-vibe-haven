@@ -685,7 +685,7 @@ const Index = () => {
               >
                 <div className="text-center group bg-white/50 backdrop-blur-sm rounded-2xl p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
                   <div className="text-2xl md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up">
-                    5000+
+                    <p>20000+</p>
                   </div>
                   <div className="text-xs md:text-sm text-gray-600 font-medium">
                     Happy Students
