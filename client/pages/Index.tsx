@@ -2724,7 +2724,6 @@ const Index = () => {
                           <div className="font-bold text-xs md:text-sm">
                             {programData.internships}
                           </div>
-                          <div className="text-xs opacity-80">Experience</div>
                         </div>
                         <div className="text-center p-2 md:p-3 lg:p-4 bg-white/20 rounded-lg md:rounded-xl backdrop-blur-sm">
                           <Target className="h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 mx-auto mb-1 md:mb-2" />
