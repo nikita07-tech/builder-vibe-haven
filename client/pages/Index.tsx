@@ -2050,7 +2050,17 @@ const Index = () => {
               New Age Education That Secures Futures
             </h2>
             <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
-              Discover 23 years of excellence in future-ready education
+              <h2 style="text-align: center;">
+                <strong>
+                  Transform your career with industry-integrated programs
+                  designed by corporate leaders, featuring cutting-edge
+                  curriculum, practical learning experiences, and guaranteed
+                  placement support.
+                </strong>
+              </h2>
+              <p>
+                <br />
+              </p>
             </p>
           </div>
 
@@ -3108,7 +3118,7 @@ const Index = () => {
           <div className="text-center mb-4 md:mb-16">
             <div className="inline-flex items-center px-3 md:px-6 py-1.5 md:py-3 bg-white/80 backdrop-blur-sm rounded-full mb-3 md:mb-8 shadow-lg border border-gray-200">
               <span className="text-[#22336a] font-bold text-xs md:text-sm tracking-wide">
-                �� EASY FEE PAYMENT
+                🏦 EASY FEE PAYMENT
               </span>
             </div>
             <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight">
