@@ -615,7 +615,6 @@ const Index = () => {
             ></div>
           ))}
 
-
           {/* Flowing Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#c38935]/3 to-transparent animate-gradient-flow"></div>
         </div>
@@ -836,7 +835,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -1102,7 +1100,8 @@ const Index = () => {
                   Placement Opportunity Program
                 </h3>
                 <p className="text-gray-600 text-xs md:text-lg max-w-2xl mx-auto">
-                  An industry-aligned placement program with dedicated support, focused on outcomes that matter.
+                  An industry-aligned placement program with dedicated support,
+                  focused on outcomes that matter.
                 </p>
               </div>
 
@@ -2730,7 +2729,6 @@ const Index = () => {
             <div className="relative overflow-hidden bg-white rounded-xl py-3 md:py-6">
               <div className="flex space-x-12 animate-scroll-left-to-right whitespace-nowrap">
                 {[
-
                   {
                     name: "Coca-Cola",
                     src: "https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Ffc21c2e8539e40b6909b38115f246610?format=webp&width=800",
