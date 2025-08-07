@@ -1836,7 +1836,6 @@ const Index = () => {
         </div>
       </section>
 
-
       {/* New Age Education Section - Key Offerings Layout */}
       <section className="py-6 md:py-16 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
@@ -1846,7 +1845,7 @@ const Index = () => {
               New Age Education That Secures Futures
             </h2>
             <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
-              <h2 style={{textAlign: "center"}}>
+              <h2 style={{ textAlign: "center" }}>
                 <strong>
                   Transform your career with industry-integrated programs
                   designed by corporate leaders, featuring cutting-edge
@@ -2080,8 +2079,7 @@ const Index = () => {
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
                   <p>
-                    Hands-on experience with live projects and industry
-                    visits
+                    Hands-on experience with live projects and industry visits
                   </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -2275,8 +2273,8 @@ const Index = () => {
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
                   <p>
-                    Access to 200+ assured job opportunities with
-                    comprehensive placement support
+                    Access to 200+ assured job opportunities with comprehensive
+                    placement support
                   </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
