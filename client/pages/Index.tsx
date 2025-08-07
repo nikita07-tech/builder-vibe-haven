@@ -2212,8 +2212,10 @@ const Index = () => {
                   Corporate Leaders Turned Educators
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed flex-grow">
-                  Learn directly from industry veterans and Fortune 500
-                  executives
+                  <p>
+                    Learn directly from corporate leaders with real world
+                    experience
+                  </p>
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
