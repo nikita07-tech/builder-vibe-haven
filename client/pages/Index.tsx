@@ -615,18 +615,6 @@ const Index = () => {
             ></div>
           ))}
 
-          {/* Animated Grid Lines */}
-          <div className="absolute inset-0 opacity-3">
-            <div className="grid grid-cols-12 h-full">
-              {[...Array(12)].map((_, i) => (
-                <div
-                  key={i}
-                  className="border-r border-[#22336a]/20 animate-pulse"
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                ></div>
-              ))}
-            </div>
-          </div>
 
           {/* Flowing Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#c38935]/3 to-transparent animate-gradient-flow"></div>
