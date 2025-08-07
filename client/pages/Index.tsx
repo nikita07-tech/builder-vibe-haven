@@ -388,9 +388,8 @@ const Index = () => {
             <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
               <h1 className="text-sm sm:text-lg md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
                 <span>Unlock Your Potential with</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
-                  {" "}
-                  World-Class Education
+                <span className="text-[#c38935] bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
+                  <p>Premium Education</p>
                 </span>
               </h1>
               <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3">
