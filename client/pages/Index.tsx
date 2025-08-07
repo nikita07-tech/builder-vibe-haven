@@ -567,7 +567,7 @@ const Index = () => {
                       7X More Companies
                     </p>
                     <p className="text-[9px] md:text-xs text-gray-600">
-                      vs institutes
+                      <p>vs top private institutions</p>
                     </p>
                   </div>
                 </div>
