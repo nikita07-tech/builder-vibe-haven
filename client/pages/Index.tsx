@@ -1803,8 +1803,11 @@ const Index = () => {
                 200+ Placement Opportunities
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Guaranteed access to extensive placement opportunities across
-                leading companies
+                <p>
+                  {" "}
+                  Access to extensive placement opportunities across leading
+                  companies.
+                </p>
               </p>
             </div>
 
