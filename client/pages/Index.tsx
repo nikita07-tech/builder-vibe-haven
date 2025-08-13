@@ -450,10 +450,15 @@ const Index = () => {
                               <iframe
                                 src={item.src}
                                 title={item.alt}
-                                className="w-full h-auto aspect-[4/3]"
+                                className="w-full h-auto aspect-[4/3] rounded-md overflow-hidden"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
+                                style={{
+                                  border: 'none',
+                                  outline: 'none',
+                                  pointerEvents: 'auto'
+                                }}
                               />
                             ) : (
                               <img
