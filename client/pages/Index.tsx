@@ -2986,7 +2986,7 @@ const Index = () => {
             <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 backdrop-blur-sm rounded-full mb-6 md:mb-8 border border-white/20 shadow-lg">
               <div className="w-3 h-3 bg-[#c38935] rounded-full mr-3 animate-pulse"></div>
               <span className="text-[#22336a] font-semibold text-sm md:text-base tracking-wide">
-                🚀 YOUR SUCCESS ROADMAP
+                YOUR SUCCESS ROADMAP
               </span>
               <div className="w-3 h-3 bg-[#22336a] rounded-full ml-3 animate-pulse" style={{ animationDelay: "0.5s" }}></div>
             </div>
