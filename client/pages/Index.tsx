@@ -682,7 +682,7 @@ const Index = () => {
                 </div>
                 <div className="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
                   <div
-                    className="text-lg md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
+                    className="text-sm sm:text-base md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
                     style={{ animationDelay: "0.4s" }}
                   >
                     24/7
