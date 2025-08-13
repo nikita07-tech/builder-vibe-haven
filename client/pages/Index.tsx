@@ -2967,34 +2967,36 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Admission Process */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-orange-50 relative overflow-hidden">
+      {/* Innovative Journey to Success with Arrows */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-[#22336a]/10 to-[#c38935]/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
           <div
-            className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-[#c38935]/10 to-[#22336a]/10 rounded-full blur-3xl animate-float"
+            className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-[#c38935]/5 to-[#22336a]/5 rounded-full blur-3xl animate-float"
             style={{ animationDelay: "3s" }}
           ></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 md:mb-16 lg:mb-20">
-            <div className="inline-flex items-center px-4 md:px-6 py-1.5 md:py-2 bg-[#22336a]/10 rounded-full mb-4 md:mb-6">
-              <Clock className="h-4 w-4 md:h-5 md:w-5 text-[#22336a] mr-2" />
-              <span className="text-[#22336a] font-semibold text-sm md:text-base">
-                Quick & Easy Process
+          <div className="text-center mb-16 md:mb-20">
+            <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 backdrop-blur-sm rounded-full mb-6 md:mb-8 border border-white/20 shadow-lg">
+              <div className="w-3 h-3 bg-[#c38935] rounded-full mr-3 animate-pulse"></div>
+              <span className="text-[#22336a] font-semibold text-sm md:text-base tracking-wide">
+                🚀 YOUR SUCCESS ROADMAP
               </span>
+              <div className="w-3 h-3 bg-[#22336a] rounded-full ml-3 animate-pulse" style={{ animationDelay: "0.5s" }}></div>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-4 md:mb-6 leading-tight">
-              Your Journey to
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#d4a853]">
-                {" "}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 leading-tight">
+              <span className="text-[#22336a] inline-block animate-slide-in-left">
+                Your Journey to
+              </span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] inline-block animate-slide-in-right">
                 Success
               </span>
             </h2>
-            <p className="text-sm md:text-base lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Five streamlined steps to unlock your potential and transform your
-              career
+            <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+              Follow our proven pathway that transforms ambitious students into industry-ready professionals
             </p>
           </div>
 
