@@ -3181,7 +3181,7 @@ const Index = () => {
                       <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 to-transparent group-hover:animate-pulse"></div>
 
                       {/* Step Icon */}
-                      <span className="text-3xl relative z-10">{item.icon}</span>
+                      <div className="relative z-10">{item.icon}</div>
 
                       {/* Step Number Badge */}
                       <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-[#c38935]">
