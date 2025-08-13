@@ -451,7 +451,7 @@ const Index = () => {
                               <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden bg-black">
                                 <iframe
                                   key={`video-${videoMuted}`}
-                                  src={videoMuted ? item.src : item.src.replace("mute=1", "mute=0").replace("autoplay=1", "autoplay=1")}
+                                  src={videoMuted ? item.src : item.src.replace("mute=1", "mute=0")}
                                   title={item.alt}
                                   className="absolute inset-0 w-full h-full"
                                   frameBorder="0"
