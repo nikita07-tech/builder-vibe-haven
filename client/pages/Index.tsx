@@ -434,14 +434,25 @@ const Index = () => {
                           transform: `translateX(-${currentSlide * 100}%)`,
                         }}
                       >
-                        {carouselImages.map((image, index) => (
+                        {carouselImages.map((item, index) => (
                           <div key={index} className="w-full flex-shrink-0">
-                            <img
-                              src={image.src}
-                              alt={image.alt}
-                              className="w-full h-auto object-cover aspect-[4/3]"
-                              loading="eager"
-                            />
+                            {item.type === "video" ? (
+                              <iframe
+                                src={item.src}
+                                title={item.alt}
+                                className="w-full h-auto aspect-[4/3]"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                              />
+                            ) : (
+                              <img
+                                src={item.src}
+                                alt={item.alt}
+                                className="w-full h-auto object-cover aspect-[4/3]"
+                                loading="eager"
+                              />
+                            )}
                           </div>
                         ))}
                       </div>
