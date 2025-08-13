@@ -648,7 +648,7 @@ const Index = () => {
 
             <div className="max-w-4xl mx-auto">
               <p
-                className="text-xs md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-4 md:mb-6"
+                className="text-xs sm:text-sm md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-3 sm:mb-4 md:mb-6"
                 style={{ animationDelay: "0.5s" }}
               >
                 Step into a world where education meets innovation, creativity,
