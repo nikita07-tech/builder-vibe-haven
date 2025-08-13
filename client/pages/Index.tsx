@@ -717,15 +717,12 @@ const Index = () => {
                 {/* Video Frame */}
                 <div className="aspect-video relative p-2 md:p-4">
                   <div className="relative rounded-2xl overflow-hidden h-full shadow-inner">
-                    <iframe
-                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview"
-                      title="Hi-Tech Institute Campus Life - Experience Excellence"
+                    <wistia-player
+                      media-id="g4et8b6dnb"
+                      aspect="1.7777777777777777"
+                      autoplay="true"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
-                      frameBorder="0"
-                      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                      allowFullScreen
-                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                    ></iframe>
+                    ></wistia-player>
 
                     {/* Interactive Overlay Elements */}
                     <div className="absolute top-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
