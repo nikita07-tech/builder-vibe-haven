@@ -3284,9 +3284,8 @@ const Index = () => {
               </span>
             </div>
             <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight">
-              Success
+              Success{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
-                {" "}
                 Stories
               </span>
               <br />
