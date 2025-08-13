@@ -630,7 +630,7 @@ const Index = () => {
             </div>
 
             {/* Animated Title - Mobile Optimized */}
-            <h2 className="text-xl sm:text-2xl md:text-5xl lg:text-7xl font-bold mb-3 md:mb-8 leading-tight">
+            <h2 className="text-sm sm:text-lg md:text-5xl lg:text-7xl font-bold mb-2 sm:mb-3 md:mb-8 leading-tight">
               <span className="inline-block animate-slide-in-left text-[#22336a]">
                 Experience
               </span>{" "}
