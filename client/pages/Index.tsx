@@ -447,19 +447,30 @@ const Index = () => {
                         {carouselImages.map((item, index) => (
                           <div key={index} className="w-full flex-shrink-0">
                             {item.type === "video" ? (
-                              <iframe
-                                src={item.src}
-                                title={item.alt}
-                                className="w-full h-auto aspect-[4/3] rounded-md overflow-hidden"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                                style={{
-                                  border: 'none',
-                                  outline: 'none',
-                                  pointerEvents: 'auto'
-                                }}
-                              />
+                              <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden bg-black">
+                                <iframe
+                                  src={item.src}
+                                  title={item.alt}
+                                  className="absolute inset-0 w-full h-full"
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                  style={{
+                                    border: 'none',
+                                    outline: 'none',
+                                    pointerEvents: 'auto',
+                                    transform: 'scale(1.02)',
+                                    transformOrigin: 'center'
+                                  }}
+                                />
+                                {/* Overlay to mask any remaining YouTube branding */}
+                                <div className="absolute inset-0 pointer-events-none">
+                                  {/* Top overlay to hide YouTube logo area */}
+                                  <div className="absolute top-0 right-0 w-20 h-8 bg-gradient-to-l from-black/20 to-transparent"></div>
+                                  {/* Bottom overlay to hide controls area */}
+                                  <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black/10 to-transparent"></div>
+                                </div>
+                              </div>
                             ) : (
                               <img
                                 src={item.src}
