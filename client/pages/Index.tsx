@@ -3524,7 +3524,7 @@ const Index = () => {
                   },
                   {
                     name: "Pulkit Singh",
-                    role: "MBA Graduate �� Dhanguard 10 LPA",
+                    role: "MBA Graduate • Dhanguard 10 LPA",
                     company: "GDG",
                     batch: "22-24",
                     initials: "PS",
