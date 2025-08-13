@@ -63,9 +63,9 @@ const Index = () => {
     {
       type: "video",
       src: "https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0",
-      alt: "Success Stories Video",
-      title: "Success Stories That Inspire",
-      subtitle: "Watch Our Students' Journeys",
+      alt: "Campus Life Video",
+      title: "Campus Life",
+      subtitle: "Experience Our Vibrant Community",
     },
     {
       type: "image",
