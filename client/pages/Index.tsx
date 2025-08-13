@@ -451,7 +451,11 @@ const Index = () => {
                               <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden bg-black">
                                 <iframe
                                   key={`video-${videoMuted}`}
-                                  src={videoMuted ? item.src : item.src.replace("mute=1", "mute=0")}
+                                  src={
+                                    videoMuted
+                                      ? item.src
+                                      : item.src.replace("mute=1", "mute=0")
+                                  }
                                   title={item.alt}
                                   className="absolute inset-0 w-full h-full"
                                   frameBorder="0"
@@ -483,15 +487,37 @@ const Index = () => {
                                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
                                       {videoMuted ? (
-                                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-                                          <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
-                                          <line x1="23" y1="9" x2="17" y2="15" stroke="currentColor" strokeWidth="2"/>
-                                          <line x1="17" y1="9" x2="23" y2="15" stroke="currentColor" strokeWidth="2"/>
+                                        <svg
+                                          className="w-8 h-8 text-white"
+                                          fill="currentColor"
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                                          <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+                                          <line
+                                            x1="23"
+                                            y1="9"
+                                            x2="17"
+                                            y2="15"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                          />
+                                          <line
+                                            x1="17"
+                                            y1="9"
+                                            x2="23"
+                                            y2="15"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                          />
                                         </svg>
                                       ) : (
-                                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                        <svg
+                                          className="w-8 h-8 text-white"
+                                          fill="currentColor"
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
                                         </svg>
                                       )}
                                     </div>
@@ -3240,7 +3266,10 @@ const Index = () => {
               <span className="text-[#22336a] font-semibold text-sm md:text-base tracking-wide">
                 YOUR SUCCESS ROADMAP
               </span>
-              <div className="w-3 h-3 bg-[#22336a] rounded-full ml-3 animate-pulse" style={{ animationDelay: "0.5s" }}></div>
+              <div
+                className="w-3 h-3 bg-[#22336a] rounded-full ml-3 animate-pulse"
+                style={{ animationDelay: "0.5s" }}
+              ></div>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 leading-tight">
               <span className="text-[#22336a] inline-block animate-slide-in-left">
@@ -3251,8 +3280,12 @@ const Index = () => {
                 Success
               </span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              Follow our proven pathway that transforms ambitious students into industry-ready professionals
+            <p
+              className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in-up"
+              style={{ animationDelay: "0.3s" }}
+            >
+              Follow our proven pathway that transforms ambitious students into
+              industry-ready professionals
             </p>
           </div>
 
@@ -3299,9 +3332,15 @@ const Index = () => {
                 <div key={index} className="relative">
                   {/* Arrow Connector */}
                   {index < 4 && (
-                    <div className="absolute left-1/2 transform -translate-x-1/2 z-10" style={{ top: '100%', height: '20px' }}>
+                    <div
+                      className="absolute left-1/2 transform -translate-x-1/2 z-10"
+                      style={{ top: "100%", height: "20px" }}
+                    >
                       <div className="w-8 h-5 flex items-center justify-center">
-                        <ArrowRight className="h-4 w-4 text-[#c38935] transform rotate-90 animate-bounce" style={{ animationDelay: `${index * 0.2}s` }} />
+                        <ArrowRight
+                          className="h-4 w-4 text-[#c38935] transform rotate-90 animate-bounce"
+                          style={{ animationDelay: `${index * 0.2}s` }}
+                        />
                       </div>
                     </div>
                   )}
@@ -3327,8 +3366,12 @@ const Index = () => {
                         {/* Content */}
                         <div className="flex-1">
                           <div className="flex items-center justify-between mb-1">
-                            <span className="text-xs font-bold text-[#c38935] tracking-wider">STEP {item.step}</span>
-                            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">{item.time}</span>
+                            <span className="text-xs font-bold text-[#c38935] tracking-wider">
+                              STEP {item.step}
+                            </span>
+                            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                              {item.time}
+                            </span>
                           </div>
                           <h3 className="text-base font-bold text-[#22336a] mb-1 group-hover:text-[#c38935] transition-colors duration-300">
                             {item.title}
@@ -3404,7 +3447,7 @@ const Index = () => {
                   desc: "Begin your transformative educational journey with comprehensive support",
                   time: "Lifetime",
                   icon: <Target className="h-10 w-10 text-white" />,
-                }
+                },
               ].map((item, index) => (
                 <div
                   key={index}
@@ -3422,7 +3465,9 @@ const Index = () => {
 
                       {/* Step Number Badge */}
                       <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-[#c38935]">
-                        <span className="text-[#22336a] font-bold text-sm">{item.step}</span>
+                        <span className="text-[#22336a] font-bold text-sm">
+                          {item.step}
+                        </span>
                       </div>
                     </div>
 
