@@ -456,19 +456,23 @@ const Index = () => {
                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                   allowFullScreen
                                   style={{
-                                    border: 'none',
-                                    outline: 'none',
-                                    pointerEvents: 'none',
-                                    transform: 'scale(1.02)',
-                                    transformOrigin: 'center'
+                                    border: "none",
+                                    outline: "none",
+                                    pointerEvents: "none",
+                                    transform: "scale(1.02)",
+                                    transformOrigin: "center",
                                   }}
                                 />
                                 {/* Custom video overlay to prevent YouTube interface */}
                                 <div className="absolute inset-0 bg-transparent cursor-pointer z-10 flex items-center justify-center group">
                                   {/* Video title overlay */}
                                   <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/60 to-transparent p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <h3 className="text-white font-semibold text-sm">{item.title}</h3>
-                                    <p className="text-white/80 text-xs">{item.subtitle}</p>
+                                    <h3 className="text-white font-semibold text-sm">
+                                      {item.title}
+                                    </h3>
+                                    <p className="text-white/80 text-xs">
+                                      {item.subtitle}
+                                    </p>
                                   </div>
                                   {/* Play indicator (always hidden since video autoplays) */}
                                   <div className="absolute inset-0 flex items-center justify-center opacity-0">
@@ -3323,9 +3327,14 @@ const Index = () => {
               </span>
             </div>
             <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight">
-              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">Stories</span>
+              Success{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
+                Stories
+              </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">That Inspire</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">
+                That Inspire
+              </span>
             </h2>
             <p
               className="text-sm md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in"
