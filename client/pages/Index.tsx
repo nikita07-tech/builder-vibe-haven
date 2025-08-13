@@ -62,7 +62,7 @@ const Index = () => {
   const carouselImages = [
     {
       type: "video",
-      src: "https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0",
+      src: "https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&widget_referrer=https%3A%2F%2Fhitech.edu&origin=https%3A%2F%2Fhitech.edu",
       alt: "Campus Life Video",
       title: "Campus Life",
       subtitle: "Experience Our Vibrant Community",
