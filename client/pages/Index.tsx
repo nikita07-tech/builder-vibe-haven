@@ -460,14 +460,14 @@ const Index = () => {
                                   style={{
                                     border: "none",
                                     outline: "none",
-                                    pointerEvents: "none",
+                                    pointerEvents: "auto",
                                     transform: "scale(1.05)",
                                     transformOrigin: "center",
                                   }}
                                 />
-                                {/* Custom video overlay to prevent YouTube interface */}
+                                {/* Custom video overlay to show sound control */}
                                 <div
-                                  className="absolute inset-0 bg-transparent cursor-pointer z-10 flex items-center justify-center group"
+                                  className="absolute inset-0 bg-transparent cursor-pointer z-5 flex items-center justify-center group pointer-events-none"
                                   onClick={() => setVideoMuted(!videoMuted)}
                                 >
                                   {/* Video title overlay */}
