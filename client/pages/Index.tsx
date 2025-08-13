@@ -692,14 +692,6 @@ const Index = () => {
 
                     {/* Interactive Overlay Elements */}
                     <div className="absolute top-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                      {/* Live Indicator */}
-                      <div className="flex items-center bg-red-500/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
-                        <div className="w-2 h-2 bg-red-300 rounded-full mr-2 animate-pulse"></div>
-                        <span className="text-white text-xs font-semibold">
-                          LIVE CAMPUS
-                        </span>
-                      </div>
-
                       {/* View Counter */}
                       <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
                         <span className="text-gray-800 text-xs font-semibold">
