@@ -4490,6 +4490,25 @@ const Index = () => {
         .animate-scale-in {
           animation: scale-in 1s ease-out 0.5s both;
         }
+
+        @keyframes progress-line {
+          0% {
+            width: 0%;
+            opacity: 0;
+          }
+          50% {
+            width: 75%;
+            opacity: 1;
+          }
+          100% {
+            width: 100%;
+            opacity: 0.8;
+          }
+        }
+
+        .animate-progress-line {
+          animation: progress-line 3s ease-out 1s both;
+        }
       `}</style>
     </div>
   );
