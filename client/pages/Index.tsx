@@ -57,6 +57,7 @@ const Index = () => {
     [key: string]: boolean;
   }>({});
   const [showScholarshipPopup, setShowScholarshipPopup] = useState(false);
+  const [videoMuted, setVideoMuted] = useState(true);
 
   // Carousel images
   const carouselImages = [
@@ -449,7 +450,7 @@ const Index = () => {
                             {item.type === "video" ? (
                               <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden bg-black">
                                 <iframe
-                                  src={item.src}
+                                  src={videoMuted ? item.src : item.src.replace("mute=1", "mute=0")}
                                   title={item.alt}
                                   className="absolute inset-0 w-full h-full"
                                   frameBorder="0"
@@ -464,7 +465,10 @@ const Index = () => {
                                   }}
                                 />
                                 {/* Custom video overlay to prevent YouTube interface */}
-                                <div className="absolute inset-0 bg-transparent cursor-pointer z-10 flex items-center justify-center group">
+                                <div
+                                  className="absolute inset-0 bg-transparent cursor-pointer z-10 flex items-center justify-center group"
+                                  onClick={() => setVideoMuted(!videoMuted)}
+                                >
                                   {/* Video title overlay */}
                                   <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/60 to-transparent p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <h3 className="text-white font-semibold text-sm">
@@ -474,10 +478,21 @@ const Index = () => {
                                       {item.subtitle}
                                     </p>
                                   </div>
-                                  {/* Play indicator (always hidden since video autoplays) */}
-                                  <div className="absolute inset-0 flex items-center justify-center opacity-0">
+                                  {/* Sound control indicator */}
+                                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                                      <div className="w-0 h-0 border-l-8 border-l-white border-t-6 border-t-transparent border-b-6 border-b-transparent ml-1"></div>
+                                      {videoMuted ? (
+                                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                          <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                                          <line x1="23" y1="9" x2="17" y2="15" stroke="currentColor" strokeWidth="2"/>
+                                          <line x1="17" y1="9" x2="23" y2="15" stroke="currentColor" strokeWidth="2"/>
+                                        </svg>
+                                      ) : (
+                                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                        </svg>
+                                      )}
                                     </div>
                                   </div>
                                 </div>
