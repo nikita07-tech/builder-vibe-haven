@@ -3074,7 +3074,7 @@ const Index = () => {
                       <div className="relative z-10 flex items-center">
                         {/* Step Icon Circle */}
                         <div className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                          <span className="text-2xl">{item.icon}</span>
+                          {item.icon}
                         </div>
 
                         {/* Content */}
