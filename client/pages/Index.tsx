@@ -61,12 +61,21 @@ const Index = () => {
   // Carousel images
   const carouselImages = [
     {
+      type: "video",
+      src: "https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&widget_referrer=https%3A%2F%2Fhitech.edu&origin=https%3A%2F%2Fhitech.edu",
+      alt: "Campus Life Video",
+      title: "Campus Life",
+      subtitle: "Experience Our Vibrant Community",
+    },
+    {
+      type: "image",
       src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600",
       alt: "Hi-Tech Institute Campus",
       title: "Hi-Tech Institute Campus",
       subtitle: "Modern Infrastructure & Facilities",
     },
     {
+      type: "image",
       src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=800",
       alt: "Campus View",
       title: "Campus Infrastructure",
@@ -74,13 +83,23 @@ const Index = () => {
     },
   ];
 
-  // Auto-advance carousel
+  // Auto-advance carousel with dynamic timing
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+    const getSlideInterval = (slideIndex) => {
+      // Video slide (first slide) plays for 30 seconds, others for 4 seconds
+      return slideIndex === 0 ? 30000 : 4000;
+    };
+
+    const advanceSlide = () => {
+      setCurrentSlide((prev) => {
+        const nextSlide = (prev + 1) % carouselImages.length;
+        return nextSlide;
+      });
+    };
+
+    const interval = setTimeout(advanceSlide, getSlideInterval(currentSlide));
+    return () => clearTimeout(interval);
+  }, [currentSlide, carouselImages.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
@@ -382,7 +401,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-12 items-center">
             <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
-              <h1 className="text-sm sm:text-lg md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
+              <h1 className="text-xs sm:text-sm md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
                 <span>Unlock Your Potential with</span>
                 <span className="text-[#c38935] bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
                   <p>Premium Education</p>
@@ -425,14 +444,59 @@ const Index = () => {
                           transform: `translateX(-${currentSlide * 100}%)`,
                         }}
                       >
-                        {carouselImages.map((image, index) => (
+                        {carouselImages.map((item, index) => (
                           <div key={index} className="w-full flex-shrink-0">
-                            <img
-                              src={image.src}
-                              alt={image.alt}
-                              className="w-full h-auto object-cover aspect-[4/3]"
-                              loading="eager"
-                            />
+                            {item.type === "video" ? (
+                              <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden bg-black">
+                                <iframe
+                                  src={item.src}
+                                  title={item.alt}
+                                  className="absolute inset-0 w-full h-full"
+                                  frameBorder="0"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                  style={{
+                                    border: "none",
+                                    outline: "none",
+                                    pointerEvents: "none",
+                                    transform: "scale(1.02)",
+                                    transformOrigin: "center",
+                                  }}
+                                />
+                                {/* Custom video overlay to prevent YouTube interface */}
+                                <div className="absolute inset-0 bg-transparent cursor-pointer z-10 flex items-center justify-center group">
+                                  {/* Video title overlay */}
+                                  <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/60 to-transparent p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <h3 className="text-white font-semibold text-sm">
+                                      {item.title}
+                                    </h3>
+                                    <p className="text-white/80 text-xs">
+                                      {item.subtitle}
+                                    </p>
+                                  </div>
+                                  {/* Play indicator (always hidden since video autoplays) */}
+                                  <div className="absolute inset-0 flex items-center justify-center opacity-0">
+                                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                                      <div className="w-0 h-0 border-l-8 border-l-white border-t-6 border-t-transparent border-b-6 border-b-transparent ml-1"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Gradient overlays to mask YouTube branding */}
+                                <div className="absolute inset-0 pointer-events-none">
+                                  {/* Top overlay to hide YouTube logo area */}
+                                  <div className="absolute top-0 right-0 w-20 h-8 bg-gradient-to-l from-black/30 to-transparent"></div>
+                                  {/* Bottom overlay to hide controls area */}
+                                  <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                </div>
+                              </div>
+                            ) : (
+                              <img
+                                src={item.src}
+                                alt={item.alt}
+                                className="w-full h-auto object-cover aspect-[4/3]"
+                                loading="eager"
+                              />
+                            )}
                           </div>
                         ))}
                       </div>
@@ -584,41 +648,6 @@ const Index = () => {
 
       {/* Ultra-Enhanced Video Experience Section - Mobile Optimized */}
       <section className="py-6 md:py-24 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
-        {/* Advanced Animated Background */}
-        <div className="absolute inset-0">
-          {/* Multiple floating orbs with different animations */}
-          <div className="absolute top-10 left-10 w-32 h-32 bg-[#c38935]/10 rounded-full blur-2xl animate-float"></div>
-          <div
-            className="absolute top-40 right-20 w-48 h-48 bg-[#22336a]/8 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "1s" }}
-          ></div>
-          <div
-            className="absolute bottom-20 left-1/4 w-64 h-64 bg-[#f4d03f]/8 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "2s" }}
-          ></div>
-          <div
-            className="absolute bottom-40 right-10 w-40 h-40 bg-[#c38935]/12 rounded-full blur-2xl animate-float"
-            style={{ animationDelay: "3s" }}
-          ></div>
-
-          {/* Animated Geometric Shapes */}
-          {[...Array(15)].map((_, i) => (
-            <div
-              key={i}
-              className={`absolute w-4 h-4 ${i % 3 === 0 ? "bg-[#c38935]/20" : i % 3 === 1 ? "bg-[#22336a]/20" : "bg-[#f4d03f]/20"} rounded-full animate-float`}
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${4 + Math.random() * 3}s`,
-              }}
-            ></div>
-          ))}
-
-          {/* Flowing Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#c38935]/3 to-transparent animate-gradient-flow"></div>
-        </div>
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Enhanced Animated Header */}
           <div className="text-center mb-8 md:mb-16">
@@ -635,7 +664,7 @@ const Index = () => {
             </div>
 
             {/* Animated Title - Mobile Optimized */}
-            <h2 className="text-xl sm:text-2xl md:text-5xl lg:text-7xl font-bold mb-3 md:mb-8 leading-tight">
+            <h2 className="text-sm sm:text-lg md:text-5xl lg:text-7xl font-bold mb-2 sm:mb-3 md:mb-8 leading-tight">
               <span className="inline-block animate-slide-in-left text-[#22336a]">
                 Experience
               </span>{" "}
@@ -653,7 +682,7 @@ const Index = () => {
 
             <div className="max-w-4xl mx-auto">
               <p
-                className="text-xs md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-4 md:mb-6"
+                className="text-xs sm:text-sm md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-3 sm:mb-4 md:mb-6"
                 style={{ animationDelay: "0.5s" }}
               >
                 Step into a world where education meets innovation, creativity,
@@ -667,7 +696,7 @@ const Index = () => {
                 style={{ animationDelay: "0.7s" }}
               >
                 <div className="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
-                  <div className="text-lg md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up">
+                  <div className="text-sm sm:text-base md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up">
                     <p>20000+</p>
                   </div>
                   <div className="text-[10px] md:text-sm text-gray-600 font-medium">
@@ -676,7 +705,7 @@ const Index = () => {
                 </div>
                 <div className="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
                   <div
-                    className="text-lg md:text-4xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
+                    className="text-sm sm:text-base md:text-4xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
                     style={{ animationDelay: "0.2s" }}
                   >
                     50+
@@ -687,7 +716,7 @@ const Index = () => {
                 </div>
                 <div className="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
                   <div
-                    className="text-lg md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
+                    className="text-sm sm:text-base md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300 animate-count-up"
                     style={{ animationDelay: "0.4s" }}
                   >
                     24/7
@@ -717,26 +746,15 @@ const Index = () => {
                 {/* Video Frame */}
                 <div className="aspect-video relative p-2 md:p-4">
                   <div className="relative rounded-2xl overflow-hidden h-full shadow-inner">
-                    <iframe
-                      src="https://drive.google.com/file/d/1WQe82_mWX6aOGCvwkEzFF-dG4gZxoNrM/preview"
-                      title="Hi-Tech Institute Campus Life - Experience Excellence"
+                    <wistia-player
+                      media-id="g4et8b6dnb"
+                      aspect="1.7777777777777777"
+                      autoplay="true"
                       className="w-full h-full group-hover:scale-105 transition-transform duration-700"
-                      frameBorder="0"
-                      allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                      allowFullScreen
-                      sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                    ></iframe>
+                    ></wistia-player>
 
                     {/* Interactive Overlay Elements */}
                     <div className="absolute top-4 left-4 right-4 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                      {/* Live Indicator */}
-                      <div className="flex items-center bg-red-500/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
-                        <div className="w-2 h-2 bg-red-300 rounded-full mr-2 animate-pulse"></div>
-                        <span className="text-white text-xs font-semibold">
-                          LIVE CAMPUS
-                        </span>
-                      </div>
-
                       {/* View Counter */}
                       <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
                         <span className="text-gray-800 text-xs font-semibold">
@@ -3309,9 +3327,8 @@ const Index = () => {
               </span>
             </div>
             <h2 className="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-3 md:mb-6 leading-tight">
-              Success
+              Success{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
-                {" "}
                 Stories
               </span>
               <br />
