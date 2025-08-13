@@ -3129,7 +3129,7 @@ const Index = () => {
                   desc: "Submit your application through our streamlined digital portal with guided assistance",
                   time: "5 minutes",
                   color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "📝",
+                  icon: <BookOpen className="h-10 w-10 text-white" />,
                   gradient: "from-blue-500/10 to-blue-600/10"
                 },
                 {
@@ -3138,7 +3138,7 @@ const Index = () => {
                   desc: "Quick evaluation to understand your academic potential and career alignment",
                   time: "30 minutes",
                   color: "from-[#c38935] to-[#d4a853]",
-                  icon: "🧠",
+                  icon: <Clock className="h-10 w-10 text-white" />,
                   gradient: "from-orange-500/10 to-orange-600/10"
                 },
                 {
@@ -3147,7 +3147,7 @@ const Index = () => {
                   desc: "One-on-one discussion with our academic counselors for PG programs",
                   time: "PG Only",
                   color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "🎯",
+                  icon: <Users className="h-10 w-10 text-white" />,
                   gradient: "from-purple-500/10 to-purple-600/10"
                 },
                 {
@@ -3156,7 +3156,7 @@ const Index = () => {
                   desc: "Secure and instant verification of your academic credentials and certificates",
                   time: "Instant",
                   color: "from-[#c38935] to-[#d4a853]",
-                  icon: "✅",
+                  icon: <Award className="h-10 w-10 text-white" />,
                   gradient: "from-green-500/10 to-green-600/10"
                 },
                 {
@@ -3165,7 +3165,7 @@ const Index = () => {
                   desc: "Begin your transformative educational journey with comprehensive support",
                   time: "Lifetime",
                   color: "from-[#22336a] via-[#c38935] to-[#22336a]",
-                  icon: "🚀",
+                  icon: <Target className="h-10 w-10 text-white" />,
                   gradient: "from-yellow-500/10 to-yellow-600/10"
                 }
               ].map((item, index) => (
