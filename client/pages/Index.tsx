@@ -3265,7 +3265,6 @@ const Index = () => {
                   title: "Apply Online",
                   desc: "Submit your application through our streamlined portal",
                   time: "5 min",
-                  color: "from-[#22336a] to-[#3b4d7a]",
                   icon: <BookOpen className="h-8 w-8 text-white" />,
                 },
                 {
@@ -3273,7 +3272,6 @@ const Index = () => {
                   title: "Aptitude Test",
                   desc: "Quick assessment to evaluate your potential",
                   time: "30 min",
-                  color: "from-[#c38935] to-[#d4a853]",
                   icon: <Clock className="h-8 w-8 text-white" />,
                 },
                 {
@@ -3281,7 +3279,6 @@ const Index = () => {
                   title: "Interview",
                   desc: "Personal evaluation for PG candidates",
                   time: "PG Only",
-                  color: "from-[#22336a] to-[#3b4d7a]",
                   icon: <Users className="h-8 w-8 text-white" />,
                 },
                 {
@@ -3289,7 +3286,6 @@ const Index = () => {
                   title: "Verification",
                   desc: "Secure document verification process",
                   time: "Instant",
-                  color: "from-[#c38935] to-[#d4a853]",
                   icon: <Award className="h-8 w-8 text-white" />,
                 },
                 {
@@ -3297,7 +3293,6 @@ const Index = () => {
                   title: "Welcome!",
                   desc: "Begin your transformational journey",
                   time: "Success",
-                  color: "from-[#22336a] to-[#c38935]",
                   icon: <Target className="h-8 w-8 text-white" />,
                 },
               ].map((item, index) => (
@@ -3316,16 +3311,16 @@ const Index = () => {
                     className="group relative mb-5 animate-slide-in-left"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 relative overflow-hidden">
+                    <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 relative overflow-hidden h-24">
                       {/* Background Glow */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
 
                       {/* Decorative Corner */}
                       <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-2xl"></div>
 
-                      <div className="relative z-10 flex items-center">
+                      <div className="relative z-10 flex items-center h-full">
                         {/* Step Icon Circle */}
-                        <div className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                        <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                           {item.icon}
                         </div>
 
