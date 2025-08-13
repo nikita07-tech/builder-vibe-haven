@@ -614,7 +614,6 @@ const Index = () => {
 
       {/* Ultra-Enhanced Video Experience Section - Mobile Optimized */}
       <section className="py-6 md:py-24 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Enhanced Animated Header */}
           <div className="text-center mb-8 md:mb-16">
