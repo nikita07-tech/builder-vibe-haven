@@ -773,7 +773,7 @@ const Index = () => {
                       {/* View Counter */}
                       <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
                         <span className="text-gray-800 text-xs font-semibold">
-                          👁️ 15.2K views
+                          👁�� 15.2K views
                         </span>
                       </div>
                     </div>
@@ -3000,85 +3000,97 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Mobile Compact Journey Steps - All Equal Height */}
+          {/* Mobile Arrow-Based Journey - Vertical Flow */}
           <div className="block md:hidden mb-8">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="relative max-w-sm mx-auto">
               {[
                 {
-                  step: "1",
+                  step: "01",
                   title: "Apply Online",
-                  desc: "Submit application online",
-                  time: "5 minutes",
+                  desc: "Submit your application through our streamlined portal",
+                  time: "5 min",
                   color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z",
+                  icon: "📝",
                 },
                 {
-                  step: "2",
+                  step: "02",
                   title: "Aptitude Test",
-                  desc: "Quick aptitude assessment",
-                  time: "30 minutes",
+                  desc: "Quick assessment to evaluate your potential",
+                  time: "30 min",
                   color: "from-[#c38935] to-[#d4a853]",
-                  icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z",
+                  icon: "🧠",
                 },
                 {
-                  step: "3",
+                  step: "03",
                   title: "Interview",
-                  desc: "PG candidates interview only",
+                  desc: "Personal evaluation for PG candidates",
                   time: "PG Only",
                   color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
+                  icon: "🎯",
                 },
                 {
-                  step: "4",
+                  step: "04",
                   title: "Verification",
-                  desc: "Document verification",
-                  time: "Secure",
+                  desc: "Secure document verification process",
+                  time: "Instant",
                   color: "from-[#c38935] to-[#d4a853]",
-                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
+                  icon: "✅",
                 },
                 {
-                  step: "5",
+                  step: "05",
                   title: "Welcome!",
-                  desc: "Begin your journey",
+                  desc: "Begin your transformational journey",
                   time: "Success",
-                  color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
+                  color: "from-[#22336a] to-[#c38935]",
+                  icon: "🚀",
                 },
               ].map((item, index) => (
-                <div
-                  key={index}
-                  className={`group relative ${index === 4 ? "col-span-2" : ""}`}
-                >
-                  <div className="bg-white rounded-lg p-2.5 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[120px] flex flex-col justify-between">
-                    <div className="flex items-center mb-1.5">
-                      <div
-                        className={`w-6 h-6 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
-                      >
-                        <span className="text-white font-bold text-xs relative z-10">
-                          {item.step}
-                        </span>
-                        <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-[#c38935] rounded-full flex items-center justify-center">
-                          <svg
-                            className="w-1.5 h-1.5 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d={item.icon} />
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xs font-bold text-[#22336a] mb-0.5">
-                          {item.title}
-                        </h3>
-                        <div className="text-[10px] text-[#c38935] font-semibold">
-                          {item.time}
-                        </div>
+                <div key={index} className="relative">
+                  {/* Arrow Connector */}
+                  {index < 4 && (
+                    <div className="absolute left-1/2 transform -translate-x-1/2 z-10" style={{ top: '100%', height: '20px' }}>
+                      <div className="w-8 h-5 flex items-center justify-center">
+                        <ArrowRight className="h-4 w-4 text-[#c38935] transform rotate-90 animate-bounce" style={{ animationDelay: `${index * 0.2}s` }} />
                       </div>
                     </div>
-                    <p className="text-gray-600 text-[10px] leading-relaxed flex-grow">
-                      {item.desc}
-                    </p>
+                  )}
+
+                  {/* Step Card */}
+                  <div
+                    className="group relative mb-5 animate-slide-in-left"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 relative overflow-hidden">
+                      {/* Background Glow */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}></div>
+
+                      {/* Decorative Corner */}
+                      <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-2xl"></div>
+
+                      <div className="relative z-10 flex items-center">
+                        {/* Step Icon Circle */}
+                        <div className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                          <span className="text-2xl">{item.icon}</span>
+                        </div>
+
+                        {/* Content */}
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="text-xs font-bold text-[#c38935] tracking-wider">STEP {item.step}</span>
+                            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">{item.time}</span>
+                          </div>
+                          <h3 className="text-base font-bold text-[#22336a] mb-1 group-hover:text-[#c38935] transition-colors duration-300">
+                            {item.title}
+                          </h3>
+                          <p className="text-gray-600 text-xs leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Animated Progress Dot */}
+                      <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-[#c38935] rounded-full animate-pulse shadow-lg"></div>
+                    </div>
                   </div>
                 </div>
               ))}
