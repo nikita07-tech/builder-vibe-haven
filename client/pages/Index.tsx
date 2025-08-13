@@ -458,17 +458,31 @@ const Index = () => {
                                   style={{
                                     border: 'none',
                                     outline: 'none',
-                                    pointerEvents: 'auto',
+                                    pointerEvents: 'none',
                                     transform: 'scale(1.02)',
                                     transformOrigin: 'center'
                                   }}
                                 />
-                                {/* Overlay to mask any remaining YouTube branding */}
+                                {/* Custom video overlay to prevent YouTube interface */}
+                                <div className="absolute inset-0 bg-transparent cursor-pointer z-10 flex items-center justify-center group">
+                                  {/* Video title overlay */}
+                                  <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/60 to-transparent p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <h3 className="text-white font-semibold text-sm">{item.title}</h3>
+                                    <p className="text-white/80 text-xs">{item.subtitle}</p>
+                                  </div>
+                                  {/* Play indicator (always hidden since video autoplays) */}
+                                  <div className="absolute inset-0 flex items-center justify-center opacity-0">
+                                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                                      <div className="w-0 h-0 border-l-8 border-l-white border-t-6 border-t-transparent border-b-6 border-b-transparent ml-1"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                {/* Gradient overlays to mask YouTube branding */}
                                 <div className="absolute inset-0 pointer-events-none">
                                   {/* Top overlay to hide YouTube logo area */}
-                                  <div className="absolute top-0 right-0 w-20 h-8 bg-gradient-to-l from-black/20 to-transparent"></div>
+                                  <div className="absolute top-0 right-0 w-20 h-8 bg-gradient-to-l from-black/30 to-transparent"></div>
                                   {/* Bottom overlay to hide controls area */}
-                                  <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black/10 to-transparent"></div>
+                                  <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black/20 to-transparent"></div>
                                 </div>
                               </div>
                             ) : (
