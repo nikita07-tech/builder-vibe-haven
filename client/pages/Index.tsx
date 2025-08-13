@@ -63,7 +63,7 @@ const Index = () => {
   const carouselImages = [
     {
       type: "video",
-      src: "https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&widget_referrer=https%3A%2F%2Fhitech.edu&origin=https%3A%2F%2Fhitech.edu",
+      src: "https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&branding=0&origin=https%3A%2F%2Fhitech.edu",
       alt: "Campus Life Video",
       title: "Campus Life",
       subtitle: "Experience Our Vibrant Community",
@@ -450,7 +450,8 @@ const Index = () => {
                             {item.type === "video" ? (
                               <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden bg-black">
                                 <iframe
-                                  src={videoMuted ? item.src : item.src.replace("mute=1", "mute=0")}
+                                  key={`video-${videoMuted}`}
+                                  src={videoMuted ? item.src : item.src.replace("mute=1", "mute=0").replace("autoplay=1", "autoplay=1")}
                                   title={item.alt}
                                   className="absolute inset-0 w-full h-full"
                                   frameBorder="0"
@@ -460,7 +461,7 @@ const Index = () => {
                                     border: "none",
                                     outline: "none",
                                     pointerEvents: "none",
-                                    transform: "scale(1.02)",
+                                    transform: "scale(1.05)",
                                     transformOrigin: "center",
                                   }}
                                 />
@@ -496,12 +497,15 @@ const Index = () => {
                                     </div>
                                   </div>
                                 </div>
-                                {/* Gradient overlays to mask YouTube branding */}
+                                {/* Enhanced overlays to completely hide YouTube branding */}
                                 <div className="absolute inset-0 pointer-events-none">
                                   {/* Top overlay to hide YouTube logo area */}
-                                  <div className="absolute top-0 right-0 w-20 h-8 bg-gradient-to-l from-black/30 to-transparent"></div>
+                                  <div className="absolute top-0 right-0 w-24 h-10 bg-black opacity-90"></div>
                                   {/* Bottom overlay to hide controls area */}
-                                  <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                  <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/40 to-transparent"></div>
+                                  {/* Corner overlays */}
+                                  <div className="absolute top-0 left-0 w-20 h-8 bg-gradient-to-r from-black/20 to-transparent"></div>
+                                  <div className="absolute bottom-0 right-0 w-20 h-8 bg-gradient-to-l from-black/20 to-transparent"></div>
                                 </div>
                               </div>
                             ) : (
