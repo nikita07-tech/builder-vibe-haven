@@ -3375,45 +3375,35 @@ const Index = () => {
                   title: "Apply Online",
                   desc: "Submit your application through our streamlined digital portal with guided assistance",
                   time: "5 minutes",
-                  color: "from-[#22336a] to-[#3b4d7a]",
                   icon: <BookOpen className="h-10 w-10 text-white" />,
-                  gradient: "from-blue-500/10 to-blue-600/10"
                 },
                 {
                   step: "02",
                   title: "Aptitude Assessment",
                   desc: "Quick evaluation to understand your academic potential and career alignment",
                   time: "30 minutes",
-                  color: "from-[#c38935] to-[#d4a853]",
                   icon: <Clock className="h-10 w-10 text-white" />,
-                  gradient: "from-orange-500/10 to-orange-600/10"
                 },
                 {
                   step: "03",
                   title: "Personal Interview",
                   desc: "One-on-one discussion with our academic counselors for PG programs",
                   time: "PG Only",
-                  color: "from-[#22336a] to-[#3b4d7a]",
                   icon: <Users className="h-10 w-10 text-white" />,
-                  gradient: "from-purple-500/10 to-purple-600/10"
                 },
                 {
                   step: "04",
                   title: "Document Verification",
                   desc: "Secure and instant verification of your academic credentials and certificates",
                   time: "Instant",
-                  color: "from-[#c38935] to-[#d4a853]",
                   icon: <Award className="h-10 w-10 text-white" />,
-                  gradient: "from-green-500/10 to-green-600/10"
                 },
                 {
                   step: "05",
                   title: "Welcome to Success!",
                   desc: "Begin your transformative educational journey with comprehensive support",
                   time: "Lifetime",
-                  color: "from-[#22336a] via-[#c38935] to-[#22336a]",
                   icon: <Target className="h-10 w-10 text-white" />,
-                  gradient: "from-yellow-500/10 to-yellow-600/10"
                 }
               ].map((item, index) => (
                 <div
@@ -3423,7 +3413,7 @@ const Index = () => {
                 >
                   {/* Floating Step Number */}
                   <div className="relative mb-8 flex justify-center">
-                    <div className={`relative w-24 h-24 bg-gradient-to-br ${item.color} rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10`}>
+                    <div className="relative w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10">
                       {/* Animated Glow Ring */}
                       <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 to-transparent group-hover:animate-pulse"></div>
 
@@ -3437,13 +3427,13 @@ const Index = () => {
                     </div>
 
                     {/* Glowing Base */}
-                    <div className={`absolute inset-0 w-24 h-24 bg-gradient-to-br ${item.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
+                    <div className="absolute inset-0 w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
                   </div>
 
                   {/* Content Card */}
-                  <div className={`bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border-2 border-gray-100/50 group-hover:border-[#c38935]/30 transition-all duration-500 transform group-hover:-translate-y-4 group-hover:shadow-2xl relative overflow-hidden min-h-[220px] flex flex-col`}>
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border-2 border-gray-100/50 group-hover:border-[#c38935]/30 transition-all duration-500 transform group-hover:-translate-y-4 group-hover:shadow-2xl relative overflow-hidden h-[240px] flex flex-col">
                     {/* Subtle Background Gradient */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl`}></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
 
                     {/* Decorative Corner Elements */}
                     <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-3xl"></div>
