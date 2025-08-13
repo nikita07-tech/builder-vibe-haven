@@ -584,40 +584,6 @@ const Index = () => {
 
       {/* Ultra-Enhanced Video Experience Section - Mobile Optimized */}
       <section className="py-6 md:py-24 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
-        {/* Advanced Animated Background */}
-        <div className="absolute inset-0">
-          {/* Multiple floating orbs with different animations */}
-          <div className="absolute top-10 left-10 w-32 h-32 bg-[#c38935]/10 rounded-full blur-2xl animate-float"></div>
-          <div
-            className="absolute top-40 right-20 w-48 h-48 bg-[#22336a]/8 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "1s" }}
-          ></div>
-          <div
-            className="absolute bottom-20 left-1/4 w-64 h-64 bg-[#f4d03f]/8 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "2s" }}
-          ></div>
-          <div
-            className="absolute bottom-40 right-10 w-40 h-40 bg-[#c38935]/12 rounded-full blur-2xl animate-float"
-            style={{ animationDelay: "3s" }}
-          ></div>
-
-          {/* Animated Geometric Shapes */}
-          {[...Array(15)].map((_, i) => (
-            <div
-              key={i}
-              className={`absolute w-4 h-4 ${i % 3 === 0 ? "bg-[#c38935]/20" : i % 3 === 1 ? "bg-[#22336a]/20" : "bg-[#f4d03f]/20"} rounded-full animate-float`}
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${4 + Math.random() * 3}s`,
-              }}
-            ></div>
-          ))}
-
-          {/* Flowing Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#c38935]/3 to-transparent animate-gradient-flow"></div>
-        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Enhanced Animated Header */}
