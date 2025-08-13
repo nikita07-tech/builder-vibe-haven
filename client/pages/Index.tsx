@@ -3014,7 +3014,7 @@ const Index = () => {
                   desc: "Submit your application through our streamlined portal",
                   time: "5 min",
                   color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "📝",
+                  icon: <BookOpen className="h-8 w-8 text-white" />,
                 },
                 {
                   step: "02",
@@ -3022,7 +3022,7 @@ const Index = () => {
                   desc: "Quick assessment to evaluate your potential",
                   time: "30 min",
                   color: "from-[#c38935] to-[#d4a853]",
-                  icon: "🧠",
+                  icon: <Clock className="h-8 w-8 text-white" />,
                 },
                 {
                   step: "03",
@@ -3030,7 +3030,7 @@ const Index = () => {
                   desc: "Personal evaluation for PG candidates",
                   time: "PG Only",
                   color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "🎯",
+                  icon: <Users className="h-8 w-8 text-white" />,
                 },
                 {
                   step: "04",
@@ -3038,7 +3038,7 @@ const Index = () => {
                   desc: "Secure document verification process",
                   time: "Instant",
                   color: "from-[#c38935] to-[#d4a853]",
-                  icon: "✅",
+                  icon: <Award className="h-8 w-8 text-white" />,
                 },
                 {
                   step: "05",
@@ -3046,7 +3046,7 @@ const Index = () => {
                   desc: "Begin your transformational journey",
                   time: "Success",
                   color: "from-[#22336a] to-[#c38935]",
-                  icon: "🚀",
+                  icon: <Target className="h-8 w-8 text-white" />,
                 },
               ].map((item, index) => (
                 <div key={index} className="relative">
