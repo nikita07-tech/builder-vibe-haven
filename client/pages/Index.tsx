@@ -773,7 +773,7 @@ const Index = () => {
                       {/* View Counter */}
                       <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
                         <span className="text-gray-800 text-xs font-semibold">
-                          👁�� 15.2K views
+                          👁️ 15.2K views
                         </span>
                       </div>
                     </div>
@@ -3097,200 +3097,144 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Process Steps with Enhanced Design - Desktop */}
+          {/* Desktop Innovative Arrow-Based Journey */}
           <div className="hidden md:block relative">
-            {/* Connecting Line */}
-            <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] opacity-30"></div>
+            {/* Animated Progress Line with Arrows */}
+            <div className="absolute top-24 left-0 right-0 h-1 bg-gray-200 rounded-full overflow-hidden">
+              <div className="h-full bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] rounded-full animate-progress-line"></div>
+            </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8 mb-12 md:mb-16 items-start">
-              {/* Step 1 */}
-              <div className="group relative">
-                <div className="flex flex-col items-center text-center">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">
-                        1
-                      </span>
+            {/* Arrow Connectors */}
+            <div className="absolute top-20 flex justify-between w-full px-12">
+              {[...Array(4)].map((_, index) => (
+                <div
+                  key={index}
+                  className="flex items-center animate-bounce-subtle"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <ArrowRight className="h-8 w-8 text-[#c38935] drop-shadow-lg" />
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-5 gap-8 mb-16 relative">
+              {[
+                {
+                  step: "01",
+                  title: "Apply Online",
+                  desc: "Submit your application through our streamlined digital portal with guided assistance",
+                  time: "5 minutes",
+                  color: "from-[#22336a] to-[#3b4d7a]",
+                  icon: "📝",
+                  gradient: "from-blue-500/10 to-blue-600/10"
+                },
+                {
+                  step: "02",
+                  title: "Aptitude Assessment",
+                  desc: "Quick evaluation to understand your academic potential and career alignment",
+                  time: "30 minutes",
+                  color: "from-[#c38935] to-[#d4a853]",
+                  icon: "🧠",
+                  gradient: "from-orange-500/10 to-orange-600/10"
+                },
+                {
+                  step: "03",
+                  title: "Personal Interview",
+                  desc: "One-on-one discussion with our academic counselors for PG programs",
+                  time: "PG Only",
+                  color: "from-[#22336a] to-[#3b4d7a]",
+                  icon: "🎯",
+                  gradient: "from-purple-500/10 to-purple-600/10"
+                },
+                {
+                  step: "04",
+                  title: "Document Verification",
+                  desc: "Secure and instant verification of your academic credentials and certificates",
+                  time: "Instant",
+                  color: "from-[#c38935] to-[#d4a853]",
+                  icon: "✅",
+                  gradient: "from-green-500/10 to-green-600/10"
+                },
+                {
+                  step: "05",
+                  title: "Welcome to Success!",
+                  desc: "Begin your transformative educational journey with comprehensive support",
+                  time: "Lifetime",
+                  color: "from-[#22336a] via-[#c38935] to-[#22336a]",
+                  icon: "🚀",
+                  gradient: "from-yellow-500/10 to-yellow-600/10"
+                }
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="group relative animate-fade-in-up"
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
+                  {/* Floating Step Number */}
+                  <div className="relative mb-8 flex justify-center">
+                    <div className={`relative w-24 h-24 bg-gradient-to-br ${item.color} rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10`}>
+                      {/* Animated Glow Ring */}
+                      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 to-transparent group-hover:animate-pulse"></div>
+
+                      {/* Step Icon */}
+                      <span className="text-3xl relative z-10">{item.icon}</span>
+
+                      {/* Step Number Badge */}
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-[#c38935]">
+                        <span className="text-[#22336a] font-bold text-sm">{item.step}</span>
+                      </div>
                     </div>
-                    <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
-                    {/* Icon Background */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
-                      </svg>
-                    </div>
+
+                    {/* Glowing Base */}
+                    <div className={`absolute inset-0 w-24 h-24 bg-gradient-to-br ${item.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
                   </div>
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                      Apply Online
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                      Submit your application through our user-friendly online
-                      portal with guided steps
-                    </p>
-                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Clock className="h-4 w-4 mr-1" />5 minutes
+
+                  {/* Content Card */}
+                  <div className={`bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border-2 border-gray-100/50 group-hover:border-[#c38935]/30 transition-all duration-500 transform group-hover:-translate-y-4 group-hover:shadow-2xl relative overflow-hidden min-h-[220px] flex flex-col`}>
+                    {/* Subtle Background Gradient */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl`}></div>
+
+                    {/* Decorative Corner Elements */}
+                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-3xl"></div>
+                    <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-[#22336a]/5 to-transparent rounded-3xl"></div>
+
+                    <div className="relative z-10 flex-1 flex flex-col">
+                      {/* Time Badge */}
+                      <div className="flex justify-between items-center mb-4">
+                        <span className="text-xs font-bold text-[#c38935] tracking-wider bg-[#c38935]/10 px-3 py-1 rounded-full">
+                          STEP {item.step}
+                        </span>
+                        <span className="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full font-medium">
+                          {item.time}
+                        </span>
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                        {item.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-gray-600 leading-relaxed text-sm flex-grow">
+                        {item.desc}
+                      </p>
+
+                      {/* Progress Indicator */}
+                      <div className="mt-4 flex items-center justify-center">
+                        <div className="w-12 h-1 bg-gray-200 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-[#c38935] rounded-full transition-all duration-1000 group-hover:w-full"
+                            style={{ width: `${(index + 1) * 20}%` }}
+                          ></div>
+                        </div>
+                      </div>
                     </div>
+
+                    {/* Animated Corner Dot */}
+                    <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#c38935] rounded-full animate-pulse shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
                   </div>
                 </div>
-              </div>
-
-              {/* Step 2 */}
-              <div className="group relative">
-                <div className="flex flex-col items-center text-center">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">
-                        2
-                      </span>
-                    </div>
-                    <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
-                    {/* Icon Background */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                      Aptitude Test
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                      Quick aptitude assessment to evaluate your academic
-                      readiness and potential
-                    </p>
-                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Clock className="h-4 w-4 mr-1" />
-                      30 minutes
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 3 */}
-              <div className="group relative">
-                <div className="flex flex-col items-center text-center">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">
-                        3
-                      </span>
-                    </div>
-                    <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
-                    {/* Icon Background */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                      Screening & Interview
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                      Personal interview and evaluation process for PG
-                      candidates only
-                    </p>
-                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Users className="h-4 w-4 mr-1" />
-                      PG Candidates Only
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 4 */}
-              <div className="group relative">
-                <div className="flex flex-col items-center text-center">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">
-                        4
-                      </span>
-                    </div>
-                    <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
-                    {/* Icon Background */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                      Document Verification
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                      Quick verification of your academic credentials and
-                      eligibility confirmation
-                    </p>
-                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Award className="h-4 w-4 mr-1" />
-                      Secure Process
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 5 */}
-              <div className="group relative">
-                <div className="flex flex-col items-center text-center">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">
-                        5
-                      </span>
-                    </div>
-                    <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
-                    {/* Icon Background */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                      Welcome Aboard!
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                      Secure your seat and begin your transformational
-                      educational journey with us
-                    </p>
-                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Trophy className="h-4 w-4 mr-1" />
-                      Success Begins
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
