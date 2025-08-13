@@ -61,12 +61,21 @@ const Index = () => {
   // Carousel images
   const carouselImages = [
     {
+      type: "video",
+      src: "https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0",
+      alt: "Success Stories Video",
+      title: "Success Stories That Inspire",
+      subtitle: "Watch Our Students' Journeys",
+    },
+    {
+      type: "image",
       src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600",
       alt: "Hi-Tech Institute Campus",
       title: "Hi-Tech Institute Campus",
       subtitle: "Modern Infrastructure & Facilities",
     },
     {
+      type: "image",
       src: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=800",
       alt: "Campus View",
       title: "Campus Infrastructure",
