@@ -57,12 +57,13 @@ const Index = () => {
     [key: string]: boolean;
   }>({});
   const [showScholarshipPopup, setShowScholarshipPopup] = useState(false);
+  const [videoMuted, setVideoMuted] = useState(true);
 
   // Carousel images
   const carouselImages = [
     {
       type: "video",
-      src: "https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&widget_referrer=https%3A%2F%2Fhitech.edu&origin=https%3A%2F%2Fhitech.edu",
+      src: "https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&branding=0&origin=https%3A%2F%2Fhitech.edu",
       alt: "Campus Life Video",
       title: "Campus Life",
       subtitle: "Experience Our Vibrant Community",
@@ -449,7 +450,12 @@ const Index = () => {
                             {item.type === "video" ? (
                               <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden bg-black">
                                 <iframe
-                                  src={item.src}
+                                  key={`video-${videoMuted}`}
+                                  src={
+                                    videoMuted
+                                      ? item.src
+                                      : item.src.replace("mute=1", "mute=0")
+                                  }
                                   title={item.alt}
                                   className="absolute inset-0 w-full h-full"
                                   frameBorder="0"
@@ -458,13 +464,16 @@ const Index = () => {
                                   style={{
                                     border: "none",
                                     outline: "none",
-                                    pointerEvents: "none",
-                                    transform: "scale(1.02)",
+                                    pointerEvents: "auto",
+                                    transform: "scale(1.05)",
                                     transformOrigin: "center",
                                   }}
                                 />
-                                {/* Custom video overlay to prevent YouTube interface */}
-                                <div className="absolute inset-0 bg-transparent cursor-pointer z-10 flex items-center justify-center group">
+                                {/* Custom video overlay to show sound control */}
+                                <div
+                                  className="absolute inset-0 bg-transparent cursor-pointer z-5 flex items-center justify-center group pointer-events-none"
+                                  onClick={() => setVideoMuted(!videoMuted)}
+                                >
                                   {/* Video title overlay */}
                                   <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/60 to-transparent p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <h3 className="text-white font-semibold text-sm">
@@ -474,19 +483,55 @@ const Index = () => {
                                       {item.subtitle}
                                     </p>
                                   </div>
-                                  {/* Play indicator (always hidden since video autoplays) */}
-                                  <div className="absolute inset-0 flex items-center justify-center opacity-0">
+                                  {/* Sound control indicator */}
+                                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                                      <div className="w-0 h-0 border-l-8 border-l-white border-t-6 border-t-transparent border-b-6 border-b-transparent ml-1"></div>
+                                      {videoMuted ? (
+                                        <svg
+                                          className="w-8 h-8 text-white"
+                                          fill="currentColor"
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                                          <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+                                          <line
+                                            x1="23"
+                                            y1="9"
+                                            x2="17"
+                                            y2="15"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                          />
+                                          <line
+                                            x1="17"
+                                            y1="9"
+                                            x2="23"
+                                            y2="15"
+                                            stroke="currentColor"
+                                            strokeWidth="2"
+                                          />
+                                        </svg>
+                                      ) : (
+                                        <svg
+                                          className="w-8 h-8 text-white"
+                                          fill="currentColor"
+                                          viewBox="0 0 24 24"
+                                        >
+                                          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                                        </svg>
+                                      )}
                                     </div>
                                   </div>
                                 </div>
-                                {/* Gradient overlays to mask YouTube branding */}
+                                {/* Enhanced overlays to completely hide YouTube branding */}
                                 <div className="absolute inset-0 pointer-events-none">
                                   {/* Top overlay to hide YouTube logo area */}
-                                  <div className="absolute top-0 right-0 w-20 h-8 bg-gradient-to-l from-black/30 to-transparent"></div>
+                                  <div className="absolute top-0 right-0 w-24 h-10 bg-black opacity-90"></div>
                                   {/* Bottom overlay to hide controls area */}
-                                  <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-black/20 to-transparent"></div>
+                                  <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/40 to-transparent"></div>
+                                  {/* Corner overlays */}
+                                  <div className="absolute top-0 left-0 w-20 h-8 bg-gradient-to-r from-black/20 to-transparent"></div>
+                                  <div className="absolute bottom-0 right-0 w-20 h-8 bg-gradient-to-l from-black/20 to-transparent"></div>
                                 </div>
                               </div>
                             ) : (
@@ -850,6 +895,259 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Age Education Section - Key Offerings Layout */}
+      <section className="py-6 md:py-16 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-6 md:mb-16">
+            <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-2 md:mb-6">
+              New Age Education That Secures Futures
+            </h2>
+            <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+              <h2 style={{ textAlign: "center" }}>
+                <strong>
+                  Transform your career with industry-integrated programs
+                  designed by corporate leaders, featuring cutting-edge
+                  curriculum, practical learning experiences, and guaranteed
+                  placement support.
+                </strong>
+              </h2>
+              <p>
+                <br />
+              </p>
+            </p>
+          </div>
+
+          {/* Mobile Enhanced Carousel - Smaller */}
+          <div className="block md:hidden mb-4">
+            <div className="overflow-hidden rounded-xl">
+              <div className="flex space-x-4 animate-scroll-right-to-left">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer animate-slide-in-left">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 h-full flex flex-col">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">💼</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Curriculum for Jobs of 2030
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                      Future-focused learning paths designed for tomorrow's
+                      careers
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.1s" }}
+                >
+                  <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">👨‍💼</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Corporate Leaders Turned Educators
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                      Learn directly from industry veterans and Fortune 500
+                      executives
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.2s" }}
+                >
+                  <div className="bg-gradient-to-br from-white to-purple-50/30 rounded-xl p-4 shadow-lg border border-purple-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full -translate-y-6 translate-x-6"></div>
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg relative z-10">
+                      <span className="text-white text-lg">🚀</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Build Your First Startup
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed relative z-10">
+                      Comprehensive entrepreneurship programs with real business
+                      incubation
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-100 animate-pulse"></div>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.3s" }}
+                >
+                  <div className="bg-gradient-to-br from-white to-green-50/30 rounded-xl p-4 shadow-lg border border-green-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">⚡</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      NextGen Tech Tools
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                      Advanced technologies and AI-powered learning platforms
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.4s" }}
+                >
+                  <div className="bg-gradient-to-br from-white to-red-50/30 rounded-xl p-4 shadow-lg border border-red-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">📚</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Practical Learning Over Theory
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                      Hands-on experience with live projects and industry
+                      collaborations
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                {/* Duplicate cards for seamless loop */}
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 h-full flex flex-col">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">💼</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Curriculum for Jobs of 2030
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                      Future-focused learning paths designed for tomorrow's
+                      careers
+                    </p>
+                  </div>
+                </div>
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
+                  <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">👨‍💼</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Corporate Leaders Turned Educators
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                      Learn directly from industry veterans and Fortune 500
+                      executives
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Grid */}
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 items-stretch">
+            {/* 1. Curriculum for Jobs of 2030 */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">💼</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  Curriculum for Jobs of 2030
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  Future-focused learning paths designed for tomorrow's careers
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* 2. Corporate Leaders Turned Educators */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">👨‍💼</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  Corporate Leaders Turned Educators
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  <p>
+                    Learn directly from corporate leaders with real world
+                    experience
+                  </p>
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* 3. Build Your First Startup */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">🚀</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  Build Your First Startup
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  Comprehensive entrepreneurship programs with real business
+                  incubation
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* 4. NextGen Tech Tools */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.4s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">⚡</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  NextGen Tech Tools
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  Advanced technologies and AI-powered learning platforms
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* 5. Practical Learning Over Theory */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.5s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">📚</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  Practical Learning Over Theory
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  <p>
+                    Hands-on experience with live projects and industry visits
+                  </p>
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
           </div>
@@ -2951,316 +3249,278 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Admission Process */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-orange-50 relative overflow-hidden">
+      {/* Innovative Journey to Success with Arrows */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-[#22336a]/10 to-[#c38935]/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
           <div
-            className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-[#c38935]/10 to-[#22336a]/10 rounded-full blur-3xl animate-float"
+            className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-[#c38935]/5 to-[#22336a]/5 rounded-full blur-3xl animate-float"
             style={{ animationDelay: "3s" }}
           ></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 md:mb-16 lg:mb-20">
-            <div className="inline-flex items-center px-4 md:px-6 py-1.5 md:py-2 bg-[#22336a]/10 rounded-full mb-4 md:mb-6">
-              <Clock className="h-4 w-4 md:h-5 md:w-5 text-[#22336a] mr-2" />
-              <span className="text-[#22336a] font-semibold text-sm md:text-base">
-                Quick & Easy Process
+          <div className="text-center mb-16 md:mb-20">
+            <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 backdrop-blur-sm rounded-full mb-6 md:mb-8 border border-white/20 shadow-lg">
+              <div className="w-3 h-3 bg-[#c38935] rounded-full mr-3 animate-pulse"></div>
+              <span className="text-[#22336a] font-semibold text-sm md:text-base tracking-wide">
+                YOUR SUCCESS ROADMAP
               </span>
+              <div
+                className="w-3 h-3 bg-[#22336a] rounded-full ml-3 animate-pulse"
+                style={{ animationDelay: "0.5s" }}
+              ></div>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#22336a] mb-4 md:mb-6 leading-tight">
-              Your Journey to
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] to-[#d4a853]">
-                {" "}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 leading-tight">
+              <span className="text-[#22336a] inline-block animate-slide-in-left">
+                Your Journey to
+              </span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] inline-block animate-slide-in-right">
                 Success
               </span>
             </h2>
-            <p className="text-sm md:text-base lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Five streamlined steps to unlock your potential and transform your
-              career
+            <p
+              className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in-up"
+              style={{ animationDelay: "0.3s" }}
+            >
+              Follow our proven pathway that transforms ambitious students into
+              industry-ready professionals
             </p>
           </div>
 
-          {/* Mobile Compact Journey Steps - All Equal Height */}
+          {/* Mobile Arrow-Based Journey - Vertical Flow */}
           <div className="block md:hidden mb-8">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="relative max-w-sm mx-auto">
               {[
                 {
-                  step: "1",
+                  step: "01",
                   title: "Apply Online",
-                  desc: "Submit application online",
-                  time: "5 minutes",
-                  color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z",
+                  desc: "Submit your application through our streamlined portal",
+                  time: "5 min",
+                  icon: <BookOpen className="h-8 w-8 text-white" />,
                 },
                 {
-                  step: "2",
+                  step: "02",
                   title: "Aptitude Test",
-                  desc: "Quick aptitude assessment",
-                  time: "30 minutes",
-                  color: "from-[#c38935] to-[#d4a853]",
-                  icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z",
+                  desc: "Quick assessment to evaluate your potential",
+                  time: "30 min",
+                  icon: <Clock className="h-8 w-8 text-white" />,
                 },
                 {
-                  step: "3",
+                  step: "03",
                   title: "Interview",
-                  desc: "PG candidates interview only",
+                  desc: "Personal evaluation for PG candidates",
                   time: "PG Only",
-                  color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
+                  icon: <Users className="h-8 w-8 text-white" />,
                 },
                 {
-                  step: "4",
+                  step: "04",
                   title: "Verification",
-                  desc: "Document verification",
-                  time: "Secure",
-                  color: "from-[#c38935] to-[#d4a853]",
-                  icon: "M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z",
+                  desc: "Secure document verification process",
+                  time: "Instant",
+                  icon: <Award className="h-8 w-8 text-white" />,
                 },
                 {
-                  step: "5",
+                  step: "05",
                   title: "Welcome!",
-                  desc: "Begin your journey",
+                  desc: "Begin your transformational journey",
                   time: "Success",
-                  color: "from-[#22336a] to-[#3b4d7a]",
-                  icon: "M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z",
+                  icon: <Target className="h-8 w-8 text-white" />,
                 },
               ].map((item, index) => (
-                <div
-                  key={index}
-                  className={`group relative ${index === 4 ? "col-span-2" : ""}`}
-                >
-                  <div className="bg-white rounded-lg p-2.5 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-[120px] flex flex-col justify-between">
-                    <div className="flex items-center mb-1.5">
-                      <div
-                        className={`w-6 h-6 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mr-2 relative`}
-                      >
-                        <span className="text-white font-bold text-xs relative z-10">
-                          {item.step}
-                        </span>
-                        <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-[#c38935] rounded-full flex items-center justify-center">
-                          <svg
-                            className="w-1.5 h-1.5 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d={item.icon} />
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xs font-bold text-[#22336a] mb-0.5">
-                          {item.title}
-                        </h3>
-                        <div className="text-[10px] text-[#c38935] font-semibold">
-                          {item.time}
-                        </div>
+                <div key={index} className="relative">
+                  {/* Arrow Connector */}
+                  {index < 4 && (
+                    <div
+                      className="absolute left-1/2 transform -translate-x-1/2 z-10"
+                      style={{ top: "100%", height: "20px" }}
+                    >
+                      <div className="w-8 h-5 flex items-center justify-center">
+                        <ArrowRight
+                          className="h-4 w-4 text-[#c38935] transform rotate-90 animate-bounce"
+                          style={{ animationDelay: `${index * 0.2}s` }}
+                        />
                       </div>
                     </div>
-                    <p className="text-gray-600 text-[10px] leading-relaxed flex-grow">
-                      {item.desc}
-                    </p>
+                  )}
+
+                  {/* Step Card */}
+                  <div
+                    className="group relative mb-5 animate-slide-in-left"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 relative overflow-hidden h-24">
+                      {/* Background Glow */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+
+                      {/* Decorative Corner */}
+                      <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-2xl"></div>
+
+                      <div className="relative z-10 flex items-center h-full">
+                        {/* Step Icon Circle */}
+                        <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                          {item.icon}
+                        </div>
+
+                        {/* Content */}
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="text-xs font-bold text-[#c38935] tracking-wider">
+                              STEP {item.step}
+                            </span>
+                            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                              {item.time}
+                            </span>
+                          </div>
+                          <h3 className="text-base font-bold text-[#22336a] mb-1 group-hover:text-[#c38935] transition-colors duration-300">
+                            {item.title}
+                          </h3>
+                          <p className="text-gray-600 text-xs leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Animated Progress Dot */}
+                      <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-[#c38935] rounded-full animate-pulse shadow-lg"></div>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Process Steps with Enhanced Design - Desktop */}
+          {/* Desktop Innovative Arrow-Based Journey */}
           <div className="hidden md:block relative">
-            {/* Connecting Line */}
-            <div className="hidden lg:block absolute top-20 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] opacity-30"></div>
+            {/* Animated Progress Line with Arrows */}
+            <div className="absolute top-24 left-0 right-0 h-1 bg-gray-200 rounded-full overflow-hidden">
+              <div className="h-full bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] rounded-full animate-progress-line"></div>
+            </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8 mb-12 md:mb-16 items-start">
-              {/* Step 1 */}
-              <div className="group relative">
-                <div className="flex flex-col items-center text-center">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">
-                        1
-                      </span>
+            {/* Arrow Connectors */}
+            <div className="absolute top-20 flex justify-between w-full px-12">
+              {[...Array(4)].map((_, index) => (
+                <div
+                  key={index}
+                  className="flex items-center animate-bounce-subtle"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  <ArrowRight className="h-8 w-8 text-[#c38935] drop-shadow-lg" />
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-5 gap-8 mb-16 relative">
+              {[
+                {
+                  step: "01",
+                  title: "Apply Online",
+                  desc: "Submit your application through our streamlined digital portal with guided assistance",
+                  time: "5 minutes",
+                  icon: <BookOpen className="h-10 w-10 text-white" />,
+                },
+                {
+                  step: "02",
+                  title: "Aptitude Assessment",
+                  desc: "Quick evaluation to understand your academic potential and career alignment",
+                  time: "30 minutes",
+                  icon: <Clock className="h-10 w-10 text-white" />,
+                },
+                {
+                  step: "03",
+                  title: "Personal Interview",
+                  desc: "One-on-one discussion with our academic counselors for PG programs",
+                  time: "PG Only",
+                  icon: <Users className="h-10 w-10 text-white" />,
+                },
+                {
+                  step: "04",
+                  title: "Document Verification",
+                  desc: "Secure and instant verification of your academic credentials and certificates",
+                  time: "Instant",
+                  icon: <Award className="h-10 w-10 text-white" />,
+                },
+                {
+                  step: "05",
+                  title: "Welcome to Success!",
+                  desc: "Begin your transformative educational journey with comprehensive support",
+                  time: "Lifetime",
+                  icon: <Target className="h-10 w-10 text-white" />,
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="group relative animate-fade-in-up"
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
+                  {/* Floating Step Number */}
+                  <div className="relative mb-8 flex justify-center">
+                    <div className="relative w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10">
+                      {/* Animated Glow Ring */}
+                      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 to-transparent group-hover:animate-pulse"></div>
+
+                      {/* Step Icon */}
+                      <div className="relative z-10">{item.icon}</div>
+
+                      {/* Step Number Badge */}
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-[#c38935]">
+                        <span className="text-[#22336a] font-bold text-sm">
+                          {item.step}
+                        </span>
+                      </div>
                     </div>
-                    <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
-                    {/* Icon Background */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
-                      </svg>
-                    </div>
+
+                    {/* Glowing Base */}
+                    <div className="absolute inset-0 w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
                   </div>
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                      Apply Online
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                      Submit your application through our user-friendly online
-                      portal with guided steps
-                    </p>
-                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Clock className="h-4 w-4 mr-1" />5 minutes
+
+                  {/* Content Card */}
+                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border-2 border-gray-100/50 group-hover:border-[#c38935]/30 transition-all duration-500 transform group-hover:-translate-y-4 group-hover:shadow-2xl relative overflow-hidden h-[240px] flex flex-col">
+                    {/* Subtle Background Gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+
+                    {/* Decorative Corner Elements */}
+                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-3xl"></div>
+                    <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-[#22336a]/5 to-transparent rounded-3xl"></div>
+
+                    <div className="relative z-10 flex-1 flex flex-col">
+                      {/* Time Badge */}
+                      <div className="flex justify-between items-center mb-4">
+                        <span className="text-xs font-bold text-[#c38935] tracking-wider bg-[#c38935]/10 px-3 py-1 rounded-full">
+                          STEP {item.step}
+                        </span>
+                        <span className="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full font-medium">
+                          {item.time}
+                        </span>
+                      </div>
+
+                      {/* Title */}
+                      <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                        {item.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-gray-600 leading-relaxed text-sm flex-grow">
+                        {item.desc}
+                      </p>
+
+                      {/* Progress Indicator */}
+                      <div className="mt-4 flex items-center justify-center">
+                        <div className="w-12 h-1 bg-gray-200 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-[#c38935] rounded-full transition-all duration-1000 group-hover:w-full"
+                            style={{ width: `${(index + 1) * 20}%` }}
+                          ></div>
+                        </div>
+                      </div>
                     </div>
+
+                    {/* Animated Corner Dot */}
+                    <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#c38935] rounded-full animate-pulse shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
                   </div>
                 </div>
-              </div>
-
-              {/* Step 2 */}
-              <div className="group relative">
-                <div className="flex flex-col items-center text-center">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">
-                        2
-                      </span>
-                    </div>
-                    <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
-                    {/* Icon Background */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                      Aptitude Test
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                      Quick aptitude assessment to evaluate your academic
-                      readiness and potential
-                    </p>
-                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Clock className="h-4 w-4 mr-1" />
-                      30 minutes
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 3 */}
-              <div className="group relative">
-                <div className="flex flex-col items-center text-center">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">
-                        3
-                      </span>
-                    </div>
-                    <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
-                    {/* Icon Background */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#c38935] rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                      Screening & Interview
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                      Personal interview and evaluation process for PG
-                      candidates only
-                    </p>
-                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Users className="h-4 w-4 mr-1" />
-                      PG Candidates Only
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 4 */}
-              <div className="group relative">
-                <div className="flex flex-col items-center text-center">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">
-                        4
-                      </span>
-                    </div>
-                    <div className="absolute inset-0 w-20 h-20 bg-[#c38935] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
-                    {/* Icon Background */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H6V4h7v16z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#c38935]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                      Document Verification
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                      Quick verification of your academic credentials and
-                      eligibility confirmation
-                    </p>
-                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Award className="h-4 w-4 mr-1" />
-                      Secure Process
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 5 */}
-              <div className="group relative">
-                <div className="flex flex-col items-center text-center">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto shadow-2xl group-hover:scale-110 transition-all duration-500 relative z-10">
-                      <ChevronRight className="w-8 h-8 text-white/20 absolute" />
-                      <span className="text-white font-bold text-2xl relative z-10">
-                        5
-                      </span>
-                    </div>
-                    <div className="absolute inset-0 w-20 h-20 bg-[#22336a] rounded-full blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500 mx-auto"></div>
-                    {/* Icon Background */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-[#22336a] rounded-full flex items-center justify-center">
-                      <svg
-                        className="w-4 h-4 text-white"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl group-hover:border-[#22336a]/20 transition-all duration-500 transform group-hover:-translate-y-3 w-full min-h-[180px] flex flex-col justify-between">
-                    <h3 className="text-xl font-bold text-[#22336a] mb-3">
-                      Welcome Aboard!
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                      Secure your seat and begin your transformational
-                      educational journey with us
-                    </p>
-                    <div className="mt-3 flex items-center justify-center text-[#c38935] text-sm font-semibold">
-                      <Trophy className="h-4 w-4 mr-1" />
-                      Success Begins
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -3550,7 +3810,7 @@ const Index = () => {
                   },
                   {
                     name: "Pulkit Singh",
-                    role: "MBA Graduate �� Dhanguard 10 LPA",
+                    role: "MBA Graduate • Dhanguard 10 LPA",
                     company: "GDG",
                     batch: "22-24",
                     initials: "PS",
@@ -4515,6 +4775,25 @@ const Index = () => {
 
         .animate-scale-in {
           animation: scale-in 1s ease-out 0.5s both;
+        }
+
+        @keyframes progress-line {
+          0% {
+            width: 0%;
+            opacity: 0;
+          }
+          50% {
+            width: 75%;
+            opacity: 1;
+          }
+          100% {
+            width: 100%;
+            opacity: 0.8;
+          }
+        }
+
+        .animate-progress-line {
+          animation: progress-line 3s ease-out 1s both;
         }
       `}</style>
     </div>
