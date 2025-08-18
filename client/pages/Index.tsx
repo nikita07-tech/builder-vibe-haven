@@ -2841,7 +2841,6 @@ const Index = () => {
       {/* Professional Admission Process Grid */}
       <section className="py-16 md:py-24 bg-gray-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
           {/* Header Section */}
           <div className="text-center mb-16">
             <div className="inline-block bg-[#22336a] text-white px-6 py-2 rounded-full text-sm font-semibold tracking-wide mb-6">
@@ -2852,8 +2851,16 @@ const Index = () => {
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               A streamlined 5-step process designed to get you started quickly.
-              Join <span className="font-semibold text-[#22336a]">50,000+ successful students</span> with
-              <span className="text-[#c38935] font-semibold"> 95% placement success</span>.
+              Join{" "}
+              <span className="font-semibold text-[#22336a]">
+                50,000+ successful students
+              </span>{" "}
+              with
+              <span className="text-[#c38935] font-semibold">
+                {" "}
+                95% placement success
+              </span>
+              .
             </p>
           </div>
 
@@ -2863,42 +2870,46 @@ const Index = () => {
               {
                 number: "01",
                 title: "Apply Online",
-                description: "Submit your application through our user-friendly digital platform",
+                description:
+                  "Submit your application through our user-friendly digital platform",
                 duration: "5 minutes",
-                icon: <BookOpen className="h-8 w-8" />
+                icon: <BookOpen className="h-8 w-8" />,
               },
               {
                 number: "02",
                 title: "Aptitude Test",
-                description: "Complete a comprehensive assessment to evaluate your academic potential",
+                description:
+                  "Complete a comprehensive assessment to evaluate your academic potential",
                 duration: "30 minutes",
-                icon: <Clock className="h-8 w-8" />
+                icon: <Clock className="h-8 w-8" />,
               },
               {
                 number: "03",
                 title: "Personal Interview",
-                description: "One-on-one consultation with our experienced academic counselors",
+                description:
+                  "One-on-one consultation with our experienced academic counselors",
                 duration: "PG Programs",
-                icon: <Users className="h-8 w-8" />
+                icon: <Users className="h-8 w-8" />,
               },
               {
                 number: "04",
                 title: "Document Verification",
-                description: "Secure verification of your academic credentials and certificates",
+                description:
+                  "Secure verification of your academic credentials and certificates",
                 duration: "Instant",
-                icon: <Award className="h-8 w-8" />
+                icon: <Award className="h-8 w-8" />,
               },
               {
                 number: "05",
                 title: "Welcome Aboard",
-                description: "Begin your educational journey with comprehensive support",
+                description:
+                  "Begin your educational journey with comprehensive support",
                 duration: "Lifetime",
-                icon: <Target className="h-8 w-8" />
-              }
+                icon: <Target className="h-8 w-8" />,
+              },
             ].map((step, index) => (
               <div key={index} className="group">
                 <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-[280px] flex flex-col">
-
                   {/* Step Number and Icon */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-16 h-16 bg-[#22336a] text-white rounded-xl flex items-center justify-center group-hover:bg-[#c38935] transition-colors duration-300">
@@ -2925,7 +2936,6 @@ const Index = () => {
                   <p className="text-gray-600 leading-relaxed flex-grow">
                     {step.description}
                   </p>
-
                 </div>
               </div>
             ))}
@@ -2938,8 +2948,8 @@ const Index = () => {
                 Ready to Begin Your Journey?
               </h3>
               <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-                Join thousands of successful graduates at top companies worldwide.
-                Your success story starts with a single step.
+                Join thousands of successful graduates at top companies
+                worldwide. Your success story starts with a single step.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
@@ -2961,7 +2971,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
