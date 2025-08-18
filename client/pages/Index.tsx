@@ -909,9 +909,108 @@ const Index = () => {
             <h2 className="text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
               New Age Education That Secures Futures
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
               Transform your career with industry-integrated programs designed by corporate leaders, featuring cutting-edge curriculum, practical learning experiences, and guaranteed placement support.
             </p>
+          </div>
+
+          {/* Key Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+            {/* Curriculum for Jobs of 2030 */}
+            <div className="group relative">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-3xl">💼</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                  Curriculum for Jobs of 2030
+                </h3>
+                <p className="text-gray-600 leading-relaxed flex-grow">
+                  Future-focused learning paths designed for tomorrow's careers
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* Corporate Leaders Turned Educators */}
+            <div className="group relative">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-3xl">👨‍💼</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                  Corporate Leaders Turned Educators
+                </h3>
+                <p className="text-gray-600 leading-relaxed flex-grow">
+                  Learn directly from industry veterans and Fortune 500 executives
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* Build Your First Startup */}
+            <div className="group relative">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-3xl">🚀</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                  Build Your First Startup
+                </h3>
+                <p className="text-gray-600 leading-relaxed flex-grow">
+                  Comprehensive entrepreneurship programs with real business incubation
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* NextGen Tech Tools */}
+            <div className="group relative">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-3xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                  NextGen Tech Tools
+                </h3>
+                <p className="text-gray-600 leading-relaxed flex-grow">
+                  Advanced technologies and AI-powered learning platforms
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* Practical Learning Over Theory */}
+            <div className="group relative">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-3xl">📚</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                  Practical Learning Over Theory
+                </h3>
+                <p className="text-gray-600 leading-relaxed flex-grow">
+                  Hands-on experience with live projects and industry collaborations
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* Specializations */}
+            <div className="group relative">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-3xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#22336a] mb-3">
+                  Industry Specializations
+                </h3>
+                <p className="text-gray-600 leading-relaxed flex-grow">
+                  Choose from industry-focused specializations designed to boost your career prospects
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
