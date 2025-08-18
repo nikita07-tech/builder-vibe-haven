@@ -408,8 +408,8 @@ const Index = () => {
                   <p>Premium Education</p>
                 </span>
               </h1>
-              <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3">
-                <p>
+              <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3 text-xs sm:text-sm md:text-base">
+                <p className="text-xs sm:text-sm md:text-base">
                   Join Hi-Tech Institute for industry-aligned programs with
                   assured placement support.
                 </p>
@@ -647,8 +647,8 @@ const Index = () => {
               {/* Mobile: Smaller comparison cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 md:gap-3 lg:gap-4 mb-1.5 md:mb-4">
                 <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
-                  <div className="w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-[10px] md:text-sm">
+                  <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-xs md:text-sm">
                       63%
                     </span>
                   </div>
@@ -832,8 +832,8 @@ const Index = () => {
                 <div className="p-6 md:p-8 bg-gradient-to-r from-white/80 to-white/90 backdrop-blur-lg border-t border-gray-200">
                   <div className="flex flex-col md:flex-row md:items-center justify-between">
                     <div className="mb-4 md:mb-0">
-                      <h3 className="text-[#22336a] font-bold text-lg md:text-2xl mb-2 group-hover:text-[#c38935] transition-colors duration-300">
-                        Hi-Tech Institute - Where Dreams Become Reality ✨
+                      <h3 className="text-[#22336a] font-bold text-sm md:text-2xl mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                        Hi-Tech Institute - Where Dreams Become Reality
                       </h3>
                       <p className="text-gray-700 text-sm md:text-base">
                         Immerse yourself in our world-class programs:{" "}
@@ -862,7 +862,7 @@ const Index = () => {
                     {/* Interactive CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3">
                       <a
-                        href="https://sunstone.in/all-campuses-program"
+                        href="https://sunstone.in/campuses/hi-tech-institute"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group/btn"
@@ -2846,10 +2846,10 @@ const Index = () => {
             <div className="inline-block bg-[#22336a] text-white px-6 py-2 rounded-full text-sm font-semibold tracking-wide mb-6">
               ADMISSION PROCESS
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-[#22336a] mb-6">
+            <h2 className="text-xl md:text-5xl font-bold text-[#22336a] mb-6">
               Your Path to Success
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto">
               A streamlined 5-step process designed to get you started quickly.
               Join{" "}
               <span className="font-semibold text-[#22336a]">
@@ -2865,7 +2865,7 @@ const Index = () => {
           </div>
 
           {/* Equal Sized Container Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6 mb-16">
             {[
               {
                 number: "01",
@@ -2904,7 +2904,7 @@ const Index = () => {
               },
             ].map((step, index) => (
               <div key={index} className="group">
-                <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-[240px] md:h-[260px] flex flex-col">
+                <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-[280px] md:h-[300px] flex flex-col">
                   {/* Step Number and Icon */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-16 h-16 bg-[#22336a] text-white rounded-xl flex items-center justify-center group-hover:bg-[#c38935] transition-colors duration-300">
@@ -2931,29 +2931,29 @@ const Index = () => {
 
           {/* CTA Section */}
           <div className="text-center">
-            <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-8 md:p-12 text-white">
-              <h3 className="text-2xl md:text-4xl font-bold mb-4">
+            <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-4 md:p-12 text-white">
+              <h3 className="text-lg md:text-4xl font-bold mb-3 md:mb-4">
                 Ready to Begin Your Journey?
               </h3>
-              <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+              <p className="text-sm md:text-lg mb-4 md:mb-8 opacity-90 max-w-2xl mx-auto">
                 Join thousands of successful graduates at top companies
                 worldwide. Your success story starts with a single step.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
                 <a
                   href="tel:+917065303030"
-                  className="inline-flex items-center px-8 py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-4 py-2 md:px-8 md:py-4 bg-white text-[#22336a] font-bold text-sm md:text-base rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
-                  <Phone className="h-5 w-5 mr-3" />
+                  <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3" />
                   Call Us Now
                 </a>
                 <a
                   href="https://sunstone.in/apply-now"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-4 py-2 md:px-8 md:py-4 bg-transparent border-2 border-white text-white font-bold text-sm md:text-base rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 transform hover:scale-105"
                 >
-                  <ExternalLink className="h-5 w-5 mr-3" />
+                  <ExternalLink className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3" />
                   Apply Now
                 </a>
               </div>
