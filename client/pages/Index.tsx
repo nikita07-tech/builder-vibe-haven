@@ -402,10 +402,9 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-12 items-center">
             <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
-              <h1 className="text-xs sm:text-sm md:text-3xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
-                <span>Unlock Your Potential with</span>
+              <h1 className="text-xs sm:text-sm md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1 sm:mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
                 <span className="text-[#c38935] bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
-                  <p>Premium Education</p>
+                  Learning That Leads To Success
                 </span>
               </h1>
               <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3 text-xs sm:text-sm md:text-base">
@@ -1520,7 +1519,7 @@ const Index = () => {
                 <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer animate-slide-in-left">
                   <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 h-full flex flex-col">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
-                      <span className="text-white text-lg">��</span>
+                      <span className="text-white text-lg">���</span>
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Curriculum for Jobs of 2030
