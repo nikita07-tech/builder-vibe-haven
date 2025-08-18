@@ -2909,7 +2909,7 @@ const Index = () => {
               },
             ].map((step, index) => (
               <div key={index} className="group">
-                <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-[280px] flex flex-col">
+                <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-[260px] md:h-[280px] flex flex-col">
                   {/* Step Number and Icon */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-16 h-16 bg-[#22336a] text-white rounded-xl flex items-center justify-center group-hover:bg-[#c38935] transition-colors duration-300">
