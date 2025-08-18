@@ -923,7 +923,6 @@ const Index = () => {
               </p>
             </p>
           </div>
-
         </div>
       </section>
 
