@@ -902,32 +902,22 @@ const Index = () => {
       </section>
 
       {/* New Age Education Section - Key Offerings Layout */}
-      <section className="py-6 md:py-16 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-6 md:mb-16">
-            <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-2 md:mb-6">
+      <section className="py-16 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5" style={{left: '61px', top: '-40px'}}></div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
               New Age Education That Secures Futures
             </h2>
-            <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
-              <h2 style={{ textAlign: "center" }}>
-                <strong>
-                  Transform your career with industry-integrated programs
-                  designed by corporate leaders, featuring cutting-edge
-                  curriculum, practical learning experiences, and guaranteed
-                  placement support.
-                </strong>
-              </h2>
-              <p>
-                <br />
-              </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Transform your career with industry-integrated programs designed by corporate leaders, featuring cutting-edge curriculum, practical learning experiences, and guaranteed placement support.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-6 md:py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0" style={{top: '32px', width: '1173px'}}>
           <div className="absolute top-20 left-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
           <div
             className="absolute bottom-20 right-20 w-80 h-80 bg-[#22336a]/5 rounded-full blur-3xl animate-float"
