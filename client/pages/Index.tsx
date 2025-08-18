@@ -700,7 +700,7 @@ const Index = () => {
             <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a] to-[#c38935] backdrop-blur-lg rounded-full mb-6 md:mb-8 border border-white/20 shadow-2xl group hover:scale-105 transition-all duration-500 animate-bounce-in">
               <div className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></div>
               <span className="text-white font-semibold text-sm md:text-base tracking-wide">
-                🎬 IMMERSIVE CAMPUS EXPERIENCE
+                IMMERSIVE CAMPUS EXPERIENCE
               </span>
               <div
                 className="w-3 h-3 bg-[#f4d03f] rounded-full ml-3 animate-pulse"
@@ -775,7 +775,7 @@ const Index = () => {
           </div>
 
           {/* Ultra-Enhanced Video Container - Mobile Optimized */}
-          <div className="max-w-4xl md:max-w-6xl mx-auto px-2 md:px-0">
+          <div className="max-w-4xl md:max-w-6xl mx-auto px-4 md:px-8 overflow-hidden">
             <div
               className="relative group animate-scale-in"
               style={{ animationDelay: "0.9s" }}
@@ -803,7 +803,7 @@ const Index = () => {
                       {/* View Counter */}
                       <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
                         <span className="text-gray-800 text-xs font-semibold">
-                          👁️ 15.2K views
+                          15.2K views
                         </span>
                       </div>
                     </div>
@@ -867,7 +867,7 @@ const Index = () => {
                         rel="noopener noreferrer"
                         className="px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group/btn"
                       >
-                        <span>Book Virtual Tour</span>
+                        <span>Book Campus Tour</span>
                         <ChevronRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
                       </a>
                       <a
@@ -875,7 +875,7 @@ const Index = () => {
                         className="px-6 py-3 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-[#22336a] flex items-center justify-center"
                       >
                         <span className="mr-2">📞</span>
-                        <span>Schedule Visit</span>
+                        <span>Call Us</span>
                       </a>
                     </div>
                   </div>
