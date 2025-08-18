@@ -2839,6 +2839,130 @@ const Index = () => {
       </section>
 
 
+      {/* Professional Admission Process Grid */}
+      <section className="py-16 md:py-24 bg-gray-50 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <div className="inline-block bg-[#22336a] text-white px-6 py-2 rounded-full text-sm font-semibold tracking-wide mb-6">
+              ADMISSION PROCESS
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#22336a] mb-6">
+              Your Path to Success
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              A streamlined 5-step process designed to get you started quickly.
+              Join{" "}
+              <span className="font-semibold text-[#22336a]">
+                50,000+ successful students
+              </span>{" "}
+              with
+              <span className="text-[#c38935] font-semibold">
+                {" "}
+                95% placement success
+              </span>
+              .
+            </p>
+          </div>
+
+          {/* Equal Sized Container Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6 mb-16">
+            {[
+              {
+                number: "01",
+                title: "Apply Online",
+                description:
+                  "Submit your application through our user-friendly digital platform",
+                icon: <BookOpen className="h-8 w-8" />,
+              },
+              {
+                number: "02",
+                title: "Aptitude Test",
+                description:
+                  "Complete a comprehensive assessment to evaluate your academic potential",
+                icon: <Clock className="h-8 w-8" />,
+              },
+              {
+                number: "03",
+                title: "Personal Interview",
+                description:
+                  "One-on-one consultation with our experienced academic counselors",
+                icon: <Users className="h-8 w-8" />,
+              },
+              {
+                number: "04",
+                title: "Document Verification",
+                description:
+                  "Secure verification of your academic credentials and certificates",
+                icon: <Award className="h-8 w-8" />,
+              },
+              {
+                number: "05",
+                title: "Welcome Aboard",
+                description:
+                  "Begin your educational journey with comprehensive support",
+                icon: <Target className="h-8 w-8" />,
+              },
+            ].map((step, index) => (
+              <div key={index} className="group">
+                <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-[240px] md:h-[260px] flex flex-col">
+                  {/* Step Number and Icon */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-16 h-16 bg-[#22336a] text-white rounded-xl flex items-center justify-center group-hover:bg-[#c38935] transition-colors duration-300">
+                      {step.icon}
+                    </div>
+                    <div className="text-3xl font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                      {step.number}
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-lg md:text-xl font-bold text-[#22336a] mb-3 md:mb-4 group-hover:text-[#c38935] transition-colors duration-300">
+                    {step.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-grow">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-8 md:p-12 text-white">
+              <h3 className="text-2xl md:text-4xl font-bold mb-4">
+                Ready to Begin Your Journey?
+              </h3>
+              <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+                Join thousands of successful graduates at top companies
+                worldwide. Your success story starts with a single step.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="tel:+917065303030"
+                  className="inline-flex items-center px-8 py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  <Phone className="h-5 w-5 mr-3" />
+                  Call Us Now
+                </a>
+                <a
+                  href="https://sunstone.in/apply-now"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 transform hover:scale-105"
+                >
+                  <ExternalLink className="h-5 w-5 mr-3" />
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Enhanced Student Testimonials */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
         {/* Animated Background Elements */}
