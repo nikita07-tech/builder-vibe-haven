@@ -862,7 +862,7 @@ const Index = () => {
                     {/* Interactive CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3">
                       <a
-                        href="https://sunstone.in/all-campuses-program"
+                        href="https://sunstone.in/campuses/hi-tech-institute"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group/btn"
@@ -2931,29 +2931,29 @@ const Index = () => {
 
           {/* CTA Section */}
           <div className="text-center">
-            <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-8 md:p-12 text-white">
-              <h3 className="text-2xl md:text-4xl font-bold mb-4">
+            <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-4 md:p-12 text-white">
+              <h3 className="text-lg md:text-4xl font-bold mb-3 md:mb-4">
                 Ready to Begin Your Journey?
               </h3>
-              <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+              <p className="text-sm md:text-lg mb-4 md:mb-8 opacity-90 max-w-2xl mx-auto">
                 Join thousands of successful graduates at top companies
                 worldwide. Your success story starts with a single step.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
                 <a
                   href="tel:+917065303030"
-                  className="inline-flex items-center px-8 py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-4 py-2 md:px-8 md:py-4 bg-white text-[#22336a] font-bold text-sm md:text-base rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
-                  <Phone className="h-5 w-5 mr-3" />
+                  <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3" />
                   Call Us Now
                 </a>
                 <a
                   href="https://sunstone.in/apply-now"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-4 py-2 md:px-8 md:py-4 bg-transparent border-2 border-white text-white font-bold text-sm md:text-base rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 transform hover:scale-105"
                 >
-                  <ExternalLink className="h-5 w-5 mr-3" />
+                  <ExternalLink className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3" />
                   Apply Now
                 </a>
               </div>
