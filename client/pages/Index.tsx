@@ -781,7 +781,7 @@ const Index = () => {
               style={{ animationDelay: "0.9s" }}
             >
               {/* Outer Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#c38935]/20 via-[#22336a]/15 to-[#c38935]/20 rounded-xl md:rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700 scale-105"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#c38935]/20 via-[#22336a]/15 to-[#c38935]/20 rounded-xl md:rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700"></div>
 
               {/* Main Video Container */}
               <div className="relative bg-white/70 backdrop-blur-xl rounded-xl md:rounded-3xl overflow-hidden border border-[#c38935]/30 md:border-2 shadow-2xl group-hover:border-[#c38935]/60 transition-all duration-700 group-hover:scale-105 group-hover:-translate-y-4">
