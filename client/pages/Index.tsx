@@ -408,8 +408,8 @@ const Index = () => {
                   <p>Premium Education</p>
                 </span>
               </h1>
-              <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3">
-                <p>
+              <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3 text-xs sm:text-sm md:text-base">
+                <p className="text-xs sm:text-sm md:text-base">
                   Join Hi-Tech Institute for industry-aligned programs with
                   assured placement support.
                 </p>
@@ -2865,7 +2865,7 @@ const Index = () => {
           </div>
 
           {/* Equal Sized Container Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6 mb-16">
             {[
               {
                 number: "01",
@@ -2904,7 +2904,7 @@ const Index = () => {
               },
             ].map((step, index) => (
               <div key={index} className="group">
-                <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 min-h-[240px] md:min-h-[260px] flex flex-col">
+                <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-[280px] md:h-[300px] flex flex-col">
                   {/* Step Number and Icon */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-16 h-16 bg-[#22336a] text-white rounded-xl flex items-center justify-center group-hover:bg-[#c38935] transition-colors duration-300">
