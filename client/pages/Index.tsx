@@ -2933,7 +2933,7 @@ const Index = () => {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed flex-grow">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-grow">
                     {step.description}
                   </p>
                 </div>
