@@ -402,7 +402,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-12 items-center">
             <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
-              <h1 className="text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold mb-1 sm:mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
+              <h1 className="text-xs sm:text-sm md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-1 sm:mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
                 <span className="text-[#c38935] bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
                   Learning that leads to success
                 </span>
