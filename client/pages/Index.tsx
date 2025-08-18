@@ -823,7 +823,6 @@ const Index = () => {
                             </div>
                           ))}
                         </div>
-
                       </div>
                     </div>
                   </div>
@@ -886,7 +885,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
 
       {/* Sunstone Philosophy Section - Mobile Optimized */}
       <section className="py-6 md:py-12 bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] relative overflow-hidden">
