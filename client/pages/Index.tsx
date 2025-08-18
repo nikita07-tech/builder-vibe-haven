@@ -2853,7 +2853,7 @@ const Index = () => {
             <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 backdrop-blur-sm rounded-full mb-6 md:mb-8 border border-white/20 shadow-lg">
               <div className="w-3 h-3 bg-[#c38935] rounded-full mr-3 animate-pulse"></div>
               <span className="text-[#22336a] font-semibold text-sm md:text-base tracking-wide">
-                PROVEN SUCCESS METHODOLOGY
+                ADMISSION PROCESS
               </span>
               <div
                 className="w-3 h-3 bg-[#22336a] rounded-full ml-3 animate-pulse"
@@ -2862,20 +2862,20 @@ const Index = () => {
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-8 leading-tight">
               <span className="text-[#22336a] inline-block animate-slide-in-left">
-                Strategic Pathway to
+                Your Journey to
               </span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] inline-block animate-slide-in-right">
-                Excellence
+                Success
               </span>
             </h2>
             <p
               className="text-sm md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in-up"
               style={{ animationDelay: "0.3s" }}
             >
-              A scientifically-designed 5-step methodology that has successfully transformed
-              <span className="font-semibold text-[#22336a]"> 50,000+ students</span> into industry leaders.
-              <span className="text-[#c38935] font-medium">95% placement success rate</span> speaks for itself.
+              A simple 5-step admission process designed for your convenience.
+              Join <span className="font-semibold text-[#22336a]">50,000+ successful students</span> with
+              <span className="text-[#c38935] font-medium"> 95% placement success</span>.
             </p>
           </div>
 
