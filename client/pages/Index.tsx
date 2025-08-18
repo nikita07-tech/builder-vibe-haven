@@ -2838,321 +2838,224 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Innovative Journey to Success with Arrows */}
-      <section className="py-8 md:py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
-          <div
-            className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-br from-[#c38935]/5 to-[#22336a]/5 rounded-full blur-3xl animate-float"
-            style={{ animationDelay: "3s" }}
-          ></div>
-        </div>
+      {/* Modern Professional Timeline Layout */}
+      <section className="py-16 md:py-24 bg-white relative">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-8 md:mb-20">
-            <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a]/10 to-[#c38935]/10 backdrop-blur-sm rounded-full mb-6 md:mb-8 border border-white/20 shadow-lg">
-              <div className="w-3 h-3 bg-[#c38935] rounded-full mr-3 animate-pulse"></div>
-              <span className="text-[#22336a] font-semibold text-sm md:text-base tracking-wide">
-                ADMISSION PROCESS
-              </span>
-              <div
-                className="w-3 h-3 bg-[#22336a] rounded-full ml-3 animate-pulse"
-                style={{ animationDelay: "0.5s" }}
-              ></div>
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <div className="inline-block bg-[#22336a] text-white px-6 py-2 rounded-full text-sm font-semibold tracking-wide mb-6">
+              ADMISSION PROCESS
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-8 leading-tight">
-              <span className="text-[#22336a] inline-block animate-slide-in-left">
-                Your Journey to
-              </span>
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] inline-block animate-slide-in-right">
-                Success
-              </span>
+            <h2 className="text-3xl md:text-5xl font-bold text-[#22336a] mb-6">
+              Your Path to Success
             </h2>
-            <p
-              className="text-sm md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed animate-fade-in-up"
-              style={{ animationDelay: "0.3s" }}
-            >
-              A simple 5-step admission process designed for your convenience.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              A streamlined 5-step process designed to get you started quickly.
               Join <span className="font-semibold text-[#22336a]">50,000+ successful students</span> with
-              <span className="text-[#c38935] font-medium"> 95% placement success</span>.
+              <span className="text-[#c38935] font-semibold"> 95% placement success</span>.
             </p>
           </div>
 
-          {/* Mobile Arrow-Based Journey - Vertical Flow */}
-          <div className="block md:hidden mb-8">
-            <div className="relative max-w-sm mx-auto">
+          {/* Timeline Layout */}
+          <div className="relative">
+
+            {/* Desktop Timeline */}
+            <div className="hidden lg:block">
+              {/* Timeline Line */}
+              <div className="absolute top-32 left-0 right-0 h-0.5 bg-gray-200">
+                <div className="h-full bg-gradient-to-r from-[#22336a] to-[#c38935] w-full"></div>
+              </div>
+
+              {/* Timeline Steps */}
+              <div className="grid grid-cols-5 gap-8">
+                {[
+                  {
+                    number: "01",
+                    title: "Apply Online",
+                    description: "Submit your application through our user-friendly digital platform",
+                    duration: "5 minutes",
+                    icon: <BookOpen className="h-6 w-6" />
+                  },
+                  {
+                    number: "02",
+                    title: "Aptitude Test",
+                    description: "Complete a comprehensive assessment to evaluate your academic potential",
+                    duration: "30 minutes",
+                    icon: <Clock className="h-6 w-6" />
+                  },
+                  {
+                    number: "03",
+                    title: "Personal Interview",
+                    description: "One-on-one consultation with our experienced academic counselors",
+                    duration: "PG Programs",
+                    icon: <Users className="h-6 w-6" />
+                  },
+                  {
+                    number: "04",
+                    title: "Document Verification",
+                    description: "Secure verification of your academic credentials and certificates",
+                    duration: "Instant",
+                    icon: <Award className="h-6 w-6" />
+                  },
+                  {
+                    number: "05",
+                    title: "Welcome Aboard",
+                    description: "Begin your educational journey with comprehensive support",
+                    duration: "Lifetime",
+                    icon: <Target className="h-6 w-6" />
+                  }
+                ].map((step, index) => (
+                  <div key={index} className="relative group">
+
+                    {/* Timeline Node */}
+                    <div className="absolute top-28 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white border-4 border-[#22336a] rounded-full z-10 group-hover:border-[#c38935] transition-colors duration-300">
+                      <div className="absolute inset-1 bg-[#22336a] rounded-full group-hover:bg-[#c38935] transition-colors duration-300"></div>
+                    </div>
+
+                    {/* Step Content */}
+                    <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 mb-16">
+
+                      {/* Step Number */}
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-12 h-12 bg-[#22336a] text-white rounded-lg flex items-center justify-center group-hover:bg-[#c38935] transition-colors duration-300">
+                            {step.icon}
+                          </div>
+                          <div className="text-2xl font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                            {step.number}
+                          </div>
+                        </div>
+                        <div className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                          {step.duration}
+                        </div>
+                      </div>
+
+                      {/* Title & Description */}
+                      <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed">
+                        {step.description}
+                      </p>
+
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile/Tablet Vertical Timeline */}
+            <div className="lg:hidden space-y-8">
               {[
                 {
-                  step: "01",
+                  number: "01",
                   title: "Apply Online",
-                  desc: "Complete your application through our user-friendly portal",
-                  time: "5 min",
-                  icon: <BookOpen className="h-8 w-8 text-white" />,
+                  description: "Submit your application through our user-friendly digital platform",
+                  duration: "5 minutes",
+                  icon: <BookOpen className="h-6 w-6" />
                 },
                 {
-                  step: "02",
+                  number: "02",
                   title: "Aptitude Test",
-                  desc: "Take a quick assessment to evaluate your academic potential",
-                  time: "30 min",
-                  icon: <Clock className="h-8 w-8 text-white" />,
+                  description: "Complete a comprehensive assessment to evaluate your academic potential",
+                  duration: "30 minutes",
+                  icon: <Clock className="h-6 w-6" />
                 },
                 {
-                  step: "03",
-                  title: "Counseling Session",
-                  desc: "Personal guidance session with our academic counselors",
-                  time: "PG Programs",
-                  icon: <Users className="h-8 w-8 text-white" />,
+                  number: "03",
+                  title: "Personal Interview",
+                  description: "One-on-one consultation with our experienced academic counselors",
+                  duration: "PG Programs",
+                  icon: <Users className="h-6 w-6" />
                 },
                 {
-                  step: "04",
+                  number: "04",
                   title: "Document Verification",
-                  desc: "Quick and secure verification of your academic documents",
-                  time: "Instant",
-                  icon: <Award className="h-8 w-8 text-white" />,
+                  description: "Secure verification of your academic credentials and certificates",
+                  duration: "Instant",
+                  icon: <Award className="h-6 w-6" />
                 },
                 {
-                  step: "05",
+                  number: "05",
                   title: "Welcome Aboard",
-                  desc: "Begin your educational journey with full support and guidance",
-                  time: "Success",
-                  icon: <Target className="h-8 w-8 text-white" />,
-                },
-              ].map((item, index) => (
-                <div key={index} className="relative">
-                  {/* Arrow Connector */}
+                  description: "Begin your educational journey with comprehensive support",
+                  duration: "Lifetime",
+                  icon: <Target className="h-6 w-6" />
+                }
+              ].map((step, index) => (
+                <div key={index} className="relative flex items-start space-x-4 group">
+
+                  {/* Timeline Line */}
                   {index < 4 && (
-                    <div
-                      className="absolute left-1/2 transform -translate-x-1/2 z-10"
-                      style={{ top: "100%", height: "20px" }}
-                    >
-                      <div className="w-8 h-5 flex items-center justify-center">
-                        <ArrowRight
-                          className="h-4 w-4 text-[#c38935] transform rotate-90 animate-bounce"
-                          style={{ animationDelay: `${index * 0.2}s` }}
-                        />
-                      </div>
+                    <div className="absolute left-6 top-16 w-0.5 h-16 bg-gray-200">
+                      <div className="w-full h-full bg-gradient-to-b from-[#22336a] to-[#c38935]"></div>
                     </div>
                   )}
 
-                  {/* Step Card */}
-                  <div
-                    className="group relative mb-5 animate-slide-in-left"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-gray-100 hover:border-[#c38935]/30 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 relative overflow-hidden h-24">
-                      {/* Background Glow */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                  {/* Timeline Node */}
+                  <div className="w-12 h-12 bg-[#22336a] text-white rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#c38935] transition-colors duration-300 relative z-10">
+                    {step.icon}
+                  </div>
 
-                      {/* Decorative Corner */}
-                      <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-2xl"></div>
+                  {/* Content */}
+                  <div className="flex-1 bg-white rounded-xl border border-gray-200 p-6 shadow-lg hover:shadow-xl transition-all duration-300">
 
-                      <div className="relative z-10 flex items-center h-full">
-                        {/* Step Icon Circle */}
-                        <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                          {item.icon}
-                        </div>
-
-                        {/* Content */}
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="text-xs font-bold text-[#c38935] tracking-wider">
-                              STEP {item.step}
-                            </span>
-                            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
-                              {item.time}
-                            </span>
-                          </div>
-                          <h3 className="text-base font-bold text-[#22336a] mb-1 group-hover:text-[#c38935] transition-colors duration-300">
-                            {item.title}
-                          </h3>
-                          <p className="text-gray-600 text-xs leading-relaxed">
-                            {item.desc}
-                          </p>
-                        </div>
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center space-x-3">
+                        <span className="text-2xl font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                          {step.number}
+                        </span>
+                        <h3 className="text-xl font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                          {step.title}
+                        </h3>
                       </div>
-
-                      {/* Animated Progress Dot */}
-                      <div className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-[#c38935] rounded-full animate-pulse shadow-lg"></div>
+                      <div className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                        {step.duration}
+                      </div>
                     </div>
+
+                    <p className="text-gray-600 leading-relaxed">
+                      {step.description}
+                    </p>
+
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Desktop Innovative Arrow-Based Journey */}
-          <div className="hidden md:block relative">
-            {/* Animated Progress Line with Arrows */}
-            <div className="absolute top-24 left-0 right-0 h-1 bg-gray-200 rounded-full overflow-hidden">
-              <div className="h-full bg-gradient-to-r from-[#22336a] via-[#c38935] to-[#22336a] rounded-full animate-progress-line"></div>
-            </div>
-
-            {/* Arrow Connectors */}
-            <div className="absolute top-20 flex justify-between w-full px-12">
-              {[...Array(4)].map((_, index) => (
-                <div
-                  key={index}
-                  className="flex items-center animate-bounce-subtle"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+          {/* CTA Section */}
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-8 md:p-12 text-white">
+              <h3 className="text-2xl md:text-4xl font-bold mb-4">
+                Ready to Begin Your Journey?
+              </h3>
+              <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+                Join thousands of successful graduates at top companies worldwide.
+                Your success story starts with a single step.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="tel:+917065303030"
+                  className="inline-flex items-center px-8 py-4 bg-white text-[#22336a] font-bold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
-                  <ArrowRight className="h-8 w-8 text-[#c38935] drop-shadow-lg" />
-                </div>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-5 gap-8 mb-16 relative">
-              {[
-                {
-                  step: "01",
-                  title: "Online Application",
-                  desc: "Submit your application through our streamlined digital platform with guided assistance and program recommendations",
-                  time: "5 minutes",
-                  icon: <BookOpen className="h-10 w-10 text-white" />,
-                },
-                {
-                  step: "02",
-                  title: "Aptitude Assessment",
-                  desc: "Complete a comprehensive evaluation designed to understand your academic strengths and career interests",
-                  time: "30 minutes",
-                  icon: <Clock className="h-10 w-10 text-white" />,
-                },
-                {
-                  step: "03",
-                  title: "Personal Interview",
-                  desc: "One-on-one consultation with our experienced academic counselors for postgraduate program candidates",
-                  time: "PG Programs",
-                  icon: <Users className="h-10 w-10 text-white" />,
-                },
-                {
-                  step: "04",
-                  title: "Document Verification",
-                  desc: "Secure verification of your academic credentials and certificates through our digital verification system",
-                  time: "Instant",
-                  icon: <Award className="h-10 w-10 text-white" />,
-                },
-                {
-                  step: "05",
-                  title: "Welcome to Success",
-                  desc: "Join our community of 50,000+ successful students and begin your journey with comprehensive academic support",
-                  time: "Lifetime",
-                  icon: <Target className="h-10 w-10 text-white" />,
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="group relative animate-fade-in-up"
-                  style={{ animationDelay: `${index * 0.15}s` }}
+                  <Phone className="h-5 w-5 mr-3" />
+                  Call Us Now
+                </a>
+                <a
+                  href="https://sunstone.in/apply-now"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 transform hover:scale-105"
                 >
-                  {/* Floating Step Number */}
-                  <div className="relative mb-8 flex justify-center">
-                    <div className="relative w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 z-10">
-                      {/* Animated Glow Ring */}
-                      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/20 to-transparent group-hover:animate-pulse"></div>
-
-                      {/* Step Icon */}
-                      <div className="relative z-10">{item.icon}</div>
-
-                      {/* Step Number Badge */}
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg border-2 border-[#c38935]">
-                        <span className="text-[#22336a] font-bold text-sm">
-                          {item.step}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Glowing Base */}
-                    <div className="absolute inset-0 w-24 h-24 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-3xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-                  </div>
-
-                  {/* Content Card */}
-                  <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-6 shadow-xl border-2 border-gray-100/50 group-hover:border-[#c38935]/30 transition-all duration-500 transform group-hover:-translate-y-4 group-hover:shadow-2xl relative overflow-hidden h-[240px] flex flex-col">
-                    {/* Subtle Background Gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-[#c38935]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
-
-                    {/* Decorative Corner Elements */}
-                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#c38935]/10 to-transparent rounded-3xl"></div>
-                    <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-[#22336a]/5 to-transparent rounded-3xl"></div>
-
-                    <div className="relative z-10 flex-1 flex flex-col">
-                      {/* Time Badge */}
-                      <div className="flex justify-between items-center mb-4">
-                        <span className="text-xs font-bold text-[#c38935] tracking-wider bg-[#c38935]/10 px-3 py-1 rounded-full">
-                          STEP {item.step}
-                        </span>
-                        <span className="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full font-medium">
-                          {item.time}
-                        </span>
-                      </div>
-
-                      {/* Title */}
-                      <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
-                        {item.title}
-                      </h3>
-
-                      {/* Description */}
-                      <p className="text-gray-600 leading-relaxed text-sm flex-grow">
-                        {item.desc}
-                      </p>
-
-                      {/* Progress Indicator */}
-                      <div className="mt-4 flex items-center justify-center">
-                        <div className="w-12 h-1 bg-gray-200 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-[#c38935] rounded-full transition-all duration-1000 group-hover:w-full"
-                            style={{ width: `${(index + 1) * 20}%` }}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Animated Corner Dot */}
-                    <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#c38935] rounded-full animate-pulse shadow-lg group-hover:scale-125 transition-transform duration-300"></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Enhanced CTA Section - Mobile Optimized */}
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-[#22336a] via-[#2d4a7b] to-[#22336a] rounded-lg md:rounded-3xl p-4 md:p-12 text-white relative overflow-hidden shadow-2xl">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-20 translate-x-20"></div>
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-16 -translate-x-16"></div>
-              <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-
-              <div className="relative z-10">
-                <h3 className="text-lg md:text-4xl font-bold mb-2 md:mb-4">
-                  Ready to Start Your Success Journey?
-                </h3>
-                <p className="text-sm md:text-xl mb-4 md:mb-8 opacity-90 max-w-2xl mx-auto">
-                  Join <span className="font-semibold">50,000+ successful graduates</span> working at top companies.
-                  <span className="text-[#c38935]"> 95% placement success rate.</span>
-                  Your future starts here.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3 md:gap-6 justify-center items-center">
-                  <a
-                    href="tel:+917065303030"
-                    className="group inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-white text-[#22336a] font-bold rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-50 text-sm md:text-base"
-                  >
-                    <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3 group-hover:animate-pulse" />
-                    <span>
-                      <p>Call Us Now</p>
-                    </span>
-                  </a>
-                  <a
-                    href="https://sunstone.in/apply-now"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center px-4 md:px-8 py-2 md:py-4 bg-[#c38935] hover:bg-[#d49640] text-white font-bold rounded-lg md:rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm md:text-base"
-                  >
-                    <ExternalLink className="h-4 w-4 md:h-5 md:w-5 mr-2 md:mr-3" />
-                    <span>Secure Your Spot Now</span>
-                  </a>
-                </div>
+                  <ExternalLink className="h-5 w-5 mr-3" />
+                  Apply Now
+                </a>
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
