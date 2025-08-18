@@ -647,8 +647,8 @@ const Index = () => {
               {/* Mobile: Smaller comparison cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 md:gap-3 lg:gap-4 mb-1.5 md:mb-4">
                 <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
-                  <div className="w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-[10px] md:text-sm">
+                  <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-xs md:text-sm">
                       63%
                     </span>
                   </div>
@@ -832,7 +832,7 @@ const Index = () => {
                 <div className="p-6 md:p-8 bg-gradient-to-r from-white/80 to-white/90 backdrop-blur-lg border-t border-gray-200">
                   <div className="flex flex-col md:flex-row md:items-center justify-between">
                     <div className="mb-4 md:mb-0">
-                      <h3 className="text-[#22336a] font-bold text-lg md:text-2xl mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      <h3 className="text-[#22336a] font-bold text-sm md:text-2xl mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                         Hi-Tech Institute - Where Dreams Become Reality
                       </h3>
                       <p className="text-gray-700 text-sm md:text-base">
@@ -2846,10 +2846,10 @@ const Index = () => {
             <div className="inline-block bg-[#22336a] text-white px-6 py-2 rounded-full text-sm font-semibold tracking-wide mb-6">
               ADMISSION PROCESS
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-[#22336a] mb-6">
+            <h2 className="text-xl md:text-5xl font-bold text-[#22336a] mb-6">
               Your Path to Success
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto">
               A streamlined 5-step process designed to get you started quickly.
               Join{" "}
               <span className="font-semibold text-[#22336a]">
