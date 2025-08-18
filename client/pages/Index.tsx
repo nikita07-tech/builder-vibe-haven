@@ -901,7 +901,6 @@ const Index = () => {
         </div>
       </section>
 
-
       <section className="py-20 bg-white relative overflow-hidden">
         <div
           className="absolute inset-0"
@@ -2365,7 +2364,6 @@ const Index = () => {
                     </div>
                   )}
 
-
                   {/* Apply Button - Smaller */}
                   <div className="mt-2">
                     <a
@@ -2537,7 +2535,6 @@ const Index = () => {
                             {programData.eligibility}
                           </p>
                         </div>
-
 
                         <div className="mt-4 md:mt-6">
                           <a
