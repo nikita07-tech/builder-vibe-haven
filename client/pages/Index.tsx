@@ -2838,9 +2838,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Modern Professional Timeline Layout */}
-      <section className="py-16 md:py-24 bg-white relative">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Professional Admission Process Grid */}
+      <section className="py-16 md:py-24 bg-gray-50 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Header Section */}
           <div className="text-center mb-16">
@@ -2857,176 +2857,82 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Timeline Layout */}
-          <div className="relative">
+          {/* Equal Sized Container Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+            {[
+              {
+                number: "01",
+                title: "Apply Online",
+                description: "Submit your application through our user-friendly digital platform",
+                duration: "5 minutes",
+                icon: <BookOpen className="h-8 w-8" />
+              },
+              {
+                number: "02",
+                title: "Aptitude Test",
+                description: "Complete a comprehensive assessment to evaluate your academic potential",
+                duration: "30 minutes",
+                icon: <Clock className="h-8 w-8" />
+              },
+              {
+                number: "03",
+                title: "Personal Interview",
+                description: "One-on-one consultation with our experienced academic counselors",
+                duration: "PG Programs",
+                icon: <Users className="h-8 w-8" />
+              },
+              {
+                number: "04",
+                title: "Document Verification",
+                description: "Secure verification of your academic credentials and certificates",
+                duration: "Instant",
+                icon: <Award className="h-8 w-8" />
+              },
+              {
+                number: "05",
+                title: "Welcome Aboard",
+                description: "Begin your educational journey with comprehensive support",
+                duration: "Lifetime",
+                icon: <Target className="h-8 w-8" />
+              }
+            ].map((step, index) => (
+              <div key={index} className="group">
+                <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-[280px] flex flex-col">
 
-            {/* Desktop Timeline */}
-            <div className="hidden lg:block">
-              {/* Timeline Line */}
-              <div className="absolute top-32 left-0 right-0 h-0.5 bg-gray-200">
-                <div className="h-full bg-gradient-to-r from-[#22336a] to-[#c38935] w-full"></div>
-              </div>
-
-              {/* Timeline Steps */}
-              <div className="grid grid-cols-5 gap-8">
-                {[
-                  {
-                    number: "01",
-                    title: "Apply Online",
-                    description: "Submit your application through our user-friendly digital platform",
-                    duration: "5 minutes",
-                    icon: <BookOpen className="h-6 w-6" />
-                  },
-                  {
-                    number: "02",
-                    title: "Aptitude Test",
-                    description: "Complete a comprehensive assessment to evaluate your academic potential",
-                    duration: "30 minutes",
-                    icon: <Clock className="h-6 w-6" />
-                  },
-                  {
-                    number: "03",
-                    title: "Personal Interview",
-                    description: "One-on-one consultation with our experienced academic counselors",
-                    duration: "PG Programs",
-                    icon: <Users className="h-6 w-6" />
-                  },
-                  {
-                    number: "04",
-                    title: "Document Verification",
-                    description: "Secure verification of your academic credentials and certificates",
-                    duration: "Instant",
-                    icon: <Award className="h-6 w-6" />
-                  },
-                  {
-                    number: "05",
-                    title: "Welcome Aboard",
-                    description: "Begin your educational journey with comprehensive support",
-                    duration: "Lifetime",
-                    icon: <Target className="h-6 w-6" />
-                  }
-                ].map((step, index) => (
-                  <div key={index} className="relative group">
-
-                    {/* Timeline Node */}
-                    <div className="absolute top-28 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white border-4 border-[#22336a] rounded-full z-10 group-hover:border-[#c38935] transition-colors duration-300">
-                      <div className="absolute inset-1 bg-[#22336a] rounded-full group-hover:bg-[#c38935] transition-colors duration-300"></div>
+                  {/* Step Number and Icon */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-16 h-16 bg-[#22336a] text-white rounded-xl flex items-center justify-center group-hover:bg-[#c38935] transition-colors duration-300">
+                      {step.icon}
                     </div>
-
-                    {/* Step Content */}
-                    <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 mb-16">
-
-                      {/* Step Number */}
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-12 h-12 bg-[#22336a] text-white rounded-lg flex items-center justify-center group-hover:bg-[#c38935] transition-colors duration-300">
-                            {step.icon}
-                          </div>
-                          <div className="text-2xl font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
-                            {step.number}
-                          </div>
-                        </div>
-                        <div className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                          {step.duration}
-                        </div>
-                      </div>
-
-                      {/* Title & Description */}
-                      <h3 className="text-xl font-bold text-[#22336a] mb-3 group-hover:text-[#c38935] transition-colors duration-300">
-                        {step.title}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed">
-                        {step.description}
-                      </p>
-
+                    <div className="text-3xl font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
+                      {step.number}
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
 
-            {/* Mobile/Tablet Vertical Timeline */}
-            <div className="lg:hidden space-y-8">
-              {[
-                {
-                  number: "01",
-                  title: "Apply Online",
-                  description: "Submit your application through our user-friendly digital platform",
-                  duration: "5 minutes",
-                  icon: <BookOpen className="h-6 w-6" />
-                },
-                {
-                  number: "02",
-                  title: "Aptitude Test",
-                  description: "Complete a comprehensive assessment to evaluate your academic potential",
-                  duration: "30 minutes",
-                  icon: <Clock className="h-6 w-6" />
-                },
-                {
-                  number: "03",
-                  title: "Personal Interview",
-                  description: "One-on-one consultation with our experienced academic counselors",
-                  duration: "PG Programs",
-                  icon: <Users className="h-6 w-6" />
-                },
-                {
-                  number: "04",
-                  title: "Document Verification",
-                  description: "Secure verification of your academic credentials and certificates",
-                  duration: "Instant",
-                  icon: <Award className="h-6 w-6" />
-                },
-                {
-                  number: "05",
-                  title: "Welcome Aboard",
-                  description: "Begin your educational journey with comprehensive support",
-                  duration: "Lifetime",
-                  icon: <Target className="h-6 w-6" />
-                }
-              ].map((step, index) => (
-                <div key={index} className="relative flex items-start space-x-4 group">
-
-                  {/* Timeline Line */}
-                  {index < 4 && (
-                    <div className="absolute left-6 top-16 w-0.5 h-16 bg-gray-200">
-                      <div className="w-full h-full bg-gradient-to-b from-[#22336a] to-[#c38935]"></div>
+                  {/* Duration Badge */}
+                  <div className="mb-4">
+                    <div className="inline-block text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                      {step.duration}
                     </div>
-                  )}
-
-                  {/* Timeline Node */}
-                  <div className="w-12 h-12 bg-[#22336a] text-white rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-[#c38935] transition-colors duration-300 relative z-10">
-                    {step.icon}
                   </div>
 
-                  {/* Content */}
-                  <div className="flex-1 bg-white rounded-xl border border-gray-200 p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-[#22336a] mb-4 group-hover:text-[#c38935] transition-colors duration-300">
+                    {step.title}
+                  </h3>
 
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center space-x-3">
-                        <span className="text-2xl font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
-                          {step.number}
-                        </span>
-                        <h3 className="text-xl font-bold text-[#22336a] group-hover:text-[#c38935] transition-colors duration-300">
-                          {step.title}
-                        </h3>
-                      </div>
-                      <div className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                        {step.duration}
-                      </div>
-                    </div>
+                  {/* Description */}
+                  <p className="text-gray-600 leading-relaxed flex-grow">
+                    {step.description}
+                  </p>
 
-                    <p className="text-gray-600 leading-relaxed">
-                      {step.description}
-                    </p>
-
-                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
           {/* CTA Section */}
-          <div className="mt-16 text-center">
+          <div className="text-center">
             <div className="bg-gradient-to-r from-[#22336a] to-[#c38935] rounded-2xl p-8 md:p-12 text-white">
               <h3 className="text-2xl md:text-4xl font-bold mb-4">
                 Ready to Begin Your Journey?
