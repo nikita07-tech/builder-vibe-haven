@@ -833,7 +833,7 @@ const Index = () => {
                   <div className="flex flex-col md:flex-row md:items-center justify-between">
                     <div className="mb-4 md:mb-0">
                       <h3 className="text-[#22336a] font-bold text-lg md:text-2xl mb-2 group-hover:text-[#c38935] transition-colors duration-300">
-                        Hi-Tech Institute - Where Dreams Become Reality ✨
+                        Hi-Tech Institute - Where Dreams Become Reality
                       </h3>
                       <p className="text-gray-700 text-sm md:text-base">
                         Immerse yourself in our world-class programs:{" "}
@@ -2904,7 +2904,7 @@ const Index = () => {
               },
             ].map((step, index) => (
               <div key={index} className="group">
-                <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-[240px] md:h-[260px] flex flex-col">
+                <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 min-h-[240px] md:min-h-[260px] flex flex-col">
                   {/* Step Number and Icon */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-16 h-16 bg-[#22336a] text-white rounded-xl flex items-center justify-center group-hover:bg-[#c38935] transition-colors duration-300">
