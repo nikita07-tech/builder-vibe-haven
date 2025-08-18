@@ -824,20 +824,6 @@ const Index = () => {
                           ))}
                         </div>
 
-                        {/* Rating Display */}
-                        <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-xl text-center animate-fade-in shadow-lg">
-                          <div className="flex items-center justify-center mb-1">
-                            {[...Array(5)].map((_, i) => (
-                              <Star
-                                key={i}
-                                className="w-3 h-3 text-yellow-400 fill-current"
-                              />
-                            ))}
-                          </div>
-                          <div className="text-gray-800 text-xs font-semibold">
-                            4.9/5 Student Rating
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -882,7 +868,7 @@ const Index = () => {
                         rel="noopener noreferrer"
                         className="px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group/btn"
                       >
-                        <span>Take Virtual Tour</span>
+                        <span>Book Virtual Tour</span>
                         <ChevronRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
                       </a>
                       <a
