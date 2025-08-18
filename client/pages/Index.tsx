@@ -903,14 +903,19 @@ const Index = () => {
 
       {/* New Age Education Section - Key Offerings Layout */}
       <section className="py-16 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5" style={{left: '61px', top: '-40px'}}></div>
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"
+          style={{ left: "61px", top: "-40px" }}
+        ></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-[#22336a] mb-6">
               New Age Education That Secures Futures
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-              Transform your career with industry-integrated programs designed by corporate leaders, featuring cutting-edge curriculum, practical learning experiences, and guaranteed placement support.
+              Transform your career with industry-integrated programs designed
+              by corporate leaders, featuring cutting-edge curriculum, practical
+              learning experiences, and guaranteed placement support.
             </p>
           </div>
 
@@ -942,7 +947,8 @@ const Index = () => {
                   Corporate Leaders Turned Educators
                 </h3>
                 <p className="text-gray-600 leading-relaxed flex-grow">
-                  Learn directly from industry veterans and Fortune 500 executives
+                  Learn directly from industry veterans and Fortune 500
+                  executives
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -958,7 +964,8 @@ const Index = () => {
                   Build Your First Startup
                 </h3>
                 <p className="text-gray-600 leading-relaxed flex-grow">
-                  Comprehensive entrepreneurship programs with real business incubation
+                  Comprehensive entrepreneurship programs with real business
+                  incubation
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -990,7 +997,8 @@ const Index = () => {
                   Practical Learning Over Theory
                 </h3>
                 <p className="text-gray-600 leading-relaxed flex-grow">
-                  Hands-on experience with live projects and industry collaborations
+                  Hands-on experience with live projects and industry
+                  collaborations
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1006,7 +1014,8 @@ const Index = () => {
                   Industry Specializations
                 </h3>
                 <p className="text-gray-600 leading-relaxed flex-grow">
-                  Choose from industry-focused specializations designed to boost your career prospects
+                  Choose from industry-focused specializations designed to boost
+                  your career prospects
                 </p>
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
@@ -1016,7 +1025,10 @@ const Index = () => {
       </section>
 
       <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0" style={{top: '32px', width: '1173px'}}>
+        <div
+          className="absolute inset-0"
+          style={{ top: "32px", width: "1173px" }}
+        >
           <div className="absolute top-20 left-20 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl animate-float"></div>
           <div
             className="absolute bottom-20 right-20 w-80 h-80 bg-[#22336a]/5 rounded-full blur-3xl animate-float"
