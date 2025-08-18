@@ -3123,11 +3123,12 @@ const Index = () => {
 
               <div className="relative z-10">
                 <h3 className="text-lg md:text-4xl font-bold mb-2 md:mb-4">
-                  Ready to Transform Your Future?
+                  Ready to Join the Elite 5% of Industry Leaders?
                 </h3>
                 <p className="text-sm md:text-xl mb-4 md:mb-8 opacity-90 max-w-2xl mx-auto">
-                  Join thousands of successful graduates who chose excellence.
-                  Your journey starts here.
+                  <span className="font-semibold">50,000+ alumni</span> at top companies worldwide.
+                  <span className="text-[#c38935]"> 95% placement success rate.</span>
+                  Your transformation begins with one decision.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 md:gap-6 justify-center items-center">
                   <a
