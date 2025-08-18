@@ -887,6 +887,259 @@ const Index = () => {
         </div>
       </section>
 
+      {/* New Age Education Section - Key Offerings Layout */}
+      <section className="py-6 md:py-16 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-6 md:mb-16">
+            <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-2 md:mb-6">
+              New Age Education That Secures Futures
+            </h2>
+            <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+              <h2 style={{ textAlign: "center" }}>
+                <strong>
+                  Transform your career with industry-integrated programs
+                  designed by corporate leaders, featuring cutting-edge
+                  curriculum, practical learning experiences, and guaranteed
+                  placement support.
+                </strong>
+              </h2>
+              <p>
+                <br />
+              </p>
+            </p>
+          </div>
+
+          {/* Mobile Enhanced Carousel - Smaller */}
+          <div className="block md:hidden mb-4">
+            <div className="overflow-hidden rounded-xl">
+              <div className="flex space-x-4 animate-scroll-right-to-left">
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer animate-slide-in-left">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 h-full flex flex-col">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">💼</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Curriculum for Jobs of 2030
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                      Future-focused learning paths designed for tomorrow's
+                      careers
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.1s" }}
+                >
+                  <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">👨‍💼</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Corporate Leaders Turned Educators
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                      Learn directly from industry veterans and Fortune 500
+                      executives
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.2s" }}
+                >
+                  <div className="bg-gradient-to-br from-white to-purple-50/30 rounded-xl p-4 shadow-lg border border-purple-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-[#c38935]/20 to-transparent rounded-full -translate-y-6 translate-x-6"></div>
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg relative z-10">
+                      <span className="text-white text-lg">🚀</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Build Your First Startup
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed relative z-10">
+                      Comprehensive entrepreneurship programs with real business
+                      incubation
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-100 animate-pulse"></div>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.3s" }}
+                >
+                  <div className="bg-gradient-to-br from-white to-green-50/30 rounded-xl p-4 shadow-lg border border-green-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">⚡</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      NextGen Tech Tools
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                      Advanced technologies and AI-powered learning platforms
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#22336a] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                <div
+                  className="flex-shrink-0 w-64 group relative cursor-pointer animate-slide-in-left"
+                  style={{ animationDelay: "0.4s" }}
+                >
+                  <div className="bg-gradient-to-br from-white to-red-50/30 rounded-xl p-4 shadow-lg border border-red-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">📚</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Practical Learning Over Theory
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                      Hands-on experience with live projects and industry
+                      collaborations
+                    </p>
+                    <div className="absolute top-3 right-3 w-2 h-2 bg-[#c38935] rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-opacity duration-300"></div>
+                  </div>
+                </div>
+                {/* Duplicate cards for seamless loop */}
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
+                  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-xl p-4 shadow-lg border border-blue-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105 h-full flex flex-col">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">💼</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Curriculum for Jobs of 2030
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                      Future-focused learning paths designed for tomorrow's
+                      careers
+                    </p>
+                  </div>
+                </div>
+                <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
+                  <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
+                      <span className="text-white text-lg">👨‍💼</span>
+                    </div>
+                    <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                      Corporate Leaders Turned Educators
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed flex-grow">
+                      Learn directly from industry veterans and Fortune 500
+                      executives
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Grid */}
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8 items-stretch">
+            {/* 1. Curriculum for Jobs of 2030 */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">💼</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  Curriculum for Jobs of 2030
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  Future-focused learning paths designed for tomorrow's careers
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* 2. Corporate Leaders Turned Educators */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">👨‍💼</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  Corporate Leaders Turned Educators
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  <p>
+                    Learn directly from corporate leaders with real world
+                    experience
+                  </p>
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* 3. Build Your First Startup */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.3s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">🚀</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  Build Your First Startup
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  Comprehensive entrepreneurship programs with real business
+                  incubation
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* 4. NextGen Tech Tools */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.4s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">⚡</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  NextGen Tech Tools
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  Advanced technologies and AI-powered learning platforms
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c38935]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+
+            {/* 5. Practical Learning Over Theory */}
+            <div
+              className="group relative animate-fade-in-up"
+              style={{ animationDelay: "0.5s" }}
+            >
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer h-full flex flex-col">
+                <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white text-2xl lg:text-3xl">📚</span>
+                </div>
+                <h3 className="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3">
+                  Practical Learning Over Theory
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed flex-grow">
+                  <p>
+                    Hands-on experience with live projects and industry visits
+                  </p>
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white relative overflow-hidden">
         <div
           className="absolute inset-0"
