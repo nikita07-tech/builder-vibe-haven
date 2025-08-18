@@ -700,7 +700,7 @@ const Index = () => {
             <div className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a] to-[#c38935] backdrop-blur-lg rounded-full mb-6 md:mb-8 border border-white/20 shadow-2xl group hover:scale-105 transition-all duration-500 animate-bounce-in">
               <div className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></div>
               <span className="text-white font-semibold text-sm md:text-base tracking-wide">
-                🎬 IMMERSIVE CAMPUS EXPERIENCE
+                IMMERSIVE CAMPUS EXPERIENCE
               </span>
               <div
                 className="w-3 h-3 bg-[#f4d03f] rounded-full ml-3 animate-pulse"
@@ -775,16 +775,16 @@ const Index = () => {
           </div>
 
           {/* Ultra-Enhanced Video Container - Mobile Optimized */}
-          <div className="max-w-4xl md:max-w-6xl mx-auto px-2 md:px-0">
+          <div className="max-w-4xl md:max-w-6xl mx-auto px-4 md:px-8 overflow-hidden">
             <div
               className="relative group animate-scale-in"
               style={{ animationDelay: "0.9s" }}
             >
               {/* Outer Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#c38935]/20 via-[#22336a]/15 to-[#c38935]/20 rounded-xl md:rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700 scale-105"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#c38935]/20 via-[#22336a]/15 to-[#c38935]/20 rounded-xl md:rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700"></div>
 
               {/* Main Video Container */}
-              <div className="relative bg-white/70 backdrop-blur-xl rounded-xl md:rounded-3xl overflow-hidden border border-[#c38935]/30 md:border-2 shadow-2xl group-hover:border-[#c38935]/60 transition-all duration-700 group-hover:scale-105 group-hover:-translate-y-4">
+              <div className="relative bg-white/70 backdrop-blur-xl rounded-xl md:rounded-3xl overflow-hidden border border-[#c38935]/30 md:border-2 shadow-2xl group-hover:border-[#c38935]/60 transition-all duration-700 group-hover:scale-102 group-hover:-translate-y-2">
                 {/* Animated Border Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935] opacity-0 group-hover:opacity-30 transition-opacity duration-700 animate-border-flow"></div>
 
@@ -803,7 +803,7 @@ const Index = () => {
                       {/* View Counter */}
                       <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg">
                         <span className="text-gray-800 text-xs font-semibold">
-                          👁️ 15.2K views
+                          15.2K views
                         </span>
                       </div>
                     </div>
@@ -867,7 +867,7 @@ const Index = () => {
                         rel="noopener noreferrer"
                         className="px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group/btn"
                       >
-                        <span>Book Virtual Tour</span>
+                        <span>Book Campus Tour</span>
                         <ChevronRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
                       </a>
                       <a
@@ -875,7 +875,7 @@ const Index = () => {
                         className="px-6 py-3 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-[#22336a] flex items-center justify-center"
                       >
                         <span className="mr-2">📞</span>
-                        <span>Schedule Visit</span>
+                        <span>Call Us</span>
                       </a>
                     </div>
                   </div>
@@ -2865,14 +2865,13 @@ const Index = () => {
           </div>
 
           {/* Equal Sized Container Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6 mb-16">
             {[
               {
                 number: "01",
                 title: "Apply Online",
                 description:
                   "Submit your application through our user-friendly digital platform",
-                duration: "5 minutes",
                 icon: <BookOpen className="h-8 w-8" />,
               },
               {
@@ -2880,7 +2879,6 @@ const Index = () => {
                 title: "Aptitude Test",
                 description:
                   "Complete a comprehensive assessment to evaluate your academic potential",
-                duration: "30 minutes",
                 icon: <Clock className="h-8 w-8" />,
               },
               {
@@ -2888,7 +2886,6 @@ const Index = () => {
                 title: "Personal Interview",
                 description:
                   "One-on-one consultation with our experienced academic counselors",
-                duration: "PG Programs",
                 icon: <Users className="h-8 w-8" />,
               },
               {
@@ -2896,7 +2893,6 @@ const Index = () => {
                 title: "Document Verification",
                 description:
                   "Secure verification of your academic credentials and certificates",
-                duration: "Instant",
                 icon: <Award className="h-8 w-8" />,
               },
               {
@@ -2904,12 +2900,11 @@ const Index = () => {
                 title: "Welcome Aboard",
                 description:
                   "Begin your educational journey with comprehensive support",
-                duration: "Lifetime",
                 icon: <Target className="h-8 w-8" />,
               },
             ].map((step, index) => (
               <div key={index} className="group">
-                <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-[280px] flex flex-col">
+                <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-[240px] md:h-[260px] flex flex-col">
                   {/* Step Number and Icon */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-16 h-16 bg-[#22336a] text-white rounded-xl flex items-center justify-center group-hover:bg-[#c38935] transition-colors duration-300">
@@ -2920,20 +2915,13 @@ const Index = () => {
                     </div>
                   </div>
 
-                  {/* Duration Badge */}
-                  <div className="mb-4">
-                    <div className="inline-block text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-                      {step.duration}
-                    </div>
-                  </div>
-
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-[#22336a] mb-4 group-hover:text-[#c38935] transition-colors duration-300">
+                  <h3 className="text-lg md:text-xl font-bold text-[#22336a] mb-3 md:mb-4 group-hover:text-[#c38935] transition-colors duration-300">
                     {step.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed flex-grow">
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-grow">
                     {step.description}
                   </p>
                 </div>
