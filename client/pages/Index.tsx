@@ -1334,18 +1334,18 @@ const Index = () => {
           <div className="block md:hidden mb-4">
             <div className="space-y-2">
               <div
-                className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left"
+                className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left"
                 style={{ animationDelay: "0.1s" }}
               >
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center flex-shrink-0">
-                    <Trophy className="h-4 w-4 text-white" />
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Trophy className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xs font-bold text-[#22336a] mb-1">
+                    <h3 className="text-sm font-bold text-[#22336a] mb-2">
                       200+ Placement Opportunities
                     </h3>
-                    <p className="text-[10px] text-gray-600 leading-relaxed">
+                    <p className="text-xs text-gray-600 leading-relaxed">
                       Guaranteed access to extensive placement opportunities
                       across leading companies
                     </p>
