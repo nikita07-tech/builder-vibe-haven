@@ -427,40 +427,40 @@ const Index = () => {
           <div className="absolute bottom-20 left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/[0.02] to-transparent"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-12 items-center">
-            <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
-              <h1 className="text-xs sm:text-sm md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1 sm:mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+            <div className="col-span-1 lg:col-span-1 text-center lg:text-left animate-slide-in-left order-2 lg:order-1">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6 leading-tight text-white">
                 <span className="text-[#c38935] bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
                   Learning That Leads To Success
                 </span>
               </h1>
-              <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3 text-xs sm:text-sm md:text-base">
-                <p className="text-xs sm:text-sm md:text-base">
+              <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-6 text-base md:text-lg">
+                <p className="text-base md:text-lg">
                   Join Hi-Tech Institute for industry-aligned programs with
                   assured placement support.
                 </p>
               </div>
-              <div className="flex flex-col gap-1 md:gap-3 lg:gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
                 <a
                   href="https://sunstone.in/campuses/hi-tech-institute"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-2 sm:px-3 md:px-6 lg:px-8 py-1 sm:py-1.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-xs sm:text-xs md:text-base rounded-md sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-sm md:text-base rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto"
                 >
                   <span>Explore Programs with Sunstone</span>
-                  <ExternalLink className="ml-1 sm:ml-1 md:ml-2 h-3 w-3 sm:h-3 sm:w-3 md:h-5 md:w-5" />
+                  <ExternalLink className="ml-2 h-4 w-4 md:h-5 md:w-5" />
                 </a>
                 <a
                   href="tel:+917065303030"
-                  className="inline-flex items-center justify-center px-1.5 sm:px-3 md:px-6 lg:px-8 py-0.5 sm:py-1.5 md:py-3 lg:py-4 bg-transparent border border-white text-white font-bold text-[10px] sm:text-xs md:text-base rounded-sm sm:rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-transparent border border-white text-white font-bold text-sm md:text-base rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
                 >
-                  <Phone className="mr-0.5 sm:mr-1 md:mr-2 h-2 w-2 sm:h-3 sm:w-3 md:h-5 md:w-5" />
+                  <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                   <span>Call Now</span>
                 </a>
               </div>
             </div>
-            <div className="col-span-1 md:col-span-1 lg:col-span-2 animate-slide-in-right">
+            <div className="col-span-1 lg:col-span-1 animate-slide-in-right order-1 lg:order-2">
               <div className="relative w-full max-w-[280px] sm:max-w-xs md:max-w-xl mx-auto">
                 <div className="relative bg-white rounded-lg md:rounded-xl p-1.5 sm:p-2 md:p-3 shadow-lg group hover:shadow-xl transition-shadow duration-300">
                   {/* HTML-style Carousel Container */}
