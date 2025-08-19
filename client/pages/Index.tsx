@@ -456,7 +456,7 @@ const Index = () => {
                 </a>
               </div>
             </div>
-            <div className="col-span-1 lg:col-span-1 animate-slide-in-right order-1 lg:order-2">
+            <div className="col-span-1 animate-slide-in-right order-1 md:order-2">
               <div className="relative w-full max-w-sm md:max-w-lg lg:max-w-xl mx-auto">
                 <div className="relative bg-white rounded-xl p-2 md:p-3 shadow-2xl group hover:shadow-3xl transition-all duration-300">
                   {/* HTML-style Carousel Container */}
