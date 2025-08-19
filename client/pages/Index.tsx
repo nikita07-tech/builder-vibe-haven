@@ -437,7 +437,7 @@ const Index = () => {
                   assured placement support.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start">
                 <a
                   href="https://sunstone.in/campuses/hi-tech-institute"
                   target="_blank"
