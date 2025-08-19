@@ -461,8 +461,8 @@ const Index = () => {
               </div>
             </div>
             <div className="col-span-1 lg:col-span-1 animate-slide-in-right order-1 lg:order-2">
-              <div className="relative w-full max-w-[280px] sm:max-w-xs md:max-w-xl mx-auto">
-                <div className="relative bg-white rounded-lg md:rounded-xl p-1.5 sm:p-2 md:p-3 shadow-lg group hover:shadow-xl transition-shadow duration-300">
+              <div className="relative w-full max-w-sm md:max-w-lg lg:max-w-xl mx-auto">
+                <div className="relative bg-white rounded-xl p-2 md:p-3 shadow-2xl group hover:shadow-3xl transition-all duration-300">
                   {/* HTML-style Carousel Container */}
                   <div
                     className="relative rounded-lg md:rounded-xl overflow-hidden cursor-grab active:cursor-grabbing select-none"
@@ -1576,7 +1576,7 @@ const Index = () => {
                 <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
                   <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
-                      <span className="text-white text-lg">👨‍💼</span>
+                      <span className="text-white text-lg">��‍💼</span>
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Corporate Leaders Turned Educators
