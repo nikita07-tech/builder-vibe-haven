@@ -846,10 +846,10 @@ const Index = () => {
           <div className="absolute bottom-5 left-5 w-40 h-40 md:w-96 md:h-96 bg-white/5 rounded-full blur-2xl md:blur-3xl"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-3 md:px-6 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 relative z-10">
           {/* Header */}
-          <div className="text-center mb-6 md:mb-10">
-            <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 leading-tight">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
                 <p>THE SUNSTONE PHILOSOPHY</p>
               </span>
