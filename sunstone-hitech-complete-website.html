@@ -1978,6 +1978,110 @@
             observer.observe(el);
           });
       });
+
+      // Carousel Functionality
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.carousel-slide');
+      const dots = document.querySelectorAll('.carousel-dot');
+      const track = document.getElementById('carouselTrack');
+      const title = document.getElementById('carouselTitle');
+      const subtitle = document.getElementById('carouselSubtitle');
+
+      const slideData = [
+        {
+          title: 'Campus Life',
+          subtitle: 'Experience Our Vibrant Community'
+        },
+        {
+          title: 'Hi-Tech Institute Campus',
+          subtitle: 'Modern Infrastructure & Facilities'
+        },
+        {
+          title: 'Campus Infrastructure',
+          subtitle: 'World-Class Education Hub'
+        }
+      ];
+
+      function updateCarousel() {
+        // Move slides
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        // Update dots
+        dots.forEach((dot, index) => {
+          if (index === currentSlide) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+
+        // Update caption
+        title.textContent = slideData[currentSlide].title;
+        subtitle.textContent = slideData[currentSlide].subtitle;
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateCarousel();
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateCarousel();
+      }
+
+      function goToSlide(index) {
+        currentSlide = index;
+        updateCarousel();
+      }
+
+      // Auto-advance carousel with dynamic timing
+      function startCarousel() {
+        setInterval(() => {
+          nextSlide();
+        }, currentSlide === 0 ? 30000 : 4000); // Video slide: 30s, images: 4s
+      }
+
+      // Initialize carousel
+      updateCarousel();
+
+      // Start auto-advance after page load
+      setTimeout(() => {
+        startCarousel();
+      }, 1000);
     </script>
+
+    <style>
+      /* Carousel Styles */
+      .carousel-dot {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .carousel-dot.active {
+        background-color: white;
+      }
+
+      .carousel-dot:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Smooth transitions */
+      .carousel-track {
+        transition: transform 0.5s ease-in-out;
+      }
+
+      /* Hide scrollbar if any */
+      .carousel-container {
+        overflow: hidden;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 640px) {
+        .carousel-container .absolute.left-2,
+        .carousel-container .absolute.right-2 {
+          display: none;
+        }
+      }
+    </style>
   </body>
 </html>
