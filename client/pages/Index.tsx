@@ -58,6 +58,8 @@ const Index = () => {
   }>({});
   const [showScholarshipPopup, setShowScholarshipPopup] = useState(false);
   const [videoMuted, setVideoMuted] = useState(true);
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
 
   // Carousel images
   const carouselImages = [
@@ -110,6 +112,32 @@ const Index = () => {
     setCurrentSlide(
       (prev) => (prev - 1 + carouselImages.length) % carouselImages.length,
     );
+  };
+
+  // Touch gesture handlers for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+
+    const distance = touchStartX - touchEndX;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+
+    setTouchStartX(0);
+    setTouchEndX(0);
   };
 
   const handleRecruiterClick = (recruiterName: string) => {
@@ -294,23 +322,23 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Enhanced Apply Now Button - Mobile Responsive */}
-      <div className="fixed right-3 md:right-6 bottom-3 md:bottom-6 z-50 animate-bounce-subtle">
+      <div className="fixed right-4 md:right-6 bottom-4 md:bottom-6 z-50 animate-bounce-subtle">
         <div className="relative group">
           {/* Animated Background Ring */}
-          <div className="absolute inset-0 w-full h-full bg-[#c38935] rounded-lg md:rounded-xl animate-pulse opacity-30 group-hover:animate-ping"></div>
+          <div className="absolute inset-0 w-full h-full bg-[#c38935] rounded-xl animate-pulse opacity-30 group-hover:animate-ping"></div>
 
           {/* Main Button */}
           <a
             href="https://sunstone.in/apply-now"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-auto px-3 md:px-6 py-2 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-md md:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
+            className="relative flex items-center justify-center w-auto px-4 md:px-6 py-3 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
           >
             {/* Button Content */}
-            <div className="flex items-center space-x-1 md:space-x-3">
-              <div className="w-4 h-4 md:w-8 md:h-8 bg-white/20 rounded-sm md:rounded-lg flex items-center justify-center">
+            <div className="flex items-center space-x-2 md:space-x-3">
+              <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-lg flex items-center justify-center">
                 <svg
-                  className="w-2 h-2 md:w-5 md:h-5 text-white"
+                  className="w-3 h-3 md:w-5 md:h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -318,7 +346,7 @@ const Index = () => {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="text-xs md:text-sm font-bold">Apply Now</div>
+                <div className="text-sm font-bold">Apply Now</div>
                 <div className="text-xs opacity-90 hidden md:block">
                   Sunstone Portal
                 </div>
@@ -330,7 +358,7 @@ const Index = () => {
           </a>
 
           {/* Enhanced Tooltip - Hidden on mobile */}
-          <div className="hidden md:block absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
+          <div className="hidden lg:block absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
             <div className="bg-[#22336a] text-white px-4 py-3 rounded-xl shadow-xl whitespace-nowrap relative">
               <div className="text-sm font-bold">Start Your Journey</div>
               <div className="text-xs opacity-80">
@@ -342,49 +370,45 @@ const Index = () => {
           </div>
 
           {/* Notification Badge */}
-          <div className="absolute -top-0.5 -right-0.5 md:-top-2 md:-right-2 w-3 h-3 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
-            <span className="text-white text-[8px] md:text-xs font-bold">
-              !
-            </span>
+          <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-5 h-5 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
+            <span className="text-white text-xs font-bold">!</span>
           </div>
         </div>
       </div>
 
-      {/* Professional Header - Extra Small Mobile */}
+      {/* Professional Header - Mobile Optimized */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 animate-slide-down hover:shadow-lg">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-8 sm:h-16 md:h-18 lg:h-20">
-            <div className="flex items-center space-x-1 sm:space-x-4 md:space-x-6 lg:space-x-8">
-              <div className="flex items-center space-x-1 sm:space-x-3 md:space-x-4 group animate-fade-in hover:animate-wiggle">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 md:h-18 lg:h-20">
+            <div className="flex items-center space-x-4 md:space-x-6 lg:space-x-8">
+              <div className="flex items-center space-x-3 md:space-x-4 group animate-fade-in hover:animate-wiggle">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
                   alt="Hi-Tech Institute"
-                  className="h-3 sm:h-6 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                  className="h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
                 />
-                <div className="h-3 sm:h-6 md:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
+                <div className="h-6 md:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-3 sm:h-6 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
+                  className="h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
                 />
               </div>
             </div>
-            <div className="flex items-center space-x-1 sm:space-x-3 md:space-x-4">
+            <div className="flex items-center space-x-3 md:space-x-4">
               <a
                 href="mailto:connect@sunstone.in"
-                className="hidden md:flex items-center space-x-2 text-[#22336a] hover:text-[#c38935] transition-all duration-300 font-medium px-2 md:px-3 py-1.5 md:py-2 rounded-lg hover:bg-gray-50"
+                className="hidden md:flex items-center space-x-2 text-[#22336a] hover:text-[#c38935] transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-gray-50"
               >
-                <Mail className="h-3 w-3 md:h-4 md:w-4" />
-                <span className="text-xs md:text-sm">connect@sunstone.in</span>
+                <Mail className="h-4 w-4" />
+                <span className="text-sm">connect@sunstone.in</span>
               </a>
               <a
                 href="tel:+917065303030"
-                className="flex items-center space-x-1 sm:space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-1 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-2.5 rounded-sm md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
+                className="flex items-center space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-3 md:px-4 py-2 md:py-2.5 rounded-lg md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
               >
-                <Phone className="h-2 w-2 sm:h-3 sm:w-3" />
-                <span className="text-[10px] sm:text-sm">
-                  +91 7065-30-30-30
-                </span>
+                <Phone className="h-3 w-3 md:h-4 md:w-4" />
+                <span className="text-sm">+91 7065-30-30-30</span>
               </a>
             </div>
           </div>
@@ -399,46 +423,49 @@ const Index = () => {
           <div className="absolute bottom-20 left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/[0.02] to-transparent"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-6 lg:gap-12 items-center">
-            <div className="col-span-1 md:col-span-1 lg:col-span-3 text-left animate-slide-in-left">
-              <h1 className="text-xs sm:text-sm md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-1 sm:mb-2 md:mb-4 lg:mb-6 leading-tight text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+            <div className="col-span-1 lg:col-span-1 text-center lg:text-left animate-slide-in-left order-2 lg:order-1">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6 leading-tight text-white">
                 <span className="text-[#c38935] bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
                   Learning That Leads To Success
                 </span>
               </h1>
-              <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3 text-xs sm:text-sm md:text-base">
-                <p className="text-xs sm:text-sm md:text-base">
+              <div className="text-white/90 font-medium max-w-2xl leading-relaxed mb-6 text-base md:text-lg">
+                <p className="text-base md:text-lg">
                   Join Hi-Tech Institute for industry-aligned programs with
                   assured placement support.
                 </p>
               </div>
-              <div className="flex flex-col gap-1 md:gap-3 lg:gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
                 <a
                   href="https://sunstone.in/campuses/hi-tech-institute"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-2 sm:px-3 md:px-6 lg:px-8 py-1 sm:py-1.5 md:py-3 lg:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-xs sm:text-xs md:text-base rounded-md sm:rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-sm md:text-base rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto"
                 >
                   <span>Explore Programs with Sunstone</span>
-                  <ExternalLink className="ml-1 sm:ml-1 md:ml-2 h-3 w-3 sm:h-3 sm:w-3 md:h-5 md:w-5" />
+                  <ExternalLink className="ml-2 h-4 w-4 md:h-5 md:w-5" />
                 </a>
                 <a
                   href="tel:+917065303030"
-                  className="inline-flex items-center justify-center px-1.5 sm:px-3 md:px-6 lg:px-8 py-0.5 sm:py-1.5 md:py-3 lg:py-4 bg-transparent border border-white text-white font-bold text-[10px] sm:text-xs md:text-base rounded-sm sm:rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
+                  className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-transparent border border-white text-white font-bold text-sm md:text-base rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg"
                 >
-                  <Phone className="mr-0.5 sm:mr-1 md:mr-2 h-2 w-2 sm:h-3 sm:w-3 md:h-5 md:w-5" />
+                  <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                   <span>Call Now</span>
                 </a>
               </div>
             </div>
-            <div className="col-span-1 md:col-span-1 lg:col-span-2 animate-slide-in-right">
-              <div className="relative max-w-xs md:max-w-xl mx-auto">
-                <div className="relative bg-white rounded-lg md:rounded-xl p-2 md:p-2 shadow-lg">
+            <div className="col-span-1 lg:col-span-1 animate-slide-in-right order-1 lg:order-2">
+              <div className="relative w-full max-w-sm md:max-w-lg lg:max-w-xl mx-auto">
+                <div className="relative bg-white rounded-xl p-2 md:p-3 shadow-2xl group hover:shadow-3xl transition-all duration-300">
                   {/* HTML-style Carousel Container */}
                   <div
-                    className="relative rounded-lg md:rounded-xl overflow-hidden"
+                    className="relative rounded-lg md:rounded-xl overflow-hidden cursor-grab active:cursor-grabbing select-none"
                     style={{ aspectRatio: "4/3" }}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
                   >
                     {/* Carousel Slides - Opacity based transitions */}
                     {carouselImages.map((item, index) => (
@@ -467,19 +494,51 @@ const Index = () => {
                       </div>
                     ))}
 
+                    {/* Navigation Arrows - Desktop */}
+                    <button
+                      onClick={prevSlide}
+                      className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+                      aria-label="Previous slide"
+                    >
+                      <ChevronLeft className="w-4 h-4" />
+                    </button>
+                    <button
+                      onClick={nextSlide}
+                      className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+                      aria-label="Next slide"
+                    >
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+
                     {/* HTML-style Carousel Dots */}
-                    <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2">
+                    <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
                       {carouselImages.map((_, index) => (
                         <button
                           key={index}
                           onClick={() => setCurrentSlide(index)}
-                          className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${
+                          className={`w-2 h-2 md:w-3 md:h-3 rounded-full cursor-pointer transition-all duration-300 ${
                             index === currentSlide
-                              ? "bg-white"
-                              : "bg-white/50 hover:bg-white/70"
+                              ? "bg-white shadow-lg scale-125"
+                              : "bg-white/50 hover:bg-white/70 hover:scale-110"
                           }`}
+                          aria-label={`Go to slide ${index + 1}`}
                         />
                       ))}
+                    </div>
+
+                    {/* Mobile Swipe Indicator */}
+                    <div className="md:hidden absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full px-2 py-1 text-white text-xs opacity-60 animate-pulse">
+                      👆 Swipe
+                    </div>
+
+                    {/* Slide Content Indicator */}
+                    <div className="absolute bottom-8 left-3 right-3 bg-gradient-to-t from-black/50 to-transparent rounded-lg p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h4 className="text-white text-xs md:text-sm font-semibold truncate">
+                        {carouselImages[currentSlide]?.title}
+                      </h4>
+                      <p className="text-white/80 text-xs truncate">
+                        {carouselImages[currentSlide]?.subtitle}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -489,92 +548,90 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Placement Highlights - Much Smaller Mobile Version */}
-      <section className="py-2 md:py-8 lg:py-12 bg-[#22336a]">
-        <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-md md:rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
-            <div className="bg-[#c38935] text-white px-2 md:px-6 py-1.5 md:py-4">
+      {/* Placement Highlights - Mobile Optimized */}
+      <section className="py-6 md:py-12 bg-[#22336a]">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+          <div className="bg-white rounded-xl md:rounded-2xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+            <div className="bg-[#c38935] text-white px-4 md:px-6 py-4 md:py-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xs md:text-lg lg:text-xl font-bold mb-0 md:mb-0">
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">
                     Placement Highlights
                   </h3>
-                  <p className="text-[10px] md:text-sm opacity-90">
+                  <p className="text-sm md:text-base opacity-90">
                     MBA | MCA | BBA | BCA | B.Tech
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="p-1.5 md:p-4 lg:p-6">
-              {/* Mobile: Smaller stats */}
-              <div className="grid grid-cols-3 sm:grid-cols-3 gap-1.5 md:gap-4 lg:gap-6 mb-1.5 md:mb-6">
+            <div className="p-4 md:p-6 lg:p-8">
+              {/* Stats Grid - Mobile responsive matching HTML */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-6">
                 <div className="text-center">
-                  <div className="text-xs md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#22336a] mb-2">
                     26 LPA
                   </div>
-                  <p className="text-[10px] md:text-sm text-gray-600">
+                  <p className="text-sm md:text-base text-gray-600">
                     Highest Package
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="text-xs md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#22336a] mb-2">
                     1200+
                   </div>
-                  <p className="text-[10px] md:text-sm text-gray-600">
+                  <p className="text-sm md:text-base text-gray-600">
                     Top Recruiters
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="text-xs md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#22336a] mb-2">
                     5000+
                   </div>
-                  <p className="text-[10px] md:text-sm text-gray-600">
+                  <p className="text-sm md:text-base text-gray-600">
                     Students Placed
                   </p>
                 </div>
               </div>
 
-              {/* Mobile: Smaller comparison cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 md:gap-3 lg:gap-4 mb-1.5 md:mb-4">
-                <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
-                  <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xs md:text-sm">
+              {/* Comparison Cards - Mobile responsive matching HTML */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="bg-gray-50 rounded-lg p-4 flex items-center space-x-4">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm md:text-base">
                       63%
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#22336a] text-[10px] md:text-sm">
+                    <p className="font-semibold text-[#22336a] text-sm md:text-base">
                       63% Higher ROI
                     </p>
-                    <p className="text-[9px] md:text-xs text-gray-600">
+                    <p className="text-xs md:text-sm text-gray-600">
                       vs private colleges
                     </p>
                   </div>
                 </div>
-                <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
-                  <div className="w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#22336a] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-[10px] md:text-sm">
+                <div className="bg-gray-50 rounded-lg p-4 flex items-center space-x-4">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-[#22336a] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm md:text-base">
                       7X
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#22336a] text-[10px] md:text-sm">
+                    <p className="font-semibold text-[#22336a] text-sm md:text-base">
                       7X More Companies
                     </p>
-                    <p className="text-[9px] md:text-xs text-gray-600">
-                      <p>vs top private institutions</p>
+                    <p className="text-xs md:text-sm text-gray-600">
+                      vs top private institutions
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 text-center">
-                <p className="text-[9px] md:text-sm">
-                  <p>
-                    Placement Report Audited &amp; Verified by B2K Analytics,
-                    Official Auditor for IIM Ahemdabad
-                  </p>
+              <div className="bg-gray-50 rounded-lg p-4 text-center">
+                <p className="text-sm text-gray-600">
+                  Placement Report Audited & Verified by B2K Analytics, Official
+                  Auditor for IIM Ahmedabad
                 </p>
               </div>
             </div>
@@ -785,10 +842,10 @@ const Index = () => {
           <div className="absolute bottom-5 left-5 w-40 h-40 md:w-96 md:h-96 bg-white/5 rounded-full blur-2xl md:blur-3xl"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-3 md:px-6 relative z-10">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 relative z-10">
           {/* Header */}
-          <div className="text-center mb-6 md:mb-10">
-            <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 leading-tight">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">
                 <p>THE SUNSTONE PHILOSOPHY</p>
               </span>
@@ -1243,8 +1300,8 @@ const Index = () => {
         </div>
       )}
 
-      {/* Professional Placement Guarantee Program - Much Smaller Mobile */}
-      <section className="py-4 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      {/* Professional Placement Guarantee Program - Mobile Optimized */}
+      <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 right-10 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl"></div>
@@ -1273,18 +1330,18 @@ const Index = () => {
           <div className="block md:hidden mb-4">
             <div className="space-y-2">
               <div
-                className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left"
+                className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left"
                 style={{ animationDelay: "0.1s" }}
               >
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center flex-shrink-0">
-                    <Trophy className="h-4 w-4 text-white" />
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Trophy className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xs font-bold text-[#22336a] mb-1">
+                    <h3 className="text-sm font-bold text-[#22336a] mb-2">
                       200+ Placement Opportunities
                     </h3>
-                    <p className="text-[10px] text-gray-600 leading-relaxed">
+                    <p className="text-xs text-gray-600 leading-relaxed">
                       Guaranteed access to extensive placement opportunities
                       across leading companies
                     </p>
@@ -1293,18 +1350,18 @@ const Index = () => {
               </div>
 
               <div
-                className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-right"
+                className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-right"
                 style={{ animationDelay: "0.2s" }}
               >
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center flex-shrink-0">
-                    <TrendingUp className="h-4 w-4 text-white" />
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <TrendingUp className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xs font-bold text-[#22336a] mb-1">
+                    <h3 className="text-sm font-bold text-[#22336a] mb-2">
                       First Year Tuition Fee Back
                     </h3>
-                    <p className="text-[10px] text-gray-600 leading-relaxed">
+                    <p className="text-xs text-gray-600 leading-relaxed">
                       We'll refund your first-year tuition fee if you don't
                       receive promised opportunities
                     </p>
@@ -1313,18 +1370,18 @@ const Index = () => {
               </div>
 
               <div
-                className="bg-white rounded-lg p-3 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left"
+                className="bg-white rounded-xl p-4 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left"
                 style={{ animationDelay: "0.3s" }}
               >
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center flex-shrink-0">
-                    <Users className="h-4 w-4 text-white" />
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Users className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xs font-bold text-[#22336a] mb-1">
+                    <h3 className="text-sm font-bold text-[#22336a] mb-2">
                       Dedicated Career Support
                     </h3>
-                    <p className="text-[10px] text-gray-600 leading-relaxed">
+                    <p className="text-xs text-gray-600 leading-relaxed">
                       Personal mentorship, interview preparation, and continuous
                       guidance
                     </p>
@@ -1382,11 +1439,11 @@ const Index = () => {
       </section>
 
       {/* New Age Education Section - Key Offerings Layout */}
-      <section className="py-6 md:py-16 bg-white relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-6 md:mb-16">
-            <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-2 md:mb-6">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-4 md:mb-6">
               New Age Education That Secures Futures
             </h2>
             <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
