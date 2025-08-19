@@ -110,9 +110,10 @@ const Index = () => {
     );
   };
 
-  // Touch gesture handlers for mobile
+  // Enhanced touch gesture handlers for better mobile experience
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStartX(e.targetTouches[0].clientX);
+    setTouchEndX(e.targetTouches[0].clientX); // Initialize end position
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
@@ -123,8 +124,9 @@ const Index = () => {
     if (!touchStartX || !touchEndX) return;
 
     const distance = touchStartX - touchEndX;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
+    const minSwipeDistance = 30; // Reduced for easier swiping
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
       nextSlide();
@@ -132,6 +134,7 @@ const Index = () => {
       prevSlide();
     }
 
+    // Reset touch positions
     setTouchStartX(0);
     setTouchEndX(0);
   };
