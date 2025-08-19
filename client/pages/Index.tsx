@@ -465,7 +465,7 @@ const Index = () => {
                 <div className="relative bg-white rounded-lg md:rounded-xl p-1.5 sm:p-2 md:p-3 shadow-lg group hover:shadow-xl transition-shadow duration-300">
                   {/* HTML-style Carousel Container */}
                   <div
-                    className="relative rounded-lg md:rounded-xl overflow-hidden cursor-grab active:cursor-grabbing"
+                    className="relative rounded-lg md:rounded-xl overflow-hidden cursor-grab active:cursor-grabbing select-none"
                     style={{ aspectRatio: "4/3" }}
                     onTouchStart={handleTouchStart}
                     onTouchMove={handleTouchMove}
