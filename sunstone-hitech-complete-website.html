@@ -319,68 +319,146 @@
             <h1
               class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold mb-2 sm:mb-4 leading-tight"
             >
-              Power up your career with an MBA, BBA, BCA, MCA & B.Tech at
-              Hi-Tech Institute of Engineering & Technology
+              <span class="text-sunstone-orange bg-clip-text bg-gradient-to-r from-sunstone-orange to-yellow-400">
+                Learning That Leads To Success
+              </span>
             </h1>
-            <p
-              class="text-xs sm:text-sm md:text-base lg:text-lg mb-3 sm:mb-6 text-sunstone-orange font-semibold"
-            >
-              Powered by Sunstone
-            </p>
-            <a
-              href="https://sunstone.in/campuses/hi-tech-institute"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group inline-flex items-center px-3 sm:px-6 py-2 sm:py-3 bg-sunstone-orange hover:bg-sunstone-orange-dark text-white font-bold rounded-lg transition-all duration-500 hover-lift shadow-lg animate-pulse-glow relative overflow-hidden text-xs sm:text-sm"
-            >
-              <span
-                class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
-              ></span>
-              <span class="relative">Know more</span>
-              <i
-                data-lucide="external-link"
-                class="ml-1 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
-              ></i>
-            </a>
+            <div class="text-white/90 font-medium max-w-2xl leading-relaxed mb-2 md:mb-6 pb-1 md:pb-3 text-xs sm:text-sm md:text-base">
+              <p class="text-xs sm:text-sm md:text-base">
+                Join Hi-Tech Institute for industry-aligned programs with
+                assured placement support.
+              </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-2 md:gap-3 lg:gap-4">
+              <a
+                href="https://sunstone.in/campuses/hi-tech-institute"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group inline-flex items-center justify-center px-3 sm:px-6 py-2 sm:py-3 bg-white text-sunstone-blue hover:bg-gray-100 font-bold text-xs sm:text-sm rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto relative overflow-hidden"
+              >
+                <span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                <span class="relative">Explore Programs with Sunstone</span>
+                <i
+                  data-lucide="external-link"
+                  class="ml-1 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
+                ></i>
+              </a>
+              <a
+                href="tel:+917065303030"
+                class="inline-flex items-center justify-center px-3 sm:px-6 py-2 sm:py-3 bg-transparent border border-white text-white font-bold text-xs sm:text-sm rounded-lg hover:bg-white hover:text-sunstone-blue transition-all duration-300 shadow-lg"
+              >
+                <i data-lucide="phone" class="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4"></i>
+                <span>Call Now</span>
+              </a>
+            </div>
           </div>
 
-          <!-- Image Section -->
+          <!-- Enhanced Carousel Section -->
           <div class="lg:col-span-2 order-1 lg:order-2 relative">
-            <div class="relative max-w-xs sm:max-w-sm mx-auto">
+            <div class="relative max-w-xs sm:max-w-sm lg:max-w-md mx-auto">
               <div
-                class="relative overflow-hidden rounded-xl shadow-lg bg-white p-1 sm:p-2 animate-float"
+                class="relative overflow-hidden rounded-xl shadow-lg bg-white p-1 sm:p-2"
               >
-                <div class="relative overflow-hidden rounded-lg">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600"
-                    alt="Hi-Tech Institute Campus"
-                    class="w-full h-auto object-cover aspect-[4/3] transition-transform duration-300 hover:scale-105"
-                    loading="eager"
-                  />
-
-                  <div
-                    class="absolute inset-0 bg-gradient-to-t from-sunstone-blue/20 via-transparent to-transparent"
-                  ></div>
-
-                  <!-- Campus info card -->
-                  <div class="absolute bottom-2 left-2 right-2">
+                <!-- Carousel Container -->
+                <div class="relative carousel-container">
+                  <div class="overflow-hidden rounded-lg">
                     <div
-                      class="bg-white/95 backdrop-blur-sm rounded-lg p-2 shadow-lg"
+                      class="flex transition-transform duration-500 ease-in-out carousel-track"
+                      id="carouselTrack"
                     >
+                      <!-- Slide 1: Campus Video -->
+                      <div class="w-full flex-shrink-0 carousel-slide">
+                        <div class="relative w-full aspect-[4/3] rounded-md overflow-hidden bg-black">
+                          <iframe
+                            src="https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&branding=0&origin=https%3A%2F%2Fhitech.edu"
+                            title="Campus Life Video"
+                            class="absolute inset-0 w-full h-full"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            style="border: none; outline: none; pointer-events: auto; transform: scale(1.05); transform-origin: center;"
+                          ></iframe>
+                          <!-- Video title overlay -->
+                          <div class="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/60 to-transparent p-3 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <h3 class="text-white font-semibold text-sm">Campus Life</h3>
+                            <p class="text-white/80 text-xs">Experience Our Vibrant Community</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide 2: Campus Image 1 -->
+                      <div class="w-full flex-shrink-0 carousel-slide">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600"
+                          alt="Hi-Tech Institute Campus"
+                          class="w-full h-auto object-cover aspect-[4/3] transition-transform duration-300 hover:scale-105"
+                          loading="eager"
+                        />
+                      </div>
+
+                      <!-- Slide 3: Campus Image 2 -->
+                      <div class="w-full flex-shrink-0 carousel-slide">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=800"
+                          alt="Campus Infrastructure"
+                          class="w-full h-auto object-cover aspect-[4/3] transition-transform duration-300 hover:scale-105"
+                          loading="eager"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Navigation Arrows -->
+                  <button
+                    onclick="prevSlide()"
+                    class="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-all duration-200 z-10"
+                  >
+                    <i data-lucide="chevron-left" class="h-4 w-4"></i>
+                  </button>
+                  <button
+                    onclick="nextSlide()"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/50 hover:bg-black/70 rounded-full flex items-center justify-center text-white transition-all duration-200 z-10"
+                  >
+                    <i data-lucide="chevron-right" class="h-4 w-4"></i>
+                  </button>
+
+                  <!-- Dots Indicator -->
+                  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+                    <button
+                      onclick="goToSlide(0)"
+                      class="w-2 h-2 rounded-full transition-all duration-200 carousel-dot active"
+                      data-slide="0"
+                    ></button>
+                    <button
+                      onclick="goToSlide(1)"
+                      class="w-2 h-2 rounded-full transition-all duration-200 carousel-dot"
+                      data-slide="1"
+                    ></button>
+                    <button
+                      onclick="goToSlide(2)"
+                      class="w-2 h-2 rounded-full transition-all duration-200 carousel-dot"
+                      data-slide="2"
+                    ></button>
+                  </div>
+
+                  <!-- Dynamic Caption -->
+                  <div class="absolute bottom-2 left-2 right-2 z-10" id="carouselCaption">
+                    <div class="bg-white/95 backdrop-blur-sm rounded-lg p-2 shadow-lg">
                       <div class="flex items-center space-x-2 mb-1">
                         <div
                           class="w-4 h-4 sm:w-6 sm:h-6 bg-sunstone-orange rounded-full flex items-center justify-center"
                         >
-                          <span class="text-white text-xs font-bold">🏛️</span>
+                          <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full"></div>
                         </div>
                         <p
-                          class="text-sunstone-blue font-bold text-xs sm:text-sm"
+                          class="text-sunstone-blue font-bold text-xs sm:text-sm carousel-title"
+                          id="carouselTitle"
                         >
-                          Hi-Tech Institute Campus
+                          Campus Life
                         </p>
                       </div>
-                      <p class="text-sunstone-gray-600 text-xs">
-                        Modern Infrastructure & Facilities
+                      <p class="text-gray-600 text-xs carousel-subtitle" id="carouselSubtitle">
+                        Experience Our Vibrant Community
                       </p>
                     </div>
                   </div>
