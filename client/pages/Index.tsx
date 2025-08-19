@@ -436,13 +436,16 @@ const Index = () => {
               <div className="relative max-w-xs md:max-w-xl mx-auto">
                 <div className="relative bg-white rounded-lg md:rounded-xl p-2 md:p-2 shadow-lg">
                   {/* HTML-style Carousel Container */}
-                  <div className="relative rounded-lg md:rounded-xl overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                  <div
+                    className="relative rounded-lg md:rounded-xl overflow-hidden"
+                    style={{ aspectRatio: "4/3" }}
+                  >
                     {/* Carousel Slides - Opacity based transitions */}
                     {carouselImages.map((item, index) => (
                       <div
                         key={index}
                         className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${
-                          index === currentSlide ? 'opacity-100' : 'opacity-0'
+                          index === currentSlide ? "opacity-100" : "opacity-0"
                         }`}
                       >
                         {item.type === "video" ? (
@@ -472,8 +475,8 @@ const Index = () => {
                           onClick={() => setCurrentSlide(index)}
                           className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${
                             index === currentSlide
-                              ? 'bg-white'
-                              : 'bg-white/50 hover:bg-white/70'
+                              ? "bg-white"
+                              : "bg-white/50 hover:bg-white/70"
                           }`}
                         />
                       ))}
