@@ -453,9 +453,10 @@ const Index = () => {
               </div>
             </div>
             <div className="col-span-1 animate-slide-in-right order-1 md:order-2">
-              <div className="relative w-full max-w-sm md:max-w-lg lg:max-w-xl mx-auto">
-                <div className="relative bg-white rounded-xl p-2 md:p-3 shadow-2xl group hover:shadow-3xl transition-all duration-300">
-                  {/* HTML-style Carousel Container */}
+              <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
+                {/* Enhanced Media Container matching HTML structure */}
+                <div className="relative bg-white rounded-xl md:rounded-2xl p-2 md:p-3 shadow-2xl group hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+                  {/* HTML-style Carousel Container with enhanced responsiveness */}
                   <div
                     className="relative rounded-lg md:rounded-xl overflow-hidden cursor-grab active:cursor-grabbing select-none"
                     style={{ aspectRatio: "4/3" }}
