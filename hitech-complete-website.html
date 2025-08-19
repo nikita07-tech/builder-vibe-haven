@@ -1044,6 +1044,563 @@
             z-index: 10;
         }
 
+        /* Key Offerings Section */
+        .offerings-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f9fafb, white);
+        }
+
+        .offerings-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .offerings-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: hsl(var(--sunstone-blue));
+            margin-bottom: 1.5rem;
+        }
+
+        .offerings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .offering-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .offering-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .offering-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .offering-icon.blue {
+            background: linear-gradient(135deg, hsl(var(--sunstone-blue)), #3b4d7a);
+        }
+
+        .offering-icon.orange {
+            background: linear-gradient(135deg, hsl(var(--sunstone-orange)), #f4d03f);
+        }
+
+        .offering-card:hover .offering-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Awards Section */
+        .awards-section {
+            padding: 6rem 0;
+            background: hsl(var(--sunstone-blue));
+            color: white;
+        }
+
+        .awards-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .awards-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .award-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .award-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-10px);
+        }
+
+        .award-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, hsl(var(--sunstone-orange)), #f4d03f);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        /* Programs Section */
+        .programs-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .programs-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .programs-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: hsl(var(--sunstone-blue));
+            margin-bottom: 1.5rem;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .program-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, hsl(var(--sunstone-blue)), #3b4d7a);
+            color: white;
+        }
+
+        .program-content {
+            padding: 2rem;
+        }
+
+        .program-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .program-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .program-features li::before {
+            content: "✓";
+            color: hsl(var(--sunstone-orange));
+            font-weight: bold;
+            margin-right: 0.75rem;
+            width: 1rem;
+            text-align: center;
+        }
+
+        /* Recruiters Section */
+        .recruiters-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f9fafb, white);
+        }
+
+        .recruiters-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .recruiters-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: hsl(var(--sunstone-blue));
+            margin-bottom: 1.5rem;
+        }
+
+        .recruiters-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .recruiter-logo {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+
+        .recruiter-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .recruiter-logo img {
+            max-width: 100%;
+            max-height: 60px;
+            object-fit: contain;
+        }
+
+        /* Fee Payment Section */
+        .fee-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .fee-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .fee-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: hsl(var(--sunstone-blue));
+            margin-bottom: 1.5rem;
+        }
+
+        .fee-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .fee-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .fee-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .fee-card.featured {
+            border: 2px solid hsl(var(--sunstone-orange));
+            position: relative;
+        }
+
+        .fee-card.featured::before {
+            content: "Popular";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: hsl(var(--sunstone-orange));
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        /* Admission Process Section */
+        .admission-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f9fafb, white);
+        }
+
+        .admission-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .admission-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: hsl(var(--sunstone-blue));
+            margin-bottom: 1.5rem;
+        }
+
+        .admission-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+        }
+
+        .admission-step {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .admission-step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            width: 3rem;
+            height: 3rem;
+            background: linear-gradient(135deg, hsl(var(--sunstone-orange)), #f4d03f);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        /* Success Stories Section */
+        .stories-section {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .stories-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .stories-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: hsl(var(--sunstone-blue));
+            margin-bottom: 1.5rem;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .story-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .story-author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .story-avatar {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+            object-fit: cover;
+        }
+
+        .story-info h4 {
+            font-weight: 600;
+            color: hsl(var(--sunstone-blue));
+        }
+
+        .story-info p {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+
+        .story-quote {
+            color: #4b5563;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f9fafb, white);
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .faq-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: hsl(var(--sunstone-blue));
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: hsl(var(--sunstone-blue));
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #f9fafb;
+        }
+
+        .faq-answer {
+            padding: 0 2rem 1.5rem;
+            color: #6b7280;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+            animation: fadeInUp 0.3s ease-out;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        .footer {
+            background: hsl(var(--sunstone-blue));
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: hsl(var(--sunstone-orange));
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: hsl(var(--sunstone-orange));
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
         /* Responsive Design */
         @media (min-width: 768px) {
             .container {
