@@ -552,92 +552,90 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Placement Highlights - Much Smaller Mobile Version */}
-      <section className="py-2 md:py-8 lg:py-12 bg-[#22336a]">
-        <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-md md:rounded-xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
-            <div className="bg-[#c38935] text-white px-2 md:px-6 py-1.5 md:py-4">
+      {/* Placement Highlights - Mobile Optimized */}
+      <section className="py-6 md:py-12 bg-[#22336a]">
+        <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+          <div className="bg-white rounded-xl md:rounded-2xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+            <div className="bg-[#c38935] text-white px-4 md:px-6 py-4 md:py-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-xs md:text-lg lg:text-xl font-bold mb-0 md:mb-0">
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2">
                     Placement Highlights
                   </h3>
-                  <p className="text-[10px] md:text-sm opacity-90">
+                  <p className="text-sm md:text-base opacity-90">
                     MBA | MCA | BBA | BCA | B.Tech
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="p-1.5 md:p-4 lg:p-6">
-              {/* Mobile: Smaller stats */}
-              <div className="grid grid-cols-3 sm:grid-cols-3 gap-1.5 md:gap-4 lg:gap-6 mb-1.5 md:mb-6">
+            <div className="p-4 md:p-6 lg:p-8">
+              {/* Stats Grid - Mobile responsive matching HTML */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-6">
                 <div className="text-center">
-                  <div className="text-xs md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#22336a] mb-2">
                     26 LPA
                   </div>
-                  <p className="text-[10px] md:text-sm text-gray-600">
+                  <p className="text-sm md:text-base text-gray-600">
                     Highest Package
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="text-xs md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#22336a] mb-2">
                     1200+
                   </div>
-                  <p className="text-[10px] md:text-sm text-gray-600">
+                  <p className="text-sm md:text-base text-gray-600">
                     Top Recruiters
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="text-xs md:text-2xl lg:text-3xl font-bold text-[#22336a] mb-0.5 md:mb-2">
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#22336a] mb-2">
                     5000+
                   </div>
-                  <p className="text-[10px] md:text-sm text-gray-600">
+                  <p className="text-sm md:text-base text-gray-600">
                     Students Placed
                   </p>
                 </div>
               </div>
 
-              {/* Mobile: Smaller comparison cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 md:gap-3 lg:gap-4 mb-1.5 md:mb-4">
-                <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
-                  <div className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 bg-[#c38935] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xs md:text-sm">
+              {/* Comparison Cards - Mobile responsive matching HTML */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div className="bg-gray-50 rounded-lg p-4 flex items-center space-x-4">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-[#c38935] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm md:text-base">
                       63%
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#22336a] text-[10px] md:text-sm">
+                    <p className="font-semibold text-[#22336a] text-sm md:text-base">
                       63% Higher ROI
                     </p>
-                    <p className="text-[9px] md:text-xs text-gray-600">
+                    <p className="text-xs md:text-sm text-gray-600">
                       vs private colleges
                     </p>
                   </div>
                 </div>
-                <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 lg:p-4 flex items-center space-x-1.5 md:space-x-3">
-                  <div className="w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-[#22336a] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-[10px] md:text-sm">
+                <div className="bg-gray-50 rounded-lg p-4 flex items-center space-x-4">
+                  <div className="w-12 h-12 md:w-14 md:h-14 bg-[#22336a] rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm md:text-base">
                       7X
                     </span>
                   </div>
                   <div>
-                    <p className="font-semibold text-[#22336a] text-[10px] md:text-sm">
+                    <p className="font-semibold text-[#22336a] text-sm md:text-base">
                       7X More Companies
                     </p>
-                    <p className="text-[9px] md:text-xs text-gray-600">
-                      <p>vs top private institutions</p>
+                    <p className="text-xs md:text-sm text-gray-600">
+                      vs top private institutions
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-md md:rounded-lg p-1.5 md:p-3 text-center">
-                <p className="text-[9px] md:text-sm">
-                  <p>
-                    Placement Report Audited &amp; Verified by B2K Analytics,
-                    Official Auditor for IIM Ahemdabad
-                  </p>
+              <div className="bg-gray-50 rounded-lg p-4 text-center">
+                <p className="text-sm text-gray-600">
+                  Placement Report Audited & Verified by B2K Analytics,
+                  Official Auditor for IIM Ahmedabad
                 </p>
               </div>
             </div>
