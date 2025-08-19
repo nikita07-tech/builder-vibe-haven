@@ -86,23 +86,19 @@ const Index = () => {
     },
   ];
 
-  // Auto-advance carousel with dynamic timing
+  // Enhanced auto-advance carousel matching HTML behavior
   useEffect(() => {
-    const getSlideInterval = (slideIndex) => {
-      // Video slide (first slide) plays for 30 seconds, others for 4 seconds
-      return slideIndex === 0 ? 30000 : 4000;
-    };
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 5000); // 5 second intervals like HTML version
 
-    const advanceSlide = () => {
-      setCurrentSlide((prev) => {
-        const nextSlide = (prev + 1) % carouselImages.length;
-        return nextSlide;
-      });
-    };
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
 
-    const interval = setTimeout(advanceSlide, getSlideInterval(currentSlide));
-    return () => clearTimeout(interval);
-  }, [currentSlide, carouselImages.length]);
+  // Direct slide navigation like HTML version
+  const setCarouselSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
@@ -114,9 +110,10 @@ const Index = () => {
     );
   };
 
-  // Touch gesture handlers for mobile
+  // Enhanced touch gesture handlers for better mobile experience
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStartX(e.targetTouches[0].clientX);
+    setTouchEndX(e.targetTouches[0].clientX); // Initialize end position
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
@@ -127,8 +124,9 @@ const Index = () => {
     if (!touchStartX || !touchEndX) return;
 
     const distance = touchStartX - touchEndX;
-    const isLeftSwipe = distance > 50;
-    const isRightSwipe = distance < -50;
+    const minSwipeDistance = 30; // Reduced for easier swiping
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe) {
       nextSlide();
@@ -136,6 +134,7 @@ const Index = () => {
       prevSlide();
     }
 
+    // Reset touch positions
     setTouchStartX(0);
     setTouchEndX(0);
   };
@@ -457,9 +456,10 @@ const Index = () => {
               </div>
             </div>
             <div className="col-span-1 animate-slide-in-right order-1 md:order-2">
-              <div className="relative w-full max-w-sm md:max-w-lg lg:max-w-xl mx-auto">
-                <div className="relative bg-white rounded-xl p-2 md:p-3 shadow-2xl group hover:shadow-3xl transition-all duration-300">
-                  {/* HTML-style Carousel Container */}
+              <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
+                {/* Enhanced Media Container matching HTML structure */}
+                <div className="relative bg-white rounded-xl md:rounded-2xl p-2 md:p-3 shadow-2xl group hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+                  {/* HTML-style Carousel Container with enhanced responsiveness */}
                   <div
                     className="relative rounded-lg md:rounded-xl overflow-hidden cursor-grab active:cursor-grabbing select-none"
                     style={{ aspectRatio: "4/3" }}
@@ -494,31 +494,31 @@ const Index = () => {
                       </div>
                     ))}
 
-                    {/* Navigation Arrows - Desktop */}
+                    {/* Enhanced Navigation Arrows - Better responsive design */}
                     <button
                       onClick={prevSlide}
-                      className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+                      className="hidden sm:flex absolute left-1.5 md:left-2 top-1/2 -translate-y-1/2 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-20 border border-white/20 hover:scale-110"
                       aria-label="Previous slide"
                     >
-                      <ChevronLeft className="w-4 h-4" />
+                      <ChevronLeft className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
                     </button>
                     <button
                       onClick={nextSlide}
-                      className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+                      className="hidden sm:flex absolute right-1.5 md:right-2 top-1/2 -translate-y-1/2 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-20 border border-white/20 hover:scale-110"
                       aria-label="Next slide"
                     >
-                      <ChevronRight className="w-4 h-4" />
+                      <ChevronRight className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
                     </button>
 
-                    {/* HTML-style Carousel Dots */}
-                    <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+                    {/* Enhanced HTML-style Carousel Dots with better mobile responsiveness */}
+                    <div className="absolute bottom-2 md:bottom-3 left-1/2 transform -translate-x-1/2 flex gap-1.5 md:gap-2 z-10 px-3 py-1.5 bg-black/20 backdrop-blur-sm rounded-full">
                       {carouselImages.map((_, index) => (
                         <button
                           key={index}
-                          onClick={() => setCurrentSlide(index)}
-                          className={`w-2 h-2 md:w-3 md:h-3 rounded-full cursor-pointer transition-all duration-300 ${
+                          onClick={() => setCarouselSlide(index)}
+                          className={`w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rounded-full cursor-pointer transition-all duration-300 ${
                             index === currentSlide
-                              ? "bg-white shadow-lg scale-125"
+                              ? "bg-white shadow-lg scale-125 ring-2 ring-white/30"
                               : "bg-white/50 hover:bg-white/70 hover:scale-110"
                           }`}
                           aria-label={`Go to slide ${index + 1}`}
@@ -526,17 +526,20 @@ const Index = () => {
                       ))}
                     </div>
 
-                    {/* Mobile Swipe Indicator */}
-                    <div className="md:hidden absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full px-2 py-1 text-white text-xs opacity-60 animate-pulse">
-                      👆 Swipe
+                    {/* Enhanced Mobile Swipe Indicator */}
+                    <div className="sm:hidden absolute top-2 right-2 bg-black/40 backdrop-blur-sm rounded-full px-2.5 py-1 text-white text-xs opacity-70 animate-pulse border border-white/20">
+                      <span className="flex items-center gap-1">
+                        <span>👆</span>
+                        <span className="text-[10px]">Swipe</span>
+                      </span>
                     </div>
 
-                    {/* Slide Content Indicator */}
-                    <div className="absolute bottom-8 left-3 right-3 bg-gradient-to-t from-black/50 to-transparent rounded-lg p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <h4 className="text-white text-xs md:text-sm font-semibold truncate">
+                    {/* Enhanced Slide Content Indicator */}
+                    <div className="absolute bottom-8 md:bottom-10 left-2 right-2 md:left-3 md:right-3 bg-gradient-to-t from-black/60 via-black/30 to-transparent rounded-lg p-2 md:p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h4 className="text-white text-xs md:text-sm font-semibold truncate mb-1">
                         {carouselImages[currentSlide]?.title}
                       </h4>
-                      <p className="text-white/80 text-xs truncate">
+                      <p className="text-white/80 text-[10px] md:text-xs truncate">
                         {carouselImages[currentSlide]?.subtitle}
                       </p>
                     </div>
