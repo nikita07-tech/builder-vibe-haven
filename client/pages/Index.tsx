@@ -391,7 +391,7 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Banner with Carousel - Mobile Optimized */}
+      {/* Hero Banner with HTML-style Carousel */}
       <section className="bg-[#22336a] text-white py-4 md:py-16 lg:py-20 relative overflow-hidden">
         {/* Professional Background Elements */}
         <div className="absolute inset-0">
@@ -434,160 +434,52 @@ const Index = () => {
             </div>
             <div className="col-span-1 md:col-span-1 lg:col-span-2 animate-slide-in-right">
               <div className="relative max-w-xs md:max-w-xl mx-auto">
-                <div className="relative overflow-hidden rounded-lg md:rounded-xl shadow-lg bg-white p-1 md:p-2">
-                  {/* Carousel Container */}
-                  <div className="relative">
-                    <div className="overflow-hidden rounded-md md:rounded-lg">
+                <div className="relative bg-white rounded-lg md:rounded-xl p-2 md:p-2 shadow-lg">
+                  {/* HTML-style Carousel Container */}
+                  <div
+                    className="relative rounded-lg md:rounded-xl overflow-hidden"
+                    style={{ aspectRatio: "4/3" }}
+                  >
+                    {/* Carousel Slides - Opacity based transitions */}
+                    {carouselImages.map((item, index) => (
                       <div
-                        className="flex transition-transform duration-500 ease-in-out"
-                        style={{
-                          transform: `translateX(-${currentSlide * 100}%)`,
-                        }}
+                        key={index}
+                        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${
+                          index === currentSlide ? "opacity-100" : "opacity-0"
+                        }`}
                       >
-                        {carouselImages.map((item, index) => (
-                          <div key={index} className="w-full flex-shrink-0">
-                            {item.type === "video" ? (
-                              <div className="relative w-full aspect-[4/3] rounded-md overflow-hidden bg-black">
-                                <iframe
-                                  key={`video-${videoMuted}`}
-                                  src={
-                                    videoMuted
-                                      ? item.src
-                                      : item.src.replace("mute=1", "mute=0")
-                                  }
-                                  title={item.alt}
-                                  className="absolute inset-0 w-full h-full"
-                                  frameBorder="0"
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                  allowFullScreen
-                                  style={{
-                                    border: "none",
-                                    outline: "none",
-                                    pointerEvents: "auto",
-                                    transform: "scale(1.05)",
-                                    transformOrigin: "center",
-                                  }}
-                                />
-                                {/* Custom video overlay to show sound control */}
-                                <div
-                                  className="absolute inset-0 bg-transparent cursor-pointer z-5 flex items-center justify-center group pointer-events-none"
-                                  onClick={() => setVideoMuted(!videoMuted)}
-                                >
-                                  {/* Video title overlay */}
-                                  <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/60 to-transparent p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <h3 className="text-white font-semibold text-sm">
-                                      {item.title}
-                                    </h3>
-                                    <p className="text-white/80 text-xs">
-                                      {item.subtitle}
-                                    </p>
-                                  </div>
-                                  {/* Sound control indicator */}
-                                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                                      {videoMuted ? (
-                                        <svg
-                                          className="w-8 h-8 text-white"
-                                          fill="currentColor"
-                                          viewBox="0 0 24 24"
-                                        >
-                                          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                                          <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
-                                          <line
-                                            x1="23"
-                                            y1="9"
-                                            x2="17"
-                                            y2="15"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                          />
-                                          <line
-                                            x1="17"
-                                            y1="9"
-                                            x2="23"
-                                            y2="15"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                          />
-                                        </svg>
-                                      ) : (
-                                        <svg
-                                          className="w-8 h-8 text-white"
-                                          fill="currentColor"
-                                          viewBox="0 0 24 24"
-                                        >
-                                          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
-                                        </svg>
-                                      )}
-                                    </div>
-                                  </div>
-                                </div>
-                                {/* Enhanced overlays to completely hide YouTube branding */}
-                                <div className="absolute inset-0 pointer-events-none">
-                                  {/* Top overlay to hide YouTube logo area */}
-                                  <div className="absolute top-0 right-0 w-24 h-10 bg-black opacity-90"></div>
-                                  {/* Bottom overlay to hide controls area */}
-                                  <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/40 to-transparent"></div>
-                                  {/* Corner overlays */}
-                                  <div className="absolute top-0 left-0 w-20 h-8 bg-gradient-to-r from-black/20 to-transparent"></div>
-                                  <div className="absolute bottom-0 right-0 w-20 h-8 bg-gradient-to-l from-black/20 to-transparent"></div>
-                                </div>
-                              </div>
-                            ) : (
-                              <img
-                                src={item.src}
-                                alt={item.alt}
-                                className="w-full h-auto object-cover aspect-[4/3]"
-                                loading="eager"
-                              />
-                            )}
-                          </div>
-                        ))}
+                        {item.type === "video" ? (
+                          <iframe
+                            src={item.src}
+                            title={item.alt}
+                            className="w-full h-full border-0"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        ) : (
+                          <img
+                            src={item.src}
+                            alt={item.alt}
+                            className="w-full h-full object-cover"
+                          />
+                        )}
                       </div>
-                    </div>
+                    ))}
 
-                    {/* Navigation Arrows - Hidden on small mobile */}
-                    <button
-                      onClick={prevSlide}
-                      className="hidden sm:flex absolute left-1 md:left-2 top-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 bg-black/50 hover:bg-black/70 rounded-full items-center justify-center text-white transition-all duration-200"
-                    >
-                      <ChevronLeft className="h-3 w-3 md:h-4 md:w-4" />
-                    </button>
-                    <button
-                      onClick={nextSlide}
-                      className="hidden sm:flex absolute right-1 md:right-2 top-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8 bg-black/50 hover:bg-black/70 rounded-full items-center justify-center text-white transition-all duration-200"
-                    >
-                      <ChevronRight className="h-3 w-3 md:h-4 md:w-4" />
-                    </button>
-
-                    {/* Dots Indicator */}
-                    <div className="absolute bottom-1 md:bottom-3 left-1/2 -translate-x-1/2 flex space-x-1 md:space-x-2">
+                    {/* HTML-style Carousel Dots */}
+                    <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2">
                       {carouselImages.map((_, index) => (
                         <button
                           key={index}
                           onClick={() => setCurrentSlide(index)}
-                          className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-200 ${
-                            index === currentSlide ? "bg-white" : "bg-white/50"
+                          className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${
+                            index === currentSlide
+                              ? "bg-white"
+                              : "bg-white/50 hover:bg-white/70"
                           }`}
                         />
                       ))}
-                    </div>
-                  </div>
-
-                  {/* Caption - Hidden on small mobile */}
-                  <div className="hidden md:block absolute bottom-2 md:bottom-4 left-2 md:left-4 right-2 md:right-4">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-2 md:p-4 shadow-lg">
-                      <div className="flex items-center space-x-2 mb-1 md:mb-2">
-                        <div className="w-4 h-4 md:w-6 md:h-6 bg-[#c38935] rounded-full flex items-center justify-center">
-                          <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full"></div>
-                        </div>
-                        <p className="text-[#22336a] font-bold text-xs md:text-sm">
-                          {carouselImages[currentSlide].title}
-                        </p>
-                      </div>
-                      <p className="text-gray-600 text-xs">
-                        {carouselImages[currentSlide].subtitle}
-                      </p>
                     </div>
                   </div>
                 </div>
