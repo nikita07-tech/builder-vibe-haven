@@ -523,17 +523,20 @@ const Index = () => {
                       ))}
                     </div>
 
-                    {/* Mobile Swipe Indicator */}
-                    <div className="md:hidden absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full px-2 py-1 text-white text-xs opacity-60 animate-pulse">
-                      👆 Swipe
+                    {/* Enhanced Mobile Swipe Indicator */}
+                    <div className="sm:hidden absolute top-2 right-2 bg-black/40 backdrop-blur-sm rounded-full px-2.5 py-1 text-white text-xs opacity-70 animate-pulse border border-white/20">
+                      <span className="flex items-center gap-1">
+                        <span>👆</span>
+                        <span className="text-[10px]">Swipe</span>
+                      </span>
                     </div>
 
-                    {/* Slide Content Indicator */}
-                    <div className="absolute bottom-8 left-3 right-3 bg-gradient-to-t from-black/50 to-transparent rounded-lg p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <h4 className="text-white text-xs md:text-sm font-semibold truncate">
+                    {/* Enhanced Slide Content Indicator */}
+                    <div className="absolute bottom-8 md:bottom-10 left-2 right-2 md:left-3 md:right-3 bg-gradient-to-t from-black/60 via-black/30 to-transparent rounded-lg p-2 md:p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h4 className="text-white text-xs md:text-sm font-semibold truncate mb-1">
                         {carouselImages[currentSlide]?.title}
                       </h4>
-                      <p className="text-white/80 text-xs truncate">
+                      <p className="text-white/80 text-[10px] md:text-xs truncate">
                         {carouselImages[currentSlide]?.subtitle}
                       </p>
                     </div>
@@ -1483,7 +1486,7 @@ const Index = () => {
                 >
                   <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
-                      <span className="text-white text-lg">👨‍💼</span>
+                      <span className="text-white text-lg">👨‍����</span>
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Corporate Leaders Turned Educators
