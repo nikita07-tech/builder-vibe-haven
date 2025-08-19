@@ -86,23 +86,14 @@ const Index = () => {
     },
   ];
 
-  // Auto-advance carousel with dynamic timing
+  // Enhanced auto-advance carousel matching HTML behavior
   useEffect(() => {
-    const getSlideInterval = (slideIndex) => {
-      // Video slide (first slide) plays for 30 seconds, others for 4 seconds
-      return slideIndex === 0 ? 30000 : 4000;
-    };
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 5000); // 5 second intervals like HTML version
 
-    const advanceSlide = () => {
-      setCurrentSlide((prev) => {
-        const nextSlide = (prev + 1) % carouselImages.length;
-        return nextSlide;
-      });
-    };
-
-    const interval = setTimeout(advanceSlide, getSlideInterval(currentSlide));
-    return () => clearTimeout(interval);
-  }, [currentSlide, carouselImages.length]);
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
