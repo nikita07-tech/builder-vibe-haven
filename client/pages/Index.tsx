@@ -507,15 +507,15 @@ const Index = () => {
                       <ChevronRight className="w-4 h-4" />
                     </button>
 
-                    {/* HTML-style Carousel Dots */}
-                    <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+                    {/* Enhanced HTML-style Carousel Dots with better mobile responsiveness */}
+                    <div className="absolute bottom-2 md:bottom-3 left-1/2 transform -translate-x-1/2 flex gap-1.5 md:gap-2 z-10 px-3 py-1.5 bg-black/20 backdrop-blur-sm rounded-full">
                       {carouselImages.map((_, index) => (
                         <button
                           key={index}
-                          onClick={() => setCurrentSlide(index)}
-                          className={`w-2 h-2 md:w-3 md:h-3 rounded-full cursor-pointer transition-all duration-300 ${
+                          onClick={() => setCarouselSlide(index)}
+                          className={`w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rounded-full cursor-pointer transition-all duration-300 ${
                             index === currentSlide
-                              ? "bg-white shadow-lg scale-125"
+                              ? "bg-white shadow-lg scale-125 ring-2 ring-white/30"
                               : "bg-white/50 hover:bg-white/70 hover:scale-110"
                           }`}
                           aria-label={`Go to slide ${index + 1}`}
