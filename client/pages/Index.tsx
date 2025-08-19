@@ -531,8 +531,18 @@ const Index = () => {
                     </div>
 
                     {/* Mobile Swipe Indicator */}
-                    <div className="md:hidden absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full px-2 py-1 text-white text-xs opacity-60">
+                    <div className="md:hidden absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full px-2 py-1 text-white text-xs opacity-60 animate-pulse">
                       👆 Swipe
+                    </div>
+
+                    {/* Slide Content Indicator */}
+                    <div className="absolute bottom-8 left-3 right-3 bg-gradient-to-t from-black/50 to-transparent rounded-lg p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h4 className="text-white text-xs md:text-sm font-semibold truncate">
+                        {carouselImages[currentSlide]?.title}
+                      </h4>
+                      <p className="text-white/80 text-xs truncate">
+                        {carouselImages[currentSlide]?.subtitle}
+                      </p>
                     </div>
                   </div>
                 </div>
