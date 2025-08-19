@@ -491,20 +491,20 @@ const Index = () => {
                       </div>
                     ))}
 
-                    {/* Navigation Arrows - Desktop */}
+                    {/* Enhanced Navigation Arrows - Better responsive design */}
                     <button
                       onClick={prevSlide}
-                      className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+                      className="hidden sm:flex absolute left-1.5 md:left-2 top-1/2 -translate-y-1/2 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-20 border border-white/20 hover:scale-110"
                       aria-label="Previous slide"
                     >
-                      <ChevronLeft className="w-4 h-4" />
+                      <ChevronLeft className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
                     </button>
                     <button
                       onClick={nextSlide}
-                      className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+                      className="hidden sm:flex absolute right-1.5 md:right-2 top-1/2 -translate-y-1/2 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-20 border border-white/20 hover:scale-110"
                       aria-label="Next slide"
                     >
-                      <ChevronRight className="w-4 h-4" />
+                      <ChevronRight className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" />
                     </button>
 
                     {/* Enhanced HTML-style Carousel Dots with better mobile responsiveness */}
@@ -1486,7 +1486,7 @@ const Index = () => {
                 >
                   <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
-                      <span className="text-white text-lg">👨‍����</span>
+                      <span className="text-white text-lg">👨‍💼</span>
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Corporate Leaders Turned Educators
