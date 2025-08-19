@@ -322,23 +322,23 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Enhanced Apply Now Button - Mobile Responsive */}
-      <div className="fixed right-3 md:right-6 bottom-3 md:bottom-6 z-50 animate-bounce-subtle">
+      <div className="fixed right-4 md:right-6 bottom-4 md:bottom-6 z-50 animate-bounce-subtle">
         <div className="relative group">
           {/* Animated Background Ring */}
-          <div className="absolute inset-0 w-full h-full bg-[#c38935] rounded-lg md:rounded-xl animate-pulse opacity-30 group-hover:animate-ping"></div>
+          <div className="absolute inset-0 w-full h-full bg-[#c38935] rounded-xl animate-pulse opacity-30 group-hover:animate-ping"></div>
 
           {/* Main Button */}
           <a
             href="https://sunstone.in/apply-now"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex items-center justify-center w-auto px-3 md:px-6 py-2 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-md md:rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
+            className="relative flex items-center justify-center w-auto px-4 md:px-6 py-3 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse"
           >
             {/* Button Content */}
-            <div className="flex items-center space-x-1 md:space-x-3">
-              <div className="w-4 h-4 md:w-8 md:h-8 bg-white/20 rounded-sm md:rounded-lg flex items-center justify-center">
+            <div className="flex items-center space-x-2 md:space-x-3">
+              <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-lg flex items-center justify-center">
                 <svg
-                  className="w-2 h-2 md:w-5 md:h-5 text-white"
+                  className="w-3 h-3 md:w-5 md:h-5 text-white"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -346,7 +346,7 @@ const Index = () => {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="text-xs md:text-sm font-bold">Apply Now</div>
+                <div className="text-sm font-bold">Apply Now</div>
                 <div className="text-xs opacity-90 hidden md:block">
                   Sunstone Portal
                 </div>
@@ -358,7 +358,7 @@ const Index = () => {
           </a>
 
           {/* Enhanced Tooltip - Hidden on mobile */}
-          <div className="hidden md:block absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
+          <div className="hidden lg:block absolute right-full mr-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-2 group-hover:translate-x-0">
             <div className="bg-[#22336a] text-white px-4 py-3 rounded-xl shadow-xl whitespace-nowrap relative">
               <div className="text-sm font-bold">Start Your Journey</div>
               <div className="text-xs opacity-80">
@@ -370,47 +370,47 @@ const Index = () => {
           </div>
 
           {/* Notification Badge */}
-          <div className="absolute -top-0.5 -right-0.5 md:-top-2 md:-right-2 w-3 h-3 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
-            <span className="text-white text-[8px] md:text-xs font-bold">
+          <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-5 h-5 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
+            <span className="text-white text-xs font-bold">
               !
             </span>
           </div>
         </div>
       </div>
 
-      {/* Professional Header - Extra Small Mobile */}
+      {/* Professional Header - Mobile Optimized */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 animate-slide-down hover:shadow-lg">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-8 sm:h-16 md:h-18 lg:h-20">
-            <div className="flex items-center space-x-1 sm:space-x-4 md:space-x-6 lg:space-x-8">
-              <div className="flex items-center space-x-1 sm:space-x-3 md:space-x-4 group animate-fade-in hover:animate-wiggle">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 md:h-18 lg:h-20">
+            <div className="flex items-center space-x-4 md:space-x-6 lg:space-x-8">
+              <div className="flex items-center space-x-3 md:space-x-4 group animate-fade-in hover:animate-wiggle">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
                   alt="Hi-Tech Institute"
-                  className="h-3 sm:h-6 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                  className="h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
                 />
-                <div className="h-3 sm:h-6 md:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
+                <div className="h-6 md:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
                   alt="Sunstone"
-                  className="h-3 sm:h-6 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
+                  className="h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2"
                 />
               </div>
             </div>
-            <div className="flex items-center space-x-1 sm:space-x-3 md:space-x-4">
+            <div className="flex items-center space-x-3 md:space-x-4">
               <a
                 href="mailto:connect@sunstone.in"
-                className="hidden md:flex items-center space-x-2 text-[#22336a] hover:text-[#c38935] transition-all duration-300 font-medium px-2 md:px-3 py-1.5 md:py-2 rounded-lg hover:bg-gray-50"
+                className="hidden md:flex items-center space-x-2 text-[#22336a] hover:text-[#c38935] transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-gray-50"
               >
-                <Mail className="h-3 w-3 md:h-4 md:w-4" />
-                <span className="text-xs md:text-sm">connect@sunstone.in</span>
+                <Mail className="h-4 w-4" />
+                <span className="text-sm">connect@sunstone.in</span>
               </a>
               <a
                 href="tel:+917065303030"
-                className="flex items-center space-x-1 sm:space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-1 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-2.5 rounded-sm md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
+                className="flex items-center space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-3 md:px-4 py-2 md:py-2.5 rounded-lg md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
               >
-                <Phone className="h-2 w-2 sm:h-3 sm:w-3" />
-                <span className="text-[10px] sm:text-sm">
+                <Phone className="h-3 w-3 md:h-4 md:w-4" />
+                <span className="text-sm">
                   +91 7065-30-30-30
                 </span>
               </a>
@@ -1576,7 +1576,7 @@ const Index = () => {
                 <div className="flex-shrink-0 w-64 h-40 group relative cursor-pointer">
                   <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-xl p-4 shadow-lg border border-orange-200/50 hover:shadow-2xl transition-all duration-700 hover:-translate-y-2 hover:scale-105">
                     <div className="w-10 h-10 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500 shadow-lg">
-                      <span className="text-white text-lg">��‍💼</span>
+                      <span className="text-white text-lg">👨‍💼</span>
                     </div>
                     <h3 className="text-base font-bold text-[#22336a] mb-2 group-hover:text-[#c38935] transition-colors duration-300">
                       Corporate Leaders Turned Educators
