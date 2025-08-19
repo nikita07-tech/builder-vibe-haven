@@ -2827,6 +2827,25 @@
             });
         }, observerOptions);
 
+        // FAQ Toggle Functionality
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const faqAnswer = faqItem.querySelector('.faq-answer');
+            const faqIcon = button.querySelector('.faq-icon');
+
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').classList.remove('active');
+                }
+            });
+
+            // Toggle current FAQ item
+            faqItem.classList.toggle('active');
+            faqAnswer.classList.toggle('active');
+        }
+
         // Observe all animated elements
         document.querySelectorAll('.animate-fade-in, .animate-slide-left, .animate-slide-right, .animate-scale').forEach(el => {
             el.style.opacity = '0';
