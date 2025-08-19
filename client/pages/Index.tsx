@@ -1443,11 +1443,11 @@ const Index = () => {
       </section>
 
       {/* New Age Education Section - Key Offerings Layout */}
-      <section className="py-6 md:py-16 bg-white relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#22336a]/5 via-transparent to-[#c38935]/5"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-6 md:mb-16">
-            <h2 className="text-lg sm:text-xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-2 md:mb-6">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#22336a] mb-4 md:mb-6">
               New Age Education That Secures Futures
             </h2>
             <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
