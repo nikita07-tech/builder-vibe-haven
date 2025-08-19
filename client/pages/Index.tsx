@@ -1304,8 +1304,8 @@ const Index = () => {
         </div>
       )}
 
-      {/* Professional Placement Guarantee Program - Much Smaller Mobile */}
-      <section className="py-4 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      {/* Professional Placement Guarantee Program - Mobile Optimized */}
+      <section className="py-12 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-10 right-10 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl"></div>
