@@ -371,9 +371,7 @@ const Index = () => {
 
           {/* Notification Badge */}
           <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-5 h-5 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
-            <span className="text-white text-xs font-bold">
-              !
-            </span>
+            <span className="text-white text-xs font-bold">!</span>
           </div>
         </div>
       </div>
@@ -410,9 +408,7 @@ const Index = () => {
                 className="flex items-center space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-3 md:px-4 py-2 md:py-2.5 rounded-lg md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse"
               >
                 <Phone className="h-3 w-3 md:h-4 md:w-4" />
-                <span className="text-sm">
-                  +91 7065-30-30-30
-                </span>
+                <span className="text-sm">+91 7065-30-30-30</span>
               </a>
             </div>
           </div>
@@ -634,8 +630,8 @@ const Index = () => {
 
               <div className="bg-gray-50 rounded-lg p-4 text-center">
                 <p className="text-sm text-gray-600">
-                  Placement Report Audited & Verified by B2K Analytics,
-                  Official Auditor for IIM Ahmedabad
+                  Placement Report Audited & Verified by B2K Analytics, Official
+                  Auditor for IIM Ahmedabad
                 </p>
               </div>
             </div>
