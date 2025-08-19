@@ -58,6 +58,8 @@ const Index = () => {
   }>({});
   const [showScholarshipPopup, setShowScholarshipPopup] = useState(false);
   const [videoMuted, setVideoMuted] = useState(true);
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
 
   // Carousel images
   const carouselImages = [
@@ -110,6 +112,32 @@ const Index = () => {
     setCurrentSlide(
       (prev) => (prev - 1 + carouselImages.length) % carouselImages.length,
     );
+  };
+
+  // Touch gesture handlers for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+
+    const distance = touchStartX - touchEndX;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+
+    setTouchStartX(0);
+    setTouchEndX(0);
   };
 
   const handleRecruiterClick = (recruiterName: string) => {
@@ -434,11 +462,14 @@ const Index = () => {
             </div>
             <div className="col-span-1 md:col-span-1 lg:col-span-2 animate-slide-in-right">
               <div className="relative max-w-xs md:max-w-xl mx-auto">
-                <div className="relative bg-white rounded-lg md:rounded-xl p-2 md:p-2 shadow-lg">
+                <div className="relative bg-white rounded-lg md:rounded-xl p-2 md:p-2 shadow-lg group">
                   {/* HTML-style Carousel Container */}
                   <div
-                    className="relative rounded-lg md:rounded-xl overflow-hidden"
+                    className="relative rounded-lg md:rounded-xl overflow-hidden cursor-grab active:cursor-grabbing"
                     style={{ aspectRatio: "4/3" }}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
                   >
                     {/* Carousel Slides - Opacity based transitions */}
                     {carouselImages.map((item, index) => (
@@ -467,19 +498,41 @@ const Index = () => {
                       </div>
                     ))}
 
+                    {/* Navigation Arrows - Desktop */}
+                    <button
+                      onClick={prevSlide}
+                      className="hidden md:flex absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+                      aria-label="Previous slide"
+                    >
+                      <ChevronLeft className="w-4 h-4" />
+                    </button>
+                    <button
+                      onClick={nextSlide}
+                      className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/30 hover:bg-black/50 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+                      aria-label="Next slide"
+                    >
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+
                     {/* HTML-style Carousel Dots */}
-                    <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2">
+                    <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
                       {carouselImages.map((_, index) => (
                         <button
                           key={index}
                           onClick={() => setCurrentSlide(index)}
-                          className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${
+                          className={`w-2 h-2 md:w-3 md:h-3 rounded-full cursor-pointer transition-all duration-300 ${
                             index === currentSlide
-                              ? "bg-white"
-                              : "bg-white/50 hover:bg-white/70"
+                              ? "bg-white shadow-lg scale-125"
+                              : "bg-white/50 hover:bg-white/70 hover:scale-110"
                           }`}
+                          aria-label={`Go to slide ${index + 1}`}
                         />
                       ))}
+                    </div>
+
+                    {/* Mobile Swipe Indicator */}
+                    <div className="md:hidden absolute top-2 right-2 bg-black/30 backdrop-blur-sm rounded-full px-2 py-1 text-white text-xs opacity-60">
+                      👆 Swipe
                     </div>
                   </div>
                 </div>
