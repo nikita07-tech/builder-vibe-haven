@@ -95,6 +95,11 @@ const Index = () => {
     return () => clearInterval(interval);
   }, [carouselImages.length]);
 
+  // Direct slide navigation like HTML version
+  const setCarouselSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
   };
