@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi-Tech Institute - Learning That Leads To Success</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://fast.wistia.com/embed/medias/g4et8b6dnb.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    <style>
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 220 50% 20%;
+            --card: 0 0% 100%;
+            --card-foreground: 220 50% 20%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 220 50% 20%;
+            --primary: 220 50% 30%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 210 40% 96.1%;
+            --secondary-foreground: 220 50% 30%;
+            --muted: 210 40% 96.1%;
+            --muted-foreground: 220 20% 50%;
+            --accent: 40 65% 50%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 210 40% 98%;
+            --border: 214.3 31.8% 91.4%;
+            --input: 214.3 31.8% 91.4%;
+            --ring: 222.2 84% 4.9%;
+            --radius: 0.5rem;
+            --sunstone-orange: 40 65% 50%;
+            --sunstone-orange-light: 40 65% 60%;
+            --sunstone-orange-dark: 40 65% 40%;
+            --sunstone-blue: 220 50% 30%;
+            --sunstone-blue-light: 220 50% 40%;
+            --sunstone-blue-dark: 220 50% 20%;
+            --sunstone-gray-50: 210 20% 98%;
+            --sunstone-gray-100: 210 20% 95%;
+            --sunstone-gray-200: 210 16% 90%;
+            --sunstone-gray-300: 210 14% 83%;
+            --sunstone-gray-400: 210 11% 71%;
+            --sunstone-gray-500: 210 10% 57%;
+            --sunstone-gray-600: 210 12% 47%;
+            --sunstone-gray-700: 210 15% 38%;
+            --sunstone-gray-800: 210 18% 30%;
+            --sunstone-gray-900: 210 22% 22%;
+        }
+
+        body {
+            font-family: "Public Sans", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes bounceSubtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(195, 137, 53, 0.3); transform: scale(1); }
+            50% { box-shadow: 0 0 30px rgba(195, 137, 53, 0.6); transform: scale(1.02); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes scrollRightToLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @keyframes scrollLeftToRight {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.3) translateY(-2000px); }
+            60% { opacity: 1; transform: scale(1.1) translateY(30px); }
+            80% { transform: scale(0.9) translateY(-10px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes gradientText {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(195, 137, 53, 0.4); transform: scale(1); }
+            50% { box-shadow: 0 0 40px rgba(195, 137, 53, 0.8), 0 0 60px rgba(34, 51, 106, 0.4); transform: scale(1.02); }
+        }
+
+        .animate-fade-in { animation: fadeIn 0.6s ease-out; }
+        .animate-slide-up { animation: slideUp 0.8s ease-out; }
+        .animate-scale-in { animation: scaleIn 0.5s ease-out; }
+        .animate-bounce-subtle { animation: bounceSubtle 2s ease-in-out infinite; }
+        .animate-pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-slide-in-left { animation: slideInLeft 0.8s ease-out; }
+        .animate-slide-in-right { animation: slideInRight 0.8s ease-out; }
+        .animate-bounce-in { animation: bounceIn 0.8s ease-out; }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out; }
+        .animate-glow-pulse { animation: glowPulse 2s ease-in-out infinite; }
+        .animate-scroll-right-to-left { animation: scrollRightToLeft 30s linear infinite; }
+        .animate-scroll-left-to-right { animation: scrollLeftToRight 25s linear infinite; }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, hsl(var(--sunstone-orange)), hsl(var(--sunstone-blue)));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #c38935; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #b37829; }
+
+        /* Mobile responsive utilities */
+        .mobile-hidden { display: block; }
+        @media (max-width: 768px) {
+            .mobile-hidden { display: none; }
+            .mobile-only { display: block !important; }
+        }
+        .mobile-only { display: none; }
+
+        /* Carousel styles */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        /* Program tabs */
+        .program-tab {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .program-tab.active {
+            background: linear-gradient(to right, #22336a, #3b4d7a);
+            color: white;
+        }
+
+        /* FAQ collapsible */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.open {
+            max-height: 500px;
+        }
+
+        /* Popup styles */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+        }
+
+        .popup-overlay.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .popup-content {
+            background: white;
+            border-radius: 16px;
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: scaleIn 0.3s ease-out;
+        }
+
+        /* Icon styles */
+        .icon {
+            width: 1em;
+            height: 1em;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Enhanced Apply Now Button - Mobile Responsive -->
+    <div class="fixed right-4 md:right-6 bottom-4 md:bottom-6 z-50 animate-bounce-subtle">
+        <div class="relative group">
+            <div class="absolute inset-0 w-full h-full bg-[#c38935] rounded-xl animate-pulse opacity-30 group-hover:animate-ping"></div>
+            <a href="https://sunstone.in/apply-now" target="_blank" rel="noopener noreferrer"
+               class="relative flex items-center justify-center w-auto px-4 md:px-6 py-3 md:py-4 bg-gradient-to-r from-[#c38935] to-[#f4d03f] hover:from-[#f4d03f] hover:to-[#c38935] text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-125 hover:-translate-y-2 hover:rotate-3 border-2 border-white/20 animate-glow-pulse">
+                <div class="flex items-center space-x-2 md:space-x-3">
+                    <div class="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                        <svg class="w-3 h-3 md:w-5 md:h-5 text-white icon" viewBox="0 0 24 24">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm font-bold">Apply Now</div>
+                        <div class="text-xs opacity-90 hidden md:block">Sunstone Portal</div>
+                    </div>
+                </div>
+                <div class="absolute inset-0 rounded-lg md:rounded-xl bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            </a>
+            <div class="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-5 h-5 md:w-6 md:h-6 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
+                <span class="text-white text-xs font-bold">!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Professional Header - Mobile Optimized -->
+    <header class="bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200 sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-18 lg:h-20">
+                <div class="flex items-center space-x-4 md:space-x-6 lg:space-x-8">
+                    <div class="flex items-center space-x-3 md:space-x-4 group animate-fade-in">
+                        <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
+                             alt="Hi-Tech Institute" class="h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                        <div class="h-6 md:h-8 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent animate-pulse"></div>
+                        <img src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
+                             alt="Sunstone" class="h-5 md:h-6 w-auto transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2">
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 md:space-x-4">
+                    <a href="mailto:connect@sunstone.in" class="hidden md:flex items-center space-x-2 text-[#22336a] hover:text-[#c38935] transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-gray-50">
+                        <svg class="h-4 w-4 icon" viewBox="0 0 24 24">
+                            <path d="m4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2h-16c-1.1 0-2-.9-2-2v-12c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span class="text-sm">connect@sunstone.in</span>
+                    </a>
+                    <a href="tel:+917065303030" class="flex items-center space-x-2 bg-gradient-to-r from-[#c38935] to-[#d4a853] hover:from-[#d4a853] hover:to-[#c38935] text-white px-3 md:px-4 py-2 md:py-2.5 rounded-lg md:rounded-xl transition-all duration-500 font-semibold shadow-lg hover:shadow-2xl transform hover:scale-110 hover:-translate-y-1 animate-glow-pulse">
+                        <svg class="h-3 w-3 md:h-4 md:w-4 icon" viewBox="0 0 24 24">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span class="text-sm">+91 7065-30-30-30</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner with Carousel -->
+    <section class="bg-[#22336a] text-white py-4 md:py-16 lg:py-20 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-20 right-20 w-96 h-96 bg-[#c38935]/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-white/[0.02] to-transparent"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+                <div class="col-span-1 text-center md:text-left animate-slide-in-left order-2 md:order-1">
+                    <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6 leading-tight text-white">
+                        <span class="text-[#c38935] bg-clip-text bg-gradient-to-r from-[#c38935] to-[#f4d03f]">
+                            Learning That Leads To Success
+                        </span>
+                    </h1>
+                    <div class="text-white/90 font-medium max-w-2xl leading-relaxed mb-6 text-base md:text-lg">
+                        <p class="text-base md:text-lg">
+                            Join Hi-Tech Institute for industry-aligned programs with assured placement support.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start">
+                        <a href="https://sunstone.in/campuses/hi-tech-institute" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-white text-[#22336a] hover:bg-gray-100 font-bold text-sm md:text-base rounded-lg md:rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-auto">
+                            <span>Explore Programs with Sunstone</span>
+                            <svg class="ml-2 h-4 w-4 md:h-5 md:w-5 icon" viewBox="0 0 24 24">
+                                <path d="m18 13v6a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2v-11a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15,3 21,3 21,9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                        </a>
+                        <a href="tel:+917065303030" class="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-transparent border border-white text-white font-bold text-sm md:text-base rounded-lg md:rounded-xl hover:bg-white hover:text-[#22336a] transition-all duration-300 shadow-lg">
+                            <svg class="mr-2 h-4 w-4 md:h-5 md:w-5 icon" viewBox="0 0 24 24">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>Call Now</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-span-1 animate-slide-in-right order-1 md:order-2">
+                    <div class="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl mx-auto">
+                        <div class="relative bg-white rounded-xl md:rounded-2xl p-2 md:p-3 shadow-2xl group hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+                            <div class="carousel-container relative rounded-lg md:rounded-xl overflow-hidden" style="aspect-ratio: 4/3;" id="hero-carousel">
+                                <div class="carousel-slide active">
+                                    <iframe src="https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&branding=0&origin=https%3A%2F%2Fhitech.edu"
+                                            title="Campus Life Video" class="w-full h-full border-0" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600"
+                                         alt="Hi-Tech Institute Campus" class="w-full h-full object-cover">
+                                </div>
+                                <div class="carousel-slide">
+                                    <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=800"
+                                         alt="Campus View" class="w-full h-full object-cover">
+                                </div>
+
+                                <!-- Navigation Arrows -->
+                                <button onclick="prevSlide('hero-carousel')" class="hidden sm:flex absolute left-1.5 md:left-2 top-1/2 -translate-y-1/2 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-20 border border-white/20 hover:scale-110">
+                                    <svg class="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 icon" viewBox="0 0 24 24">
+                                        <polyline points="15,18 9,12 15,6"/>
+                                    </svg>
+                                </button>
+                                <button onclick="nextSlide('hero-carousel')" class="hidden sm:flex absolute right-1.5 md:right-2 top-1/2 -translate-y-1/2 w-7 h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full items-center justify-center text-white transition-all duration-300 opacity-0 group-hover:opacity-100 z-20 border border-white/20 hover:scale-110">
+                                    <svg class="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 icon" viewBox="0 0 24 24">
+                                        <polyline points="9,18 15,12 9,6"/>
+                                    </svg>
+                                </button>
+
+                                <!-- Carousel Dots -->
+                                <div class="absolute bottom-2 md:bottom-3 left-1/2 transform -translate-x-1/2 flex gap-1.5 md:gap-2 z-10 px-3 py-1.5 bg-black/20 backdrop-blur-sm rounded-full">
+                                    <button onclick="goToSlide('hero-carousel', 0)" class="carousel-dot w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rounded-full cursor-pointer transition-all duration-300 bg-white shadow-lg scale-125 ring-2 ring-white/30"></button>
+                                    <button onclick="goToSlide('hero-carousel', 1)" class="carousel-dot w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rounded-full cursor-pointer transition-all duration-300 bg-white/50 hover:bg-white/70 hover:scale-110"></button>
+                                    <button onclick="goToSlide('hero-carousel', 2)" class="carousel-dot w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rounded-full cursor-pointer transition-all duration-300 bg-white/50 hover:bg-white/70 hover:scale-110"></button>
+                                </div>
+
+                                <!-- Mobile Swipe Indicator -->
+                                <div class="sm:hidden absolute top-2 right-2 bg-black/40 backdrop-blur-sm rounded-full px-2.5 py-1 text-white text-xs opacity-70 animate-pulse border border-white/20">
+                                    <span class="flex items-center gap-1">
+                                        <span>👆</span>
+                                        <span class="text-[10px]">Swipe</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement Highlights - Mobile Optimized -->
+    <section class="py-6 md:py-12 bg-[#22336a]">
+        <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="bg-white rounded-xl md:rounded-2xl shadow-xl overflow-hidden animate-slide-up hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2">
+                <div class="bg-[#c38935] text-white px-4 md:px-6 py-4 md:py-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-lg md:text-xl lg:text-2xl font-bold mb-2">Placement Highlights</h3>
+                            <p class="text-sm md:text-base opacity-90">MBA | MCA | BBA | BCA | B.Tech</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 md:p-6 lg:p-8">
+                    <!-- Stats Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mb-6">
+                        <div class="text-center">
+                            <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#22336a] mb-2">26 LPA</div>
+                            <p class="text-sm md:text-base text-gray-600">Highest Package</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#22336a] mb-2">1200+</div>
+                            <p class="text-sm md:text-base text-gray-600">Top Recruiters</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-[#22336a] mb-2">5000+</div>
+                            <p class="text-sm md:text-base text-gray-600">Students Placed</p>
+                        </div>
+                    </div>
+
+                    <!-- Comparison Cards -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gray-50 rounded-lg p-4 flex items-center space-x-4">
+                            <div class="w-12 h-12 md:w-14 md:h-14 bg-[#c38935] rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-sm md:text-base">63%</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-[#22336a] text-sm md:text-base">63% Higher ROI</p>
+                                <p class="text-xs md:text-sm text-gray-600">vs private colleges</p>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4 flex items-center space-x-4">
+                            <div class="w-12 h-12 md:w-14 md:h-14 bg-[#22336a] rounded-full flex items-center justify-center">
+                                <span class="text-white font-bold text-sm md:text-base">7X</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-[#22336a] text-sm md:text-base">7X More Companies</p>
+                                <p class="text-xs md:text-sm text-gray-600">vs top private institutions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 rounded-lg p-4 text-center">
+                        <p class="text-sm text-gray-600">
+                            Placement Report Audited & Verified by B2K Analytics, Official Auditor for IIM Ahmedabad
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ultra-Enhanced Video Experience Section -->
+    <section class="py-6 md:py-24 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-8 md:mb-16">
+                <div class="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#22336a] to-[#c38935] backdrop-blur-lg rounded-full mb-6 md:mb-8 border border-white/20 shadow-2xl group hover:scale-105 transition-all duration-500 animate-bounce-in">
+                    <div class="w-3 h-3 bg-white rounded-full mr-3 animate-pulse"></div>
+                    <span class="text-white font-semibold text-sm md:text-base tracking-wide">IMMERSIVE CAMPUS EXPERIENCE</span>
+                    <div class="w-3 h-3 bg-[#f4d03f] rounded-full ml-3 animate-pulse" style="animation-delay: 0.5s;"></div>
+                </div>
+
+                <h2 class="text-sm sm:text-lg md:text-5xl lg:text-7xl font-bold mb-2 sm:mb-3 md:mb-8 leading-tight">
+                    <span class="inline-block animate-slide-in-left text-[#22336a]">Experience</span>
+                    <span class="inline-block animate-slide-in-right text-[#22336a]">Our</span><br>
+                    <span class="text-[#22336a] inline-block animate-scale-in" style="animation-delay: 0.3s;">Vibrant Campus Life</span>
+                </h2>
+
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-xs sm:text-sm md:text-xl text-gray-700 leading-relaxed animate-fade-in-up mb-3 sm:mb-4 md:mb-6" style="animation-delay: 0.5s;">
+                        Step into a world where education meets innovation, creativity, and community. Watch our students thrive in an environment designed for excellence.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-2 md:gap-8 mb-4 md:mb-8 animate-fade-in-up" style="animation-delay: 0.7s;">
+                        <div class="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                            <div class="text-sm sm:text-base md:text-4xl font-bold text-[#c38935] mb-1 group-hover:scale-110 transition-transform duration-300">20000+</div>
+                            <div class="text-[10px] md:text-sm text-gray-600 font-medium">Happy Students</div>
+                        </div>
+                        <div class="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                            <div class="text-sm sm:text-base md:text-4xl font-bold text-[#22336a] mb-1 group-hover:scale-110 transition-transform duration-300" style="animation-delay: 0.2s;">50+</div>
+                            <div class="text-[10px] md:text-sm text-gray-600 font-medium">Campus Facilities</div>
+                        </div>
+                        <div class="text-center group bg-white/50 backdrop-blur-sm rounded-lg md:rounded-2xl p-2 md:p-4 hover:bg-white/70 transition-all duration-300 hover:scale-105 shadow-lg">
+                            <div class="text-sm sm:text-base md:text-4xl font-bold text-[#f4d03f] mb-1 group-hover:scale-110 transition-transform duration-300" style="animation-delay: 0.4s;">24/7</div>
+                            <div class="text-[10px] md:text-sm text-gray-600 font-medium">Learning Support</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Video Container -->
+            <div class="max-w-4xl md:max-w-6xl mx-auto px-4 md:px-8 overflow-hidden">
+                <div class="relative group animate-scale-in" style="animation-delay: 0.9s;">
+                    <div class="absolute inset-0 bg-gradient-to-r from-[#c38935]/20 via-[#22336a]/15 to-[#c38935]/20 rounded-xl md:rounded-3xl blur-2xl opacity-60 group-hover:opacity-90 transition-opacity duration-700"></div>
+                    
+                    <div class="relative bg-white/70 backdrop-blur-xl rounded-xl md:rounded-3xl overflow-hidden border border-[#c38935]/30 md:border-2 shadow-2xl group-hover:border-[#c38935]/60 transition-all duration-700 group-hover:scale-102 group-hover:-translate-y-2">
+                        <div class="aspect-video relative p-2 md:p-4">
+                            <div class="relative rounded-2xl overflow-hidden h-full shadow-inner">
+                                <div class="wistia_responsive_padding">
+                                    <div class="wistia_responsive_wrapper">
+                                        <div class="wistia_embed wistia_async_g4et8b6dnb videoFoam=true autoPlay=true muted=true" style="height:100%;position:relative;width:100%">
+                                            <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                                                <img src="https://fast.wistia.com/embed/medias/g4et8b6dnb/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-6 md:p-8 bg-gradient-to-r from-white/80 to-white/90 backdrop-blur-lg border-t border-gray-200">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between">
+                                <div class="mb-4 md:mb-0">
+                                    <h3 class="text-[#22336a] font-bold text-sm md:text-2xl mb-2 group-hover:text-[#c38935] transition-colors duration-300">
+                                        Hi-Tech Institute - Where Dreams Become Reality
+                                    </h3>
+                                    <p class="text-gray-700 text-sm md:text-base">
+                                        Immerse yourself in our world-class programs: 
+                                        <span class="text-[#c38935] font-semibold">MBA</span> • 
+                                        <span class="text-[#22336a] font-semibold">BBA</span> • 
+                                        <span class="text-[#c38935] font-semibold">BCA</span> • 
+                                        <span class="text-[#22336a] font-semibold">MCA</span> • 
+                                        <span class="text-[#c38935] font-semibold">B.Tech</span>
+                                    </p>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row gap-3">
+                                    <a href="https://sunstone.in/campuses/hi-tech-institute" target="_blank" rel="noopener noreferrer"
+                                       class="px-6 py-3 bg-[#c38935] hover:bg-[#d4a853] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center group/btn">
+                                        <span>Book Campus Tour</span>
+                                        <svg class="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300 icon" viewBox="0 0 24 24">
+                                            <polyline points="9,18 15,12 9,6"/>
+                                        </svg>
+                                    </a>
+                                    <a href="tel:+919069069069" class="px-6 py-3 bg-[#22336a] hover:bg-[#2d4a7b] text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-[#22336a] flex items-center justify-center">
+                                        <span class="mr-2">📞</span>
+                                        <span>Call Us</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sunstone Philosophy Section -->
+    <section class="py-6 md:py-12 bg-gradient-to-br from-[#22336a] via-[#2d4a7b] to-[#22336a] relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-5 right-5 w-32 h-32 md:w-72 md:h-72 bg-[#c38935]/10 rounded-full blur-2xl md:blur-3xl"></div>
+            <div class="absolute bottom-5 left-5 w-40 h-40 md:w-96 md:h-96 bg-white/5 rounded-full blur-2xl md:blur-3xl"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 md:px-6 relative z-10">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 leading-tight">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]">THE SUNSTONE PHILOSOPHY</span><br>
+                    <span style="color: rgba(255, 255, 255, 0.9);">THE SUNSTONE PHILOSOPHY</span>
+                </h2>
+                <p class="text-xs md:text-base text-white/80 max-w-3xl mx-auto leading-relaxed px-4 md:px-0">
+                    helps you learn from the best and provide a hands-on experience so your education is not just limited to theory
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <div class="group relative">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl md:rounded-2xl p-4 md:p-6 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-xl md:rounded-2xl mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
+                            <svg class="h-6 w-6 md:h-8 md:w-8 text-white icon" viewBox="0 0 24 24">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="m22 21-3-3m3 3v-3m0 3h-3"/>
+                            </svg>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-lg md:text-2xl font-bold text-[#c38935] mb-2">01</div>
+                            <h3 class="text-sm md:text-lg font-bold text-white mb-3">Learn from Recruiters</h3>
+                            <p class="text-white/80 leading-relaxed text-xs md:text-sm">
+                                CEOs, CTOs, and COOs of Fortune 500 companies and start-ups with years of recruitment experience
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl md:rounded-2xl p-4 md:p-6 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#f4d03f] to-[#c38935] rounded-xl md:rounded-2xl mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
+                            <svg class="h-6 w-6 md:h-8 md:w-8 text-white icon" viewBox="0 0 24 24">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-lg md:text-2xl font-bold text-[#c38935] mb-2">02</div>
+                            <h3 class="text-sm md:text-lg font-bold text-white mb-3">Practice in the Real World</h3>
+                            <p class="text-white/80 leading-relaxed text-xs md:text-sm">
+                                Gain hands-on experience with internships & real-life projects to be job-ready from Day 1
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative">
+                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl md:rounded-2xl p-4 md:p-6 h-full hover:bg-white/15 hover:border-[#c38935]/30 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-[#c38935] to-[#f4d03f] rounded-xl md:rounded-2xl mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
+                            <svg class="h-6 w-6 md:h-8 md:w-8 text-white icon" viewBox="0 0 24 24">
+                                <circle cx="12" cy="8" r="7"/>
+                                <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                            </svg>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-lg md:text-2xl font-bold text-[#c38935] mb-2">03</div>
+                            <h3 class="text-sm md:text-lg font-bold text-white mb-3">Create Your Portfolio</h3>
+                            <p class="text-white/80 leading-relaxed text-xs md:text-sm">
+                                Showcase your verified skills and experience with a professional portfolio
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement Opportunity Program -->
+    <section class="py-12 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-10 right-10 w-72 h-72 bg-[#22336a]/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 left-10 w-96 h-96 bg-[#c38935]/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-4 md:mb-16">
+                <h2 class="text-base sm:text-lg md:text-4xl lg:text-6xl font-bold text-[#22336a] mb-2 md:mb-6 leading-tight">
+                    Placement<span class="text-transparent bg-clip-text bg-gradient-to-r from-[#c38935] via-[#f4d03f] to-[#c38935]"> Opportunity</span><br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#22336a] to-[#3b4d7a]">Program (POP)</span>
+                </h2>
+                <div class="max-w-4xl mx-auto text-gray-700 text-sm md:text-xl leading-relaxed font-normal max-w-896 pb-4 mx-auto">
+                    <p>WHAT WE PROMISE TO ALL STUDENTS</p>
+                </div>
+            </div>
+
+            <!-- Mobile: Vertical Sliding Cards -->
+            <div class="block md:hidden mb-4">
+                <div class="space-y-2">
+                    <div class="bg-white rounded-xl p-4 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left" style="animation-delay: 0.1s;">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="h-6 w-6 text-white icon" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="8" r="7"/>
+                                    <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-bold text-[#22336a] mb-2">200+ Placement Opportunities</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed">Guaranteed access to extensive placement opportunities across leading companies</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-4 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-right" style="animation-delay: 0.2s;">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="h-6 w-6 text-white icon" viewBox="0 0 24 24">
+                                    <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-bold text-[#22336a] mb-2">First Year Tuition Fee Back</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed">We'll refund your first-year tuition fee if you don't receive promised opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-4 shadow-lg border border-gray-200 transform transition-all duration-700 animate-slide-in-left" style="animation-delay: 0.3s;">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="h-6 w-6 text-white icon" viewBox="0 0 24 24">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="m22 21-3-3m3 3v-3m0 3h-3"/>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-sm font-bold text-[#22336a] mb-2">Dedicated Career Support</h3>
+                                <p class="text-xs text-gray-600 leading-relaxed">Personal mentorship, interview preparation, and continuous guidance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop: 3-Column Grid Layout -->
+            <div class="hidden md:grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="h-8 w-8 text-white icon" viewBox="0 0 24 24">
+                            <circle cx="12" cy="8" r="7"/>
+                            <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#22336a] mb-3">200+ Placement Opportunities</h3>
+                    <p class="text-gray-600 leading-relaxed">Access to extensive placement opportunities across leading companies.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="h-8 w-8 text-white icon" viewBox="0 0 24 24">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#22336a] mb-3">First Year Tuition Fee Back</h3>
+                    <p class="text-gray-600 leading-relaxed">If you don't receive the promised placement opportunities, we'll refund your first-year tuition fee.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="h-8 w-8 text-white icon" viewBox="0 0 24 24">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="m22 21-3-3m3 3v-3m0 3h-3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#22336a] mb-3">Dedicated Career Support</h3>
+                    <p class="text-gray-600 leading-relaxed">Personal mentorship, interview preparation, and continuous guidance from industry professionals throughout your journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Continue in next part due to length... -->
+    <script>
+        // Carousel functionality
+        let currentSlides = {};
+
+        function initCarousel(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            if (!carousel) return;
+            
+            currentSlides[carouselId] = 0;
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dots = carousel.querySelectorAll('.carousel-dot');
+            
+            // Auto advance
+            setInterval(() => {
+                nextSlide(carouselId);
+            }, 5000);
+
+            // Touch support for mobile
+            let startX = 0;
+            let endX = 0;
+            
+            carousel.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+            });
+            
+            carousel.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].clientX;
+                const diff = startX - endX;
+                
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) {
+                        nextSlide(carouselId);
+                    } else {
+                        prevSlide(carouselId);
+                    }
+                }
+            });
+        }
+
+        function goToSlide(carouselId, index) {
+            const carousel = document.getElementById(carouselId);
+            if (!carousel) return;
+            
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const dots = carousel.querySelectorAll('.carousel-dot');
+            
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => {
+                dot.classList.remove('bg-white', 'shadow-lg', 'scale-125', 'ring-2', 'ring-white/30');
+                dot.classList.add('bg-white/50', 'hover:bg-white/70', 'hover:scale-110');
+            });
+            
+            // Show current slide
+            slides[index].classList.add('active');
+            dots[index].classList.remove('bg-white/50', 'hover:bg-white/70', 'hover:scale-110');
+            dots[index].classList.add('bg-white', 'shadow-lg', 'scale-125', 'ring-2', 'ring-white/30');
+            
+            currentSlides[carouselId] = index;
+        }
+
+        function nextSlide(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            if (!carousel) return;
+            
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const nextIndex = (currentSlides[carouselId] + 1) % slides.length;
+            goToSlide(carouselId, nextIndex);
+        }
+
+        function prevSlide(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            if (!carousel) return;
+            
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const prevIndex = (currentSlides[carouselId] - 1 + slides.length) % slides.length;
+            goToSlide(carouselId, prevIndex);
+        }
+
+        // Initialize carousel on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initCarousel('hero-carousel');
+        });
+
+        // Program tabs functionality
+        function showProgram(programName) {
+            // Hide all program contents
+            document.querySelectorAll('.program-content').forEach(content => {
+                content.style.display = 'none';
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.program-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected program content
+            const selectedContent = document.getElementById(programName + '-content');
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+            
+            // Add active class to selected tab
+            const selectedTab = document.querySelector(`[onclick="showProgram('${programName}')"]`);
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+        }
+
+        // FAQ functionality
+        function toggleFAQ(index) {
+            const faqAnswer = document.getElementById(`faq-answer-${index}`);
+            const faqIcon = document.getElementById(`faq-icon-${index}`);
+            
+            if (faqAnswer.classList.contains('open')) {
+                faqAnswer.classList.remove('open');
+                faqIcon.style.transform = 'rotate(0deg)';
+            } else {
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer').forEach(answer => {
+                    answer.classList.remove('open');
+                });
+                document.querySelectorAll('[id^="faq-icon-"]').forEach(icon => {
+                    icon.style.transform = 'rotate(0deg)';
+                });
+                
+                // Open selected FAQ
+                faqAnswer.classList.add('open');
+                faqIcon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Popup functionality
+        function showPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            if (popup) {
+                popup.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function hidePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            if (popup) {
+                popup.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close popup when clicking outside
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('popup-overlay')) {
+                e.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
