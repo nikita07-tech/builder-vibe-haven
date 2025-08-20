@@ -3127,11 +3127,185 @@
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
 
+        // Program data
+        const programsData = {
+            MBA: {
+                duration: "2-year program",
+                certifications: "10 certifications",
+                internships: "6+ months of internships/projects",
+                projects: "4 capstone projects",
+                specializations: "5 specializations",
+                specialList: [
+                    { name: "Marketing Management", careers: "Marketing Manager, Brand Manager, Digital Marketing Specialist" },
+                    { name: "IT, Analytics & Research", careers: "Business Analyst, Data Scientist, Research Analyst" },
+                    { name: "Human Resource Management", careers: "HR Manager, Talent Acquisition Manager, HR Business Partner" },
+                    { name: "Finance Management", careers: "Finance Manager, Investment Analyst, Financial Planner" },
+                    { name: "Operations Management", careers: "Operations Manager, Supply Chain Manager, Process Manager" }
+                ],
+                eligibility: "50% marks in graduation from a recognised university (45% for reserved category).",
+                applyUrl: "https://sunstone.in/campuses/hi-tech-institute/mba"
+            },
+            BBA: {
+                duration: "3-year program",
+                certifications: "10 certifications",
+                internships: "8+ months of internships/projects",
+                projects: "6 capstone projects",
+                specializations: "6 specializations",
+                specialList: [
+                    { name: "IT & Business Analytics", careers: "Big Data Analyst, Data Visualization Specialist, Business Intelligence Analyst" },
+                    { name: "Human Resource & Talent Analytics", careers: "HR Data Analyst, Talent Acquisition Specialist, Workforce Planning Manager" },
+                    { name: "Marketing Management", careers: "Marketing Manager, Brand Manager, Campaign Strategist" },
+                    { name: "Retail Sales Management", careers: "Retail Manager, Sales Executive, Store Operations Manager" },
+                    { name: "Operations Management", careers: "Operations Manager, Production Manager, Logistics Coordinator" },
+                    { name: "Banking, Financial Services and Insurance (BFSI)", careers: "Banking Officer, Financial Advisor, Insurance Specialist" }
+                ],
+                eligibility: "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). No specific subject requirements.",
+                applyUrl: "https://sunstone.in/campuses/hi-tech-institute/bba"
+            },
+            BCA: {
+                duration: "3-year program",
+                certifications: "10 certifications",
+                internships: "8+ months of internships/projects",
+                projects: "3 capstone projects",
+                specializations: "6 specializations",
+                specialList: [
+                    { name: "Cloud Computing", careers: "Cloud Engineer, DevOps Engineer, Cloud Architect" },
+                    { name: "Cyber Security & Forensics", careers: "Cybersecurity Analyst, Ethical Hacker, Digital Forensics Specialist" },
+                    { name: "Blockchain", careers: "Blockchain Developer, Cryptocurrency Analyst, Smart Contract Developer" },
+                    { name: "Machine Learning & AI", careers: "ML Engineer, AI Developer, Data Scientist" },
+                    { name: "Data Science & Analytics", careers: "Data Analyst, Business Intelligence Analyst, Data Visualization Expert" },
+                    { name: "Full Stack Development", careers: "Full Stack Developer, Web Application Developer, Frontend/Backend Developer" }
+                ],
+                eligibility: "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Mathematics as a compulsory subject is preferred.",
+                applyUrl: "https://sunstone.in/campuses/hi-tech-institute/bca"
+            },
+            MCA: {
+                duration: "2-year program",
+                certifications: "10 certifications",
+                internships: "6+ months of internships/projects",
+                projects: "2 capstone projects",
+                specializations: "5 specializations",
+                specialList: [
+                    { name: "Full Stack Development", careers: "Full Stack Developer, Web Application Developer, Frontend/Backend Developer" },
+                    { name: "Machine Learning & AI", careers: "ML Engineer, AI Developer, Data Scientist" },
+                    { name: "Data Science", careers: "Data Scientist, Data Analyst, Business Intelligence Specialist" },
+                    { name: "Cloud Computing", careers: "Cloud Engineer, DevOps Engineer, Cloud Solutions Architect" },
+                    { name: "Cyber Security", careers: "Cybersecurity Analyst, Security Engineer, Information Security Specialist" }
+                ],
+                eligibility: "50% marks in graduation from a recognised university (45% for reserved category). Must have studied at least one of these subjects: Computer Science, Information Technology, Informatics Practices, Mathematics, Business Mathematics, or Statistics.",
+                applyUrl: "https://sunstone.in/campuses/hi-tech-institute/mca"
+            },
+            BTech: {
+                duration: "4-year program",
+                certifications: "10 certifications",
+                internships: "10+ months of Internships",
+                projects: "4 capstone projects",
+                specializations: "2 specializations",
+                specialList: [
+                    { name: "Computer Science Engineering", careers: "Software Engineer, System Analyst, Application Developer" },
+                    { name: "Information Technology", careers: "IT Specialist, Business Analyst, Project Manager" }
+                ],
+                eligibility: "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Compulsory subjects: Physics, Mathematics and Chemistry.",
+                applyUrl: "https://sunstone.in/campuses/hi-tech-institute/b-tech"
+            }
+        };
+
+        // Show program content
+        function showProgram(programKey) {
+            // Update tabs
+            document.querySelectorAll('.program-tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById('tab-' + programKey).classList.add('active');
+
+            // Update content
+            document.querySelectorAll('.program-content').forEach(content => content.classList.remove('active'));
+            document.getElementById('program-' + programKey).classList.add('active');
+        }
+
+        // Mobile program selection
+        function updateMobileProgram() {
+            const select = document.getElementById('mobilePrograms');
+            const container = document.getElementById('mobileProgram');
+
+            select.addEventListener('change', function() {
+                const selectedProgram = this.value;
+                if (selectedProgram && programsData[selectedProgram]) {
+                    const data = programsData[selectedProgram];
+                    container.innerHTML = `
+                        <div class="bg-gradient-to-r from-primary-blue to-blue-dark p-4 text-white">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">
+                                    <i data-lucide="graduation-cap" class="h-3 w-3 text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-bold">${selectedProgram}</h3>
+                                    <p class="text-xs opacity-90">Program Details</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 bg-white">
+                            <div class="mb-2">
+                                <div class="bg-gray-50 rounded-lg p-2">
+                                    <h4 class="font-semibold text-primary text-xs mb-1">Program Overview:</h4>
+                                    <div class="space-y-1">
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-xs text-gray-600">Duration:</span>
+                                            <span class="text-xs font-medium text-primary">${data.duration}</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-xs text-gray-600">Specializations:</span>
+                                            <span class="text-xs font-medium text-primary">${data.specializations}</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-xs text-gray-600">Certifications:</span>
+                                            <span class="text-xs font-medium text-primary">${data.certifications}</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-xs text-gray-600">Experience:</span>
+                                            <span class="text-xs font-medium text-primary">${data.internships}</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-xs text-gray-600">Projects:</span>
+                                            <span class="text-xs font-medium text-primary">${data.projects}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-1">
+                                <h4 class="font-semibold text-primary text-xs">New Age Specialisations:</h4>
+                                ${data.specialList.slice(0, 3).map(spec => `
+                                    <div class="flex items-start space-x-1 p-1.5 bg-gray-50 rounded-md">
+                                        <div class="w-3 h-3 bg-primary-orange rounded-full mt-0.5 flex-shrink-0"></div>
+                                        <div>
+                                            <p class="text-xs font-medium text-primary">${spec.name}</p>
+                                            <p class="text-xs text-gray-600">${spec.careers}</p>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <div class="mt-2">
+                                <a href="${data.applyUrl}" target="_blank" rel="noopener noreferrer" class="w-full btn btn-primary text-xs">
+                                    <span>Apply for ${selectedProgram}</span>
+                                    <i data-lucide="external-link" class="ml-1 h-3 w-3"></i>
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    container.style.display = 'block';
+                    lucide.createIcons();
+                } else {
+                    container.style.display = 'none';
+                }
+            });
+        }
+
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize first slide
             updateSlide(0);
-            
+
+            // Initialize mobile program selection
+            updateMobileProgram();
+
             // Reinitialize Lucide icons after any dynamic content changes
             lucide.createIcons();
         });
