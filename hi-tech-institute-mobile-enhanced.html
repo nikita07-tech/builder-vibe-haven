@@ -1,0 +1,2640 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Hi-Tech Institute | Sunstone Education - Excellence in Learning
+    </title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <style>
+      /* CSS Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-blue: #22336a;
+        --primary-orange: #c38935;
+        --orange-light: #f4d03f;
+        --orange-dark: #d4a853;
+        --blue-dark: #3b4d7a;
+        --blue-darker: #2d4a7b;
+      }
+
+      body {
+        font-family: "Public Sans", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+
+      /* Container and Layout Utilities */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .container-xl {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      /* Utility Classes */
+      .flex {
+        display: flex;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-center {
+        justify-content: center;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .hidden {
+        display: none;
+      }
+      .relative {
+        position: relative;
+      }
+      .absolute {
+        position: absolute;
+      }
+      .fixed {
+        position: fixed;
+      }
+      .sticky {
+        position: sticky;
+      }
+      .top-0 {
+        top: 0;
+      }
+      .z-50 {
+        z-index: 50;
+      }
+      .z-40 {
+        z-index: 40;
+      }
+      .z-10 {
+        z-index: 10;
+      }
+      .overflow-hidden {
+        overflow: hidden;
+      }
+      .transition-all {
+        transition: all 0.3s ease;
+      }
+
+      /* Typography */
+      .font-bold {
+        font-weight: 700;
+      }
+      .font-semibold {
+        font-weight: 600;
+      }
+      .font-medium {
+        font-weight: 500;
+      }
+      .text-xs {
+        font-size: 0.75rem;
+      }
+      .text-sm {
+        font-size: 0.875rem;
+      }
+      .text-base {
+        font-size: 1rem;
+      }
+      .text-lg {
+        font-size: 1.125rem;
+      }
+      .text-xl {
+        font-size: 1.25rem;
+      }
+      .text-2xl {
+        font-size: 1.5rem;
+      }
+      .text-3xl {
+        font-size: 1.875rem;
+      }
+      .text-4xl {
+        font-size: 2.25rem;
+      }
+      .text-5xl {
+        font-size: 3rem;
+      }
+      .text-6xl {
+        font-size: 3.75rem;
+      }
+
+      /* Colors */
+      .text-white {
+        color: white;
+      }
+      .text-primary {
+        color: var(--primary-blue);
+      }
+      .text-orange {
+        color: var(--primary-orange);
+      }
+      .text-gray-600 {
+        color: #6b7280;
+      }
+      .text-gray-700 {
+        color: #374151;
+      }
+      .text-gray-300 {
+        color: #d1d5db;
+      }
+      .text-gray-400 {
+        color: #9ca3af;
+      }
+      .bg-primary {
+        background-color: var(--primary-blue);
+      }
+      .bg-orange {
+        background-color: var(--primary-orange);
+      }
+      .bg-white {
+        background-color: white;
+      }
+      .bg-gray-50 {
+        background-color: #f9fafb;
+      }
+      .bg-gray-100 {
+        background-color: #f3f4f6;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        transform: scale(1);
+        font-size: 0.875rem;
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+      }
+
+      .btn-primary {
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue),
+          var(--blue-dark)
+        );
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(
+          135deg,
+          var(--blue-darker),
+          var(--primary-blue)
+        );
+      }
+
+      .btn-orange {
+        background: linear-gradient(
+          135deg,
+          var(--primary-orange),
+          var(--orange-light)
+        );
+        color: white;
+      }
+
+      .btn-orange:hover {
+        background: linear-gradient(
+          135deg,
+          var(--orange-light),
+          var(--primary-orange)
+        );
+      }
+
+      .btn-outline {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+
+      .btn-outline:hover {
+        background: white;
+        color: var(--primary-blue);
+      }
+
+      /* Header Styles */
+      .header {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #e5e7eb;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        transition: all 0.3s ease;
+      }
+
+      .header:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4rem;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .logo-group {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .logo-divider {
+        width: 1px;
+        height: 2rem;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          #d1d5db,
+          transparent
+        );
+      }
+
+      .logo {
+        height: 1.5rem;
+        width: auto;
+        transition: all 0.5s ease;
+      }
+
+      .logo:hover {
+        transform: scale(1.1) rotate(3deg);
+      }
+
+      .contact-section {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .contact-email {
+        display: none;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--primary-blue);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        font-size: 0.875rem;
+      }
+
+      .contact-email:hover {
+        color: var(--primary-orange);
+        background-color: #f9fafb;
+      }
+
+      .contact-phone {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary-orange),
+          var(--orange-light)
+        );
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.75rem;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(195, 137, 53, 0.3);
+        transition: all 0.3s ease;
+        font-size: 0.875rem;
+      }
+
+      .contact-phone:hover {
+        transform: scale(1.05) translateY(-2px);
+        box-shadow: 0 8px 20px rgba(195, 137, 53, 0.4);
+      }
+
+      /* Apply Now Button */
+      .apply-now-button {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 50;
+      }
+
+      .apply-now-floating {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary-orange),
+          var(--orange-light)
+        );
+        color: white;
+        text-decoration: none;
+        padding: 1rem 1.5rem;
+        border-radius: 1rem;
+        font-weight: 700;
+        box-shadow: 0 8px 32px rgba(195, 137, 53, 0.4);
+        transition: all 0.5s ease;
+        animation: bounce-subtle 2s ease-in-out infinite;
+        font-size: 0.875rem;
+      }
+
+      .apply-now-floating:hover {
+        transform: scale(1.1) translateY(-4px) rotate(2deg);
+        box-shadow: 0 12px 40px rgba(195, 137, 53, 0.6);
+      }
+
+      .apply-now-floating::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          var(--primary-orange),
+          var(--orange-light)
+        );
+        border-radius: 1rem;
+        opacity: 0.3;
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: var(--primary-blue);
+        color: white;
+        padding: 4rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+        width: 24rem;
+        height: 24rem;
+        background: radial-gradient(
+          circle,
+          rgba(195, 137, 53, 0.1),
+          transparent
+        );
+        border-radius: 50%;
+        filter: blur(60px);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        bottom: 5rem;
+        left: 5rem;
+        width: 20rem;
+        height: 20rem;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.05),
+          transparent
+        );
+        border-radius: 50%;
+        filter: blur(60px);
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        position: relative;
+        z-index: 10;
+      }
+
+      .hero-text h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-highlight {
+        background: linear-gradient(
+          135deg,
+          var(--primary-orange),
+          var(--orange-light)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        line-height: 1.6;
+      }
+
+      .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+      }
+
+      .hero-media {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .media-container {
+        position: relative;
+        background: white;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Enhanced Carousel */
+      .carousel-container {
+        position: relative;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        aspect-ratio: 16/9;
+        touch-action: pan-y;
+      }
+
+      .carousel-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        transform: translateX(100%);
+        animation-fill-mode: forwards;
+      }
+
+      .carousel-slide.active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .carousel-slide.prev {
+        transform: translateX(-100%);
+      }
+
+      .carousel-slide.next {
+        transform: translateX(100%);
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .carousel-slide iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .carousel-dots {
+        position: absolute;
+        bottom: 0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0.5rem;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        backdrop-filter: blur(10px);
+      }
+
+      .carousel-dot {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+      }
+
+      .carousel-dot.active {
+        background: white;
+        transform: scale(1.5);
+      }
+
+      .carousel-dot:hover {
+        transform: scale(1.25);
+        background: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Navigation Arrows */
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10;
+        opacity: 0;
+        backdrop-filter: blur(10px);
+      }
+
+      .carousel-container:hover .carousel-nav {
+        opacity: 1;
+      }
+
+      .carousel-nav:hover {
+        background: rgba(0, 0, 0, 0.7);
+        transform: translateY(-50%) scale(1.1);
+      }
+
+      .carousel-nav.prev {
+        left: 0.75rem;
+      }
+
+      .carousel-nav.next {
+        right: 0.75rem;
+      }
+
+      /* Touch indicators for mobile */
+      .carousel-touch-indicator {
+        position: absolute;
+        top: 0.75rem;
+        right: 0.75rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        font-size: 0.75rem;
+        z-index: 10;
+        animation: pulse 2s ease-in-out infinite;
+        display: none;
+      }
+
+      /* Section Styles */
+      .section {
+        padding: 3rem 0;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: var(--primary-blue);
+      }
+
+      .section-subtitle {
+        text-align: center;
+        color: #6b7280;
+        margin-bottom: 3rem;
+        font-size: 1rem;
+      }
+
+      /* Card Styles */
+      .card {
+        background: white;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: 1px solid #f3f4f6;
+      }
+
+      .card:hover {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        transform: translateY(-4px);
+        border-color: var(--primary-orange);
+      }
+
+      /* Grid Systems */
+      .grid {
+        display: grid;
+        gap: 1.5rem;
+      }
+
+      .grid-1 {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .grid-5 {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      /* Placement Highlights */
+      .placement-highlights {
+        background: var(--primary-blue);
+        padding: 2rem 0;
+      }
+
+      .highlight-card {
+        background: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease;
+      }
+
+      .highlight-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 32px 64px rgba(0, 0, 0, 0.15);
+      }
+
+      .highlight-header {
+        background: var(--primary-orange);
+        color: white;
+        padding: 1.5rem;
+        margin: -2rem -2rem 2rem -2rem;
+        border-radius: 1rem 1rem 0 0;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 1rem;
+        background: #f9fafb;
+        border-radius: 0.5rem;
+      }
+
+      .stat-number {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        color: #6b7280;
+        font-size: 0.875rem;
+      }
+
+      .comparison-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .comparison-item {
+        background: #f9fafb;
+        border-radius: 0.75rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .comparison-icon {
+        width: 3rem;
+        height: 3rem;
+        background: var(--primary-orange);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 0.875rem;
+      }
+
+      /* Programs Section */
+      .programs {
+        padding: 4rem 0;
+        background: #f9fafb;
+      }
+
+      .program-tabs {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .program-tab {
+        background: white;
+        color: var(--primary-blue);
+        border: 2px solid #e5e7eb;
+        padding: 1rem;
+        border-radius: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        text-align: center;
+      }
+
+      .program-tab:hover {
+        transform: scale(1.02);
+      }
+
+      .program-tab.active {
+        background: linear-gradient(
+          135deg,
+          var(--primary-blue),
+          var(--blue-dark)
+        );
+        color: white;
+        box-shadow: 0 8px 32px rgba(34, 51, 106, 0.3);
+      }
+
+      /* FAQ Section */
+      .faq {
+        padding: 4rem 0;
+        background: white;
+      }
+
+      .faq-list {
+        max-width: 800px;
+        margin: 0 auto 4rem auto;
+      }
+
+      .faq-item {
+        margin-bottom: 1rem;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .faq-question {
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+        padding: 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .faq-question:hover {
+        background: white;
+        border-color: rgba(34, 51, 106, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .faq-question-content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex: 1;
+      }
+
+      .faq-number {
+        width: 2.5rem;
+        height: 2.5rem;
+        background: var(--primary-blue);
+        color: white;
+        border-radius: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        transition: all 0.3s ease;
+      }
+
+      .faq-question:hover .faq-number {
+        transform: scale(1.1);
+      }
+
+      .faq-question-text {
+        flex: 1;
+      }
+
+      .faq-question-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        margin-bottom: 0.25rem;
+        transition: all 0.3s ease;
+      }
+
+      .faq-question:hover .faq-question-title {
+        color: var(--primary-blue);
+      }
+
+      .faq-category {
+        font-size: 0.75rem;
+        color: rgba(34, 51, 106, 0.7);
+        font-weight: 600;
+      }
+
+      .faq-toggle {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: #6b7280;
+        transition: all 0.3s ease;
+      }
+
+      .faq-question:hover .faq-toggle {
+        color: var(--primary-blue);
+        transform: rotate(180deg);
+      }
+
+      .faq-answer {
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 500px;
+        padding: 1.5rem;
+      }
+
+      .faq-answer-content {
+        background: white;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        margin-left: 3.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border-top: 1px solid #e5e7eb;
+      }
+
+      .faq-answer-text {
+        color: #374151;
+        line-height: 1.6;
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--primary-blue);
+        color: white;
+        padding: 3rem 0 1.5rem 0;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-brand h3 {
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .footer-brand p {
+        color: #d1d5db;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .social-link {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        transform: scale(1.1);
+      }
+
+      .social-link.instagram {
+        background: linear-gradient(135deg, #833ab4, #fd1d1d, #f77737);
+      }
+
+      .social-link.facebook {
+        background: #1877f2;
+      }
+
+      .social-link.linkedin {
+        background: #0a66c2;
+      }
+
+      .social-link.youtube {
+        background: #ff0000;
+      }
+
+      .footer-section h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: #d1d5db;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 0.875rem;
+      }
+
+      .footer-links a:hover {
+        color: var(--primary-orange);
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #d1d5db;
+        text-decoration: none;
+        margin-bottom: 0.75rem;
+        transition: all 0.3s ease;
+        font-size: 0.875rem;
+      }
+
+      .contact-item:hover {
+        color: var(--primary-orange);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .footer-bottom p {
+        color: #9ca3af;
+        font-size: 0.875rem;
+      }
+
+      .footer-bottom-links {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .footer-bottom-links a {
+        color: #9ca3af;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 0.875rem;
+      }
+
+      .footer-bottom-links a:hover {
+        color: var(--primary-orange);
+      }
+
+      /* Animations */
+      @keyframes bounce-subtle {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .animate-slide-in-left {
+        animation: slideInLeft 0.8s ease-out;
+      }
+
+      .animate-slide-in-right {
+        animation: slideInRight 0.8s ease-out;
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.8s ease-out;
+      }
+
+      /* Enhanced Mobile Responsive Design */
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 0.75rem;
+        }
+
+        .container-xl {
+          padding: 0 0.75rem;
+        }
+
+        .header-content {
+          height: 3.5rem;
+          padding: 0 0.75rem;
+        }
+
+        .logo {
+          height: 1.25rem;
+        }
+
+        .contact-phone {
+          padding: 0.375rem 0.75rem;
+          font-size: 0.75rem;
+        }
+
+        .apply-now-button {
+          right: 0.75rem;
+          bottom: 0.75rem;
+        }
+
+        .apply-now-floating {
+          padding: 0.75rem 1rem;
+          border-radius: 0.75rem;
+          font-size: 0.75rem;
+          gap: 0.5rem;
+        }
+
+        .hero {
+          padding: 2rem 0;
+        }
+
+        .hero-text h1 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .hero-description {
+          font-size: 0.875rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .hero-buttons {
+          gap: 0.75rem;
+        }
+
+        .hero-buttons .btn {
+          padding: 0.875rem 1.25rem;
+          font-size: 0.875rem;
+        }
+
+        .section {
+          padding: 2rem 0;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+          margin-bottom: 0.75rem;
+        }
+
+        .section-subtitle {
+          font-size: 0.875rem;
+          margin-bottom: 2rem;
+        }
+
+        .card {
+          padding: 1.25rem;
+        }
+
+        .stats-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .comparison-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .comparison-item {
+          padding: 0.875rem;
+        }
+
+        .comparison-icon {
+          width: 2.5rem;
+          height: 2.5rem;
+          font-size: 0.75rem;
+        }
+
+        .program-tabs {
+          grid-template-columns: 1fr;
+          gap: 0.75rem;
+        }
+
+        .program-tab {
+          padding: 0.875rem;
+          font-size: 0.875rem;
+        }
+
+        .faq-question {
+          padding: 1rem;
+        }
+
+        .faq-number {
+          width: 2rem;
+          height: 2rem;
+          font-size: 0.875rem;
+        }
+
+        .faq-question-title {
+          font-size: 0.875rem;
+        }
+
+        .faq-category {
+          font-size: 0.625rem;
+        }
+
+        .faq-answer-content {
+          margin-left: 2.75rem;
+          padding: 1rem;
+        }
+
+        .footer {
+          padding: 2rem 0 1rem 0;
+        }
+
+        .footer-content {
+          gap: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .footer-brand h3 {
+          font-size: 1rem;
+        }
+
+        .footer-brand p {
+          font-size: 0.875rem;
+        }
+
+        .social-links {
+          gap: 0.75rem;
+        }
+
+        .social-link {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        .footer-bottom {
+          padding-top: 1rem;
+        }
+
+        .carousel-touch-indicator {
+          display: block;
+        }
+
+        .carousel-nav {
+          display: none;
+        }
+      }
+
+      @media (min-width: 481px) and (max-width: 768px) {
+        .hero-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .hero-text h1 {
+          font-size: 2rem;
+        }
+
+        .hero-buttons {
+          flex-direction: row;
+          gap: 1rem;
+        }
+
+        .hero-buttons .btn {
+          width: auto;
+          flex: 1;
+        }
+
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .comparison-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .program-tabs {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-content {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .hero-content {
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+        }
+
+        .hero-text h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-buttons {
+          flex-direction: row;
+        }
+
+        .hero-buttons .btn {
+          width: auto;
+        }
+
+        .contact-email {
+          display: flex;
+        }
+
+        .stats-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .comparison-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .program-tabs {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .footer-content {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (min-width: 1025px) {
+        .hero-content {
+          grid-template-columns: 2fr 1fr;
+          gap: 3rem;
+        }
+
+        .hero-text h1 {
+          font-size: 3.75rem;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+        }
+
+        .hero-buttons .btn {
+          width: auto;
+        }
+
+        .contact-email {
+          display: flex;
+        }
+
+        .stats-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .comparison-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .program-tabs {
+          grid-template-columns: repeat(5, 1fr);
+        }
+
+        .footer-content {
+          grid-template-columns: 2fr 1fr 1fr;
+        }
+
+        .footer-bottom {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+
+      /* Additional Utility Classes */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* Print Styles */
+      @media print {
+        .apply-now-button,
+        .carousel-dots,
+        .faq-toggle {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Apply Now Floating Button -->
+    <div class="apply-now-button">
+      <a
+        href="https://sunstone.in/apply-now"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="apply-now-floating"
+      >
+        <div
+          style="
+            width: 1rem;
+            height: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+          </svg>
+        </div>
+        <div>
+          <div style="font-weight: 700; font-size: 0.875rem">Apply Now</div>
+          <div style="font-size: 0.75rem; opacity: 0.9">Sunstone Portal</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-section">
+          <div class="logo-group">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
+              alt="Hi-Tech Institute"
+              class="logo"
+            />
+            <div class="logo-divider"></div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
+              alt="Sunstone"
+              class="logo"
+            />
+          </div>
+        </div>
+        <div class="contact-section">
+          <a href="mailto:connect@sunstone.in" class="contact-email">
+            <i data-lucide="mail"></i>
+            <span>connect@sunstone.in</span>
+          </a>
+          <a href="tel:+917065303030" class="contact-phone">
+            <i data-lucide="phone"></i>
+            <span>+91 7065-30-30-30</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section with Enhanced Carousel -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text animate-slide-in-left">
+          <h1>
+            <span class="hero-highlight">Learning That Leads To Success</span>
+          </h1>
+          <div class="hero-description">
+            <p>
+              Join Hi-Tech Institute for industry-aligned programs with assured
+              placement support and transform your career with expert guidance.
+            </p>
+          </div>
+          <div class="hero-buttons">
+            <a
+              href="https://sunstone.in/campuses/hi-tech-institute"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+            >
+              <span>Explore Programs with Sunstone</span>
+              <i
+                data-lucide="external-link"
+                style="margin-left: 0.5rem; width: 1.25rem; height: 1.25rem"
+              ></i>
+            </a>
+            <a href="tel:+917065303030" class="btn btn-outline">
+              <i
+                data-lucide="phone"
+                style="margin-right: 0.5rem; width: 1.25rem; height: 1.25rem"
+              ></i>
+              <span>Call Now</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-media animate-slide-in-right">
+          <div class="media-container">
+            <div class="carousel-container" id="heroCarousel">
+              <!-- Touch Indicator for Mobile -->
+              <div class="carousel-touch-indicator">
+                👆 Swipe to explore
+              </div>
+
+              <!-- Carousel Slides -->
+              <div class="carousel-slide active">
+                <iframe
+                  src="https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&branding=0&origin=https%3A%2F%2Fhitech.edu"
+                  title="Campus Life Video"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="carousel-slide">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600"
+                  alt="Hi-Tech Institute Campus"
+                  loading="eager"
+                />
+              </div>
+              <div class="carousel-slide">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=800"
+                  alt="Campus View"
+                  loading="eager"
+                />
+              </div>
+
+              <!-- Navigation Arrows -->
+              <button class="carousel-nav prev" onclick="previousSlide()" aria-label="Previous slide">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button class="carousel-nav next" onclick="nextSlide()" aria-label="Next slide">
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+              <!-- Carousel Dots -->
+              <div class="carousel-dots">
+                <button
+                  class="carousel-dot active"
+                  onclick="setSlide(0)"
+                  aria-label="Go to slide 1"
+                ></button>
+                <button class="carousel-dot" onclick="setSlide(1)" aria-label="Go to slide 2"></button>
+                <button class="carousel-dot" onclick="setSlide(2)" aria-label="Go to slide 3"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Placement Highlights -->
+    <section class="placement-highlights">
+      <div class="container-xl">
+        <div class="highlight-card animate-slide-up">
+          <div class="highlight-header">
+            <div>
+              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0">
+                Placement Highlights
+              </h3>
+              <p style="font-size: 0.875rem; opacity: 0.9">
+                MBA | MCA | BBA | BCA | B.Tech
+              </p>
+            </div>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">26 LPA</div>
+              <p class="stat-label">Highest Package</p>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">1200+</div>
+              <p class="stat-label">Top Recruiters</p>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">5000+</div>
+              <p class="stat-label">Students Placed</p>
+            </div>
+          </div>
+          <div class="comparison-grid">
+            <div class="comparison-item">
+              <div class="comparison-icon">63%</div>
+              <div>
+                <p
+                  style="
+                    font-weight: 600;
+                    color: var(--primary-blue);
+                    margin-bottom: 0.25rem;
+                  "
+                >
+                  63% Higher ROI
+                </p>
+                <p style="color: #6b7280; font-size: 0.875rem">
+                  vs private colleges
+                </p>
+              </div>
+            </div>
+            <div class="comparison-item">
+              <div
+                class="comparison-icon"
+                style="background: var(--primary-blue)"
+              >
+                7X
+              </div>
+              <div>
+                <p
+                  style="
+                    font-weight: 600;
+                    color: var(--primary-blue);
+                    margin-bottom: 0.25rem;
+                  "
+                >
+                  7X More Companies
+                </p>
+                <p style="color: #6b7280; font-size: 0.875rem">
+                  vs top private institutions
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            style="
+              background: #f9fafb;
+              border-radius: 0.5rem;
+              padding: 1rem;
+              text-align: center;
+            "
+          >
+            <p style="font-size: 0.875rem; color: #6b7280">
+              Placement Report Audited & Verified by B2K Analytics, Official
+              Auditor for IIM Ahmedabad
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs">
+      <div class="container-xl">
+        <div class="text-center">
+          <h2 class="section-title">Programs Offered</h2>
+          <p class="section-subtitle">
+            Transform your career with industry-aligned programs designed by
+            experts
+          </p>
+        </div>
+
+        <div class="program-tabs" id="programTabs">
+          <div class="program-tab active" onclick="setActiveProgram('MBA')">
+            <i data-lucide="graduation-cap"></i>
+            <span>MBA</span>
+          </div>
+          <div class="program-tab" onclick="setActiveProgram('BBA')">
+            <i data-lucide="graduation-cap"></i>
+            <span>BBA</span>
+          </div>
+          <div class="program-tab" onclick="setActiveProgram('BCA')">
+            <i data-lucide="graduation-cap"></i>
+            <span>BCA</span>
+          </div>
+          <div class="program-tab" onclick="setActiveProgram('MCA')">
+            <i data-lucide="graduation-cap"></i>
+            <span>MCA</span>
+          </div>
+          <div class="program-tab" onclick="setActiveProgram('BTECH')">
+            <i data-lucide="graduation-cap"></i>
+            <span>B.Tech</span>
+          </div>
+        </div>
+
+        <div id="programContent">
+          <!-- Program content will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+      <div class="container-xl">
+        <div class="text-center">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Find answers to commonly asked questions about our programs
+          </p>
+        </div>
+
+        <div class="faq-list" id="faqList">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <div class="faq-question-content">
+                <div class="faq-number">1</div>
+                <div class="faq-question-text">
+                  <h3 class="faq-question-title">
+                    Why should I choose Sunstone?
+                  </h3>
+                  <div class="faq-category">Sunstone</div>
+                </div>
+              </div>
+              <i data-lucide="chevron-down" class="faq-toggle"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <div class="faq-answer-text">
+                  <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;">
+                      • Training and development sessions by industry experts
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                      • Hands-on capstone projects every semester
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                      • Professional portfolio development
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                      • Expert faculty from premier institutions
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                      • Comprehensive placement support and career guidance
+                    </li>
+                    <li>
+                      • Access to pan-India student community
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <div class="faq-question-content">
+                <div class="faq-number">2</div>
+                <div class="faq-question-text">
+                  <h3 class="faq-question-title">
+                    Does Sunstone provide an online or distance learning
+                    program?
+                  </h3>
+                  <div class="faq-category">Sunstone</div>
+                </div>
+              </div>
+              <i data-lucide="chevron-down" class="faq-toggle"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <div class="faq-answer-text">
+                  <p>
+                    Sunstone offers both online and offline learning programs.
+                    Our hybrid approach ensures flexibility while maintaining
+                    quality education standards. You can choose from various
+                    learning modes based on your preferences and requirements.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <div class="faq-question-content">
+                <div class="faq-number">3</div>
+                <div class="faq-question-text">
+                  <h3 class="faq-question-title">
+                    What makes Sunstone different from other education
+                    providers?
+                  </h3>
+                  <div class="faq-category">Sunstone</div>
+                </div>
+              </div>
+              <i data-lucide="chevron-down" class="faq-toggle"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <div class="faq-answer-text">
+                  <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.5rem;">
+                      • Industry-aligned curriculum designed with Fortune 500
+                      companies
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                      • Assured placement opportunities
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                      • Real-world projects and internships
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                      • Dedicated placement officer for each student
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                      • Expert mentorship from IIM/IIT faculty
+                    </li>
+                    <li style="margin-bottom: 0.5rem;">
+                      • Advanced certifications in emerging technologies
+                    </li>
+                    <li>
+                      • First year tuition fee back guarantee
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <div class="faq-question-content">
+                <div class="faq-number">4</div>
+                <div class="faq-question-text">
+                  <h3 class="faq-question-title">
+                    What is Sunstone's placement opportunity program?
+                  </h3>
+                  <div class="faq-category">Placement</div>
+                </div>
+              </div>
+              <i data-lucide="chevron-down" class="faq-toggle"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <div class="faq-answer-text">
+                  <p>
+                    Our placement opportunity program guarantees comprehensive
+                    career support and placement opportunities. If you don't
+                    receive the promised opportunities, we offer first year
+                    tuition fee back.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <div class="faq-question-content">
+                <div class="faq-number">5</div>
+                <div class="faq-question-text">
+                  <h3 class="faq-question-title">
+                    Are any EMI options available if I pursue a full-time course
+                    from Sunstone?
+                  </h3>
+                  <div class="faq-category">Fees</div>
+                </div>
+              </div>
+              <i data-lucide="chevron-down" class="faq-toggle"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <div class="faq-answer-text">
+                  <p>
+                    Yes, Sunstone offers flexible EMI options and financing
+                    solutions to make quality education accessible. We have
+                    partnered with leading financial institutions to provide
+                    easy payment plans that suit your financial situation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <div class="faq-question-content">
+                <div class="faq-number">6</div>
+                <div class="faq-question-text">
+                  <h3 class="faq-question-title">
+                    What kind of industry connections does Sunstone have?
+                  </h3>
+                  <div class="faq-category">Industry</div>
+                </div>
+              </div>
+              <i data-lucide="chevron-down" class="faq-toggle"></i>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <div class="faq-answer-text">
+                  <p>
+                    Sunstone has partnerships with 1200+ companies including
+                    Fortune 500 firms, leading startups, and established
+                    organizations across various sectors. Our strong industry
+                    network ensures maximum placement opportunities and
+                    internship programs for students.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="background: var(--primary-blue); color: white; text-align: center;">
+          <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">
+            Still Have Questions?
+          </h3>
+          <p style="font-size: 1.125rem; opacity: 0.9; margin-bottom: 2rem;">
+            Our expert counselors are here to guide you through your
+            educational journey
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a
+              href="tel:+917065303030"
+              class="btn"
+              style="background: white; color: var(--primary-blue);"
+            >
+              <i
+                data-lucide="phone"
+                style="margin-right: 0.5rem; width: 1.25rem; height: 1.25rem"
+              ></i>
+              Call Us Now
+            </a>
+            <a
+              href="https://sunstone.in/apply-now"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-orange"
+            >
+              <i
+                data-lucide="external-link"
+                style="margin-right: 0.5rem; width: 1.25rem; height: 1.25rem"
+              ></i>
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container-xl">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>Sunstone Education</h3>
+            <p>
+              Hi-Tech Institute powered by Sunstone. Quality education and
+              industry partnerships for your successful career.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/sunstone.in/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link instagram"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/sunstoneedu"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link facebook"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://in.linkedin.com/school/sunstone-/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link linkedin"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/@SunstoneIND"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link youtube"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M23.498 6.186a2.998 2.998 0 0 0-2.108-2.085C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.39.555A2.998 2.998 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.998 2.998 0 0 0 2.108 2.085c1.885.555 9.39.555 9.39.555s7.505 0 9.39-.555a2.998 2.998 0 0 0 2.108-2.085C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Programs</h3>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://sunstone.in/mba"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >MBA Program</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://sunstone.in/bba"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >BBA Program</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://sunstone.in/bca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >BCA Program</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://sunstone.in/mca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >MCA Program</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://sunstone.in/btech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >B.Tech Program</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <div>
+              <a href="mailto:connect@sunstone.in" class="contact-item">
+                <i data-lucide="mail" style="width: 1rem; height: 1rem"></i>
+                connect@sunstone.in
+              </a>
+              <a href="tel:+917065303030" class="contact-item">
+                <i data-lucide="phone" style="width: 1rem; height: 1rem"></i>
+                +91 7065-30-30-30
+              </a>
+              <a
+                href="https://sunstone.in/apply-now"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-orange"
+                style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.875rem"
+              >
+                Apply Now
+                <i
+                  data-lucide="external-link"
+                  style="margin-left: 0.5rem; width: 1rem; height: 1rem"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 Sunstone Education. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <span style="color: #6b7280">•</span>
+            <a href="#">Terms</a>
+            <span style="color: #6b7280">•</span>
+            <a
+              href="https://sunstone.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              >sunstone.in</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Lucide icons
+      document.addEventListener("DOMContentLoaded", function () {
+        lucide.createIcons();
+      });
+
+      // Enhanced Carousel Functionality
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".carousel-slide");
+      const dots = document.querySelectorAll(".carousel-dot");
+      const totalSlides = slides.length;
+      let autoPlayInterval;
+      let isUserInteracting = false;
+
+      // Touch handling for mobile
+      let startX = 0;
+      let endX = 0;
+      const carousel = document.getElementById("heroCarousel");
+
+      // Touch events for mobile swipe
+      carousel.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+        isUserInteracting = true;
+        pauseAutoPlay();
+      });
+
+      carousel.addEventListener("touchmove", (e) => {
+        e.preventDefault();
+      });
+
+      carousel.addEventListener("touchend", (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+        isUserInteracting = false;
+        startAutoPlay();
+      });
+
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        const swipeDistance = startX - endX;
+
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+          if (swipeDistance > 0) {
+            nextSlide();
+          } else {
+            previousSlide();
+          }
+        }
+      }
+
+      function setSlide(index) {
+        // Remove active class from current slide and dot
+        slides[currentSlide].classList.remove("active");
+        dots[currentSlide].classList.remove("active");
+
+        // Set new current slide
+        currentSlide = index;
+
+        // Add active class to new slide and dot
+        slides[currentSlide].classList.add("active");
+        dots[currentSlide].classList.add("active");
+
+        // Reset auto-play
+        if (!isUserInteracting) {
+          pauseAutoPlay();
+          startAutoPlay();
+        }
+      }
+
+      function nextSlide() {
+        const nextIndex = (currentSlide + 1) % totalSlides;
+        setSlide(nextIndex);
+      }
+
+      function previousSlide() {
+        const prevIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+        setSlide(prevIndex);
+      }
+
+      function startAutoPlay() {
+        autoPlayInterval = setInterval(() => {
+          if (!isUserInteracting) {
+            nextSlide();
+          }
+        }, 5000);
+      }
+
+      function pauseAutoPlay() {
+        if (autoPlayInterval) {
+          clearInterval(autoPlayInterval);
+        }
+      }
+
+      // Start auto-play when page loads
+      startAutoPlay();
+
+      // Pause on hover (desktop)
+      carousel.addEventListener("mouseenter", pauseAutoPlay);
+      carousel.addEventListener("mouseleave", () => {
+        if (!isUserInteracting) {
+          startAutoPlay();
+        }
+      });
+
+      // Programs Section Data
+      const programs = {
+        MBA: {
+          duration: "2-year program",
+          specializations: "5 specializations",
+          certifications: "10 certifications",
+          internships: "6+ months internships",
+          projects: "4 capstone projects",
+          eligibility:
+            "50% marks in graduation from a recognised university (45% for reserved category).",
+          specializations_list: [
+            {
+              name: "Marketing Management",
+              careers:
+                "Marketing Manager, Brand Manager, Digital Marketing Specialist",
+            },
+            {
+              name: "IT, Analytics & Research",
+              careers: "Business Analyst, Data Scientist, Research Analyst",
+            },
+            {
+              name: "Human Resource Management",
+              careers:
+                "HR Manager, Talent Acquisition Manager, HR Business Partner",
+            },
+            {
+              name: "Finance Management",
+              careers: "Finance Manager, Investment Analyst, Financial Planner",
+            },
+            {
+              name: "Operations Management",
+              careers:
+                "Operations Manager, Supply Chain Manager, Process Manager",
+            },
+          ],
+          url: "https://sunstone.in/campuses/hi-tech-institute/mba",
+        },
+        BBA: {
+          duration: "3-year program",
+          specializations: "6 specializations",
+          certifications: "10 certifications",
+          internships: "8+ months internships",
+          projects: "6 capstone projects",
+          eligibility:
+            "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). No specific subject requirements.",
+          specializations_list: [
+            {
+              name: "IT & Business Analytics",
+              careers:
+                "Big Data Analyst, Data Visualization Specialist, Business Intelligence Analyst",
+            },
+            {
+              name: "Human Resource & Talent Analytics",
+              careers:
+                "HR Data Analyst, Talent Acquisition Specialist, Workforce Planning Manager",
+            },
+            {
+              name: "Marketing Management",
+              careers: "Marketing Manager, Brand Manager, Campaign Strategist",
+            },
+            {
+              name: "Retail Sales Management",
+              careers:
+                "Retail Manager, Sales Executive, Store Operations Manager",
+            },
+            {
+              name: "Operations Management",
+              careers:
+                "Operations Manager, Production Manager, Logistics Coordinator",
+            },
+            {
+              name: "Banking, Financial Services and Insurance (BFSI)",
+              careers:
+                "Banking Officer, Financial Advisor, Insurance Specialist",
+            },
+          ],
+          url: "https://sunstone.in/campuses/hi-tech-institute/bba",
+        },
+        BCA: {
+          duration: "3-year program",
+          specializations: "6 specializations",
+          certifications: "10 certifications",
+          internships: "8+ months internships",
+          projects: "3 capstone projects",
+          eligibility:
+            "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Mathematics as a compulsory subject is preferred.",
+          specializations_list: [
+            {
+              name: "Cloud Computing",
+              careers: "Cloud Engineer, DevOps Engineer, Cloud Architect",
+            },
+            {
+              name: "Cyber Security & Forensics",
+              careers:
+                "Cybersecurity Analyst, Ethical Hacker, Digital Forensics Specialist",
+            },
+            {
+              name: "Blockchain",
+              careers:
+                "Blockchain Developer, Cryptocurrency Analyst, Smart Contract Developer",
+            },
+            {
+              name: "Machine Learning & AI",
+              careers: "ML Engineer, AI Developer, Data Scientist",
+            },
+            {
+              name: "Data Science & Analytics",
+              careers:
+                "Data Analyst, Business Intelligence Analyst, Data Visualization Expert",
+            },
+            {
+              name: "Full Stack Development",
+              careers:
+                "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
+            },
+          ],
+          url: "https://sunstone.in/campuses/hi-tech-institute/bca",
+        },
+        MCA: {
+          duration: "2-year program",
+          specializations: "5 specializations",
+          certifications: "10 certifications",
+          internships: "6+ months internships",
+          projects: "2 capstone projects",
+          eligibility:
+            "50% marks in graduation from a recognised university (45% for reserved category). Must have studied at least one of these subjects: Computer Science, Information Technology, Informatics Practices, Mathematics, Business Mathematics, or Statistics.",
+          specializations_list: [
+            {
+              name: "Full Stack Development",
+              careers:
+                "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
+            },
+            {
+              name: "Machine Learning & AI",
+              careers: "ML Engineer, AI Developer, Data Scientist",
+            },
+            {
+              name: "Data Science",
+              careers:
+                "Data Scientist, Data Analyst, Business Intelligence Specialist",
+            },
+            {
+              name: "Cloud Computing",
+              careers:
+                "Cloud Engineer, DevOps Engineer, Cloud Solutions Architect",
+            },
+            {
+              name: "Cyber Security",
+              careers:
+                "Cybersecurity Analyst, Security Engineer, Information Security Specialist",
+            },
+          ],
+          url: "https://sunstone.in/campuses/hi-tech-institute/mca",
+        },
+        BTECH: {
+          duration: "4-year program",
+          specializations: "2 specializations",
+          certifications: "10 certifications",
+          internships: "10+ months internships",
+          projects: "4 capstone projects",
+          eligibility:
+            "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Compulsory subjects: Physics, Mathematics and Chemistry.",
+          specializations_list: [
+            {
+              name: "Computer Science Engineering",
+              careers:
+                "Software Engineer, System Analyst, Application Developer",
+            },
+            {
+              name: "Information Technology",
+              careers: "IT Specialist, Business Analyst, Project Manager",
+            },
+          ],
+          url: "https://sunstone.in/campuses/hi-tech-institute/b-tech",
+        },
+      };
+
+      let activeProgram = "MBA";
+
+      function setActiveProgram(program) {
+        activeProgram = program;
+
+        // Update tab appearance
+        document.querySelectorAll(".program-tab").forEach((tab) => {
+          tab.classList.remove("active");
+        });
+        event.target.closest(".program-tab").classList.add("active");
+
+        // Update content
+        updateProgramContent(program);
+      }
+
+      function updateProgramContent(program) {
+        const programData = programs[program];
+        if (!programData) return;
+
+        const content = document.getElementById("programContent");
+
+        content.innerHTML = `
+                <div class="card">
+                    <div style="background: linear-gradient(135deg, var(--primary-blue), var(--blue-dark)); color: white; padding: 2rem; margin: -1.5rem -1.5rem 2rem -1.5rem; border-radius: 1rem 1rem 0 0;">
+                        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <div style="width: 4rem; height: 4rem; background: rgba(255, 255, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1.5rem;">
+                                <i data-lucide="graduation-cap" style="width: 2.5rem; height: 2.5rem; color: white;"></i>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">${program} Program</h3>
+                                <p style="opacity: 0.9; font-size: 1.125rem;">Excellence in Education</p>
+                            </div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem;">
+                            <div style="text-align: center; background: rgba(255, 255, 255, 0.2); border-radius: 0.75rem; padding: 1rem;">
+                                <i data-lucide="clock" style="width: 1.5rem; height: 1.5rem; color: white; margin-bottom: 0.5rem;"></i>
+                                <div style="font-weight: 700; font-size: 0.875rem;">${programData.duration}</div>
+                            </div>
+                            <div style="text-align: center; background: rgba(255, 255, 255, 0.2); border-radius: 0.75rem; padding: 1rem;">
+                                <i data-lucide="star" style="width: 1.5rem; height: 1.5rem; color: white; margin-bottom: 0.5rem;"></i>
+                                <div style="font-weight: 700; font-size: 0.875rem;">${programData.specializations}</div>
+                            </div>
+                            <div style="text-align: center; background: rgba(255, 255, 255, 0.2); border-radius: 0.75rem; padding: 1rem;">
+                                <i data-lucide="award" style="width: 1.5rem; height: 1.5rem; color: white; margin-bottom: 0.5rem;"></i>
+                                <div style="font-weight: 700; font-size: 0.875rem;">${programData.certifications}</div>
+                            </div>
+                            <div style="text-align: center; background: rgba(255, 255, 255, 0.2); border-radius: 0.75rem; padding: 1rem;">
+                                <i data-lucide="briefcase" style="width: 1.5rem; height: 1.5rem; color: white; margin-bottom: 0.5rem;"></i>
+                                <div style="font-weight: 700; font-size: 0.875rem;">${programData.internships}</div>
+                            </div>
+                            <div style="text-align: center; background: rgba(255, 255, 255, 0.2); border-radius: 0.75rem; padding: 1rem;">
+                                <i data-lucide="target" style="width: 1.5rem; height: 1.5rem; color: white; margin-bottom: 0.5rem;"></i>
+                                <div style="font-weight: 700; font-size: 0.875rem;">${programData.projects}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 2rem;">
+                        <div>
+                            <h4 style="display: flex; align-items: center; gap: 0.75rem; font-size: 1.5rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 1.5rem;">
+                                <i data-lucide="star" style="width: 1.5rem; height: 1.5rem; color: var(--primary-orange);"></i>
+                                Specializations
+                            </h4>
+                            <div style="display: grid; gap: 1rem;">
+                                ${programData.specializations_list
+                                  .map(
+                                    (spec) => `
+                                    <div style="background: #f9fafb; border-radius: 0.75rem; padding: 1.25rem; transition: all 0.3s ease; border: 1px solid transparent;">
+                                        <div style="display: flex; align-items: start; gap: 1rem;">
+                                            <div style="width: 2rem; height: 2rem; background: var(--primary-orange); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease;">
+                                                <i data-lucide="target" style="width: 1rem; height: 1rem; color: white;"></i>
+                                            </div>
+                                            <div>
+                                                <h5 style="font-weight: 700; color: var(--primary-blue); margin-bottom: 0.5rem; transition: all 0.3s ease;">${spec.name}</h5>
+                                                <p style="color: #6b7280; font-size: 0.875rem; line-height: 1.6;">${spec.careers}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `,
+                                  )
+                                  .join("")}
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="display: flex; align-items: center; gap: 0.75rem; font-size: 1.5rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 1.5rem;">
+                                <i data-lucide="award" style="width: 1.5rem; height: 1.5rem; color: var(--primary-orange);"></i>
+                                Eligibility
+                            </h4>
+                            <div style="background: linear-gradient(135deg, rgba(34, 51, 106, 0.05), rgba(195, 137, 53, 0.05)); border-radius: 0.75rem; padding: 1.5rem; border: 1px solid #f3f4f6; margin-bottom: 1.5rem;">
+                                <p style="color: #374151; line-height: 1.6;">${programData.eligibility}</p>
+                            </div>
+                            <a href="${programData.url}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                                <span>Apply Now</span>
+                                <i data-lucide="external-link" style="margin-left: 0.5rem; width: 1.25rem; height: 1.25rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+        // Re-initialize Lucide icons for the new content
+        lucide.createIcons();
+      }
+
+      // FAQ Toggle
+      function toggleFAQ(element) {
+        const faqItem = element.closest(".faq-item");
+        const isActive = faqItem.classList.contains("active");
+
+        // Close all FAQ items
+        document.querySelectorAll(".faq-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // If this item wasn't active, open it
+        if (!isActive) {
+          faqItem.classList.add("active");
+        }
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Add animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements with animation classes
+      document
+        .querySelectorAll(
+          ".animate-fade-in, .animate-slide-up, .animate-slide-in-left, .animate-slide-in-right",
+        )
+        .forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(20px)";
+          el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          observer.observe(el);
+        });
+
+      // Initialize program content
+      updateProgramContent("MBA");
+
+      // Handle keyboard navigation for carousel
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") {
+          previousSlide();
+        } else if (e.key === "ArrowRight") {
+          nextSlide();
+        }
+      });
+
+      // Handle visibility change to pause/resume auto-play
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          pauseAutoPlay();
+        } else {
+          startAutoPlay();
+        }
+      });
+    </script>
+  </body>
+</html>
