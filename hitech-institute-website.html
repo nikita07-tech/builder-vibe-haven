@@ -387,54 +387,7 @@
         box-shadow: 0 8px 20px rgba(195, 137, 53, 0.4);
       }
 
-      /* Apply Now Button */
-      .apply-now-button {
-        position: fixed;
-        right: 24px;
-        bottom: 24px;
-        z-index: 50;
-      }
-
-      .apply-now-floating {
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        background: linear-gradient(
-          135deg,
-          var(--primary-orange),
-          var(--orange-light)
-        );
-        color: white;
-        text-decoration: none;
-        padding: 16px 24px;
-        border-radius: 16px;
-        font-weight: 700;
-        box-shadow: 0 8px 32px rgba(195, 137, 53, 0.4);
-        transition: all 0.5s ease;
-        animation: bounce-subtle 2s ease-in-out infinite;
-      }
-
-      .apply-now-floating:hover {
-        transform: scale(1.1) translateY(-4px) rotate(2deg);
-        box-shadow: 0 12px 40px rgba(195, 137, 53, 0.6);
-      }
-
-      .apply-now-floating::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          135deg,
-          var(--primary-orange),
-          var(--orange-light)
-        );
-        border-radius: 16px;
-        opacity: 0.3;
-        animation: pulse 2s ease-in-out infinite;
-      }
-
-      /* Hero Section */
+      /* Enhanced Carousel Styles */
       .hero {
         background: var(--primary-blue);
         color: white;
@@ -530,13 +483,25 @@
         border-radius: 16px;
         padding: 8px;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s ease;
       }
 
+      .media-container:hover {
+        transform: translateY(-8px) scale(1.01);
+        box-shadow: 0 32px 64px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Enhanced Carousel Container */
       .carousel-container {
         position: relative;
         border-radius: 12px;
         overflow: hidden;
         aspect-ratio: 4/3;
+        cursor: grab;
+      }
+
+      .carousel-container:active {
+        cursor: grabbing;
       }
 
       .carousel-slide {
@@ -565,6 +530,47 @@
         border: none;
       }
 
+      /* Enhanced Navigation Arrows */
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.4);
+        border: none;
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        transition: all 0.3s ease;
+        opacity: 0;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        z-index: 20;
+      }
+
+      .carousel-container:hover .carousel-nav {
+        opacity: 1;
+      }
+
+      .carousel-nav:hover {
+        background: rgba(0, 0, 0, 0.6);
+        transform: translateY(-50%) scale(1.1);
+      }
+
+      .carousel-nav.prev {
+        left: 12px;
+      }
+
+      .carousel-nav.next {
+        right: 12px;
+      }
+
+      /* Enhanced Carousel Dots */
       .carousel-dots {
         position: absolute;
         bottom: 12px;
@@ -572,11 +578,16 @@
         transform: translateX(-50%);
         display: flex;
         gap: 8px;
+        z-index: 10;
+        padding: 8px 16px;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
       }
 
       .carousel-dot {
-        width: 8px;
-        height: 8px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.5);
         cursor: pointer;
@@ -585,6 +596,111 @@
 
       .carousel-dot.active {
         background: white;
+        transform: scale(1.2);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+
+      .carousel-dot:hover {
+        background: rgba(255, 255, 255, 0.8);
+        transform: scale(1.1);
+      }
+
+      /* Enhanced Slide Content Indicator */
+      .carousel-content-overlay {
+        position: absolute;
+        bottom: 50px;
+        left: 16px;
+        right: 16px;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8),
+          rgba(0, 0, 0, 0.4),
+          transparent
+        );
+        color: white;
+        padding: 16px;
+        border-radius: 12px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+      }
+
+      .carousel-container:hover .carousel-content-overlay {
+        opacity: 1;
+      }
+
+      .carousel-content-title {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .carousel-content-subtitle {
+        font-size: 12px;
+        opacity: 0.9;
+      }
+
+      /* Mobile Swipe Indicator */
+      .carousel-swipe-indicator {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 6px 12px;
+        color: white;
+        font-size: 12px;
+        opacity: 0.8;
+        animation: pulse 2s infinite;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      /* Apply Now Button */
+      .apply-now-button {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        z-index: 50;
+      }
+
+      .apply-now-floating {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: linear-gradient(
+          135deg,
+          var(--primary-orange),
+          var(--orange-light)
+        );
+        color: white;
+        text-decoration: none;
+        padding: 16px 24px;
+        border-radius: 16px;
+        font-weight: 700;
+        box-shadow: 0 8px 32px rgba(195, 137, 53, 0.4);
+        transition: all 0.5s ease;
+        animation: bounce-subtle 2s ease-in-out infinite;
+      }
+
+      .apply-now-floating:hover {
+        transform: scale(1.1) translateY(-4px) rotate(2deg);
+        box-shadow: 0 12px 40px rgba(195, 137, 53, 0.6);
+      }
+
+      .apply-now-floating::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          var(--primary-orange),
+          var(--orange-light)
+        );
+        border-radius: 16px;
+        opacity: 0.3;
+        animation: pulse 2s ease-in-out infinite;
       }
 
       /* Placement Highlights */
@@ -1500,1039 +1616,51 @@
         background: #f9fafb;
         border-radius: 12px;
         padding: 20px;
+        border: 1px solid #e5e7eb;
         transition: all 0.3s ease;
-        border: 1px solid transparent;
       }
 
       .specialization-item:hover {
-        background: white;
+        transform: translateY(-2px);
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        border-color: rgba(195, 137, 53, 0.2);
+        border-color: var(--primary-orange);
       }
 
-      .specialization-header {
-        display: flex;
-        align-items: start;
-        gap: 16px;
-      }
-
-      .specialization-icon {
-        width: 32px;
-        height: 32px;
-        background: var(--primary-orange);
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-        transition: all 0.3s ease;
-      }
-
-      .specialization-item:hover .specialization-icon {
-        transform: scale(1.1);
-      }
-
-      .specialization-content h5 {
+      .specialization-title {
         font-weight: 700;
         color: var(--primary-blue);
         margin-bottom: 8px;
-        transition: all 0.3s ease;
       }
 
-      .specialization-item:hover .specialization-content h5 {
-        color: var(--primary-orange);
-      }
-
-      .specialization-content p {
+      .specialization-description {
         color: #6b7280;
         font-size: 0.875rem;
-        line-height: 1.6;
+        line-height: 1.5;
+      }
+
+      .eligibility {
+        background: #f0f9ff;
+        border-radius: 16px;
+        padding: 32px;
+        border: 1px solid #e0f2fe;
       }
 
       .eligibility h4 {
         font-size: 1.5rem;
         font-weight: 700;
         color: var(--primary-blue);
-        margin-bottom: 24px;
+        margin-bottom: 16px;
         display: flex;
         align-items: center;
         gap: 12px;
       }
 
-      .eligibility-content {
-        background: linear-gradient(
-          135deg,
-          rgba(34, 51, 106, 0.05),
-          rgba(195, 137, 53, 0.05)
-        );
-        border-radius: 12px;
-        padding: 24px;
-        border: 1px solid #f3f4f6;
-        margin-bottom: 24px;
-      }
-
-      .eligibility-content p {
+      .eligibility-text {
         color: #374151;
         line-height: 1.6;
       }
 
-      /* Top Recruiters */
-      .recruiters {
-        padding: 80px 0;
-        background: white;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .recruiters-title {
-        font-size: 3rem;
-        font-weight: 700;
-        color: var(--primary-blue);
-        text-align: center;
-        margin-bottom: 24px;
-      }
-
-      .recruiters-description {
-        text-align: center;
-        font-size: 1.25rem;
-        color: #374151;
-        margin-bottom: 64px;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .recruiters-tracks {
-        margin-bottom: 64px;
-      }
-
-      .recruiters-track {
-        background: white;
-        border-radius: 16px;
-        padding: 24px 0;
-        margin-bottom: 32px;
-        overflow: hidden;
-      }
-
-      .recruiters-row {
-        display: flex;
-        gap: 48px;
-        animation: scroll-right-to-left 30s linear infinite;
-      }
-
-      .recruiters-row.reverse {
-        animation: scroll-left-to-right 25s linear infinite;
-      }
-
-      .recruiter-item {
-        flex-shrink: 0;
-        transition: all 0.3s ease;
-      }
-
-      .recruiter-item:hover {
-        transform: scale(1.1);
-      }
-
-      .recruiter-item img {
-        height: 64px;
-        width: auto;
-      }
-
-      /* Fee Payment */
-      .fee-payment {
-        padding: 80px 0;
-        background: linear-gradient(135deg, #f9fafb, white, #f0f9ff);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .fee-badge {
-        display: inline-flex;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
-        border-radius: 50px;
-        padding: 12px 24px;
-        border: 1px solid #e5e7eb;
-        margin-bottom: 32px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      }
-
-      .fee-title {
-        font-size: 3rem;
-        font-weight: 700;
-        color: var(--primary-blue);
-        text-align: center;
-        margin-bottom: 24px;
-        line-height: 1.1;
-      }
-
-      .fee-highlight {
-        background: linear-gradient(135deg, var(--primary-orange), #fbbf24);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .fee-description {
-        text-align: center;
-        font-size: 1.125rem;
-        color: #374151;
-        margin-bottom: 48px;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .fee-card {
-        max-width: 800px;
-        margin: 0 auto;
-        background: linear-gradient(
-          135deg,
-          var(--primary-orange),
-          var(--orange-dark)
-        );
-        border-radius: 16px;
-        padding: 48px;
-        color: white;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 20px 40px rgba(195, 137, 53, 0.3);
-      }
-
-      .fee-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(255, 255, 255, 0.1),
-          transparent
-        );
-      }
-
-      .fee-card-content {
-        position: relative;
-        z-index: 10;
-      }
-
-      .fee-card-badge {
-        background: rgba(255, 255, 255, 0.2);
-        padding: 8px 24px;
-        border-radius: 50px;
-        display: inline-block;
-        margin-bottom: 24px;
-      }
-
-      .fee-card-title {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 16px;
-      }
-
-      .fee-card-description {
-        font-size: 1.125rem;
-        opacity: 0.9;
-        margin-bottom: 32px;
-        max-width: 500px;
-      }
-
-      .fee-features {
-        margin-bottom: 32px;
-      }
-
-      .fee-feature {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 12px;
-        padding: 16px;
-        margin-bottom: 16px;
-      }
-
-      .fee-feature-icon {
-        width: 24px;
-        height: 24px;
-        background: white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--primary-orange);
-        font-weight: 700;
-      }
-
-      .fee-actions {
-        display: flex;
-        gap: 16px;
-      }
-
-      /* Admission Process */
-      .admission-process {
-        padding: 96px 0;
-        background: #f9fafb;
-        position: relative;
-      }
-
-      .admission-badge {
-        display: inline-block;
-        background: var(--primary-blue);
-        color: white;
-        padding: 8px 24px;
-        border-radius: 50px;
-        font-size: 0.875rem;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        margin-bottom: 24px;
-      }
-
-      .admission-title {
-        font-size: 3rem;
-        font-weight: 700;
-        color: var(--primary-blue);
-        text-align: center;
-        margin-bottom: 24px;
-      }
-
-      .admission-description {
-        text-align: center;
-        font-size: 1.125rem;
-        color: #374151;
-        margin-bottom: 64px;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .admission-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 24px;
-        margin-bottom: 64px;
-      }
-
-      .admission-step {
-        background: white;
-        border-radius: 16px;
-        padding: 32px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        border: 1px solid #e5e7eb;
-        text-align: center;
-        height: 320px;
-        display: flex;
-        flex-direction: column;
-        transition: all 0.3s ease;
-      }
-
-      .admission-step:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-      }
-
-      .step-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 24px;
-      }
-
-      .step-icon {
-        width: 64px;
-        height: 64px;
-        background: var(--primary-blue);
-        color: white;
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-      }
-
-      .admission-step:hover .step-icon {
-        background: var(--primary-orange);
-      }
-
-      .step-number {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--primary-blue);
-        transition: all 0.3s ease;
-      }
-
-      .admission-step:hover .step-number {
-        color: var(--primary-orange);
-      }
-
-      .step-title {
-        font-size: 1.125rem;
-        font-weight: 700;
-        color: var(--primary-blue);
-        margin-bottom: 16px;
-        transition: all 0.3s ease;
-      }
-
-      .admission-step:hover .step-title {
-        color: var(--primary-orange);
-      }
-
-      .step-description {
-        color: #6b7280;
-        line-height: 1.6;
-        flex-grow: 1;
-      }
-
-      .admission-cta {
-        background: linear-gradient(
-          135deg,
-          var(--primary-blue),
-          var(--primary-orange)
-        );
-        border-radius: 16px;
-        padding: 48px;
-        color: white;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .admission-cta::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 128px;
-        height: 128px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 50%;
-        transform: translate(32px, -32px);
-      }
-
-      .admission-cta::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 96px;
-        height: 96px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 50%;
-        transform: translate(-24px, 24px);
-      }
-
-      .admission-cta-content {
-        position: relative;
-        z-index: 10;
-      }
-
-      .admission-cta h3 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 16px;
-      }
-
-      .admission-cta p {
-        font-size: 1.125rem;
-        opacity: 0.9;
-        margin-bottom: 32px;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .admission-cta-actions {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-      }
-
-      /* Testimonials */
-      .testimonials {
-        padding: 80px 0;
-        background: linear-gradient(135deg, #f9fafb, white, #f0f9ff);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .testimonials::before {
-        content: "";
-        position: absolute;
-        top: 80px;
-        left: 80px;
-        width: 300px;
-        height: 300px;
-        background: radial-gradient(
-          circle,
-          rgba(34, 51, 106, 0.05),
-          transparent
-        );
-        border-radius: 50%;
-        filter: blur(60px);
-        animation: float 6s ease-in-out infinite;
-      }
-
-      .testimonials::after {
-        content: "";
-        position: absolute;
-        bottom: 80px;
-        right: 80px;
-        width: 400px;
-        height: 400px;
-        background: radial-gradient(
-          circle,
-          rgba(195, 137, 53, 0.05),
-          transparent
-        );
-        border-radius: 50%;
-        filter: blur(60px);
-        animation: float 6s ease-in-out infinite 3s;
-      }
-
-      .testimonials-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(34, 51, 106, 0.1);
-        border-radius: 50px;
-        padding: 12px 24px;
-        margin-bottom: 24px;
-      }
-
-      .testimonials-title {
-        font-size: 3.5rem;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 24px;
-        line-height: 1.1;
-      }
-
-      .testimonials-title .highlight {
-        background: linear-gradient(
-          135deg,
-          var(--primary-orange),
-          var(--orange-light)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .testimonials-title .blue {
-        background: linear-gradient(
-          135deg,
-          var(--primary-blue),
-          var(--blue-dark)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .testimonials-description {
-        text-align: center;
-        font-size: 1.25rem;
-        color: #374151;
-        margin-bottom: 64px;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .testimonials-scroll {
-        overflow: hidden;
-        margin-bottom: 64px;
-      }
-
-      .testimonials-track {
-        display: flex;
-        gap: 24px;
-        animation: scroll-left-to-right 25s linear infinite;
-      }
-
-      .testimonial-item {
-        flex-shrink: 0;
-        width: 320px;
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
-        border: 2px solid #e5e7eb;
-        border-radius: 16px;
-        padding: 24px;
-        transition: all 0.5s ease;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .testimonial-item:hover {
-        transform: translateY(-16px) scale(1.05);
-        border-color: var(--primary-orange);
-        box-shadow: 0 32px 64px rgba(0, 0, 0, 0.15);
-      }
-
-      .testimonial-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 16px;
-      }
-
-      .testimonial-avatar {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-right: 12px;
-        border: 2px solid #e5e7eb;
-        transition: all 0.3s ease;
-      }
-
-      .testimonial-item:hover .testimonial-avatar {
-        transform: scale(1.1);
-      }
-
-      .testimonial-avatar img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .testimonial-info h4 {
-        font-weight: 700;
-        color: var(--primary-blue);
-        transition: all 0.3s ease;
-      }
-
-      .testimonial-item:hover .testimonial-info h4 {
-        color: var(--primary-orange);
-      }
-
-      .testimonial-info .role {
-        font-size: 0.75rem;
-        color: #6b7280;
-      }
-
-      .testimonial-info .company {
-        font-size: 0.75rem;
-        color: var(--primary-orange);
-        font-weight: 600;
-      }
-
-      .testimonial-rating {
-        display: flex;
-        gap: 4px;
-        margin-bottom: 12px;
-      }
-
-      .star {
-        width: 16px;
-        height: 16px;
-        color: #fbbf24;
-      }
-
-      .testimonial-content {
-        flex-grow: 1;
-        position: relative;
-      }
-
-      .testimonial-quote {
-        font-size: 3rem;
-        color: rgba(195, 137, 53, 0.2);
-        position: absolute;
-        top: -8px;
-        left: -8px;
-        font-family: serif;
-      }
-
-      .testimonial-text {
-        color: #374151;
-        font-size: 0.75rem;
-        font-style: italic;
-        line-height: 1.6;
-        padding-left: 16px;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical;
-      }
-
-      /* FAQ Section */
-      .faq {
-        padding: 80px 0;
-        background: white;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .faq::before {
-        content: "";
-        position: absolute;
-        top: 40px;
-        left: 40px;
-        width: 256px;
-        height: 256px;
-        background: radial-gradient(
-          circle,
-          rgba(34, 51, 106, 0.03),
-          transparent
-        );
-        border-radius: 50%;
-        filter: blur(60px);
-      }
-
-      .faq::after {
-        content: "";
-        position: absolute;
-        bottom: 40px;
-        right: 40px;
-        width: 320px;
-        height: 320px;
-        background: radial-gradient(
-          circle,
-          rgba(34, 51, 106, 0.03),
-          transparent
-        );
-        border-radius: 50%;
-        filter: blur(60px);
-      }
-
-      .faq-title {
-        font-size: 3.5rem;
-        font-weight: 700;
-        color: var(--primary-blue);
-        text-align: center;
-        margin-bottom: 24px;
-      }
-
-      .faq-description {
-        text-align: center;
-        font-size: 1.25rem;
-        color: #374151;
-        margin-bottom: 64px;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .faq-list {
-        max-width: 1000px;
-        margin: 0 auto 64px auto;
-      }
-
-      .faq-item {
-        margin-bottom: 16px;
-      }
-
-      .faq-question {
-        background: #f9fafb;
-        border: 1px solid #e5e7eb;
-        border-radius: 12px;
-        padding: 24px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: between;
-      }
-
-      .faq-question:hover {
-        background: white;
-        border-color: rgba(34, 51, 106, 0.3);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      }
-
-      .faq-question-content {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        flex: 1;
-      }
-
-      .faq-number {
-        width: 48px;
-        height: 48px;
-        background: var(--primary-blue);
-        color: white;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        transition: all 0.3s ease;
-      }
-
-      .faq-question:hover .faq-number {
-        transform: scale(1.1);
-      }
-
-      .faq-question-text {
-        flex: 1;
-      }
-
-      .faq-question-title {
-        font-size: 1.125rem;
-        font-weight: 700;
-        color: var(--primary-blue);
-        margin-bottom: 4px;
-        transition: all 0.3s ease;
-      }
-
-      .faq-question:hover .faq-question-title {
-        color: var(--primary-blue);
-      }
-
-      .faq-category {
-        font-size: 0.875rem;
-        color: rgba(34, 51, 106, 0.7);
-        font-weight: 600;
-      }
-
-      .faq-toggle {
-        width: 24px;
-        height: 24px;
-        color: #6b7280;
-        transition: all 0.3s ease;
-      }
-
-      .faq-question:hover .faq-toggle {
-        color: var(--primary-blue);
-        transform: rotate(180deg);
-      }
-
-      .faq-answer {
-        padding: 0 24px;
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.3s ease;
-      }
-
-      .faq-item.active .faq-answer {
-        max-height: 500px;
-        padding: 24px;
-      }
-
-      .faq-answer-content {
-        background: white;
-        border-radius: 12px;
-        padding: 24px;
-        margin-left: 64px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        border-top: 1px solid #e5e7eb;
-      }
-
-      .faq-answer-text {
-        color: #374151;
-        line-height: 1.6;
-      }
-
-      .faq-answer-list {
-        margin: 8px 0;
-      }
-
-      .faq-answer-list li {
-        display: flex;
-        align-items: start;
-        gap: 8px;
-        margin-bottom: 8px;
-      }
-
-      .faq-answer-list .bullet {
-        color: var(--primary-orange);
-        font-weight: 700;
-        font-size: 1.125rem;
-        margin-top: 2px;
-      }
-
-      .faq-cta {
-        background: var(--primary-blue);
-        border-radius: 24px;
-        padding: 48px;
-        color: white;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .faq-cta::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 128px;
-        height: 128px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 50%;
-        transform: translate(32px, -32px);
-      }
-
-      .faq-cta::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 96px;
-        height: 96px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 50%;
-        transform: translate(-24px, 24px);
-      }
-
-      .faq-cta-content {
-        position: relative;
-        z-index: 10;
-      }
-
-      .faq-cta h3 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 16px;
-      }
-
-      .faq-cta p {
-        font-size: 1.125rem;
-        opacity: 0.9;
-        margin-bottom: 32px;
-      }
-
-      .faq-cta-actions {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-      }
-
-      /* Footer */
-      .footer {
-        background: var(--primary-blue);
-        color: white;
-        padding: 48px 0 24px 0;
-      }
-
-      .footer-content {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        gap: 48px;
-        margin-bottom: 32px;
-      }
-
-      .footer-brand h3 {
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin-bottom: 16px;
-      }
-
-      .footer-brand p {
-        color: #d1d5db;
-        margin-bottom: 24px;
-        max-width: 400px;
-        line-height: 1.6;
-      }
-
-      .social-links {
-        display: flex;
-        gap: 16px;
-      }
-
-      .social-link {
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-
-      .social-link:hover {
-        transform: scale(1.1);
-      }
-
-      .social-link.instagram {
-        background: linear-gradient(135deg, #833ab4, #fd1d1d, #f77737);
-      }
-
-      .social-link.facebook {
-        background: #1877f2;
-      }
-
-      .social-link.linkedin {
-        background: #0a66c2;
-      }
-
-      .social-link.youtube {
-        background: #ff0000;
-      }
-
-      .footer-section h3 {
-        font-size: 1.125rem;
-        font-weight: 700;
-        margin-bottom: 16px;
-      }
-
-      .footer-links {
-        list-style: none;
-      }
-
-      .footer-links li {
-        margin-bottom: 8px;
-      }
-
-      .footer-links a {
-        color: #d1d5db;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-
-      .footer-links a:hover {
-        color: var(--primary-orange);
-      }
-
-      .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: #d1d5db;
-        text-decoration: none;
-        margin-bottom: 12px;
-        transition: all 0.3s ease;
-      }
-
-      .contact-item:hover {
-        color: var(--primary-orange);
-      }
-
-      .footer-bottom {
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-        padding-top: 24px;
-        display: flex;
-        justify-content: between;
-        align-items: center;
-      }
-
-      .footer-bottom p {
-        color: #9ca3af;
-      }
-
-      .footer-bottom-links {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-
-      .footer-bottom-links a {
-        color: #9ca3af;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-
-      .footer-bottom-links a:hover {
-        color: var(--primary-orange);
-      }
-
-      /* Animations */
+      /* Common animations */
       @keyframes bounce-subtle {
         0%,
         100% {
@@ -2540,6 +1668,24 @@
         }
         50% {
           transform: translateY(-10px);
+        }
+      }
+
+      @keyframes bounce-in {
+        0% {
+          opacity: 0;
+          transform: scale(0.3) translateY(-2000px);
+        }
+        60% {
+          opacity: 1;
+          transform: scale(1.1) translateY(30px);
+        }
+        80% {
+          transform: scale(0.9) translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1) translateY(0);
         }
       }
 
@@ -2553,31 +1699,6 @@
         }
       }
 
-      @keyframes bounce-in {
-        0% {
-          opacity: 0;
-          transform: scale(0.3);
-        }
-        50% {
-          opacity: 1;
-          transform: scale(1.1);
-        }
-        100% {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-      }
-
       @keyframes scroll-right-to-left {
         0% {
           transform: translateX(0);
@@ -2587,93 +1708,587 @@
         }
       }
 
-      @keyframes scroll-left-to-right {
-        0% {
-          transform: translateX(-50%);
+      /* Enhanced Mobile Responsive Design */
+      @media (max-width: 768px) {
+        .container,
+        .container-xl {
+          padding: 0 16px;
         }
-        100% {
-          transform: translateX(0);
+
+        /* Header Mobile */
+        .header-content {
+          height: 64px;
+          padding: 0 16px;
+        }
+
+        .logo {
+          height: 20px;
+        }
+
+        .contact-email {
+          display: none;
+        }
+
+        .contact-phone {
+          padding: 6px 12px;
+          font-size: 0.875rem;
+        }
+
+        /* Hero Mobile */
+        .hero {
+          padding: 40px 0;
+        }
+
+        .hero-content {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          text-align: center;
+        }
+
+        .hero-text h1 {
+          font-size: 1.875rem;
+          margin-bottom: 16px;
+        }
+
+        .hero-description {
+          font-size: 1rem;
+          margin-bottom: 24px;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .hero-buttons .btn {
+          padding: 12px 20px;
+          font-size: 0.875rem;
+        }
+
+        /* Enhanced Carousel Mobile */
+        .media-container {
+          padding: 4px;
+          border-radius: 12px;
+        }
+
+        .carousel-container {
+          border-radius: 8px;
+        }
+
+        .carousel-nav {
+          display: none; /* Hide arrows on mobile for touch gestures */
+        }
+
+        .carousel-dots {
+          bottom: 8px;
+          padding: 6px 12px;
+        }
+
+        .carousel-dot {
+          width: 8px;
+          height: 8px;
+        }
+
+        .carousel-content-overlay {
+          bottom: 30px;
+          left: 12px;
+          right: 12px;
+          padding: 12px;
+        }
+
+        .carousel-content-title {
+          font-size: 12px;
+        }
+
+        .carousel-content-subtitle {
+          font-size: 10px;
+        }
+
+        .carousel-swipe-indicator {
+          top: 8px;
+          right: 8px;
+          padding: 4px 8px;
+          font-size: 10px;
+        }
+
+        /* Apply Now Button Mobile */
+        .apply-now-button {
+          right: 16px;
+          bottom: 16px;
+        }
+
+        .apply-now-floating {
+          padding: 12px 16px;
+          font-size: 0.875rem;
+          border-radius: 12px;
+        }
+
+        /* Placement Highlights Mobile */
+        .placement-highlights {
+          padding: 24px 0;
+        }
+
+        .highlight-card {
+          padding: 20px;
+          border-radius: 12px;
+        }
+
+        .highlight-header {
+          padding: 16px;
+          margin: -20px -20px 20px -20px;
+          border-radius: 12px 12px 0 0;
+        }
+
+        .highlight-header h3 {
+          font-size: 1.25rem;
+          margin-bottom: 8px;
+        }
+
+        .stats-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          margin-bottom: 20px;
+        }
+
+        .stat-number {
+          font-size: 1.5rem;
+        }
+
+        .comparison-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        .comparison-item {
+          padding: 16px;
+          border-radius: 8px;
+        }
+
+        .comparison-icon {
+          width: 40px;
+          height: 40px;
+          font-size: 0.875rem;
+        }
+
+        /* Video Experience Mobile */
+        .video-experience {
+          padding: 40px 0;
+        }
+
+        .experience-badge {
+          padding: 12px 20px;
+          font-size: 0.875rem;
+          border-radius: 25px;
+          margin-bottom: 24px;
+        }
+
+        .experience-title {
+          font-size: 2rem;
+          margin-bottom: 16px;
+        }
+
+        .experience-description {
+          font-size: 1rem;
+          margin-bottom: 24px;
+        }
+
+        .experience-stats {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          margin-bottom: 32px;
+        }
+
+        .experience-stat {
+          padding: 16px;
+          border-radius: 12px;
+        }
+
+        .experience-stat-number {
+          font-size: 1.875rem;
+        }
+
+        .video-container {
+          padding: 16px;
+          border-radius: 16px;
+        }
+
+        .video-frame {
+          border-radius: 12px;
+        }
+
+        .video-info {
+          padding: 20px;
+        }
+
+        .video-title {
+          font-size: 1.125rem;
+          margin-bottom: 12px;
+        }
+
+        .video-description {
+          font-size: 0.875rem;
+          margin-bottom: 20px;
+        }
+
+        .video-actions {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .video-actions .btn {
+          padding: 12px 20px;
+          font-size: 0.875rem;
+        }
+
+        /* Philosophy Mobile */
+        .philosophy {
+          padding: 40px 0;
+        }
+
+        .philosophy-title {
+          font-size: 1.875rem;
+          margin-bottom: 16px;
+        }
+
+        .philosophy-description {
+          font-size: 1rem;
+          margin-bottom: 32px;
+        }
+
+        .philosophy-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .philosophy-card {
+          padding: 20px;
+          border-radius: 12px;
+        }
+
+        .philosophy-icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 12px;
+          margin-bottom: 16px;
+        }
+
+        .philosophy-number {
+          font-size: 1.25rem;
+          margin-bottom: 12px;
+        }
+
+        .philosophy-card-title {
+          font-size: 1rem;
+          margin-bottom: 12px;
+        }
+
+        .philosophy-card-description {
+          font-size: 0.875rem;
+        }
+
+        /* POP Section Mobile */
+        .pop-section {
+          padding: 40px 0;
+        }
+
+        .pop-title {
+          font-size: 2rem;
+          margin-bottom: 12px;
+        }
+
+        .pop-subtitle {
+          font-size: 1rem;
+          margin-bottom: 32px;
+        }
+
+        .pop-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .pop-card {
+          padding: 20px;
+          border-radius: 12px;
+        }
+
+        .pop-icon {
+          width: 48px;
+          height: 48px;
+          margin-bottom: 16px;
+        }
+
+        .pop-card-title {
+          font-size: 1rem;
+          margin-bottom: 12px;
+        }
+
+        .pop-card-description {
+          font-size: 0.875rem;
+        }
+
+        /* New Age Education Mobile */
+        .new-age-education {
+          padding: 40px 0;
+        }
+
+        .education-title {
+          font-size: 2rem;
+          margin-bottom: 16px;
+        }
+
+        .education-description {
+          font-size: 1rem;
+          margin-bottom: 32px;
+        }
+
+        .education-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .education-card {
+          padding: 20px;
+          border-radius: 12px;
+        }
+
+        .education-icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 12px;
+          margin-bottom: 16px;
+          font-size: 1.5rem;
+        }
+
+        .education-card-title {
+          font-size: 1rem;
+          margin-bottom: 12px;
+        }
+
+        .education-card-description {
+          font-size: 0.875rem;
+        }
+
+        /* Awards Mobile */
+        .awards {
+          padding: 40px 0;
+        }
+
+        .awards-title {
+          font-size: 2rem;
+          margin-bottom: 16px;
+        }
+
+        .awards-description {
+          font-size: 1rem;
+          margin-bottom: 32px;
+        }
+
+        .awards-scroll {
+          padding: 20px 0;
+          margin-bottom: 32px;
+        }
+
+        .award-item {
+          width: 240px;
+          padding: 16px;
+        }
+
+        .award-image {
+          height: 120px;
+          margin-bottom: 12px;
+        }
+
+        .award-title {
+          font-size: 1rem;
+          margin-bottom: 6px;
+        }
+
+        .award-description {
+          font-size: 0.75rem;
+        }
+
+        /* Programs Mobile */
+        .programs {
+          padding: 40px 0;
+        }
+
+        .programs-title {
+          font-size: 2rem;
+          margin-bottom: 16px;
+        }
+
+        .programs-description {
+          font-size: 1rem;
+          margin-bottom: 32px;
+        }
+
+        .program-tabs {
+          margin-bottom: 32px;
+          gap: 8px;
+        }
+
+        .program-tab {
+          padding: 10px 16px;
+          font-size: 0.875rem;
+          border-radius: 12px;
+        }
+
+        .program-content {
+          border-radius: 16px;
+        }
+
+        .program-header {
+          padding: 24px;
+        }
+
+        .program-header-content {
+          flex-direction: column;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        .program-icon {
+          width: 48px;
+          height: 48px;
+          margin-right: 0;
+          margin-bottom: 12px;
+        }
+
+        .program-info h3 {
+          font-size: 1.5rem;
+          margin-bottom: 6px;
+        }
+
+        .program-info p {
+          font-size: 1rem;
+        }
+
+        .program-stats {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+
+        .program-stat {
+          padding: 12px;
+          border-radius: 8px;
+        }
+
+        .program-stat-value {
+          font-size: 0.75rem;
+        }
+
+        .program-body {
+          padding: 24px;
+        }
+
+        .program-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .specializations h4 {
+          font-size: 1.25rem;
+          margin-bottom: 16px;
+        }
+
+        .specialization-item {
+          padding: 16px;
+          border-radius: 8px;
+        }
+
+        .specialization-title {
+          font-size: 0.875rem;
+          margin-bottom: 6px;
+        }
+
+        .specialization-description {
+          font-size: 0.75rem;
+        }
+
+        .eligibility {
+          padding: 20px;
+          border-radius: 12px;
+        }
+
+        .eligibility h4 {
+          font-size: 1.25rem;
+          margin-bottom: 12px;
+        }
+
+        .eligibility-text {
+          font-size: 0.875rem;
         }
       }
 
-      @keyframes fade-in {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
+      /* Small Mobile Devices */
+      @media (max-width: 480px) {
+        .container,
+        .container-xl {
+          padding: 0 12px;
         }
-        to {
-          opacity: 1;
-          transform: translateY(0);
+
+        .hero-text h1 {
+          font-size: 1.5rem;
+        }
+
+        .hero-description {
+          font-size: 0.875rem;
+        }
+
+        .apply-now-floating {
+          padding: 10px 14px;
+          font-size: 0.75rem;
+          gap: 8px;
+        }
+
+        .carousel-swipe-indicator {
+          font-size: 9px;
+          padding: 3px 6px;
+        }
+
+        .stats-grid {
+          text-align: center;
+        }
+
+        .stat-number {
+          font-size: 1.25rem;
+        }
+
+        .stat-label {
+          font-size: 0.75rem;
+        }
+
+        .experience-title {
+          font-size: 1.75rem;
+        }
+
+        .experience-stat-number {
+          font-size: 1.5rem;
+        }
+
+        .philosophy-title {
+          font-size: 1.5rem;
+        }
+
+        .pop-title {
+          font-size: 1.75rem;
+        }
+
+        .education-title {
+          font-size: 1.75rem;
+        }
+
+        .awards-title {
+          font-size: 1.75rem;
+        }
+
+        .programs-title {
+          font-size: 1.75rem;
         }
       }
 
-      @keyframes slide-in-left {
-        from {
-          opacity: 0;
-          transform: translateX(-30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes slide-in-right {
-        from {
-          opacity: 0;
-          transform: translateX(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-
-      @keyframes slide-up {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate-bounce-subtle {
-        animation: bounce-subtle 2s ease-in-out infinite;
-      }
-
-      .animate-pulse {
-        animation: pulse 2s ease-in-out infinite;
-      }
-
-      .animate-bounce-in {
-        animation: bounce-in 0.8s ease-out;
-      }
-
-      .animate-float {
-        animation: float 6s ease-in-out infinite;
-      }
-
-      .animate-fade-in {
-        animation: fade-in 0.8s ease-out;
-      }
-
-      .animate-slide-in-left {
-        animation: slide-in-left 0.8s ease-out;
-      }
-
-      .animate-slide-in-right {
-        animation: slide-in-right 0.8s ease-out;
-      }
-
-      .animate-slide-up {
-        animation: slide-up 0.8s ease-out;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 1024px) {
+      /* Tablet Portrait */
+      @media (min-width: 769px) and (max-width: 1024px) {
         .hero-content {
           grid-template-columns: 1fr;
           gap: 32px;
@@ -2684,223 +2299,100 @@
           font-size: 2.5rem;
         }
 
-        .stats-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .comparison-grid {
-          grid-template-columns: 1fr;
-        }
-
         .philosophy-grid {
           grid-template-columns: 1fr;
+          gap: 24px;
         }
 
         .pop-grid {
           grid-template-columns: 1fr;
+          gap: 24px;
         }
 
         .education-grid {
           grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
         }
 
-        .admission-grid {
-          grid-template-columns: repeat(2, 1fr);
+        .program-stats {
+          grid-template-columns: repeat(3, 1fr);
         }
 
         .program-grid {
           grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .header-content {
-          height: 64px;
-          padding: 0 16px;
-        }
-
-        .contact-email {
-          display: none;
-        }
-
-        .logo {
-          height: 20px;
-        }
-
-        .hero {
-          padding: 48px 0;
-        }
-
-        .hero-text h1 {
-          font-size: 1.875rem;
-        }
-
-        .hero-buttons {
-          gap: 12px;
-        }
-
-        .stats-grid {
-          grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
-        .stat-number {
-          font-size: 1.5rem;
-        }
-
-        .philosophy-title,
-        .pop-title,
-        .education-title,
-        .awards-title,
-        .programs-title,
-        .recruiters-title,
-        .fee-title,
-        .admission-title,
-        .testimonials-title,
-        .faq-title {
-          font-size: 2rem;
-        }
-
-        .experience-title {
-          font-size: 2.5rem;
-        }
-
-        .education-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .admission-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .footer-content {
-          grid-template-columns: 1fr;
           gap: 32px;
         }
-
-        .admission-cta-actions,
-        .faq-cta-actions {
-          flex-direction: column;
-        }
-
-        .fee-actions {
-          flex-direction: column;
-        }
-
-        .program-tabs {
-          grid-template-columns: repeat(2, 1fr);
-        }
-
-        .program-stats {
-          grid-template-columns: repeat(2, 1fr);
-        }
       }
 
-      @media (max-width: 480px) {
-        .apply-now-button {
-          right: 12px;
-          bottom: 12px;
-        }
-
-        .apply-now-floating {
-          padding: 12px 16px;
-          border-radius: 12px;
-        }
-
-        .hero-text h1 {
-          font-size: 1.5rem;
-        }
-
-        .hero-description {
-          font-size: 1rem;
-        }
-
-        .btn {
-          padding: 10px 16px;
-          font-size: 0.875rem;
-        }
-
-        .philosophy-title,
-        .pop-title,
-        .education-title,
-        .awards-title,
-        .programs-title,
-        .recruiters-title,
-        .fee-title,
-        .admission-title,
-        .testimonials-title,
-        .faq-title {
-          font-size: 1.5rem;
-        }
-
-        .experience-title {
-          font-size: 2rem;
-        }
-
-        .program-tabs {
-          grid-template-columns: 1fr;
-        }
-
-        .program-stats {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      /* Utility Classes */
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      }
-
-      /* Print Styles */
-      @media print {
+      /* Apply Now Button Enhanced Mobile */
+      @media (max-width: 768px) {
         .apply-now-button,
         .carousel-dots,
         .faq-toggle {
-          display: none;
+          z-index: 50;
+        }
+
+        /* Mobile Responsive Header */
+        .header-content {
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .logo-section {
+          gap: 8px;
+        }
+
+        .contact-section {
+          gap: 8px;
+        }
+
+        /* Enhanced Mobile Carousel */
+        .carousel-container {
+          touch-action: pan-x;
+          user-select: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+        }
+
+        .carousel-swipe-indicator {
+          animation: pulse 2s infinite;
+        }
+
+        /* Mobile-specific enhancements */
+        .carousel-slide {
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+        /* Better touch targets */
+        .carousel-dot {
+          min-width: 32px;
+          min-height: 32px;
+          padding: 8px;
+        }
+
+        .carousel-dot:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: inherit;
         }
       }
     </style>
   </head>
-  <body>
-    <!-- Apply Now Floating Button -->
-    <div class="apply-now-button">
-      <a
-        href="https://sunstone.in/apply-now"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="apply-now-floating"
-      >
-        <div
-          style="
-            width: 16px;
-            height: 16px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          "
-        >
-          <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-          </svg>
-        </div>
-        <div>
-          <div style="font-weight: 700; font-size: 0.875rem">Apply Now</div>
-          <div style="font-size: 0.75rem; opacity: 0.9">Sunstone Portal</div>
-        </div>
-      </a>
-    </div>
 
-    <!-- Header -->
+  <body>
+    <!-- Professional Header with Enhanced Logos -->
     <header class="header">
       <div class="header-content">
         <div class="logo-section">
@@ -2931,45 +2423,74 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Enhanced Apply Now Button -->
+    <div class="apply-now-button">
+      <a
+        href="https://sunstone.in/apply-now"
+        target="_blank"
+        class="apply-now-floating"
+      >
+        <div
+          style="
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <i data-lucide="plus" style="width: 16px; height: 16px"></i>
+        </div>
+        <div>
+          <div style="font-size: 14px; font-weight: 700">Apply Now</div>
+          <div style="font-size: 12px; opacity: 0.9">Sunstone Portal</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Enhanced Hero Banner with Advanced Carousel -->
     <section class="hero">
       <div class="hero-content">
-        <div class="hero-text animate-slide-in-left">
+        <div class="hero-text">
           <h1>
             <span class="hero-highlight">Learning That Leads To Success</span>
           </h1>
-          <div class="hero-description">
-            <p>
-              Join Hi-Tech Institute for industry-aligned programs with assured
-              placement support.
-            </p>
-          </div>
+          <p class="hero-description">
+            Join Hi-Tech Institute for industry-aligned programs with assured
+            placement support.
+          </p>
           <div class="hero-buttons">
             <a
               href="https://sunstone.in/campuses/hi-tech-institute"
               target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-primary"
+              class="btn btn-outline"
             >
               <span>Explore Programs with Sunstone</span>
               <i
                 data-lucide="external-link"
-                style="margin-left: 8px; width: 20px; height: 20px"
+                style="margin-left: 8px; width: 16px; height: 16px"
               ></i>
             </a>
-            <a href="tel:+917065303030" class="btn btn-outline">
+            <a href="tel:+917065303030" class="btn btn-primary">
               <i
                 data-lucide="phone"
-                style="margin-right: 8px; width: 20px; height: 20px"
+                style="margin-right: 8px; width: 16px; height: 16px"
               ></i>
               <span>Call Now</span>
             </a>
           </div>
         </div>
-        <div class="hero-media animate-slide-in-right">
+        <div class="hero-media">
           <div class="media-container">
             <div class="carousel-container" id="heroCarousel">
-              <div class="carousel-slide active">
+              <!-- Enhanced Carousel Slides -->
+              <div
+                class="carousel-slide active"
+                data-title="Campus Life"
+                data-subtitle="Experience Our Vibrant Community"
+              >
                 <iframe
                   src="https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&branding=0&origin=https%3A%2F%2Fhitech.edu"
                   title="Campus Life Video"
@@ -2978,20 +2499,44 @@
                   allowfullscreen
                 ></iframe>
               </div>
-              <div class="carousel-slide">
+              <div
+                class="carousel-slide"
+                data-title="Hi-Tech Institute Campus"
+                data-subtitle="Modern Infrastructure & Facilities"
+              >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600"
                   alt="Hi-Tech Institute Campus"
-                  loading="eager"
                 />
               </div>
-              <div class="carousel-slide">
+              <div
+                class="carousel-slide"
+                data-title="Campus Infrastructure"
+                data-subtitle="World-Class Education Hub"
+              >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=800"
                   alt="Campus View"
-                  loading="eager"
                 />
               </div>
+
+              <!-- Enhanced Navigation Arrows -->
+              <button
+                class="carousel-nav prev"
+                onclick="prevSlide()"
+                aria-label="Previous slide"
+              >
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button
+                class="carousel-nav next"
+                onclick="nextSlide()"
+                aria-label="Next slide"
+              >
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+              <!-- Enhanced Carousel Dots -->
               <div class="carousel-dots">
                 <div
                   class="carousel-dot active"
@@ -2999,6 +2544,17 @@
                 ></div>
                 <div class="carousel-dot" onclick="setCarouselSlide(1)"></div>
                 <div class="carousel-dot" onclick="setCarouselSlide(2)"></div>
+              </div>
+
+              <!-- Mobile Swipe Indicator -->
+              <div class="carousel-swipe-indicator">👆 Swipe</div>
+
+              <!-- Enhanced Content Overlay -->
+              <div class="carousel-content-overlay">
+                <div class="carousel-content-title">Campus Life</div>
+                <div class="carousel-content-subtitle">
+                  Experience Our Vibrant Community
+                </div>
               </div>
             </div>
           </div>
@@ -3008,18 +2564,13 @@
 
     <!-- Placement Highlights -->
     <section class="placement-highlights">
-      <div class="container-xl">
-        <div class="highlight-card animate-slide-up">
+      <div class="container">
+        <div class="highlight-card">
           <div class="highlight-header">
-            <div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0">
-                Placement Highlights
-              </h3>
-              <p style="font-size: 0.875rem; opacity: 0.9">
-                MBA | MCA | BBA | BCA | B.Tech
-              </p>
-            </div>
+            <h3>Placement Highlights</h3>
+            <p>MBA | MCA | BBA | BCA | B.Tech</p>
           </div>
+
           <div class="stats-grid">
             <div class="stat-item">
               <div class="stat-number">26 LPA</div>
@@ -3034,47 +2585,24 @@
               <p class="stat-label">Students Placed</p>
             </div>
           </div>
+
           <div class="comparison-grid">
             <div class="comparison-item">
               <div class="comparison-icon">63%</div>
               <div>
-                <p
-                  style="
-                    font-weight: 600;
-                    color: var(--primary-blue);
-                    margin-bottom: 4px;
-                  "
-                >
-                  63% Higher ROI
-                </p>
-                <p style="color: #6b7280; font-size: 0.875rem">
-                  vs private colleges
-                </p>
+                <p class="font-semibold text-primary">63% Higher ROI</p>
+                <p class="text-sm text-gray-600">vs private colleges</p>
               </div>
             </div>
             <div class="comparison-item">
-              <div
-                class="comparison-icon"
-                style="background: var(--primary-blue)"
-              >
-                7X
-              </div>
+              <div class="comparison-icon">7X</div>
               <div>
-                <p
-                  style="
-                    font-weight: 600;
-                    color: var(--primary-blue);
-                    margin-bottom: 4px;
-                  "
-                >
-                  7X More Companies
-                </p>
-                <p style="color: #6b7280; font-size: 0.875rem">
-                  vs top private institutions
-                </p>
+                <p class="font-semibold text-primary">7X More Companies</p>
+                <p class="text-sm text-gray-600">vs top private institutions</p>
               </div>
             </div>
           </div>
+
           <div
             style="
               background: #f9fafb;
@@ -3092,69 +2620,121 @@
       </div>
     </section>
 
-    <!-- Video Experience -->
+    <!-- Video Experience Section -->
     <section class="video-experience">
-      <div class="container-xl text-center">
-        <div class="experience-badge animate-bounce-in">
-          <div
-            style="
-              width: 12px;
-              height: 12px;
-              background: white;
-              border-radius: 50%;
-              animation: pulse 2s ease-in-out infinite;
-            "
-          ></div>
-          <span>IMMERSIVE CAMPUS EXPERIENCE</span>
-          <div
-            style="
-              width: 12px;
-              height: 12px;
-              background: #f4d03f;
-              border-radius: 50%;
-              animation: pulse 2s ease-in-out infinite 0.5s;
-            "
-          ></div>
-        </div>
+      <div class="container">
+        <div class="text-center">
+          <div class="experience-badge">
+            <div
+              style="
+                width: 12px;
+                height: 12px;
+                background: white;
+                border-radius: 50%;
+                animation: pulse 2s infinite;
+              "
+            ></div>
+            <span>IMMERSIVE CAMPUS EXPERIENCE</span>
+            <div
+              style="
+                width: 12px;
+                height: 12px;
+                background: #f4d03f;
+                border-radius: 50%;
+                animation: pulse 2s infinite;
+                animation-delay: 0.5s;
+              "
+            ></div>
+          </div>
 
-        <h2 class="experience-title animate-fade-in">
-          Experience<br />
-          Our<br />
-          <span style="color: var(--primary-blue)">Vibrant Campus Life</span>
-        </h2>
+          <h2 class="experience-title">
+            Experience Our<br />
+            <span style="color: var(--primary-orange)"
+              >Vibrant Campus Life</span
+            >
+          </h2>
 
-        <div class="experience-description animate-fade-in">
-          <p>
+          <p class="experience-description">
             Step into a world where education meets innovation, creativity, and
             community. Watch our students thrive in an environment designed for
             excellence.
           </p>
+
+          <div class="experience-stats">
+            <div class="experience-stat">
+              <div class="experience-stat-number orange">20000+</div>
+              <div>Happy Students</div>
+            </div>
+            <div class="experience-stat">
+              <div class="experience-stat-number blue">50+</div>
+              <div>Campus Facilities</div>
+            </div>
+            <div class="experience-stat">
+              <div class="experience-stat-number yellow">24/7</div>
+              <div>Learning Support</div>
+            </div>
+          </div>
         </div>
 
-        <div class="experience-stats animate-fade-in">
-          <div class="experience-stat">
-            <div class="experience-stat-number orange">20000+</div>
-            <div>Happy Students</div>
-          </div>
-          <div class="experience-stat">
-            <div class="experience-stat-number blue">50+</div>
-            <div>Campus Facilities</div>
-          </div>
-          <div class="experience-stat">
-            <div class="experience-stat-number yellow">24/7</div>
-            <div>Learning Support</div>
-          </div>
-        </div>
-
-        <div class="video-container animate-fade-in">
+        <div class="video-container">
           <div class="video-frame">
-            <iframe
-              src="https://fast.wistia.net/embed/iframe/g4et8b6dnb?autoplay=true"
-              frameborder="0"
-              allow="autoplay; fullscreen"
-              allowfullscreen
-            ></iframe>
+            <script
+              src="https://fast.wistia.com/embed/medias/g4et8b6dnb.jsonp"
+              async
+            ></script>
+            <script
+              src="https://fast.wistia.com/assets/external/E-v1.js"
+              async
+            ></script>
+            <div
+              class="wistia_responsive_padding"
+              style="padding: 56.25% 0 0 0; position: relative"
+            >
+              <div
+                class="wistia_responsive_wrapper"
+                style="
+                  height: 100%;
+                  left: 0;
+                  position: absolute;
+                  top: 0;
+                  width: 100%;
+                "
+              >
+                <div
+                  class="wistia_embed wistia_async_g4et8b6dnb videoFoam=true"
+                  style="height: 100%; position: relative; width: 100%"
+                >
+                  <div
+                    class="wistia_swatch"
+                    style="
+                      height: 100%;
+                      left: 0;
+                      opacity: 0;
+                      overflow: hidden;
+                      position: absolute;
+                      top: 0;
+                      transition: opacity 200ms;
+                      width: 100%;
+                    "
+                  >
+                    <img
+                      src="https://fast.wistia.com/embed/medias/g4et8b6dnb/swatch"
+                      style="
+                        filter: blur(5px);
+                        height: 100%;
+                        object-fit: contain;
+                        width: 100%;
+                      "
+                      alt=""
+                      aria-hidden="true"
+                      onload="this.parentNode.style.opacity=1;"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
           <div class="video-info">
             <h3 class="video-title">
               Hi-Tech Institute - Where Dreams Become Reality
@@ -3185,7 +2765,6 @@
               <a
                 href="https://sunstone.in/campuses/hi-tech-institute"
                 target="_blank"
-                rel="noopener noreferrer"
                 class="btn btn-orange"
               >
                 <span>Book Campus Tour</span>
@@ -3195,7 +2774,7 @@
                 ></i>
               </a>
               <a href="tel:+919069069069" class="btn btn-primary">
-                <span>📞</span>
+                <span style="margin-right: 8px">📞</span>
                 <span>Call Us</span>
               </a>
             </div>
@@ -3204,20 +2783,18 @@
       </div>
     </section>
 
-    <!-- Sunstone Philosophy -->
+    <!-- Sunstone Philosophy Section -->
     <section class="philosophy">
-      <div class="container-xl">
+      <div class="container">
         <div class="text-center">
           <h2 class="philosophy-title">
             <span class="philosophy-highlight">THE SUNSTONE PHILOSOPHY</span
             ><br />
-            <span style="color: rgba(255, 255, 255, 0.9)"
-              >Learning Excellence</span
-            >
+            Helps You Learn From The Best
           </h2>
           <p class="philosophy-description">
-            Sunstone helps you learn from the best and provide a hands-on
-            experience so your education is not just limited to theory
+            Experience hands-on learning that goes beyond theory, with guidance
+            from industry veterans and Fortune 500 executives.
           </p>
         </div>
 
@@ -3238,16 +2815,7 @@
           </div>
 
           <div class="philosophy-card">
-            <div
-              class="philosophy-icon"
-              style="
-                background: linear-gradient(
-                  135deg,
-                  #f4d03f,
-                  var(--primary-orange)
-                );
-              "
-            >
+            <div class="philosophy-icon">
               <i
                 data-lucide="briefcase"
                 style="width: 32px; height: 32px; color: white"
@@ -3281,24 +2849,11 @@
 
     <!-- Placement Opportunity Program -->
     <section class="pop-section">
-      <div class="container-xl">
+      <div class="container">
         <div class="text-center">
           <h2 class="pop-title">
-            Placement
-            <span class="highlight"> Opportunity</span><br />
-            <span
-              style="
-                background: linear-gradient(
-                  135deg,
-                  var(--primary-blue),
-                  var(--blue-dark)
-                );
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-              "
-              >Program (POP)</span
-            >
+            Placement <span class="highlight">Opportunity</span><br />
+            Program (POP)
           </h2>
           <p class="pop-subtitle">WHAT WE PROMISE TO ALL STUDENTS</p>
         </div>
@@ -3314,7 +2869,7 @@
             <h3 class="pop-card-title">200+ Placement Opportunities</h3>
             <p class="pop-card-description">
               Guaranteed access to extensive placement opportunities across
-              leading companies
+              leading companies.
             </p>
           </div>
 
@@ -3328,7 +2883,7 @@
             <h3 class="pop-card-title">First Year Tuition Fee Back</h3>
             <p class="pop-card-description">
               If you don't receive the promised placement opportunities, we'll
-              refund your first-year tuition fee
+              refund your first-year tuition fee.
             </p>
           </div>
 
@@ -3342,16 +2897,16 @@
             <h3 class="pop-card-title">Dedicated Career Support</h3>
             <p class="pop-card-description">
               Personal mentorship, interview preparation, and continuous
-              guidance from industry professionals throughout your journey
+              guidance from industry professionals throughout your journey.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- New Age Education -->
+    <!-- New Age Education Section -->
     <section class="new-age-education">
-      <div class="container-xl">
+      <div class="container">
         <div class="text-center">
           <h2 class="education-title">
             New Age Education That Secures Futures
@@ -3365,7 +2920,9 @@
 
         <div class="education-grid">
           <div class="education-card">
-            <div class="education-icon blue">💼</div>
+            <div class="education-icon blue">
+              <span>🎯</span>
+            </div>
             <h3 class="education-card-title">Curriculum for Jobs of 2030</h3>
             <p class="education-card-description">
               Future-focused learning paths designed for tomorrow's careers
@@ -3373,112 +2930,44 @@
           </div>
 
           <div class="education-card">
-            <div class="education-icon orange">👨‍💼</div>
+            <div class="education-icon orange">
+              <span>👨‍💼</span>
+            </div>
             <h3 class="education-card-title">
               Corporate Leaders Turned Educators
             </h3>
             <p class="education-card-description">
-              Learn directly from corporate leaders with real world experience
-            </p>
-          </div>
-
-          <div class="education-card">
-            <div class="education-icon blue">🚀</div>
-            <h3 class="education-card-title">Build Your First Startup</h3>
-            <p class="education-card-description">
-              Comprehensive entrepreneurship programs with real business
-              incubation
-            </p>
-          </div>
-
-          <div class="education-card">
-            <div class="education-icon orange">⚡</div>
-            <h3 class="education-card-title">NextGen Tech Tools</h3>
-            <p class="education-card-description">
-              Advanced technologies and AI-powered learning platforms
-            </p>
-          </div>
-
-          <div class="education-card">
-            <div class="education-icon blue">📚</div>
-            <h3 class="education-card-title">Practical Learning Over Theory</h3>
-            <p class="education-card-description">
-              Hands-on experience with live projects and industry visits
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Key Offerings -->
-    <section class="new-age-education" style="background: #f9fafb">
-      <div class="container-xl">
-        <div class="text-center">
-          <h2 class="education-title">Key Offerings By Sunstone</h2>
-          <p class="education-description">
-            Discover what makes our programs exceptional and job-ready
-          </p>
-        </div>
-
-        <div
-          style="
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
-          "
-        >
-          <div class="education-card">
-            <div class="education-icon blue">
-              <i
-                data-lucide="book-open"
-                style="width: 32px; height: 32px; color: white"
-              ></i>
-            </div>
-            <h3 class="education-card-title">Expert Sessions</h3>
-            <p class="education-card-description">
-              Session by industry experts and leading faculty from Fortune 500
-              companies
-            </p>
-          </div>
-
-          <div class="education-card">
-            <div class="education-icon orange">
-              <i
-                data-lucide="award"
-                style="width: 32px; height: 32px; color: white"
-              ></i>
-            </div>
-            <h3 class="education-card-title">Professional Portfolio</h3>
-            <p class="education-card-description">
-              Showcase verified skills and experience to increase hiring chances
+              Learn directly from industry veterans and Fortune 500 executives
             </p>
           </div>
 
           <div class="education-card">
             <div class="education-icon blue">
-              <i
-                data-lucide="trending-up"
-                style="width: 32px; height: 32px; color: white"
-              ></i>
+              <span>🔍</span>
             </div>
-            <h3 class="education-card-title">POP</h3>
+            <h3 class="education-card-title">Hands-on Experience</h3>
             <p class="education-card-description">
-              Access to 200+ assured job opportunities with comprehensive
-              placement support
+              Real-world projects and internships in top companies
             </p>
           </div>
 
           <div class="education-card">
             <div class="education-icon orange">
-              <i
-                data-lucide="zap"
-                style="width: 32px; height: 32px; color: white"
-              ></i>
+              <span>⚡</span>
             </div>
-            <h3 class="education-card-title">Specializations</h3>
+            <h3 class="education-card-title">AI-Powered Learning</h3>
             <p class="education-card-description">
-              Choose from industry-focused specializations designed to boost
-              your career prospects
+              Personalized learning experiences with cutting-edge technology
+            </p>
+          </div>
+
+          <div class="education-card">
+            <div class="education-icon blue">
+              <span>🎓</span>
+            </div>
+            <h3 class="education-card-title">Industry Certifications</h3>
+            <p class="education-card-description">
+              Earn valuable certifications from leading technology companies
             </p>
           </div>
         </div>
@@ -3487,31 +2976,15 @@
 
     <!-- Awards Section -->
     <section class="awards">
-      <div class="container-xl">
+      <div class="container">
         <div class="text-center">
           <h2 class="awards-title">
-            Recognized
-            <span class="highlight"> Excellence</span><br />
-            <span
-              style="
-                background: linear-gradient(
-                  135deg,
-                  var(--primary-blue),
-                  var(--blue-dark)
-                );
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-              "
-              >in Education</span
-            >
+            <span class="highlight">Awards &</span> Recognition
           </h2>
-          <div class="awards-description animate-fade-in">
-            <p>
-              Our commitment to educational excellence has been recognized by
-              leading industry organizations
-            </p>
-          </div>
+          <p class="awards-description">
+            Our commitment to excellence has been recognized by leading
+            educational and industry bodies.
+          </p>
         </div>
 
         <div class="awards-scroll">
@@ -3519,101 +2992,66 @@
             <div class="award-item">
               <div class="award-image">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F634b6859a0a5475897251bed28fb9a48?format=webp&width=800"
-                  alt="Excellence in Education"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F123456789abcdef?format=webp&width=300"
+                  alt="Excellence Award"
                 />
               </div>
-              <h3 class="award-title">Excellence in Education</h3>
+              <div class="award-title">Excellence in Education</div>
               <p class="award-description">
-                Recognized for outstanding educational services
+                Recognized for outstanding academic programs
               </p>
             </div>
 
             <div class="award-item">
               <div class="award-image">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F21c4bdaba70546e89b1432a5a71417d5?format=webp&width=800"
-                  alt="Innovation Excellence"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F123456789abcdef2?format=webp&width=300"
+                  alt="Placement Award"
                 />
               </div>
-              <h3 class="award-title">Innovation Excellence</h3>
+              <div class="award-title">Best Placement Record</div>
               <p class="award-description">
-                Leading innovation in educational technology
+                Highest placement percentage in the region
               </p>
             </div>
 
             <div class="award-item">
               <div class="award-image">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2Ffb516054d41948ecafc7dad3868c1bea?format=webp&width=800"
-                  alt="Quality Assurance"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F123456789abcdef3?format=webp&width=300"
+                  alt="Innovation Award"
                 />
               </div>
-              <h3 class="award-title">Quality Assurance</h3>
+              <div class="award-title">Innovation in Teaching</div>
               <p class="award-description">
-                Commitment to quality education standards
+                Leading technology integration in education
+              </p>
+            </div>
+
+            <!-- Duplicate awards for seamless scrolling -->
+            <div class="award-item">
+              <div class="award-image">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F123456789abcdef?format=webp&width=300"
+                  alt="Excellence Award"
+                />
+              </div>
+              <div class="award-title">Excellence in Education</div>
+              <p class="award-description">
+                Recognized for outstanding academic programs
               </p>
             </div>
 
             <div class="award-item">
               <div class="award-image">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F8a91f11dc8e04d358b985214fbcb8d95?format=webp&width=800"
-                  alt="ASSOCHAM India"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F123456789abcdef2?format=webp&width=300"
+                  alt="Placement Award"
                 />
               </div>
-              <h3 class="award-title">ASSOCHAM India</h3>
+              <div class="award-title">Best Placement Record</div>
               <p class="award-description">
-                Excellence in Educational Innovation
-              </p>
-            </div>
-
-            <div class="award-item">
-              <div class="award-image">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2F58105dfe0ced43e6b0151b52d99be4b4?format=webp&width=800"
-                  alt="IndiGlobal Education"
-                />
-              </div>
-              <h3 class="award-title">IndiGlobal Education</h3>
-              <p class="award-description">Outstanding Academic Excellence</p>
-            </div>
-
-            <div class="award-item">
-              <div class="award-image">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F7d21049135914cccb56913f42d147819%2Fc50132f6b1ef47a481e34f16b5b1f8fa?format=webp&width=800"
-                  alt="HolonIQ EdTech 100"
-                />
-              </div>
-              <h3 class="award-title">HolonIQ EdTech 100</h3>
-              <p class="award-description">Top EdTech Company 2022</p>
-            </div>
-
-            <!-- Duplicate for seamless scroll -->
-            <div class="award-item">
-              <div class="award-image">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F634b6859a0a5475897251bed28fb9a48?format=webp&width=800"
-                  alt="Excellence in Education"
-                />
-              </div>
-              <h3 class="award-title">Excellence in Education</h3>
-              <p class="award-description">
-                Recognized for outstanding educational services
-              </p>
-            </div>
-
-            <div class="award-item">
-              <div class="award-image">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F6b380204f0be44298251449d0b1a0b73%2F21c4bdaba70546e89b1432a5a71417d5?format=webp&width=800"
-                  alt="Innovation Excellence"
-                />
-              </div>
-              <h3 class="award-title">Innovation Excellence</h3>
-              <p class="award-description">
-                Leading innovation in educational technology
+                Highest placement percentage in the region
               </p>
             </div>
           </div>
@@ -3623,1584 +3061,203 @@
 
     <!-- Programs Section -->
     <section class="programs">
-      <div class="container-xl">
+      <div class="container">
         <div class="text-center">
-          <h2 class="programs-title">Programs Offered</h2>
+          <h2 class="programs-title">Our Programs</h2>
           <p class="programs-description">
-            Transform your career with industry-aligned programs designed by
-            experts
+            Discover comprehensive programs designed to shape your future with
+            industry-relevant skills and guaranteed placement support.
           </p>
         </div>
 
-        <div class="program-tabs" id="programTabs">
-          <div class="program-tab active" onclick="setActiveProgram('MBA')">
+        <div class="program-tabs">
+          <div class="program-tab active" onclick="showProgram('MBA')">
             <i data-lucide="graduation-cap"></i>
             <span>MBA</span>
           </div>
-          <div class="program-tab" onclick="setActiveProgram('BBA')">
-            <i data-lucide="graduation-cap"></i>
+          <div class="program-tab" onclick="showProgram('BBA')">
+            <i data-lucide="briefcase"></i>
             <span>BBA</span>
           </div>
-          <div class="program-tab" onclick="setActiveProgram('BCA')">
-            <i data-lucide="graduation-cap"></i>
+          <div class="program-tab" onclick="showProgram('BCA')">
+            <i data-lucide="monitor"></i>
             <span>BCA</span>
           </div>
-          <div class="program-tab" onclick="setActiveProgram('MCA')">
-            <i data-lucide="graduation-cap"></i>
+          <div class="program-tab" onclick="showProgram('MCA')">
+            <i data-lucide="code"></i>
             <span>MCA</span>
           </div>
-          <div class="program-tab" onclick="setActiveProgram('BTECH')">
-            <i data-lucide="graduation-cap"></i>
+          <div class="program-tab" onclick="showProgram('BTECH')">
+            <i data-lucide="cpu"></i>
             <span>B.Tech</span>
           </div>
         </div>
 
         <div class="program-content" id="programContent">
-          <!-- MBA Program Content -->
-          <div id="program-MBA" class="program-display">
-            <div class="program-header">
-              <div class="program-header-content">
-                <div class="program-icon">
-                  <i
-                    data-lucide="graduation-cap"
-                    style="width: 40px; height: 40px; color: white"
-                  ></i>
-                </div>
-                <div class="program-info">
-                  <h3>MBA Program</h3>
-                  <p>Excellence in Education</p>
-                </div>
+          <div class="program-header">
+            <div class="program-header-content">
+              <div class="program-icon">
+                <i
+                  data-lucide="graduation-cap"
+                  style="width: 32px; height: 32px; color: white"
+                ></i>
               </div>
-              <div class="program-stats">
-                <div class="program-stat">
-                  <div class="program-stat-icon">
-                    <i
-                      data-lucide="clock"
-                      style="width: 24px; height: 24px; color: white"
-                    ></i>
-                  </div>
-                  <div class="program-stat-value">2-year program</div>
-                </div>
-                <div class="program-stat">
-                  <div class="program-stat-icon">
-                    <i
-                      data-lucide="star"
-                      style="width: 24px; height: 24px; color: white"
-                    ></i>
-                  </div>
-                  <div class="program-stat-value">5 specializations</div>
-                </div>
-                <div class="program-stat">
-                  <div class="program-stat-icon">
-                    <i
-                      data-lucide="award"
-                      style="width: 24px; height: 24px; color: white"
-                    ></i>
-                  </div>
-                  <div class="program-stat-value">10 certifications</div>
-                </div>
-                <div class="program-stat">
-                  <div class="program-stat-icon">
-                    <i
-                      data-lucide="briefcase"
-                      style="width: 24px; height: 24px; color: white"
-                    ></i>
-                  </div>
-                  <div class="program-stat-value">6+ months internships</div>
-                </div>
-                <div class="program-stat">
-                  <div class="program-stat-icon">
-                    <i
-                      data-lucide="target"
-                      style="width: 24px; height: 24px; color: white"
-                    ></i>
-                  </div>
-                  <div class="program-stat-value">4 capstone projects</div>
-                </div>
+              <div class="program-info">
+                <h3>Master of Business Administration (MBA)</h3>
+                <p>2-year program with industry integration</p>
               </div>
             </div>
-            <div class="program-body">
-              <div class="program-grid">
-                <div class="specializations">
-                  <h4>
-                    <i
-                      data-lucide="star"
-                      style="
-                        width: 24px;
-                        height: 24px;
-                        color: var(--primary-orange);
-                      "
-                    ></i>
-                    Specializations
-                  </h4>
-                  <div class="specialization-list">
-                    <div class="specialization-item">
-                      <div class="specialization-header">
-                        <div class="specialization-icon">
-                          <i
-                            data-lucide="target"
-                            style="width: 16px; height: 16px; color: white"
-                          ></i>
-                        </div>
-                        <div class="specialization-content">
-                          <h5>Marketing Management</h5>
-                          <p>
-                            Marketing Manager, Brand Manager, Digital Marketing
-                            Specialist
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="specialization-item">
-                      <div class="specialization-header">
-                        <div class="specialization-icon">
-                          <i
-                            data-lucide="target"
-                            style="width: 16px; height: 16px; color: white"
-                          ></i>
-                        </div>
-                        <div class="specialization-content">
-                          <h5>IT, Analytics & Research</h5>
-                          <p>
-                            Business Analyst, Data Scientist, Research Analyst
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="specialization-item">
-                      <div class="specialization-header">
-                        <div class="specialization-icon">
-                          <i
-                            data-lucide="target"
-                            style="width: 16px; height: 16px; color: white"
-                          ></i>
-                        </div>
-                        <div class="specialization-content">
-                          <h5>Human Resource Management</h5>
-                          <p>
-                            HR Manager, Talent Acquisition Manager, HR Business
-                            Partner
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="specialization-item">
-                      <div class="specialization-header">
-                        <div class="specialization-icon">
-                          <i
-                            data-lucide="target"
-                            style="width: 16px; height: 16px; color: white"
-                          ></i>
-                        </div>
-                        <div class="specialization-content">
-                          <h5>Finance Management</h5>
-                          <p>
-                            Finance Manager, Investment Analyst, Financial
-                            Planner
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="specialization-item">
-                      <div class="specialization-header">
-                        <div class="specialization-icon">
-                          <i
-                            data-lucide="target"
-                            style="width: 16px; height: 16px; color: white"
-                          ></i>
-                        </div>
-                        <div class="specialization-content">
-                          <h5>Operations Management</h5>
-                          <p>
-                            Operations Manager, Supply Chain Manager, Process
-                            Manager
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="eligibility">
-                  <h4>
-                    <i
-                      data-lucide="award"
-                      style="
-                        width: 24px;
-                        height: 24px;
-                        color: var(--primary-orange);
-                      "
-                    ></i>
-                    Eligibility
-                  </h4>
-                  <div class="eligibility-content">
-                    <p>
-                      50% marks in graduation from a recognised university (45%
-                      for reserved category).
-                    </p>
-                  </div>
-                  <a
-                    href="https://sunstone.in/campuses/hi-tech-institute/mba"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-primary"
-                    style="width: 100%"
-                  >
-                    <span>Apply Now</span>
-                    <i
-                      data-lucide="external-link"
-                      style="margin-left: 8px; width: 20px; height: 20px"
-                    ></i>
-                  </a>
-                </div>
+            <div class="program-stats">
+              <div class="program-stat">
+                <i
+                  data-lucide="clock"
+                  class="program-stat-icon"
+                  style="width: 20px; height: 20px; color: white"
+                ></i>
+                <div class="program-stat-value">2 Years</div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Top Recruiters -->
-    <section class="recruiters">
-      <div class="container-xl">
-        <div class="text-center">
-          <h2 class="recruiters-title">Top Recruiters</h2>
-          <p class="recruiters-description">
-            Join a network of 1,200+ leading companies that actively recruit our
-            graduates
-          </p>
-        </div>
-
-        <div class="recruiters-tracks">
-          <div class="recruiters-track">
-            <div class="recruiters-row">
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800"
-                  alt="Bosch"
-                />
+              <div class="program-stat">
+                <i
+                  data-lucide="award"
+                  class="program-stat-icon"
+                  style="width: 20px; height: 20px; color: white"
+                ></i>
+                <div class="program-stat-value">10 Certifications</div>
               </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800"
-                  alt="HCL"
-                />
+              <div class="program-stat">
+                <i
+                  data-lucide="briefcase"
+                  class="program-stat-icon"
+                  style="width: 20px; height: 20px; color: white"
+                ></i>
+                <div class="program-stat-value">6+ Months Internship</div>
               </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800"
-                  alt="TCS"
-                />
+              <div class="program-stat">
+                <i
+                  data-lucide="target"
+                  class="program-stat-icon"
+                  style="width: 20px; height: 20px; color: white"
+                ></i>
+                <div class="program-stat-value">4 Projects</div>
               </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F8f3145bc06174b1bbf7d4ad1fa6f0faf?format=webp&width=800"
-                  alt="Blinkit"
-                />
-              </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2a888cd02a8458da92d61b7a81eb34a?format=webp&width=800"
-                  alt="Microsoft"
-                />
-              </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fb2ae8a71a00048b29ff8d476edb3bb66?format=webp&width=800"
-                  alt="Genpact"
-                />
-              </div>
-              <!-- Duplicate for seamless scroll -->
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F4eebd36dc9ca4ef5bb76a69697bcf965?format=webp&width=800"
-                  alt="Bosch"
-                />
-              </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fefffd34481eb4335b0ce5e2be3b32eda?format=webp&width=800"
-                  alt="HCL"
-                />
-              </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F80bcd2d42697458985f6baa4f1748e53?format=webp&width=800"
-                  alt="TCS"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="recruiters-track">
-            <div class="recruiters-row reverse">
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Ffc21c2e8539e40b6909b38115f246610?format=webp&width=800"
-                  alt="Coca-Cola"
-                />
-              </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F70db68b8eaf9481eb512d034fe8026b7?format=webp&width=800"
-                  alt="ICICI Bank"
-                />
-              </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe51e97fd236549a2b5daead5818a3225?format=webp&width=800"
-                  alt="Swiggy"
-                />
-              </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F0e1927dc15ff427fa408f03a82ff8201?format=webp&width=800"
-                  alt="Zomato"
-                />
-              </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F8a29a23fc1f641fea8ccad2a228407aa?format=webp&width=800"
-                  alt="Axis Bank"
-                />
-              </div>
-              <!-- Duplicate for seamless scroll -->
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Ffc21c2e8539e40b6909b38115f246610?format=webp&width=800"
-                  alt="Coca-Cola"
-                />
-              </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F70db68b8eaf9481eb512d034fe8026b7?format=webp&width=800"
-                  alt="ICICI Bank"
-                />
-              </div>
-              <div class="recruiter-item">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2Fe51e97fd236549a2b5daead5818a3225?format=webp&width=800"
-                  alt="Swiggy"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Fee Payment -->
-    <section class="fee-payment">
-      <div class="container-xl text-center">
-        <div class="fee-badge">
-          <span
-            style="
-              font-weight: 700;
-              color: var(--primary-blue);
-              letter-spacing: 0.05em;
-            "
-            >🏦 EASY FEE PAYMENT</span
-          >
-        </div>
-
-        <h2 class="fee-title">
-          TAKE CHARGE OF YOUR<br />
-          <span class="fee-highlight">EDUCATION</span>
-        </h2>
-
-        <p class="fee-description">
-          Make quality education affordable with our innovative EMI options and
-          scholarship programs
-        </p>
-
-        <div class="fee-card">
-          <div class="fee-card-content">
-            <div class="fee-card-badge">
-              <span style="color: white; font-weight: 700"
-                >EASY FEE PAYMENT</span
-              >
-            </div>
-
-            <h3 class="fee-card-title">Take charge of your education</h3>
-            <p class="fee-card-description">
-              Pay smart by choosing Sunstone. Pay the college fee and a nominal
-              amount to unlock your dream job with Sunstone.
-            </p>
-
-            <div class="fee-features">
-              <div class="fee-feature">
-                <div class="fee-feature-icon">✓</div>
-                <span style="font-weight: 600">0-Cost EMI available</span>
-              </div>
-              <div class="fee-feature">
-                <div class="fee-feature-icon">✓</div>
-                <span style="font-weight: 600"
-                  >Up to 100% scholarship available</span
-                >
-              </div>
-            </div>
-
-            <div class="fee-actions">
-              <button
-                onclick="showScholarshipModal()"
-                class="btn"
-                style="
-                  background: white;
-                  color: var(--primary-blue);
-                  font-weight: 700;
-                "
-              >
-                <span>Check Scholarship options →</span>
-              </button>
-            </div>
-
-            <p style="font-size: 0.75rem; opacity: 0.7; margin-top: 24px">
-              *Terms & conditions apply
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Admission Process -->
-    <section class="admission-process">
-      <div class="container-xl">
-        <div class="text-center">
-          <div class="admission-badge">ADMISSION PROCESS</div>
-          <h2 class="admission-title">Your Path to Success</h2>
-          <p class="admission-description">
-            A streamlined 5-step process designed to get you started quickly.
-            Join
-            <span style="font-weight: 600; color: var(--primary-blue)"
-              >50,000+ successful students</span
-            >
-            with
-            <span style="color: var(--primary-orange); font-weight: 600"
-              >95% placement success</span
-            >.
-          </p>
-        </div>
-
-        <div class="admission-grid">
-          <div class="admission-step">
-            <div class="step-header">
-              <div class="step-icon">
+              <div class="program-stat">
                 <i
                   data-lucide="book-open"
-                  style="width: 32px; height: 32px"
-                ></i>
-              </div>
-              <div class="step-number">01</div>
-            </div>
-            <h3 class="step-title">Apply Online</h3>
-            <p class="step-description">
-              Submit your application through our user-friendly digital platform
-            </p>
-          </div>
-
-          <div class="admission-step">
-            <div class="step-header">
-              <div class="step-icon">
-                <i data-lucide="clock" style="width: 32px; height: 32px"></i>
-              </div>
-              <div class="step-number">02</div>
-            </div>
-            <h3 class="step-title">Aptitude Test</h3>
-            <p class="step-description">
-              Complete a comprehensive assessment to evaluate your academic
-              potential
-            </p>
-          </div>
-
-          <div class="admission-step">
-            <div class="step-header">
-              <div class="step-icon">
-                <i data-lucide="users" style="width: 32px; height: 32px"></i>
-              </div>
-              <div class="step-number">03</div>
-            </div>
-            <h3 class="step-title">Personal Interview</h3>
-            <p class="step-description">
-              One-on-one consultation with our experienced academic counselors
-            </p>
-          </div>
-
-          <div class="admission-step">
-            <div class="step-header">
-              <div class="step-icon">
-                <i data-lucide="award" style="width: 32px; height: 32px"></i>
-              </div>
-              <div class="step-number">04</div>
-            </div>
-            <h3 class="step-title">Document Verification</h3>
-            <p class="step-description">
-              Secure verification of your academic credentials and certificates
-            </p>
-          </div>
-
-          <div class="admission-step">
-            <div class="step-header">
-              <div class="step-icon">
-                <i data-lucide="target" style="width: 32px; height: 32px"></i>
-              </div>
-              <div class="step-number">05</div>
-            </div>
-            <h3 class="step-title">Welcome Aboard</h3>
-            <p class="step-description">
-              Begin your educational journey with comprehensive support
-            </p>
-          </div>
-        </div>
-
-        <div class="admission-cta">
-          <div class="admission-cta-content">
-            <h3>Ready to Begin Your Journey?</h3>
-            <p>
-              Join thousands of successful graduates at top companies worldwide.
-              Your success story starts with a single step.
-            </p>
-            <div class="admission-cta-actions">
-              <a
-                href="tel:+917065303030"
-                class="btn"
-                style="background: white; color: var(--primary-blue)"
-              >
-                <i
-                  data-lucide="phone"
-                  style="margin-right: 8px; width: 20px; height: 20px"
-                ></i>
-                Call Us Now
-              </a>
-              <a
-                href="https://sunstone.in/apply-now"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-outline"
-              >
-                <i
-                  data-lucide="external-link"
-                  style="margin-right: 8px; width: 20px; height: 20px"
-                ></i>
-                Apply Now
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-      <div class="container-xl">
-        <div class="text-center">
-          <div class="testimonials-badge">
-            <i
-              data-lucide="star"
-              style="
-                width: 20px;
-                height: 20px;
-                color: var(--primary-blue);
-                animation: pulse 2s ease-in-out infinite;
-              "
-            ></i>
-            <span style="color: var(--primary-blue); font-weight: 600"
-              >STUDENT SUCCESS STORIES</span
-            >
-          </div>
-
-          <h2 class="testimonials-title">
-            Success <span class="highlight">Stories</span><br />
-            <span class="blue">That Inspire</span>
-          </h2>
-
-          <p class="testimonials-description">
-            Discover how our programs have transformed careers and opened new
-            opportunities for students across diverse industries
-          </p>
-        </div>
-
-        <div class="testimonials-scroll">
-          <div class="testimonials-track">
-            <div class="testimonial-item">
-              <div class="testimonial-header">
-                <div class="testimonial-avatar">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800"
-                    alt="Jaya Tiwari"
-                  />
-                </div>
-                <div class="testimonial-info">
-                  <h4>Jaya Tiwari</h4>
-                  <p class="role">BCA Graduate</p>
-                  <p class="company">SRMU • 2022-2025</p>
-                </div>
-              </div>
-              <div class="testimonial-rating">
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-              </div>
-              <div class="testimonial-content">
-                <span class="testimonial-quote">"</span>
-                <p class="testimonial-text">
-                  Sunstone has been a game-changer in my journey. The practical
-                  curriculum, supportive faculty, and collaborative environment
-                  have sharpened my skills and broadened my perspective. It's
-                  more than an institution—it's a community fostering growth and
-                  success.
-                </p>
-              </div>
-            </div>
-
-            <div class="testimonial-item">
-              <div class="testimonial-header">
-                <div class="testimonial-avatar">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fe4b0545901874c2aad46cd3aae000371?format=webp&width=800"
-                    alt="Balram Jat"
-                  />
-                </div>
-                <div class="testimonial-info">
-                  <h4>Balram Jat</h4>
-                  <p class="role">BCA Graduate</p>
-                  <p class="company">JNU • 2024-2027</p>
-                </div>
-              </div>
-              <div class="testimonial-rating">
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-              </div>
-              <div class="testimonial-content">
-                <span class="testimonial-quote">"</span>
-                <p class="testimonial-text">
-                  The admission process at Sunstone was seamless, with clear
-                  guidance at every step. The diverse student community and
-                  supportive faculty create an engaging learning experience.
-                  Modern facilities and a focus on skill development have added
-                  immense value to my journey.
-                </p>
-              </div>
-            </div>
-
-            <div class="testimonial-item">
-              <div class="testimonial-header">
-                <div class="testimonial-avatar">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F542c7c4a81e54bfd9b7f63785ad8ad7a?format=webp&width=800"
-                    alt="Pulkit Singh"
-                  />
-                </div>
-                <div class="testimonial-info">
-                  <h4>Pulkit Singh</h4>
-                  <p class="role">MBA Graduate • Dhanguard 10 LPA</p>
-                  <p class="company">GDG • 22-24</p>
-                </div>
-              </div>
-              <div class="testimonial-rating">
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-              </div>
-              <div class="testimonial-content">
-                <span class="testimonial-quote">"</span>
-                <p class="testimonial-text">
-                  I am immensely grateful to Sunstone for the incredible
-                  international placement opportunity. The unwavering support,
-                  exceptional faculty, and comprehensive curriculum played a
-                  pivotal role in shaping my career. Sunstone's commitment to
-                  excellence ensured I was well-prepared to meet global
-                  standards.
-                </p>
-              </div>
-            </div>
-
-            <div class="testimonial-item">
-              <div class="testimonial-header">
-                <div class="testimonial-avatar">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2Fa7ba926fb7cf4a0ca861082351ba12b9?format=webp&width=800"
-                    alt="Devraj Tripathi"
-                  />
-                </div>
-                <div class="testimonial-info">
-                  <h4>Devraj Tripathi</h4>
-                  <p class="role">B.Tech Graduate</p>
-                  <p class="company">SRMU • 2022-2026</p>
-                </div>
-              </div>
-              <div class="testimonial-rating">
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-              </div>
-              <div class="testimonial-content">
-                <span class="testimonial-quote">"</span>
-                <p class="testimonial-text">
-                  Sunstone has been a game-changer for me! The hands-on
-                  learning, expert faculty, and supportive environment have
-                  boosted my skills and confidence. It's more than just an
-                  institution—it's a community that nurtures success.
-                </p>
-              </div>
-            </div>
-
-            <div class="testimonial-item">
-              <div class="testimonial-header">
-                <div class="testimonial-avatar">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fbecc2c7c23e24b2f90c3461a02b10f03?format=webp&width=800"
-                    alt="Anushka Pandey"
-                  />
-                </div>
-                <div class="testimonial-info">
-                  <h4>Anushka Pandey</h4>
-                  <p class="role">B.Tech Graduate</p>
-                  <p class="company">VGUJ • 2023-2027</p>
-                </div>
-              </div>
-              <div class="testimonial-rating">
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-              </div>
-              <div class="testimonial-content">
-                <span class="testimonial-quote">"</span>
-                <p class="testimonial-text">
-                  My journey at Vivekananda Global University with Sunstone has
-                  been amazing! From top-notch faculty and well-structured
-                  classes to exciting club activities and sports events, every
-                  day is enriching. Grateful for the opportunities and vibrant
-                  campus life!
-                </p>
-              </div>
-            </div>
-
-            <!-- Duplicate for seamless scroll -->
-            <div class="testimonial-item">
-              <div class="testimonial-header">
-                <div class="testimonial-avatar">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2F350607054e064bd5b6d0723ba9925c78%2F8a7ec82750ab45dda38cecd1f17d70cd?format=webp&width=800"
-                    alt="Jaya Tiwari"
-                  />
-                </div>
-                <div class="testimonial-info">
-                  <h4>Jaya Tiwari</h4>
-                  <p class="role">BCA Graduate</p>
-                  <p class="company">SRMU • 2022-2025</p>
-                </div>
-              </div>
-              <div class="testimonial-rating">
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-                <i data-lucide="star" class="star"></i>
-              </div>
-              <div class="testimonial-content">
-                <span class="testimonial-quote">"</span>
-                <p class="testimonial-text">
-                  Sunstone has been a game-changer in my journey. The practical
-                  curriculum, supportive faculty, and collaborative environment
-                  have sharpened my skills and broadened my perspective.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq">
-      <div class="container-xl">
-        <div class="text-center">
-          <h2 class="faq-title">Frequently Asked Questions</h2>
-          <p class="faq-description">
-            Find answers to commonly asked questions about our programs
-          </p>
-        </div>
-
-        <div class="faq-list" id="faqList">
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <div class="faq-question-content">
-                <div class="faq-number">1</div>
-                <div class="faq-question-text">
-                  <h3 class="faq-question-title">
-                    Why should I choose Sunstone?
-                  </h3>
-                  <div class="faq-category">Sunstone</div>
-                </div>
-              </div>
-              <i data-lucide="chevron-down" class="faq-toggle"></i>
-            </div>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                <div class="faq-answer-text">
-                  <ul class="faq-answer-list">
-                    <li>
-                      <span class="bullet">•</span
-                      ><span
-                        >Training and development sessions by industry
-                        experts</span
-                      >
-                    </li>
-                    <li>
-                      <span class="bullet">•</span
-                      ><span>Hands-on capstone projects every semester</span>
-                    </li>
-                    <li>
-                      <span class="bullet">•</span
-                      ><span>Professional portfolio development</span>
-                    </li>
-                    <li>
-                      <span class="bullet">•</span
-                      ><span>Expert faculty from premier institutions</span>
-                    </li>
-                    <li>
-                      <span class="bullet">•</span
-                      ><span
-                        >Comprehensive placement support and career
-                        guidance</span
-                      >
-                    </li>
-                    <li>
-                      <span class="bullet">•</span
-                      ><span>Access to pan-India student community</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <div class="faq-question-content">
-                <div class="faq-number">2</div>
-                <div class="faq-question-text">
-                  <h3 class="faq-question-title">
-                    Does Sunstone provide an online or distance learning
-                    program?
-                  </h3>
-                  <div class="faq-category">Sunstone</div>
-                </div>
-              </div>
-              <i data-lucide="chevron-down" class="faq-toggle"></i>
-            </div>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                <div class="faq-answer-text">
-                  <p>
-                    Sunstone offers both online and offline learning programs.
-                    Our hybrid approach ensures flexibility while maintaining
-                    quality education standards. You can choose from various
-                    learning modes based on your preferences and requirements.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <div class="faq-question-content">
-                <div class="faq-number">3</div>
-                <div class="faq-question-text">
-                  <h3 class="faq-question-title">
-                    What makes Sunstone different from other education
-                    providers?
-                  </h3>
-                  <div class="faq-category">Sunstone</div>
-                </div>
-              </div>
-              <i data-lucide="chevron-down" class="faq-toggle"></i>
-            </div>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                <div class="faq-answer-text">
-                  <ul class="faq-answer-list">
-                    <li>
-                      <span class="bullet">•</span
-                      ><span
-                        >Industry-aligned curriculum designed with Fortune 500
-                        companies</span
-                      >
-                    </li>
-                    <li>
-                      <span class="bullet">•</span
-                      ><span>Assured placement opportunities</span>
-                    </li>
-                    <li>
-                      <span class="bullet">•</span
-                      ><span>Real-world projects and internships</span>
-                    </li>
-                    <li>
-                      <span class="bullet">•</span
-                      ><span>Dedicated placement officer for each student</span>
-                    </li>
-                    <li>
-                      <span class="bullet">•</span
-                      ><span>Expert mentorship from IIM/IIT faculty</span>
-                    </li>
-                    <li>
-                      <span class="bullet">•</span
-                      ><span
-                        >Advanced certifications in emerging technologies</span
-                      >
-                    </li>
-                    <li>
-                      <span class="bullet">•</span
-                      ><span>First year tuition fee back guarantee</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <div class="faq-question-content">
-                <div class="faq-number">4</div>
-                <div class="faq-question-text">
-                  <h3 class="faq-question-title">
-                    What is Sunstone's placement opportunity program?
-                  </h3>
-                  <div class="faq-category">Placement</div>
-                </div>
-              </div>
-              <i data-lucide="chevron-down" class="faq-toggle"></i>
-            </div>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                <div class="faq-answer-text">
-                  <p>
-                    Our placement opportunity program guarantees comprehensive
-                    career support and placement opportunities. If you don't
-                    receive the promised opportunities, we offer first year
-                    tuition fee back.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <div class="faq-question-content">
-                <div class="faq-number">5</div>
-                <div class="faq-question-text">
-                  <h3 class="faq-question-title">
-                    Are any EMI options available if I pursue a full-time course
-                    from Sunstone?
-                  </h3>
-                  <div class="faq-category">Fees</div>
-                </div>
-              </div>
-              <i data-lucide="chevron-down" class="faq-toggle"></i>
-            </div>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                <div class="faq-answer-text">
-                  <p>
-                    Yes, Sunstone offers flexible EMI options and financing
-                    solutions to make quality education accessible. We have
-                    partnered with leading financial institutions to provide
-                    easy payment plans that suit your financial situation.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <div class="faq-question" onclick="toggleFAQ(this)">
-              <div class="faq-question-content">
-                <div class="faq-number">6</div>
-                <div class="faq-question-text">
-                  <h3 class="faq-question-title">
-                    What kind of industry connections does Sunstone have?
-                  </h3>
-                  <div class="faq-category">Industry</div>
-                </div>
-              </div>
-              <i data-lucide="chevron-down" class="faq-toggle"></i>
-            </div>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                <div class="faq-answer-text">
-                  <p>
-                    Sunstone has partnerships with 1200+ companies including
-                    Fortune 500 firms, leading startups, and established
-                    organizations across various sectors. Our strong industry
-                    network ensures maximum placement opportunities and
-                    internship programs for students.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-cta">
-          <div class="faq-cta-content">
-            <h3>Still Have Questions?</h3>
-            <p>
-              Our expert counselors are here to guide you through your
-              educational journey
-            </p>
-            <div class="faq-cta-actions">
-              <a
-                href="tel:+917065303030"
-                class="btn"
-                style="background: white; color: var(--primary-blue)"
-              >
-                <i
-                  data-lucide="phone"
-                  style="margin-right: 8px; width: 20px; height: 20px"
-                ></i>
-                Call Us Now
-              </a>
-              <a
-                href="https://sunstone.in/apply-now"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-orange"
-              >
-                <i
-                  data-lucide="external-link"
-                  style="margin-right: 8px; width: 20px; height: 20px"
-                ></i>
-                Apply Now
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container-xl">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <h3>Sunstone Education</h3>
-            <p>
-              Hi-Tech Institute powered by Sunstone. Quality education and
-              industry partnerships.
-            </p>
-            <div class="social-links">
-              <a
-                href="https://www.instagram.com/sunstone.in/?hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link instagram"
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.facebook.com/sunstoneedu"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link facebook"
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://in.linkedin.com/school/sunstone-/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link linkedin"
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.youtube.com/@SunstoneIND"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link youtube"
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M23.498 6.186a2.998 2.998 0 0 0-2.108-2.085C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.39.555A2.998 2.998 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a2.998 2.998 0 0 0 2.108 2.085c1.885.555 9.39.555 9.39.555s7.505 0 9.39-.555a2.998 2.998 0 0 0 2.108-2.085C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="footer-section">
-            <h3>Programs</h3>
-            <ul class="footer-links">
-              <li>
-                <a
-                  href="https://sunstone.in/mba"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >MBA Program</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://sunstone.in/bba"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >BBA Program</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://sunstone.in/bca"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >BCA Program</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://sunstone.in/mca"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >MCA Program</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://sunstone.in/btech"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >B.Tech Program</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-section">
-            <h3>Contact</h3>
-            <div>
-              <a href="mailto:connect@sunstone.in" class="contact-item">
-                <i data-lucide="mail" style="width: 16px; height: 16px"></i>
-                connect@sunstone.in
-              </a>
-              <a href="tel:+917065303030" class="contact-item">
-                <i data-lucide="phone" style="width: 16px; height: 16px"></i>
-                +91 7065-30-30-30
-              </a>
-              <a
-                href="https://sunstone.in/apply-now"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-orange"
-                style="margin-top: 16px; padding: 8px 16px; font-size: 0.875rem"
-              >
-                Apply Now
-                <i
-                  data-lucide="external-link"
-                  style="margin-left: 8px; width: 16px; height: 16px"
-                ></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>© 2025 Sunstone Education. All rights reserved.</p>
-          <div class="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <span style="color: #6b7280">•</span>
-            <a href="#">Terms</a>
-            <span style="color: #6b7280">•</span>
-            <a
-              href="https://sunstone.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              >sunstone.in</a
-            >
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Scholarship Modal -->
-    <div id="scholarshipModal" class="modal" style="display: none">
-      <div
-        class="modal-content"
-        style="
-          background: white;
-          border-radius: 16px;
-          max-width: 600px;
-          margin: 5% auto;
-          padding: 32px;
-          position: relative;
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        "
-      >
-        <span
-          class="close"
-          onclick="hideScholarshipModal()"
-          style="
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            color: #6b7280;
-          "
-          >&times;</span
-        >
-
-        <div style="text-align: center; margin-bottom: 24px">
-          <div
-            style="
-              width: 64px;
-              height: 64px;
-              background: linear-gradient(
-                135deg,
-                var(--primary-blue),
-                var(--primary-orange)
-              );
-              border-radius: 16px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin: 0 auto 16px auto;
-            "
-          >
-            <i
-              data-lucide="trophy"
-              style="width: 32px; height: 32px; color: white"
-            ></i>
-          </div>
-          <h3
-            style="
-              font-size: 1.5rem;
-              font-weight: 700;
-              color: var(--primary-blue);
-              margin-bottom: 8px;
-            "
-          >
-            Scholarship Opportunities
-          </h3>
-          <p style="color: #6b7280">
-            Unlock your potential with financial support
-          </p>
-        </div>
-
-        <div style="margin-bottom: 24px">
-          <div
-            style="
-              border: 1px solid #e5e7eb;
-              border-radius: 12px;
-              padding: 20px;
-              margin-bottom: 16px;
-            "
-          >
-            <div
-              style="display: flex; align-items: center; margin-bottom: 12px"
-            >
-              <div
-                style="
-                  width: 40px;
-                  height: 40px;
-                  background: linear-gradient(
-                    135deg,
-                    var(--primary-blue),
-                    var(--primary-orange)
-                  );
-                  border-radius: 8px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  margin-right: 12px;
-                "
-              >
-                <i
-                  data-lucide="trophy"
+                  class="program-stat-icon"
                   style="width: 20px; height: 20px; color: white"
                 ></i>
-              </div>
-              <div>
-                <h4
-                  style="
-                    font-weight: 700;
-                    color: var(--primary-blue);
-                    margin-bottom: 4px;
-                  "
-                >
-                  SAT Scholarship
-                </h4>
-                <p style="font-size: 0.875rem; color: #6b7280">
-                  Sunstone Admission Test
-                </p>
-              </div>
-            </div>
-            <div
-              style="
-                background: linear-gradient(
-                  135deg,
-                  rgba(34, 51, 106, 0.1),
-                  rgba(195, 137, 53, 0.1)
-                );
-                border-radius: 8px;
-                padding: 16px;
-                margin-bottom: 12px;
-              "
-            >
-              <p
-                style="
-                  font-size: 0.875rem;
-                  color: #374151;
-                  font-weight: 600;
-                  margin-bottom: 8px;
-                "
-              >
-                <strong>What is SAT?</strong> Sunstone Admission Test - Your
-                gateway to excellence!
-              </p>
-              <p style="font-size: 0.875rem; color: #6b7280; line-height: 1.6">
-                A comprehensive aptitude and reasoning assessment designed to
-                evaluate your academic potential and unlock scholarships up to
-                <span style="font-weight: 700; color: var(--primary-orange)"
-                  >100% of tuition fees</span
-                >.
-              </p>
-            </div>
-            <div
-              style="
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 8px;
-                text-align: center;
-              "
-            >
-              <div
-                style="background: #dbeafe; border-radius: 8px; padding: 8px"
-              >
-                <div
-                  style="
-                    font-size: 0.875rem;
-                    font-weight: 700;
-                    color: var(--primary-blue);
-                  "
-                >
-                  LR
-                </div>
-                <div style="font-size: 0.75rem; color: #6b7280">
-                  Logical Reasoning
-                </div>
-              </div>
-              <div
-                style="background: #dcfce7; border-radius: 8px; padding: 8px"
-              >
-                <div
-                  style="
-                    font-size: 0.875rem;
-                    font-weight: 700;
-                    color: var(--primary-blue);
-                  "
-                >
-                  QA
-                </div>
-                <div style="font-size: 0.75rem; color: #6b7280">
-                  Quantitative Aptitude
-                </div>
-              </div>
-              <div
-                style="background: #f3e8ff; border-radius: 8px; padding: 8px"
-              >
-                <div
-                  style="
-                    font-size: 0.875rem;
-                    font-weight: 700;
-                    color: var(--primary-blue);
-                  "
-                >
-                  EC
-                </div>
-                <div style="font-size: 0.75rem; color: #6b7280">
-                  English Comprehension
-                </div>
+                <div class="program-stat-value">5 Specializations</div>
               </div>
             </div>
           </div>
 
-          <div
-            style="
-              border: 1px solid #e5e7eb;
-              border-radius: 12px;
-              padding: 20px;
-            "
-          >
-            <div
-              style="display: flex; align-items: center; margin-bottom: 12px"
-            >
-              <div
-                style="
-                  width: 40px;
-                  height: 40px;
-                  background: linear-gradient(
-                    135deg,
-                    var(--primary-orange),
-                    var(--primary-blue)
-                  );
-                  border-radius: 8px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  margin-right: 12px;
-                "
-              >
-                <i
-                  data-lucide="star"
-                  style="width: 20px; height: 20px; color: white"
-                ></i>
-              </div>
-              <div>
-                <h4
-                  style="
-                    font-weight: 700;
-                    color: var(--primary-blue);
-                    margin-bottom: 4px;
-                  "
-                >
-                  Bright Minds Scholarship
+          <div class="program-body">
+            <div class="program-grid">
+              <div class="specializations">
+                <h4>
+                  <i
+                    data-lucide="star"
+                    style="
+                      width: 20px;
+                      height: 20px;
+                      color: var(--primary-orange);
+                    "
+                  ></i>
+                  Specializations
                 </h4>
-                <p style="font-size: 0.875rem; color: #6b7280">
-                  Merit-based Excellence
+                <div class="specialization-list">
+                  <div class="specialization-item">
+                    <div class="specialization-title">Marketing Management</div>
+                    <p class="specialization-description">
+                      Marketing Manager, Brand Manager, Digital Marketing
+                      Specialist
+                    </p>
+                  </div>
+                  <div class="specialization-item">
+                    <div class="specialization-title">
+                      IT, Analytics & Research
+                    </div>
+                    <p class="specialization-description">
+                      Business Analyst, Data Scientist, Research Analyst
+                    </p>
+                  </div>
+                  <div class="specialization-item">
+                    <div class="specialization-title">
+                      Human Resource Management
+                    </div>
+                    <p class="specialization-description">
+                      HR Manager, Talent Acquisition Manager, HR Business
+                      Partner
+                    </p>
+                  </div>
+                  <div class="specialization-item">
+                    <div class="specialization-title">Finance Management</div>
+                    <p class="specialization-description">
+                      Finance Manager, Investment Analyst, Financial Planner
+                    </p>
+                  </div>
+                  <div class="specialization-item">
+                    <div class="specialization-title">
+                      Operations Management
+                    </div>
+                    <p class="specialization-description">
+                      Operations Manager, Supply Chain Manager, Process Manager
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="eligibility">
+                <h4>
+                  <i
+                    data-lucide="check-circle"
+                    style="
+                      width: 20px;
+                      height: 20px;
+                      color: var(--primary-blue);
+                    "
+                  ></i>
+                  Eligibility
+                </h4>
+                <p class="eligibility-text">
+                  50% marks in graduation from a recognised university (45% for
+                  reserved category).
                 </p>
               </div>
             </div>
-            <div style="margin-bottom: 12px">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fc829e2ce31e947e3879e99ad255b523e%2Fb7f8a9de29d34140ac2cc4ccf5225774?format=webp&width=400"
-                alt="Bright Minds Scholarship"
-                style="
-                  width: 100%;
-                  height: 80px;
-                  object-fit: contain;
-                  border-radius: 8px;
-                "
-              />
-            </div>
-            <div
-              style="
-                background: linear-gradient(
-                  135deg,
-                  rgba(195, 137, 53, 0.1),
-                  #fefce8
-                );
-                border-radius: 8px;
-                padding: 16px;
-              "
-            >
-              <p
-                style="
-                  font-size: 0.875rem;
-                  color: #374151;
-                  font-weight: 600;
-                  margin-bottom: 8px;
-                "
-              >
-                <strong>Bright Minds Recognition:</strong> Celebrating Academic
-                Excellence!
-              </p>
-              <p style="font-size: 0.875rem; color: #6b7280; line-height: 1.6">
-                Awarded to students with exceptional academic performance. Get
-                financial support ranging from
-                <span style="font-weight: 700; color: var(--primary-orange)"
-                  >25% to 75%</span
-                >
-                of tuition fees based on your academic achievements.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div style="text-align: center">
-          <div style="background: #f9fafb; border-radius: 12px; padding: 20px">
-            <h4
-              style="
-                font-weight: 700;
-                color: var(--primary-blue);
-                margin-bottom: 8px;
-              "
-            >
-              Ready to Start?
-            </h4>
-            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 16px">
-              Take the first step towards your dream career
-            </p>
-            <button
-              onclick="window.open('https://sunstone.in/apply-now', '_blank'); hideScholarshipModal();"
-              class="btn btn-primary"
-            >
-              <span>Apply Now</span>
-              <i
-                data-lucide="external-link"
-                style="margin-left: 8px; width: 16px; height: 16px"
-              ></i>
-            </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
+    <!-- Enhanced Carousel JavaScript with Touch Gestures -->
     <script>
-      // Initialize Lucide icons
-      document.addEventListener("DOMContentLoaded", function () {
-        lucide.createIcons();
-      });
-
-      // Hero Carousel
+      // Enhanced Hero Carousel with Mobile Support
       let currentSlide = 0;
       const slides = document.querySelectorAll(".carousel-slide");
       const dots = document.querySelectorAll(".carousel-dot");
       const totalSlides = slides.length;
+
+      // Touch gesture variables
+      let touchStartX = 0;
+      let touchEndX = 0;
+      let touchStartY = 0;
+      let touchEndY = 0;
+
+      // Update carousel content overlay
+      function updateContentOverlay() {
+        const overlay = document.querySelector(".carousel-content-overlay");
+        const titleElement = overlay.querySelector(".carousel-content-title");
+        const subtitleElement = overlay.querySelector(
+          ".carousel-content-subtitle",
+        );
+        const activeSlide = slides[currentSlide];
+
+        if (activeSlide && titleElement && subtitleElement) {
+          titleElement.textContent = activeSlide.dataset.title || "";
+          subtitleElement.textContent = activeSlide.dataset.subtitle || "";
+        }
+      }
 
       function setCarouselSlide(index) {
         // Remove active class from current slide and dot
@@ -5213,6 +3270,9 @@
         // Add active class to new slide and dot
         slides[currentSlide].classList.add("active");
         dots[currentSlide].classList.add("active");
+
+        // Update content overlay
+        updateContentOverlay();
       }
 
       function nextSlide() {
@@ -5220,438 +3280,161 @@
         setCarouselSlide(nextIndex);
       }
 
+      function prevSlide() {
+        const prevIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+        setCarouselSlide(prevIndex);
+      }
+
+      // Enhanced Touch Gesture Support
+      const carousel = document.getElementById("heroCarousel");
+
+      if (carousel) {
+        // Touch events
+        carousel.addEventListener("touchstart", handleTouchStart, {
+          passive: true,
+        });
+        carousel.addEventListener("touchmove", handleTouchMove, {
+          passive: false,
+        });
+        carousel.addEventListener("touchend", handleTouchEnd, {
+          passive: true,
+        });
+
+        // Mouse events for desktop drag
+        carousel.addEventListener("mousedown", handleMouseStart);
+        carousel.addEventListener("mousemove", handleMouseMove);
+        carousel.addEventListener("mouseup", handleMouseEnd);
+        carousel.addEventListener("mouseleave", handleMouseEnd);
+
+        // Prevent default drag behavior on images
+        carousel.addEventListener("dragstart", (e) => e.preventDefault());
+      }
+
+      function handleTouchStart(e) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      }
+
+      function handleTouchMove(e) {
+        if (!touchStartX) return;
+
+        touchEndX = e.touches[0].clientX;
+        touchEndY = e.touches[0].clientY;
+
+        // Calculate distances
+        const deltaX = Math.abs(touchEndX - touchStartX);
+        const deltaY = Math.abs(touchEndY - touchStartY);
+
+        // If horizontal swipe is dominant, prevent vertical scrolling
+        if (deltaX > deltaY && deltaX > 10) {
+          e.preventDefault();
+        }
+      }
+
+      function handleTouchEnd() {
+        if (!touchStartX || !touchEndX) return;
+
+        const distance = touchStartX - touchEndX;
+        const minSwipeDistance = 50; // Minimum distance for swipe
+        const deltaY = Math.abs(touchEndY - touchStartY);
+
+        // Only trigger if horizontal swipe is dominant
+        if (deltaY < 100) {
+          if (distance > minSwipeDistance) {
+            nextSlide();
+          } else if (distance < -minSwipeDistance) {
+            prevSlide();
+          }
+        }
+
+        // Reset
+        touchStartX = 0;
+        touchEndX = 0;
+        touchStartY = 0;
+        touchEndY = 0;
+      }
+
+      // Mouse events for desktop
+      let mouseStartX = 0;
+      let mouseEndX = 0;
+      let isDragging = false;
+
+      function handleMouseStart(e) {
+        mouseStartX = e.clientX;
+        isDragging = true;
+        carousel.style.cursor = "grabbing";
+      }
+
+      function handleMouseMove(e) {
+        if (!isDragging) return;
+        mouseEndX = e.clientX;
+      }
+
+      function handleMouseEnd() {
+        if (!isDragging) return;
+
+        const distance = mouseStartX - mouseEndX;
+        const minSwipeDistance = 50;
+
+        if (distance > minSwipeDistance) {
+          nextSlide();
+        } else if (distance < -minSwipeDistance) {
+          prevSlide();
+        }
+
+        isDragging = false;
+        carousel.style.cursor = "grab";
+        mouseStartX = 0;
+        mouseEndX = 0;
+      }
+
       // Auto-advance carousel
-      setInterval(nextSlide, 5000);
+      let autoSlideInterval = setInterval(nextSlide, 5000);
 
-      // Programs Section
-      const programs = {
-        MBA: {
-          duration: "2-year program",
-          specializations: "5 specializations",
-          certifications: "10 certifications",
-          internships: "6+ months internships",
-          projects: "4 capstone projects",
-          eligibility:
-            "50% marks in graduation from a recognised university (45% for reserved category).",
-          specializations_list: [
-            {
-              name: "Marketing Management",
-              careers:
-                "Marketing Manager, Brand Manager, Digital Marketing Specialist",
-            },
-            {
-              name: "IT, Analytics & Research",
-              careers: "Business Analyst, Data Scientist, Research Analyst",
-            },
-            {
-              name: "Human Resource Management",
-              careers:
-                "HR Manager, Talent Acquisition Manager, HR Business Partner",
-            },
-            {
-              name: "Finance Management",
-              careers: "Finance Manager, Investment Analyst, Financial Planner",
-            },
-            {
-              name: "Operations Management",
-              careers:
-                "Operations Manager, Supply Chain Manager, Process Manager",
-            },
-          ],
-          url: "https://sunstone.in/campuses/hi-tech-institute/mba",
-        },
-        BBA: {
-          duration: "3-year program",
-          specializations: "6 specializations",
-          certifications: "10 certifications",
-          internships: "8+ months internships",
-          projects: "6 capstone projects",
-          eligibility:
-            "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). No specific subject requirements.",
-          specializations_list: [
-            {
-              name: "IT & Business Analytics",
-              careers:
-                "Big Data Analyst, Data Visualization Specialist, Business Intelligence Analyst",
-            },
-            {
-              name: "Human Resource & Talent Analytics",
-              careers:
-                "HR Data Analyst, Talent Acquisition Specialist, Workforce Planning Manager",
-            },
-            {
-              name: "Marketing Management",
-              careers: "Marketing Manager, Brand Manager, Campaign Strategist",
-            },
-            {
-              name: "Retail Sales Management",
-              careers:
-                "Retail Manager, Sales Executive, Store Operations Manager",
-            },
-            {
-              name: "Operations Management",
-              careers:
-                "Operations Manager, Production Manager, Logistics Coordinator",
-            },
-            {
-              name: "Banking, Financial Services and Insurance (BFSI)",
-              careers:
-                "Banking Officer, Financial Advisor, Insurance Specialist",
-            },
-          ],
-          url: "https://sunstone.in/campuses/hi-tech-institute/bba",
-        },
-        BCA: {
-          duration: "3-year program",
-          specializations: "6 specializations",
-          certifications: "10 certifications",
-          internships: "8+ months internships",
-          projects: "3 capstone projects",
-          eligibility:
-            "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Mathematics as a compulsory subject is preferred.",
-          specializations_list: [
-            {
-              name: "Cloud Computing",
-              careers: "Cloud Engineer, DevOps Engineer, Cloud Architect",
-            },
-            {
-              name: "Cyber Security & Forensics",
-              careers:
-                "Cybersecurity Analyst, Ethical Hacker, Digital Forensics Specialist",
-            },
-            {
-              name: "Blockchain",
-              careers:
-                "Blockchain Developer, Cryptocurrency Analyst, Smart Contract Developer",
-            },
-            {
-              name: "Machine Learning & AI",
-              careers: "ML Engineer, AI Developer, Data Scientist",
-            },
-            {
-              name: "Data Science & Analytics",
-              careers:
-                "Data Analyst, Business Intelligence Analyst, Data Visualization Expert",
-            },
-            {
-              name: "Full Stack Development",
-              careers:
-                "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
-            },
-          ],
-          url: "https://sunstone.in/campuses/hi-tech-institute/bca",
-        },
-        MCA: {
-          duration: "2-year program",
-          specializations: "5 specializations",
-          certifications: "10 certifications",
-          internships: "6+ months internships",
-          projects: "2 capstone projects",
-          eligibility:
-            "50% marks in graduation from a recognised university (45% for reserved category). Must have studied at least one of these subjects: Computer Science, Information Technology, Informatics Practices, Mathematics, Business Mathematics, or Statistics.",
-          specializations_list: [
-            {
-              name: "Full Stack Development",
-              careers:
-                "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
-            },
-            {
-              name: "Machine Learning & AI",
-              careers: "ML Engineer, AI Developer, Data Scientist",
-            },
-            {
-              name: "Data Science",
-              careers:
-                "Data Scientist, Data Analyst, Business Intelligence Specialist",
-            },
-            {
-              name: "Cloud Computing",
-              careers:
-                "Cloud Engineer, DevOps Engineer, Cloud Solutions Architect",
-            },
-            {
-              name: "Cyber Security",
-              careers:
-                "Cybersecurity Analyst, Security Engineer, Information Security Specialist",
-            },
-          ],
-          url: "https://sunstone.in/campuses/hi-tech-institute/mca",
-        },
-        BTECH: {
-          duration: "4-year program",
-          specializations: "2 specializations",
-          certifications: "10 certifications",
-          internships: "10+ months internships",
-          projects: "4 capstone projects",
-          eligibility:
-            "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Compulsory subjects: Physics, Mathematics and Chemistry.",
-          specializations_list: [
-            {
-              name: "Computer Science Engineering",
-              careers:
-                "Software Engineer, System Analyst, Application Developer",
-            },
-            {
-              name: "Information Technology",
-              careers: "IT Specialist, Business Analyst, Project Manager",
-            },
-          ],
-          url: "https://sunstone.in/campuses/hi-tech-institute/b-tech",
-        },
-      };
+      // Pause auto-advance on hover/touch
+      carousel.addEventListener("mouseenter", () => {
+        clearInterval(autoSlideInterval);
+      });
 
-      let activeProgram = "MBA";
+      carousel.addEventListener("mouseleave", () => {
+        autoSlideInterval = setInterval(nextSlide, 5000);
+      });
 
-      function setActiveProgram(program) {
-        activeProgram = program;
+      carousel.addEventListener("touchstart", () => {
+        clearInterval(autoSlideInterval);
+      });
 
-        // Update tab appearance
+      carousel.addEventListener("touchend", () => {
+        setTimeout(() => {
+          autoSlideInterval = setInterval(nextSlide, 5000);
+        }, 3000);
+      });
+
+      // Initialize content overlay
+      document.addEventListener("DOMContentLoaded", () => {
+        updateContentOverlay();
+      });
+
+      // Program tabs functionality
+      function showProgram(programName) {
+        // Remove active class from all tabs
         document.querySelectorAll(".program-tab").forEach((tab) => {
           tab.classList.remove("active");
         });
+
+        // Add active class to clicked tab
         event.target.closest(".program-tab").classList.add("active");
 
-        // Update content
-        updateProgramContent(program);
+        // Update program content based on selection
+        const content = document.getElementById("programContent");
+        // This would be expanded with actual program data
+        console.log("Showing program:", programName);
       }
 
-      function updateProgramContent(program) {
-        const programData = programs[program];
-        if (!programData) return;
-
-        const content = document.getElementById("programContent");
-
-        content.innerHTML = `
-                <div class="program-display">
-                    <div class="program-header">
-                        <div class="program-header-content">
-                            <div class="program-icon">
-                                <i data-lucide="graduation-cap" style="width: 40px; height: 40px; color: white;"></i>
-                            </div>
-                            <div class="program-info">
-                                <h3>${program} Program</h3>
-                                <p>Excellence in Education</p>
-                            </div>
-                        </div>
-                        <div class="program-stats">
-                            <div class="program-stat">
-                                <div class="program-stat-icon">
-                                    <i data-lucide="clock" style="width: 24px; height: 24px; color: white;"></i>
-                                </div>
-                                <div class="program-stat-value">${programData.duration}</div>
-                            </div>
-                            <div class="program-stat">
-                                <div class="program-stat-icon">
-                                    <i data-lucide="star" style="width: 24px; height: 24px; color: white;"></i>
-                                </div>
-                                <div class="program-stat-value">${programData.specializations}</div>
-                            </div>
-                            <div class="program-stat">
-                                <div class="program-stat-icon">
-                                    <i data-lucide="award" style="width: 24px; height: 24px; color: white;"></i>
-                                </div>
-                                <div class="program-stat-value">${programData.certifications}</div>
-                            </div>
-                            <div class="program-stat">
-                                <div class="program-stat-icon">
-                                    <i data-lucide="briefcase" style="width: 24px; height: 24px; color: white;"></i>
-                                </div>
-                                <div class="program-stat-value">${programData.internships}</div>
-                            </div>
-                            <div class="program-stat">
-                                <div class="program-stat-icon">
-                                    <i data-lucide="target" style="width: 24px; height: 24px; color: white;"></i>
-                                </div>
-                                <div class="program-stat-value">${programData.projects}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="program-body">
-                        <div class="program-grid">
-                            <div class="specializations">
-                                <h4>
-                                    <i data-lucide="star" style="width: 24px; height: 24px; color: var(--primary-orange);"></i>
-                                    Specializations
-                                </h4>
-                                <div class="specialization-list">
-                                    ${programData.specializations_list
-                                      .map(
-                                        (spec) => `
-                                        <div class="specialization-item">
-                                            <div class="specialization-header">
-                                                <div class="specialization-icon">
-                                                    <i data-lucide="target" style="width: 16px; height: 16px; color: white;"></i>
-                                                </div>
-                                                <div class="specialization-content">
-                                                    <h5>${spec.name}</h5>
-                                                    <p>${spec.careers}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    `,
-                                      )
-                                      .join("")}
-                                </div>
-                            </div>
-                            <div class="eligibility">
-                                <h4>
-                                    <i data-lucide="award" style="width: 24px; height: 24px; color: var(--primary-orange);"></i>
-                                    Eligibility
-                                </h4>
-                                <div class="eligibility-content">
-                                    <p>${programData.eligibility}</p>
-                                </div>
-                                <a href="${programData.url}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; margin-top: 24px;">
-                                    <span>Apply Now</span>
-                                    <i data-lucide="external-link" style="margin-left: 8px; width: 20px; height: 20px;"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-        // Re-initialize Lucide icons for the new content
+      // Initialize Lucide icons
+      if (typeof lucide !== "undefined") {
         lucide.createIcons();
       }
-
-      // FAQ Toggle
-      function toggleFAQ(element) {
-        const faqItem = element.closest(".faq-item");
-        const isActive = faqItem.classList.contains("active");
-
-        // Close all FAQ items
-        document.querySelectorAll(".faq-item").forEach((item) => {
-          item.classList.remove("active");
-        });
-
-        // If this item wasn't active, open it
-        if (!isActive) {
-          faqItem.classList.add("active");
-        }
-      }
-
-      // Scholarship Modal
-      function showScholarshipModal() {
-        document.getElementById("scholarshipModal").style.display = "block";
-        document.body.style.overflow = "hidden";
-      }
-
-      function hideScholarshipModal() {
-        document.getElementById("scholarshipModal").style.display = "none";
-        document.body.style.overflow = "auto";
-      }
-
-      // Close modal when clicking outside
-      window.onclick = function (event) {
-        const modal = document.getElementById("scholarshipModal");
-        if (event.target == modal) {
-          hideScholarshipModal();
-        }
-      };
-
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-        });
-      });
-
-      // Add animation on scroll
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, observerOptions);
-
-      // Observe elements with animation classes
-      document
-        .querySelectorAll(
-          ".animate-fade-in, .animate-slide-up, .animate-slide-in-left, .animate-slide-in-right",
-        )
-        .forEach((el) => {
-          el.style.opacity = "0";
-          el.style.transform = "translateY(20px)";
-          el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-          observer.observe(el);
-        });
-
-      // Initialize program content
-      updateProgramContent("MBA");
     </script>
-
-    <!-- Modal Styles -->
-    <style>
-      .modal {
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(5px);
-      }
-
-      .modal-content {
-        position: relative;
-        margin: 5% auto;
-        background: white;
-        border-radius: 16px;
-        max-width: 600px;
-        padding: 32px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        animation: modalSlideIn 0.3s ease-out;
-      }
-
-      @keyframes modalSlideIn {
-        from {
-          opacity: 0;
-          transform: translateY(-50px) scale(0.9);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0) scale(1);
-        }
-      }
-
-      .close {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-        color: #6b7280;
-        transition: color 0.3s ease;
-      }
-
-      .close:hover {
-        color: var(--primary-blue);
-      }
-
-      @media (max-width: 768px) {
-        .modal-content {
-          margin: 10% auto;
-          max-width: 90%;
-          padding: 24px;
-        }
-      }
-    </style>
   </body>
 </html>
