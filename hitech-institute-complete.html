@@ -3868,6 +3868,121 @@
             // Reinitialize Lucide icons after any dynamic content changes
             lucide.createIcons();
         });
+
+        // FAQ toggle functionality
+        function toggleFAQ(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('.faq-icon');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Scholarship modal functionality
+        function openScholarshipModal() {
+            // Create modal
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-end justify-center md:items-center md:justify-center';
+            modal.innerHTML = `
+                <div class="bg-white rounded-t-2xl md:rounded-2xl w-full max-w-sm md:max-w-2xl md:w-full relative shadow-2xl max-h-[75vh] md:max-h-[90vh] overflow-y-auto transform transition-all duration-300 ease-out">
+                    <button onclick="closeScholarshipModal()" class="absolute top-4 right-4 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-all duration-200 z-20 group">
+                        <i data-lucide="x" class="h-4 w-4 text-gray-600 group-hover:text-gray-800"></i>
+                    </button>
+
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-r from-primary-blue to-primary-orange rounded-2xl flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="trophy" class="h-8 w-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary mb-2">Scholarship Opportunities</h3>
+                            <p class="text-gray-600 text-sm">Unlock your potential with financial support</p>
+                        </div>
+
+                        <div class="space-y-4 mb-6">
+                            <div class="border border-gray-200 rounded-xl p-4 hover:border-primary-orange transition-all duration-200">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-primary-blue to-primary-orange rounded-lg flex items-center justify-center mr-3">
+                                            <i data-lucide="trophy" class="h-5 w-5 text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-primary text-sm">SAT Scholarship</h4>
+                                            <p class="text-xs text-gray-600">Sunstone Admission Test</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 space-y-2">
+                                    <div class="bg-gradient-to-r from-primary-blue/10 to-primary-orange/10 rounded-lg p-3">
+                                        <p class="text-xs text-gray-700 font-medium mb-2"><strong>What is SAT?</strong> Sunstone Admission Test - Your gateway to excellence!</p>
+                                        <p class="text-xs text-gray-600 leading-relaxed">A comprehensive aptitude and reasoning assessment designed to evaluate your academic potential and unlock scholarships up to <span class="font-bold text-primary-orange">100% of tuition fees</span>.</p>
+                                    </div>
+                                    <div class="grid grid-cols-3 gap-2 text-center">
+                                        <div class="bg-blue-50 rounded-lg p-2">
+                                            <div class="text-xs font-bold text-primary">LR</div>
+                                            <div class="text-xs text-gray-600">Logical Reasoning</div>
+                                        </div>
+                                        <div class="bg-green-50 rounded-lg p-2">
+                                            <div class="text-xs font-bold text-primary">QA</div>
+                                            <div class="text-xs text-gray-600">Quantitative Aptitude</div>
+                                        </div>
+                                        <div class="bg-purple-50 rounded-lg p-2">
+                                            <div class="text-xs font-bold text-primary">EC</div>
+                                            <div class="text-xs text-gray-600">English Comprehension</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="border border-gray-200 rounded-xl p-4 hover:border-primary-orange transition-all duration-200">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-gradient-to-r from-primary-orange to-primary-blue rounded-lg flex items-center justify-center mr-3">
+                                            <i data-lucide="star" class="h-5 w-5 text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-primary text-sm">Bright Minds Scholarship</h4>
+                                            <p class="text-xs text-gray-600">Merit-based Excellence</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 space-y-2">
+                                    <div class="bg-gradient-to-r from-primary-orange/10 to-yellow-100 rounded-lg p-3">
+                                        <p class="text-xs text-gray-700 font-medium mb-2"><strong>Bright Minds Recognition:</strong> Celebrating Academic Excellence!</p>
+                                        <p class="text-xs text-gray-600 leading-relaxed">Awarded to students with exceptional academic performance. Get financial support ranging from <span class="font-bold text-primary-orange">25% to 75%</span> of tuition fees based on your academic achievements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="bg-gray-50 rounded-xl p-4">
+                                <h4 class="font-bold text-primary mb-2 text-base">Ready to Start?</h4>
+                                <p class="text-xs text-gray-600 mb-4">Take the first step towards your dream career</p>
+                                <button onclick="window.open('https://sunstone.in/apply-now', '_blank'); closeScholarshipModal();" class="inline-flex items-center px-6 py-2 bg-gradient-to-r from-primary-blue to-primary-orange text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200 text-sm group">
+                                    <span>Apply Now</span>
+                                    <i data-lucide="external-link" class="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.body.appendChild(modal);
+            lucide.createIcons();
+        }
+
+        function closeScholarshipModal() {
+            const modal = document.querySelector('.fixed.inset-0.bg-black\\/70');
+            if (modal) {
+                modal.remove();
+            }
+        }
     </script>
 </body>
 </html>
