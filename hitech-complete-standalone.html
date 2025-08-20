@@ -462,7 +462,7 @@
       .touch-action-pan-y {
         touch-action: pan-y;
       }
-      
+
       .touch-action-manipulation {
         touch-action: manipulation;
       }
@@ -1474,8 +1474,7 @@
                     Master of Computer Applications
                   </h3>
                   <p class="text-gray-600 text-xs leading-relaxed flex-grow">
-                    2-year program with AI, ML, and data science
-                    specializations
+                    2-year program with AI, ML, and data science specializations
                   </p>
                 </div>
               </div>
@@ -1515,7 +1514,9 @@
               <div
                 class="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300"
               >
-                <span class="text-white text-xl lg:text-2xl font-bold">MBA</span>
+                <span class="text-white text-xl lg:text-2xl font-bold"
+                  >MBA</span
+                >
               </div>
               <h3
                 class="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3"
@@ -1538,7 +1539,9 @@
               <div
                 class="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300"
               >
-                <span class="text-white text-xl lg:text-2xl font-bold">BBA</span>
+                <span class="text-white text-xl lg:text-2xl font-bold"
+                  >BBA</span
+                >
               </div>
               <h3
                 class="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3"
@@ -1561,7 +1564,9 @@
               <div
                 class="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300"
               >
-                <span class="text-white text-xl lg:text-2xl font-bold">BCA</span>
+                <span class="text-white text-xl lg:text-2xl font-bold"
+                  >BCA</span
+                >
               </div>
               <h3
                 class="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3"
@@ -1585,7 +1590,9 @@
               <div
                 class="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-[#c38935] to-[#d4a853] rounded-2xl flex items-center justify-center mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300"
               >
-                <span class="text-white text-xl lg:text-2xl font-bold">MCA</span>
+                <span class="text-white text-xl lg:text-2xl font-bold"
+                  >MCA</span
+                >
               </div>
               <h3
                 class="text-lg lg:text-xl font-bold text-[#22336a] mb-2 lg:mb-3"
@@ -1799,8 +1806,8 @@
               <div class="p-4 md:p-6 pt-0 text-gray-600 text-xs md:text-base">
                 <p>
                   Yes! We offer multiple scholarship programs:<br />
-                  <strong>SAT Scholarship:</strong> Up to 100% tuition fee waiver
-                  based on Sunstone Admission Test performance<br />
+                  <strong>SAT Scholarship:</strong> Up to 100% tuition fee
+                  waiver based on Sunstone Admission Test performance<br />
                   <strong>Bright Minds Scholarship:</strong> 25% to 75% tuition
                   fee waiver based on academic merit and achievements
                 </p>
@@ -2078,20 +2085,20 @@
 
       function handleTouchEnd() {
         if (isTransitioning) return;
-        
+
         const threshold = 50;
         const diff = touchStartX - touchEndX;
 
         if (Math.abs(diff) > threshold) {
           if (diff > 0) {
             // Swipe left - next slide
-            nextSlide('hero-carousel');
+            nextSlide("hero-carousel");
           } else {
             // Swipe right - previous slide
-            prevSlide('hero-carousel');
+            prevSlide("hero-carousel");
           }
         }
-        
+
         touchStartX = 0;
         touchEndX = 0;
       }
@@ -2099,21 +2106,33 @@
       function nextSlide(carouselId) {
         if (isTransitioning) return;
         isTransitioning = true;
-        
+
         const carousel = document.getElementById(carouselId);
-        const slides = carousel.querySelectorAll('.carousel-slide');
-        const dots = carousel.querySelectorAll('.carousel-dot');
-        
-        slides[currentSlideIndex].classList.remove('active');
-        dots[currentSlideIndex].classList.remove('bg-white', 'shadow-lg', 'scale-125', 'ring-2', 'ring-white/30');
-        dots[currentSlideIndex].classList.add('bg-white/50');
-        
+        const slides = carousel.querySelectorAll(".carousel-slide");
+        const dots = carousel.querySelectorAll(".carousel-dot");
+
+        slides[currentSlideIndex].classList.remove("active");
+        dots[currentSlideIndex].classList.remove(
+          "bg-white",
+          "shadow-lg",
+          "scale-125",
+          "ring-2",
+          "ring-white/30",
+        );
+        dots[currentSlideIndex].classList.add("bg-white/50");
+
         currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-        
-        slides[currentSlideIndex].classList.add('active');
-        dots[currentSlideIndex].classList.remove('bg-white/50');
-        dots[currentSlideIndex].classList.add('bg-white', 'shadow-lg', 'scale-125', 'ring-2', 'ring-white/30');
-        
+
+        slides[currentSlideIndex].classList.add("active");
+        dots[currentSlideIndex].classList.remove("bg-white/50");
+        dots[currentSlideIndex].classList.add(
+          "bg-white",
+          "shadow-lg",
+          "scale-125",
+          "ring-2",
+          "ring-white/30",
+        );
+
         setTimeout(() => {
           isTransitioning = false;
         }, 300);
@@ -2122,21 +2141,34 @@
       function prevSlide(carouselId) {
         if (isTransitioning) return;
         isTransitioning = true;
-        
+
         const carousel = document.getElementById(carouselId);
-        const slides = carousel.querySelectorAll('.carousel-slide');
-        const dots = carousel.querySelectorAll('.carousel-dot');
-        
-        slides[currentSlideIndex].classList.remove('active');
-        dots[currentSlideIndex].classList.remove('bg-white', 'shadow-lg', 'scale-125', 'ring-2', 'ring-white/30');
-        dots[currentSlideIndex].classList.add('bg-white/50');
-        
-        currentSlideIndex = currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
-        
-        slides[currentSlideIndex].classList.add('active');
-        dots[currentSlideIndex].classList.remove('bg-white/50');
-        dots[currentSlideIndex].classList.add('bg-white', 'shadow-lg', 'scale-125', 'ring-2', 'ring-white/30');
-        
+        const slides = carousel.querySelectorAll(".carousel-slide");
+        const dots = carousel.querySelectorAll(".carousel-dot");
+
+        slides[currentSlideIndex].classList.remove("active");
+        dots[currentSlideIndex].classList.remove(
+          "bg-white",
+          "shadow-lg",
+          "scale-125",
+          "ring-2",
+          "ring-white/30",
+        );
+        dots[currentSlideIndex].classList.add("bg-white/50");
+
+        currentSlideIndex =
+          currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
+
+        slides[currentSlideIndex].classList.add("active");
+        dots[currentSlideIndex].classList.remove("bg-white/50");
+        dots[currentSlideIndex].classList.add(
+          "bg-white",
+          "shadow-lg",
+          "scale-125",
+          "ring-2",
+          "ring-white/30",
+        );
+
         setTimeout(() => {
           isTransitioning = false;
         }, 300);
@@ -2145,21 +2177,33 @@
       function goToSlide(carouselId, slideIndex) {
         if (isTransitioning || slideIndex === currentSlideIndex) return;
         isTransitioning = true;
-        
+
         const carousel = document.getElementById(carouselId);
-        const slides = carousel.querySelectorAll('.carousel-slide');
-        const dots = carousel.querySelectorAll('.carousel-dot');
-        
-        slides[currentSlideIndex].classList.remove('active');
-        dots[currentSlideIndex].classList.remove('bg-white', 'shadow-lg', 'scale-125', 'ring-2', 'ring-white/30');
-        dots[currentSlideIndex].classList.add('bg-white/50');
-        
+        const slides = carousel.querySelectorAll(".carousel-slide");
+        const dots = carousel.querySelectorAll(".carousel-dot");
+
+        slides[currentSlideIndex].classList.remove("active");
+        dots[currentSlideIndex].classList.remove(
+          "bg-white",
+          "shadow-lg",
+          "scale-125",
+          "ring-2",
+          "ring-white/30",
+        );
+        dots[currentSlideIndex].classList.add("bg-white/50");
+
         currentSlideIndex = slideIndex;
-        
-        slides[currentSlideIndex].classList.add('active');
-        dots[currentSlideIndex].classList.remove('bg-white/50');
-        dots[currentSlideIndex].classList.add('bg-white', 'shadow-lg', 'scale-125', 'ring-2', 'ring-white/30');
-        
+
+        slides[currentSlideIndex].classList.add("active");
+        dots[currentSlideIndex].classList.remove("bg-white/50");
+        dots[currentSlideIndex].classList.add(
+          "bg-white",
+          "shadow-lg",
+          "scale-125",
+          "ring-2",
+          "ring-white/30",
+        );
+
         setTimeout(() => {
           isTransitioning = false;
         }, 300);
@@ -2168,70 +2212,77 @@
       // Auto-advance carousel
       setInterval(() => {
         if (!isTransitioning) {
-          nextSlide('hero-carousel');
+          nextSlide("hero-carousel");
         }
       }, 5000);
 
       // Enhanced FAQ functionality
       function toggleFAQ(button) {
         const faqItem = button.parentElement;
-        const answer = faqItem.querySelector('.faq-answer');
-        const icon = button.querySelector('.faq-icon');
-        
+        const answer = faqItem.querySelector(".faq-answer");
+        const icon = button.querySelector(".faq-icon");
+
         // Close all other FAQs
-        document.querySelectorAll('.faq-answer').forEach(item => {
-          if (item !== answer && item.classList.contains('open')) {
-            item.classList.remove('open');
-            item.parentElement.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+        document.querySelectorAll(".faq-answer").forEach((item) => {
+          if (item !== answer && item.classList.contains("open")) {
+            item.classList.remove("open");
+            item.parentElement.querySelector(".faq-icon").style.transform =
+              "rotate(0deg)";
           }
         });
-        
+
         // Toggle current FAQ
-        if (answer.classList.contains('open')) {
-          answer.classList.remove('open');
-          icon.style.transform = 'rotate(0deg)';
+        if (answer.classList.contains("open")) {
+          answer.classList.remove("open");
+          icon.style.transform = "rotate(0deg)";
         } else {
-          answer.classList.add('open');
-          icon.style.transform = 'rotate(180deg)';
+          answer.classList.add("open");
+          icon.style.transform = "rotate(180deg)";
         }
       }
 
       // Mobile menu improvements (if needed in future)
       // Add passive event listeners for better performance
-      document.addEventListener('touchstart', function(e) {
-        // Passive touch handling
-      }, { passive: true });
+      document.addEventListener(
+        "touchstart",
+        function (e) {
+          // Passive touch handling
+        },
+        { passive: true },
+      );
 
       // Intersection Observer for animations
       const observerOptions = {
         threshold: 0.1,
-        rootMargin: '50px'
+        rootMargin: "50px",
       };
 
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
           }
         });
       }, observerOptions);
 
       // Observe elements when DOM is loaded
-      document.addEventListener('DOMContentLoaded', function() {
-        const animatedElements = document.querySelectorAll('.animate-fade-in-up, .animate-slide-up, .animate-scale-in');
-        animatedElements.forEach(el => observer.observe(el));
+      document.addEventListener("DOMContentLoaded", function () {
+        const animatedElements = document.querySelectorAll(
+          ".animate-fade-in-up, .animate-slide-up, .animate-scale-in",
+        );
+        animatedElements.forEach((el) => observer.observe(el));
       });
 
       // Smooth scroll behavior
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
           e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
+          const target = document.querySelector(this.getAttribute("href"));
           if (target) {
             target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
+              behavior: "smooth",
+              block: "start",
             });
           }
         });
