@@ -1,2553 +1,3057 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hi-Tech Institute - Learning That Leads To Success</title>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="https://fast.wistia.com/embed/medias/g4et8b6dnb.jsonp" async></script>
-    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://fast.wistia.com/embed/medias/g4et8b6dnb.jsonp"
+      async
+    ></script>
+    <script
+      src="https://fast.wistia.com/assets/external/E-v1.js"
+      async
+    ></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Public Sans", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #ffffff;
+      }
+
+      /* CSS Variables for Colors */
+      :root {
+        --primary-blue: #22336a;
+        --primary-orange: #c38935;
+        --orange-light: #f4d03f;
+        --gray-50: #f9fafb;
+        --gray-100: #f3f4f6;
+        --gray-200: #e5e7eb;
+        --gray-300: #d1d5db;
+        --gray-400: #9ca3af;
+        --gray-500: #6b7280;
+        --gray-600: #4b5563;
+        --gray-700: #374151;
+        --gray-800: #1f2937;
+        --gray-900: #111827;
+      }
+
+      /* Utility Classes */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: linear-gradient(to right, var(--primary-orange), #d4a853);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+
+      .btn-secondary:hover {
+        background: white;
+        color: var(--primary-blue);
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
-
-        body {
-            font-family: 'Public Sans', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #ffffff;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        /* CSS Variables for Colors */
-        :root {
-            --primary-blue: #22336a;
-            --primary-orange: #c38935;
-            --orange-light: #f4d03f;
-            --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
-            --gray-300: #d1d5db;
-            --gray-400: #9ca3af;
-            --gray-500: #6b7280;
-            --gray-600: #4b5563;
-            --gray-700: #374151;
-            --gray-800: #1f2937;
-            --gray-900: #111827;
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
         }
-
-        /* Utility Classes */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
+        to {
+          opacity: 1;
+          transform: translateX(0);
         }
+      }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
         }
-
-        .btn-primary {
-            background: linear-gradient(to right, var(--primary-orange), #d4a853);
-            color: white;
+        to {
+          opacity: 1;
+          transform: translateX(0);
         }
+      }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
         }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
+        50% {
+          transform: translateY(-10px);
         }
+      }
 
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary-blue);
+      @keyframes scrollRightToLeft {
+        0% {
+          transform: translateX(0);
         }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        100% {
+          transform: translateX(-50%);
         }
+      }
 
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
+      @keyframes scrollLeftToRight {
+        0% {
+          transform: translateX(-50%);
         }
-
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
+        100% {
+          transform: translateX(0);
         }
+      }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
+      .animate-fadeIn {
+        animation: fadeIn 0.8s ease-out;
+      }
+      .animate-slideInLeft {
+        animation: slideInLeft 0.8s ease-out;
+      }
+      .animate-slideInRight {
+        animation: slideInRight 0.8s ease-out;
+      }
+      .animate-bounce {
+        animation: bounce 2s ease-in-out infinite;
+      }
 
-        @keyframes scrollRightToLeft {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+      /* Header Styles */
+      .header {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid #e5e7eb;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        transition: all 0.3s ease;
+      }
 
-        @keyframes scrollLeftToRight {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); }
-        }
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4rem;
+        padding: 0 1rem;
+      }
 
-        .animate-fadeIn { animation: fadeIn 0.8s ease-out; }
-        .animate-slideInLeft { animation: slideInLeft 0.8s ease-out; }
-        .animate-slideInRight { animation: slideInRight 0.8s ease-out; }
-        .animate-bounce { animation: bounce 2s ease-in-out infinite; }
+      .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
 
-        /* Header Styles */
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            border-bottom: 1px solid #e5e7eb;
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            transition: all 0.3s ease;
-        }
+      .logo-section img {
+        height: 1.5rem;
+        width: auto;
+        transition: all 0.3s ease;
+      }
 
+      .logo-divider {
+        height: 2rem;
+        width: 1px;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          #d1d5db,
+          transparent
+        );
+      }
+
+      .contact-section {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .email-link {
+        display: none;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .email-link:hover {
+        color: var(--primary-orange);
+        background: #f9fafb;
+      }
+
+      .phone-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: linear-gradient(to right, var(--primary-orange), #d4a853);
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.75rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .phone-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: var(--primary-blue);
+        color: white;
+        padding: 2rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 5rem;
+        right: 5rem;
+        width: 24rem;
+        height: 24rem;
+        background: rgba(195, 137, 53, 0.1);
+        border-radius: 50%;
+        filter: blur(60px);
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        bottom: 5rem;
+        left: 5rem;
+        width: 20rem;
+        height: 20rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        filter: blur(60px);
+      }
+
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .hero-title .highlight {
+        background: linear-gradient(
+          to right,
+          var(--primary-orange),
+          var(--orange-light)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.9);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      /* Carousel Styles */
+      .carousel-container {
+        position: relative;
+        max-width: 28rem;
+        margin: 0 auto;
+      }
+
+      .carousel-wrapper {
+        background: white;
+        border-radius: 1rem;
+        padding: 0.75rem;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        transition: all 0.5s ease;
+      }
+
+      .carousel-wrapper:hover {
+        transform: scale(1.02);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .carousel {
+        position: relative;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        cursor: grab;
+      }
+
+      .carousel:active {
+        cursor: grabbing;
+      }
+
+      .carousel-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .carousel-slide.active {
+        opacity: 1;
+      }
+
+      .carousel-slide iframe,
+      .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: none;
+      }
+
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.4);
+        border: none;
+        color: white;
+        padding: 0.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        z-index: 20;
+      }
+
+      .carousel-nav:hover {
+        background: rgba(0, 0, 0, 0.6);
+        transform: translateY(-50%) scale(1.1);
+      }
+
+      .carousel-nav.prev {
+        left: 0.75rem;
+      }
+
+      .carousel-nav.next {
+        right: 0.75rem;
+      }
+
+      .carousel-dots {
+        position: absolute;
+        bottom: 0.75rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0.5rem;
+        z-index: 10;
+        padding: 0.375rem 0.75rem;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(5px);
+        border-radius: 9999px;
+      }
+
+      .carousel-dot {
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .carousel-dot.active {
+        background: white;
+        transform: scale(1.25);
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+      }
+
+      /* Apply Now Button */
+      .apply-now-btn {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 50;
+        animation: bounce 2s ease-in-out infinite;
+      }
+
+      .apply-now-btn a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1rem;
+        background: linear-gradient(
+          to right,
+          var(--primary-orange),
+          var(--orange-light)
+        );
+        color: white;
+        text-decoration: none;
+        border-radius: 0.75rem;
+        font-weight: 700;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .apply-now-btn a:hover {
+        transform: scale(1.05) translateY(-2px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .apply-now-btn .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.75rem;
+      }
+
+      .apply-now-btn .notification {
+        position: absolute;
+        top: -0.25rem;
+        right: -0.25rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        background: #ef4444;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        animation: bounce 1s ease-in-out infinite;
+      }
+
+      /* Section Styles */
+      .section {
+        padding: 3rem 0;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: var(--primary-blue);
+      }
+
+      .section-subtitle {
+        text-align: center;
+        color: var(--gray-600);
+        margin-bottom: 3rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Placement Highlights */
+      .placement-highlights {
+        background: var(--primary-blue);
+        padding: 3rem 0;
+      }
+
+      .highlight-card {
+        background: white;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        animation: fadeIn 0.8s ease-out;
+        transition: all 0.5s ease;
+      }
+
+      .highlight-card:hover {
+        transform: scale(1.02) translateY(-8px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .highlight-header {
+        background: var(--primary-orange);
+        color: white;
+        padding: 1.5rem;
+      }
+
+      .highlight-header h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .highlight-body {
+        padding: 2rem;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        color: var(--gray-600);
+        font-size: 0.875rem;
+      }
+
+      .comparison-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .comparison-item {
+        background: var(--gray-50);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .comparison-icon {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: white;
+        flex-shrink: 0;
+      }
+
+      .comparison-icon.orange {
+        background: var(--primary-orange);
+      }
+
+      .comparison-icon.blue {
+        background: var(--primary-blue);
+      }
+
+      .verification-note {
+        background: var(--gray-50);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        text-align: center;
+        font-size: 0.875rem;
+        color: var(--gray-600);
+      }
+
+      /* Programs Section */
+      .programs-section {
+        background: linear-gradient(
+          135deg,
+          var(--gray-50) 0%,
+          white 50%,
+          var(--gray-50) 100%
+        );
+        padding: 4rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .programs-section::before {
+        content: "";
+        position: absolute;
+        top: 5rem;
+        left: 5rem;
+        width: 18rem;
+        height: 18rem;
+        background: rgba(34, 51, 106, 0.05);
+        border-radius: 50%;
+        filter: blur(60px);
+      }
+
+      .programs-section::after {
+        content: "";
+        position: absolute;
+        bottom: 5rem;
+        right: 5rem;
+        width: 24rem;
+        height: 24rem;
+        background: rgba(34, 51, 106, 0.05);
+        border-radius: 50%;
+        filter: blur(60px);
+      }
+
+      /* Mobile Program Selector */
+      .mobile-program-selector {
+        display: block;
+        margin-bottom: 2rem;
+        position: relative;
+        z-index: 10;
+      }
+
+      .program-selector-highlight {
+        background: linear-gradient(
+          to right,
+          rgba(34, 51, 106, 0.1),
+          rgba(195, 137, 53, 0.1)
+        );
+        border: 2px solid rgba(34, 51, 106, 0.2);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .program-selector-highlight::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,
+          rgba(34, 51, 106, 0.05) 0%,
+          rgba(195, 137, 53, 0.05) 50%,
+          rgba(34, 51, 106, 0.05) 100%
+        );
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .program-selector-label {
+        display: flex;
+        align-items: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 10;
+      }
+
+      .program-selector-label .alert-icon {
+        width: 0.75rem;
+        height: 0.75rem;
+        background: var(--primary-orange);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.25rem;
+        animation: bounce 1s ease-in-out infinite;
+        color: white;
+        font-size: 0.5rem;
+        font-weight: 700;
+      }
+
+      .program-selector {
+        width: 100%;
+        padding: 0.75rem;
+        border: 2px solid var(--primary-blue);
+        border-radius: 0.5rem;
+        color: var(--primary-blue);
+        font-weight: 500;
+        background: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 10;
+      }
+
+      .program-selector:focus {
+        outline: none;
+        ring: 2px;
+        ring-color: rgba(34, 51, 106, 0.2);
+        border-color: var(--primary-orange);
+      }
+
+      .program-helper-text {
+        font-size: 0.625rem;
+        color: var(--primary-orange);
+        font-weight: 500;
+        margin-top: 0.25rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+      }
+
+      .program-helper-text .finger-icon {
+        margin-right: 0.25rem;
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      /* Program Details Card */
+      .program-details-card {
+        background: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--gray-200);
+        overflow: hidden;
+        margin-top: 1rem;
+      }
+
+      .program-header {
+        padding: 1rem;
+        color: white;
+        background: linear-gradient(to right, var(--primary-blue), #3b4d7a);
+      }
+
+      .program-header-content {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .program-header-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .program-title {
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+
+      .program-subtitle {
+        font-size: 0.75rem;
+        opacity: 0.9;
+      }
+
+      .program-body {
+        padding: 1rem;
+        background: white;
+      }
+
+      .program-overview {
+        background: var(--gray-50);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .program-overview-title {
+        font-weight: 600;
+        color: var(--primary-blue);
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .overview-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .overview-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .overview-label {
+        font-size: 0.625rem;
+        color: var(--gray-600);
+      }
+
+      .overview-value {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--primary-blue);
+      }
+
+      /* Program Tabs */
+      .program-tabs {
+        border-bottom: 1px solid var(--gray-200);
+        margin-bottom: 1rem;
+      }
+
+      .tab-buttons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .tab-button {
+        padding: 0.5rem 0.75rem;
+        border: none;
+        background: none;
+        border-bottom: 2px solid transparent;
+        font-weight: 500;
+        font-size: 0.75rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .tab-button.active {
+        border-bottom-color: var(--primary-blue);
+        color: var(--primary-blue);
+      }
+
+      .tab-button:not(.active) {
+        color: var(--gray-500);
+      }
+
+      /* Tab Content */
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .specializations-title {
+        font-weight: 600;
+        color: var(--primary-blue);
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .specializations-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .specialization-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.75rem;
+        background: var(--gray-50);
+        border-radius: 0.5rem;
+      }
+
+      .specialization-bullet {
+        width: 0.75rem;
+        height: 0.75rem;
+        background: var(--primary-orange);
+        border-radius: 50%;
+        margin-top: 0.125rem;
+        flex-shrink: 0;
+      }
+
+      .specialization-content h4 {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--primary-blue);
+        margin-bottom: 0.125rem;
+      }
+
+      .specialization-content p {
+        font-size: 0.625rem;
+        color: var(--gray-600);
+      }
+
+      .view-more-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        background: var(--primary-blue);
+        color: white;
+        font-weight: 500;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 0.75rem;
+        margin: 1rem auto 0;
+      }
+
+      .view-more-btn:hover {
+        background: #2d4a7b;
+      }
+
+      .eligibility-content {
+        background: var(--gray-50);
+        border-radius: 0.5rem;
+        padding: 1rem;
+      }
+
+      .eligibility-title {
+        font-weight: 600;
+        color: var(--primary-blue);
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .eligibility-text {
+        font-size: 0.75rem;
+        color: var(--gray-700);
+      }
+
+      .apply-button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background: linear-gradient(to right, var(--primary-blue), #3b4d7a);
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.75rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+      }
+
+      .apply-button:hover {
+        transform: scale(1.05);
+      }
+
+      /* Desktop Program Tabs */
+      .desktop-program-tabs {
+        display: none;
+      }
+
+      .program-tab-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+      }
+
+      .program-tab-button {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 2px solid var(--gray-200);
+      }
+
+      .program-tab-button.active {
+        background: linear-gradient(to right, var(--primary-blue), #3b4d7a);
+        color: white;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        transform: scale(1.05);
+      }
+
+      .program-tab-button:not(.active) {
+        background: white;
+        color: var(--primary-blue);
+      }
+
+      .program-tab-button:not(.active):hover {
+        background: var(--gray-50);
+        transform: scale(1.05);
+      }
+
+      .program-content {
+        display: none;
+        transition: all 0.7s ease;
+      }
+
+      .program-content.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .program-card {
+        background: white;
+        border-radius: 1.5rem;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+      }
+
+      .program-card-header {
+        background: linear-gradient(to right, var(--primary-blue), #3b4d7a);
+        padding: 2rem;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .program-card-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10rem;
+        height: 10rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transform: translate(2.5rem, -2.5rem);
+      }
+
+      .program-card-header::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 8rem;
+        height: 8rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transform: translate(-2rem, 2rem);
+      }
+
+      .program-card-header-content {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .program-card-header-top {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .program-card-icon {
+        width: 4rem;
+        height: 4rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .program-card-title {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .program-card-subtitle {
+        font-size: 1.25rem;
+        opacity: 0.9;
+      }
+
+      .program-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .program-stat {
+        text-align: center;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 0.75rem;
+        backdrop-filter: blur(10px);
+      }
+
+      .program-stat-icon {
+        margin: 0 auto 0.5rem;
+      }
+
+      .program-stat-value {
+        font-weight: 700;
+        font-size: 0.875rem;
+      }
+
+      .program-card-body {
+        padding: 2rem;
+      }
+
+      .program-body-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+      }
+
+      .specializations-section h4 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .desktop-specializations-list {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .desktop-specialization-item {
+        padding: 1rem;
+        background: var(--gray-50);
+        border-radius: 0.75rem;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .desktop-specialization-item:hover {
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-color: rgba(195, 137, 53, 0.2);
+      }
+
+      .desktop-specialization-item-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .desktop-specialization-icon {
+        width: 2rem;
+        height: 2rem;
+        background: var(--primary-orange);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+      }
+
+      .desktop-specialization-item:hover .desktop-specialization-icon {
+        transform: scale(1.1);
+      }
+
+      .desktop-specialization-item h5 {
+        font-weight: 700;
+        font-size: 0.875rem;
+        color: var(--primary-blue);
+        margin-bottom: 0.25rem;
+        transition: all 0.3s ease;
+      }
+
+      .desktop-specialization-item:hover h5 {
+        color: var(--primary-orange);
+      }
+
+      .desktop-specialization-item p {
+        font-size: 0.75rem;
+        color: var(--gray-600);
+      }
+
+      .eligibility-section h4 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .desktop-eligibility-content {
+        padding: 1.5rem;
+        background: linear-gradient(
+          135deg,
+          rgba(34, 51, 106, 0.05),
+          rgba(195, 137, 53, 0.05)
+        );
+        border-radius: 0.75rem;
+        border: 1px solid var(--gray-100);
+        margin-bottom: 1.5rem;
+      }
+
+      .desktop-eligibility-content p {
+        color: var(--gray-700);
+        line-height: 1.6;
+      }
+
+      .desktop-apply-button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        background: linear-gradient(to right, var(--primary-blue), #3b4d7a);
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 0.75rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .desktop-apply-button:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        transform: scale(1.05);
+      }
+
+      /* Responsive Design */
+      @media (min-width: 768px) {
         .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 4rem;
-            padding: 0 1rem;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+          height: 5rem;
+          padding: 0 2rem;
         }
 
         .logo-section img {
-            height: 1.5rem;
-            width: auto;
-            transition: all 0.3s ease;
-        }
-
-        .logo-divider {
-            height: 2rem;
-            width: 1px;
-            background: linear-gradient(to bottom, transparent, #d1d5db, transparent);
-        }
-
-        .contact-section {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+          height: 1.75rem;
         }
 
         .email-link {
-            display: none;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .email-link:hover {
-            color: var(--primary-orange);
-            background: #f9fafb;
-        }
-
-        .phone-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: linear-gradient(to right, var(--primary-orange), #d4a853);
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 0.75rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .phone-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: var(--primary-blue);
-            color: white;
-            padding: 2rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 5rem;
-            right: 5rem;
-            width: 24rem;
-            height: 24rem;
-            background: rgba(195, 137, 53, 0.1);
-            border-radius: 50%;
-            filter: blur(60px);
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 5rem;
-            left: 5rem;
-            width: 20rem;
-            height: 20rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            filter: blur(60px);
+          display: flex;
         }
 
         .hero-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            align-items: center;
-            position: relative;
-            z-index: 10;
+          grid-template-columns: 1fr 1fr;
+          padding: 0 2rem;
         }
 
         .hero-text {
-            text-align: center;
+          text-align: left;
         }
 
         .hero-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero-title .highlight {
-            background: linear-gradient(to right, var(--primary-orange), var(--orange-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+          font-size: 2.5rem;
         }
 
         .hero-subtitle {
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+          font-size: 1.125rem;
+          margin-left: 0;
+          margin-right: 0;
         }
 
         .hero-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            justify-content: center;
+          flex-direction: row;
+          justify-content: flex-start;
         }
 
-        /* Carousel Styles */
-        .carousel-container {
-            position: relative;
-            max-width: 28rem;
-            margin: 0 auto;
+        .mobile-program-selector {
+          display: none;
         }
 
-        .carousel-wrapper {
-            background: white;
-            border-radius: 1rem;
-            padding: 0.75rem;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
-            transition: all 0.5s ease;
+        .desktop-program-tabs {
+          display: block;
         }
 
-        .carousel-wrapper:hover {
-            transform: scale(1.02);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        .carousel {
-            position: relative;
-            border-radius: 0.75rem;
-            overflow: hidden;
-            aspect-ratio: 4/3;
-            cursor: grab;
-        }
-
-        .carousel:active {
-            cursor: grabbing;
-        }
-
-        .carousel-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .carousel-slide.active {
-            opacity: 1;
-        }
-
-        .carousel-slide iframe,
-        .carousel-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border: none;
-        }
-
-        .carousel-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.4);
-            border: none;
-            color: white;
-            padding: 0.5rem;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-            z-index: 20;
-        }
-
-        .carousel-nav:hover {
-            background: rgba(0, 0, 0, 0.6);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .carousel-nav.prev {
-            left: 0.75rem;
-        }
-
-        .carousel-nav.next {
-            right: 0.75rem;
-        }
-
-        .carousel-dots {
-            position: absolute;
-            bottom: 0.75rem;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 0.5rem;
-            z-index: 10;
-            padding: 0.375rem 0.75rem;
-            background: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(5px);
-            border-radius: 9999px;
-        }
-
-        .carousel-dot {
-            width: 0.75rem;
-            height: 0.75rem;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-dot.active {
-            background: white;
-            transform: scale(1.25);
-            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
-        }
-
-        /* Apply Now Button */
         .apply-now-btn {
-            position: fixed;
-            right: 1rem;
-            bottom: 1rem;
-            z-index: 50;
-            animation: bounce 2s ease-in-out infinite;
+          right: 1.5rem;
+          bottom: 1.5rem;
         }
 
         .apply-now-btn a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1rem;
-            background: linear-gradient(to right, var(--primary-orange), var(--orange-light));
-            color: white;
-            text-decoration: none;
-            border-radius: 0.75rem;
-            font-weight: 700;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .apply-now-btn a:hover {
-            transform: scale(1.05) translateY(-2px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+          padding: 1rem 1.5rem;
         }
 
         .apply-now-btn .icon {
-            width: 1.5rem;
-            height: 1.5rem;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 0.75rem;
+          width: 2rem;
+          height: 2rem;
+          margin-right: 1rem;
         }
 
         .apply-now-btn .notification {
-            position: absolute;
-            top: -0.25rem;
-            right: -0.25rem;
-            width: 1.25rem;
-            height: 1.25rem;
-            background: #ef4444;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: 700;
-            animation: bounce 1s ease-in-out infinite;
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .container {
+          max-width: 1200px;
+          padding: 0 2rem;
         }
 
-        /* Section Styles */
-        .section {
-            padding: 3rem 0;
+        .hero-title {
+          font-size: 3rem;
         }
 
         .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--primary-blue);
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--gray-600);
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Placement Highlights */
-        .placement-highlights {
-            background: var(--primary-blue);
-            padding: 3rem 0;
-        }
-
-        .highlight-card {
-            background: white;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
-            animation: fadeIn 0.8s ease-out;
-            transition: all 0.5s ease;
-        }
-
-        .highlight-card:hover {
-            transform: scale(1.02) translateY(-8px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        .highlight-header {
-            background: var(--primary-orange);
-            color: white;
-            padding: 1.5rem;
-        }
-
-        .highlight-header h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .highlight-body {
-            padding: 2rem;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--gray-600);
-            font-size: 0.875rem;
-        }
-
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .comparison-item {
-            background: var(--gray-50);
-            border-radius: 0.75rem;
-            padding: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .comparison-icon {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: white;
-            flex-shrink: 0;
-        }
-
-        .comparison-icon.orange {
-            background: var(--primary-orange);
-        }
-
-        .comparison-icon.blue {
-            background: var(--primary-blue);
-        }
-
-        .verification-note {
-            background: var(--gray-50);
-            border-radius: 0.75rem;
-            padding: 1rem;
-            text-align: center;
-            font-size: 0.875rem;
-            color: var(--gray-600);
-        }
-
-        /* Programs Section */
-        .programs-section {
-            background: linear-gradient(135deg, var(--gray-50) 0%, white 50%, var(--gray-50) 100%);
-            padding: 4rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .programs-section::before {
-            content: '';
-            position: absolute;
-            top: 5rem;
-            left: 5rem;
-            width: 18rem;
-            height: 18rem;
-            background: rgba(34, 51, 106, 0.05);
-            border-radius: 50%;
-            filter: blur(60px);
-        }
-
-        .programs-section::after {
-            content: '';
-            position: absolute;
-            bottom: 5rem;
-            right: 5rem;
-            width: 24rem;
-            height: 24rem;
-            background: rgba(34, 51, 106, 0.05);
-            border-radius: 50%;
-            filter: blur(60px);
-        }
-
-        /* Mobile Program Selector */
-        .mobile-program-selector {
-            display: block;
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 10;
-        }
-
-        .program-selector-highlight {
-            background: linear-gradient(to right, rgba(34, 51, 106, 0.1), rgba(195, 137, 53, 0.1));
-            border: 2px solid rgba(34, 51, 106, 0.2);
-            border-radius: 0.75rem;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .program-selector-highlight::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to right, rgba(34, 51, 106, 0.05) 0%, rgba(195, 137, 53, 0.05) 50%, rgba(34, 51, 106, 0.05) 100%);
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .program-selector-label {
-            display: flex;
-            align-items: center;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-            position: relative;
-            z-index: 10;
-        }
-
-        .program-selector-label .alert-icon {
-            width: 0.75rem;
-            height: 0.75rem;
-            background: var(--primary-orange);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 0.25rem;
-            animation: bounce 1s ease-in-out infinite;
-            color: white;
-            font-size: 0.5rem;
-            font-weight: 700;
-        }
-
-        .program-selector {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid var(--primary-blue);
-            border-radius: 0.5rem;
-            color: var(--primary-blue);
-            font-weight: 500;
-            background: white;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 10;
-        }
-
-        .program-selector:focus {
-            outline: none;
-            ring: 2px;
-            ring-color: rgba(34, 51, 106, 0.2);
-            border-color: var(--primary-orange);
-        }
-
-        .program-helper-text {
-            font-size: 0.625rem;
-            color: var(--primary-orange);
-            font-weight: 500;
-            margin-top: 0.25rem;
-            display: flex;
-            align-items: center;
-            position: relative;
-            z-index: 10;
-        }
-
-        .program-helper-text .finger-icon {
-            margin-right: 0.25rem;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        /* Program Details Card */
-        .program-details-card {
-            background: white;
-            border-radius: 0.75rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border: 1px solid var(--gray-200);
-            overflow: hidden;
-            margin-top: 1rem;
-        }
-
-        .program-header {
-            padding: 1rem;
-            color: white;
-            background: linear-gradient(to right, var(--primary-blue), #3b4d7a);
-        }
-
-        .program-header-content {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .program-header-icon {
-            width: 1.5rem;
-            height: 1.5rem;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .program-title {
-            font-size: 0.875rem;
-            font-weight: 700;
-        }
-
-        .program-subtitle {
-            font-size: 0.75rem;
-            opacity: 0.9;
-        }
-
-        .program-body {
-            padding: 1rem;
-            background: white;
-        }
-
-        .program-overview {
-            background: var(--gray-50);
-            border-radius: 0.5rem;
-            padding: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .program-overview-title {
-            font-weight: 600;
-            color: var(--primary-blue);
-            font-size: 0.75rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .overview-items {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        }
-
-        .overview-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .overview-label {
-            font-size: 0.625rem;
-            color: var(--gray-600);
-        }
-
-        .overview-value {
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: var(--primary-blue);
-        }
-
-        /* Program Tabs */
-        .program-tabs {
-            border-bottom: 1px solid var(--gray-200);
-            margin-bottom: 1rem;
-        }
-
-        .tab-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .tab-button {
-            padding: 0.5rem 0.75rem;
-            border: none;
-            background: none;
-            border-bottom: 2px solid transparent;
-            font-weight: 500;
-            font-size: 0.75rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .tab-button.active {
-            border-bottom-color: var(--primary-blue);
-            color: var(--primary-blue);
-        }
-
-        .tab-button:not(.active) {
-            color: var(--gray-500);
-        }
-
-        /* Tab Content */
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        .specializations-title {
-            font-weight: 600;
-            color: var(--primary-blue);
-            font-size: 0.75rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .specializations-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.25rem;
-        }
-
-        .specialization-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-            padding: 0.75rem;
-            background: var(--gray-50);
-            border-radius: 0.5rem;
-        }
-
-        .specialization-bullet {
-            width: 0.75rem;
-            height: 0.75rem;
-            background: var(--primary-orange);
-            border-radius: 50%;
-            margin-top: 0.125rem;
-            flex-shrink: 0;
-        }
-
-        .specialization-content h4 {
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: var(--primary-blue);
-            margin-bottom: 0.125rem;
-        }
-
-        .specialization-content p {
-            font-size: 0.625rem;
-            color: var(--gray-600);
-        }
-
-        .view-more-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.5rem 1rem;
-            background: var(--primary-blue);
-            color: white;
-            font-weight: 500;
-            border-radius: 0.5rem;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 0.75rem;
-            margin: 1rem auto 0;
-        }
-
-        .view-more-btn:hover {
-            background: #2d4a7b;
-        }
-
-        .eligibility-content {
-            background: var(--gray-50);
-            border-radius: 0.5rem;
-            padding: 1rem;
-        }
-
-        .eligibility-title {
-            font-weight: 600;
-            color: var(--primary-blue);
-            font-size: 0.75rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .eligibility-text {
-            font-size: 0.75rem;
-            color: var(--gray-700);
-        }
-
-        .apply-button {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            background: linear-gradient(to right, var(--primary-blue), #3b4d7a);
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.75rem;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-            margin-top: 1rem;
-        }
-
-        .apply-button:hover {
-            transform: scale(1.05);
-        }
-
-        /* Desktop Program Tabs */
-        .desktop-program-tabs {
-            display: none;
-        }
-
-        .program-tab-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-
-        .program-tab-button {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 1rem 2rem;
-            border-radius: 1rem;
-            font-weight: 700;
-            border: none;
-            cursor: pointer;
-            transition: all 0.5s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border: 2px solid var(--gray-200);
-        }
-
-        .program-tab-button.active {
-            background: linear-gradient(to right, var(--primary-blue), #3b4d7a);
-            color: white;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-            transform: scale(1.05);
-        }
-
-        .program-tab-button:not(.active) {
-            background: white;
-            color: var(--primary-blue);
-        }
-
-        .program-tab-button:not(.active):hover {
-            background: var(--gray-50);
-            transform: scale(1.05);
-        }
-
-        .program-content {
-            display: none;
-            transition: all 0.7s ease;
-        }
-
-        .program-content.active {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .program-card {
-            background: white;
-            border-radius: 1.5rem;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
-            overflow: hidden;
-        }
-
-        .program-card-header {
-            background: linear-gradient(to right, var(--primary-blue), #3b4d7a);
-            padding: 2rem;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .program-card-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 10rem;
-            height: 10rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transform: translate(2.5rem, -2.5rem);
-        }
-
-        .program-card-header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 8rem;
-            height: 8rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transform: translate(-2rem, 2rem);
-        }
-
-        .program-card-header-content {
-            position: relative;
-            z-index: 10;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .program-card-header-top {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .program-card-icon {
-            width: 4rem;
-            height: 4rem;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .program-card-title {
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .program-card-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.9;
-        }
-
-        .program-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .program-stat {
-            text-align: center;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 0.75rem;
-            backdrop-filter: blur(10px);
-        }
-
-        .program-stat-icon {
-            margin: 0 auto 0.5rem;
-        }
-
-        .program-stat-value {
-            font-weight: 700;
-            font-size: 0.875rem;
-        }
-
-        .program-card-body {
-            padding: 2rem;
-        }
-
-        .program-body-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-        }
-
-        .specializations-section h4 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .desktop-specializations-list {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .desktop-specialization-item {
-            padding: 1rem;
-            background: var(--gray-50);
-            border-radius: 0.75rem;
-            border: 1px solid transparent;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .desktop-specialization-item:hover {
-            background: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-color: rgba(195, 137, 53, 0.2);
-        }
-
-        .desktop-specialization-item-content {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-        }
-
-        .desktop-specialization-icon {
-            width: 2rem;
-            height: 2rem;
-            background: var(--primary-orange);
-            border-radius: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            transition: all 0.3s ease;
-        }
-
-        .desktop-specialization-item:hover .desktop-specialization-icon {
-            transform: scale(1.1);
-        }
-
-        .desktop-specialization-item h5 {
-            font-weight: 700;
-            font-size: 0.875rem;
-            color: var(--primary-blue);
-            margin-bottom: 0.25rem;
-            transition: all 0.3s ease;
-        }
-
-        .desktop-specialization-item:hover h5 {
-            color: var(--primary-orange);
-        }
-
-        .desktop-specialization-item p {
-            font-size: 0.75rem;
-            color: var(--gray-600);
-        }
-
-        .eligibility-section h4 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .desktop-eligibility-content {
-            padding: 1.5rem;
-            background: linear-gradient(135deg, rgba(34, 51, 106, 0.05), rgba(195, 137, 53, 0.05));
-            border-radius: 0.75rem;
-            border: 1px solid var(--gray-100);
-            margin-bottom: 1.5rem;
-        }
-
-        .desktop-eligibility-content p {
-            color: var(--gray-700);
-            line-height: 1.6;
-        }
-
-        .desktop-apply-button {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 1.5rem;
-            background: linear-gradient(to right, var(--primary-blue), #3b4d7a);
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 0.75rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .desktop-apply-button:hover {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-            transform: scale(1.05);
-        }
-
-        /* Responsive Design */
-        @media (min-width: 768px) {
-            .header-content {
-                height: 5rem;
-                padding: 0 2rem;
-            }
-
-            .logo-section img {
-                height: 1.75rem;
-            }
-
-            .email-link {
-                display: flex;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr 1fr;
-                padding: 0 2rem;
-            }
-
-            .hero-text {
-                text-align: left;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.125rem;
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-            .hero-buttons {
-                flex-direction: row;
-                justify-content: flex-start;
-            }
-
-            .mobile-program-selector {
-                display: none;
-            }
-
-            .desktop-program-tabs {
-                display: block;
-            }
-
-            .apply-now-btn {
-                right: 1.5rem;
-                bottom: 1.5rem;
-            }
-
-            .apply-now-btn a {
-                padding: 1rem 1.5rem;
-            }
-
-            .apply-now-btn .icon {
-                width: 2rem;
-                height: 2rem;
-                margin-right: 1rem;
-            }
-
-            .apply-now-btn .notification {
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .container {
-                max-width: 1200px;
-                padding: 0 2rem;
-            }
-
-            .hero-title {
-                font-size: 3rem;
-            }
-
-            .section-title {
-                font-size: 3rem;
-            }
-        }
-
-        /* Scrolling Animations */
-        .scroll-container {
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        .scroll-content {
-            display: inline-flex;
-            gap: 3rem;
-            animation: scrollRightToLeft 30s linear infinite;
-        }
-
-        .scroll-content-reverse {
-            display: inline-flex;
-            gap: 3rem;
-            animation: scrollLeftToRight 25s linear infinite;
-        }
-
-        /* Video Section */
-        .video-section {
-            background: linear-gradient(135deg, white 0%, var(--gray-50) 50%, white 100%);
-            padding: 4rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .video-badge {
-            display: inline-flex;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: linear-gradient(to right, var(--primary-blue), var(--primary-orange));
-            backdrop-filter: blur(16px);
-            border-radius: 9999px;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-            transition: all 0.5s ease;
-        }
-
-        .video-badge:hover {
-            transform: scale(1.05);
-        }
-
-        .video-badge::before,
-        .video-badge::after {
-            content: '';
-            width: 0.75rem;
-            height: 0.75rem;
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .video-badge::before {
-            background: white;
-            margin-right: 0.75rem;
-        }
-
-        .video-badge::after {
-            background: var(--orange-light);
-            margin-left: 0.75rem;
-            animation-delay: 0.5s;
-        }
-
-        .video-badge span {
-            color: white;
-            font-weight: 600;
-            font-size: 0.875rem;
-            letter-spacing: 0.05em;
-        }
-
+          font-size: 3rem;
+        }
+      }
+
+      /* Scrolling Animations */
+      .scroll-container {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .scroll-content {
+        display: inline-flex;
+        gap: 3rem;
+        animation: scrollRightToLeft 30s linear infinite;
+      }
+
+      .scroll-content-reverse {
+        display: inline-flex;
+        gap: 3rem;
+        animation: scrollLeftToRight 25s linear infinite;
+      }
+
+      /* Video Section */
+      .video-section {
+        background: linear-gradient(
+          135deg,
+          white 0%,
+          var(--gray-50) 50%,
+          white 100%
+        );
+        padding: 4rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .video-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: linear-gradient(
+          to right,
+          var(--primary-blue),
+          var(--primary-orange)
+        );
+        backdrop-filter: blur(16px);
+        border-radius: 9999px;
+        margin-bottom: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        transition: all 0.5s ease;
+      }
+
+      .video-badge:hover {
+        transform: scale(1.05);
+      }
+
+      .video-badge::before,
+      .video-badge::after {
+        content: "";
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .video-badge::before {
+        background: white;
+        margin-right: 0.75rem;
+      }
+
+      .video-badge::after {
+        background: var(--orange-light);
+        margin-left: 0.75rem;
+        animation-delay: 0.5s;
+      }
+
+      .video-badge span {
+        color: white;
+        font-weight: 600;
+        font-size: 0.875rem;
+        letter-spacing: 0.05em;
+      }
+
+      .video-title {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: var(--primary-blue);
+        line-height: 1.2;
+      }
+
+      .video-subtitle {
+        text-align: center;
+        color: var(--gray-700);
+        margin-bottom: 2rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+      }
+
+      .video-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .video-stat {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+        padding: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .video-stat:hover {
+        background: rgba(255, 255, 255, 0.7);
+        transform: scale(1.05);
+      }
+
+      .video-stat-number {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+      }
+
+      .video-stat:nth-child(1) .video-stat-number {
+        color: var(--primary-orange);
+      }
+
+      .video-stat:nth-child(2) .video-stat-number {
+        color: var(--primary-blue);
+      }
+
+      .video-stat:nth-child(3) .video-stat-number {
+        color: var(--orange-light);
+      }
+
+      .video-stat-label {
+        font-size: 0.75rem;
+        color: var(--gray-600);
+        font-weight: 500;
+      }
+
+      .video-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        overflow: hidden;
+      }
+
+      .video-wrapper {
+        position: relative;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(16px);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        border: 2px solid rgba(195, 137, 53, 0.3);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        transition: all 0.7s ease;
+      }
+
+      .video-wrapper:hover {
+        border-color: rgba(195, 137, 53, 0.6);
+        transform: scale(1.02) translateY(-8px);
+      }
+
+      .video-wrapper::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,
+          rgba(195, 137, 53, 0.2) 0%,
+          rgba(34, 51, 106, 0.15) 50%,
+          rgba(195, 137, 53, 0.2) 100%
+        );
+        opacity: 0;
+        transition: opacity 0.7s ease;
+      }
+
+      .video-wrapper:hover::before {
+        opacity: 1;
+      }
+
+      .video-frame {
+        aspect-ratio: 16/9;
+        position: relative;
+        padding: 1rem;
+      }
+
+      .video-frame .wistia_responsive_padding {
+        position: relative;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.7s ease;
+      }
+
+      .video-wrapper:hover .wistia_responsive_padding {
+        transform: scale(1.05);
+      }
+
+      .video-info {
+        padding: 1.5rem 2rem;
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.8) 0%,
+          rgba(255, 255, 255, 0.9) 100%
+        );
+        backdrop-filter: blur(16px);
+        border-top: 1px solid var(--gray-200);
+      }
+
+      .video-info-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .video-info-content h3 {
+        color: var(--primary-blue);
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .video-wrapper:hover .video-info-content h3 {
+        color: var(--primary-orange);
+      }
+
+      .video-info-content p {
+        color: var(--gray-700);
+        line-height: 1.5;
+      }
+
+      .video-programs {
+        color: var(--primary-orange);
+        font-weight: 600;
+        font-size: 0.875rem;
+      }
+
+      .video-cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .video-cta-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.75rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .video-cta-button.primary {
+        background: var(--primary-orange);
+        color: white;
+      }
+
+      .video-cta-button.primary:hover {
+        background: #d4a853;
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .video-cta-button.secondary {
+        background: var(--primary-blue);
+        color: white;
+        border: 2px solid var(--primary-blue);
+      }
+
+      .video-cta-button.secondary:hover {
+        background: #2d4a7b;
+        transform: scale(1.05);
+      }
+
+      .video-cta-button svg {
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      .video-cta-button:hover svg {
+        transform: translateX(0.25rem);
+      }
+
+      @media (min-width: 768px) {
         .video-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-align: center;
-            color: var(--primary-blue);
-            line-height: 1.2;
+          font-size: 3rem;
         }
 
         .video-subtitle {
-            text-align: center;
-            color: var(--gray-700);
-            margin-bottom: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
+          font-size: 1.125rem;
         }
 
         .video-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 2rem;
+          gap: 2rem;
         }
 
         .video-stat {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(10px);
-            border-radius: 1rem;
-            padding: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .video-stat:hover {
-            background: rgba(255, 255, 255, 0.7);
-            transform: scale(1.05);
+          padding: 2rem 1rem;
         }
 
         .video-stat-number {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-        }
-
-        .video-stat:nth-child(1) .video-stat-number {
-            color: var(--primary-orange);
-        }
-
-        .video-stat:nth-child(2) .video-stat-number {
-            color: var(--primary-blue);
-        }
-
-        .video-stat:nth-child(3) .video-stat-number {
-            color: var(--orange-light);
+          font-size: 2rem;
         }
 
         .video-stat-label {
-            font-size: 0.75rem;
-            color: var(--gray-600);
-            font-weight: 500;
-        }
-
-        .video-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            overflow: hidden;
-        }
-
-        .video-wrapper {
-            position: relative;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(16px);
-            border-radius: 1.5rem;
-            overflow: hidden;
-            border: 2px solid rgba(195, 137, 53, 0.3);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
-            transition: all 0.7s ease;
-        }
-
-        .video-wrapper:hover {
-            border-color: rgba(195, 137, 53, 0.6);
-            transform: scale(1.02) translateY(-8px);
-        }
-
-        .video-wrapper::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to right, rgba(195, 137, 53, 0.2) 0%, rgba(34, 51, 106, 0.15) 50%, rgba(195, 137, 53, 0.2) 100%);
-            opacity: 0;
-            transition: opacity 0.7s ease;
-        }
-
-        .video-wrapper:hover::before {
-            opacity: 1;
-        }
-
-        .video-frame {
-            aspect-ratio: 16/9;
-            position: relative;
-            padding: 1rem;
-        }
-
-        .video-frame .wistia_responsive_padding {
-            position: relative;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: all 0.7s ease;
-        }
-
-        .video-wrapper:hover .wistia_responsive_padding {
-            transform: scale(1.05);
-        }
-
-        .video-info {
-            padding: 1.5rem 2rem;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
-            backdrop-filter: blur(16px);
-            border-top: 1px solid var(--gray-200);
+          font-size: 0.875rem;
         }
 
         .video-info-header {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .video-info-content h3 {
-            color: var(--primary-blue);
-            font-weight: 700;
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .video-wrapper:hover .video-info-content h3 {
-            color: var(--primary-orange);
-        }
-
-        .video-info-content p {
-            color: var(--gray-700);
-            line-height: 1.5;
-        }
-
-        .video-programs {
-            color: var(--primary-orange);
-            font-weight: 600;
-            font-size: 0.875rem;
+          flex-direction: row;
         }
 
         .video-cta-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
+          flex-direction: row;
         }
 
-        .video-cta-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.75rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+        .video-info-content h3 {
+          font-size: 1.5rem;
         }
+      }
 
-        .video-cta-button.primary {
-            background: var(--primary-orange);
-            color: white;
+      /* Hidden utility classes */
+      .hidden {
+        display: none;
+      }
+      .block {
+        display: block;
+      }
+
+      @media (min-width: 768px) {
+        .md\\:hidden {
+          display: none;
         }
-
-        .video-cta-button.primary:hover {
-            background: #d4a853;
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        .md\\:block {
+          display: block;
         }
+      }
 
-        .video-cta-button.secondary {
-            background: var(--primary-blue);
-            color: white;
-            border: 2px solid var(--primary-blue);
+      /* Icon styles */
+      .icon {
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+      }
+
+      .icon-lg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      .icon-xl {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
         }
-
-        .video-cta-button.secondary:hover {
-            background: #2d4a7b;
-            transform: scale(1.05);
+        50% {
+          opacity: 0.5;
         }
+      }
 
-        .video-cta-button svg {
-            margin-left: 0.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .video-cta-button:hover svg {
-            transform: translateX(0.25rem);
-        }
-
-        @media (min-width: 768px) {
-            .video-title {
-                font-size: 3rem;
-            }
-
-            .video-subtitle {
-                font-size: 1.125rem;
-            }
-
-            .video-stats {
-                gap: 2rem;
-            }
-
-            .video-stat {
-                padding: 2rem 1rem;
-            }
-
-            .video-stat-number {
-                font-size: 2rem;
-            }
-
-            .video-stat-label {
-                font-size: 0.875rem;
-            }
-
-            .video-info-header {
-                flex-direction: row;
-            }
-
-            .video-cta-buttons {
-                flex-direction: row;
-            }
-
-            .video-info-content h3 {
-                font-size: 1.5rem;
-            }
-        }
-
-        /* Hidden utility classes */
-        .hidden { display: none; }
-        .block { display: block; }
-        
-        @media (min-width: 768px) {
-            .md\\:hidden { display: none; }
-            .md\\:block { display: block; }
-        }
-
-        /* Icon styles */
-        .icon {
-            width: 1rem;
-            height: 1rem;
-            display: inline-block;
-        }
-
-        .icon-lg {
-            width: 1.5rem;
-            height: 1.5rem;
-        }
-
-        .icon-xl {
-            width: 2rem;
-            height: 2rem;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .animate-pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
+      .animate-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Apply Now Button -->
     <div class="apply-now-btn">
-        <a href="https://sunstone.in/apply-now" target="_blank" rel="noopener noreferrer">
-            <div class="icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
-                </svg>
-            </div>
-            <div>
-                <div style="font-size: 0.875rem; font-weight: 700;">Apply Now</div>
-                <div style="font-size: 0.75rem; opacity: 0.9;" class="hidden md:block">Sunstone Portal</div>
-            </div>
-            <div class="notification">!</div>
-        </a>
+      <a
+        href="https://sunstone.in/apply-now"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+          </svg>
+        </div>
+        <div>
+          <div style="font-size: 0.875rem; font-weight: 700">Apply Now</div>
+          <div style="font-size: 0.75rem; opacity: 0.9" class="hidden md:block">
+            Sunstone Portal
+          </div>
+        </div>
+        <div class="notification">!</div>
+      </a>
     </div>
 
     <!-- Header -->
     <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800" alt="Hi-Tech Institute">
-                    <div class="logo-divider"></div>
-                    <img src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800" alt="Sunstone">
-                </div>
-                <div class="contact-section">
-                    <a href="mailto:connect@sunstone.in" class="email-link">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        <span>connect@sunstone.in</span>
-                    </a>
-                    <a href="tel:+917065303030" class="phone-link">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                        </svg>
-                        <span>+91 7065-30-30-30</span>
-                    </a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo-section">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F6aa2af8ffe8d468e99a56819aff9babb?format=webp&width=800"
+              alt="Hi-Tech Institute"
+            />
+            <div class="logo-divider"></div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F05c684834e29442981626bcf1f7ee2bb%2F21884ee3ea37450d8004527e3ae2d318?format=webp&width=800"
+              alt="Sunstone"
+            />
+          </div>
+          <div class="contact-section">
+            <a href="mailto:connect@sunstone.in" class="email-link">
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>connect@sunstone.in</span>
+            </a>
+            <a href="tel:+917065303030" class="phone-link">
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              <span>+91 7065-30-30-30</span>
+            </a>
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text animate-slideInLeft">
-                    <h1 class="hero-title">
-                        <span class="highlight">Learning That Leads To Success</span>
-                    </h1>
-                    <div class="hero-subtitle">
-                        <p>Join Hi-Tech Institute for industry-aligned programs with assured placement support.</p>
-                    </div>
-                    <div class="hero-buttons">
-                        <a href="https://sunstone.in/campuses/hi-tech-institute" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                            <span>Explore Programs with Sunstone</span>
-                            <svg class="icon" style="margin-left: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                <polyline points="15,3 21,3 21,9"/>
-                                <line x1="10" y1="14" x2="21" y2="3"/>
-                            </svg>
-                        </a>
-                        <a href="tel:+917065303030" class="btn btn-secondary">
-                            <svg class="icon" style="margin-right: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            <span>Call Now</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="animate-slideInRight">
-                    <div class="carousel-container">
-                        <div class="carousel-wrapper">
-                            <div class="carousel" id="heroCarousel">
-                                <div class="carousel-slide active">
-                                    <iframe src="https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&branding=0&origin=https%3A%2F%2Fhitech.edu" 
-                                            title="Campus Life Video" 
-                                            frameborder="0" 
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                            allowfullscreen>
-                                    </iframe>
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600" alt="Hi-Tech Institute Campus">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=800" alt="Campus View">
-                                </div>
-                                
-                                <button class="carousel-nav prev" onclick="prevSlide()">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="15,18 9,12 15,6"/>
-                                    </svg>
-                                </button>
-                                <button class="carousel-nav next" onclick="nextSlide()">
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="9,18 15,12 9,6"/>
-                                    </svg>
-                                </button>
-
-                                <div class="carousel-dots">
-                                    <button class="carousel-dot active" onclick="setSlide(0)"></button>
-                                    <button class="carousel-dot" onclick="setSlide(1)"></button>
-                                    <button class="carousel-dot" onclick="setSlide(2)"></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text animate-slideInLeft">
+            <h1 class="hero-title">
+              <span class="highlight">Learning That Leads To Success</span>
+            </h1>
+            <div class="hero-subtitle">
+              <p>
+                Join Hi-Tech Institute for industry-aligned programs with
+                assured placement support.
+              </p>
             </div>
+            <div class="hero-buttons">
+              <a
+                href="https://sunstone.in/campuses/hi-tech-institute"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+              >
+                <span>Explore Programs with Sunstone</span>
+                <svg
+                  class="icon"
+                  style="margin-left: 0.5rem"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  />
+                  <polyline points="15,3 21,3 21,9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+              <a href="tel:+917065303030" class="btn btn-secondary">
+                <svg
+                  class="icon"
+                  style="margin-right: 0.5rem"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+                <span>Call Now</span>
+              </a>
+            </div>
+          </div>
+          <div class="animate-slideInRight">
+            <div class="carousel-container">
+              <div class="carousel-wrapper">
+                <div class="carousel" id="heroCarousel">
+                  <div class="carousel-slide active">
+                    <iframe
+                      src="https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&branding=0&origin=https%3A%2F%2Fhitech.edu"
+                      title="Campus Life Video"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    >
+                    </iframe>
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600"
+                      alt="Hi-Tech Institute Campus"
+                    />
+                  </div>
+                  <div class="carousel-slide">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=800"
+                      alt="Campus View"
+                    />
+                  </div>
+
+                  <button class="carousel-nav prev" onclick="prevSlide()">
+                    <svg
+                      class="icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polyline points="15,18 9,12 15,6" />
+                    </svg>
+                  </button>
+                  <button class="carousel-nav next" onclick="nextSlide()">
+                    <svg
+                      class="icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polyline points="9,18 15,12 9,6" />
+                    </svg>
+                  </button>
+
+                  <div class="carousel-dots">
+                    <button
+                      class="carousel-dot active"
+                      onclick="setSlide(0)"
+                    ></button>
+                    <button class="carousel-dot" onclick="setSlide(1)"></button>
+                    <button class="carousel-dot" onclick="setSlide(2)"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Placement Highlights -->
     <section class="placement-highlights">
-        <div class="container">
-            <div class="highlight-card">
-                <div class="highlight-header">
-                    <h3>Placement Highlights</h3>
-                    <p>MBA | MCA | BBA | BCA | B.Tech</p>
-                </div>
-                <div class="highlight-body">
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div class="stat-number">26 LPA</div>
-                            <p class="stat-label">Highest Package</p>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">1200+</div>
-                            <p class="stat-label">Top Recruiters</p>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">5000+</div>
-                            <p class="stat-label">Students Placed</p>
-                        </div>
-                    </div>
-                    
-                    <div class="comparison-grid">
-                        <div class="comparison-item">
-                            <div class="comparison-icon orange">63%</div>
-                            <div>
-                                <p style="font-weight: 600; color: var(--primary-blue); margin-bottom: 0.25rem;">63% Higher ROI</p>
-                                <p style="font-size: 0.875rem; color: var(--gray-600);">vs private colleges</p>
-                            </div>
-                        </div>
-                        <div class="comparison-item">
-                            <div class="comparison-icon blue">7X</div>
-                            <div>
-                                <p style="font-weight: 600; color: var(--primary-blue); margin-bottom: 0.25rem;">7X More Companies</p>
-                                <p style="font-size: 0.875rem; color: var(--gray-600);">vs top private institutions</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="verification-note">
-                        <p>Placement Report Audited & Verified by B2K Analytics, Official Auditor for IIM Ahmedabad</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="highlight-card">
+          <div class="highlight-header">
+            <h3>Placement Highlights</h3>
+            <p>MBA | MCA | BBA | BCA | B.Tech</p>
+          </div>
+          <div class="highlight-body">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-number">26 LPA</div>
+                <p class="stat-label">Highest Package</p>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">1200+</div>
+                <p class="stat-label">Top Recruiters</p>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">5000+</div>
+                <p class="stat-label">Students Placed</p>
+              </div>
             </div>
+
+            <div class="comparison-grid">
+              <div class="comparison-item">
+                <div class="comparison-icon orange">63%</div>
+                <div>
+                  <p
+                    style="
+                      font-weight: 600;
+                      color: var(--primary-blue);
+                      margin-bottom: 0.25rem;
+                    "
+                  >
+                    63% Higher ROI
+                  </p>
+                  <p style="font-size: 0.875rem; color: var(--gray-600)">
+                    vs private colleges
+                  </p>
+                </div>
+              </div>
+              <div class="comparison-item">
+                <div class="comparison-icon blue">7X</div>
+                <div>
+                  <p
+                    style="
+                      font-weight: 600;
+                      color: var(--primary-blue);
+                      margin-bottom: 0.25rem;
+                    "
+                  >
+                    7X More Companies
+                  </p>
+                  <p style="font-size: 0.875rem; color: var(--gray-600)">
+                    vs top private institutions
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="verification-note">
+              <p>
+                Placement Report Audited & Verified by B2K Analytics, Official
+                Auditor for IIM Ahmedabad
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Video Experience Section -->
     <section class="video-section">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <div class="video-badge">
-                    <span>IMMERSIVE CAMPUS EXPERIENCE</span>
-                </div>
-                
-                <h2 class="video-title animate-fadeIn">
-                    Experience Our<br>
-                    <span style="color: var(--primary-blue);">Vibrant Campus Life</span>
-                </h2>
-                
-                <p class="video-subtitle animate-fadeIn">
-                    Step into a world where education meets innovation, creativity, and community. Watch our students thrive in an environment designed for excellence.
-                </p>
-                
-                <div class="video-stats animate-fadeIn">
-                    <div class="video-stat">
-                        <div class="video-stat-number">20000+</div>
-                        <div class="video-stat-label">Happy Students</div>
-                    </div>
-                    <div class="video-stat">
-                        <div class="video-stat-number">50+</div>
-                        <div class="video-stat-label">Campus Facilities</div>
-                    </div>
-                    <div class="video-stat">
-                        <div class="video-stat-number">24/7</div>
-                        <div class="video-stat-label">Learning Support</div>
-                    </div>
-                </div>
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 2rem">
+          <div class="video-badge">
+            <span>IMMERSIVE CAMPUS EXPERIENCE</span>
+          </div>
+
+          <h2 class="video-title animate-fadeIn">
+            Experience Our<br />
+            <span style="color: var(--primary-blue)">Vibrant Campus Life</span>
+          </h2>
+
+          <p class="video-subtitle animate-fadeIn">
+            Step into a world where education meets innovation, creativity, and
+            community. Watch our students thrive in an environment designed for
+            excellence.
+          </p>
+
+          <div class="video-stats animate-fadeIn">
+            <div class="video-stat">
+              <div class="video-stat-number">20000+</div>
+              <div class="video-stat-label">Happy Students</div>
             </div>
-            
-            <div class="video-container">
-                <div class="video-wrapper">
-                    <div class="video-frame">
-                        <wistia-player media-id="g4et8b6dnb" aspect="1.7777777777777777" autoplay="true"></wistia-player>
-                    </div>
-                    
-                    <div class="video-info">
-                        <div class="video-info-header">
-                            <div class="video-info-content">
-                                <h3>Hi-Tech Institute - Where Dreams Become Reality</h3>
-                                <p>Immerse yourself in our world-class programs: <span class="video-programs">MBA • BBA • BCA • MCA • B.Tech</span></p>
-                            </div>
-                            
-                            <div class="video-cta-buttons">
-                                <a href="https://sunstone.in/campuses/hi-tech-institute" target="_blank" rel="noopener noreferrer" class="video-cta-button primary">
-                                    <span>Book Campus Tour</span>
-                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="9,18 15,12 9,6"/>
-                                    </svg>
-                                </a>
-                                <a href="tel:+919069069069" class="video-cta-button secondary">
-                                    <span>📞 Call Us</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="video-stat">
+              <div class="video-stat-number">50+</div>
+              <div class="video-stat-label">Campus Facilities</div>
             </div>
+            <div class="video-stat">
+              <div class="video-stat-number">24/7</div>
+              <div class="video-stat-label">Learning Support</div>
+            </div>
+          </div>
         </div>
+
+        <div class="video-container">
+          <div class="video-wrapper">
+            <div class="video-frame">
+              <wistia-player
+                media-id="g4et8b6dnb"
+                aspect="1.7777777777777777"
+                autoplay="true"
+              ></wistia-player>
+            </div>
+
+            <div class="video-info">
+              <div class="video-info-header">
+                <div class="video-info-content">
+                  <h3>Hi-Tech Institute - Where Dreams Become Reality</h3>
+                  <p>
+                    Immerse yourself in our world-class programs:
+                    <span class="video-programs"
+                      >MBA • BBA • BCA • MCA • B.Tech</span
+                    >
+                  </p>
+                </div>
+
+                <div class="video-cta-buttons">
+                  <a
+                    href="https://sunstone.in/campuses/hi-tech-institute"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="video-cta-button primary"
+                  >
+                    <span>Book Campus Tour</span>
+                    <svg
+                      class="icon"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <polyline points="9,18 15,12 9,6" />
+                    </svg>
+                  </a>
+                  <a
+                    href="tel:+919069069069"
+                    class="video-cta-button secondary"
+                  >
+                    <span>📞 Call Us</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Programs Offered Section -->
     <section class="programs-section">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem; position: relative; z-index: 10;">
-                <h2 class="section-title">Programs Offered</h2>
-                <p class="section-subtitle">Transform your career with industry-aligned programs designed by experts</p>
-            </div>
-
-            <!-- Mobile Program Selector -->
-            <div class="mobile-program-selector">
-                <div class="program-selector-highlight">
-                    <div class="program-selector-label">
-                        <div class="alert-icon">!</div>
-                        Select Program to View Details:
-                    </div>
-                    <select class="program-selector" id="mobileProgram" onchange="showMobileProgramDetails()">
-                        <option value="">Choose a program...</option>
-                        <option value="MBA">MBA Program</option>
-                        <option value="BBA">BBA Program</option>
-                        <option value="BCA">BCA Program</option>
-                        <option value="MCA">MCA Program</option>
-                        <option value="BTech">B.Tech Program</option>
-                    </select>
-                    <p class="program-helper-text">
-                        <span class="finger-icon">👆</span>
-                        Tap to explore our programs
-                    </p>
-                </div>
-
-                <!-- Program Details Card (Mobile) -->
-                <div id="mobileDetailsCard" class="program-details-card" style="display: none;">
-                    <div class="program-header" id="mobileHeader">
-                        <div class="program-header-content">
-                            <div class="program-header-icon">
-                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="program-title" id="mobileProgramTitle">Program</h3>
-                                <p class="program-subtitle">Program Details</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="program-body">
-                        <div class="program-overview">
-                            <h4 class="program-overview-title">Program Overview:</h4>
-                            <div class="overview-items">
-                                <div class="overview-item">
-                                    <span class="overview-label">Duration:</span>
-                                    <span class="overview-value" id="mobileDuration">-</span>
-                                </div>
-                                <div class="overview-item">
-                                    <span class="overview-label">Specializations:</span>
-                                    <span class="overview-value" id="mobileSpecializations">-</span>
-                                </div>
-                                <div class="overview-item">
-                                    <span class="overview-label">Certifications:</span>
-                                    <span class="overview-value" id="mobileCertifications">-</span>
-                                </div>
-                                <div class="overview-item">
-                                    <span class="overview-label">Experience:</span>
-                                    <span class="overview-value" id="mobileExperience">-</span>
-                                </div>
-                                <div class="overview-item">
-                                    <span class="overview-label">Projects:</span>
-                                    <span class="overview-value" id="mobileProjects">-</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="program-tabs">
-                            <div class="tab-buttons">
-                                <button class="tab-button active" onclick="switchMobileTab('specs')">Specifications</button>
-                                <button class="tab-button" onclick="switchMobileTab('eligibility')">Eligibility</button>
-                            </div>
-                        </div>
-
-                        <div class="tab-content active" id="mobileSpecsTab">
-                            <h4 class="specializations-title">New Age Specialisations:</h4>
-                            <div class="specializations-list" id="mobileSpecsList">
-                                <!-- Specializations will be populated by JavaScript -->
-                            </div>
-                            <button class="view-more-btn" id="mobileViewMore" onclick="toggleMobileSpecializations()">
-                                <span>View More</span>
-                                <svg class="icon" style="margin-left: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polyline points="6,9 12,15 18,9"/>
-                                </svg>
-                            </button>
-                        </div>
-
-                        <div class="tab-content" id="mobileEligibilityTab">
-                            <div class="eligibility-content">
-                                <h4 class="eligibility-title">Eligibility Criteria:</h4>
-                                <p class="eligibility-text" id="mobileEligibilityText">-</p>
-                            </div>
-                        </div>
-
-                        <a href="#" class="apply-button" id="mobileApplyButton">
-                            <span>Apply for Program</span>
-                            <svg class="icon" style="margin-left: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                <polyline points="15,3 21,3 21,9"/>
-                                <line x1="10" y1="14" x2="21" y2="3"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Desktop Program Tabs -->
-            <div class="desktop-program-tabs">
-                <div class="program-tab-buttons">
-                    <button class="program-tab-button active" onclick="switchDesktopProgram('MBA')">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                        </svg>
-                        <span>MBA</span>
-                    </button>
-                    <button class="program-tab-button" onclick="switchDesktopProgram('BBA')">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                        </svg>
-                        <span>BBA</span>
-                    </button>
-                    <button class="program-tab-button" onclick="switchDesktopProgram('BCA')">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                        </svg>
-                        <span>BCA</span>
-                    </button>
-                    <button class="program-tab-button" onclick="switchDesktopProgram('MCA')">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                        </svg>
-                        <span>MCA</span>
-                    </button>
-                    <button class="program-tab-button" onclick="switchDesktopProgram('BTech')">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                        </svg>
-                        <span>B.Tech</span>
-                    </button>
-                </div>
-
-                <!-- Program Content Cards -->
-                <div class="program-content active" id="desktopMBA">
-                    <div class="program-card">
-                        <div class="program-card-header">
-                            <div class="program-card-header-content">
-                                <div class="program-card-header-top">
-                                    <div class="program-card-icon">
-                                        <svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <h3 class="program-card-title">MBA Program</h3>
-                                        <p class="program-card-subtitle">Excellence in Education</p>
-                                    </div>
-                                </div>
-
-                                <div class="program-stats">
-                                    <div class="program-stat">
-                                        <svg class="icon program-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <circle cx="12" cy="12" r="10"/>
-                                            <polyline points="12,6 12,12 16,14"/>
-                                        </svg>
-                                        <div class="program-stat-value">2-year program</div>
-                                    </div>
-                                    <div class="program-stat">
-                                        <svg class="icon program-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polygon points="12,2 15.09,8.26 22,9 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9 8.91,8.26"/>
-                                        </svg>
-                                        <div class="program-stat-value">5 specializations</div>
-                                    </div>
-                                    <div class="program-stat">
-                                        <svg class="icon program-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M12 2l3.09 6.26L22 9l-5 4.87 1.18 6.88L12 17.27l-6.18 3.48L7 14.87 2 9l6.91-.74L12 2z"/>
-                                        </svg>
-                                        <div class="program-stat-value">10 certifications</div>
-                                    </div>
-                                    <div class="program-stat">
-                                        <svg class="icon program-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                            <line x1="8" y1="21" x2="16" y2="21"/>
-                                            <line x1="12" y1="17" x2="12" y2="21"/>
-                                        </svg>
-                                        <div class="program-stat-value">6+ months experience</div>
-                                    </div>
-                                    <div class="program-stat">
-                                        <svg class="icon program-stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-                                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-                                        </svg>
-                                        <div class="program-stat-value">4 capstone projects</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="program-card-body">
-                            <div class="program-body-grid">
-                                <div class="specializations-section">
-                                    <h4>
-                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <polygon points="12,2 15.09,8.26 22,9 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9 8.91,8.26"/>
-                                        </svg>
-                                        Specialisations
-                                    </h4>
-                                    <div class="desktop-specializations-list">
-                                        <div class="desktop-specialization-item">
-                                            <div class="desktop-specialization-item-content">
-                                                <div class="desktop-specialization-icon">
-                                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                                        <circle cx="12" cy="12" r="3"/>
-                                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h5>Marketing Management</h5>
-                                                    <p>Marketing Manager, Brand Manager, Digital Marketing Specialist</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="desktop-specialization-item">
-                                            <div class="desktop-specialization-item-content">
-                                                <div class="desktop-specialization-icon">
-                                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                                        <circle cx="12" cy="12" r="3"/>
-                                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h5>IT, Analytics & Research</h5>
-                                                    <p>Business Analyst, Data Scientist, Research Analyst</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="desktop-specialization-item">
-                                            <div class="desktop-specialization-item-content">
-                                                <div class="desktop-specialization-icon">
-                                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                                        <circle cx="12" cy="12" r="3"/>
-                                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h5>Human Resource Management</h5>
-                                                    <p>HR Manager, Talent Acquisition Manager, HR Business Partner</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="desktop-specialization-item">
-                                            <div class="desktop-specialization-item-content">
-                                                <div class="desktop-specialization-icon">
-                                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                                        <circle cx="12" cy="12" r="3"/>
-                                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h5>Finance Management</h5>
-                                                    <p>Finance Manager, Investment Analyst, Financial Planner</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="desktop-specialization-item">
-                                            <div class="desktop-specialization-item-content">
-                                                <div class="desktop-specialization-icon">
-                                                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                                                        <circle cx="12" cy="12" r="3"/>
-                                                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <h5>Operations Management</h5>
-                                                    <p>Operations Manager, Supply Chain Manager, Process Manager</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="eligibility-section">
-                                    <h4>
-                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M12 2l3.09 6.26L22 9l-5 4.87 1.18 6.88L12 17.27l-6.18 3.48L7 14.87 2 9l6.91-.74L12 2z"/>
-                                        </svg>
-                                        Eligibility
-                                    </h4>
-                                    <div class="desktop-eligibility-content">
-                                        <p>50% marks in graduation from a recognised university (45% for reserved category).</p>
-                                    </div>
-                                    <a href="https://sunstone.in/campuses/hi-tech-institute/mba" target="_blank" rel="noopener noreferrer" class="desktop-apply-button">
-                                        <span>Apply Now</span>
-                                        <svg class="icon" style="margin-left: 0.5rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                            <polyline points="15,3 21,3 21,9"/>
-                                            <line x1="10" y1="14" x2="21" y2="3"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Similar structure for other programs -->
-                <div class="program-content" id="desktopBBA" style="display: none;">
-                    <!-- BBA content will be shown when selected -->
-                </div>
-                
-                <div class="program-content" id="desktopBCA" style="display: none;">
-                    <!-- BCA content will be shown when selected -->
-                </div>
-                
-                <div class="program-content" id="desktopMCA" style="display: none;">
-                    <!-- MCA content will be shown when selected -->
-                </div>
-                
-                <div class="program-content" id="desktopBTech" style="display: none;">
-                    <!-- BTech content will be shown when selected -->
-                </div>
-            </div>
+      <div class="container">
+        <div
+          style="
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 10;
+          "
+        >
+          <h2 class="section-title">Programs Offered</h2>
+          <p class="section-subtitle">
+            Transform your career with industry-aligned programs designed by
+            experts
+          </p>
         </div>
+
+        <!-- Mobile Program Selector -->
+        <div class="mobile-program-selector">
+          <div class="program-selector-highlight">
+            <div class="program-selector-label">
+              <div class="alert-icon">!</div>
+              Select Program to View Details:
+            </div>
+            <select
+              class="program-selector"
+              id="mobileProgram"
+              onchange="showMobileProgramDetails()"
+            >
+              <option value="">Choose a program...</option>
+              <option value="MBA">MBA Program</option>
+              <option value="BBA">BBA Program</option>
+              <option value="BCA">BCA Program</option>
+              <option value="MCA">MCA Program</option>
+              <option value="BTech">B.Tech Program</option>
+            </select>
+            <p class="program-helper-text">
+              <span class="finger-icon">👆</span>
+              Tap to explore our programs
+            </p>
+          </div>
+
+          <!-- Program Details Card (Mobile) -->
+          <div
+            id="mobileDetailsCard"
+            class="program-details-card"
+            style="display: none"
+          >
+            <div class="program-header" id="mobileHeader">
+              <div class="program-header-content">
+                <div class="program-header-icon">
+                  <svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="program-title" id="mobileProgramTitle">Program</h3>
+                  <p class="program-subtitle">Program Details</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="program-body">
+              <div class="program-overview">
+                <h4 class="program-overview-title">Program Overview:</h4>
+                <div class="overview-items">
+                  <div class="overview-item">
+                    <span class="overview-label">Duration:</span>
+                    <span class="overview-value" id="mobileDuration">-</span>
+                  </div>
+                  <div class="overview-item">
+                    <span class="overview-label">Specializations:</span>
+                    <span class="overview-value" id="mobileSpecializations"
+                      >-</span
+                    >
+                  </div>
+                  <div class="overview-item">
+                    <span class="overview-label">Certifications:</span>
+                    <span class="overview-value" id="mobileCertifications"
+                      >-</span
+                    >
+                  </div>
+                  <div class="overview-item">
+                    <span class="overview-label">Experience:</span>
+                    <span class="overview-value" id="mobileExperience">-</span>
+                  </div>
+                  <div class="overview-item">
+                    <span class="overview-label">Projects:</span>
+                    <span class="overview-value" id="mobileProjects">-</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="program-tabs">
+                <div class="tab-buttons">
+                  <button
+                    class="tab-button active"
+                    onclick="switchMobileTab('specs')"
+                  >
+                    Specifications
+                  </button>
+                  <button
+                    class="tab-button"
+                    onclick="switchMobileTab('eligibility')"
+                  >
+                    Eligibility
+                  </button>
+                </div>
+              </div>
+
+              <div class="tab-content active" id="mobileSpecsTab">
+                <h4 class="specializations-title">New Age Specialisations:</h4>
+                <div class="specializations-list" id="mobileSpecsList">
+                  <!-- Specializations will be populated by JavaScript -->
+                </div>
+                <button
+                  class="view-more-btn"
+                  id="mobileViewMore"
+                  onclick="toggleMobileSpecializations()"
+                >
+                  <span>View More</span>
+                  <svg
+                    class="icon"
+                    style="margin-left: 0.5rem"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6,9 12,15 18,9" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="tab-content" id="mobileEligibilityTab">
+                <div class="eligibility-content">
+                  <h4 class="eligibility-title">Eligibility Criteria:</h4>
+                  <p class="eligibility-text" id="mobileEligibilityText">-</p>
+                </div>
+              </div>
+
+              <a href="#" class="apply-button" id="mobileApplyButton">
+                <span>Apply for Program</span>
+                <svg
+                  class="icon"
+                  style="margin-left: 0.5rem"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  />
+                  <polyline points="15,3 21,3 21,9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desktop Program Tabs -->
+        <div class="desktop-program-tabs">
+          <div class="program-tab-buttons">
+            <button
+              class="program-tab-button active"
+              onclick="switchDesktopProgram('MBA')"
+            >
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+              <span>MBA</span>
+            </button>
+            <button
+              class="program-tab-button"
+              onclick="switchDesktopProgram('BBA')"
+            >
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+              <span>BBA</span>
+            </button>
+            <button
+              class="program-tab-button"
+              onclick="switchDesktopProgram('BCA')"
+            >
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+              <span>BCA</span>
+            </button>
+            <button
+              class="program-tab-button"
+              onclick="switchDesktopProgram('MCA')"
+            >
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+              <span>MCA</span>
+            </button>
+            <button
+              class="program-tab-button"
+              onclick="switchDesktopProgram('BTech')"
+            >
+              <svg
+                class="icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+              <span>B.Tech</span>
+            </button>
+          </div>
+
+          <!-- Program Content Cards -->
+          <div class="program-content active" id="desktopMBA">
+            <div class="program-card">
+              <div class="program-card-header">
+                <div class="program-card-header-content">
+                  <div class="program-card-header-top">
+                    <div class="program-card-icon">
+                      <svg
+                        class="icon-xl"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 class="program-card-title">MBA Program</h3>
+                      <p class="program-card-subtitle">
+                        Excellence in Education
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="program-stats">
+                    <div class="program-stat">
+                      <svg
+                        class="icon program-stat-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12,6 12,12 16,14" />
+                      </svg>
+                      <div class="program-stat-value">2-year program</div>
+                    </div>
+                    <div class="program-stat">
+                      <svg
+                        class="icon program-stat-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <polygon
+                          points="12,2 15.09,8.26 22,9 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9 8.91,8.26"
+                        />
+                      </svg>
+                      <div class="program-stat-value">5 specializations</div>
+                    </div>
+                    <div class="program-stat">
+                      <svg
+                        class="icon program-stat-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12 2l3.09 6.26L22 9l-5 4.87 1.18 6.88L12 17.27l-6.18 3.48L7 14.87 2 9l6.91-.74L12 2z"
+                        />
+                      </svg>
+                      <div class="program-stat-value">10 certifications</div>
+                    </div>
+                    <div class="program-stat">
+                      <svg
+                        class="icon program-stat-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <rect
+                          x="2"
+                          y="3"
+                          width="20"
+                          height="14"
+                          rx="2"
+                          ry="2"
+                        />
+                        <line x1="8" y1="21" x2="16" y2="21" />
+                        <line x1="12" y1="17" x2="12" y2="21" />
+                      </svg>
+                      <div class="program-stat-value">6+ months experience</div>
+                    </div>
+                    <div class="program-stat">
+                      <svg
+                        class="icon program-stat-icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                      </svg>
+                      <div class="program-stat-value">4 capstone projects</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="program-card-body">
+                <div class="program-body-grid">
+                  <div class="specializations-section">
+                    <h4>
+                      <svg
+                        class="icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <polygon
+                          points="12,2 15.09,8.26 22,9 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9 8.91,8.26"
+                        />
+                      </svg>
+                      Specialisations
+                    </h4>
+                    <div class="desktop-specializations-list">
+                      <div class="desktop-specialization-item">
+                        <div class="desktop-specialization-item-content">
+                          <div class="desktop-specialization-icon">
+                            <svg
+                              class="icon"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <circle cx="12" cy="12" r="3" />
+                              <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                              />
+                            </svg>
+                          </div>
+                          <div>
+                            <h5>Marketing Management</h5>
+                            <p>
+                              Marketing Manager, Brand Manager, Digital
+                              Marketing Specialist
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="desktop-specialization-item">
+                        <div class="desktop-specialization-item-content">
+                          <div class="desktop-specialization-icon">
+                            <svg
+                              class="icon"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <circle cx="12" cy="12" r="3" />
+                              <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                              />
+                            </svg>
+                          </div>
+                          <div>
+                            <h5>IT, Analytics & Research</h5>
+                            <p>
+                              Business Analyst, Data Scientist, Research Analyst
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="desktop-specialization-item">
+                        <div class="desktop-specialization-item-content">
+                          <div class="desktop-specialization-icon">
+                            <svg
+                              class="icon"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <circle cx="12" cy="12" r="3" />
+                              <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                              />
+                            </svg>
+                          </div>
+                          <div>
+                            <h5>Human Resource Management</h5>
+                            <p>
+                              HR Manager, Talent Acquisition Manager, HR
+                              Business Partner
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="desktop-specialization-item">
+                        <div class="desktop-specialization-item-content">
+                          <div class="desktop-specialization-icon">
+                            <svg
+                              class="icon"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <circle cx="12" cy="12" r="3" />
+                              <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                              />
+                            </svg>
+                          </div>
+                          <div>
+                            <h5>Finance Management</h5>
+                            <p>
+                              Finance Manager, Investment Analyst, Financial
+                              Planner
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="desktop-specialization-item">
+                        <div class="desktop-specialization-item-content">
+                          <div class="desktop-specialization-icon">
+                            <svg
+                              class="icon"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <circle cx="12" cy="12" r="3" />
+                              <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                              />
+                            </svg>
+                          </div>
+                          <div>
+                            <h5>Operations Management</h5>
+                            <p>
+                              Operations Manager, Supply Chain Manager, Process
+                              Manager
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="eligibility-section">
+                    <h4>
+                      <svg
+                        class="icon"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M12 2l3.09 6.26L22 9l-5 4.87 1.18 6.88L12 17.27l-6.18 3.48L7 14.87 2 9l6.91-.74L12 2z"
+                        />
+                      </svg>
+                      Eligibility
+                    </h4>
+                    <div class="desktop-eligibility-content">
+                      <p>
+                        50% marks in graduation from a recognised university
+                        (45% for reserved category).
+                      </p>
+                    </div>
+                    <a
+                      href="https://sunstone.in/campuses/hi-tech-institute/mba"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="desktop-apply-button"
+                    >
+                      <span>Apply Now</span>
+                      <svg
+                        class="icon"
+                        style="margin-left: 0.5rem"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        />
+                        <polyline points="15,3 21,3 21,9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Similar structure for other programs -->
+          <div class="program-content" id="desktopBBA" style="display: none">
+            <!-- BBA content will be shown when selected -->
+          </div>
+
+          <div class="program-content" id="desktopBCA" style="display: none">
+            <!-- BCA content will be shown when selected -->
+          </div>
+
+          <div class="program-content" id="desktopMCA" style="display: none">
+            <!-- MCA content will be shown when selected -->
+          </div>
+
+          <div class="program-content" id="desktopBTech" style="display: none">
+            <!-- BTech content will be shown when selected -->
+          </div>
+        </div>
+      </div>
     </section>
 
     <script>
-        // Program data
-        const programs = {
-            MBA: {
-                duration: "2-year program",
-                certifications: "10 certifications",
-                internships: "6+ months of internships/projects",
-                projects: "4 capstone projects",
-                specializations: "5 specializations",
-                eligibility: "50% marks in graduation from a recognised university (45% for reserved category).",
-                applyUrl: "https://sunstone.in/campuses/hi-tech-institute/mba",
-                certificationsList: [
-                    {
-                        name: "Marketing Management",
-                        careers: "Marketing Manager, Brand Manager, Digital Marketing Specialist"
-                    },
-                    {
-                        name: "IT, Analytics & Research",
-                        careers: "Business Analyst, Data Scientist, Research Analyst"
-                    },
-                    {
-                        name: "Human Resource Management", 
-                        careers: "HR Manager, Talent Acquisition Manager, HR Business Partner"
-                    },
-                    {
-                        name: "Finance Management",
-                        careers: "Finance Manager, Investment Analyst, Financial Planner"
-                    },
-                    {
-                        name: "Operations Management",
-                        careers: "Operations Manager, Supply Chain Manager, Process Manager"
-                    }
-                ]
+      // Program data
+      const programs = {
+        MBA: {
+          duration: "2-year program",
+          certifications: "10 certifications",
+          internships: "6+ months of internships/projects",
+          projects: "4 capstone projects",
+          specializations: "5 specializations",
+          eligibility:
+            "50% marks in graduation from a recognised university (45% for reserved category).",
+          applyUrl: "https://sunstone.in/campuses/hi-tech-institute/mba",
+          certificationsList: [
+            {
+              name: "Marketing Management",
+              careers:
+                "Marketing Manager, Brand Manager, Digital Marketing Specialist",
             },
-            BBA: {
-                duration: "3-year program",
-                certifications: "10 certifications", 
-                internships: "8+ months of internships/projects",
-                projects: "6 capstone projects",
-                specializations: "6 specializations",
-                eligibility: "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). No specific subject requirements.",
-                applyUrl: "https://sunstone.in/campuses/hi-tech-institute/bba",
-                certificationsList: [
-                    {
-                        name: "IT & Business Analytics",
-                        careers: "Big Data Analyst, Data Visualization Specialist, Business Intelligence Analyst"
-                    },
-                    {
-                        name: "Human Resource & Talent Analytics",
-                        careers: "HR Data Analyst, Talent Acquisition Specialist, Workforce Planning Manager"
-                    },
-                    {
-                        name: "Marketing Management",
-                        careers: "Marketing Manager, Brand Manager, Campaign Strategist"
-                    },
-                    {
-                        name: "Retail Sales Management",
-                        careers: "Retail Manager, Sales Executive, Store Operations Manager"
-                    },
-                    {
-                        name: "Operations Management",
-                        careers: "Operations Manager, Production Manager, Logistics Coordinator"
-                    },
-                    {
-                        name: "Banking, Financial Services and Insurance (BFSI)",
-                        careers: "Banking Officer, Financial Advisor, Insurance Specialist"
-                    }
-                ]
+            {
+              name: "IT, Analytics & Research",
+              careers: "Business Analyst, Data Scientist, Research Analyst",
             },
-            BCA: {
-                duration: "3-year program",
-                certifications: "10 certifications",
-                internships: "8+ months of internships/projects", 
-                projects: "3 capstone projects",
-                specializations: "6 specializations",
-                eligibility: "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Mathematics as a compulsory subject is preferred.",
-                applyUrl: "https://sunstone.in/campuses/hi-tech-institute/bca",
-                certificationsList: [
-                    {
-                        name: "Cloud Computing",
-                        careers: "Cloud Engineer, DevOps Engineer, Cloud Architect"
-                    },
-                    {
-                        name: "Cyber Security & Forensics",
-                        careers: "Cybersecurity Analyst, Ethical Hacker, Digital Forensics Specialist"
-                    },
-                    {
-                        name: "Blockchain",
-                        careers: "Blockchain Developer, Cryptocurrency Analyst, Smart Contract Developer"
-                    },
-                    {
-                        name: "Machine Learning & AI",
-                        careers: "ML Engineer, AI Developer, Data Scientist"
-                    },
-                    {
-                        name: "Data Science & Analytics", 
-                        careers: "Data Analyst, Business Intelligence Analyst, Data Visualization Expert"
-                    },
-                    {
-                        name: "Full Stack Development",
-                        careers: "Full Stack Developer, Web Application Developer, Frontend/Backend Developer"
-                    }
-                ]
+            {
+              name: "Human Resource Management",
+              careers:
+                "HR Manager, Talent Acquisition Manager, HR Business Partner",
             },
-            MCA: {
-                duration: "2-year program",
-                certifications: "10 certifications",
-                internships: "6+ months of internships/projects",
-                projects: "2 capstone projects", 
-                specializations: "5 specializations",
-                eligibility: "50% marks in graduation from a recognised university (45% for reserved category). Must have studied at least one of these subjects: Computer Science, Information Technology, Informatics Practices, Mathematics, Business Mathematics, or Statistics.",
-                applyUrl: "https://sunstone.in/campuses/hi-tech-institute/mca",
-                certificationsList: [
-                    {
-                        name: "Full Stack Development",
-                        careers: "Full Stack Developer, Web Application Developer, Frontend/Backend Developer"
-                    },
-                    {
-                        name: "Machine Learning & AI",
-                        careers: "ML Engineer, AI Developer, Data Scientist"
-                    },
-                    {
-                        name: "Data Science",
-                        careers: "Data Scientist, Data Analyst, Business Intelligence Specialist"
-                    },
-                    {
-                        name: "Cloud Computing",
-                        careers: "Cloud Engineer, DevOps Engineer, Cloud Solutions Architect"
-                    },
-                    {
-                        name: "Cyber Security",
-                        careers: "Cybersecurity Analyst, Security Engineer, Information Security Specialist"
-                    }
-                ]
+            {
+              name: "Finance Management",
+              careers: "Finance Manager, Investment Analyst, Financial Planner",
             },
-            BTech: {
-                duration: "4-year program",
-                certifications: "10 certifications",
-                internships: "10+ months of Internships",
-                projects: "4 capstone projects",
-                specializations: "2 specializations", 
-                eligibility: "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Compulsory subjects: Physics, Mathematics and Chemistry.",
-                applyUrl: "https://sunstone.in/campuses/hi-tech-institute/b-tech",
-                certificationsList: [
-                    {
-                        name: "Computer Science Engineering",
-                        careers: "Software Engineer, System Analyst, Application Developer"
-                    },
-                    {
-                        name: "Information Technology",
-                        careers: "IT Specialist, Business Analyst, Project Manager"
-                    }
-                ]
-            }
-        };
+            {
+              name: "Operations Management",
+              careers:
+                "Operations Manager, Supply Chain Manager, Process Manager",
+            },
+          ],
+        },
+        BBA: {
+          duration: "3-year program",
+          certifications: "10 certifications",
+          internships: "8+ months of internships/projects",
+          projects: "6 capstone projects",
+          specializations: "6 specializations",
+          eligibility:
+            "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). No specific subject requirements.",
+          applyUrl: "https://sunstone.in/campuses/hi-tech-institute/bba",
+          certificationsList: [
+            {
+              name: "IT & Business Analytics",
+              careers:
+                "Big Data Analyst, Data Visualization Specialist, Business Intelligence Analyst",
+            },
+            {
+              name: "Human Resource & Talent Analytics",
+              careers:
+                "HR Data Analyst, Talent Acquisition Specialist, Workforce Planning Manager",
+            },
+            {
+              name: "Marketing Management",
+              careers: "Marketing Manager, Brand Manager, Campaign Strategist",
+            },
+            {
+              name: "Retail Sales Management",
+              careers:
+                "Retail Manager, Sales Executive, Store Operations Manager",
+            },
+            {
+              name: "Operations Management",
+              careers:
+                "Operations Manager, Production Manager, Logistics Coordinator",
+            },
+            {
+              name: "Banking, Financial Services and Insurance (BFSI)",
+              careers:
+                "Banking Officer, Financial Advisor, Insurance Specialist",
+            },
+          ],
+        },
+        BCA: {
+          duration: "3-year program",
+          certifications: "10 certifications",
+          internships: "8+ months of internships/projects",
+          projects: "3 capstone projects",
+          specializations: "6 specializations",
+          eligibility:
+            "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Mathematics as a compulsory subject is preferred.",
+          applyUrl: "https://sunstone.in/campuses/hi-tech-institute/bca",
+          certificationsList: [
+            {
+              name: "Cloud Computing",
+              careers: "Cloud Engineer, DevOps Engineer, Cloud Architect",
+            },
+            {
+              name: "Cyber Security & Forensics",
+              careers:
+                "Cybersecurity Analyst, Ethical Hacker, Digital Forensics Specialist",
+            },
+            {
+              name: "Blockchain",
+              careers:
+                "Blockchain Developer, Cryptocurrency Analyst, Smart Contract Developer",
+            },
+            {
+              name: "Machine Learning & AI",
+              careers: "ML Engineer, AI Developer, Data Scientist",
+            },
+            {
+              name: "Data Science & Analytics",
+              careers:
+                "Data Analyst, Business Intelligence Analyst, Data Visualization Expert",
+            },
+            {
+              name: "Full Stack Development",
+              careers:
+                "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
+            },
+          ],
+        },
+        MCA: {
+          duration: "2-year program",
+          certifications: "10 certifications",
+          internships: "6+ months of internships/projects",
+          projects: "2 capstone projects",
+          specializations: "5 specializations",
+          eligibility:
+            "50% marks in graduation from a recognised university (45% for reserved category). Must have studied at least one of these subjects: Computer Science, Information Technology, Informatics Practices, Mathematics, Business Mathematics, or Statistics.",
+          applyUrl: "https://sunstone.in/campuses/hi-tech-institute/mca",
+          certificationsList: [
+            {
+              name: "Full Stack Development",
+              careers:
+                "Full Stack Developer, Web Application Developer, Frontend/Backend Developer",
+            },
+            {
+              name: "Machine Learning & AI",
+              careers: "ML Engineer, AI Developer, Data Scientist",
+            },
+            {
+              name: "Data Science",
+              careers:
+                "Data Scientist, Data Analyst, Business Intelligence Specialist",
+            },
+            {
+              name: "Cloud Computing",
+              careers:
+                "Cloud Engineer, DevOps Engineer, Cloud Solutions Architect",
+            },
+            {
+              name: "Cyber Security",
+              careers:
+                "Cybersecurity Analyst, Security Engineer, Information Security Specialist",
+            },
+          ],
+        },
+        BTech: {
+          duration: "4-year program",
+          certifications: "10 certifications",
+          internships: "10+ months of Internships",
+          projects: "4 capstone projects",
+          specializations: "2 specializations",
+          eligibility:
+            "Candidates must have secured a minimum of 45% aggregate marks in Class 12th from a recognized board (40% for SC/ST/OBC candidates). Compulsory subjects: Physics, Mathematics and Chemistry.",
+          applyUrl: "https://sunstone.in/campuses/hi-tech-institute/b-tech",
+          certificationsList: [
+            {
+              name: "Computer Science Engineering",
+              careers:
+                "Software Engineer, System Analyst, Application Developer",
+            },
+            {
+              name: "Information Technology",
+              careers: "IT Specialist, Business Analyst, Project Manager",
+            },
+          ],
+        },
+      };
 
-        // Carousel functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const dots = document.querySelectorAll('.carousel-dot');
+      // Carousel functionality
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".carousel-slide");
+      const dots = document.querySelectorAll(".carousel-dot");
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function setSlide(index) {
-            currentSlide = index;
-            showSlide(currentSlide);
-        }
-
-        // Auto-advance carousel
-        setInterval(nextSlide, 5000);
-
-        // Touch/swipe support for carousel
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        const carousel = document.getElementById('heroCarousel');
-        carousel.addEventListener('touchstart', e => {
-            touchStartX = e.changedTouches[0].screenX;
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
         });
-
-        carousel.addEventListener('touchend', e => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
         });
+      }
 
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
-                }
-            }
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      function setSlide(index) {
+        currentSlide = index;
+        showSlide(currentSlide);
+      }
+
+      // Auto-advance carousel
+      setInterval(nextSlide, 5000);
+
+      // Touch/swipe support for carousel
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      const carousel = document.getElementById("heroCarousel");
+      carousel.addEventListener("touchstart", (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+
+      carousel.addEventListener("touchend", (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+      });
+
+      function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
         }
+      }
 
-        // Mobile Program Functionality
-        let showingAllSpecs = false;
-        let currentMobileTab = 'specs';
+      // Mobile Program Functionality
+      let showingAllSpecs = false;
+      let currentMobileTab = "specs";
 
-        function showMobileProgramDetails() {
-            const selector = document.getElementById('mobileProgram');
-            const card = document.getElementById('mobileDetailsCard');
-            const selectedProgram = selector.value;
+      function showMobileProgramDetails() {
+        const selector = document.getElementById("mobileProgram");
+        const card = document.getElementById("mobileDetailsCard");
+        const selectedProgram = selector.value;
 
-            if (selectedProgram && programs[selectedProgram]) {
-                const program = programs[selectedProgram];
-                
-                // Update header
-                document.getElementById('mobileProgramTitle').textContent = selectedProgram;
-                
-                // Update overview
-                document.getElementById('mobileDuration').textContent = program.duration;
-                document.getElementById('mobileSpecializations').textContent = program.specializations;
-                document.getElementById('mobileCertifications').textContent = program.certifications;
-                document.getElementById('mobileExperience').textContent = program.internships;
-                document.getElementById('mobileProjects').textContent = program.projects;
-                
-                // Update eligibility
-                document.getElementById('mobileEligibilityText').textContent = program.eligibility;
-                
-                // Update apply button
-                const applyBtn = document.getElementById('mobileApplyButton');
-                applyBtn.href = program.applyUrl;
-                applyBtn.querySelector('span').textContent = `Apply for ${selectedProgram}`;
-                
-                // Update specializations
-                updateMobileSpecializations(program.certificationsList);
-                
-                // Show card
-                card.style.display = 'block';
-                
-                // Reset states
-                showingAllSpecs = false;
-                currentMobileTab = 'specs';
-                switchMobileTab('specs');
-            } else {
-                card.style.display = 'none';
-            }
+        if (selectedProgram && programs[selectedProgram]) {
+          const program = programs[selectedProgram];
+
+          // Update header
+          document.getElementById("mobileProgramTitle").textContent =
+            selectedProgram;
+
+          // Update overview
+          document.getElementById("mobileDuration").textContent =
+            program.duration;
+          document.getElementById("mobileSpecializations").textContent =
+            program.specializations;
+          document.getElementById("mobileCertifications").textContent =
+            program.certifications;
+          document.getElementById("mobileExperience").textContent =
+            program.internships;
+          document.getElementById("mobileProjects").textContent =
+            program.projects;
+
+          // Update eligibility
+          document.getElementById("mobileEligibilityText").textContent =
+            program.eligibility;
+
+          // Update apply button
+          const applyBtn = document.getElementById("mobileApplyButton");
+          applyBtn.href = program.applyUrl;
+          applyBtn.querySelector("span").textContent =
+            `Apply for ${selectedProgram}`;
+
+          // Update specializations
+          updateMobileSpecializations(program.certificationsList);
+
+          // Show card
+          card.style.display = "block";
+
+          // Reset states
+          showingAllSpecs = false;
+          currentMobileTab = "specs";
+          switchMobileTab("specs");
+        } else {
+          card.style.display = "none";
         }
+      }
 
-        function updateMobileSpecializations(certsList) {
-            const container = document.getElementById('mobileSpecsList');
-            const viewMoreBtn = document.getElementById('mobileViewMore');
-            const maxVisible = 3;
-            
-            container.innerHTML = '';
-            
-            const visibleCerts = showingAllSpecs ? certsList : certsList.slice(0, maxVisible);
-            
-            visibleCerts.forEach(cert => {
-                const item = document.createElement('div');
-                item.className = 'specialization-item';
-                item.innerHTML = `
+      function updateMobileSpecializations(certsList) {
+        const container = document.getElementById("mobileSpecsList");
+        const viewMoreBtn = document.getElementById("mobileViewMore");
+        const maxVisible = 3;
+
+        container.innerHTML = "";
+
+        const visibleCerts = showingAllSpecs
+          ? certsList
+          : certsList.slice(0, maxVisible);
+
+        visibleCerts.forEach((cert) => {
+          const item = document.createElement("div");
+          item.className = "specialization-item";
+          item.innerHTML = `
                     <div class="specialization-bullet"></div>
                     <div class="specialization-content">
                         <h4>${cert.name}</h4>
                         <p>${cert.careers}</p>
                     </div>
                 `;
-                container.appendChild(item);
-            });
-            
-            if (certsList.length > maxVisible) {
-                viewMoreBtn.style.display = 'flex';
-                const span = viewMoreBtn.querySelector('span');
-                const svg = viewMoreBtn.querySelector('svg');
-                
-                if (showingAllSpecs) {
-                    span.textContent = 'View Less';
-                    svg.style.transform = 'rotate(180deg)';
-                } else {
-                    span.textContent = `View More (${certsList.length - maxVisible} more)`;
-                    svg.style.transform = 'rotate(0deg)';
-                }
-            } else {
-                viewMoreBtn.style.display = 'none';
-            }
+          container.appendChild(item);
+        });
+
+        if (certsList.length > maxVisible) {
+          viewMoreBtn.style.display = "flex";
+          const span = viewMoreBtn.querySelector("span");
+          const svg = viewMoreBtn.querySelector("svg");
+
+          if (showingAllSpecs) {
+            span.textContent = "View Less";
+            svg.style.transform = "rotate(180deg)";
+          } else {
+            span.textContent = `View More (${certsList.length - maxVisible} more)`;
+            svg.style.transform = "rotate(0deg)";
+          }
+        } else {
+          viewMoreBtn.style.display = "none";
         }
+      }
 
-        function toggleMobileSpecializations() {
-            const selector = document.getElementById('mobileProgram');
-            const selectedProgram = selector.value;
-            
-            if (selectedProgram && programs[selectedProgram]) {
-                showingAllSpecs = !showingAllSpecs;
-                updateMobileSpecializations(programs[selectedProgram].certificationsList);
-            }
+      function toggleMobileSpecializations() {
+        const selector = document.getElementById("mobileProgram");
+        const selectedProgram = selector.value;
+
+        if (selectedProgram && programs[selectedProgram]) {
+          showingAllSpecs = !showingAllSpecs;
+          updateMobileSpecializations(
+            programs[selectedProgram].certificationsList,
+          );
         }
+      }
 
-        function switchMobileTab(tab) {
-            currentMobileTab = tab;
-            
-            // Update tab buttons
-            const tabButtons = document.querySelectorAll('.tab-button');
-            tabButtons.forEach(btn => {
-                btn.classList.toggle('active', btn.textContent.toLowerCase().includes(tab));
-            });
-            
-            // Update tab content
-            const specsTab = document.getElementById('mobileSpecsTab');
-            const eligibilityTab = document.getElementById('mobileEligibilityTab');
-            
-            if (tab === 'specs') {
-                specsTab.classList.add('active');
-                eligibilityTab.classList.remove('active');
-            } else {
-                specsTab.classList.remove('active');
-                eligibilityTab.classList.add('active');
-            }
+      function switchMobileTab(tab) {
+        currentMobileTab = tab;
+
+        // Update tab buttons
+        const tabButtons = document.querySelectorAll(".tab-button");
+        tabButtons.forEach((btn) => {
+          btn.classList.toggle(
+            "active",
+            btn.textContent.toLowerCase().includes(tab),
+          );
+        });
+
+        // Update tab content
+        const specsTab = document.getElementById("mobileSpecsTab");
+        const eligibilityTab = document.getElementById("mobileEligibilityTab");
+
+        if (tab === "specs") {
+          specsTab.classList.add("active");
+          eligibilityTab.classList.remove("active");
+        } else {
+          specsTab.classList.remove("active");
+          eligibilityTab.classList.add("active");
         }
+      }
 
-        // Desktop Program Functionality
-        let activeDesktopProgram = 'MBA';
+      // Desktop Program Functionality
+      let activeDesktopProgram = "MBA";
 
-        function switchDesktopProgram(program) {
-            // Update tab buttons
-            const tabButtons = document.querySelectorAll('.program-tab-button');
-            tabButtons.forEach(btn => {
-                btn.classList.toggle('active', btn.textContent.trim() === program);
-            });
-            
-            // Update content
-            const contentElements = document.querySelectorAll('.program-content');
-            contentElements.forEach(content => {
-                content.classList.toggle('active', content.id === `desktop${program}`);
-            });
-            
-            activeDesktopProgram = program;
-            
-            // Populate the selected program content
-            populateDesktopProgram(program);
-        }
+      function switchDesktopProgram(program) {
+        // Update tab buttons
+        const tabButtons = document.querySelectorAll(".program-tab-button");
+        tabButtons.forEach((btn) => {
+          btn.classList.toggle("active", btn.textContent.trim() === program);
+        });
 
-        function populateDesktopProgram(programKey) {
-            const program = programs[programKey];
-            if (!program) return;
-            
-            const contentElement = document.getElementById(`desktop${programKey}`);
-            if (!contentElement) return;
-            
-            // Create the full program card HTML
-            contentElement.innerHTML = `
+        // Update content
+        const contentElements = document.querySelectorAll(".program-content");
+        contentElements.forEach((content) => {
+          content.classList.toggle(
+            "active",
+            content.id === `desktop${program}`,
+          );
+        });
+
+        activeDesktopProgram = program;
+
+        // Populate the selected program content
+        populateDesktopProgram(program);
+      }
+
+      function populateDesktopProgram(programKey) {
+        const program = programs[programKey];
+        if (!program) return;
+
+        const contentElement = document.getElementById(`desktop${programKey}`);
+        if (!contentElement) return;
+
+        // Create the full program card HTML
+        contentElement.innerHTML = `
                 <div class="program-card">
                     <div class="program-card-header">
                         <div class="program-card-header-content">
@@ -2613,7 +3117,10 @@
                                     Specialisations
                                 </h4>
                                 <div class="desktop-specializations-list">
-                                    ${program.certificationsList.slice(0, 6).map(cert => `
+                                    ${program.certificationsList
+                                      .slice(0, 6)
+                                      .map(
+                                        (cert) => `
                                         <div class="desktop-specialization-item">
                                             <div class="desktop-specialization-item-content">
                                                 <div class="desktop-specialization-icon">
@@ -2628,7 +3135,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    `).join('')}
+                                    `,
+                                      )
+                                      .join("")}
                                 </div>
                             </div>
 
@@ -2655,15 +3164,15 @@
                     </div>
                 </div>
             `;
-        }
+      }
 
-        // Initialize desktop program content
-        document.addEventListener('DOMContentLoaded', function() {
-            // Populate all desktop program content
-            Object.keys(programs).forEach(programKey => {
-                populateDesktopProgram(programKey);
-            });
+      // Initialize desktop program content
+      document.addEventListener("DOMContentLoaded", function () {
+        // Populate all desktop program content
+        Object.keys(programs).forEach((programKey) => {
+          populateDesktopProgram(programKey);
         });
+      });
     </script>
-</body>
+  </body>
 </html>
