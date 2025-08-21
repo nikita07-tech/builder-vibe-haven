@@ -322,58 +322,71 @@ const Index = () => {
     {
       name: "Priya Sharma",
       program: "MBA Graduate",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=100",
-      testimonial: "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=100",
+      testimonial:
+        "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
       rating: 5,
-      year: "MBA 2024"
+      year: "MBA 2024",
     },
     {
       name: "Rahul Gupta",
       program: "BCA Graduate",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=100",
-      testimonial: "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=100",
+      testimonial:
+        "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
       rating: 5,
-      year: "BCA 2024"
+      year: "BCA 2024",
     },
     {
       name: "Anjali Verma",
       program: "MCA Graduate",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=100",
-      testimonial: "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=100",
+      testimonial:
+        "Sunstone has been a game-changer in my journey. The practical curriculum, supportive faculty, and collaborative environment have sharpened my skills and broadened my perspective. It's more than an institution—it's a community fostering growth and success.",
       rating: 5,
-      year: "MCA 2024"
+      year: "MCA 2024",
     },
     {
       name: "Vikram Singh",
       program: "B.Tech Graduate",
-      image: "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=100",
-      testimonial: "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
+      image:
+        "https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=100",
+      testimonial:
+        "The admission process at Sunstone was seamless, with clear guidance at every step. The diverse student community and supportive faculty create an engaging learning experience. Modern facilities and a focus on skill development have added immense value to my journey.",
       rating: 5,
-      year: "B.Tech 2024"
-    }
+      year: "B.Tech 2024",
+    },
   ];
 
   const faqs = [
     {
       question: "What is the admission process for Hi-Tech Institute programs?",
-      answer: "The admission process varies by program but generally includes application submission, entrance test (where applicable), document verification, and counseling. We provide step-by-step guidance throughout the process."
+      answer:
+        "The admission process varies by program but generally includes application submission, entrance test (where applicable), document verification, and counseling. We provide step-by-step guidance throughout the process.",
     },
     {
       question: "Are there scholarship opportunities available?",
-      answer: "Yes, we offer multiple scholarship programs including the SAT Scholarship and Bright Minds Scholarship. These can cover up to 100% of tuition fees based on academic performance and entrance test scores."
+      answer:
+        "Yes, we offer multiple scholarship programs including the SAT Scholarship and Bright Minds Scholarship. These can cover up to 100% of tuition fees based on academic performance and entrance test scores.",
     },
     {
       question: "What is the Placement Opportunity Program (POP)?",
-      answer: "POP is our guaranteed placement program that provides 200+ placement opportunities, dedicated career support, and a money-back guarantee if placement commitments are not met."
+      answer:
+        "POP is our guaranteed placement program that provides 200+ placement opportunities, dedicated career support, and a money-back guarantee if placement commitments are not met.",
     },
     {
       question: "What are the eligibility criteria for different programs?",
-      answer: "Eligibility varies by program. Generally, undergraduate programs require 45% marks in Class 12th (40% for reserved categories), while postgraduate programs require 50% marks in graduation (45% for reserved categories)."
+      answer:
+        "Eligibility varies by program. Generally, undergraduate programs require 45% marks in Class 12th (40% for reserved categories), while postgraduate programs require 50% marks in graduation (45% for reserved categories).",
     },
     {
       question: "How does the fee payment work?",
-      answer: "We offer flexible fee payment options including installments, education loans, and scholarship adjustments. Our finance team provides personalized guidance for payment planning."
-    }
+      answer:
+        "We offer flexible fee payment options including installments, education loans, and scholarship adjustments. Our finance team provides personalized guidance for payment planning.",
+    },
   ];
 
   return (
@@ -515,7 +528,9 @@ const Index = () => {
                     id="heroCarousel"
                   >
                     {/* Video Slide */}
-                    <div className={`carousel-slide ${currentSlide === 0 ? 'active' : ''} absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${currentSlide === 0 ? 'opacity-100' : 'opacity-0'}`}>
+                    <div
+                      className={`carousel-slide ${currentSlide === 0 ? "active" : ""} absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${currentSlide === 0 ? "opacity-100" : "opacity-0"}`}
+                    >
                       <iframe
                         src="https://www.youtube.com/embed/En5F0Eb_Djw?autoplay=1&mute=1&rel=0&loop=1&playlist=En5F0Eb_Djw&controls=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&disablekb=1&fs=0&showinfo=0&playsinline=1&branding=0&origin=https%3A%2F%2Fhitech.edu"
                         title="Campus Life Video"
@@ -526,14 +541,18 @@ const Index = () => {
                       />
                     </div>
                     {/* Image Slides */}
-                    <div className={`carousel-slide ${currentSlide === 1 ? 'active' : ''} absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${currentSlide === 1 ? 'opacity-100' : 'opacity-0'}`}>
+                    <div
+                      className={`carousel-slide ${currentSlide === 1 ? "active" : ""} absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${currentSlide === 1 ? "opacity-100" : "opacity-0"}`}
+                    >
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2F390fe6d7942a4a27b802c4e3f107a3ef?format=webp&width=600"
                         alt="Hi-Tech Institute Campus"
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className={`carousel-slide ${currentSlide === 2 ? 'active' : ''} absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${currentSlide === 2 ? 'opacity-100' : 'opacity-0'}`}>
+                    <div
+                      className={`carousel-slide ${currentSlide === 2 ? "active" : ""} absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${currentSlide === 2 ? "opacity-100" : "opacity-0"}`}
+                    >
                       <img
                         src="https://cdn.builder.io/api/v1/image/assets%2F29bf48da1a8948508c6931232f0f162d%2Fa55b41786c9548d19f00d4de44dfa692?format=webp&width=800"
                         alt="Campus View"
@@ -583,7 +602,7 @@ const Index = () => {
                     <div className="absolute bottom-2 md:bottom-3 left-1/2 transform -translate-x-1/2 flex gap-1.5 md:gap-2 z-10 px-3 py-1.5 bg-black/20 backdrop-blur-sm rounded-full">
                       <button
                         onClick={() => setCarouselSlide(0)}
-                        className={`carousel-dot ${currentSlide === 0 ? 'active' : ''} w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rounded-full cursor-pointer transition-all duration-300 ${
+                        className={`carousel-dot ${currentSlide === 0 ? "active" : ""} w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rounded-full cursor-pointer transition-all duration-300 ${
                           currentSlide === 0
                             ? "bg-white shadow-lg scale-125 ring-2 ring-white/30"
                             : "bg-white/50 hover:bg-white/70 hover:scale-110"
@@ -591,7 +610,7 @@ const Index = () => {
                       />
                       <button
                         onClick={() => setCarouselSlide(1)}
-                        className={`carousel-dot ${currentSlide === 1 ? 'active' : ''} w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rounded-full cursor-pointer transition-all duration-300 ${
+                        className={`carousel-dot ${currentSlide === 1 ? "active" : ""} w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rounded-full cursor-pointer transition-all duration-300 ${
                           currentSlide === 1
                             ? "bg-white shadow-lg scale-125 ring-2 ring-white/30"
                             : "bg-white/50 hover:bg-white/70 hover:scale-110"
@@ -599,7 +618,7 @@ const Index = () => {
                       />
                       <button
                         onClick={() => setCarouselSlide(2)}
-                        className={`carousel-dot ${currentSlide === 2 ? 'active' : ''} w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rounded-full cursor-pointer transition-all duration-300 ${
+                        className={`carousel-dot ${currentSlide === 2 ? "active" : ""} w-2 h-2 md:w-2.5 md:h-2.5 lg:w-3 lg:h-3 rounded-full cursor-pointer transition-all duration-300 ${
                           currentSlide === 2
                             ? "bg-white shadow-lg scale-125 ring-2 ring-white/30"
                             : "bg-white/50 hover:bg-white/70 hover:scale-110"
@@ -1123,10 +1142,10 @@ const Index = () => {
             </h2>
             <p className="text-xs md:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
               <strong>
-                Transform your career with industry-integrated programs
-                designed by corporate leaders, featuring cutting-edge
-                curriculum, practical learning experiences, and guaranteed
-                placement support.
+                Transform your career with industry-integrated programs designed
+                by corporate leaders, featuring cutting-edge curriculum,
+                practical learning experiences, and guaranteed placement
+                support.
               </strong>
             </p>
           </div>
@@ -1215,8 +1234,8 @@ const Index = () => {
                       Excellence Award {index + 1}
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      Recognized for outstanding contribution to higher education
-                      and student success.
+                      Recognized for outstanding contribution to higher
+                      education and student success.
                     </p>
                   </div>
                 </div>
@@ -1240,7 +1259,11 @@ const Index = () => {
           </div>
 
           {/* Program Tabs */}
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          <Tabs
+            value={activeTab}
+            onValueChange={setActiveTab}
+            className="w-full"
+          >
             <TabsList className="grid w-full grid-cols-5 mb-8">
               <TabsTrigger value="MBA">MBA</TabsTrigger>
               <TabsTrigger value="BBA">BBA</TabsTrigger>
@@ -1252,44 +1275,74 @@ const Index = () => {
             {Object.entries(programs).map(([key, program]) => (
               <TabsContent key={key} value={key}>
                 <Card className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
-                  <CardHeader className={`bg-gradient-to-r ${program.color} text-white p-6`}>
+                  <CardHeader
+                    className={`bg-gradient-to-r ${program.color} text-white p-6`}
+                  >
                     <CardTitle className="text-2xl font-bold mb-2">
-                      {key === "B.Tech" ? "Bachelor of Technology (B.Tech)" :
-                       key === "MBA" ? "Master of Business Administration (MBA)" :
-                       key === "BBA" ? "Bachelor of Business Administration (BBA)" :
-                       key === "BCA" ? "Bachelor of Computer Applications (BCA)" :
-                       "Master of Computer Applications (MCA)"}
+                      {key === "B.Tech"
+                        ? "Bachelor of Technology (B.Tech)"
+                        : key === "MBA"
+                          ? "Master of Business Administration (MBA)"
+                          : key === "BBA"
+                            ? "Bachelor of Business Administration (BBA)"
+                            : key === "BCA"
+                              ? "Bachelor of Computer Applications (BCA)"
+                              : "Master of Computer Applications (MCA)"}
                     </CardTitle>
                     <CardDescription className="text-white/90">
-                      {key === "MBA" ? "Transform into a business leader with comprehensive management education" :
-                       key === "BBA" ? "Build a strong foundation in business fundamentals and management principles" :
-                       key === "BCA" ? "Master the foundations of computer science and software development" :
-                       key === "MCA" ? "Advanced computer science education for software development leadership" :
-                       "Comprehensive engineering education with cutting-edge technology focus"}
+                      {key === "MBA"
+                        ? "Transform into a business leader with comprehensive management education"
+                        : key === "BBA"
+                          ? "Build a strong foundation in business fundamentals and management principles"
+                          : key === "BCA"
+                            ? "Master the foundations of computer science and software development"
+                            : key === "MCA"
+                              ? "Advanced computer science education for software development leadership"
+                              : "Comprehensive engineering education with cutting-edge technology focus"}
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="p-6">
                     {/* Quick Stats */}
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
                       <div className="text-center p-4 bg-gray-50 rounded-lg">
-                        <div className="text-sm font-semibold text-gray-600 mb-1">Duration</div>
-                        <div className="text-lg font-bold text-[#22336a]">{program.duration.split('-')[0]}</div>
+                        <div className="text-sm font-semibold text-gray-600 mb-1">
+                          Duration
+                        </div>
+                        <div className="text-lg font-bold text-[#22336a]">
+                          {program.duration.split("-")[0]}
+                        </div>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg">
-                        <div className="text-sm font-semibold text-gray-600 mb-1">Certifications</div>
-                        <div className="text-lg font-bold text-[#22336a]">{program.certifications.split(' ')[0]}</div>
+                        <div className="text-sm font-semibold text-gray-600 mb-1">
+                          Certifications
+                        </div>
+                        <div className="text-lg font-bold text-[#22336a]">
+                          {program.certifications.split(" ")[0]}
+                        </div>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg">
-                        <div className="text-sm font-semibold text-gray-600 mb-1">Internships</div>
-                        <div className="text-lg font-bold text-[#22336a]">{program.internships.split(' ')[0]}</div>
+                        <div className="text-sm font-semibold text-gray-600 mb-1">
+                          Internships
+                        </div>
+                        <div className="text-lg font-bold text-[#22336a]">
+                          {program.internships.split(" ")[0]}
+                        </div>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg">
-                        <div className="text-sm font-semibold text-gray-600 mb-1">Projects</div>
-                        <div className="text-lg font-bold text-[#22336a]">{program.projects.split(' ')[0]}</div>
+                        <div className="text-sm font-semibold text-gray-600 mb-1">
+                          Projects
+                        </div>
+                        <div className="text-lg font-bold text-[#22336a]">
+                          {program.projects.split(" ")[0]}
+                        </div>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg">
-                        <div className="text-sm font-semibold text-gray-600 mb-1">Specializations</div>
-                        <div className="text-lg font-bold text-[#22336a]">{program.specializations.split(' ')[0]}</div>
+                        <div className="text-sm font-semibold text-gray-600 mb-1">
+                          Specializations
+                        </div>
+                        <div className="text-lg font-bold text-[#22336a]">
+                          {program.specializations.split(" ")[0]}
+                        </div>
                       </div>
                     </div>
 
@@ -1300,9 +1353,16 @@ const Index = () => {
                       </h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {program.certificationsList.map((cert, index) => (
-                          <div key={index} className="p-4 border border-gray-200 rounded-lg hover:border-[#c38935] transition-colors duration-300">
-                            <h5 className="font-bold text-[#22336a] mb-2">{cert.name}</h5>
-                            <p className="text-sm text-gray-600">{cert.careers}</p>
+                          <div
+                            key={index}
+                            className="p-4 border border-gray-200 rounded-lg hover:border-[#c38935] transition-colors duration-300"
+                          >
+                            <h5 className="font-bold text-[#22336a] mb-2">
+                              {cert.name}
+                            </h5>
+                            <p className="text-sm text-gray-600">
+                              {cert.careers}
+                            </p>
                           </div>
                         ))}
                       </div>
@@ -1351,22 +1411,36 @@ const Index = () => {
               Our Top Recruiters
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Leading companies trust our graduates and actively recruit from our programs
+              Leading companies trust our graduates and actively recruit from
+              our programs
             </p>
           </div>
 
           {/* Recruiters Carousel */}
           <div className="relative overflow-hidden bg-white rounded-xl py-8">
             <div className="flex space-x-8 animate-scroll-left-to-right">
-              {['TCS', 'Infosys', 'Wipro', 'Microsoft', 'Google', 'Amazon', 'IBM', 'Accenture', 'Deloitte', 'KPMG'].map((company, index) => (
-                <div 
-                  key={index} 
-                  className={`flex-shrink-0 w-48 p-6 bg-white rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105 ${clickedRecruiters.includes(company) ? 'ring-2 ring-[#c38935]' : ''}`}
+              {[
+                "TCS",
+                "Infosys",
+                "Wipro",
+                "Microsoft",
+                "Google",
+                "Amazon",
+                "IBM",
+                "Accenture",
+                "Deloitte",
+                "KPMG",
+              ].map((company, index) => (
+                <div
+                  key={index}
+                  className={`flex-shrink-0 w-48 p-6 bg-white rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-105 ${clickedRecruiters.includes(company) ? "ring-2 ring-[#c38935]" : ""}`}
                   onClick={() => handleRecruiterClick(company)}
                 >
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#c38935] rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-white font-bold text-lg">{company.charAt(0)}</span>
+                      <span className="text-white font-bold text-lg">
+                        {company.charAt(0)}
+                      </span>
                     </div>
                     <h4 className="font-bold text-[#22336a]">{company}</h4>
                     <p className="text-sm text-gray-600">Top Recruiter</p>
@@ -1386,7 +1460,8 @@ const Index = () => {
               Easy Fee Payment Options
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Flexible payment plans designed to make quality education accessible to everyone
+              Flexible payment plans designed to make quality education
+              accessible to everyone
             </p>
           </div>
 
@@ -1396,11 +1471,14 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-[#22336a] to-[#3b4d7a] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-[#22336a]">Installment Plans</CardTitle>
+                <CardTitle className="text-[#22336a]">
+                  Installment Plans
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Spread your fees across convenient monthly or quarterly installments with zero additional charges.
+                  Spread your fees across convenient monthly or quarterly
+                  installments with zero additional charges.
                 </p>
               </CardContent>
             </Card>
@@ -1410,11 +1488,14 @@ const Index = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-[#c38935] to-[#f4d03f] rounded-full flex items-center justify-center mx-auto mb-4">
                   <Trophy className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-[#22336a]">Education Loans</CardTitle>
+                <CardTitle className="text-[#22336a]">
+                  Education Loans
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Partner with leading banks for hassle-free education loans at competitive interest rates.
+                  Partner with leading banks for hassle-free education loans at
+                  competitive interest rates.
                 </p>
               </CardContent>
             </Card>
@@ -1428,7 +1509,8 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Merit-based scholarships covering up to 100% of tuition fees for deserving candidates.
+                  Merit-based scholarships covering up to 100% of tuition fees
+                  for deserving candidates.
                 </p>
               </CardContent>
             </Card>
@@ -1444,27 +1526,52 @@ const Index = () => {
               Simple Admission Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Follow these easy steps to secure your admission and start your journey with us
+              Follow these easy steps to secure your admission and start your
+              journey with us
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { step: "01", title: "Apply Online", description: "Submit your application form with required documents through our online portal." },
-              { step: "02", title: "Entrance Test", description: "Take the SAT (Sunstone Admission Test) or submit valid entrance exam scores." },
-              { step: "03", title: "Counseling", description: "Participate in our counseling session to choose your preferred program and specialization." },
-              { step: "04", title: "Confirmation", description: "Complete the admission formalities and confirm your seat by paying the admission fee." }
+              {
+                step: "01",
+                title: "Apply Online",
+                description:
+                  "Submit your application form with required documents through our online portal.",
+              },
+              {
+                step: "02",
+                title: "Entrance Test",
+                description:
+                  "Take the SAT (Sunstone Admission Test) or submit valid entrance exam scores.",
+              },
+              {
+                step: "03",
+                title: "Counseling",
+                description:
+                  "Participate in our counseling session to choose your preferred program and specialization.",
+              },
+              {
+                step: "04",
+                title: "Confirmation",
+                description:
+                  "Complete the admission formalities and confirm your seat by paying the admission fee.",
+              },
             ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="relative mb-6">
                   <div className="w-20 h-20 bg-gradient-to-br from-[#22336a] to-[#c38935] rounded-full flex items-center justify-center mx-auto">
-                    <span className="text-white font-bold text-xl">{item.step}</span>
+                    <span className="text-white font-bold text-xl">
+                      {item.step}
+                    </span>
                   </div>
                   {index < 3 && (
                     <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gray-300 -translate-y-1/2"></div>
                   )}
                 </div>
-                <h4 className="text-xl font-bold text-[#22336a] mb-3">{item.title}</h4>
+                <h4 className="text-xl font-bold text-[#22336a] mb-3">
+                  {item.title}
+                </h4>
                 <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
@@ -1492,7 +1599,8 @@ const Index = () => {
               Success Stories
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Hear from our graduates who have transformed their careers through our programs
+              Hear from our graduates who have transformed their careers through
+              our programs
             </p>
           </div>
 
@@ -1510,8 +1618,12 @@ const Index = () => {
                           className="w-16 h-16 rounded-full object-cover mr-4"
                         />
                         <div>
-                          <h4 className="font-bold text-[#22336a] text-lg">{story.name}</h4>
-                          <p className="text-[#c38935] font-semibold">{story.program}</p>
+                          <h4 className="font-bold text-[#22336a] text-lg">
+                            {story.name}
+                          </h4>
+                          <p className="text-[#c38935] font-semibold">
+                            {story.program}
+                          </p>
                         </div>
                       </div>
                     </CardHeader>
@@ -1521,9 +1633,13 @@ const Index = () => {
                       </p>
                       <div className="flex items-center justify-between">
                         <div className="flex text-yellow-400">
-                          {[...Array(story.rating)].map((_, i) => <span key={i}>★</span>)}
+                          {[...Array(story.rating)].map((_, i) => (
+                            <span key={i}>★</span>
+                          ))}
                         </div>
-                        <div className="text-xs text-gray-500">{story.year}</div>
+                        <div className="text-xs text-gray-500">
+                          {story.year}
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
@@ -1537,7 +1653,10 @@ const Index = () => {
             <div className="overflow-hidden">
               <div className="flex space-x-4 animate-scroll-left-to-right">
                 {successStories.map((story, index) => (
-                  <div key={index} className="flex-shrink-0 w-80 text-center p-4 bg-white rounded-lg shadow-lg border border-gray-200">
+                  <div
+                    key={index}
+                    className="flex-shrink-0 w-80 text-center p-4 bg-white rounded-lg shadow-lg border border-gray-200"
+                  >
                     <div className="flex items-center mb-4">
                       <img
                         src={story.image}
@@ -1545,8 +1664,12 @@ const Index = () => {
                         className="w-12 h-12 rounded-full object-cover mr-3"
                       />
                       <div className="text-left">
-                        <h4 className="font-bold text-[#22336a] text-sm">{story.name}</h4>
-                        <p className="text-[#c38935] font-semibold text-xs">{story.program}</p>
+                        <h4 className="font-bold text-[#22336a] text-sm">
+                          {story.name}
+                        </h4>
+                        <p className="text-[#c38935] font-semibold text-xs">
+                          {story.program}
+                        </p>
                       </div>
                     </div>
                     <p className="text-gray-600 text-xs leading-relaxed">
@@ -1568,7 +1691,8 @@ const Index = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-gray-600">
-              Find answers to common questions about our programs and admission process
+              Find answers to common questions about our programs and admission
+              process
             </p>
           </div>
 
@@ -1576,7 +1700,9 @@ const Index = () => {
             {faqs.slice(0, showMoreFAQs ? faqs.length : 3).map((faq, index) => (
               <Collapsible key={index}>
                 <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg bg-white p-6 text-left hover:bg-gray-50 transition-colors duration-200">
-                  <span className="font-semibold text-[#22336a]">{faq.question}</span>
+                  <span className="font-semibold text-[#22336a]">
+                    {faq.question}
+                  </span>
                   <ChevronDown className="h-5 w-5 shrink-0 text-gray-500" />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="px-6 pb-6 bg-white rounded-b-lg">
@@ -1593,7 +1719,7 @@ const Index = () => {
                 variant="outline"
                 className="border-[#22336a] text-[#22336a] hover:bg-[#22336a] hover:text-white"
               >
-                {showMoreFAQs ? 'Show Less' : 'Show More FAQs'}
+                {showMoreFAQs ? "Show Less" : "Show More FAQs"}
               </Button>
             </div>
           )}
@@ -1619,40 +1745,117 @@ const Index = () => {
                 />
               </div>
               <p className="text-white/80 mb-4">
-                Hi-Tech Institute in partnership with Sunstone - Learning that leads to success.
+                Hi-Tech Institute in partnership with Sunstone - Learning that
+                leads to success.
               </p>
             </div>
 
             <div>
               <h4 className="text-lg font-bold mb-4">Programs</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-white/80 hover:text-white transition-colors">MBA</a></li>
-                <li><a href="#" className="text-white/80 hover:text-white transition-colors">BBA</a></li>
-                <li><a href="#" className="text-white/80 hover:text-white transition-colors">BCA</a></li>
-                <li><a href="#" className="text-white/80 hover:text-white transition-colors">MCA</a></li>
-                <li><a href="#" className="text-white/80 hover:text-white transition-colors">B.Tech</a></li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    MBA
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    BBA
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    BCA
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    MCA
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    B.Tech
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-lg font-bold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-white/80 hover:text-white transition-colors">Admission Process</a></li>
-                <li><a href="#" className="text-white/80 hover:text-white transition-colors">Scholarships</a></li>
-                <li><a href="#" className="text-white/80 hover:text-white transition-colors">Placement Support</a></li>
-                <li><a href="#" className="text-white/80 hover:text-white transition-colors">Campus Life</a></li>
-                <li><a href="#" className="text-white/80 hover:text-white transition-colors">Contact Us</a></li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    Admission Process
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    Scholarships
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    Placement Support
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    Campus Life
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-white/80 hover:text-white transition-colors"
+                  >
+                    Contact Us
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-lg font-bold mb-4">Contact Info</h4>
               <div className="space-y-3">
-                <a href="tel:+917065303030" className="flex items-center text-white/80 hover:text-white transition-colors">
+                <a
+                  href="tel:+917065303030"
+                  className="flex items-center text-white/80 hover:text-white transition-colors"
+                >
                   <Phone className="h-4 w-4 mr-2" />
                   +91 7065-30-30-30
                 </a>
-                <a href="mailto:connect@sunstone.in" className="flex items-center text-white/80 hover:text-white transition-colors">
+                <a
+                  href="mailto:connect@sunstone.in"
+                  className="flex items-center text-white/80 hover:text-white transition-colors"
+                >
                   <Mail className="h-4 w-4 mr-2" />
                   connect@sunstone.in
                 </a>
@@ -1666,9 +1869,24 @@ const Index = () => {
                 © 2024 Hi-Tech Institute. All rights reserved.
               </p>
               <div className="flex space-x-4 mt-4 md:mt-0">
-                <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Terms of Service</a>
-                <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                <a
+                  href="#"
+                  className="text-white/60 hover:text-white text-sm transition-colors"
+                >
+                  Privacy Policy
+                </a>
+                <a
+                  href="#"
+                  className="text-white/60 hover:text-white text-sm transition-colors"
+                >
+                  Terms of Service
+                </a>
+                <a
+                  href="#"
+                  className="text-white/60 hover:text-white text-sm transition-colors"
+                >
+                  Cookie Policy
+                </a>
               </div>
             </div>
           </div>
@@ -1693,32 +1911,51 @@ const Index = () => {
                   Placement Opportunity Program
                 </h3>
                 <p className="text-gray-600 text-xs md:text-lg max-w-2xl mx-auto">
-                  An industry-aligned placement program with dedicated support, focused on outcomes that matter.
+                  An industry-aligned placement program with dedicated support,
+                  focused on outcomes that matter.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mb-3 md:mb-8">
                 <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl">
-                  <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">200+</div>
-                  <p className="text-gray-600 font-medium text-[10px] md:text-base">Assured Opportunities</p>
+                  <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
+                    200+
+                  </div>
+                  <p className="text-gray-600 font-medium text-[10px] md:text-base">
+                    Assured Opportunities
+                  </p>
                 </div>
                 <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl">
-                  <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">100%</div>
-                  <p className="text-gray-600 font-medium text-[10px] md:text-base">First Year Tuition Fee Back</p>
+                  <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
+                    100%
+                  </div>
+                  <p className="text-gray-600 font-medium text-[10px] md:text-base">
+                    First Year Tuition Fee Back
+                  </p>
                 </div>
                 <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl">
-                  <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">1200+</div>
-                  <p className="text-gray-600 font-medium text-[10px] md:text-base">Top Recruiters</p>
+                  <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
+                    1200+
+                  </div>
+                  <p className="text-gray-600 font-medium text-[10px] md:text-base">
+                    Top Recruiters
+                  </p>
                 </div>
                 <div className="text-center p-2 md:p-6 bg-gray-50 rounded-lg md:rounded-xl">
-                  <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">26 LPA</div>
-                  <p className="text-gray-600 font-medium text-[10px] md:text-base">Highest Package</p>
+                  <div className="text-sm md:text-3xl font-bold text-[#22336a] mb-1 md:mb-2">
+                    26 LPA
+                  </div>
+                  <p className="text-gray-600 font-medium text-[10px] md:text-base">
+                    Highest Package
+                  </p>
                 </div>
               </div>
 
               <div className="border-t border-gray-200 pt-3 md:pt-6">
                 <p className="text-[10px] md:text-sm text-gray-500 text-center mb-3 md:mb-6 max-w-3xl mx-auto">
-                  Terms and conditions apply. Placement guarantee subject to program completion, maintaining minimum academic standards, and active participation in placement activities.
+                  Terms and conditions apply. Placement guarantee subject to
+                  program completion, maintaining minimum academic standards,
+                  and active participation in placement activities.
                 </p>
                 <div className="flex flex-col gap-2 md:gap-4 md:flex-row justify-center">
                   <a
@@ -1775,12 +2012,20 @@ const Index = () => {
                       <Trophy className="h-4 w-4 md:h-5 md:w-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-[#22336a] text-xs md:text-sm">SAT Scholarship</h4>
-                      <p className="text-[10px] md:text-xs text-gray-600">Sunstone Admission Test</p>
+                      <h4 className="font-bold text-[#22336a] text-xs md:text-sm">
+                        SAT Scholarship
+                      </h4>
+                      <p className="text-[10px] md:text-xs text-gray-600">
+                        Sunstone Admission Test
+                      </p>
                     </div>
                   </div>
                   <p className="text-[10px] md:text-xs text-gray-600">
-                    Unlock scholarships up to <span className="font-bold text-[#c38935]">100% of tuition fees</span> based on your SAT performance.
+                    Unlock scholarships up to{" "}
+                    <span className="font-bold text-[#c38935]">
+                      100% of tuition fees
+                    </span>{" "}
+                    based on your SAT performance.
                   </p>
                 </div>
 
@@ -1790,12 +2035,18 @@ const Index = () => {
                       <Star className="h-4 w-4 md:h-5 md:w-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-[#22336a] text-xs md:text-sm">Bright Minds Scholarship</h4>
-                      <p className="text-[10px] md:text-xs text-gray-600">Merit-based Excellence</p>
+                      <h4 className="font-bold text-[#22336a] text-xs md:text-sm">
+                        Bright Minds Scholarship
+                      </h4>
+                      <p className="text-[10px] md:text-xs text-gray-600">
+                        Merit-based Excellence
+                      </p>
                     </div>
                   </div>
                   <p className="text-[10px] md:text-xs text-gray-600">
-                    Get financial support ranging from <span className="font-bold text-[#c38935]">25% to 75%</span> based on academic achievements.
+                    Get financial support ranging from{" "}
+                    <span className="font-bold text-[#c38935]">25% to 75%</span>{" "}
+                    based on academic achievements.
                   </p>
                 </div>
               </div>
